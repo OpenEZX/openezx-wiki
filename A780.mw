@@ -35,6 +35,8 @@ The A760 camera is a Omnitivion OV9640 1.3MegaPixel Camera Module. It is directl
 
 == Vibrator ==
 
+The vibrator is attached to PCAP2.  The AP can program it via SPI.
+
 == Sound ==
 
 == PCAP2 ==
