@@ -1,0 +1,42 @@
+== Application Processor (AP) ==
+The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm Intel PXA270]:
+* ARMv5TE ARM core
+* [http://www.intel.com/design/pca/prodbref/251669.htm iWMMX] extensions
+* 48MB of RAM
+* 48MB of DiskOnChip Flash memory
+* SD I/O (SDCard/MMC/Transflash/MemoryStick/...) Interface
+* SIM card interface (not used)
+* SpeedStep Power management
+* USB Host Controller
+* USB Device Controller
+* USB OTG support
+* PCMCIA/CompactFlash interface (not used)
+* Keypad Controller
+* QuickCapture Camera interface 
+* Three UART's
+
+This is the beast that runs Linux.
+
+== Baseband Processor (BP) ==
+
+The BP is a ARM7TDMI core that implements the GSM stack. Digital baseband processing is done by a DSP core that is next to the ARM7TDMI.
+
+The BP runs a real-time operating system from it's own 2MB Flash. 
+
+AP and BP are connected via USB (AP: Host, BP: Device).  For some reason, Motorola calls this USB link IPC.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
+
+== Camera ==
+
+== Keypad ==
+
+== Vibrator ==
+
+== Sound ==
+
+== PCAP2 ==
+
+This is a Motorola ASIC that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/SPI to both AP and BP.
+
+== Bluetooth ==
+
+There is a Broadcom BCM2035 controller attached to one of the UART's of the AP
