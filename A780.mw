@@ -34,9 +34,13 @@ AP and BP are connected via USB (AP: Host, BP: Device).  For some reason, Motoro
 == Sound ==
 
 == PCAP2 ==
-
 This is a Motorola ASIC that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/SPI to both AP and BP.
 
 == Bluetooth ==
-
 There is a Broadcom BCM2035 controller attached to one of the UART's of the AP
+
+== GPS ==
+The European version of A780 has built-in GPS which is inside the keypad.
+It is a Motorola MG4100 single chip GPS receiver IC.
+
+The GPS is not connected to the AP, but to UART2 of the BP (one might actually wonder why the GSM cpu needs to have direct access to the GPS.  Is that some law-enforcement-location-thingy, or is it just coincidence?).
