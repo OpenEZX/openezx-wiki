@@ -5,7 +5,9 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 
 * [[Hardware]]
 * [[Software]]
-* [[Crosscompile]]
+* Development related topics
+** How to [[Crosscompile]] for the EZX device
+** How to use the [[JTAG]] interface
 
 
 == Disclaimer ==
