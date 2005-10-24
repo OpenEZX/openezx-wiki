@@ -5,6 +5,8 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 
 * [[Hardware]]
 * [[Software]]
+** [[Software::AP]]
+** [[Software::AP::OpenEZX]]: Free Software for the AP
 * Development related topics
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
