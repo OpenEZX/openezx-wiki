@@ -1,0 +1,30 @@
+== What is JTAG? ==
+
+JTAG is a standard interface for in-system testing and debugging.  It works by placing a debug macrocell in front of (almost) every Pin/Signal that enters or leaves a particular device.  Those debug cells are interconnected serially, so that in the end they form one long (e.g. 600bit wide) shift register.
+
+By using a five-wire connection (the JTAG Port) built into the to-be-tested/debugged device, an external entity can use serial shifting to read/write information to each and every signal.
+
+Combined with the ability to halt and manually control the device's clock rate, this can be used for single-step debugging.
+
+Also, by accessing the memory bus, and manually exercising the respective chip select signals, an external entity can read/write to the system memory, and e.g. download some code into it.  
+
+Flash memory can also programmed via JTAG, some times directly, sometimes indirectly (by loading a flash program into system memory first, and then running that flash program).
+
+== What do I need to use JTAG? ==
+
+You need
+* A JTAG Adaptor (can be built very easily for PC parallel port)
+* JTAG Software for your PC
+* Definition of the JTAG cells (usually BSDL)
+
+== JTAG on EZX ==
+
+The EZX phones (at least A780 and E680) offer JTAG pads on the PCB for both the AP and the BP.
+
+=== JTAG on AP ===
+
+Intel has the BSDL (boundary scan definition language) files for the PXA270 publicly available on their website. They also even offer a (windows only, sources included) [http://www.intel.com/design/strong/swsup/downloads/SA1110JFlashKit_V12.exe JTAG flash utility].
+
+There are ports of older versions of this windows C++ program to Linux (jflash-linux), as well as independently developed programs.
+
+Harald is working on getting a working JTAG configuration with his A780, stay tuned.
