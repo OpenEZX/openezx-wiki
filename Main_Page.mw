@@ -3,11 +3,13 @@ Welcome to the [http://openezx.org/ OpenEZX] wiki!
 
 This is a collaborative effort to collect information about Motorola's EZX phone platform, such as the A780, E680 and E680i Linux based GSM Phones.
 
-* [[Hardware]]
-* [[Software]]
-** [[Software::AP]]
+* [[Hardware]] related pages
+** [[Hardware::A780]]: The Motorola A780
+** [[Hardware::A680]]: The Motorola A680
+* [[Software]] related pages
+** [[Software::AP::Motorola]]: Information on Motorola's software
 ** [[Software::AP::OpenEZX]]: Free Software for the AP
-* Development related topics
+* Development related pages
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
 
