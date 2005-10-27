@@ -37,7 +37,7 @@ The phone goes out of modem mode at this point, so you won't get an "OK".
 
 Exit minicom.
 
-When you gave that "mode" command, the phoen caused the host to re-enumerate
+When you gave that "mode" command, the phone caused the host to re-enumerate
 its USB device - which looks like unplugging it and plugging it in again, but
 you didn't touch the cable. Now, the USB device has changed its flavor! The
 console should say something like:
