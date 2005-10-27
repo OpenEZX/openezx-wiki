@@ -67,3 +67,15 @@ confirm this.
 The phone is also running a Samba server.
 
 The command line will be somewhat more useful once you install busybox.
+
+== LICENSE NOTE ==
+
+The default license for this site is GNU FDL. In order that this page be undisputably Free Software, we waive or interpret some provisions of the GNU FDL for this page:
+
+There are no invariant sections connected with this page.
+
+The sentence:
+
+ You may not use technical measures to obstruct or control the reading or further copying of the copies you make or distribute.
+
+shall not apply to systems that merely implement login security and file permissions.
