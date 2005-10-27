@@ -10,9 +10,9 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** [[Software::AP::Motorola]]: Information on Motorola's software
 ** [[Software::AP::OpenEZX]]: Free Software for the AP
 * Development related pages
+** How to [[Get a shell]] on the EZX device
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
-
 
 == Disclaimer ==
 This website (like all information and software provided by OpenEZX) is '''not affiliated with Motorola in any way'''.  Everything is provided as-is, and there is no guarantee for correctness, and/or fitness for a particular purpose.
