@@ -1,6 +1,6 @@
 Here is how to get a shell on the phone, using a Linux host computer.
 
-This won't work if your system already has a network configured that would
+''This won't work'' if your system already has a network configured that would
 include 192.168.1.2 . Since this is a network commonly used for DHCP,
 that could be a problem.
 
@@ -9,34 +9,29 @@ On your Linux host, load the USB ATM (modem) and USB network drivers:
  modprobe usbnet
  modprobe cdc-acm
 
-Go into the setup application and configure the USB mode to be "modem".
+Go into the setup application and configure the USB mode to be '''modem'''.
 
 Plug the phone and the host together with a USB cable. On the console
 you should see:
 
  cdc_acm 4-2:1.0: ttyACM0: USB ACM device
 
-You can play back the console messages with the "dmesg" command.
+You can play back the console messages with the '''dmesg''' command.
 If you look in /proc/bus/devices, you will find a device with
-a manufacturer ID of "Motorola" and a product ID of "Motorola USB Modem".
-
-The bogus model number is from Linux, the device is sending product
-identification as something like
-"lsusb -v" will show more information, including the fact that this
-identifies itself as an ACM device.
+a manufacturer ID of ''Motorola'' and a product ID of ''Motorola USB Modem''
 
 Install minicom if it's not installed. On Debian, I used:
 
  apt-get install minicom
 
-Start minicom. Type Control-A and then "o" to get the setup screen.
-Set the serial port to /dev/ttyACM0 . Save that as the default.
-Exit out of minicom with Control-A "x" and start it again.
+Start minicom. Type '''Control-A''' and then '''o''' to get the setup screen.
+Set the serial port to '''/dev/ttyACM0''' . Save that as the default.
+Exit out of minicom with '''Control-A''' '''x''' and start it again.
 
 At this point you can type Hayes modem commands to the phone. This is useful
 for GPRS, etc., but that's another tutorial.
 
-Type "AT+mode=99" followed by carriage return.
+Type '''AT+mode=99''' followed by carriage return.
 
 The phone goes out of modem mode at this point, so you won't get an "OK".
 
@@ -52,16 +47,23 @@ console should say something like:
  usb0: register usbnet at usb-0000:00:10.2-2, pseudo-MDLM (BLAN) device, 8e:36:06:d5:16:9d
 
 And now /proc/bus/devices should contain a device with manufacturer ID of
-Motorola and product id of "Motorola USBLAN".
+Motorola and product id of '''Motorola USBLAN'''.
 
-Configure the network interface with "ifconfig usb0 192.168.1.1 netmask 255.255.255.0"
+Configure the network interface with
+
+ ifconfig usb0 192.168.1.1 netmask 255.255.255.0
 
 Telnet to 192.168.1.2 . Wait about half a minute and you'll get a login prompt.
 
-Log in as root. There's no password set.
+Log in as '''root'''. There's no password set.
 
-NOTE: Someone wrote that the device actually sends a DHCP query before it
+
+== NOTES ==
+
+Someone wrote that the device actually sends a DHCP query before it
 settles on 192.168.1.2 as the default address. I have so far not been able to
 confirm this.
 
 The phone is also running a Samba server.
+
+The command line will be somewhat more useful once you install busybox.
