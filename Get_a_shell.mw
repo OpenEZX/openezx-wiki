@@ -1,4 +1,4 @@
-Here is how to get a shell on the phone, using a Linux host computer.
+Here is how to get a shell on the phone, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer. We don't know how to re-flash the A780 yet. If you don't ''really'' know what you're doing and if you aren't ready to risk converting your phone to a paperweight, I'd advise that you wait until the folks on the bleeding edge figure out how to flash the phone.
 
 ''This won't work'' if your system already has a network configured that would
 include 192.168.1.2 . Since this is a network commonly used for DHCP,
