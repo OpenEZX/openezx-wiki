@@ -57,4 +57,8 @@ There is a Broadcom BCM2035 controller attached to one of the UART's of the AP
 The European version of A780 has built-in GPS which is inside the keypad.
 It is a Motorola MG4100 single chip GPS receiver IC.
 
-The GPS is not connected to the AP, but to UART2 of the BP (one might actually wonder why the GSM cpu needs to have direct access to the GPS.  Is that some law-enforcement-location-thingy, or is it just coincidence?).
+The GPS is not connected to the AP, but to UART2 of the BP. The chip supports a GPS mode called ''Mobile Station Based Assisted GPS'' in which the cellular station assists the GPS by sending the GPS ephemeris. This helps the GPS to acquire the satellite constellation quickly in low-signal situations. It takes time to get the ephemeris from the satellite because it's sent at only 50 bits-per-second. It is not always possible to decode the ephemeris without at least -142 dBm signal from the satellite, while in contrast a lower signal strength would still support position determination. Generally, the signal from the base station is more than adequate for distributing the ephemeris.
+
+There is also a mode in which the phone need not be location-aware and the position is ''calculated'' in the cellular network using raw GPS information from the phone.
+
+This is all tied into enhanced cellular 911.
