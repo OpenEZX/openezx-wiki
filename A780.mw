@@ -14,7 +14,7 @@ The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302
 * Keypad Controller
 * QuickCapture Camera interface 
 * Three UART's
-
+* [[Hardware::A780::GPIO]] assignment
 This is the beast that runs Linux.
 
 == Baseband Processor (BP) ==
