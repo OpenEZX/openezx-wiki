@@ -53,6 +53,9 @@ It also has the built-in microphone and speakers attached.  Audio data is exchan
 == Bluetooth ==
 There is a Broadcom BCM2035 controller attached to one the BTUART of the AP (ttyS1)
 
+== Serial Console ==
+There is no official serial console.  However, the STUART of the AP (ttyS2) can be used as a serial console.  There are two test pads (TP440=TxD and TP441=RxD) on the PCB.  Also, you'll have to pass "console=ttyS2" to the kernel at boot time (which doesn't seem possible with the original bootloader).  However, if you run your own kernel, you can easily add this to CONFIG_CMDLINE.
+
 == GPS ==
 The European version of A780 has built-in GPS which is inside the keypad.
 It is a Motorola MG4100 single chip GPS receiver IC.
