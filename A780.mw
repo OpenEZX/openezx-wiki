@@ -51,7 +51,7 @@ It includes a number of linear and switching power regulators, taking care of th
 It also has the built-in microphone and speakers attached.  Audio data is exchanged between PCAP2, AP, BP and the Bluetooth chip using SPI.  It includes a Stereo DAC (for mp3 playing, ...) and a mono DAC for the voice audio.
 
 == Bluetooth ==
-There is a Broadcom BCM2035 controller attached to one of the UART's of the AP
+There is a Broadcom BCM2035 controller attached to one the BTUART of the AP (ttyS1)
 
 == GPS ==
 The European version of A780 has built-in GPS which is inside the keypad.
