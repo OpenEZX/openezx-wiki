@@ -25,7 +25,7 @@ Motorola calls the BP used in the EZX Phones a "Neptune LTE", which is an "E"DGE
 
 The BP runs a real-time operating system from it's own 32MBit Flash.
 
-AP and BP are connected via USB (AP: Host, BP: Device).  For some reason, Motorola calls this USB link IPC.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
+AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB link ''IPC'' for Inter-Processor Communication.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
 
 == Camera ==
 
