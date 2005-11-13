@@ -1,0 +1,19 @@
+The E680 is pretty much the same like the [[Hardware::A780]].  
+
+This page will therefore only describe the differences between the A780 and the E680.
+
+== SD/MMC ==
+
+As opposed to the A780 TransFlash slot, the E680 has a real SD/MMC card slot.
+
+== FM Radio ==
+
+The E680 has a FM radio that is controlled via I2C.
+
+== Keypad ==
+
+Since the E680 doesn't have a flip, it is missing the respective keypad
+
+== GPS ==
+
+The E680 doesn't have GPS
