@@ -64,13 +64,21 @@ Log in as '''root'''. There's no password set.
 
 == NOTES ==
 
+=== DHCP ===
+
 Someone wrote that the device actually sends a DHCP query before it
 settles on 192.168.1.2 as the default address. I have so far not been able to
 confirm this.
 
+=== Services ===
+
 The phone is also running a Samba server.
 
 The command line will be somewhat more useful once you install busybox.
+
+=== Issues ===
+
+there seem to be certain A780's where this trick doesn't work on, more info on this follows.
 
 == LICENSE NOTE ==
 
