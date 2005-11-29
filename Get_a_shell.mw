@@ -106,12 +106,11 @@ now place the following script called 'usblan.lin' on your flash card:
   echo MotNet > /proc/usbd-switch
 this will switch you from modem mode to usblan mode.
 
-now set your phone in modem mode, connect it to your computer (load the usbnet module in linux)
+now set your phone in modem mode
 and run the script with LinLoader (long press and choose openwith)
+load the modules "usbnet" and "zaurus" in linux
 linux should now see a Motorola USBLAN device (Vendor ID: 22b8, Product ID: 600c here)
 you can now continue as above.
-
-this doesn't work for me yet as usbnet doesn't catch the new usb device. I'll try to figure something out, solutions welcome.
 
 == NOTES ==
 
