@@ -132,6 +132,8 @@ there seem to be certain A780's where this trick doesn't work on, more info on t
 
 i have a european one where AT+mode=99 outputs ERROR, plain AT returns OK ok. --ToniAlatalo
 
+same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
+
 == LICENSE NOTE ==
 
 The default license for this site is GNU FDL. In order that this page be undisputably Free Software, we waive or interpret some provisions of the GNU FDL for this page:
