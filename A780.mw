@@ -58,7 +58,7 @@ There is no official serial console.  However, the STUART of the AP (ttyS2) can 
 
 == GPS ==
 The European version of A780 has built-in GPS which is inside the keypad.
-It is a [http://www.pro-4-pro.com/de/Micro/Company-1_8084640/426f3fcdedf5f.html Motorola MG4100] single chip GPS receiver IC. An overview of the [http://www.freescale.com/files/rf_if/doc/data_sheet/FSONCOREPB.pdf FS Oncore module] (in English) is available from the manufacturer. The module is built around the MG4100.
+It is a [http://www.pro-4-pro.com/de/Micro/Company-1_8084640/426f3fcdedf5f.html Motorola MG4100] single chip GPS receiver IC. An overview of the [http://www.freescale.com/files/rf_if/doc/data_sheet/FSONCOREPB.pdf FS Oncore module] (in English) is available from the manufacturer. The module is built around the [http://www.synergy-gps.com/FS_Oncore_Product_%20Preview0_4dh.pdf MG4100].
 
 The GPS is not connected to the AP, but to UART2 of the BP. The chip supports a GPS mode called ''Mobile Station Based Assisted GPS'' in which the cellular station assists the GPS by sending the GPS ephemeris. This helps the GPS to acquire the satellite constellation quickly in low-signal situations. It takes time to get the ephemeris from the satellite because it's sent at only 50 bits-per-second. It is not always possible to decode the ephemeris without at least -142 dBm signal from the satellite, while in contrast a lower signal strength would still support position determination. Generally, the signal from the base station is more than adequate for distributing the ephemeris.
 
