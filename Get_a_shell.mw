@@ -134,6 +134,8 @@ i have a european one where AT+mode=99 outputs ERROR, plain AT returns OK ok. --
 
 same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
 
+None of these procedures seem to work on my A780 one (and LinLoader is shown as an exlamation marks icon). Any hints?  zappacor
+
 == LICENSE NOTE ==
 
 The default license for this site is GNU FDL. In order that this page be undisputably Free Software, we waive or interpret some provisions of the GNU FDL for this page:
