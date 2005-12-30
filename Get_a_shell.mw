@@ -136,6 +136,22 @@ same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and u
 
 I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns ERROR, AT+mode=12 returns OK, but I can't do anything with the reported "MotDSPLog" mode. The second option with LinLoader also works here (when linloader is installed in the proper directory) -- Rene
 
+=== Creating a backup ===
+
+Before tinkering with a system, one of the first steps is usually to create a full backup. For the A780, this can be done with minor changes as soon as a shell login is possible. When using NFS mounts or netcat to tar the whole file system over the (USB) network, there is a small catch: the default MTU of 1500 bytes doesn't seem to work over the usbnet connection. The symptoms are that e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes accross. Setting a lower MTU at both sides of the connection (I used 500 as an overly conservative value that worked flawlessly, but it will most probably also work with higher values) solves the problem and allows to easily create a full backup. Then I used netcat for the actual backup, you can get the =utils.zip= at pre-compiled at http://pashkovsky.com/e680/
+
+Then copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Then execute /diska/profile.txt and execute e.g.
+
+nc -p2030 -l | bzip2 -9 > full-backup-a780.tar.bz2
+
+on the host machine and
+
+cd /; tar --preserve --same-owner --atime-preserve --exclude ram/proc --exclude mmc/mmca1 -cv | nc 192.168.1.1 2030
+
+on the phone. Then repeat something similar for the transflash card (if available).
+
+=Attention:= This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools.
+
 == LICENSE NOTE ==
 
 The default license for this site is GNU FDL. In order that this page be undisputably Free Software, we waive or interpret some provisions of the GNU FDL for this page:
