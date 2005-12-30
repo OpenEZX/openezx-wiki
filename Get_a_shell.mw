@@ -140,7 +140,7 @@ I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns 
 
 Before tinkering with a system, one of the first steps is usually to create a full backup. For the A780, this can be done with minor changes as soon as a shell login is possible. When using NFS mounts or netcat to tar the whole file system over the (USB) network, there is a small catch: the default MTU of 1500 bytes doesn't seem to work over the usbnet connection. The symptoms are that e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes accross. Setting a lower MTU at both sides of the connection (I used 500 as an overly conservative value that worked flawlessly, but it will most probably also work with higher values) solves the problem and allows to easily create a full backup. Then I used netcat for the actual backup, you can get the =utils.zip= at pre-compiled at http://pashkovsky.com/e680/
 
-Then copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Then execute /diska/profile.txt and execute e.g.
+Now copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Executing /diska/profile.txt allows to use some additional tools like netcat. For a backup, e.g. and execute
 
 nc -p2030 -l | bzip2 -9 > full-backup-a780.tar.bz2
 
