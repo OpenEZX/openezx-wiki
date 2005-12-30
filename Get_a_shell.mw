@@ -134,7 +134,7 @@ i have a european one where AT+mode=99 outputs ERROR, plain AT returns OK ok. --
 
 same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
 
-I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns ERROR, AT+mode=12 returns OK, but I can't do anything with the reported "MotDSPLog" mode. However, executing the above shell script with linloader does not accomplish anything on my phone either, so I can't get a shell right now. Any hints? -- Rene
+I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns ERROR, AT+mode=12 returns OK, but I can't do anything with the reported "MotDSPLog" mode. But the second option with LinLoader also works here (when linloader is installed in the proper directory) -- Rene
 
 == LICENSE NOTE ==
 
