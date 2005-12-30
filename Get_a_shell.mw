@@ -146,7 +146,7 @@ nc -p2030 -l | bzip2 -9 > full-backup-a780.tar.bz2
 
 on the host machine and
 
-cd /; tar --preserve --same-owner --atime-preserve --exclude ram/proc --exclude mmc/mmca1 -cv | nc 192.168.1.1 2030
+cd /; tar --preserve --same-owner --atime-preserve --exclude ram/proc --exclude mmc/mmca1 -cv * | nc 192.168.1.1 2030
 
 on the phone. Then repeat something similar for the transflash card (if available).
 
