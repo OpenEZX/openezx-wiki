@@ -1,4 +1,4 @@
-Here is how to get a shell on the phone, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer. For E680 users, as long as you dont mess up the bootloader, you can restore the phone to a working state with motorola's PST software and a copy of the firmware. No links will be provided here since its illegal and leaked. We don't know of any A780 firmware in the wild.
+Here is how to get a shell on the phone, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer. For E680 users, as long as you dont mess up the bootloader, you can restore the phone to a working state with motorola's PST software and a copy of the firmware. No links will be provided here since its illegal and leaked. We don't know of any A780 firmware in the wild (but on motorolafans.com, one is listed - it is completely unverified though).
 
 If you aren't careful, you can mess up your phone to the point that it will take a skilled person to restore an E680, and an A780 might have to be sent for factory service.
 
