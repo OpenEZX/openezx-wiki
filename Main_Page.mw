@@ -14,7 +14,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** How to [[Get a shell]] on the EZX device
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
-
+* Known [[Issues]]
 == Note ==
 
 * There is a german wiki with other/more information, on these phones. if people are willing to translate the information to here. that would be great [http://www.linux-portal.com/phonewiki/index.php http://www.linux-portal.com/phonewiki/index.php]
