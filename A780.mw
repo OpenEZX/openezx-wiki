@@ -65,3 +65,8 @@ The GPS is not connected to the AP, but to UART2 of the BP. The chip supports a 
 There is also a mode in which the phone need not be location-aware and the position is ''calculated'' in the cellular network using raw GPS information from the phone.
 
 This is all tied into enhanced cellular 911.
+
+== Charging modes ==
+There are at least two different charging modes.
+* Mode 1: The battery is '''not''' completely discharged. The CPU is running and can decide which kind of USB cable is attached. Power only or also data connection. In this mode you can use charging with USB data cable and USB power supply.
+* Mode 2: he battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
