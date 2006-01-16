@@ -29,7 +29,7 @@ AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB
 
 == Camera ==
 
-The A760 camera is a Omnitivion OV9640 1.3MegaPixel Camera Module. It is directly attached to the AP.
+The A780 camera is a Omnitivion OV9640 1.3MegaPixel Camera Module. It is directly attached to the AP.
 
 == Keypad ==
 
