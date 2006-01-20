@@ -9,6 +9,27 @@ include 192.168.1.2 . Since this is a network commonly used for DHCP,
 that could be a problem.
 
 === using the modem hack ===
+On a MAC OS X host, you need the AJZaurusUSB Network Driver.
+Get it at [http://www.dsitri.de/wiki.php?page=AJZaurusUSB AJZaurusUSB]
+To work with the A780 install the Driver, just befor restarting edit the File /System/Library/Extensions/AJZaurusUSB.kext/Contents/Info.plist and add just under         
+
+<key>IOKitPersonalities</key>
+        <dict>
+this Text:
+                <key>Motorola A780</key>
+                <dict>
+                        <key>CFBundleIdentifier</key>
+                        <string>org.lucidcake.driver.AJZaurusUSB</string>
+                        <key>IOClass</key>
+                        <string>org_lucidcake_driver_AJZaurusUSB</string>
+                        <key>IOProviderClass</key>
+                        <string>IOUSBDevice</string>
+                        <key>idProduct</key>
+                        <integer>24588</integer>
+                        <key>idVendor</key>
+                        <integer>8888</integer>
+                </dict>
+
 On your Linux host, load the USB ATM (modem) and USB network drivers:
 
  modprobe usbnet
