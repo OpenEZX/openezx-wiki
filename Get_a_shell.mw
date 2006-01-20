@@ -13,7 +13,7 @@ On a MAC OS X host, you need the AJZaurusUSB Network Driver.
 Get it at [http://www.dsitri.de/wiki.php?page=AJZaurusUSB AJZaurusUSB]
 To work with the A780 install the Driver, just befor restarting edit the File /System/Library/Extensions/AJZaurusUSB.kext/Contents/Info.plist and add just under         
 
-<key>IOKitPersonalities</key>
+        <key>IOKitPersonalities</key>
         <dict>
 this Text:
                 <key>Motorola A780</key>
