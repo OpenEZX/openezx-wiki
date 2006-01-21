@@ -9,9 +9,9 @@ include 192.168.1.2 . Since this is a network commonly used for DHCP,
 that could be a problem.
 
 === using the modem hack ===
-On a MAC OS X host, you need the AJZaurusUSB Network Driver.
-Get it at [http://www.dsitri.de/wiki.php?page=AJZaurusUSB AJZaurusUSB]
-To work with the A780 install the Driver, just befor restarting edit the File /System/Library/Extensions/AJZaurusUSB.kext/Contents/Info.plist and add just under         
+On a MAC OS X host, you need the AJZaurusUSB network driver.
+Get it at [http://www.dsitri.de/wiki.php?page=AJZaurusUSB AJZaurusUSB].
+To work with the A780 install the driver, just befor restarting edit the tile /System/Library/Extensions/AJZaurusUSB.kext/Contents/Info.plist and add just under         
 
         <key>IOKitPersonalities</key>
         <dict>
