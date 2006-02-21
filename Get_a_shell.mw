@@ -87,14 +87,12 @@ Log in as '''root'''. There's no password set.
 
 === Using LinLoader ===
 
-first get linloader from motorolafans.com, you need an account for this.
-unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your flash card (you will probably need to create the "loader" subdirectory):
+First get the GPL'd '''LinLoader''' script from [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=35 motorolafans.com] (you need a forum account for this) or [http://yantz.mine.nu/moto/linloaderhowto.html directly from the author]. Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash card (you will need to create the "loader" subdirectory):
 * lin_loader
 * loader.png
 * loader-sm.png
 
-then edit ".system\java\PlugCardDB" (also on your transflashcard)
-and add the following:
+Then edit ".system/java/PlugCardDB" (also on your TransFlash card) and add the following:
   [AppLinkRecord100000101]
   AllPosition = 200
   BigIcon = loader.png
@@ -115,23 +113,32 @@ and add the following:
   Type = 4
   uid = 100000101
 
-now the "AppLinkRecord100000101" and "uid = 100000101" should have an identical number, and shouldn't collide with any other app.
-also "Directory" and "Type" should be the following for th 680 series:
+The "AppLinkRecord100000101" and "uid = 100000101" should have an identical number, and shouldn't collide with any other application. Also "Directory" and "Type" should be the following for the 680 series:
+
   Directory = ../../../../mmc/mmca1/.system/QTDownLoad/loader
   Type = 2
 
-now reboot your phone.you should now have a new application (called LinLoader on the a780)
+Now reboot your phone. You should now have a new application (called LinLoader) on the A780.
 
-now place the following script called 'usblan.lin' on your flash card:
+Now place the following script called '''usblan.lin''' on your TransFlash card:
+
   #!/bin/bash
   echo MotNet > /proc/usbd-switch
-this will switch you from modem mode to usblan mode.
 
-now set your phone in modem mode
-and run the script with LinLoader (long press and choose openwith)
-load the modules "usbnet" and "zaurus" in linux
-linux should now see a Motorola USBLAN device (Vendor ID: 22b8, Product ID: 600c here)
-you can now continue as above.
+This will switch you from modem mode to usblan mode.
+
+Now set your phone in modem mode and run the script with '''LinLoader''' (long press and choose "open with").
+
+Load the modules "usbnet" and "zaurus" in Linux. Linux should now see a Motorola USBLAN device (Vendor ID: 22b8, Product ID: 600c here).
+
+Configure the network interface with
+
+ ifconfig usb0 192.168.1.1 netmask 255.255.255.0
+
+and login to your phone as "root" (no password is set, simply press return):
+
+ telnet 192.168.1.2
+
 
 == NOTES ==
 
