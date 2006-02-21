@@ -1,10 +1,10 @@
 Welcome to the [http://openezx.org/ OpenEZX] wiki!
 
-
-This is a collaborative effort to collect information about Motorola's EZX phone platform, such as the A780, E680 and E680i Linux based GSM Phones.
+This is a collaborative effort to collect information about Motorola's EZX phone platform, such as the A780, E680 and E680i Linux based GSM phones.
 
 * [[Hardware]] related pages
 ** [[Hardware::A780]]: The Motorola A780
+** [[Hardware::A910]]: The Motorola A910
 ** [[Hardware::E680]]: The Motorola E680
 ** [[Hardware::E680i]]: The Motorola E680i
 * [[Software]] related pages
@@ -16,16 +16,18 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
 * Known [[Issues]]
+
 == Note ==
 
-* There is a german wiki with other/more information, on these phones. if people are willing to translate the information to here. that would be great [http://www.linux-portal.com/phonewiki/index.php http://www.linux-portal.com/phonewiki/index.php]
-* There's an "inofficial" IRC channel on freenode called #openezx
+* There is [http://www.linux-portal.com/phonewiki/index.phpa German wiki] with other/more information on these phones. If people are willing to translate the information to here, that would be great.
+* There's an "unofficial" IRC channel on freenode called ''#openezx''.
 
 == Disclaimer ==
-This website (like all information and software provided by OpenEZX) is '''not affiliated with Motorola in any way'''.  Everything is provided as-is, and there is no guarantee for correctness, and/or fitness for a particular purpose.
 
-Running any kind of altered Firmware on your Phone will violate your warranty and might even (very unlikely) make it lose its regulatory approval.  
+This website (like all information and software provided by OpenEZX) is '''not affiliated with Motorola in any way'''. Everything is provided as-is, and there is no guarantee for correctness, and/or fitness for a particular purpose.
 
-If you do any modifications to your phone, you're on your own.  OpenEZX is a research project, and will not be liable for any damages that might be caused by following instructions/guides on this website.
+Running any kind of altered firmware on your phone will violate your warranty and might even (very unlikely) make it lose its regulatory approval.  
 
-This is a public Wiki.  Content is written by various authors.  OpenEZX tries it's best to ensure correctness, and to remove any inappropriate content.  If are a legitimate right holder, and feel that information presented here infringes on you copyright, patents, trade secrets, trade marks or otherwise, please immediately contact [mailto:laforge@gnumonks.org].
+If you do any modifications to your phone, you're on your own. OpenEZX is a research project, and will not be liable for any damages that might be caused by following instructions/guides on this website.
+
+This is a public wiki. Content is written by various authors. OpenEZX tries its best to ensure correctness, and to remove any inappropriate content. If you are a legitimate right holder, and feel that information presented here infringes on your copyright, patents, trade secrets, trade marks or otherwise, please immediately contact Harald Welte <[mailto:laforge@gnumonks.org laforge@gnumonks.org]>.
