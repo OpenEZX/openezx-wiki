@@ -81,7 +81,7 @@ and log in to your phone as "root" (no password is set, simply press return):
 
 == Using LinLoader ==
 
-First get the GPL'd '''LinLoader''' script from [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=35 motorolafans.com] (you need a forum account for this) or [http://yantz.mine.nu/moto/linloaderhowto.html directly from the author]. Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash card (you will need to create the "loader" subdirectory):
+First get the '''LinLoader''' script from [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=35 motorolafans.com] (you need a forum account for this). Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash card (you will need to create the "loader" subdirectory):
 * lin_loader
 * loader.png
 * loader-sm.png
