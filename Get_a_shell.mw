@@ -87,11 +87,9 @@ Log in as '''root'''. There's no password set.
 
 === Using LinLoader ===
 
-working half way, information sofar:
-
 first get linloader from motorolafans.com, you need an account for this.
 unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your flash card (you will probably need to create the "loader" subdirectory):
-* in_loader
+* lin_loader
 * loader.png
 * loader-sm.png
 
