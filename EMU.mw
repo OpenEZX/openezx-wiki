@@ -1,11 +1,10 @@
-=== EMU (Enhanced Mini USB) ===
+== EMU (Enhanced Mini USB) ==
 
 The A780 has a mini USB connector that has some alternate pinout / functions.
-There is code in the kernel sources /drivers/misc/ezx-emu.c
-
-
+There is code in the kernel sources /drivers/misc/ezx-emu.c.
 
 == Normal USB device/accesory mode ==
+
 Pinout :
 * 1 +5 volts input used to charge the phones battery at max 500ma.
 * 2 Data-
@@ -16,6 +15,7 @@ Pinout :
 In this mode, the Data- and Data+ lines will be routed to a USB transceiver located in PCAP chip, which is connected to the BP via the USB2 single ended interface (GPIO pins 34,35,36,39, 40, and 53). There is a 1,5kohm pullup resistor between the D+ as required by the USB standard to signal a high speed device (12mbits). This resistor is switchable by the PCAP bit BUSCTRL_USB_PU (+3,3volt or high Z). There is a second switchable 200kohm pullup resistor on the d+ line which is used for charger detection. For the moment, it is not known how to switch it off.
 
 == UART mode ==
+
 Pinout :
 * 1 NC
 * 2 TXD
@@ -27,6 +27,7 @@ The routing of the analog switches is exactly the same as in USB client mode, bu
 See drivers/misc/ezx-emu.c of the original kernel for code.
 
 == Simple Charger ==
+
 Pinout :
 * 1 + 5 volts @ 500 ma
 * 2 Short to pin 3
@@ -45,8 +46,8 @@ Pinout :
 * 4 440kohm pulldown
 * 5 GND
 
-
 == Just Power on the phone ==
+
 Pinout :
 * 1 + 5 volts
 * 2 NC
@@ -55,6 +56,7 @@ Pinout :
 * 5 GND
 
 == Headset Mode ==
+
 Pinout :
 * 1 The phone suppiles a voltage to the headset through this pin
 * 2 Left Out for Stereo Playback  or Mono Out  for handsfree 
@@ -65,6 +67,6 @@ Pinout :
 Depending on what you do (play mp3 / calling) the phone will either switch to stereo mode or handsfree mode.
 The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono ACD in PCAP.
 
-
 == Factory Test & Flash ==
-Nothing is known about this mode
+
+Nothing is known about this mode.
