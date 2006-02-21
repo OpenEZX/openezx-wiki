@@ -10,14 +10,14 @@ Combined with the ability to halt and manually control the device's clock rate, 
 
 Also, by accessing the memory bus, and manually exercising the respective chip select signals, an external entity can read/write to the system memory, and e.g. download some code into it.  
 
-Flash memory can also programmed via JTAG, some times directly, sometimes indirectly (by loading a flash program into system memory first, and then running that flash program).
+Flash memory can also be programmed via JTAG, sometimes directly, sometimes indirectly (by loading a flash program into system memory first, and then running that flash program).
 
 == What do I need to use JTAG? ==
 
 You need
-* A JTAG Adaptor (can be built very easily for PC parallel port)
-* JTAG Software for your PC
-* Definition of the JTAG cells (usually BSDL.) Learn a bit about [http://www.xjtag.com/jtag-bsdl.php  Boundary Scan Design Language]
+* A JTAG Adaptor (can be built very easily for PC parallel port).
+* JTAG Software for your PC.
+* Definition of the JTAG cells (usually BSDL). Learn a bit about [http://www.xjtag.com/jtag-bsdl.php Boundary Scan Design Language].
 
 == JTAG on EZX ==
 
