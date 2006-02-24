@@ -3,3 +3,7 @@
 '''Problem:''' The phone does not charge with the USB data cable.
 
 '''Solution:''' Perhaps your phone is completely discharged. At this point you need to use the USB power supply. Take a look at [[Hardware::A780#Charging_modes]].
+
+== Other Issues ==
+
+[http://www.linux-portal.com/phonewiki/index.php/Motorola_A780#Bugs This German wiki] lists several more issues with the A780.
