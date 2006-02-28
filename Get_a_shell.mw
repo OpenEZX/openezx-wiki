@@ -72,7 +72,7 @@ And now /proc/bus/devices should contain a device with manufacturer ID of ''Moto
 
 Configure the network interface with
 
- ifconfig usb0 192.168.1.1 netmask 255.255.255.0
+ ifconfig usb0 192.168.1.1 netmask 255.255.255.0 mtu 900
 
 and log in to your phone as "root" (no password is set, simply press return):
 
@@ -127,7 +127,7 @@ Load the modules "usbnet" and "zaurus" in Linux. Linux should now see a Motorola
 
 Configure the network interface with
 
- ifconfig usb0 192.168.1.1 netmask 255.255.255.0
+ ifconfig usb0 192.168.1.1 netmask 255.255.255.0 mtu 900
 
 and log in to your phone as "root" (no password is set, simply press return):
 
