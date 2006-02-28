@@ -6,12 +6,15 @@ Here is how to get a shell on the phone, using a Linux host computer. This proce
 
 If you aren't careful, you can mess up your phone to the point that it will take a skilled person to restore an E680, and an A780 might have to be sent for factory service.
 
-This howto is specifically for Linux and a specific version of the A780. For further howto's and questions check [http://www.motorolafans.com motorolafans.com].
+This howto is specifically for Linux or Mac OS X and a specific version of the A780. For further howto's and questions check [http://www.motorolafans.com motorolafans.com].
 
-''This won't work'' if your system already has a network configured that would include 192.168.1.2. Since this is a network commonly used for DHCP, that could be a problem.
+By default, the A780 would set its IP address to 192.168.1.2. ''This won't work'' if your system already has a network configured that would include 192.168.1.2. Since this is a network commonly used for DHCP, that could be a problem.
 
+Therefore in the [[#Using LinLoader|LinLoader approach]] below, we will put the phone's IP address to 169.254.1.2 here, and the host's IP address to 169.254.1.1. You can replace that numbers by any IP address from the following ranges: 192.168.1.* or 169.254.*.* (where the phone and the host must have different IP adresses but from the same subnet). You cannot easily use totally different IP addresses. This requires you to enable these in /etc/hosts.allow on the phone.
 
-== Using the modem hack ==
+== Preparing the host ==
+
+=== Mac OS X ===
 
 On a MAC OS X host, you need the AJZaurusUSB network driver. Get it at [http://www.dsitri.de/wiki.php?page=AJZaurusUSB AJZaurusUSB].
 To work with the A780, install the driver. Just before restarting, edit the tile /System/Library/Extensions/AJZaurusUSB.kext/Contents/Info.plist and add just under         
@@ -35,6 +38,12 @@ this text:
    <integer>8888</integer>
  </dict>
 
+After reboot, when connecting the phone, a device /dev/tty.usbmodem3B11 should appear (and disappear when you switch the phone to usblan mode, see below).
+
+This is known to work when [[#Using LinLoader]].
+
+=== Linux ===
+
 On your Linux host, load the USB ATM (modem) and USB network drivers:
 
  modprobe usbnet
@@ -47,6 +56,8 @@ Plug the phone and the host together with a USB cable. On the console you should
  cdc_acm 4-2:1.0: ttyACM0: USB ACM device
 
 You can play back the console messages with the '''dmesg''' command. If you look in /proc/bus/devices, you will find a device with a manufacturer ID of ''Motorola'' and a product ID of ''Motorola USB Modem''.
+
+== Using the modem hack ==
 
 Install minicom if it's not installed. On Debian, I used:
 
@@ -122,28 +133,26 @@ Now place the following script called '''usblan.lin''' on your TransFlash card:
 
   #!/bin/bash
   echo MotNet > /proc/usbd-switch
+  ifconfig usbl0 up 169.254.1.2 netmask 255.255.255.0 mtu 900
 
-This will switch you from modem mode to usblan mode.
+This will switch you from modem mode to usblan mode, switch the phone's IP address to 169.254.1.2 and put the phone's mtu to 900.
 
 Now set your phone in modem mode and run the script with '''LinLoader''' (long press and choose "open with").
 
 Load the modules "usbnet" and "zaurus" in Linux. Linux should now see a Motorola USBLAN device (Vendor ID: 22b8, Product ID: 600c here).
 
-Configure the network interface with
+Configure the host's network interface with
 
- ifconfig usb0 192.168.1.1 netmask 255.255.255.0 mtu 900
+ ifconfig usb0 169.254.1.1 netmask 255.255.255.0 mtu 900
 
 and log in to your phone as "root" (no password is set, simply press return):
 
- telnet 192.168.1.2
+ telnet 169.254.1.2
 
-once you're logged in, you should adjust the mtu on the phone side, too:
-
- ifconfig usbl0 mtu 900
 
 == Notes ==
 
-=== mtu 9000 ===
+=== mtu 900 ===
 
 If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), set the mtu to 900, as seen above.
 
@@ -163,18 +172,13 @@ There seem to be certain A780's where the modem mode trick doesn't work on, more
 * I have a european one where AT+mode=99 outputs ERROR, plain AT returns OK ok. --ToniAlatalo
 * Same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
 * I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns ERROR, AT+mode=12 returns OK, but I can't do anything with the reported "MotDSPLog" mode. The second option with LinLoader also works here (when linloader is installed in the proper directory) -- Rene
+* Same here -- Andreas
 
 === Creating a backup ===
 
 Before tinkering with a system, one of the first steps is usually to create a full backup. For the A780, this can be done with minor changes as soon as a shell login is possible. When using NFS mounts or netcat to tar the whole file system over the (USB) network, there is a small catch: the default MTU of 1500 bytes doesn't seem to work over the usbnet connection. The symptoms are that e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes accross. Setting a lower MTU at both sides of the connection (I used 900 as an overly conservative value that worked flawlessly, but it will most probably also work with higher values) solves the problem and allows to easily create a full backup.
 
-On the host side, instead of the ''ifconfig'' lines above, type the following:
-  
- ifconfig usb0 192.168.1.1 netmask 255.255.255.0 mtu 900
-
-As ''usbl0'' already exists on the phone, you can type the following on the phone:
-
- ifconfig usbl0 mtu 900
+That's the reason why you should add <code>mtu 900</code> to the ifconfig commands above, and should adjust the mtu on the phone if using the modem hack.
 
 Then I used netcat for the actual backup, you can get the utils.zip at pre-compiled at http://pashkovsky.com/e680/.
 
