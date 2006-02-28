@@ -78,6 +78,10 @@ and log in to your phone as "root" (no password is set, simply press return):
 
  telnet 192.168.1.2
 
+once you're logged in, you should adjust the mtu on the phone side, too:
+
+ ifconfig usbl0 mtu 900
+
 
 == Using LinLoader ==
 
@@ -133,8 +137,15 @@ and log in to your phone as "root" (no password is set, simply press return):
 
  telnet 192.168.1.2
 
+once you're logged in, you should adjust the mtu on the phone side, too:
+
+ ifconfig usbl0 mtu 900
 
 == Notes ==
+
+=== mtu 9000 ===
+
+If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), set the mtu to 900, as seen above.
 
 === DHCP ===
 
