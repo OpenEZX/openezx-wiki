@@ -1,6 +1,91 @@
 The main goal of the OpenEZX project is having a mobile phone which runs on 100% Free Software. This page tracks the progress of this effort.
 
-== Current Status ==
+
+== Hardware Compatibility ==
+
+The list of hardware parts we have working Free Software drivers for.
+
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align: center;"
+|- style="background:#bfbfbf; font-weight: bold"
+! Phone
+! CPU
+! RAM
+! Built-in Flash memory
+! External TransFlash
+! Camera
+! Power Management
+! USB Host
+! USB Device
+! USB OTG
+! Touchscreen
+! Keypad
+! Vibrator
+! Sound
+! FM Radio
+! Bluetooth
+! GPS
+! ...
+|- style="background:#efefef;"
+| '''[[Hardware::A780|A780]]'''
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| -
+| style="background:lime" | 100%
+| ?
+| ?
+|- style="background:#dfdfdf;"
+| '''[[Hardware::E680|E680]]'''
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+|- style="background:#efefef;"
+| '''...'''
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+| ?
+|}
+
+
+== Software Stack ==
 
 {| border="0" cellpadding="2" cellspacing="2" align="top"
 |- style="background:#bfbfbf; font-weight: bold"
