@@ -30,3 +30,7 @@ Intel has the BSDL (boundary scan definition language) files for the PXA270 publ
 There are ports of older versions of this windows C++ program to Linux (jflash-linux), as well as independently developed programs.
 
 Harald is working on getting a working JTAG configuration with his A780, stay tuned.
+
+=== A working JTAG configuration with E680i ===
+
+Coming soon...
