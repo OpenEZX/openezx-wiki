@@ -102,7 +102,7 @@ The list of hardware parts we have working Free Software drivers for.
 | '''Kernel'''
 | style="background:yellow" | 70%
 | GPL
-| The [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though.
+| The [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though. It seems that it is possible to flash your own Kernel on the phone. [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&p=24078#24078 here] is a (very short) howto.
 |- style="background:#dfdfdf;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
