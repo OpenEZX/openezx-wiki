@@ -21,7 +21,7 @@ You need
 
 == JTAG on EZX ==
 
-The EZX phones (at least A780 and E680) offer JTAG pads on the PCB for both the AP and the BP.
+The EZX phones (at least A780 and E680/E680i) offer JTAG pads on the PCB for both the AP and the BP.
 
 === JTAG on AP ===
 
