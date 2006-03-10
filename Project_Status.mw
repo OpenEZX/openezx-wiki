@@ -1,0 +1,31 @@
+The main goal of the OpenEZX project is having a mobile phone which runs on 100% Free Software. This page tracks the progress of this effort.
+
+== Current Status ==
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+! Name
+! Done
+! License
+! Description
+|- style="background:#efefef;"
+| '''Bootloader'''
+| style="background:yellow" | 70%
+| GPL
+| The modified blob [[Software::AP::Motorola#Bootloader|bootloader]] used for the EZX phones has recently been released by Motorola. However, nobody has reported successful usage of the bootloader, yet.
+|- style="background:#dfdfdf;"
+| '''Kernel'''
+| style="background:yellow" | 70%
+| GPL
+| The [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though.
+|- style="background:#dfdfdf;"
+| '''Cross-Compilation Toolchain'''
+| style="background:lime" | 95%
+| GPL
+| [http://lsb.blogdns.net/ezx-crosstool ezx-crosstool] provides a Free Software crosscompiler toolchain built around gcc/glibc/binutils. It seems to have some smaller issues in special cases, but works quite fine for most stuff.
+|- style="background:#dfdfdf;"
+| '''...'''
+| style="background:red" | 0%
+| ...
+| ...
+|}
