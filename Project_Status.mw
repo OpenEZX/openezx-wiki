@@ -10,7 +10,7 @@ The list of hardware parts we have working Free Software drivers for.
 ! Phone
 ! CPU
 ! RAM
-! Built-in Flash memory
+! Internal Flash
 ! External TransFlash
 ! Camera
 ! Power Management
@@ -21,49 +21,80 @@ The list of hardware parts we have working Free Software drivers for.
 ! Keypad
 ! Vibrator
 ! Sound
+! MIDI
 ! FM Radio
 ! Bluetooth
 ! GPS
+! Serial
+! Neptune LTE
 ! ...
 |- style="background:#efefef;"
 | '''[[Hardware::A780|A780]]'''
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
 | ?
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
 | ?
+| style="background:yellow" | 70%<sup>1</sup>
 | ?
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
 | ?
+| &mdash;
+| style="background:lime" | 100%<sup>2</sup>
+| style="background:red" | 0%<sup>3</sup>
 | ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| -
-| style="background:lime" | 100%
 | ?
 | ?
 |- style="background:#dfdfdf;"
 | '''[[Hardware::E680|E680]]'''
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
 | ?
 | ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
+| style="background:lime" | 100%<sup>2</sup>
+| &mdash;
 | ?
 | ?
 | ?
 |- style="background:#efefef;"
+| '''[[Hardware::E680i|E680i]]'''
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| ?
+| style="background:lime" | 100%<sup>2</sup>
+| &mdash;
+| ?
+| ?
+| ?
+|- style="background:#dfdfdf;"
 | '''...'''
 | ?
 | ?
@@ -82,7 +113,16 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | ?
 | ?
+| ?
+| ?
+| ?
 |}
+
+<sup>1</sup> - Drivers seem to be available in the released kernel, but I don't know which work or don't work, hence 70%. If you know more details, please correct the value.
+
+<sup>2</sup> - It seems [http://www.bluez.org/ bluez] is fully functional on EZX phones. Is this correct?
+
+<sup>3</sup> - It seems nobody has been able to use the built-in GPS receiver with any Free Software driver or application. Is this correct?
 
 
 == Software Stack ==
@@ -103,7 +143,7 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 70%
 | GPL
 | The [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though. It seems that it is possible to flash your own Kernel on the phone. [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&p=24078#24078 here] is a (very short) howto.
-|- style="background:#dfdfdf;"
+|- style="background:#efefef;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
 | GPL
