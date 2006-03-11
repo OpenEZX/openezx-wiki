@@ -124,6 +124,7 @@ The list of hardware parts we have working Free Software drivers for.
 
 <sup>3</sup> - It seems nobody has been able to use the built-in GPS receiver with any Free Software driver or application. Is this correct?
 
+mack: Not precisely.  I've been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv.  I never got around to do anything with this stream, but I got a few messages from motofans members working on a gpsd implementation.  I hope these efforts were not abandoned.
 
 == Software Stack ==
 
