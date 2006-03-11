@@ -122,7 +122,7 @@ The list of hardware parts we have working Free Software drivers for.
 
 <sup>2</sup> - [http://www.bluez.org/ bluez] is fully functional on EZX phones. You need cyphs bluez from motorolafans.com to use it. Note: Build instructions would be nice, in order to update to a more recent version :)
 
-<sup>3</sup> - mack: I've been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv.  I never got around to do anything with this stream, but I got a few messages from motofans members working on a gpsd implementation.  I hope these efforts were not abandoned.
+<sup>3</sup> - mack: has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv.  Floe built on that to decode the messages, see [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 mfc].
 
 == Software Stack ==
 
