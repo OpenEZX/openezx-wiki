@@ -27,6 +27,7 @@ The list of hardware parts we have working Free Software drivers for.
 ! GPS
 ! Serial
 ! Neptune LTE
+! JTAG
 ! ...
 |- style="background:#efefef;"
 | '''[[Hardware::A780|A780]]'''
@@ -49,6 +50,7 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:red" | 20%<sup>3</sup>
 | ?
 | ?
+| style="background:red" | 20%<sup>4</sup>
 | ?
 |- style="background:#dfdfdf;"
 | '''[[Hardware::E680|E680]]'''
@@ -69,6 +71,7 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | style="background:lime" | 100%<sup>2</sup>
 | &mdash;
+| ?
 | ?
 | ?
 | ?
@@ -93,6 +96,7 @@ The list of hardware parts we have working Free Software drivers for.
 | &mdash;
 | ?
 | ?
+| style="background:red" | 20%<sup>4</sup>
 | ?
 |- style="background:#dfdfdf;"
 | '''...'''
@@ -115,6 +119,7 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | ?
 | ?
+| -
 | ?
 |}
 
@@ -123,6 +128,9 @@ The list of hardware parts we have working Free Software drivers for.
 <sup>2</sup> - [http://www.bluez.org/ bluez] is fully functional on EZX phones. You need cyphs bluez from motorolafans.com to use it. Note: Build instructions would be nice, in order to update to a more recent version :)
 
 <sup>3</sup> - mack: has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv.  Floe built on that to decode the messages, see [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 mfc].
+
+<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the A780. Is JFlashMM Free Software?
+
 
 == Software Stack ==
 
