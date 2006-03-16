@@ -129,7 +129,7 @@ The list of hardware parts we have working Free Software drivers for.
 
 <sup>3</sup> - mack: has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv.  Floe built on that to decode the messages, see [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 mfc].
 
-<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the A780. Is JFlashMM Free Software?
+<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the A780. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
 
 
 == Software Stack ==
