@@ -155,6 +155,11 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 70%
 | GPL
 | Harald has started to port all drivers to a recent 2.6 kernel. What is the exact status?
+|- style="background:#dfdfdf;"
+| '''GPS'''
+| style="background:yellow" | 50%
+| GPL
+| See above (Hardware Compatibility<sup>3</sup>).
 |- style="background:#efefef;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
