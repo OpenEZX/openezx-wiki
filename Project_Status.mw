@@ -47,7 +47,7 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | &mdash;
 | style="background:lime" | 100%<sup>2</sup>
-| style="background:red" | 20%<sup>3</sup>
+| style="background:yellow" | 50%<sup>3</sup>
 | ?
 | ?
 | style="background:red" | 20%<sup>4</sup>
@@ -127,7 +127,7 @@ The list of hardware parts we have working Free Software drivers for.
 
 <sup>2</sup> - [http://www.bluez.org/ bluez] is fully functional on EZX phones. You need cyphs bluez from motorolafans.com to use it. Note: Build instructions would be nice, in order to update to a more recent version :)
 
-<sup>3</sup> - mack: has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv.  Floe built on that to decode the messages, see [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 mfc].
+<sup>3</sup> - mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
 
 <sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the A780. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
 
