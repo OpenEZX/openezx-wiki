@@ -96,12 +96,12 @@ once you're logged in, you should adjust the mtu on the phone side, too:
 
 == Using LinLoader ==
 
-First get the '''LinLoader''' script from [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=35 motorolafans.com] (you need a forum account for this). Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash card (you will need to create the "loader" subdirectory):
+First get the '''LinLoader''' script from [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=35 motorolafans.com] (you need a forum account for this). Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash (or SD/MMC) card (you will need to create the "loader" subdirectory):
 * lin_loader
 * loader.png
 * loader-sm.png
 
-Then edit ".system/java/PlugCardDB" (also on your TransFlash card) and add the following:
+Then edit ".system/java/PlugCardDB" (also on your TransFlash or SD/MMC card) and add the following:
   [AppLinkRecord100000101]
   AllPosition = 200
   BigIcon = loader.png
@@ -129,7 +129,7 @@ The "AppLinkRecord100000101" and "uid = 100000101" should have an identical numb
 
 Now reboot your phone. You should now have a new application (called LinLoader) on the A780.
 
-Now place the following script called '''usblan.lin''' on your TransFlash card:
+Now place the following script called '''usblan.lin''' on your TransFlash (or SD/MMC) card:
 
   #!/bin/bash
   echo MotNet > /proc/usbd-switch
@@ -148,7 +148,6 @@ Configure the host's network interface with
 and log in to your phone as "root" (no password is set, simply press return):
 
  telnet 169.254.1.2
-
 
 == Notes ==
 
