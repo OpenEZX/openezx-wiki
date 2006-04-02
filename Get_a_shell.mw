@@ -152,6 +152,12 @@ and log in to your phone as "root" (no password is set, simply press return):
 
 == Notes ==
 
+=== Firewall ===
+
+By default, your firewall may forbid telnet connections to your phone. Easiest way to fix that would be to disable it temporary using following command (as root):
+
+service iptables stop
+
 === mtu 900 ===
 
 If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), set the mtu to 900, as seen above.
