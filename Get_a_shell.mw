@@ -156,7 +156,7 @@ and log in to your phone as "root" (no password is set, simply press return):
 
 By default, your firewall may forbid telnet connections to your phone. Easiest way to fix that would be to disable it temporary using following command (as root):
 
-service iptables stop
+ service iptables stop
 
 === mtu 900 ===
 
