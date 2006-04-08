@@ -7,11 +7,11 @@ On this site we start to share information about the ezx bootloader.
 |-
 | 0x7c7c7c7c
 | [http://www.datenfreihafen.org/~stefan/EZX/photos/a780-bootloader-2.jpg]
-| Need to fill.
+| With this flag loading kernel into ram and boot works. 
 |-
 | 0x95aa95aa
 | Need to fill.
-| Need to fill.
+| A possible meaning of this this value is low power. Booting kernel via usb does not work.
 |-
 | 0xd5aa95aa
 | [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
