@@ -1,6 +1,8 @@
-On this site we start to share information about the ezx bootloader.
+On this site we start to share information about the ezx bootloader. Motorola eses a modified blob for the ezx phones. The modified source is available here: http://www.datenfreihafen.org/~stefan/EZX/a780-blob.tar.bz2
 
-= Flags =
+To enter the bootloader you need to press the camera and jogdial button and power on.
+
+= FLAG =
 
 {| border="1"
 | Flags entry || Image || Meaning
@@ -21,3 +23,26 @@ On this site we start to share information about the ezx bootloader.
 | [http://shell.studenti.unina.it/~ospite/tmp/558a95aa.jpg]
 | Need to fill.
 |}
+
+= RESET =
+
+The reset value seems to be 0x00000001. More information needed here.
+
+= BRESET =
+
+The reset value seems to be 0x00000000. More information needed here.
+
+= ARESET =
+
+The reset value seems to be 0x00000000. More information needed here.
+
+= Messages =
+
+We have discovered two messages at the moment:
+
+* No BP_WDI before reset start reflash code!
+* start reflash code!
+
+= Version and date =
+
+Version 3.0 from 2004-05-18
