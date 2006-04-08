@@ -21,6 +21,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** How to [[Get a shell]] on the EZX device
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
+** [[Bootloader]]
 ** Developer [[Blogs]]
 * Known [[Issues]]
 * [[Press Review]]
