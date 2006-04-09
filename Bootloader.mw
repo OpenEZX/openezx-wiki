@@ -1,6 +1,11 @@
-On this site we start to share information about the ezx bootloader. Motorola eses a modified blob for the ezx phones. The modified source is available here: http://www.datenfreihafen.org/~stefan/EZX/a780-blob.tar.bz2
+= General =
+On this site we start to share information about the ezx bootloader. Motorola released the modified blob for the ezx phones. The source is available here: http://www.datenfreihafen.org/~stefan/EZX/a780-blob.tar.bz2
 
-To enter the bootloader you need to press the camera and jogdial button and power on.
+To enter the bootloader you need to press the camera and jogdial button while power on. 
+
+= Communication with the bootloader =
+
+Based on the source code Harald Welte wrote a userspace application for communication with the bootloader over usb. At the moment you can use it to load a selfcompiled kernel into ram and execute it. This gives the possibility to test kernels without reflash the phone again and again. boot_usb is available here: http://svn.gnumonks.org/trunk/a780/src/boot_usb/ . You need libusb.
 
 = FLAG =
 
