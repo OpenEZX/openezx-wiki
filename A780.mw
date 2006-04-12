@@ -74,7 +74,7 @@ This is all tied into enhanced cellular 911.
 == Charging modes ==
 There are at least two different charging modes.
 * Mode 1: The battery is '''not''' completely discharged. The CPU is running and can decide which kind of USB cable is attached. Power only or also data connection. In this mode you can use charging with USB data cable and USB power supply.
-* Mode 2: he battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
+* Mode 2: The battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
 
 == EMU / USB port ==
 The A780 has a mini USB connector that motorola calls "Enhanced Mini USB" or in short "EMU". The Enhancement consists of several different modes that the port can be be swicthed into. The different modes are implemented by several analog CMOS switches and MOSFETs, which are controlled by the PCAP chip. Pin4 of the mini USB port is connected to a ADC inside the PCAP so that the voltage level on this pin can be measured by the BP, in order to identify a connected peripherial by simple resistor voltage dividers.
