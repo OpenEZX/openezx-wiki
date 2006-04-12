@@ -37,7 +37,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 | Possible Low power.
 |}
 
-We have some problems where the flag values come from. Blob, the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote this bytes into the SDRAM?   The only corespondig value we can find in the kernel source code is 0x7c7c7c7c. Perhaps the three last ones are garbage and have no reall meaning, 0x95aa95aa is reproduceable.
+We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. Perhaps the three last ones are garbage and have no real meaning, 0x95aa95aa is reproducible.
 
 = RESET =
 
