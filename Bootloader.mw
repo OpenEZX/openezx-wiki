@@ -6,7 +6,7 @@ To enter the bootloader you need to press the camera and jogdial button while po
 
 = Communication with the bootloader =
 
-Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] is available here: http://svn.gnumonks.org/trunk/a780/src/boot_usb/. You need [[libusb]].
+Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] is available here: http://svn.gnumonks.org/trunk/a780/src/boot_usb/. You need [http://libusb.sourceforge.net/ libusb].
 
 = FLAG =
 
