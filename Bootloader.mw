@@ -22,7 +22,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 |-
 | 0x95aa95aa
 | Need to fill.
-| A possible meaning of this this value is low power. Booting kernel via USB does not work.
+| A possible meaning of this this value is low power.
 |-
 | 0xd5aa95aa
 | [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
