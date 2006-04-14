@@ -39,9 +39,13 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 | 0x15babdae
 | Need to fill.
 | Low Power. System did not start. Only bootloader.
+|-
+| 0x60d56f34
+| Need to fill.
+| No idea.
 |}
 
-We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. Perhaps the three last ones are garbage and have no real meaning, 0x95aa95aa is reproducible.
+We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. Perhaps last ones are garbage and have no real meaning, 0x95aa95aa is reproducible.
 
 = RESET =
 
