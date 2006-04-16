@@ -42,6 +42,22 @@ After reboot, when connecting the phone, a device /dev/tty.usbmodem3B11 should a
 
 This is known to work when [[#Using LinLoader]].
 
+First cut at Ming:
+
+ <key>Motorola Ming</key>
+ <dict>
+   <key>CFBundleIdentifier</key>
+   <string>org.lucidcake.driver.AJZaurusUSB</string>
+   <key>IOClass</key>
+   <string>org_lucidcake_driver_AJZaurusUSB</string>
+   <key>IOProviderClass</key>
+   <string>IOUSBDevice</string>
+   <key>idProduct</key>
+   <integer>24717</integer>
+   <key>idVendor</key>
+   <integer>8888</integer>
+ </dict>
+
 === Linux ===
 
 On your Linux host, load the USB ATM (modem) and USB network drivers:
