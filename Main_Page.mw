@@ -18,6 +18,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** [[Software::AP::OpenEZX]]: Free Software for the AP
 ** [[Software::A780]]: A780-specific software versions put out by Motorola
 * Development related pages
+** How to create [[Backups]] of the EZX device
 ** How to [[Get a shell]] on the EZX device
 ** How to [[Crosscompile]] for the EZX device
 ** How to use the [[JTAG]] interface
