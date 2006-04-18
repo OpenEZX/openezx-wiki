@@ -144,51 +144,46 @@ The list of hardware parts we have working Free Software drivers for.
 |- style="background:#efefef;"
 | '''Bootloader'''
 | style="background:yellow" | 70%
-| GPL
+| style="background:lime" | GPL
 | The modified blob [[Software::AP::Motorola#Bootloader|bootloader]] used for the EZX phones has recently been released by Motorola. However, nobody has reported successful usage of the bootloader, yet.
 |- style="background:#dfdfdf;"
 | '''2.4 kernel'''
 | style="background:yellow" | 70%
-| GPL
+| style="background:lime" | GPL
 | The 2.4-based [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though. It seems that it is possible to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&p=24078#24078 flash your own kernel on the phone].
 |- style="background:#dfdfdf;"
 | '''2.6 kernel'''
 | style="background:lime" | 80%
-| GPL
+| style="background:lime" | GPL
 | Harald has created a preliminary [http://ganesha.gnumonks.org/~laforge/tmp/2.6.16.5-ezx_patchset.tar.bz2 patchset] which allows you to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html run Linux 2.6.16.5 your phone]. Tested with [[Hardware::E680|E680]] and [[Hardware::A780|A780]]. Not everything is working yet, though.
 |- style="background:#dfdfdf;"
 | '''GPS'''
 | style="background:yellow" | 50%
-| GPL
+| style="background:lime" | GPL
 | See above (Hardware Compatibility<sup>3</sup>).
 |- style="background:#efefef;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
-| GPL
+| style="background:lime" | GPL
 | [http://lsb.blogdns.net/ezx-crosstool ezx-crosstool] provides a Free Software crosscompiler toolchain built around gcc/glibc/binutils. It seems to have some smaller issues in special cases, but works quite fine for most stuff.
 |- style="background:#dfdfdf;"
 | '''Base OS'''
 | style="background:lime" | 95%
-| GPL, others
+| style="background:lime" | GPL, others
 | The basic command line tools are all there, e.g. fileutils, shellutils, util-linux and so on. We also have a working [[Software::AP::OpenEZX#System_Tools|busybox]] that adds many of the missing tools, and some other tools such as ltrace, iptables, lsof, etc. Is anything critical missing?
 |- style="background:#efefef;"
 | '''Text terminal'''
 | style="background:red" | 0%
-| ?
+| style="background:red" | ?
 | There's "qonsole", but the license of it is unclear (doesn't seem to be GPL). Is there any replacement?
 |- style="background:#dfdfdf;"
 | '''Graphical web browser'''
 | style="background:red" | 0%
-| ?
+| style="background:red" | ?
 | We need a Free Software replacement for Opera. Does anybody know of a graphical web browser which has been ported?
 |- style="background:#dfdfdf;"
 | '''Text-based web browser'''
 | style="background:lime" | 100%
-| GPL
+| style="background:lime" | GPL
 | I have successfully cross-compiled [http://artax.karlin.mff.cuni.cz/~mikulas/vyplody/links/ links], a web browser for the console. I'll publish a small HOWTO + binaries, soon. --[[User:Uwe Hermann|Uwe Hermann]] 13:00, 11 March 2006 (CET)
-|- style="background:#dfdfdf;"
-| '''...'''
-| style="background:red" | 0%
-| ...
-| ...
 |}
