@@ -1,6 +1,5 @@
 The main goal of the OpenEZX project is having a mobile phone which runs on 100% Free Software. This page tracks the progress of this effort.
 
-
 == Hardware Compatibility ==
 
 The list of hardware parts we have working Free Software drivers for.
@@ -102,7 +101,7 @@ The list of hardware parts we have working Free Software drivers for.
 
 <sup>3</sup> - mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
 
-<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the A780. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
+<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the [[Hardware::A780|A780]]. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
 
 <sup>5</sup> - According to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html this post] the SD/MMC works fine on [[Hardware::E680|E680]] phones with Linux 2.6.16.5, but not on the [[Hardware::A780|A780]].
 
