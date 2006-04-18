@@ -28,7 +28,6 @@ The list of hardware parts we have working Free Software drivers for.
 ! Serial
 ! Neptune LTE
 ! JTAG
-! ...
 |- style="background:#efefef;"
 | '''[[Hardware::A780|A780]]'''
 | style="background:yellow" | 70%<sup>1</sup>
@@ -51,7 +50,6 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | ?
 | style="background:red" | 20%<sup>4</sup>
-| ?
 |- style="background:#dfdfdf;"
 | '''[[Hardware::E680|E680]]'''
 | style="background:yellow" | 70%<sup>1</sup>
@@ -71,7 +69,6 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | style="background:lime" | 100%<sup>2</sup>
 | &mdash;
-| ?
 | ?
 | ?
 | ?
@@ -97,30 +94,6 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | ?
 | style="background:yellow" | 70%<sup>4</sup>
-| ?
-|- style="background:#dfdfdf;"
-| '''...'''
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| ?
-| -
-| ?
 |}
 
 <sup>1</sup> - Drivers seem to be available in the released kernel, but I don't know which work or don't work, hence 70%. If you know more details, please correct the value.
