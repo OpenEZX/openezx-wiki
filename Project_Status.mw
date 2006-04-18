@@ -152,9 +152,9 @@ The list of hardware parts we have working Free Software drivers for.
 | The 2.4-based [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though. It seems that it is possible to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&p=24078#24078 flash your own kernel on the phone].
 |- style="background:#dfdfdf;"
 | '''2.6 kernel'''
-| style="background:yellow" | 70%
+| style="background:lime" | 80%
 | GPL
-| Harald has started to port all drivers to a recent 2.6 kernel. What is the exact status?
+| Harald has created a preliminary [http://ganesha.gnumonks.org/~laforge/tmp/2.6.16.5-ezx_patchset.tar.bz2 patchset] which allows you to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html run Linux 2.6.16.5 your phone]. Tested with [[Hardware::E680|E680]] and [[Hardware::A780|A780]]. Not everything is working yet, though.
 |- style="background:#dfdfdf;"
 | '''GPS'''
 | style="background:yellow" | 50%
