@@ -13,6 +13,8 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 
 = FLAG =
 
+We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. Perhaps last ones are garbage and have no real meaning, 0x95aa95aa is reproducible.
+
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Flags entry
@@ -25,7 +27,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 |-
 | 0x95aa95aa
 | Need to fill.
-| A possible meaning of this this value is low power.
+| Reproducible. Power off phone over night and enter bootloader first gives you this flag. Perhaps indicates long time off.
 |-
 | 0xd5aa95aa
 | [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
@@ -47,8 +49,6 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 | Need to fill.
 | No idea.
 |}
-
-We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. Perhaps last ones are garbage and have no real meaning, 0x95aa95aa is reproducible.
 
 = RESET =
 
