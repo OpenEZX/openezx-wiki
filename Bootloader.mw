@@ -23,7 +23,7 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 |-
 | 0x7c7c7c7c
 | [http://www.datenfreihafen.org/~stefan/EZX/photos/a780-bootloader-2.jpg]
-| With this flag loading kernel into RAM and boot works. 
+| It's called OFF_FLAG in ezx.h
 |-
 | 0x95aa95aa
 | Need to fill.
