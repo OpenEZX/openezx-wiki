@@ -15,7 +15,7 @@
 
 = Bootloader =
 
-* Get reblob working to load another blob via blob. We can test bootloader chnges fine this way.
+* Get reblob working to load another blob via blob. We can test bootloader changes fine this way.
 * Create a modified bootloader that allows for multiboot configurations. It could actually include SD/TF support for booting kernels from there.
 
 = Userspace =
