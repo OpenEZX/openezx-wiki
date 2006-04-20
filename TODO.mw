@@ -1,19 +1,21 @@
 = Kernel =
 
-* find out why kernel doesnt boot with CONFIG_IWMMXT
-* find out why E680 SD/MMC works, but not A780 Transflash
-* debug and fix pxa27x_udc in order to provide usbnet (nfsroot!)
-* debug and fix mtd support in order to be able to access system flash
-* port and cleanup video and sound drivers
-* port motorola-specific SSP/SPI drivers into 2.6.x generic SPI stack
-* port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
-* clean up the already working keypad drivers
-* finish reimplementation of mux_cli and grpsv modules
-* look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
-* create a modified bootloader that allows for multiboot configurations. It could actually include SD/TF support for booting kernels from there.
-* check how the other (later) motorola Linux smartphones differ and merge their device-specific code into our 2.6.x kernel tree
+* Find out why kernel doesnt boot with CONFIG_IWMMXT
+* Find out why E680 SD/MMC works, but not A780 Transflash
+* Debug and fix pxa27x_udc in order to provide usbnet (nfsroot!)
+* Debug and fix mtd support in order to be able to access system flash
+* Port and cleanup video and sound drivers
+* Port motorola-specific SSP/SPI drivers into 2.6.x generic SPI stack
+* Port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
+* Clean up the already working keypad drivers
+* Finish reimplementation of mux_cli and grpsv modules
+* Look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
+* Create a modified bootloader that allows for multiboot configurations. It could actually include SD/TF support for booting kernels from there.
+* Check how the other (later) motorola Linux smartphones differ and merge their device-specific code into our 2.6.x kernel tree
+* Make GPS data from available to userspace. The gps is connected at BP. (A780 only)
 
 = Userspace =
 
 * PIM applications
 * Telephone applications (perhaps http://handhelds.org/moin/moin.cgi/Gomunicator)
+* Port gpsd to communicate with several gps applications. (A780 only)
