@@ -2,7 +2,10 @@
 
 On this site we start to share information about the ezx bootloader. Motorola released the modified [[blob]] for the ezx phones. The source is available here: http://www.datenfreihafen.org/~stefan/EZX/a780-blob.tar.bz2
 
-To enter the bootloader you need to press the camera and jogdial button while power on. 
+Enter bootloader:
+
+* '''A780:''' press camera and jogdial(scrollwheel) button while power on. 
+* '''E680(i):''' press camera and volume down button while power on.
 
 = Communication with the bootloader =
 
