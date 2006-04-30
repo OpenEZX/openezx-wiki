@@ -1,0 +1,12 @@
+With support for SD cards we are able to have our rootf on this cards. So we don't need to touch the pre installed system anyway.
+This is a really short description how to do your rootfs with busybox on sd card.
+
+SD support on e680 works with haralds patchset. For a780 you need the following patch <link to patch need filled>.
+
+1. Prepare sd card with ext3 or whatever filesystem.
+2. Put busybox on it and add some dev entries. You can find a tar file with busybox, symlinks and dev entries [http://www.datenfreihafen.org/~stefan/EZX/rootfs/sd-rootfs.tar.gz here] If you like to add the dev entries on your own.
+* mkdir /dev/pts
+* mknod /dev/console c 5 1
+
+3. Add the following to your CONFIG_CMDLINE. root=/dev/mmcblk0p1 and perhaps init=/bin/sh
+4. Rebuild kernel with build in support for fs on sd card and load via boot_usb
