@@ -1,6 +1,6 @@
 With support for SD cards we are able to have our rootfs on one of these cards. So we don't need to touch the pre-installed system in any way. This is a really short description how to create your rootfs with busybox on an SD card.
 
-SD support on [[Hardware::E680|E680]] works with Harald's patchset. For [[Hardware::A780|A780]] you need the following patch <link to patch need filled>.
+SD support on [[Hardware::E680|E680]] works with Harald's patchset. For [[Hardware::A780|A780]] you need the following [http://www.maintech.de/download/openezx-transflash-a780.patch patch].
 
 == HOWTO ==
 
