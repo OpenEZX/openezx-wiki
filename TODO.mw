@@ -1,6 +1,5 @@
 = Kernel =
 
-* Debug and fix pxa27x_udc in order to provide usbnet (nfsroot!)
 * Debug and fix mtd support in order to be able to access system flash
 * Port and cleanup video and sound drivers
 * Port motorola-specific SSP/SPI drivers into 2.6.x generic SPI stack
