@@ -165,6 +165,10 @@ and log in to your phone as "root" (no password is set, simply press return):
 
  telnet 169.254.1.2
 
+or (this happens on my European e680i, address 169... from usblan.lin is ignored):
+
+ telnet 192.168.1.2
+
 == Notes ==
 
 === Firewall ===
