@@ -52,6 +52,10 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 | 0x6b6b6b6b
 | Need to fill.
 | No idea.
+|-
+| 0x3c7c3c7c
+| Need to fill.
+| No idea.
 |}
 
 = RESET =
