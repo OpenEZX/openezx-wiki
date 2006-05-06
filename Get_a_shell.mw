@@ -1,8 +1,10 @@
 Todo: [[Software::A780::Telnet_Access|This Telnet Access Howto]] should be merged with this page.
 
+What if we moved this to [[Guides::USBLAN]]?
+
 ----
 
-Here is how to get a shell on the phone, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer. For E680 users, as long as you don't mess up the bootloader, you can restore the phone to a working state with motorola's PST software and a copy of the firmware. No links will be provided here since it's illegal and leaked. We don't know of any A780 firmware in the wild (but on [http://www.motorolafans.com motorolafans.com], one is listed - it is completely unverified though).
+Here is how to get a shell on the phone, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer. For E680 users, as long as you don't mess up the bootloader, you can restore the phone to a working state with Motorola's PST software and a copy of the firmware. No links will be provided here since it's illegal and leaked. We don't know of any A780 firmware in the wild (but on [http://www.motorolafans.com motorolafans.com], one is listed - it is completely unverified though).
 
 If you aren't careful, you can mess up your phone to the point that it will take a skilled person to restore an E680, and an A780 might have to be sent for factory service.
 
@@ -10,7 +12,7 @@ This howto is specifically for Linux or Mac OS X and a specific version of the A
 
 By default, the A780 would set its IP address to 192.168.1.2. ''This won't work'' if your system already has a network configured that would include 192.168.1.2. Since this is a network commonly used for DHCP, that could be a problem.
 
-Therefore in the [[#Using LinLoader|LinLoader approach]] below, we will put the phone's IP address to 169.254.1.2 here, and the host's IP address to 169.254.1.1. You can replace that numbers by any IP address from the following ranges: 192.168.1.* or 169.254.*.* (where the phone and the host must have different IP adresses but from the same subnet). You cannot easily use totally different IP addresses. This requires you to enable these in /etc/hosts.allow on the phone.
+Therefore in the [[#Using LinLoader|LinLoader approach]] below, we will put the phone's IP address to 169.254.1.2 here, and the host's IP address to 169.254.1.1. You can replace that numbers by any IP address from the following ranges: 192.168.1.* or 169.254.*.* (where the phone and the host must have different IP addresses but from the same subnet). You cannot easily use totally different IP addresses. This requires you to enable these in /etc/hosts.allow on the phone.
 
 == Preparing the host ==
 
@@ -109,6 +111,13 @@ once you're logged in, you should adjust the mtu on the phone side, too:
 
  ifconfig usbl0 mtu 900
 
+=== Windows ===
+
+A free driver is available for Windows XP users on the [http://motorolafans.com/index.php?name=Forums&file=viewtopic&t=3337 motorolafans.com forum].  For A780 users, you will need to hack the .inf file as described in that thread.
+
+Windows 2k users have no other choice but to use the [http://www.rcsc.sisrs.com/mfc/UploadedFiles/btblan-demo-15ec-f001-10-26-2004.zip Belcarra demo driver] (while the link is still good) which was neither intended nor licensed for public consumption.  Alternately, you can install [http://distrowatch.com Linux :)].  For A780 users, the .inf file for the Belcarra driver will have to be hacked as well.  To hack the .inf, you will have to go through each section where there are entries for other devices and duplicate them with the Vendor ID / Product ID string of <code>VID_22b8&PID_600c</code>.
+
+[[TODO|TODO: Post torrent for Belcarra driver & more newbie-friendly instructions for the .inf mods]]
 
 == Using LinLoader ==
 
@@ -201,7 +210,9 @@ There seem to be certain A780's where the modem mode trick doesn't work on, more
 
 === Creating a backup ===
 
-Before tinkering with a system, one of the first steps is usually to create a full backup. For the A780, this can be done with minor changes as soon as a shell login is possible. When using NFS mounts or netcat to tar the whole file system over the (USB) network, there is a small catch: the default MTU of 1500 bytes doesn't seem to work over the usbnet connection. The symptoms are that e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes accross. Setting a lower MTU at both sides of the connection (I used 900 as an overly conservative value that worked flawlessly, but it will most probably also work with higher values) solves the problem and allows to easily create a full backup.
+* This section is a duplicate of [[Backups]] although it has better netcat information as well as some tar goodies (except that the tar code below appears to miss /.backup).
+
+Before tinkering with a system, one of the first steps is usually to create a full backup. For the A780, this can be done with minor changes as soon as a shell login is possible. When using NFS mounts or netcat to tar the whole file system over the (USB) network, there is a small catch: the default MTU of 1500 bytes doesn't seem to work over the usbnet connection. The symptoms are that e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes across. Setting a lower MTU at both sides of the connection (I used 900 as an overly conservative value that worked flawlessly, but it will most probably also work with higher values) solves the problem and allows to easily create a full backup.
 
 That's the reason why you should add <code>mtu 900</code> to the ifconfig commands above, and should adjust the mtu on the phone if using the modem hack.
 
@@ -221,7 +232,7 @@ on the phone. Then repeat something similar for the TransFlash (or SD/MMC) card 
 
 == LICENSE NOTE ==
 
-The default license for this site is GNU FDL. In order that this page be undisputably Free Software, we waive or interpret some provisions of the GNU FDL for this page:
+The default license for this site is GNU FDL. In order that this page be indisputably Free Software, we waive or interpret some provisions of the GNU FDL for this page:
 
 There are no invariant sections connected with this page.
 
