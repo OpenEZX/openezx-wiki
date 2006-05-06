@@ -37,7 +37,7 @@ All keys and buttons are directly attached to the AP.
 
 == Vibrator ==
 
-The vibrator is attached to PCAP2.  The AP can program it via SPI.
+The vibrator is attached to [[PCAP2]].  The [[AP]] can program it via [[SPI]].
 
 == Sound ==
 
