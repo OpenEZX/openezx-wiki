@@ -2,5 +2,5 @@ The E680i is pretty much the same like the [[Hardware::E680|E680]].
 
 == Application Processor (AP) ==
 
-The CPU is an Intel PXA271:
+The CPU is an [http://www.intel.com/design/pca/applicationsprocessors/linecard/index.htm#pxa271 Intel PXA271]:
 * 32 MBytes of Intel StrataFlash
