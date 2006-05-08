@@ -1,11 +1,12 @@
 == A780 ==
 
-'''Problem:''' The phone does not charge with the USB data cable.
+=== The phone does not charge with the USB data cable ===
 
-'''Solution:''' Perhaps your phone is completely discharged. At this point you need to use the USB power supply. Take a look at [[Hardware::A780#Charging_modes]].
+Perhaps your phone is completely discharged. At this point you need to use the USB power supply. Take a look at [[Hardware::A780#Charging_modes]].
 
-===USB Hubs===
-The device you connect your phone  to must supply about 550ma (milliamps).  When I plug my A780 into a keyboard I have with a built-in USB, the phone will not charge.  (In windoze, you will recieve notification of this.)
+=== The phone does not charge on my USB hub ===
+
+The device you connect your phone to must supply about 500 mA (milliamps). When plugged into a keyboard with a built-in USB (for example), the phone will not charge (Windows will notify you of this). This is because the keyboard does not provide power. Other devices may provide power, e.g. so-called self-powered hubs.
 
 == Other Issues ==
 
