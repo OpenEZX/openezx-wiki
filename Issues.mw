@@ -5,7 +5,7 @@
 '''Solution:''' Perhaps your phone is completely discharged. At this point you need to use the USB power supply. Take a look at [[Hardware::A780#Charging_modes]].
 
 ===USB Hubs===
-The device you connect your phone  to must supply about 550ma (milliamps).  When I plug my A780 into a keyboard I have with a built-in U
+The device you connect your phone  to must supply about 550ma (milliamps).  When I plug my A780 into a keyboard I have with a built-in USB, the phone will not charge.  (In windoze, you will recieve notification of this.)
 
 == Other Issues ==
 
