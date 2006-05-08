@@ -9,39 +9,38 @@ In this small example we will package a program called foobar.
 * The archive must contain a directory with the name of the application.
 * All files are placed under the directory.
 
-
 ==The .desktop file==
 
 * You need a file called foobar/foobar.desktop
-<pre>
-[Desktop Entry]
-BigIcon=foobar.png  Big icon
-Comment=Foo Bar     Comment
-Exec=foobar         Executable
-Icon=foobar-sm.png  Small icon
-Name=foobar         Program name
-Version=0.1         ???
-OsVersion=1.1       ???
-Shared=2            ???
-Type=Application    What other types are available?
-</pre>
+
+ [Desktop Entry] 
+ BigIcon=foobar.png  ''Big icon''
+ Comment=Foo Bar     ''Comment''
+ Exec=foobar         ''Executable''
+ Icon=foobar-sm.png  ''Small icon''
+ Name=foobar         ''Program name''
+ Version=0.1         ''???''
+ OsVersion=1.1       ''???''
+ Shared=2            ''???''
+ Type=Application    ''What other types are available?''
 
 ==Icons==
 
-There are two diiferent types of icons. The big and the small one.
+There are two different types of icons. The big and the small one.
 
-* Resolution for big:     71 x 32, 8-bit/color
-* Resolution for small:   32 x 15, 8-bit/color
+* Resolution for big: 71 x 32, 8-bit/color
+* Resolution for small: 32 x 15, 8-bit/color
 
-
-==Create package==
+=Create a package=
 
 $ tar czf foobar.mpkg foobar
 
+=Install a package=
 
-==Install package==
+Just tap inside the file manager on the package and you will be asked for installation.
 
-Just tap inside the file manager on the package and you will ba asked for
-installation.
+The package gets installed to '''.system/QTDownLoad/foobar'''.
 
-The package get installed to .system/QTDownLoad/foobar
+=Remove a package=
+
+???
