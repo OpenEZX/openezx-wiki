@@ -4,6 +4,9 @@
 
 '''Solution:''' Perhaps your phone is completely discharged. At this point you need to use the USB power supply. Take a look at [[Hardware::A780#Charging_modes]].
 
+===USB Hubs===
+The device you connect your phone  to must supply about 550ma (milliamps).  When I plug my A780 into a keyboard I have with a built-in U
+
 == Other Issues ==
 
 [http://www.linux-portal.com/phonewiki/index.php/Motorola_A780#Bugs This German wiki] lists several more issues with the A780.
