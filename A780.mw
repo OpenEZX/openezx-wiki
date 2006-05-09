@@ -49,11 +49,11 @@ output stereo, and <tt>/dev/dsp16</tt> can only output mono. Both use signed 16-
 To select the input or output source, open <tt>/dev/mixer</tt> and ioctl SOUND_MIXER_WRITE_OUTSRC or SOUND_MIXER_RECSRC. OUTSRC can be HEADSET_OUT (mono), LOUDERSPEAKER_OUT, EARPIECE_OUT or HEADJACK_OUT (see ezx-common.h in the kernel). SOUND_MIXER_RECSRC doesnt accept all values it should according to the kernel header file. Setting it to 2 should enable the builtin mono microphone.
 
 == PCAP2 ==
-This is a Motorola ASIC that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/SPI to both AP and BP.
+The [[PCAP2]] is a Motorola [[ASIC]] that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/[[SPI]] to both [[AP]] and [[BP]].
 
 It includes a number of linear and switching power regulators, taking care of the diverse voltage and power requirements of the various digital and analogue subsystems of the phone.
 
-It also has the built-in microphone and speakers attached.  Audio data is exchanged between PCAP2, AP, BP and the Bluetooth chip using SPI.  It includes a Stereo DAC (for mp3 playing, ...) and a mono DAC for the voice audio.
+It also has the built-in microphone and speakers attached.  Audio data is exchanged between PCAP2, AP, BP and the Bluetooth chip using SPI.  It includes a Stereo [http://en.wikipedia.org/wiki/Digital-to-analog_converter DAC] (for mp3 playing, ...) and a mono DAC for the voice audio.
 
 [[Hardware::A780::PCAP2 Tables]]
 
