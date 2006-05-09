@@ -15,11 +15,12 @@ Congratulations on your new Motorola Linux Phone!  This guide is for the followi
 
 There are two basic parts of your phone that should be backed up -- the firmware and the files in your flash memory (both the disk-on-a-chip and your mmc, SansFlash, etc.).  See the [[Guides::Backups#When You Don't Yet Have a Shell|When You Don't Yet Have a Shell]] section of the Backups guide on how to do this.
 
-==USB Mass Storage Mode==
-[[TODO]]
-==USB Modem Mode==
-[[TODO]]
-==USB LAN Mode==
-[[TODO]]
-==Telnet Access==
-Any half-way descent hacker or even aspiring hacker who owns a Linux smart phone has gotta get [[Guide::Telnet|Telnet]] access to their phone!  This is the doorway to a great many other possibilities.
+==Talking to Your Phone==
+There are 3 basic ways to talk to your phone.
+* The stock user interface you get with the phone.
+* Bluetooth
+* [[Guides::USB|USB]] - The A780, E680 & E680i USB port has an [[Hardware::A780::EMU|insane number of modes], but we're only going to worry about the normal USB modes.  Under this catagory of modes, we have:
+** [[USB Mass Storage Mode]] - This is the mode where you can access your phone's flash memory disks (MMC, TransFlash, etc.).
+** [[USB Modem Mode]] - This is the mode where you can connect your PC to your phone and use it as a modem for Internet access.
+** [[USBLAN Mode]] - This is the holy mode that causes angels to sing, women to weep and linux freaks to drool.  In this mode, your phone becomes a USB Network Interface Device so that you can commuicate via TCP/IP between your phone and PC, thus, enabling you to Guide::Telnet|telnet]] into your phone.
+** [[USB CDC Mode]] - You don't need to worry about this.  And if you do, then you can fill this section in.
