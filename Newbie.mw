@@ -1,4 +1,4 @@
-Congratulations on your new Motorola Linux Phone!  This guide is for the following phones:
+Congratulations on your new Motorola Linux Phone!  This guide is meant to be a sort of roadmap to help users get started with advanced features (i.e., hacks) to get the most out of their Motorola Linux Phone.  This guide applies mostly to the A780, E680 and E680i but should eventually cover the following phones (at least the later ones, especially the A1200).  The intended audience is users from intermediate to advanced.  Many of the guides are targeted for the more beginner types, but the more beginner you are, the more we encourage you to do full backups before starting! =)
 * [[A760]]
 * [[A768]]
 * [[A780]]
@@ -8,19 +8,42 @@ Congratulations on your new Motorola Linux Phone!  This guide is for the followi
 * [[E680i]]
 * [[Rokr E2]]
 
+
 [[TODO]]:  I only know the A780, needs this tested / tweaked for other phones.
 
 ==Backup Your Phone Before You Start!==
-[[Guides::Backups|Before you start hacking, it is CRUTIAL that you make backups!  I hope this very long link emphasizes the importance of this.  Listen to the voice of experience!!]]
+[[Guides::Backups|Before you start hacking, it is crucial that you make backups!  I hope this very long link emphasizes the importance of this.  Listen to the voice of experience!!]]
 
-There are two basic parts of your phone that should be backed up -- the firmware and the files in your flash memory (both the disk-on-a-chip and your mmc, SansFlash, etc.).  See the [[Guides::Backups#When You Don't Yet Have a Shell|When You Don't Yet Have a Shell]] section of the Backups guide on how to do this.
+There are two basic parts of your phone that should be backed up -- the firmware and the files in your flash memory (both the disk-on-a-chip and your mmc, SansFlash, etc.).  See the [[Guides::Backups#When You Don't Yet Have a Shell|When You Don't Yet Have a Shell]] section of the Backups guide on how to do this.  
 
 ==Talking to Your Phone==
 There are 3 basic ways to talk to your phone.
 * The stock user interface you get with the phone.
 * Bluetooth
-* [[Guides::USB|USB]] - The A780, E680 & E680i USB port has an [[Hardware::A780::EMU|insane number of modes], but we're only going to worry about the normal USB modes.  Under this catagory of modes, we have:
-** [[USB Mass Storage Mode]] - This is the mode where you can access your phone's flash memory disks (MMC, TransFlash, etc.).
-** [[USB Modem Mode]] - This is the mode where you can connect your PC to your phone and use it as a modem for Internet access.
-** [[USBLAN Mode]] - This is the holy mode that causes angels to sing, women to weep and linux freaks to drool.  In this mode, your phone becomes a USB Network Interface Device so that you can commuicate via TCP/IP between your phone and PC, thus, enabling you to Guide::Telnet|telnet]] into your phone.
-** [[USB CDC Mode]] - You don't need to worry about this.  And if you do, then you can fill this section in.
+* [[Guides::USB|USB]] - The A780, E680 & E680i USB port has an [[Hardware::A780::EMU|insane number of modes]], but we're only going to worry about the normal USB modes.  Under this category of modes, we have:
+** [[Guides::USB#Mass Storage Mode|Mass Storage Mode]] - This is the mode where you can access your phone's flash memory disks (MMC, TransFlash, etc.).
+** [[Guides::USB#Modem Mode|Modem Mode]] - This is the mode where you can connect your PC to your phone and use it as a modem for Internet access.
+** [[Guides::USB#USBLAN Mode|USBLAN Mode]] - This is the holy mode that causes angels to sing, women to weep and (real) men to drool.  In this mode, your phone becomes a USB Network Interface Device so that you can communicate via TCP/IP between your phone and PC, thus, enabling you to [[Guide::Telnet|telnet]] into your phone.
+** [[Guides::USB#CDC Mode|CDC Mode]] - You don't need to worry about this.  And if you do, then you can fill this section in.
+
+==Installing New Apps==
+* Installer programs
+** LinLoader
+** NEO Installer
+* Terminal / Console apps
+** Qonsole
+** eKonsole
+* Utility
+** DumpFW - dump your firmware
+** USBMode - app to change your USB mode
+[[TODO]]
+==Writing Your Own Apps==
+[[TODO]]
+===Native===
+[[TODO]]
+===Java===
+[[TODO]]
+==Changing Your Firmware==
+[[TODO]]
+==Resources==
+* [http://www.motorolafans.com motorolafans.com] - A web site dedicated to Motorola Linux phones with very lively discussions, lots of good information buried within the [http://www.motorolafans.com/index.php?name=Forums Community Forums], and home of the [http://www.motorolafans.com/index.php?name=Forums&file=search Every-Time-You-Ask-a-Question-Already-Answered-In-The-Forums,-God-Kills-A-Baby-Seal Club].
