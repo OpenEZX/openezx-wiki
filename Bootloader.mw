@@ -1,6 +1,6 @@
 = General =
 
-On this site we start to share information about the ezx bootloader. Motorola released the modified [[blob]] for the ezx phones. The source is available here: http://www.datenfreihafen.org/~stefan/EZX/a780-blob.tar.bz2
+On this site we start to share information about the ezx bootloader. Motorola released the modified [[blob]] for the ezx phones. The source is available here: ftp://ftp.gpl-devices.org/pub/vendors/Motorola/A780/gpl-cd-20060421/a780-e680-blob.tar.bz2
 
 = Enter the bootloader =
 
@@ -9,7 +9,7 @@ On this site we start to share information about the ezx bootloader. Motorola re
 
 = Communication with the bootloader =
 
-Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] is available here: http://svn.gnumonks.org/trunk/a780/src/boot_usb/. You need [http://libusb.sourceforge.net/ libusb].
+Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] is available here: http://svn.openezx.org/trunk/src/boot_usb/. You need [http://libusb.sourceforge.net/ libusb].
 
 = FLAG =
 
@@ -22,7 +22,7 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 ! Meaning
 |-
 | 0x7c7c7c7c
-| [http://www.datenfreihafen.org/~stefan/EZX/photos/a780-bootloader-2.jpg]
+| [http://people.openezx.org/stefan/photos/a780-bootloader-2.jpg]
 | It's called OFF_FLAG in ezx.h
 |-
 | 0x95aa95aa
@@ -88,5 +88,5 @@ If you get another version and date on your phone please add here.
 # Power off the phone
 # Power on the phone and enter the bootloader (see above)
 # Attach the phone to your computer via USB
-# Run <tt>./boot_usb zImage</tt> on your computer, where [http://svn.gnumonks.org/trunk/a780/src/boot_usb/ boot_usb] is compiled via a simple "make", and zImage is the kernel image you want to boot (e.g. [http://www.datenfreihafen.org/~stefan/EZX/zImage-first-only-ptrace this one]).
+# Run <tt>./boot_usb zImage</tt> on your computer, where [http://svn.openezx.org/trunk/src/boot_usb/ boot_usb] is compiled via a simple "make", and zImage is the kernel image you want to boot (e.g. [http://people.openezx.org/laforge/kernel/zImage-2.6.16.13-ezx3-32mb-p1 this one]).
 # The kernel image will be transfered to your phone and it will boot using that kernel.
