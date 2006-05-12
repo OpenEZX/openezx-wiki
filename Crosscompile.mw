@@ -1,0 +1,41 @@
+In order to crosscompile you will need a compiler/linker/archiver, include files and a libc for your target machine. 
+
+=== Toolchain ===
+
+To crosscompile your own software for the EZX phone, you need a toolchain. There are currenly two toolchains floating around, both based on Dan Kegel's "crosstool" scripts to bootstrap the tools. The
+only important note is that the default ARM targets for crosstool will 
+not work on this phone -- it uses a different word order ("VFP") for
+the floating point emulation.  The scripts at the linked site automatically apply a needed patch to binutils.
+
+You can find a good instruction on this site: http://marcus.bluetroll.se/e680/
+
+Theres also http://lsb.blogdns.net/ezx-crosstool which can be used together with http://lsb.blogdns.net/ezx-devkit to build native GUI apps (i.e. they dont need opie)
+
+If you are using an RPM-based Linux distribution, you can try the toolchain available at http://www.codeminders.com/ezx/. Binary RPMs there are tested of Redhat Fedora Core 5 x86_64 architecture. You should be able to rebuild from SRPMs on ther distributions as well. SRPM produces several RPMs, but mostly likely you just need to install  "crosstool-gcc-3.3.2-glibc-2.3.2-arm-linux-devel" if you just want to compile applications. RPMs are provided by [http://www.codeminders.com Codeminders].
+
+=== Kernel ===
+
+Pre-requisites:
+
+Cross tools for ARM:
+gcc-3.4.2
+uClibc-0.9.27
+
+I need to change the EXTRAVERSION in kernel Makefile to _mvlcee30-mainstone instead of _pnail. Otherwise there are problems with self compiled kernel modules.
+
+Steps:
+Download the [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=197 patch] for [http://sourceforge.net/projects/e680 kernel] from download->E680i/A780->scripts/programs section 
+
+gzip -cd patch-2.4.17-pnail-0.1.gz | patch -p0<br>
+cd linux-2.4.17<br>
+cp arch/arm/def-configs/ezx-780 .config<br>
+make ARCH=arm CROSS_COMPILE=arm-linux- oldconfig<br>
+make ARCH=arm CROSS_COMPILE=arm-linux- dep<br>
+make ARCH=arm CROSS_COMPILE=arm-linux- zImage<br>
+make ARCH=arm CROSS_COMPILE=arm-linux- modules<br>
+
+This info has been taken from http://www.motorolafans.com/index.php?name=Wiki&id=20
+
+=== Scratchbox ===
+
+It would also be nice to have EZX support in scratchbox http://scratchbox.org/.
