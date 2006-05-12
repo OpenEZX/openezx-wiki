@@ -1,11 +1,11 @@
 With support for SD cards we are able to have our rootfs on one of these cards. So we don't need to touch the pre-installed system in any way. This is a really short description how to create your rootfs with busybox on an SD card.
 
-You need Harald's ezx3 [http://people.openezx.org/laforge/kernel/ patchset]
+You need Harald's ezx3 [http://people.openezx.org/laforge/kernel/ patchset].
 
 == HOWTO ==
 
 # Prepare SD card with ext3 or whatever filesystem.
-# Put busybox on it and add some dev entries. You can find a tar file with busybox, symlinks and dev entries [http://www.datenfreihafen.org/~stefan/EZX/rootfs/sd-rootfs.tar.gz here]. If you like to add the dev entries on your own:
+# Put busybox on it and add some dev entries.
 ## mkdir /dev/pts
 ## mknod /dev/console c 5 1
 # Add the following to your CONFIG_CMDLINE: ''root=/dev/mmcblk0p1'' and perhaps ''init=/bin/sh''.
