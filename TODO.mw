@@ -1,14 +1,33 @@
 = Kernel =
-
-* Debug and fix mtd support in order to be able to access system flash
-* Port and cleanup video and sound drivers
-* Port motorola-specific SSP/SPI drivers into 2.6.x generic SPI stack
-* Port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
-* Clean up the already working keypad drivers
-* Finish reimplementation of mux_cli and grpsv modules
-* Look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
-* Check how the other (later) motorola Linux smartphones differ and merge their device-specific code into our 2.6.x kernel tree
-* Make GPS data from available to userspace. The gps is connected at BP. (A780 only)
+* mtd
+** Debug and fix mtd support in order to be able to access system flash
+* Video
+** Port and cleanup video capture driver (camera)
+* Sound
+** Port and cleanup sound drivers (oss -> alsa)
+* Power Management
+** Add 'device power off' mode so 'halt -p' works
+** Port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
+** Add DPM bits to all other drivers
+** Test, try, fail...
+* Keypad
+** Clean up the already working keypad driver
+** Use a reasonable keymap
+* Touchscreen (drivers/input/touchscreen/pcap_ts.c)
+** Test and finalize touchscreen driver
+* MMC/SD/TF (drivers/mmc/pxamci.c)
+** Find out why 4-bit wide MMC/SD transfers don't seem to work with LaF0rge's patch
+** Port various fixes from OpenTom SD/MMC stack
+* SPI (arch/arm/mach-pxa/spi.c)
+** Consider using ssp-interrupt-based transfers for stuff like touchscreen and only use polling drivers from within interrupt handler.  Or even better: make interrupt priorities work in a way that the PCAP interrupt chaining handler can use interrupt-based SPI transfers (unrealistic, but worth invesetigating)
+* AP/BP interaction
+** implement handshake procedure to put BP in non-flash-mode
+** Finish reimplementation of mux_cli and grpsv modules
+* Make GPS data available to userspace. The gps is connected at BP. (A780 only)
+* proprietary flash file systems
+** Look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
+* Non-A780/E680 stuff
+** Check how the other (later) motorola Linux smartphones differ and merge their device-specific code into our 2.6.x kernel tree
 
 = Bootloader =
 
