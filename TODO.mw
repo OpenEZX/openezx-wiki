@@ -13,6 +13,7 @@
 * Keypad
 ** Clean up the already working keypad driver
 ** Use a reasonable keymap
+** Add driver for keypad backlight (pcap-based). Question: What kind of userspace interface (if any)
 * Touchscreen (drivers/input/touchscreen/pcap_ts.c)
 ** Test and finalize touchscreen driver
 * MMC/SD/TF (drivers/mmc/pxamci.c)
@@ -28,6 +29,10 @@
 ** Look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
 * Non-A780/E680 stuff
 ** Check how the other (later) motorola Linux smartphones differ and merge their device-specific code into our 2.6.x kernel tree
+* Extended Mini USB (EMU)
+** add support for motorola-compatible cable/device detection and apropriate switching of USB device / UART / phone-powered / ... support
+** think on how to do runtime device profile switching with usb-gadget and the horribly broken PXA270 UDC (read errata, it's barely useable). Alternatively try supporting multiple interfaces or configurations (also quite impossible with broken controller)
+** USB host support on EMU!
 
 = Bootloader =
 
