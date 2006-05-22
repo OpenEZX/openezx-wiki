@@ -29,6 +29,9 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 | Need to fill.
 | Reproducible. Power off phone over night and enter bootloader first gives you this flag. Perhaps indicates long time off.
 |-
+| 0x958a95aa
+| Need to fill.
+|-
 | 0xd5aa95aa
 | [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
 | Need to fill.
