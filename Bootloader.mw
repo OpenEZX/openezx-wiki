@@ -13,7 +13,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 
 = FLAG =
 
-We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. Perhaps last ones are garbage and have no real meaning, 0x95aa95aa is reproducible.
+We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.
 
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
@@ -31,7 +31,7 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 |-
 | 0x958a95aa
 | Need to fill.
-| No idea, that's what Mickey's A780 is showing. No kernel boot possible yet. Fancy colors and then colors slowly fading into white with some blue stripes.
+| That's what Mickey's A780 is showing always. No kernel boot possible yet. Fancy colors and then colors slowly fading into white with some blue stripes.
 |-
 | 0xd5aa95aa
 | [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
