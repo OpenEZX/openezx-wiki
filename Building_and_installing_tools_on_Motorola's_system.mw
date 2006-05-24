@@ -1,0 +1,21 @@
+The a780 comes loaded with some roflash, vfm and fat16 file systems.  VFM is pretty ugly, it's an Intel propritary filesystem designed for very small flash storage devices.  FAT16 doesn't need anything said about that.  So, say you blow that $50 on a super-cool 1GB Transflash card, are you going to format it FAT 16?
+
+=Getting Started=
+First off, the none of the current Motorola Linux phones come with ext2 or ext3 drivers.  But you can get them [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=1049 this posting on motorolafans.com] or [http://sourceforge.net/projects/e680 the e680 Source Forge site].  Note that they also have loop and umsdos drivers there as well.  For loading your drivers, I personally recomend NEO-Installer unless you have flashed your firmware to allow you to execute code when the phone boots up  (which is next on my list).  I install my drivers under /exzlocal/modules.  With NEO-Installer, you can put any number of scripts in the directory /ezxlocal/download/QTDownLoad/Startup and they will be executed when NEO-Installer starts.  Note that they are only called once each time the phone boots even if you run the NEO-Installer script multiple times.
+
+This is what my /ezxlocal/download/QTDownLoad/Startup/modules script looks like:
+
+ #!/bin/bash
+ 
+ # Load modules for ext2 and ext3
+ cd /ezxlocal/modules
+ insmod /ezxlocal/modules/jbd.o
+ insmod /ezxlocal/modules/ext2.o
+ insmod /ezxlocal/modules/ext3.o
+ 
+ # Mount main Transflash partition
+ mount /dev/mmca1 /mmc/mmca1
+ 
+ # Create device for swap partition and turn it on.
+ mknod /tmp/mmca2 b 243 2
+ swapon /tmp/mmca2
