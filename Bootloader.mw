@@ -27,7 +27,7 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 |-
 | 0x95aa95aa
 | Need to fill.
-| Reproducible. Power off phone over night and enter bootloader first gives you this flag. Perhaps indicates long time off.
+| Reproducible. Power off phone over night and enter bootloader first gives you this flag. Perhaps indicates long time off.  Also detected after the battery runs out, after recharging the value was set back to OFF_FLAG.
 |-
 | 0x958a95aa
 | Need to fill.
