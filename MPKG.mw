@@ -21,7 +21,7 @@ In this small example we will package a program called foobar.
  Name=foobar         ''Program name''
  Version=0.1         ''???''
  OsVersion=1.1       ''???''
- Shared=2            ''???''
+ Shared=2            ''Where you seen icon (User1, Extra, Gamesetc.''
  Type=Application    ''What other types are available?''
 
 ==Icons==
