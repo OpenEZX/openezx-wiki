@@ -92,5 +92,5 @@ If you get another version and date on your phone please add here.
 # Power off the phone
 # Power on the phone and enter the bootloader (see above)
 # Attach the phone to your computer via USB
-# Run <tt>./boot_usb zImage</tt> on your computer, where [http://svn.openezx.org/trunk/src/host/boot_usb] is compiled via a simple "make", and zImage is the kernel image you want to boot (e.g. [http://people.openezx.org/laforge/kernel/zImage-2.6.16.13-ezx3-32mb-p1 this one]).
+# Run <tt>./boot_usb zImage</tt> on your computer, where [http://svn.openezx.org/trunk/src/host/boot_usb boot_usb] is compiled via a simple "make", and zImage is the kernel image you want to boot (e.g. [http://people.openezx.org/laforge/kernel/zImage-2.6.16.13-ezx3-32mb-p1 this one]).
 # The kernel image will be transfered to your phone and it will boot using that kernel.
