@@ -13,7 +13,9 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 
 = FLAG =
 
-We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c. UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.
+We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c.
+
+UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.
 
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
@@ -31,7 +33,7 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 |-
 | 0x958a95aa
 | Need to fill.
-| That's what Mickey's A780 is showing always. No kernel boot possible yet. Fancy colors and then colors slowly fading into white with some blue stripes.
+| Reproducible.
 |-
 | 0xd5aa95aa
 | [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
@@ -94,3 +96,7 @@ If you get another version and date on your phone please add here.
 # Attach the phone to your computer via USB
 # Run <tt>./boot_usb zImage</tt> on your computer, where [http://svn.openezx.org/trunk/src/host/boot_usb boot_usb] is compiled via a simple "make", and zImage is the kernel image you want to boot (e.g. [http://people.openezx.org/laforge/kernel/zImage-2.6.16.13-ezx3-32mb-p1 this one]).
 # The kernel image will be transfered to your phone and it will boot using that kernel.
+
+= Troubleshooting =
+
+In case you followed all steps correctly and the only thing you get is white colors with blueish stripes fading slowly into white, then you encountered a bug in our initialization routine. In that case, boot first with the MOTO kernel, right after that remove the battery, insert it again, enter bootloader and try again.
