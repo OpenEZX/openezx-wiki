@@ -143,7 +143,11 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 40%
 | style="background:yellow" | ?
 | OPIE starts to become useful, see [[Handheld Environments]]
-|- style="background:black" | | |
+|- style="background:black"
+|
+| style="background:black" |
+| style="background:black" |
+|
 |- style="background:#efefef;"
 | '''Text terminal'''
 | style="background:red" | 0%
