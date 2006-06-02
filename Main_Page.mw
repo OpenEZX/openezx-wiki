@@ -24,6 +24,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** How to use the [[JTAG]] interface
 ** [[Bootloader]]
 ** [[Rootfs on SD]]
+** GUI stuff: [[Handheld Environments]]
 ** Developer [[Blogs]]
 ** [[TODO]]
 ** [[MPKG]] fileformat
