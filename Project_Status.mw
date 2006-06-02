@@ -128,11 +128,6 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:lime" | 80%
 | style="background:lime" | GPL
 | Harald has created a preliminary [http://ganesha.gnumonks.org/~laforge/tmp/2.6.16.5-ezx_patchset.tar.bz2 patchset] which allows you to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html run Linux 2.6.16.5 your phone]. Tested with [[Hardware::E680|E680]] and [[Hardware::A780|A780]]. Not everything is working yet, though.
-|- style="background:#dfdfdf;"
-| '''GPS'''
-| style="background:yellow" | 50%
-| style="background:lime" | GPL
-| See above (Hardware Compatibility<sup>3</sup>).
 |- style="background:#efefef;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
@@ -143,6 +138,12 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:lime" | 95%
 | style="background:lime" | GPL, others
 | The basic command line tools are all there, e.g. fileutils, shellutils, util-linux and so on. We also have a working [[Software::AP::OpenEZX#System_Tools|busybox]] that adds many of the missing tools, and some other tools such as ltrace, iptables, lsof, etc. Is anything critical missing?
+|- style="background:#efefef;"
+| '''GUI Environments'''
+| style="background:yellow" | 40%
+| style="background:yellow" | ?
+| OPIE starts to become useful, see [[Handheld Environments]]
+|- style="background:black" | | |
 |- style="background:#efefef;"
 | '''Text terminal'''
 | style="background:red" | 0%
@@ -158,4 +159,9 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:lime" | 100%
 | style="background:lime" | GPL
 | I have successfully cross-compiled [http://artax.karlin.mff.cuni.cz/~mikulas/vyplody/links/ links], a web browser for the console. I'll publish a small HOWTO + binaries, soon. --[[User:Uwe Hermann|Uwe Hermann]] 13:00, 11 March 2006 (CET)
+|- style="background:#dfdfdf;"
+| '''GPS'''
+| style="background:yellow" | 50%
+| style="background:lime" | GPL
+| See above (Hardware Compatibility<sup>3</sup>).
 |}
