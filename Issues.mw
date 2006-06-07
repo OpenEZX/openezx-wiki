@@ -8,6 +8,9 @@ Perhaps your phone is completely discharged. At this point you need to use the U
 
 The device you connect your phone to must supply about 500 mA (milliamps). When plugged into a keyboard with a built-in USB (for example), the phone will not charge (Windows will notify you of this). This is because the keyboard does not provide power. Other devices may provide power, e.g. so-called self-powered hubs.
 
+=== Dead Phones ===
+
+Reasons why EZX-Phones died: [[DeadPhones]]
 == Other Issues ==
 
 [http://www.linux-portal.com/phonewiki/index.php/Motorola_A780#Bugs This German wiki] lists several more issues with the A780.
