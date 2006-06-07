@@ -209,6 +209,11 @@ There seem to be certain A780's where the modem mode trick doesn't work on, more
 * Same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
 * I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns ERROR, AT+mode=12 returns OK, but I can't do anything with the reported "MotDSPLog" mode. The second option with LinLoader also works here (when linloader is installed in the proper directory) -- Rene
 * Same here -- Andreas
+* AT+mode=99 did not work with my E680i. With acmattach.lin, I have to add host: 
+  # ifconfig usb0 192.168.1.99
+  # route add -host 192.168.1.2 dev usb0
+  # telnet 192.168.1.2 
+-- Xaffer.
 
 === Creating a backup ===
 
