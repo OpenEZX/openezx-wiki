@@ -17,6 +17,12 @@ We have some problems where the flag values come from. [[Blob]], the bootloader,
 
 UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.
 
+Shouldn't that be magic bootup flags that tell the bootloader e.g. whether this startup is supposed to be a genuine full-boot or a resume back to a running session living in SDRAM?
+At least that's what some PocketPC bootloaders do...
+If this is a corresponding mechanism (and come to think of it I bet it is!), then it could be the kernel suspend code for this machine type (or even the architecture?) which writes those values
+upon shutdown or suspend. OK, in the shutdown case those values would be void since the SDRAM would be powered off... (which probably explains the
+rather random flag variations below). -am
+
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Flags entry
