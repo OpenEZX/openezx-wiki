@@ -13,7 +13,7 @@ Pinout :
 * 5 GND
 
 In this mode, the Data- and Data+ lines will be routed to a USB transceiver located in PCAP chip, which is connected to the AP (PXA270) via the USB2 single ended interface (GPIO pins 34,35,36,39, 40, and 53). There is a 1,5kohm pullup resistor between the D+ as required by the USB standard to signal a high speed device (12mbits). This resistor is switchable by the PCAP bit BUSCTRL_USB_PU (+3,3volt or high Z). There is a second switchable pullup resistor on the d+ line which is used for charger detection.  This resistor seems to be switched off (high Z) when setting the PCAP bit BUSCTRL_VUSB_MSTR_EN. However this does not happen instantly but with some delay (about 5-10 sec).
-It doesn't happen every time I tried. About 1 in 10 times it didn't work. It apears as if the firmware of the Baseband Processor is scanning from time to time the PCAP bits and then switches the resistor accordingly. I speculate therefore this resistor is connected to a GPIO on the Baseband processor and thats why there is no code in morotolas kernel.
+It doesn't happen every time I tried. About 1 in 10 times it didn't work. It apears as if the firmware of the Baseband Processor is scanning from time to time the PCAP bits and then switches the resistor accordingly. I speculate therefore this resistor is connected to a GPIO on the Baseband processor and thats why there is no code in motorolas kernel.
 
 == UART mode ==
 
