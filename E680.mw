@@ -4,12 +4,15 @@ This page will therefore only describe the differences between the A780 and the 
 
 == SD/MMC ==
 
-As opposed to the A780 TransFlash slot, the E680 has a real SD/MMC card slot.You can use a SD/MMC adapter with a TransFlash.
+As opposed to the A780 TransFlash slot, the E680 has a real SD/MMC card slot. You can use a SD/MMC adapter with a TransFlash.
+
+== Camera ==
+
+The E680 features an Agilent ADCM2700 VGA camera module. It is attached to the I2C and AP.
 
 == Sound ==
 
-Sound hardware is said to be controlled by the "boomer" driver (not working yet in the ezx kernel source as of 20060608),
-so audio chipset is likely to be LM4934 from National Semiconductors.
+Sound hardware is a LM4857 from National Semiconductors. It is attached to the I2C and PCAP2.
 
 == FM Radio ==
 
@@ -17,7 +20,11 @@ The E680 has an FM radio that is controlled via I2C.
 
 == Keypad ==
 
-Since the E680 doesn't have a flip, it is missing the respective keypad.
+Since the E680 doesn't have a flip, it is missing the respective keypad. Instead, it has 7 buttons, a cursor keypad and a lock screen switch.
+
+== LEDs ==
+
+One multicolor LED attached to PCAP2 and AP. One blue cursor pad LED attached to AP (via TC_MM_EN).
 
 == GPS ==
 
