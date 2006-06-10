@@ -70,4 +70,4 @@ The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono
 
 == Factory Test & Flash ==
 
-Nothing is known about this mode.
+There apears to be a way to force the phone to power-on even when there is NO battery present by applying an unknown voltage on pin 4. It is apparently used during manufacturing of the phones and might therefore be detected somehow by the bootloader. The only difference to USB accesory mode is that the phone powers on even without battery, and that the voltage on pin4 is different. Nothing is known about voltage / resistor to be used. On the other hand this is not an interesting mode anyway.
