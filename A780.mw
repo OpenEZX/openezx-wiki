@@ -35,6 +35,10 @@ The A780 camera is a Omnitivion OV9640 1.3MegaPixel Camera Module. It is directl
 
 All keys and buttons are directly attached to the AP.
 
+== LEDs ==
+
+One main LED illuminating the keypad, one aux LED illuminating the HOME key. Both featuring 32 levels.
+
 == Vibrator ==
 
 The vibrator is attached to [[PCAP2]].  The [[AP]] can program it via [[SPI]].
