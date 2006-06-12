@@ -38,6 +38,7 @@ $ tar czf foobar.mpkg foobar
 =Install a package=
 
 '''A780:''' This phone can handle mpkg natively.
+
 '''E680:''' You need an mpkg installer for this phone. (Someone with E680 please fill up.)
 
 Just tap inside the file manager on the package and you will be asked for installation.
