@@ -1,41 +1,73 @@
 __NOTOC__
-''TODO: not finished, please fill in the blanks, not everything needs to be filled in''
+''TODO: not finished, please fill in the blanks, not '''everything''' needs to be filled in though''
 
 An overview of the original EZX filesystem (based on an E680i originally, but should be similar for other EZX phones).
 
+= / =
 <code>
 rootfs on / type rootfs (rw)
 /dev/root on / type cramfs (rw)
 </code>
 
 = bin =
+
 = dev =
+
 = diska =
+
 <code>/dev/tffsb1 on /diska type vfat (rw,noatime)</code>
 
 Flashdisk mountpoint named 'Phone' in the GUI.
+
 == diska/.system ==
 Contains EZX applications / settings
+
+=== diska/.system/java ===
+
+==== diska/.system/java/DownloadApps ====
+Contains installed Java MIDlets in folder names such as MIDlet00514.
+
+===== diska/.system/java/DownloadApps/MIDlet00514 =====
+
+====== diska/.system/java/DownloadApps/MIDlet00514/Files ======
+Contains installed Java MIDlet Jar file and icon
+
+====== diska/.system/java/DownloadApps/MIDlet00514/rms ======
+Contains installed Java MIDlet settings
+
 = diskb =
+
 = etc =
 Various system configuration files
+
 = ezxlocal =
 <code>/dev/mtdblock2 on /ezxlocal type vfm (rw,noatime)</code>
+
 = home =
+
 = lib =
+
 = mmc =
+
 == mmc/mmca1 ==
 <code>/dev/mmca1 on /mmc/mmca1 type vfat (rw,noatime)</code>
 
 The SD/MMC card mount point
+
 = proc =
 symlink -> /ram/proc
+
 = ram =
 <code>none on /ram type ramfs (rw)</code>
+
 = root =
+
 = sbin =
+
 = tmp =
 symlink -> /ram/tmp
+
 = usr =
+
 = var =
 symlink -> /ram/var
