@@ -27,6 +27,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 ** [[Bootloader]]
 ** [[Rootfs on SD]]
 ** GUI stuff: [[Handheld Environments]]
+** How to build OpenEZX for the A780 with a Ubuntu Dapper LiveCD [http://www.giantshoulderinc.com:8001/wiki/wiki/OpenEmbeddedOnDapper OE with Dapper LiveCD]
 ** Developer [[Blogs]]
 ** [[TODO]]
 ** [[MPKG]] fileformat
