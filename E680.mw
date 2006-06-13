@@ -26,6 +26,6 @@ Since the E680 doesn't have a flip, it is missing the respective keypad. Instead
 
 One multicolor LED attached to PCAP2 and AP. One blue cursor pad LED attached to AP (via TC_MM_EN).
 
-== GPS ==
+== no GPS ==
 
 The E680 doesn't have GPS.
