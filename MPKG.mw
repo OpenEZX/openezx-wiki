@@ -37,7 +37,7 @@ $ tar czf foobar.mpkg foobar
 
 =Install a package=
 
-'''A780:''' This phone can handle mpkg natively.
+'''A780:''' This phone can handle mpkg natively. European phones have MPKG installer disabled. A special MPKG installer or flashed phone is required. I don't know if the same is aplicable for Asian A780's
 
 '''E680:''' You need an mpkg installer for this phone. (Someone with E680 please fill up.)
 
