@@ -52,7 +52,7 @@ output stereo, and <tt>/dev/dsp16</tt> can only output mono. Both use signed 16-
 
 To select the input or output source, open <tt>/dev/mixer</tt> and ioctl SOUND_MIXER_WRITE_OUTSRC or SOUND_MIXER_RECSRC. OUTSRC can be HEADSET_OUT (mono), LOUDERSPEAKER_OUT, EARPIECE_OUT or HEADJACK_OUT (see ezx-common.h in the kernel). SOUND_MIXER_RECSRC doesnt accept all values it should according to the kernel header file. Setting it to 2 should enable the builtin mono microphone.
 
-== PCAP2 ==
+== Platform Control Audio Power IC (PCAP2) ==
 The [[PCAP2]] is a Motorola [[ASIC]] that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/[[SPI]] to both [[AP]] and [[BP]].
 
 It includes a number of linear and switching power regulators, taking care of the diverse voltage and power requirements of the various digital and analogue subsystems of the phone.
