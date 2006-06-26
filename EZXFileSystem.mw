@@ -72,6 +72,7 @@ Executables like ifconfig,halt,init,modprobe,reboot and shutdown.
 symlink -> /ram/tmp
 
 = usr =
+Phone application files.
 
 = var =
 symlink -> /ram/var
