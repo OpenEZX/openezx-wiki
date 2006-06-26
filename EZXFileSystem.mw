@@ -10,6 +10,7 @@ rootfs on / type rootfs (rw)
 </code>
 
 = bin =
+Executables, like cat,chmod,cp,ps,grep and gzip
 
 = dev =
 Devices like tty, vibrator or USB.
