@@ -12,6 +12,7 @@ rootfs on / type rootfs (rw)
 = bin =
 
 = dev =
+Devices like tty, vibrator or USB.
 
 = diska =
 
