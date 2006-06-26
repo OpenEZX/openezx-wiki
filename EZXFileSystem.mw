@@ -66,6 +66,7 @@ symlink -> /ram/proc
 = root =
 
 = sbin =
+Executables like ifconfig,halt,init,modprobe,reboot and shutdown.
 
 = tmp =
 symlink -> /ram/tmp
