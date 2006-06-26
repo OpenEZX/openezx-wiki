@@ -65,6 +65,10 @@ symlink -> /ram/proc
 = root =
 
 = sbin =
+Internet daemons,
+inetd
+smbd
+tcpd
 
 = tmp =
 symlink -> /ram/tmp
