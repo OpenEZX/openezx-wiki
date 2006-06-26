@@ -44,6 +44,7 @@ Various system configuration files
 
 = ezxlocal =
 <code>/dev/mtdblock2 on /ezxlocal type vfm (rw,noatime)</code>
+Phone configuration.
 
 = home =
 
