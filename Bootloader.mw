@@ -107,3 +107,13 @@ If you get another version and date on your phone please add here.
 = Troubleshooting =
 
 In case you followed all steps correctly and the only thing you get is white colors with blueish stripes fading slowly into white, then you encountered a bug in our initialization routine. In that case, boot first with the MOTO kernel, right after that remove the battery, insert it again, enter bootloader and try again.
+
+= Differences between the phone bootloaders =
+
+If you enter the bootloader on the ROKR E2 you get a red background with black font displaying something like this:
+
+FLASH_KEY_PRESS                                                                                                                                                                                    
+Boot Module:                                                                                                                                                                                       
+BOOT_G_00.02.05R_SUMATRA                                                                                                                                                                          
+
+MBM FLASH MODE
