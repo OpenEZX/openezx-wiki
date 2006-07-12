@@ -112,8 +112,10 @@ In case you followed all steps correctly and the only thing you get is white col
 
 If you enter the bootloader on the ROKR E2 you get a red background with black font displaying something like this:
 
-FLASH_KEY_PRESS                                                                                                                                                                                    
-Boot Module:                                                                                                                                                                                       
+FLASH_KEY_PRESS
+
+boot Module:                                                                                                                                                                                      
+
 BOOT_G_00.02.05R_SUMATRA                                                                                                                                                                          
 
 MBM FLASH MODE
