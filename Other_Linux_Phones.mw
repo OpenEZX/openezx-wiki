@@ -2,7 +2,7 @@ This page collects information about non-Motorola Linux-based mobile phones. Thi
 
 == Non-Motorola Linux Phones ==
 
-* [http://www.imcosys.com/ ImCoSys Smartphone] (announced for June 2006)
+* [http://www.imcosys.com/ ImCoSys Smartphone] (announced for June 2006) (The company reports on their webpage that the OS is an Embedded Linux. I noticed on a reseller page that it is not covered by the GPL. I sent an email to the company and it answered that in fact the phone does not base on Linux. Looks like a GPL violation or a confusion between the marketing and the development guys. I contact them again and will update the entry after the next answer.) 
 * [http://linuxdevices.com/articles/AT2559540724.html Grundig Dreamphone G500i] developed by [[Purple Labs]] (did they release source code yet?)
 * ...
 
