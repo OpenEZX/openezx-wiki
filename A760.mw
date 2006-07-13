@@ -1,2 +1,14 @@
 There are some small informations and kernel source here:
 http://a760.sourceforge.net/
+
+== Application Processor (AP) ==
+
+Intel PXA 262 (PXA 250 + 32MB StrataFlash in one package) / 200 MHz
+Infrared
+Serial Port
+pxafb / 240x320 / 16bpp
+
+assp
+vibrator
+
+UCB1400 Touchscreen (attached to MCP)
