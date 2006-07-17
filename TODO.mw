@@ -39,8 +39,8 @@
 * Get reblob working to load another blob via blob. We can test bootloader changes fine this way.
 * Create a modified bootloader that allows for multiboot configurations. It could actually include SD/TF support for booting kernels from there.
 
-= Userspace =
+= Userspace (Openembedded and others) =
 
-* PIM applications
-* Telephone applications (perhaps http://handhelds.org/moin/moin.cgi/Gomunicator)
+* Telephone applications 
 * Port gpsd to communicate with several gps applications. (A780 only)
+* Disable infrared support in opie on phones without infrared.
