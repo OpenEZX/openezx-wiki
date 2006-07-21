@@ -1,46 +1,86 @@
+{| width="100%"
+|-
+|style="vertical-align:top" |
+<div style="margin: 0; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#cce5ff; align:right;">
 Welcome to the [http://openezx.org/ OpenEZX] wiki!
 
 This is a collaborative effort to collect information about Motorola's EZX phone platform, such as the A780, E680 and E680i Linux based GSM phones.
 
-* [[Hardware]] related pages
-** [[Hardware::A728]]: The Motorola A728
-** [[Hardware::A732]]: The Motorola A732
-** [[Hardware::A760]]: The Motorola A760
-** [[Hardware::A768]]: The Motorola A768
-** [[Hardware::A780]]: The Motorola A780
-*** [[Hardware::A780::EMU]]: The Motorola A780 EMU (Enhanced Mini USB)
-** [[Hardware::A910]]: The Motorola A910
-** [[Hardware::A1200]]: The Motorola A1200
-** [[Hardware::E680]]: The Motorola E680
-** [[Hardware::E680i]]: The Motorola E680i
-** [[Hardware::Rokr E2]]: The Motorola Rokr E2
-** [[Hardware::Other Linux Phones]]: Non-Motorola Linux-based mobile phones
-* [[Software]] related pages
-** [[Software::AP::Motorola]]: Information on Motorola's software
-** [[Software::AP::OpenEZX]]: Free Software for the AP
-** [[Software::A780]]: A780-specific software versions put out by Motorola
-** [[Software::A768]]: A768-specific software versions put out by Motorola
-* Development related pages
-** How to create [[Backups]] of the EZX device
-** How to [[Get a shell]] on the EZX device
-** How to [[Crosscompile]] for the EZX device
-** How to use the [[JTAG]] interface
-** [[EZXFileSystem]]
-** [[Bootloader]]
-** [[Rootfs on SD]]
-** GUI stuff: [[Handheld Environments]]
-** How to build OpenEZX for the A780 with a Ubuntu Dapper LiveCD [http://www.giantshoulderinc.com:8001/wiki/wiki/OpenEmbeddedOnDapper OE with Dapper LiveCD]
-** Developer [[Blogs]]
-** [[TODO]]
-** [[MPKG]] fileformat
+</div>
+
+<div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
+'''[[Hardware]]'''
+
+[[Hardware::A728]]
+
+[[Hardware::A732]]
+
+[[Hardware::A760]]
+
+[[Hardware::A768]]
+
+[[Hardware::A780]]
+
+[[Hardware::A780::EMU]]: The Motorola A780 EMU (Enhanced Mini USB)
+
+[[Hardware::A910]]
+
+[[Hardware::A1200]]
+
+[[Hardware::E680]]
+
+[[Hardware::E680i]]
+
+[[Hardware::Rokr E2]]
+
+[[Hardware::Other Linux Phones]]: Non-Motorola Linux-based mobile phones
+</div>
+| width="50%" style="vertical-align:top" |
+<div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+'''[[Software]]'''
+
+[[Software::AP::Motorola]]: Information on Motorola's software
+
+[[Software::AP::OpenEZX]]: Free Software for the AP
+
+[[Software::A780]]: A780-specific software versions put out by Motorola
+
+[[Software::A768]]: A768-specific software versions put out by Motorola
+</div>
+<div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+'''Development'''
+
+How to create [[Backups]] of the EZX device
+
+How to [[Get a shell]] on the EZX device
+
+How to [[Crosscompile]] for the EZX device
+
+How to use the [[JTAG]] interface
+
+[[EZXFileSystem]]
+
+[[Bootloader]]
+
+[[Rootfs on SD]]
+
+GUI stuff: [[Handheld Environments]]
+
+How to build OpenEZX for the A780 with a Ubuntu Dapper LiveCD [http://www.giantshoulderinc.com:8001/wiki/wiki/OpenEmbeddedOnDapper OE with Dapper LiveCD]
+
+Developer [[Blogs]]
+
+[[TODO]]
+
+[[MPKG]] fileformat
+</div>
+|}
+
 * Known [[Issues]]
 * [[Press Review]]
 * [[Project Status]]
 * [[Photos]]
 * [[Logo Contest]]
-
-== Note ==
-
 * There's an IRC channel on freenode called ''#openezx''. You can find an archive with IRC logs [http://ibot.rikers.org/%23openezx/ here].
 
 == Disclaimer ==
