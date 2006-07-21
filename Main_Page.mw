@@ -11,29 +11,29 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''[[Hardware]]'''
 
-[[Hardware::A728]]
+[[Hardware::A728|A728]]
 
-[[Hardware::A732]]
+[[Hardware::A732|A732]]
 
-[[Hardware::A760]]
+[[Hardware::A760|A760]]
 
-[[Hardware::A768]]
+[[Hardware::A768|A768]]
 
-[[Hardware::A780]]
+[[Hardware::A780|A780]]
 
-[[Hardware::A780::EMU]]: The Motorola A780 EMU (Enhanced Mini USB)
+[[Hardware::A910|A910]]
 
-[[Hardware::A910]]
+[[Hardware::A1200|A1200]]
 
-[[Hardware::A1200]]
+[[Hardware::E680|E680]]
 
-[[Hardware::E680]]
+[[Hardware::E680i|E680i]]
 
-[[Hardware::E680i]]
+[[Hardware::Rokr E2|Rokr E2]]
 
-[[Hardware::Rokr E2]]
+[[Hardware::A780::EMU|EMU]]: The Motorola A780 EMU (Enhanced Mini USB)
 
-[[Hardware::Other Linux Phones]]: Non-Motorola Linux-based mobile phones
+[[Hardware::Other Linux Phones|Other Linux Phones]]: Non-Motorola Linux-based mobile phones
 </div>
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''Misc'''
@@ -55,13 +55,13 @@ Known [[Issues]]
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 '''[[Software]]'''
 
-[[Software::AP::Motorola]]: Information on Motorola's software
+[[Software::AP::Motorola|Motorola]]: Information on Motorola's software
 
-[[Software::AP::OpenEZX]]: Free Software for the AP
+[[Software::AP::OpenEZX|OpenEZX]]: Free Software for the AP
 
-[[Software::A780]]: A780-specific software versions put out by Motorola
+[[Software::A780|A780]]: A780-specific software versions put out by Motorola
 
-[[Software::A768]]: A768-specific software versions put out by Motorola
+[[Software::A768|A768]]: A768-specific software versions put out by Motorola
 </div>
 <div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 '''Development'''
