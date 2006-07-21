@@ -63,7 +63,7 @@ There's an IRC channel on freenode called ''#openezx''. You can find an archive 
 
 [[Software::A768]]: A768-specific software versions put out by Motorola
 </div>
-<div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+<div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 '''Development'''
 
 How to create [[Backups]] of the EZX device
