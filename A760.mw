@@ -1,6 +1,12 @@
 There are some small informations and kernel source here:
 http://a760.sourceforge.net/
 
+{| width="100%"
+|-
+|style="vertical-align:top" |
+<div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+
+
 == Application Processor (AP) ==
 
 Intel PXA 262 (PXA 250 + 32MB StrataFlash in one package) / 200 MHz
@@ -16,5 +22,9 @@ assp
 vibrator
 
 UCB1400 Touchscreen (attached to MCP)
+</div>
+| width="30%" style="vertical-align:top" |
+[[Image:A760-3.jpg]]
+|}
 
 [[Category:Hardware]]
