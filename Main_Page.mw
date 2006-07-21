@@ -35,6 +35,22 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 
 [[Hardware::Other Linux Phones]]: Non-Motorola Linux-based mobile phones
 </div>
+<div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
+'''Misc'''
+
+Known [[Issues]]
+
+[[Press Review]]
+
+[[Project Status]]
+
+[[Photos]]
+
+[[Logo Contest]]
+
+There's an IRC channel on freenode called ''#openezx''. You can find an archive with IRC logs [http://ibot.rikers.org/%23openezx/ here].
+</div>
+
 | width="50%" style="vertical-align:top" |
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 '''[[Software]]'''
@@ -75,13 +91,6 @@ Developer [[Blogs]]
 [[MPKG]] fileformat
 </div>
 |}
-
-* Known [[Issues]]
-* [[Press Review]]
-* [[Project Status]]
-* [[Photos]]
-* [[Logo Contest]]
-* There's an IRC channel on freenode called ''#openezx''. You can find an archive with IRC logs [http://ibot.rikers.org/%23openezx/ here].
 
 == Disclaimer ==
 
