@@ -48,3 +48,5 @@ The package gets installed to '''.system/QTDownLoad/foobar'''.
 =Remove a package=
 
 You can remove the package inside the normal deinstallation menu.
+
+[[Category:Development]]
