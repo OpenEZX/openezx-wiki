@@ -1,6 +1,7 @@
 = Kernel =
 * mtd
 ** Debug and fix mtd support in order to be able to access system flash
+* Stress test the 48MB ram.
 * Video
 ** Port and cleanup video capture driver (camera)
 * Sound
