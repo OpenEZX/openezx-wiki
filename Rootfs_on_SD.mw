@@ -1,3 +1,6 @@
 With support for SD cards we are able to have our rootfs on one of these cards. So we don't need to touch the pre-installed system in any way. This is a really short description how to create your rootfs with busybox on an SD card.
 
 Harald provides a debian sarge rootfs. Please follow his [http://people.openezx.org/laforge/openezx-debian-sarge-root-20060512.README instructions]. [http://www.openembedded.org OpenEmbedded] support is underway.
+
+
+[[Category:Development]]
