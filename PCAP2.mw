@@ -7,3 +7,213 @@ Features:
 * clock generation
 * SPI/SSP interface to AP and BP
 * Backlight control
+
+== PCAP2 A780 register map ==
+
+The [[PCAP2]] has 32 25-bit registers which can be read and written via [[Serial Peripheral Interface|SPI]]. The PCAP2 has two different SPI busses (called ''primary'' and ''secondary''). The primary SPI bus is connected to the [[Baseband Processor|baseband processor]] - the secondary is connected to the [[Application Processor|application processor]]. Some of the registers may only be written from the primary SPI bus. It is unknown if the registers accesed from the primary and secondary buses are the same or different sets.
+
+The following registers are accessible only from the primary SPI bus and their location is unknown: VREG_MASK (cont
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+!R
+!Name
+!Description 
+|-
+|0x00 ||ISR   ||Interrupt status
+|-
+|0x01 ||MSR   ||Interrupt mask (?)
+|-
+|0x02 ||PSTAT ||Power status
+|-
+|0x03 ||???   ||
+|-
+|0x04 ||???   ||
+|-
+|0x05 ||???   ||
+|-
+|0x06 ||VREG2    ||standby/low Power for V[1-10]
+|-
+|0x07 ||AUX_VREG ||control bits for VAUX[1-4]
+|-
+|0x08 ||BATT_DAC ||
+|-
+|0x09 ||ADC1 ||
+|-
+|0x0a ||ADC2 ||
+|-
+|0x0b ||AUD_CODEC ||
+|-
+|0x0c ||AUD_RX_AMPS ||
+|-
+|0x0d ||ST_DAC ||
+|-
+|0x0e ||???   ||
+|-
+|0x0f ||???   ||
+|-
+|0x10 ||???   ||
+|-
+|0x11 ||???   ||
+|-
+|0x12 ||???   ||
+|-
+|0x13 ||???   ||
+|-
+|0x14 ||BUSCTRL ||
+|-
+|0x15 ||PERIPH || Backlight / LED control
+|-
+|0x16 ||???   ||
+|-
+|0x17 ||???   ||
+|-
+|0x18 ||LOWPWR_CTRL ||
+|-
+|0x19 ||???   ||
+|-
+|0x1a ||TX_AUD_AMPS ||
+|-
+|0x1b ||GP_REG ||
+|-
+|0x1c ||???   ||
+|-
+|0x1d ||???   ||
+|-
+|0x1e ||???   ||
+|-
+|0x1f ||???   ||
+|}
+
+== VAUX2 ==
+
+On the [[E680]] VAUX2 is connected to SD/MMC card power. There are 2 Bits that control the voltage of VAUX2.
+
+== VAUX3 ==
+
+On the [[A780]] VAUX3 is connected to TransFlash power. There are 4 Bits that control the voltage of VAUX3 from 0.6V to 3.6V. Basically the formula is U = 0.6V + (N * 0.2V). 
+
+Please note that the voltage can't be set below 1.2V. The exact reason for that behaviour is unknown, but I belive it's because the [[BP|baseband processor]] overrides lower voltages on its primary SPI connection to the PPCAP2.
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+!N !!Bit 3 !!Bit 2 !!Bit 1 !!Bit 0 !!Voltage U 
+|-
+|0 ||0||0||0||0||0.6V
+|-
+|1 ||0||0||0||1||0.8V
+|-
+|2 ||0||0||1||0||1.0V
+|-
+|3 ||0||0||1||1||1.2V
+|-
+|4 ||0||1||0||0||1.4V
+|-
+|5 ||0||1||0||1||1.6V
+|-
+|6 ||0||1||1||0||1.8V
+|-
+|7 ||0||1||1||1||2.0V
+|-
+|8 ||1||0||0||0||2.2V
+|-
+|9 ||1||0||0||1||2.4V
+|-
+|10||1||0||1||0||2.6V
+|-
+|11||1||0||1||1||2.8V
+|-
+|12||1||1||0||0||3.0V
+|-
+|13||1||1||0||1||3.2V
+|-
+|14||1||1||1||0||3.4V
+|-
+|15||1||1||1||1||3.6V
+|}
+
+== Backlight / LED control ==
+
+The PCAP2 can control two backlights' and two LEDs' brightness via PWM. Each LED PWM can be set to 16 different values via 4 bits and a seperate enable bit. Each backlight PWM can be set to 32 different values via 5 bits.
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+!Device !!Bits in PERIPH register 
+|-
+|main backlight ||[0:4]
+|-
+|aux backlight (keylight) ||[20:24]
+|-
+|red LED ||[7:10] enable:[5]
+|-
+|green LED ||[11:14] enable:[6]
+|}
+
+== A/D conversion ==
+
+The PCAP2 has a 10-Bit A/D-converter. Two groups, each with 7 analog inputs can be multiplexed onto the converter. The ADC functions are controlled via the ADC1 and ADC2 registers.
+
+=== Registers seperate for each group ===
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+! Function !! Group 1 !! Group 2 || Description
+|-
+| ADD || ADC2[0:9] || ADC2[10:19] || 10 Bit conversion result
+|-
+| ADINC || ADC2[20] || ADC2[20] || ???
+|- 
+| ADA || ADC1[4:6] || ADC1[7:9] || 3 Bit input select - selects channel for conversion and for readout later
+|- 
+| AD_SEL || ADC1[2] || ADC1[3] || ???
+|- 
+| MTR || ADC1[15] || ADC1[16] || ???
+|}
+
+=== Registers shared by both groups ===
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+! Function !! Location || Description
+|-
+| ADEN || ADC1[0] || enable A/D converter
+|-
+| RAND || ADC2[1] || 0=convert entire group 1=convert single channel
+|-
+| ATO || ADC1[10:13] || 4 Bit conversion delay
+|-
+| ATOX || ADC1[14] || ???
+|-
+| ASC || ADC2[22] || 1=start conversion
+|-
+| TS_M || ADC1[17:19] || Touchscreen mode
+|-
+| TS_REF_LOWPWR || ADC1[20] || 0=TS reference voltage on 1=TS reference volatage off
+|-
+| TS_REFENB || ADC1[21] || ???
+|-
+| BATT_I_POLARITY || ADC1[22] || ???
+|-
+| BATT_I_ADC || ADC1[23] || ???
+|}
+
+=== Touchscreen modes ===
+
+{| border="0" cellpadding="2" cellspacing="2" align="top"
+|- style="background:#bfbfbf; font-weight: bold"
+! Mode# !! Name !! Description
+|-
+| 0 || POSITION_X_MEASUREMENT || ???
+|-
+| 1 || POSITION_XY_MEASUREMENT || ???
+|-
+| 2 || PRESSURE_MEASUREMENT || ???
+|-
+| 3 || PLATE_X_MEASUREMENT || ???
+|-
+| 4 || PLATE_Y_MEASUREMENT || ???
+|-
+| 5 || STANDBY_MODE || ???
+|-
+| 6 || NONTS_MODE || ???
+|}
