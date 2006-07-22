@@ -9,7 +9,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 </div>
 
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
-'''[[Hardware]]'''
+'''[[:Category:Hardware|Hardware]]'''
 
 [[Hardware::A728|A728]],
 [[Hardware::A732|A732]],
@@ -46,7 +46,7 @@ Developer [[Blogs]]
 
 | width="50%" style="vertical-align:top" |
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-'''[[Software]]'''
+'''[[:Category:Software|Software]]'''
 
 [[Software::AP::Motorola|Motorola]]: Information on Motorola's software
 
@@ -57,7 +57,7 @@ Developer [[Blogs]]
 [[Software::A768|A768]]: A768-specific software versions put out by Motorola
 </div>
 <div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-'''Development'''
+'''[[:Category:Development|Development]]'''
 
 How to create [[Backups]] of the EZX device
 
