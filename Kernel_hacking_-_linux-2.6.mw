@@ -6,7 +6,7 @@ Please notice that the development is still in an early state. You should know w
 
 == Building EZX kernel with ezx-crosstool ==
 
-Obviously you need to get ezx-crosstool first. We have some information about how to [[Corsscompile|setup]].
+Obviously you need to get ezx-crosstool first. We have some information about how to [[Crosscompile|setup]].
 
 Next step should be to get a vanilla kernel and our patchset.
 
