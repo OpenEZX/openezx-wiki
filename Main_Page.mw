@@ -65,6 +65,10 @@ How to [[Get a shell]] on the EZX device
 
 How to [[Crosscompile]] for the EZX device
 
+[[Kernel hacking]]
+
+GUI stuff: [[Handheld Environments]]
+
 How to use the [[JTAG]] interface
 
 [[TODO]]
@@ -76,8 +80,6 @@ How to use the [[JTAG]] interface
 [[Rootfs on SD]]
 
 [[Rootfs on NFS]]
-
-GUI stuff: [[Handheld Environments]]
 
 How to build OpenEZX for the A780 with a Ubuntu Dapper LiveCD [http://www.giantshoulderinc.com:8001/wiki/wiki/OpenEmbeddedOnDapper OE with Dapper LiveCD]
 
