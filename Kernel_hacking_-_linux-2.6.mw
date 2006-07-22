@@ -2,6 +2,8 @@ The EZX kernel tree bases on a [http://www.kernel.org vanilla 2.6 kernel]. At th
 
 We use quilt to handle our -ezx kernel tree. You can find the latest patchset [http://people.openezx.org/stefan/patches/patches-2.6.16-2.6.16.13-exz6-symlink-fix.tar.bz2 here].
 
+Please notice that the development is still in an early state. You should know what you are doing, if you test this.
+
 == Building EZX kernel with ezx-crosstool ==
 
 Obviously you need to get ezx-crosstool first. We have some information about how to [[Corsscompile|setup].
