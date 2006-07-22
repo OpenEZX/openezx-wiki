@@ -19,8 +19,9 @@ If everythings works fine you can find the zImage in arch/arm/boot/ . You can us
 
 == Building EZX kernel with openembedded ==
 
-Please fill up.
-
+* Setup OE according to http://www.openembedded.org/wiki/GettingStarted
+* use MACHINE=a780 and DISTRO=ezx
+* 'bitbake virtual/kernel'
 
 == Building kernel modules for the original motorola kernel ==
 
