@@ -1,0 +1,108 @@
+== Official Firmware ==
+
+Motorola distributes several variants of firmware for the [[A780]] specialized for various regions, feature sets, etc.
+
+== Getting your software version ==
+
+* Go to the dialing screen.
+* Enter 'www008w'. Procedure to enter a "w" on the dialing screen:
+** Power the phone on.
+** With stylus go to the telephone dialing screen.
+** Select the menu button (bottom left).
+** Select "Insert".
+** Select Insert Wait.
+** A "W" is displayed on the dialing field.
+* A screen opens up and shows you something like:
+  R52_G_0D.43.A3P
+  BP: R52_G_0D.32.B1P
+  BPFlex: GSOA780T673AS019
+  DSP: 62252500
+  Technology: Quad-Band GSM
+
+== Known versions A780 ==
+
+{| border="1"
+| AP || BP || BP Flex || DSP || Info
+|-
+| R52_G_0D.43.A3P
+| R52_G_0D.32.B1P
+| GSOA780T673A019
+| 62252500
+| From Taiwan, Problems accessing sites using the Opera browser. People here have confirmed for me that with newer firmware, they can hit the sites I need to hit. Blank text messages when I check voicemail or have a new voicemail. Just a "G" in my status bar as opposed to "E" for EDGE. Display doesn't show "T-Mobile" but rather "310-260".
+|-
+| R52_G_0D.43.A3P
+| R52_G_0D.32.B1P
+| GSOA780T673AU1A
+| 62252500
+| From either Taiwan or Korea (bought indirectly via eBay), low battery warning when I check voicemail even after fresh charge.  Seems to just think the battery is low. Just a "G" in my status bar as opposed to "E" for EDGE.  Display does show "T-Mobile"
+|-
+| R52_G_0D.50.A70
+| R52_G_0D.35.B2P
+| GSOA780T672ZD01D
+| 62252500
+| Shipped from Beijing.  Display shows "310-260" (I hope I won't end up paying international fees for my calls). Modem shell hack works. Blank text messages upon receiving voicemail, and after checking voicemail. Unlocked. No GPS software... can I still access the raw GPS data?
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| GCOA780000E1025
+| 62373700
+| Bought in Germany. Display shows "o2-de".  (Same version on a German A780 bought without contract with Quad-Band GSM and GPS.) 
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| SE6823AD3L1027
+| 62373700
+| Bought in Spain. Unlocked/Free phone. At startup, display shows (in Spanish) "STK not Availiable. STK card not admitted". Then, the STK app starts, and works without problems. The SIM card is from Vodafone Spain. After closing STK app, Display shows "vodafone ES".
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| GSOA780T673AU064
+| 62373700
+| Asian unlocked market version. No CoPilotinstalled and probably no GPS.
+|-
+| R52_G_0D.44.A2P
+| R52_G_0D.34.B1P
+| GSOA780T673AS01A
+| 62252500
+| Taiwanese market phone (no EDGE, no GPS), bought indirectly via eBay seller.
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| GCOA780000E1027
+| 62373700
+| European markter, bought in the Netherlands in 2005-11, GPS support, shell via modem hack, doesn't work. Has had one crash due to the GPS setup.
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| SE6823AD3L1027
+| 62373700
+| Bought in Spain. Unlocked/Free phone. The SIM card is from Amena Spain.
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| SE6822AD3B1025
+| 62373700
+| Bought on ebay. Unlocked/Free phone.  Came with copilot & european map CDs.
+|-
+| R52_G_0D.74.A2R
+| R52_G_0D.C0.B1P
+| GSOA780T673AU064
+| 62373700
+| Bought in US from mobilebee. No GPS.
+|-
+| R52_G_0D.76.A1R
+| R52_G_0D.C0.B1P
+| GCOA780000E1027
+| 62373700
+| Bought in Germany, with GPS, copilot & european map CDs
+|-
+| R52_G_0D.50.AEP
+| R52_G_0D.39.B1P
+| GCOA780000SA061
+| 62252500
+| bought in india, no gps. haven't hacked the thing yet, let's see.
+|}
+
+== Known Version A768 ==
+
+R503_G_00.16.A1R
