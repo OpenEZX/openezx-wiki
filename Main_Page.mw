@@ -11,20 +11,20 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''[[:Category:Hardware|Hardware]]'''
 
-[[Hardware::A728|A728]],
-[[Hardware::A732|A732]],
-[[Hardware::A760|A760]],
-[[Hardware::A768|A768]],
-[[Hardware::A780|A780]],
-[[Hardware::A910|A910]],
-[[Hardware::A1200|A1200]],
-[[Hardware::E680|E680]],
-[[Hardware::E680i|E680i]],
-[[Hardware::Rokr E2|Rokr E2]]
+[[A728]],
+[[A732]],
+[[A760]],
+[[A768]],
+[[A780]],
+[[A910]],
+[[A1200]],
+[[E680]],
+[[E680i]],
+[[Rokr E2]]
 
-[[Hardware::A780::EMU|EMU]]: The Motorola Enhanced Mini USB
+[[EMU]]: The Motorola Enhanced Mini USB
 
-[[Hardware::Other Linux Phones|Other Linux Phones]]: Non-Motorola Linux-based mobile phones
+[[Other Linux Phones]]: Non-Motorola Linux-based mobile phones
 </div>
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''Misc'''
