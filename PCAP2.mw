@@ -217,3 +217,5 @@ The PCAP2 has a 10-Bit A/D-converter. Two groups, each with 7 analog inputs can 
 |-
 | 6 || NONTS_MODE || ???
 |}
+
+[[Category:Hardware]]
