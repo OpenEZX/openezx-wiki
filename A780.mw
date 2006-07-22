@@ -2,8 +2,13 @@
 |-
 |style="vertical-align:top" |
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-The [[A780]] is sold in East Asia since August 2004, and in Europe/US since August 2005. There are a some different variants (with GPS, without GPS). Like the previous A7xx phones, it's a flip phone. See EMU for information about the EMU (Enhanced Mini USB) on the [[A780]].
+The [[A780]] is sold in East Asia since August 2004, and in Europe/US since August 2005. There are a some different variants (with GPS, without GPS). Like the previous A7xx phones, it's a flip phone. See EMU for information about the [[EMU]] (Enhanced Mini USB) on the [[A780]].
 
+[http://www.motorola.com/motoinfo/product/details/0,,70,00.html Motorola A780 product page.]
+</div>
+| width="30%" style="vertical-align:top" |
+[[Image:A780-3.jpg]]
+|}
 == Application Processor (AP) ==
 The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm Intel PXA270]:
 * ARMv5TE ARM core
@@ -20,12 +25,9 @@ The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302
 * Keypad Controller
 * QuickCapture Camera interface 
 * Three UART's
-* [[Hardware::A780::GPIO]] assignment
+* [[GPIO]] assignment
 This is the beast that runs Linux.
-</div>
-| width="30%" style="vertical-align:top" |
-[[Image:A780-3.jpg]]
-|}
+
 
 == Baseband Processor (BP) ==
 
@@ -103,7 +105,5 @@ The A780 has a mini USB connector that motorola calls "Enhanced Mini USB" or in 
 * A Factory Test and Flash Interface
 
 More details can be found here [[EMU]]
-
-[http://www.motorola.com/motoinfo/product/details/0,,70,00.html Fact Sheet]
 
 [[Category:Hardware]]
