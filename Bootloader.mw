@@ -81,7 +81,9 @@ A value of 0x00000001 means that a hardware reset has occured.
 
 = BRESET =
 
-The reset value seems to be 0x00000000. More information needed here.
+The reset value seems to be 0x00000000. 
+
+This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in PSPR (Power Manager Scratch Pad Register).
 
 = ARESET =
 
