@@ -73,7 +73,11 @@ rather random flag variations below). -am
 
 = RESET =
 
-The reset value seems to be 0x00000001. More information needed here.
+The reset value seems to be 0x00000001. 
+
+This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in FFSPR (FFUART Scratch Pad Register) which is copied there by .../blob/src/blob/start.S from RCSR (Reset Controller Status Register).
+
+A value of 0x00000001 means that a hardware reset has occured.
 
 = BRESET =
 
