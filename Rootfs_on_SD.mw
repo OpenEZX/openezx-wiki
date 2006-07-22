@@ -1,4 +1,4 @@
-With support for SD cards we are able to have our rootfs on one of these cards. So we don't need to touch the pre-installed system in any way. 
+With support for SD and TF cards we are able to have our rootfs on one of these cards. So we don't need to touch the pre-installed system in any way. 
 
 Harald provides a debian sarge rootfs. Please follow his [http://people.openezx.org/laforge/openezx-debian-sarge-root-20060512.README instructions].
 
