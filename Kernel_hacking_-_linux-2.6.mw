@@ -6,7 +6,7 @@ Please notice that the development is still in an early state. You should know w
 
 == Building EZX kernel with ezx-crosstool ==
 
-Obviously you need to get ezx-crosstool first. We have some information about how to [[Corsscompile|setup].
+Obviously you need to get ezx-crosstool first. We have some information about how to [[Corsscompile|setup]].
 
 Next step should be to get a vanilla kernel and our patchset.
 
@@ -15,7 +15,6 @@ With crosscompiler and patchset you should be able to compile new kernels with j
 make ARCH=arm CROSS_COMPILE=arm-linux- zImage
 
 If everythings works fine you can find the zImage in arch/arm/boot/ . You can use this zImage together with boot_usb to boot the phone with this kernel once.
-
 
 == Building EZX kernel with openembedded ==
 
