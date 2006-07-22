@@ -85,7 +85,9 @@ The reset value seems to be 0x00000000. More information needed here.
 
 = ARESET =
 
-The reset value seems to be 0x00000000. More information needed here.
+The reset value seems to be 0x00000000. 
+
+This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in RCSR. The hardware reset flag is cleared by ...blob/src/blob/start.S after it's copied to FFSPR.
 
 = Messages =
 
