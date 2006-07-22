@@ -162,6 +162,10 @@ Now place the following script called '''usblan.lin''' on your TransFlash (or SD
   echo MotNet > /proc/usbd-switch
   ifconfig usbl0 up 169.254.1.2 netmask 255.255.255.0 mtu 900
 
+If you dont like the 169.254.x.x address, you can use an address in the 192.168.1.x range (default on many routers). Do not change 
+
+anything but the x! Only 169.254.x.x and 192.168.1.x are in /etc/hosts.allow on the A780 (dont know about the rest). 
+
 This will switch you from modem mode to usblan mode, switch the phone's IP address to 169.254.1.2 and put the phone's mtu to 900.
 
 Now set your phone in modem mode and run the script with '''LinLoader''' (long press and choose "open with").
