@@ -4,11 +4,14 @@
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 Revamped version of the original [[A760]]
 
-Processor - Intel XScale with BogoMIPS 192
 </div>
 | width="30%" style="vertical-align:top" |
 [[Image:A768-2.jpg]]
 |}
+
+== Application Processor (AP) ==
+
+Processor - Intel XScale with BogoMIPS 192
 
 == Resources ==
 * [http://tux.medhas.org/static/a768i.html Motorola A768i and GNU/Linux]
