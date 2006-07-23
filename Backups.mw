@@ -6,7 +6,7 @@ There are two essential pieces of data that should be backed up: the flash disk(
 
 ===Flash Disks===
 
-The [[A780]] has an internal 48 MB disk-on-a-chip flash drive in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to [[TODO|(what external?)]]. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via [[Guides::Backups#netcat|netcat]], [[Guides::Backups#Backup Flash Disks With dd (Linux Only)|tar]] or [[Guides::Backups#Backup Flash Disks With tar|tar]] (explained below).
+The [[A780]] has an internal 48 MB disk-on-a-chip flash drive in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to SD slot. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via [[Guides::Backups#netcat|netcat]], [[Guides::Backups#Backup Flash Disks With dd (Linux Only)|tar]] or [[Guides::Backups#Backup Flash Disks With tar|tar]] (explained below).
 
 ===Firmware===
 
@@ -78,12 +78,5 @@ Once it completes, copy the firmware files firmware.dump and tffsa.dmp to your h
 
 You have now made a backup!
 
-== Flashkit ==
-
-[[TODO]]
-
-== Other methods? ==
-
-[[TODO]]
 
 [[Category:Development]]
