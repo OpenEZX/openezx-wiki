@@ -203,7 +203,7 @@ Someone wrote that the device actually sends a DHCP query before it settles on 1
 
 === Services ===
 
-The phone is also running a Samba server.
+There is a samba server running on the phone. ''smbclient -L'' only shows the share home (= /diska), but theres also the hidden share system (= /). This is quite practical for sending and receiving files, as putting the phone in "USB mass storage mode" also disables bluetooth.
 
 The command line will be somewhat more useful once you install busybox.
 
