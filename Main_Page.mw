@@ -11,85 +11,55 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''[[:Category:Hardware|Hardware]]'''
 
-[[A728]],
-[[A732]],
-[[A760]],
-[[A768]],
-[[A780]],
-[[A910]],
-[[A1200]],
-[[E680]],
-[[E680i]],
-[[E680g]],
-[[E895]], 
-[[Rokr E2]]
+* [[A728]], [[A732]], [[A760]], [[A768]], [[A780]], [[A910]], [[A1200]], [[E680]], [[E680i]], [[E680g]], [[E895]], [[Rokr E2]]
+* [[EMU]]: The Motorola Enhanced Mini USB
+* [[PCAP2]]
+* [[GPIO]]
+* [[Other Linux Phones]]: Non-Motorola Linux-based mobile phones
 
-[[EMU]]: The Motorola Enhanced Mini USB
-
-[[PCAP2]]
-
-[[GPIO]]
-
-[[Other Linux Phones]]: Non-Motorola Linux-based mobile phones
 </div>
+
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''Misc'''
 
-Known [[Issues]]
+* Known [[Issues]]
+* [http://www.openezx.org/links.html Press reviews]
+* [[Project Status]]
+* [http://planet.openezx.org/ Planet OpenEZX] (developer blogs)
+* [[Photos]]
+* [[Logo Contest]] / [[Logo proposals]] (contest is over)
+* [http://www.openezx.org/contact.html Contact]
 
-[http://www.openezx.org/links.html Press reviews]
-
-[[Project Status]]
-
-Developer [http://planet.openezx.org/ Blogs]
-
-[[Photos]]
-
-[[Logo Contest]] (Contest is over.)
-
-[http://www.openezx.org/contact.html Contact]
 </div>
 
 | width="50%" style="vertical-align:top" |
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 '''[[:Category:Software|Software]]'''
 
-[[Software::AP::Motorola|Motorola]]: Information on Motorola's software
+* [[Software::AP::Motorola|Motorola]]: Information on Motorola's software
+* [[Software::AP::OpenEZX|OpenEZX]]: Free Software for the AP
+* [[Original firmware versions]]
 
-[[Software::AP::OpenEZX|OpenEZX]]: Free Software for the AP
-
-[[Original firmware versions]]
 </div>
+
 <div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 '''[[:Category:Development|Development]]'''
 
-How to create [[Backups]] of the EZX device
+* How to create [[Backups]] of the EZX device
+* How to [[Get a shell]] on the EZX device
+* How to [[Crosscompile]] for the EZX device
+* [[Kernel hacking]]
+* GUI stuff: [[Handheld Environments]]
+* How to use the [[JTAG]] interface
+* [[TODO]]
+* [[EZXFileSystem]]
+* [[Bootloader]]
+* [[Rootfs on SD]]
+* [[Rootfs on NFS]]
+* [[Flash kernel image]]
+* How to build OpenEZX for the A780 with a Ubuntu Dapper LiveCD [http://www.giantshoulderinc.com:8001/wiki/wiki/OpenEmbeddedOnDapper OE with Dapper LiveCD]
+* [[MPKG]] fileformat
 
-How to [[Get a shell]] on the EZX device
-
-How to [[Crosscompile]] for the EZX device
-
-[[Kernel hacking]]
-
-GUI stuff: [[Handheld Environments]]
-
-How to use the [[JTAG]] interface
-
-[[TODO]]
-
-[[EZXFileSystem]]
-
-[[Bootloader]]
-
-[[Rootfs on SD]]
-
-[[Rootfs on NFS]]
-
-[[Flash kernel image]]
-
-How to build OpenEZX for the A780 with a Ubuntu Dapper LiveCD [http://www.giantshoulderinc.com:8001/wiki/wiki/OpenEmbeddedOnDapper OE with Dapper LiveCD]
-
-[[MPKG]] fileformat
 </div>
 |}
 
