@@ -179,6 +179,8 @@ or (this happens on my European e680i, address 169... from usblan.lin is ignored
 
  telnet 192.168.1.2
 
+A detailed page in German language on how to get a shell via USBLAN: http://permalink.de/tino/mc-a780-shell
+
 == Notes ==
 
 === Firewall ===
