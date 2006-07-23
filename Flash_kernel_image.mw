@@ -1,0 +1,15 @@
+'''Big fat warning:''' Flashing a new kernel into your phone is irreversible at the moment.
+
+The only known way to flash a new kernel image is from the original motorola system.
+
+You need to get [http://cyph.marcuslee.org/flashkit-0.1.zip cyphs flashkit] and the source for his [http://cyph.marcuslee.org/rwflash-0.1.tar.bz2 rwflash kernel module].
+
+The flashkit has a precompiled rwflash module  onboard, but unfortunately this one has a bug don't allowing to flash a kernel image. This bug is fixed in the source of rwflash. 
+
+In order to get the kernel module compiled you need the motorola 2.4 kernel source and a working crosscompile toolchain. Please read [[Crosscompile]].
+
+Just replace the old modlue with the new one and follow the flashkit README.
+
+If your phone is unlocked, you can flash your own zImage into /dev/mtd4 . But be aware that the size of you zImage could not be higher then 900kbyte.
+
+[[Category:Development]]
