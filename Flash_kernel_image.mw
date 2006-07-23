@@ -8,7 +8,7 @@ The flashkit has a precompiled rwflash module  onboard, but unfortunately this o
 
 In order to get the kernel module compiled you need the motorola 2.4 kernel source and a working crosscompile toolchain. Please read [[Crosscompile]].
 
-Just replace the old modlue with the new one and follow the flashkit README.
+Just replace the old module with the new one and follow the flashkit README.
 
 If your phone is unlocked, you can flash your own zImage into /dev/mtd4 . But be aware that the size of you zImage could not be higher then 900kbyte.
 
