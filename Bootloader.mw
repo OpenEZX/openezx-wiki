@@ -64,11 +64,15 @@ rather random flag variations below). -am
 |-
 | 0x6b6b6b6b
 | Need to fill.
-| No idea.
+| Defined in lubbock.h "SLEEP_FLAG"
 |-
 | 0x3c7c3c7c
 | Need to fill.
 | No idea.
+|-
+| 0x0C1D2E3F
+| Need to fill.
+| Defined in lubbock.h "REFLASH_FLAG" tested for by blob (not actually seen yet, anyone?)
 |}
 
 = RESET =
