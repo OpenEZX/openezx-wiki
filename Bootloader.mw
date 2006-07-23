@@ -1,6 +1,15 @@
 = General =
 
-On this site we start to share information about the ezx bootloader. Motorola released the modified [[blob]] for the ezx phones. The source is available here: ftp://ftp.gpl-devices.org/pub/vendors/Motorola/A780/gpl-cd-20060421/a780-e680-blob.tar.bz2
+Motorola runs a heavily modified version of the Intel Lubbock port of [ftp://ftp.linux.org.uk/pub/armlinux/people/xscale/lubbock/blob/blob-lubbock-082203.tgz blob] (see also http://sourceforge.net/projects/blob).
+
+The modifications include EZX hardware specifics, but also include the ability to download (and execute) code that was received via USB.  This is how Motorola's official firmware update procedures work:  Send a 'flash program' and the new 'flash image' via USB, then have the bootloader execute it.
+
+Also included is support for a serial console on the FFUART, but it is not yet proven that this code is actually activated.
+
+Harald has written a list of [http://svn.openezx.org/trunk/doc/gpio-bootloader.txt GPIO assignments by the bootloader].
+
+Motorola has released their modified (GPL'd) blob version, see ftp://ftp.gpl-devices.org/pub/vendors/Motorola/A780/gpl-cd-20060421/a780-e680-blob.tar.bz2. This code is used for both, the [[E680]] and the [[A780]].
+
 
 = Enter the bootloader =
 
