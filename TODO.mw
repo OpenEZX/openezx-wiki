@@ -25,7 +25,7 @@
 * AP/BP interaction
 ** implement handshake procedure to put BP in non-flash-mode
 ** Finish reimplementation of mux_cli and grpsv modules
-* Make GPS data available to userspace. The gps is connected at BP. (A780 only)
+* Make GPS data available to userspace. The gps is connected at BP. ([[A780]] only)
 * proprietary flash file systems
 ** Look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
 * Non-A780/E680 stuff
@@ -43,7 +43,7 @@
 = Userspace (Openembedded and others) =
 
 * Telephone applications 
-* Port gpsd to communicate with several gps applications. (A780 only)
+* Port gpsd to communicate with several gps applications. ([[A780]] only)
 * Disable infrared support in opie on phones without infrared.
 
 
