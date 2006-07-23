@@ -1,11 +1,16 @@
-There are some small informations and kernel source here: http://a760.sourceforge.net/
-
-It's the earliest known Motorola Linux phone.
-
 {| width="100%"
 |-
 |style="vertical-align:top" |
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+
+There are some small informations and kernel source here: http://a760.sourceforge.net/
+
+It's the earliest known Motorola Linux phone.
+
+</div>
+| width="30%" style="vertical-align:top" |
+[[Image:A760-3.jpg]]
+|}
 
 
 == Application Processor (AP) ==
@@ -23,9 +28,5 @@ assp
 vibrator
 
 UCB1400 Touchscreen (attached to MCP)
-</div>
-| width="30%" style="vertical-align:top" |
-[[Image:A760-3.jpg]]
-|}
 
 [[Category:Hardware]]
