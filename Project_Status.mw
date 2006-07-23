@@ -72,27 +72,6 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | ?
 |- style="background:#efefef;"
-| '''[[E680i]]'''
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:lime" | 100%
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| ?
-| style="background:yellow" | 70%<sup>2</sup>
-| &mdash;
-| ?
-| ?
-| style="background:yellow" | 70%<sup>4</sup>
 |}
 
 <sup>1</sup> - Drivers seem to be available in the released kernel, but I don't know which work or don't work, hence 70%. If you know more details, please correct the value.
