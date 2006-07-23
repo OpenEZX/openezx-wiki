@@ -14,7 +14,7 @@ With crosscompiler and patchset you should be able to compile new kernels with j
 
  make ARCH=arm CROSS_COMPILE=arm-linux- zImage
 
-If everything works fine you can find the zImage in arch/arm/boot/ . You can use this zImage together with [[boot_usb]] to boot the phone with this kernel once.
+If everything works fine you can find the zImage in arch/arm/boot/ . You can use this zImage together with [[Bootloader#Communication_with_the_bootloader|boot_usb]] to boot the phone with this kernel once.
 
 == Building EZX kernel with openembedded ==
 
