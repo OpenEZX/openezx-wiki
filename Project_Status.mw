@@ -28,7 +28,7 @@ The list of hardware parts we have working Free Software drivers for.
 ! Neptune LTE
 ! JTAG
 |- style="background:#efefef;"
-| '''[[Hardware::A780|A780]]'''
+| '''[[A780]]'''
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
@@ -50,7 +50,7 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | style="background:red" | 20%<sup>4</sup>
 |- style="background:#dfdfdf;"
-| '''[[Hardware::E680|E680]]'''
+| '''[[E680]]'''
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
@@ -72,7 +72,7 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | ?
 |- style="background:#efefef;"
-| '''[[Hardware::E680i|E680i]]'''
+| '''[[E680i]]'''
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
@@ -101,9 +101,9 @@ The list of hardware parts we have working Free Software drivers for.
 
 <sup>3</sup> - mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
 
-<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the [[Hardware::A780|A780]]. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
+<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the [[A780]]. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
 
-<sup>5</sup> - According to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html this post] the SD/MMC works fine on [[Hardware::E680|E680]] phones with Linux 2.6.16.5, but not on the [[Hardware::A780|A780]].
+<sup>5</sup> - According to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html this post] the SD/MMC works fine on [[E680]] phones with Linux 2.6.16.5, but not on the [[A780]].
 
 == Software Stack ==
 
@@ -127,7 +127,7 @@ The list of hardware parts we have working Free Software drivers for.
 | '''2.6 kernel'''
 | style="background:lime" | 80%
 | style="background:lime" | GPL
-| Harald has created a preliminary [http://ganesha.gnumonks.org/~laforge/tmp/2.6.16.5-ezx_patchset.tar.bz2 patchset] which allows you to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html run Linux 2.6.16.5 your phone]. Tested with [[Hardware::E680|E680]] and [[Hardware::A780|A780]]. Not everything is working yet, though.
+| Harald has created a preliminary [http://ganesha.gnumonks.org/~laforge/tmp/2.6.16.5-ezx_patchset.tar.bz2 patchset] which allows you to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html run Linux 2.6.16.5 your phone]. Tested with [[E680]] and [[A780]]. Not everything is working yet, though.
 |- style="background:#efefef;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
