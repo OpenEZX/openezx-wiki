@@ -6,6 +6,11 @@
 The E680 is from a hard- and software point very similar to the [[A780]], although there are some differences. It doesn't have a flip. The E680 is only known to be sold in Asia.
 
 This page will therefore only describe the differences between the [[A780]] and the [[E680]].
+</div>
+
+| width="30%" style="vertical-align:top" |
+[[Image:E680.jpg]]
+|}
 
 == SD/MMC ==
 
@@ -34,10 +39,6 @@ One multicolor LED attached to PCAP2 and AP. One blue cursor pad LED attached to
 == no GPS ==
 
 The E680 doesn't have GPS.
-</div>
 
-| width="30%" style="vertical-align:top" |
-[[Image:E680.jpg]]
-|}
 
 [[Category:Hardware]]
