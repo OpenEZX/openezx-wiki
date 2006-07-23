@@ -32,7 +32,7 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
-| style="background:red" | 0%<sup>5</sup>
+| style="background:red" | 100%
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | ?
@@ -54,7 +54,7 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
-| style="background:lime" | 95%<sup>5</sup>
+| style="background:lime" | 100%
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | ?
@@ -102,8 +102,6 @@ The list of hardware parts we have working Free Software drivers for.
 <sup>3</sup> - mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
 
 <sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the [[A780]]. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
-
-<sup>5</sup> - According to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html this post] the SD/MMC works fine on [[E680]] phones with Linux 2.6.16.5, but not on the [[A780]].
 
 == Software Stack ==
 
