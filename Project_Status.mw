@@ -20,19 +20,18 @@ The list of hardware parts we have working Free Software drivers for.
 ! Keypad
 ! Vibrator
 ! Sound
-! MIDI
 ! FM Radio
 ! Bluetooth
-! GPS
+! [[GPS]]
 ! Serial
 ! Neptune LTE
-! JTAG
+! [[JTAG]]
 |- style="background:#efefef;"
-| '''[[Hardware::A780|A780]]'''
+| '''[[A780]]'''
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
-| style="background:red" | 0%<sup>5</sup>
+| style="background:lime" | 100%
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | ?
@@ -44,66 +43,39 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 70%<sup>1</sup>
 | ?
 | &mdash;
-| style="background:lime" | 100%<sup>2</sup>
-| style="background:yellow" | 50%<sup>3</sup>
+| style="background:yellow" | 70%<sup>2</sup>
+| style="background:yellow" | 50%
 | ?
 | ?
-| style="background:red" | 20%<sup>4</sup>
+| style="background:red" | 20%
 |- style="background:#dfdfdf;"
-| '''[[Hardware::E680|E680]]'''
+| '''[[E680]]'''
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
-| style="background:lime" | 95%<sup>5</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
+| style="background:lime" | 100%
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
 | ?
+| style="background:yellow" | 70%<sup>1</sup>
 | ?
-| style="background:lime" | 100%<sup>2</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 70%<sup>1</sup>
+| ?
+| ?
+| style="background:yellow" | 70%<sup>2</sup>
 | &mdash;
 | ?
 | ?
 | ?
 |- style="background:#efefef;"
-| '''[[Hardware::E680i|E680i]]'''
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| ?
-| ?
-| style="background:lime" | 100%<sup>2</sup>
-| &mdash;
-| ?
-| ?
-| style="background:yellow" | 70%<sup>4</sup>
 |}
 
 <sup>1</sup> - Drivers seem to be available in the released kernel, but I don't know which work or don't work, hence 70%. If you know more details, please correct the value.
 
-<sup>2</sup> - [http://www.bluez.org/ bluez] is fully functional on EZX phones. You need cyphs bluez from motorolafans.com to use it. Note: Build instructions would be nice, in order to update to a more recent version :)
-
-<sup>3</sup> - mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
-
-<sup>4</sup> - According to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 this post] you can use Intel's JFlashMM. It might also work for the [[Hardware::A780|A780]]. Intel's JFlashMM is under [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Intel License].
-
-<sup>5</sup> - According to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html this post] the SD/MMC works fine on [[Hardware::E680|E680]] phones with Linux 2.6.16.5, but not on the [[Hardware::A780|A780]].
+<sup>2</sup> - [http://www.bluez.org/ bluez] is fully functional on EZX phones with the original motorola kernel. It don't works with a 2.6 kernel yet. You need cyphs bluez from motorolafans.com to use it. Note: Build instructions would be nice, in order to update to a more recent version :)
 
 == Software Stack ==
 
@@ -117,17 +89,17 @@ The list of hardware parts we have working Free Software drivers for.
 | '''Bootloader'''
 | style="background:yellow" | 70%
 | style="background:lime" | GPL
-| The modified blob [[Software::AP::Motorola#Bootloader|bootloader]] used for the EZX phones has recently been released by Motorola. However, nobody has reported successful usage of the bootloader, yet.
+| The modified blob [[Bootloader]] used for the EZX phones has recently been released by Motorola. However, nobody has reported successful usage of the bootloader, yet.
 |- style="background:#dfdfdf;"
 | '''2.4 kernel'''
 | style="background:yellow" | 70%
 | style="background:lime" | GPL
-| The 2.4-based [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though. It seems that it is possible to [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&p=24078#24078 flash your own kernel on the phone].
+| The 2.4-based [[Software::AP::Motorola#Linux_Kernel|Linux kernel]] used in most of the EZX phones has been released by Motorola. Not all kernel modules are Free Software though. It seems that it is possible to [[Flash_kernel_image|flash your own kernel on the phone]].
 |- style="background:#dfdfdf;"
 | '''2.6 kernel'''
 | style="background:lime" | 80%
 | style="background:lime" | GPL
-| Harald has created a preliminary [http://ganesha.gnumonks.org/~laforge/tmp/2.6.16.5-ezx_patchset.tar.bz2 patchset] which allows you to [https://lists.gnumonks.org/pipermail/openezx-devel/2006-April/000223.html run Linux 2.6.16.5 your phone]. Tested with [[Hardware::E680|E680]] and [[Hardware::A780|A780]]. Not everything is working yet, though.
+| Please see [[Kernel_hacking]]. Not everything is working yet, though.
 |- style="background:#efefef;"
 | '''Cross-Compilation Toolchain'''
 | style="background:lime" | 95%
@@ -143,27 +115,7 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 40%
 | style="background:yellow" | ?
 | OPIE starts to become useful, see [[Handheld Environments]]
-|- style="background:black"
-|
-| style="background:black" |
-| style="background:black" |
-|
 |- style="background:#efefef;"
-| '''Text terminal'''
-| style="background:red" | 0%
-| style="background:red" | ?
-| There's "qonsole", but the license of it is unclear (doesn't seem to be GPL). Is there any replacement?
-|- style="background:#dfdfdf;"
-| '''Graphical web browser'''
-| style="background:red" | 0%
-| style="background:red" | ?
-| We need a Free Software replacement for Opera. Does anybody know of a graphical web browser which has been ported?
-|- style="background:#dfdfdf;"
-| '''Text-based web browser'''
-| style="background:lime" | 100%
-| style="background:lime" | GPL
-| I have successfully cross-compiled [http://artax.karlin.mff.cuni.cz/~mikulas/vyplody/links/ links], a web browser for the console. I'll publish a small HOWTO + binaries, soon. --[[User:Uwe Hermann|Uwe Hermann]] 13:00, 11 March 2006 (CET)
-|- style="background:#dfdfdf;"
 | '''GPS'''
 | style="background:yellow" | 50%
 | style="background:lime" | GPL
