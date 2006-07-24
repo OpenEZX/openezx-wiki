@@ -2,7 +2,7 @@ The main goal of the OpenEZX project is having a mobile phone which runs on 100%
 
 == Hardware Compatibility with kernel 2.6 ==
 
-The list of hardware parts we have working Free Software drivers for in the 2.4 kernel.
+The list of hardware parts we have working Free Software drivers for in the 2.6 kernel.
 
 {| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align: center;"
 |- style="background:#bfbfbf; font-weight: bold"
