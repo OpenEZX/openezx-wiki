@@ -45,7 +45,7 @@ The list of hardware parts we have working Free Software drivers for.
 | ?
 | &mdash;
 | style="background:yellow" | 70%<sup>2</sup>
-| style="background:yellow" | 50%<sup>3</sup>
+| style="background:yellow" | 50%
 | ?
 | ?
 | style="background:red" | 20%
@@ -77,8 +77,6 @@ The list of hardware parts we have working Free Software drivers for.
 <sup>1</sup> - Drivers seem to be available in the released kernel, but I don't know which work or don't work, hence 70%. If you know more details, please correct the value.
 
 <sup>2</sup> - [http://www.bluez.org/ bluez] is fully functional on EZX phones with the original motorola kernel. It don't works with a 2.6 kernel yet. You need cyphs bluez from motorolafans.com to use it. Note: Build instructions would be nice, in order to update to a more recent version :)
-
-<sup>3</sup> - mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
 
 == Software Stack ==
 
