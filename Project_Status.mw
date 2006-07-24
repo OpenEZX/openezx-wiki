@@ -94,7 +94,7 @@ The list of hardware parts we have working Free Software drivers for.
 | '''Bootloader'''
 | style="background:yellow" | 70%
 | style="background:lime" | GPL
-| The modified blob [[Software::AP::Motorola#Bootloader|bootloader]] used for the EZX phones has recently been released by Motorola. However, nobody has reported successful usage of the bootloader, yet.
+| The modified blob [[Bootloader]] used for the EZX phones has recently been released by Motorola. However, nobody has reported successful usage of the bootloader, yet.
 |- style="background:#dfdfdf;"
 | '''2.4 kernel'''
 | style="background:yellow" | 70%
@@ -120,27 +120,7 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 40%
 | style="background:yellow" | ?
 | OPIE starts to become useful, see [[Handheld Environments]]
-|- style="background:black"
-|
-| style="background:black" |
-| style="background:black" |
-|
 |- style="background:#efefef;"
-| '''Text terminal'''
-| style="background:red" | 0%
-| style="background:red" | ?
-| There's "qonsole", but the license of it is unclear (doesn't seem to be GPL). Is there any replacement?
-|- style="background:#dfdfdf;"
-| '''Graphical web browser'''
-| style="background:red" | 0%
-| style="background:red" | ?
-| We need a Free Software replacement for Opera. Does anybody know of a graphical web browser which has been ported?
-|- style="background:#dfdfdf;"
-| '''Text-based web browser'''
-| style="background:lime" | 100%
-| style="background:lime" | GPL
-| I have successfully cross-compiled [http://artax.karlin.mff.cuni.cz/~mikulas/vyplody/links/ links], a web browser for the console. I'll publish a small HOWTO + binaries, soon. --[[User:Uwe Hermann|Uwe Hermann]] 13:00, 11 March 2006 (CET)
-|- style="background:#dfdfdf;"
 | '''GPS'''
 | style="background:yellow" | 50%
 | style="background:lime" | GPL
