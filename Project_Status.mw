@@ -23,10 +23,10 @@ The list of hardware parts we have working Free Software drivers for.
 ! MIDI
 ! FM Radio
 ! Bluetooth
-! GPS
+! [[GPS]]
 ! Serial
 ! Neptune LTE
-! JTAG
+! [[JTAG]]
 |- style="background:#efefef;"
 | '''[[A780]]'''
 | style="background:yellow" | 70%<sup>1</sup>
