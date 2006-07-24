@@ -24,7 +24,7 @@ The list of hardware parts we have working Free Software drivers for.
 ! Bluetooth
 ! [[GPS]]
 ! Serial
-! Neptune LTE
+! Neptune LTE (mux_cli)
 ! [[JTAG]]
 |- style="background:#efefef;"
 | '''[[A780]]'''
@@ -45,8 +45,8 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 80%<sup>1</sup>
 | style="background:yellow" | 50%
 | ?
-| ?
-| style="background:red" | 20%
+| style="background:yellow" | 60%
+| style="background:red" | 30%
 |- style="background:#dfdfdf;"
 | '''[[E680]]'''
 | style="background:lime" | 100%
@@ -66,8 +66,8 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:yellow" | 80%<sup>1</sup>
 | &mdash;
 | ?
-| ?
-| ?
+| style="background:yellow" | 60%
+| style="background:red" | 30%
 |- style="background:#efefef;"
 |}
 
