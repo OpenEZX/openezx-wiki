@@ -28,9 +28,9 @@ The list of hardware parts we have working Free Software drivers for.
 ! [[JTAG]]
 |- style="background:#efefef;"
 | '''[[A780]]'''
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 100%
+| style="background:yellow" | 100%
+| style="background:yellow" | 60%
 | style="background:lime" | 100%
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
@@ -49,9 +49,9 @@ The list of hardware parts we have working Free Software drivers for.
 | style="background:red" | 20%
 |- style="background:#dfdfdf;"
 | '''[[E680]]'''
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
-| style="background:yellow" | 70%<sup>1</sup>
+| style="background:yellow" | 100%
+| style="background:yellow" | 100%
+| style="background:yellow" | 60%
 | style="background:lime" | 100%
 | style="background:yellow" | 70%<sup>1</sup>
 | style="background:yellow" | 70%<sup>1</sup>
