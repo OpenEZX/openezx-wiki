@@ -6,8 +6,7 @@ Free Software. This page tracks the progress of this effort.
 The list of hardware parts we have working Free Software drivers for in the 2.6
 kernel.
 
-{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:
-center;"
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Feature
 ! [[A728]]
