@@ -1,78 +1,258 @@
-The main goal of the OpenEZX project is having a mobile phone which runs on 100% Free Software. This page tracks the progress of this effort.
+The main goal of the OpenEZX project is having a mobile phone which runs on 100%
+Free Software. This page tracks the progress of this effort.
 
 == Hardware Compatibility with kernel 2.6 ==
 
-The list of hardware parts we have working Free Software drivers for in the 2.6 kernel.
+The list of hardware parts we have working Free Software drivers for in the 2.6
+kernel.
 
-{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align: center;"
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:
+center;"
 |- style="background:#bfbfbf; font-weight: bold"
-! Phone
-! CPU
-! RAM
-! Internal Flash
-! External SD/MMC/ TransFlash
-! Camera
-! Power Management
-! USB Host
-! USB Device
-! USB OTG
-! Touchscreen
-! Keypad
-! Vibrator
-! Sound
-! FM Radio
-! Bluetooth
-! [[GPS]]
-! Serial
-! Neptune LTE (mux_cli)
-! [[JTAG]]
+! Feature
+! [[A728]]
+! [[A732]]
+! [[A760]]
+! [[A768]]
+! [[A780]]
+! [[A910]]
+! [[A1200]]
+! [[E680]]
+! [[E895]]
+! [[Rokr E2]]
 |- style="background:#efefef;"
-| '''[[A780]]'''
+| CPU
+| ?
+| ?
+| ?
+| ?
 | style="background:lime" | 100%
+| ?
+| ?
 | style="background:lime" | 100%
+| ?
+| ?
+|- style="background:#efefef;"
+| RAM
+| ?
+| ?
+| ?
+| ?
+| style="background:lime" | 100%
+| ?
+| ?
+| style="background:lime" | 100%
+| ?
+| ?
+|- style="background:#efefef;"
+| Internal Flash
+| ?
+| ?
+| ?
+| ?
 | style="background:red" | 30%
+| ?
+| ?
+| style="background:red" | 30%
+| ?
+| ?
+|- style="background:#efefef;"
+| External SD/MMC/ TransFlash
+| ?
+| ?
+| ?
+| ?
 | style="background:lime" | 100%
+| ?
+| ?
+| style="background:lime" | 100%
+| ?
+| ?
+|- style="background:#efefef;"
+| Camera
+| ?
+| ?
+| ?
+| ?
 | style="background:red" | 0%
 | ?
 | ?
+| style="background:red" | 0%
+| ?
+| ?
+|- style="background:#efefef;"
+| Power Management
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+|- style="background:#efefef;"
+| USB Host
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 20%
+| ?
+| ?
+| style="background:red" | 20%
+| ?
+| ?
+|- style="background:#efefef;"
+| USB Device
+| ?
+| ?
+| ?
+| ?
 | style="background:lime" | 100%
+| ?
+| ?
+| style="background:lime" | 100%
+| ?
+| ?
+|- style="background:#efefef;"
+| USB OTG
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+|- style="background:#efefef;"
+| Touchscreen
+| ?
+| ?
+| ?
 | ?
 | style="background:yellow" | 80%
-| style="background:lime" | 100%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| &mdash;
-| style="background:red" | 0%
-| style="background:red" | 0%
 | ?
-| style="background:red" | 0%
-| style="background:red" | 30%
-|- style="background:#dfdfdf;"
-| '''[[E680]]'''
-| style="background:lime" | 100%
-| style="background:lime" | 100%
-| style="background:red" | 30%
-| style="background:lime" | 100%
-| style="background:red" | 0%
-| ?
-| ?
-| style="background:lime" | 100%
 | ?
 | style="background:yellow" | 80%
+| ?
+| ?
+|- style="background:#efefef;"
+| Keypad
+| ?
+| ?
+| ?
+| ?
 | style="background:lime" | 100%
-| style="background:red" | 0%
-| style="background:red" | 0%
+| ?
+| ?
+| style="background:lime" | 100%
+| ?
+| ?
+|- style="background:#efefef;"
+| Vibrator
+| ?
+| ?
+| ?
 | ?
 | style="background:red" | 0%
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+|- style="background:#efefef;"
+| Sound
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+| style="background:red" | 0%
+| ?
+| ?
+|- style="background:#efefef;"
+| FM Radio
+| ?
+| ?
+| ?
+| ?
 | &mdash;
 | ?
+| ?
 | style="background:red" | 0%
+| ?
+| ?
+|- style="background:#efefef;"
+| Bluetooth
+| ?
+| ?
+| ?
+| ?
 | style="background:red" | 30%
+| ?
+| ?
+| style="background:red" | 30%
+| ?
+| ?
+|- style="background:#efefef;"
+| [[GPS]]
+| &mdash;
+| &mdash;
+| &mdash;
+| &mdash;
+| style="background:red" | 0%
+| &mdash;
+| &mdash;
+| &mdash;
+| &mdash;
+| &mdash;
+|- style="background:#efefef;"
+| Serial
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 20%
+| ?
+| ?
+| style="background:red" | 20%
+| ?
+| ?
+|- style="background:#efefef;"
+| Neptune LTE (mux_cli)
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 30%
+| ?
+| ?
+| style="background:red" | 30%
+| ?
+| ?
+|- style="background:#efefef;"
+| [[JTAG]]
+| ?
+| ?
+| ?
+| ?
+| style="background:red" | 20%
+| ?
+| ?
+| style="background:red" | 20%
+| ?
+| ?
 |- style="background:#efefef;"
 |}
 
 
-
 == Hardware Compatibility with kernel 2.4==
 
-Motorola delivered the kernel source and most external modules (mmc, mux_cli) to the public. OpenEZX will only support kernel 2.6, so this section will be empty.
+Motorola delivered the kernel source and most external modules (mmc, mux_cli) to
+the public. OpenEZX will only support kernel 2.6, so this section will be empty.
