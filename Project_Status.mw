@@ -4,7 +4,7 @@ Free Software. This page tracks the progress of this effort.
 == Hardware Compatibility with kernel 2.6 ==
 
 The list of hardware parts we have working Free Software drivers for in the 2.6
-kernel.
+kernel. You can find futher information to get a feature working up to 100% in our [[TODO]] list.
 
 {| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
 |- style="background:#bfbfbf; font-weight: bold"
