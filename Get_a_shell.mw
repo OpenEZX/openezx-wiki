@@ -76,8 +76,10 @@ Install minicom if it's not installed. On Debian, I used:
  apt-get install minicom
 
 Start minicom. Type '''Control-A''' and then '''o''' to get the setup screen.
-Set the serial port to '''/dev/ttyACM0'''. Save that as the default.
-Exit out of minicom with '''Control-A''' '''x''' and start it again.
+Set the serial port to '''/dev/ttyACM0'''. 
+Also have a look at the serial settings, I needed to adjust them to
+'''38400 8N1''' (I am normally using 9600 8N1, which the A780 did not like).
+Save that as the default. Exit out of minicom with '''Control-A''' '''x''' and start it again.
 
 At this point you can type Hayes modem commands to the phone. This is useful for GPRS, etc., but that's another tutorial.
 
