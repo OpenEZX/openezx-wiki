@@ -39,6 +39,8 @@ Pinout :
 The Short between pin2 and pin3 is detected by a 200kohm pullup resistor on pin3 / d+ and a voltage comparator comparing pin2 and pin3.
 It seems to be possible to switch this pullup resistor off by software.
 
+Instead of having to do a short between pin 2 and 3, a pullup resistor between pin2 and pin1 (+5Vdc) can be used (50 or 100kOhm).
+
 == Fast Charger ==
 Pinout :
 * 1 + 5 volts @ 1,250 ma
