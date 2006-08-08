@@ -224,7 +224,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Neptune LTE (mux_cli)
+| GSM, GPRS - Neptune LTE (mux_cli)
 | ?
 | ?
 | ?
@@ -249,7 +249,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 |- style="background:#efefef;"
 |}
-
 
 == Hardware Compatibility with kernel 2.4==
 
