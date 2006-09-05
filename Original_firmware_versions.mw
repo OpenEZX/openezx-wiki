@@ -19,6 +19,11 @@ Motorola distributes several variants of firmware for the [[A780]] specialized f
   DSP: 62252500
   Technology: Quad-Band GSM
 
+
+Alternatively, via telnet or Samba look at:
+ /etc/ap-version.txt
+ /tmp/VersionInfo
+
 == Known versions A780 ==
 
 {| border="1"
