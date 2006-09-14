@@ -83,7 +83,7 @@ Save that as the default. Exit out of minicom with '''Control-A''' '''x''' and s
 
 At this point you can type Hayes modem commands to the phone. This is useful for GPRS, etc., but that's another tutorial.
 
-Type '''AT+mode=99''' followed by carriage return. The phone goes out of modem mode at this point, so you won't get an "OK".
+Type '''AT+mode=99''' followed by carriage return. The phone goes out of modem mode at this point, so you won't get an "OK". (If +mode=99 does not work, try +mode=13. That seems to do the trick on a1200 here).
 
 Exit minicom.
 
@@ -208,19 +208,7 @@ The command line will be somewhat more useful once you install busybox.
 === Issues ===
 
 There seem to be certain A780's where the modem mode trick doesn't work on, more info on this follows.
-* I have a european one where AT+mode=99 outputs ERROR, plain AT returns OK ok. --ToniAlatalo
-* Same here. LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
-* I have the same issue with a European A780 (not sim-locked): AT+mode=99 returns ERROR, AT+mode=12 returns OK, but I can't do anything with the reported "MotDSPLog" mode. The second option with LinLoader also works here (when linloader is installed in the proper directory) -- Rene
-* Same here -- Andreas
-* On the A768i, at+mode=8 will give:
- Will launch BP log&test command, exit modem...
-at+mode=9 results in:
- Will launch testagent, exit modem...
-* AT+mode=99 did not work with my E680i. With acmattach.lin, I have to add host: 
-  # ifconfig usb0 192.168.1.99
-  # route add -host 192.168.1.2 dev usb0
-  # telnet 192.168.1.2 
--- Xaffer.
+*  LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
 
 === Creating a backup ===
 
