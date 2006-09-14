@@ -150,6 +150,34 @@ The "AppLinkRecord100000101" and "uid = 100000101" should have an identical numb
   Directory = ../../../../mmc/mmca1/.system/QTDownLoad/loader
   Type = 2
 
+A1200 needs different setup. This should go into CardRegister file (in .system/Java):
+
+  [863f87db-7e13-c673-a56b-aeec28347561]
+  AniIcon =
+  AppID = {863f87db-7e13-c673-a56b-aeec28347561}
+  Args =
+  Attribute = 2
+  BigIcon = loader.png
+  Daemon = 0
+  Directory = /mmc/mmca1/.system/QTDownLoad/loader
+  Eraseable = 1
+  Exec = lin_loader
+  FixedAllPosition = 0
+  FixedPosition = 0
+  GroupID = ezx
+  Icon = loader-sm.png
+  InstalledDate = 2006/4/24
+  JavaId = -1
+  MassStorageStatus = 0
+  MpkgFile =
+  Name = LinLoader
+  OsVersion = 1.0
+  Shared = 1
+  Size = 24K
+  Type = 2
+  UserID = ezx
+  Visible = 1
+
 Now reboot your phone. You should now have a new application (called LinLoader) on the A780.
 
 Now place the following script called '''usblan.lin''' on your TransFlash (or SD/MMC) card:
