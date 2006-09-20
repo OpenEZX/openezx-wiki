@@ -33,9 +33,9 @@ This is the beast that runs Linux.
 
 The BP is a ARM7TDMI core that implements the GSM stack. Digital baseband processing is done by an Onyx (566xx) DSP core that is next to the ARM7TDMI.  Like the AP, it has a JTAG port that is connected to easily-accessible pads on the PCB.
 
-Motorola calls the BP used in the EZX Phones a "Neptune LTE", which is an "E"DGE enhanced version of some prior Neptune chipset.  A number of non-smart GSM Phones from Motorola have only a version of that BP (and no AP).
+The BP used in the EZX Phones a Freescale "Neptune LTE", which is an "E"DGE enhanced version of some prior Neptune chipset.  A number of non-smart GSM Phones from Motorola have only a version of that BP (and no AP).
 
-The BP runs a real-time operating system from it's own 32MBit Flash.
+The BP runs the Nucleus operating system (produced by Mentor Graphics) from it's own 32MBit Flash.
 
 AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB link ''IPC'' for Inter-Processor Communication.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
 
