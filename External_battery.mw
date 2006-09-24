@@ -1,0 +1,35 @@
+== Disclaimer ==
+=== Warning ===
+* You might loose your warranty.
+* You might kill your phone if you apply a wrong voltage, mix up +/-, or create any shorts.
+
+
+== How to connect an external power source directly to the battery pins inside the A780.==
+
+There are 4 battery-related pins on the A780. Open the cover on the back side of the phone,
+and hold the phone so the stylo is left, and the battery pins on the bottom. I label the for pins from left
+to right D,C,B,A.
+
+* A is ground. (plus pole)
+* B seems to be the thermo-resistor measuring battery temperature (can be read via PCAP ADC)
+* C is the one-wire bus for the EEPROM inside the battery.
+* D is the battery voltage terminal. (minus pole)
+
+(Thanks to Harald Welte for pointing that out.)
+
+Your battery pack should have a voltage between 3.0V and 4.0V (Maybe more would be possible, but I won't risk trying it.)
+If the voltage drops below approximately 2.9V, the phone powers itself off, while the battery pack still might be half full.
+
+I successfully powered the phone with two LR6 1.5V alkaline batteries for about 30 minutes.
+First I measured 3.2V, when the phone turned itself off at 2.9V. At 1.45V, an alkaline batterie still has most of its capacity, so I think 30 minutes is actually a good result. 
+
+Of course the alkaline batteries are only for testing - I'll post information about NiMh batteries as soon as they arrive. I hope to power the phone for at least 10 hours with 3x1.2V NiMh HR20 / 10'000 mAh.
+
+Using a 3.0V - 4.0V power supply should also be possible - I'll test that some day.
+
+(Connecting and wiring should be documented, probably with images.)
+
+Connect the plus pole of your battery pack to A, e.g the right pin, and the minus pole to D, e.g. the left pin. The two pins in the middle don't need to be connected. Double check you didn't mixed up +/- (use color wires!), and check the voltage with a multimeter. Ensure that there are no shorts to B and C.
+
+== See also ==
+* Thread on the mailing list: [[http://lists.gnumonks.org/pipermail/openezx-devel/2006-September/000781.html]] and replies, and [[http://lists.gnumonks.org/pipermail/openezx-devel/2006-September/000790.html]] (broken thread)
