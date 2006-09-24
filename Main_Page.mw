@@ -63,6 +63,12 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 * [[MPKG]] fileformat
 
 </div>
+
+<div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+'''Ugly hacks'''
+* How to [[external_battery|connect]] an external 3.0V - 4.0V DC power source, e.g 3 x 1.2V NiMh Batteries, directly to the battery pins inside the A780.
+
+</div>
 |}
 
 == Disclaimer ==
