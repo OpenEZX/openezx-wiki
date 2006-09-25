@@ -48,6 +48,12 @@ Alternatively, via telnet or Samba look at:
 | Shipped from Beijing.  Display shows "310-260" (I hope I won't end up paying international fees for my calls). Modem shell hack works. Blank text messages upon receiving voicemail, and after checking voicemail. Unlocked. No GPS software... can I still access the raw GPS data?
 |-
 | R52_G_0D.74.A2R
+| R52_G_0D.39.B1P
+| GCOA780000SA061
+| 62252500
+| Bought in Austria (unknown origin, Asian model without GPS). Quad-Band GSM, modem hack did not work, shell access with LinLoader works, IP 192.168.1.2 
+|-
+| R52_G_0D.74.A2R
 | R52_G_0D.C0.B1P
 | GCOA780000E1025
 | 62373700
