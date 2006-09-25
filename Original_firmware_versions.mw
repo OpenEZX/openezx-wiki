@@ -21,7 +21,7 @@ Motorola distributes several variants of firmware for the [[A780]] specialized f
 
 
 Alternatively, via telnet or Samba look at:
- /etc/ap-version.txt
+ /etc/ap_version.txt
  /tmp/VersionInfo
 
 == Known versions A780 ==
