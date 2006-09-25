@@ -1,0 +1,55 @@
+Mux_cli is an implementation of the 27.010 protocol
+
+[http://www.3gpp.org/ftp/Specs/html-info/27010.htm]
+
+
+'''Additions'''
+
+Motorola has made a couple of proprietary additions to the standard 27.010 basic protocol.
+
+
+1. Sequence number & ack
+
+After every receive the AP sends an ack with the sequence number for the next frame
+for the BP to use (the sequence number wraps back to zero upon reaching 4).
+
+This addition is unusual for a 27.010 implementation and appears to be a deliberate
+mechanism to limit the throughput of the link, potentially a problem with the UART.
+
+  4f = ack command
+
+  Example AP ack frame (flag,dlc(0),ack,len(1),seqnumber(2),crc,flag)
+  f9 03 4f 03 02 94 f9
+
+
+2. Command & Data identification
+
+The advantage of using your own silicon, you can specify enhancements. This simple
+addition of command or data enables the driver to quickly interpret and route
+the user packet.
+
+  Command tag 0x55
+  Data tag 0XAA
+
+
+'''Current status'''
+
+Mux code untested due to difficulties with establishing the USB connection to the baseband
+
+The AP works as host. Need to establish hub, dmesg output similar to
+
+  usb.c: registered new driver hub
+  ochi_addr = 0xd1239000
+  usb-ohci.c: USB OHCI at membase 0xd1239000, IRQ 3
+
+
+
+'''TODO - coming soon'''
+
+diagram showing frame definitions
+
+flows within the 2.4 driver
+
+alterations done for 2.6 - work queues & Alan Cox's replacement of tty flip buffers 
+
+Potential future - mux line discipline
