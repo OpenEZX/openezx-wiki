@@ -1,6 +1,6 @@
-Mux cli is the Openezx name given to Motorola's implementation of the 27.010 protocol
+Mux cli is the Openezx name given to Motorola's implementation of the 3GPP 27.010 protocol
 
-[http://www.3gpp.org/ftp/Specs/html-info/27010.htm] 3GPP spec
+3GPP specification [http://www.3gpp.org/ftp/Specs/html-info/27010.htm]
 
 
 '''Additions'''
@@ -26,7 +26,7 @@ mechanism to limit the throughput of the link, potentially a problem with the UA
 
 The advantage of using your own silicon, you can specify enhancements. This simple
 addition of command or data for BP->AP flows enables the AP driver to quickly interpret and route
-the user packet.
+the user packet (useful for identification of GPRS commands and GPRS data - two different ttys).
 
   Command tag 0x55
   Data tag 0XAA
@@ -70,10 +70,22 @@ The following diagrams use Alessandro Rubini's notation to describe the structur
 [[Image:Ts0710_simplified_receive.jpg|simplified receive]]
 
 Steps:
-* Interrupt and byte stream retrieved by driver - data stored in flip buffer (tty_io.c) and entry added to work queue by mux_dispatcher.
+* Interrupt occurs and the driver retrieves the byte stream - data stored in flip buffer (tty_io.c) and entry added to work queue by mux_dispatcher.
 * At some point later, when out of interrupt context, the work queue processing is invoked and at some further point of time the receive_worker method is executed. Data is retrieved from the tty buffer and if valid length and crc, passed to ts0710_recv_data (note that the receive_worker also does the AP ack of the frame).
 * The ts0710_recv_data method handles the 07.10 protocol, the decode and control responses for the protocol. In this example the frame contains user data (a UIH frame). The DLC is mapped to the correct tty and control transferred to the receive_buf function for the line discipline related to that tty.
-* The line discipline holds the data until a user read is actioned, at which point it transfers the data to userspace (via /dev/muxN)
+* The line discipline holds the data until a user read is actioned, at which point it transfers the data to userspace (via /dev/muxN) or onwards to TCP/IP (via netif_rx).
+
+
+
+'''Simplified write'''
+
+[[Image:ts0710_write_simplified.jpg|simplified receive]]
+
+Steps:
+* Write is invoked from user space or the TCP/IP stack on the line discipline. To the line discipline the mux code looks like any other driver. The data is passed to the driver, via tty_io, by use of the driver write function pointer.
+* The mux_write function validates the state of the associated DLC (see mapping at bottom of page) and if connected, stores the data as a UIH frame in the mux_send_info array. If not already scheduled the work queue is enabled and control returns to the line discipline with the number of bytes 'written'.
+* At some point later, the work queue invokes the send_worker function which transfers the data to the basic_write method and onwards to the underlying driver (usb currently).
+
 
 
 
@@ -81,15 +93,11 @@ Steps:
 
 diagram showing frame definitions
 
-flows within the 2.4 driver
-
 alterations done for 2.6 - work queues & Alan Cox's replacement of tty flip buffers 
 
 gprsv line discipline - detail the concatenation of data to create IP packets & placement on netif_rx
 
 CSD handling - conventional ppp line discipline
-
-ts0710_mux_serial
 
 Potential future - mux line discipline (will enable use of any tty_driver derived driver)
 
