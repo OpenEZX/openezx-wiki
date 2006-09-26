@@ -55,7 +55,9 @@ The AP works as host. Need to establish hub, dmesg output similar to
 Current focus on the monitoring of GPIO 41 (BP is active)
 
   drivers/usb
-  hub.c usb_hub_port_connect_change  (wakeup BP patch)
+  hub.c usb_hub_port_connect_change  (checking BP patch in e680 & rokre2 code)
+  arm/mach-pxa
+  ezx.c checking handshake
 
 
 '''Diagrams'''
@@ -71,8 +73,54 @@ flows within the 2.4 driver
 
 alterations done for 2.6 - work queues & Alan Cox's replacement of tty flip buffers 
 
+gprsv line discipline - detail the concatenation of data to create IP packets & placement on netif_rx
+
+CSD handling - conventional ppp line discipline
+
 ts0710_mux_serial
 
 Potential future - mux line discipline (will enable use of any tty_driver derived driver)
 
 Distant future - standardise the implementation - test with a range of basebands (TI-Condat, Agere-Optimay, TTPCom etc) - enable inclusion of advanced mode & convergence layers. Emulation of link.
+
+
+
+'''Handy lookup'''
+
+{| border="1" cellpadding="2"
+|+ DLC to /dev/mux mapping ''(from ts0710_mux.h)''
+! DLC !! Description !! Cmd !! Data
+|-
+|0 || Control Channel || - || -
+|-
+|1 || Voice Call & Network MM || 0 || 
+|-
+|2 || SMS MO || 1 || 
+|-
+|3 || SMS MT || 2 || 
+|-
+|4 || Phonebook SIM || 3 || 
+|-
+|5 || Misc || 4 || 
+|-
+|6 || CSD / Fax || 5 || 8
+|-
+|7 || GPRS 1 || 6 || 9
+|-
+|8 || GPRS 2 || 7 || 10
+|-
+|9 || Logger CMD ||  || 11
+|-
+|10 || Logger Data ||  || 12
+|-
+|11 || Test CMD ||  || 13
+|-
+|12 || AGPS ||  || 14
+|-
+|13 || NetMonitor ||  || 15
+|-
+|}
+
+ TCmd - provides test commands
+ Log - debugging info from BP and DSP
+ NetMonitor - data from BP (also nm kernel module)
