@@ -9,7 +9,7 @@ There are two basic parts of your phone that should be backed up -- the firmware
 There are 3 basic ways to talk to your phone.
 * The stock user interface you get with the phone.
 * Bluetooth
-* [[Guides::USB|USB]] - The A780, E680 & E680i USB port has an [[Hardware::A780::EMU|insane number of modes]], but we're only going to worry about the normal USB modes.  Under this category of modes, we have:
+* [[Guides::USB|USB]] - The A780, E680 & E680i USB port has an [[EMU|insane number of modes]], but we're only going to worry about the normal USB modes.  Under this category of modes, we have:
 ** [[Guides::USB#Mass Storage Mode|Mass Storage Mode]] - This is the mode where you can access your phone's flash memory disks (MMC, TransFlash, etc.).
 ** [[Guides::USB#Modem Mode|Modem Mode]] - This is the mode where you can connect your PC to your phone and use it as a modem for Internet access.
 ** [[Guides::USB#USBLAN Mode|USBLAN Mode]] - This is the holy mode that causes angels to sing, women to weep and (real) men to drool.  In this mode, your phone becomes a USB Network Interface Device so that you can communicate via TCP/IP between your phone and PC, thus, enabling you to [[Guide::Telnet|telnet]] into your phone.
