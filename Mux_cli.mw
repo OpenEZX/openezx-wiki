@@ -1,4 +1,4 @@
-Mux_cli is an implementation of the 27.010 protocol
+Mux cli is the Openezx name given to Motorola's implementation of the 27.010 protocol
 
 [http://www.3gpp.org/ftp/Specs/html-info/27010.htm] 3GPP spec
 
@@ -25,7 +25,7 @@ mechanism to limit the throughput of the link, potentially a problem with the UA
 2. Command & Data identification
 
 The advantage of using your own silicon, you can specify enhancements. This simple
-addition of command or data enables the driver to quickly interpret and route
+addition of command or data for BP->AP flows enables the AP driver to quickly interpret and route
 the user packet.
 
   Command tag 0x55
@@ -71,6 +71,8 @@ flows within the 2.4 driver
 
 alterations done for 2.6 - work queues & Alan Cox's replacement of tty flip buffers 
 
+ts0710_mux_serial
+
 Potential future - mux line discipline (will enable use of any tty_driver derived driver)
 
-ts0710_mux_serial
+Distant future - standardise the implementation - test with a range of basebands (TI-Condat, Agere-Optimay, TTPCom etc) - enable inclusion of advanced mode & convergence layers. Emulation of link.
