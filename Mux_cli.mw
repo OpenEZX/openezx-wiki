@@ -1,6 +1,6 @@
 Mux_cli is an implementation of the 27.010 protocol
 
-[http://www.3gpp.org/ftp/Specs/html-info/27010.htm]
+[http://www.3gpp.org/ftp/Specs/html-info/27010.htm] 3GPP spec
 
 
 '''Additions'''
@@ -32,6 +32,16 @@ the user packet.
   Data tag 0XAA
 
 
+'''Files'''
+
+  drivers/char/
+  ts0710.h
+  ts0710_mux.h
+  ts0710_mux.c
+  ts0710_mux_usb.h
+  ts0710_mux_usb.c
+
+
 '''Current status'''
 
 Mux code untested due to difficulties with establishing the USB connection to the baseband
@@ -53,3 +63,5 @@ flows within the 2.4 driver
 alterations done for 2.6 - work queues & Alan Cox's replacement of tty flip buffers 
 
 Potential future - mux line discipline
+
+ts0710_mux_serial
