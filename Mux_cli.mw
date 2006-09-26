@@ -44,7 +44,7 @@ the user packet.
 
 '''Current status'''
 
-Mux code untested due to difficulties with establishing the USB connection to the baseband
+USB mux code untested due to difficulties with establishing the USB connection to the baseband
 
 The AP works as host. Need to establish hub, dmesg output similar to
 
@@ -52,6 +52,10 @@ The AP works as host. Need to establish hub, dmesg output similar to
   ochi_addr = 0xd1239000
   usb-ohci.c: USB OHCI at membase 0xd1239000, IRQ 3
 
+Current focus on the monitoring of GPIO 41 (BP is active)
+
+  drivers/usb
+  hub.c usb_hub_port_connect_change  (wakeup BP patch)
 
 
 '''TODO - coming soon'''
