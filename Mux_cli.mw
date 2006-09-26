@@ -26,7 +26,7 @@ mechanism to limit the throughput of the link, potentially a problem with the UA
 
 The advantage of using your own silicon, you can specify enhancements. This simple
 addition of command or data for BP->AP flows enables the AP driver to quickly interpret and route
-the user packet (useful for identification of GPRS commands and GPRS data - two different ttys).
+the user packet (useful for identification of GPRS commands and GPRS data).
 
   Command tag 0x55
   Data tag 0XAA
@@ -73,18 +73,18 @@ Steps:
 * Interrupt occurs and the driver retrieves the byte stream - data stored in flip buffer (tty_io.c) and entry added to work queue by mux_dispatcher.
 * At some point later, when out of interrupt context, the work queue processing is invoked and at some further point of time the receive_worker method is executed. Data is retrieved from the tty buffer and if valid length and crc, passed to ts0710_recv_data (note that the receive_worker also does the AP ack of the frame).
 * The ts0710_recv_data method handles the 07.10 protocol, the decode and control responses for the protocol. In this example the frame contains user data (a UIH frame). The DLC is mapped to the correct tty and control transferred to the receive_buf function for the line discipline related to that tty.
-* The line discipline holds the data until a user read is actioned, at which point it transfers the data to userspace (via /dev/muxN) or onwards to TCP/IP (via netif_rx).
+* The line discipline holds the data until a user read is actioned, at which point it transfers the data depending on the line discipline to userspace (if n_tty to /dev/muxN) or onwards to TCP/IP (if gprsv or ppp to netif_rx).
 
 
 
 '''Simplified write'''
 
-[[Image:ts0710_write_simplified.jpg|simplified receive]]
+[[Image:ts0710_write_simplified.jpg|simplified write]]
 
 Steps:
 * Write is invoked from user space or the TCP/IP stack on the line discipline. To the line discipline the mux code looks like any other driver. The data is passed to the driver, via tty_io, by use of the driver write function pointer.
 * The mux_write function validates the state of the associated DLC (see mapping at bottom of page) and if connected, stores the data as a UIH frame in the mux_send_info array. If not already scheduled the work queue is enabled and control returns to the line discipline with the number of bytes 'written'.
-* At some point later, the work queue invokes the send_worker function which transfers the data to the basic_write method and onwards to the underlying driver (usb currently).
+* At some later point, the work queue invokes the send_worker function. All waiting frames at that point are processed, for each frame checking that the underlying driver is connected and capable of handling the frame (by calling mux_chars_in_serial_buffer) before invoking the basic_write method to transfer the frame to the underlying driver (usb currently).
 
 
 
