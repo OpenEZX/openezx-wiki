@@ -58,6 +58,11 @@ Current focus on the monitoring of GPIO 41 (BP is active)
   hub.c usb_hub_port_connect_change  (wakeup BP patch)
 
 
+'''Diagrams'''
+
+The following diagrams use Alessandro Rubini's notation to describe the structure and flows [http://www.linux.it/~rubini/docs/serial/serial.html]. 
+
+
 '''TODO - coming soon'''
 
 diagram showing frame definitions
@@ -66,6 +71,6 @@ flows within the 2.4 driver
 
 alterations done for 2.6 - work queues & Alan Cox's replacement of tty flip buffers 
 
-Potential future - mux line discipline
+Potential future - mux line discipline (will enable use of any tty_driver derived driver)
 
 ts0710_mux_serial
