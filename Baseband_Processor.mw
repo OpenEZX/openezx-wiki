@@ -1,4 +1,9 @@
 Processing unit dedicated to [http://en.wikipedia.org/wiki/Baseband baseband] functions.  (somebody want to clarify this?)
 
+Most smart phones (and many not-so-smart phones) will contain two processors.  The OS, user interface, and applications will run on the main applications processor (AP), such as an ARM-based CPU.  The actual phone radio communications and control software, however, are seperated out and run on a seperate CPU, called the Baseband Processor (BP).  The AP communicates to the BP over a defined control link, such as a serial connection or via GPIO lines coming from the AP.
+
+The main reason for seperating out the radio functionality into the BP is because radio control functions (signal modulation, encoding, radio frequency shifting, etc.) are highly timing dependant.  The only practical way to run these functions on the main CPU is if you are running a realtime OS.
+
+The other benefit of utilizing a BP is that once it is designed and certified, you know that it is going to function properly regardless of application and OS changes.  Also, application and driver bugs won't be able to cause malfuncitons in the phone radio, which would otherwise have disasterous consequences to the mobile phone network.  Also, the FCC requires that the entire software stack running on a device which communicates with the cellular network be certified.  Since the AP is considered a seperate device from the BP (which creates the radio signals), phone designers are more free to do as they please with the user interface and applications.
 ===See Also===
 [http://en.wikipedia.org/wiki/Baseband Wikipedia:Baseband]
