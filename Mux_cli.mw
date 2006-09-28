@@ -44,20 +44,14 @@ the user packet (useful for identification of GPRS commands and GPRS data).
 
 '''Current status'''
 
-USB mux code untested due to difficulties with establishing the USB connection to the baseband
+Write of the initial SABM frame occurs but no UA is currently received.
 
-The AP works as host. Need to establish hub, dmesg output similar to
-
-  usb.c: registered new driver hub
-  ochi_addr = 0xd1239000
-  usb-ohci.c: USB OHCI at membase 0xd1239000, IRQ 3
-
-Current focus on the monitoring of GPIO 41 (BP is active)
-
-  drivers/usb
-  hub.c usb_hub_port_connect_change  (checking BP patch in e680 & rokre2 code)
-  arm/mach-pxa
-  ezx.c checking handshake
+  send_sabm: Creating SABM packet to DLCI 0
+  f9 03 3f 01 1c f9 drivers/char/ts0710_mux_usb.c: usb_ipc_write: count=6, buf:
+  bvd_dbg_hex: f9 03 3f 01 1c f9
+  drivers/char/ts0710_mux_usb.c: usb_ipc_write: ret=6, bvd_ipc->xmit.buf:
+  bvd_dbg_hex: f9 03 3f 01 1c f9
+  drivers/char/ts0710_mux_usb.c: usb_ipc_write: ret=6
 
 
 '''Diagrams'''
