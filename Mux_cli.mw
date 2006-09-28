@@ -44,7 +44,7 @@ the user packet (useful for identification of GPRS commands and GPRS data).
 
 '''Current status'''
 
-Write of the initial SABM frame occurs but no UA is currently received.
+Write of the initial SABM frame occurs but no UA frame is currently received. Currently the hub is not probing the driver.
 
   send_sabm: Creating SABM packet to DLCI 0
   f9 03 3f 01 1c f9 drivers/char/ts0710_mux_usb.c: usb_ipc_write: count=6, buf:
