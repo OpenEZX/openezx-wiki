@@ -22,7 +22,7 @@ Pinout :
 * 2 TXD
 * 3 RXD
 * 4 ???
-* GND
+* 5 GND
 
 The routing of the analog switches is exactly the same as in USB client mode, but inside the PCAP chip, the USB transceiver is bypassed. TXD is bypassed to GPIO 39 of the AP (which is then TXD of FFUART) and RXD is bypassed to GPIO 53 (which is then RXD of FFUART). 
 See drivers/misc/ezx-emu.c of the original kernel for code.
