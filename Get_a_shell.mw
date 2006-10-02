@@ -38,73 +38,73 @@ After reboot, when connecting the phone, a device /dev/tty.usbmodem3B11 should a
 
 This is known to work when [[#Using LinLoader]].
 
- Motorola Ming A1200:
 
-There are more steps, see the Article on motorolafans.com called "MacOS X A1200 46p working with telnet & samba, FINALLY !" You will need to replace your Info.plist with the following contents, first:
+Motorola Ming/A1200 information:
+There are more steps you may need to take, see an article on motorolafans.com called "MacOS X A1200 46p working with telnet & samba, FINALLY !" You will need to replace your Info.plist with the following contents, first:
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>English</string>
-	<key>CFBundleExecutable</key>
-	<string>AJZaurusUSB</string>
-	<key>CFBundleGetInfoString</key>
-	<string>MacOS X 10.4 USB driver for Linux PDAs</string>
-	<key>CFBundleIdentifier</key>
-	<string>org.lucidcake.driver.AJZaurusUSB</string>
-	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
-	<key>CFBundleName</key>
-	<string>AJZaurusUSB</string>
-	<key>CFBundlePackageType</key>
-	<string>KEXT</string>
-	<key>CFBundleShortVersionString</key>
-	<string>0.3.2</string>
-	<key>CFBundleSignature</key>
-	<string>????</string>
-	<key>CFBundleVersion</key>
-	<string>0.3.2</string>
-	<key>IOKitPersonalities</key>
-	<dict>
-		<key>Motorola Ming</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>org.lucidcake.driver.AJZaurusUSB</string>
-			<key>IOClass</key>
-			<string>org_lucidcake_driver_AJZaurusUSB</string>
-			<key>IOProviderClass</key>
-			<string>IOUSBDevice</string>
-			<key>idProduct</key>
-			<integer>24615</integer>
-			<key>idVendor</key>
-			<integer>8888</integer>
-		</dict>
-	</dict>
-	<key>OSBundleLibraries</key>
-	<dict>
-		<key>com.apple.iokit.IONetworkingFamily</key>
-		<string>1.5.0</string>
-		<key>com.apple.iokit.IOUSBFamily</key>
-		<string>2.5.6</string>
-		<key>com.apple.kpi.bsd</key>
-		<string>8.8.0</string>
-		<key>com.apple.kpi.iokit</key>
-		<string>8.8.0</string>
-		<key>com.apple.kpi.libkern</key>
-		<string>8.8.0</string>
-		<key>com.apple.kpi.mach</key>
-		<string>8.8.0</string>
-		<key>com.apple.kpi.unsupported</key>
-		<string>8.8.0</string>
-	</dict>
-	<key>OSBundleLibrariesDisabled</key>
-	<dict/>
-	<key>OSBundleRequired</key>
-	<string>Network-Root</string>
-</dict>
-</plist>
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+ <plist version="1.0">
+ <dict>
+ <key>CFBundleDevelopmentRegion</key>
+ <string>English</string>
+ <key>CFBundleExecutable</key>
+ <string>AJZaurusUSB</string>
+ <key>CFBundleGetInfoString</key>
+ <string>MacOS X 10.4 USB driver for Linux PDAs</string>
+ <key>CFBundleIdentifier</key>
+ <string>org.lucidcake.driver.AJZaurusUSB</string>
+ <key>CFBundleInfoDictionaryVersion</key>
+ <string>6.0</string>
+ <key>CFBundleName</key>
+ <string>AJZaurusUSB</string>
+ <key>CFBundlePackageType</key>
+ <string>KEXT</string>
+ <key>CFBundleShortVersionString</key>
+ <string>0.3.2</string>
+ <key>CFBundleSignature</key>
+ <string>????</string>
+ <key>CFBundleVersion</key>
+ <string>0.3.2</string>
+ <key>IOKitPersonalities</key>
+ <dict>
+ <key>Motorola Ming</key>
+ <dict>
+ <key>CFBundleIdentifier</key>
+ <string>org.lucidcake.driver.AJZaurusUSB</string>
+ <key>IOClass</key>
+ <string>org_lucidcake_driver_AJZaurusUSB</string>
+ <key>IOProviderClass</key>
+ <string>IOUSBDevice</string>
+ <key>idProduct</key>
+ <integer>24615</integer>
+ <key>idVendor</key>
+ <integer>8888</integer>
+ </dict>
+ </dict>
+ <key>OSBundleLibraries</key>
+ <dict>
+ <key>com.apple.iokit.IONetworkingFamily</key>
+ <string>1.5.0</string>
+ <key>com.apple.iokit.IOUSBFamily</key>
+ <string>2.5.6</string>
+ <key>com.apple.kpi.bsd</key>
+ <string>8.8.0</string>
+ <key>com.apple.kpi.iokit</key>
+ <string>8.8.0</string>
+ <key>com.apple.kpi.libkern</key>
+ <string>8.8.0</string>
+ <key>com.apple.kpi.mach</key>
+ <string>8.8.0</string>
+ <key>com.apple.kpi.unsupported</key>
+ <string>8.8.0</string>
+ </dict>
+ <key>OSBundleLibrariesDisabled</key>
+ <dict/>
+ <key>OSBundleRequired</key>
+ <string>Network-Root</string>
+ </dict>
+ </plist>
 
 === Linux ===
 
