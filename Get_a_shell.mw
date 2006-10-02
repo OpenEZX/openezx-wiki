@@ -40,6 +40,7 @@ This is known to work when [[#Using LinLoader]].
 
 
 Motorola Ming/A1200 information:
+
 There are more steps you may need to take, see an article on motorolafans.com called "MacOS X A1200 46p working with telnet & samba, FINALLY !" You will need to replace your Info.plist with the following contents, first:
 
  <?xml version="1.0" encoding="UTF-8"?>
