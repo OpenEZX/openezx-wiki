@@ -44,7 +44,16 @@ the user packet (useful for identification of GPRS commands and GPRS data).
 
 '''Current status'''
 
-Write of the initial SABM frame occurs but no UA frame is currently received. Currently the hub is not probing the driver.
+The mux code looks complete with minor changes for workqueues and Alan Cox's tty flip buffer changes.
+
+Write of the initial SABM frame occurs but the underlying USB driver does not send the frame since it is not in the correct state, the driver has not been probed. Probing is when a device is associated with a driver. The lack of probing appears to be due to a lack of interrupts from the baseband.
+
+To reproduce ...
+
+  modprobe ts0710_mux
+  mknod /dev/mux0 c 250 0
+  chmod 664 /dev/mux0
+  echo "AT" > /dev/mux0
 
   send_sabm: Creating SABM packet to DLCI 0
   f9 03 3f 01 1c f9 drivers/char/ts0710_mux_usb.c: usb_ipc_write: count=6, buf:
@@ -52,6 +61,23 @@ Write of the initial SABM frame occurs but no UA frame is currently received. Cu
   drivers/char/ts0710_mux_usb.c: usb_ipc_write: ret=6, bvd_ipc->xmit.buf:
   bvd_dbg_hex: f9 03 3f 01 1c f9
   drivers/char/ts0710_mux_usb.c: usb_ipc_write: ret=6
+
+
+Tracing the lack of interrupts ...
+
+The baseband appears to have two modes - flash mode and regular mode.
+
+In flash mode (which is entered during boot usb) the baseband appears as a usb device S Flash Neptune LTE, whilst in this mode it appears that the baseband does not generate any interrupts.
+
+Therefore the current focus is on how the baseband is set to flash mode by the 2.4 kernel and how to persuade the baseband back into regular mode upon entering the 2.6 kernel code.
+
+The setting of interrupts and handshaking between BP/AP is done in arch/arm/mach-pxa/ezx.c
+
+  Revelevant ML entries about BP/AP interrupts/handshaking (by Harald):
+  ML 2006-May/000372.html [http://lists.gnumonks.org/pipermail/openezx-devel/2006-May/000372.html]
+  ML 2006-May/000435.html [http://lists.gnumonks.org/pipermail/openezx-devel/2006-May/000435.html]
+
+
 
 
 '''Diagrams'''
