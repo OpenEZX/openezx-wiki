@@ -65,18 +65,19 @@ To reproduce ...
 
 Tracing the lack of interrupts ...
 
-The baseband appears to have two modes - flash mode and regular mode.
+The phone appears to have 3 modes - pass through mode, flash mode and regular mode.
 
-In flash mode (which is entered during boot usb) the baseband appears as a usb device S Flash Neptune LTE, whilst in this mode it appears that the baseband does not generate any interrupts.
+* In flash mode the baseband appears as a usb device S Flash Neptune LTE, whilst in this mode it appears that the baseband does not generate any interrupts.
 
-Therefore the current focus is on how the baseband is set to flash mode by the 2.4 kernel and how to persuade the baseband back into regular mode upon entering the 2.6 kernel code.
+* In pass through mode the baseband appears to be set up to talk to the PC via USB.
 
-The setting of interrupts and handshaking between BP/AP is done in arch/arm/mach-pxa/ezx.c
+The current focus is on how the baseband is set to particular mode by Motorola's apboot (blob boot loader) and how to persuade the baseband back into regular mode (or pass through mode) upon entering the newly loaded 2.6 kernel.
+
+The setting of interrupts and handshaking between BP/AP is done in arch/arm/mach-pxa/ezx.c and apboot a780-blob/src/blob/start.S & main.c involving GPIO_BB_RESET, GPIO_MCU_INT_SW & GPIO_BP_RDY
 
   Revelevant ML entries about BP/AP interrupts/handshaking (by Harald):
   ML 2006-May/000372.html [http://lists.gnumonks.org/pipermail/openezx-devel/2006-May/000372.html]
   ML 2006-May/000435.html [http://lists.gnumonks.org/pipermail/openezx-devel/2006-May/000435.html]
-
 
 
 
