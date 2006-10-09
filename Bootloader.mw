@@ -20,6 +20,8 @@ Motorola has released their modified (GPL'd) blob version, see http://ftp.gpl-de
 
 Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] is available here: http://svn.openezx.org/trunk/src/host/boot_usb. You need [http://libusb.sourceforge.net/ libusb], version 0.1.12 is recommended.
 
+Note that reflash mode appears to also place the baseband into reflash mode (appearing as a usb device, if you enable the pxa hub). It appears that use of the baseband is not possible whilst it is in this mode. 
+
 = FLAG =
 
 We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c.
@@ -41,6 +43,10 @@ rather random flag variations below). -am
 | 0x7c7c7c7c
 | [http://people.openezx.org/stefan/photos/a780-bootloader-2.jpg]
 | It's called OFF_FLAG in ezx.h
+|-
+| 0x12345678
+| Need to fill.
+| It's called PASS_THRU_FLAG in a780-blob/src/blob/main.c (potentially useful if can produce)
 |-
 | 0x95aa95aa
 | Need to fill.
