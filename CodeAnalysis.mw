@@ -1,445 +1,917 @@
-CodeAnalysis
+== CodeAnalysis (e680-linux) ==
+
 
 This is currently work in progress
 
 Changes made by Motorola to stock kernel
 
-<small>
-arch/arm/boot/compressed/head-xscale.S
 
-arch/arm/config.in
-
-arch/arm/def-configs/ezx-680
-
-arch/arm/kernel/head-armv.S
-
-arch/arm/mach-ezx/a780.c
-
-arch/arm/mach-ezx/apm.c
-
-arch/arm/mach-ezx/generic.c
-
-arch/arm/mach-ezx/irq.c
-
-arch/arm/mach-ezx/pm.c
-
-arch/arm/mach-ezx/pxabus_ldm.c
-
-arch/arm/mach-ezx/sleep.S
-
-arch/arm/mach-ezx/usb_sw.c
-
-arch/arm/mach-ezx/useroff.c
-
-arch/arm/mach-mx1ads/arch.c
-
-arch/arm/mach-pxa/sleep.S
-
-arch/arm/mm/discontig.c
-
-arch/arm/mm/init.c
-
-drivers/block/Config.in
-
-drivers/block/Makefile
-
-drivers/block/roflash/ezx_parts.c
-
-drivers/block/roflash/roflash.c
-
-drivers/char/gpio_test.c
-
-drivers/char/led_pxa_e680.c
-
-drivers/char/n_tty.c
-
-drivers/char/pfs168_spi.c
-
-drivers/char/sa1100-rtc.c
-
-drivers/char/serial.c
-
-drivers/char/tty_io.c
-
-drivers/i2c/a780_camera.c
-
-drivers/i2c/boomer.c
-
-drivers/i2c/e680_camera.c
-
-drivers/i2c/i2c-adap-pxa.c
-
-drivers/i2c/i2c-adcm2700.c
-
-drivers/i2c/i2c-adcm2700.h
-
-drivers/i2c/i2c-algo-pxa.c
-
-drivers/isdn/hisax/hfc_pci.c
-
-drivers/media/video/adcm3800.c
-
-drivers/media/video/adcm3800.h
-
-drivers/media/video/adcm3800_hw.c
-
-drivers/media/video/adcm3800_hw.h
-
-drivers/media/video/camera.h
-
-drivers/media/video/ci.h
-
-drivers/media/video/e680_camera.c
-
-drivers/media/video/pxa_camera.c
-
-drivers/media/video/pxa_camera_micron.c
-
-drivers/media/video/pxa_camera_ov.c
-
-drivers/message/i2o/i2o_proc.c
-
-drivers/misc/Config.in
-
-drivers/misc/ezx-button.c
-
-drivers/misc/ezx-button.h
-
-drivers/misc/ezx-emu.c
-
-drivers/misc/ezx-emu.h
-
-drivers/misc/ezx-log.c
-
-drivers/misc/ezx-ts.c
-
-drivers/misc/ezx-ts.h
-
-drivers/misc/fmradio.c
-
-drivers/misc/fmradio.h
-
-drivers/misc/keylight.c
-
-drivers/misc/keylight.h
-
-drivers/misc/keypad-e398.c
-
-drivers/misc/keypad-panasonic.c
-
-drivers/misc/keypad.c
-
-drivers/misc/keypad.h
-
-drivers/misc/log.c
-
-drivers/misc/log.h
-
-drivers/misc/ssp_pcap.h
-
-drivers/misc/ssp_pcap_main.c
-
-drivers/mtd/chips/cfi_cmdset_0001.c
-
-drivers/mtd/chips/cfi_cmdset_0001_mp.c
-
-drivers/mtd/chips/cfi_probe.c
-
-drivers/mtd/maps/bulverde.c
-
-drivers/mtd/maps/mbx860.c
-
-drivers/mtd/maps/mot-mvp.c
-
-drivers/mtd/maps/powerplus.c
-
-drivers/net/ariadne.c
-
-drivers/net/ariadne.h
-
-drivers/net/bsd_comp.c
-
-drivers/net/de4x5.c
-
-drivers/net/defxx.c
-
-drivers/net/ppp_async.c
-
-drivers/net/ppp_deflate.c
-
-drivers/net/ppp_generic.c
-
-drivers/net/ibm_ocp/ibm_ocp_enet.c
-
-drivers/net/ibm_ocp/ibm_ocp_phy.c
-
-drivers/net/pcmcia/smc91c92_cs.c
-
-drivers/net/skfp/h/supern_2.h
-
-drivers/pci/pci.ids
-
-drivers/pcmcia/m8xx_pcmcia.c
-
-drivers/scsi/dpt/dptsig.h
-
-drivers/serial/serial_8250_pnp.c
-
-drivers/sound/Config.in
-
-drivers/sound/ezx-a780.c
-
-drivers/sound/ezx-a780.h
-
-drivers/sound/ezx-asspm.c
-
-drivers/sound/ezx-assps.c
-
-drivers/sound/ezx-audio.c
-
-drivers/sound/ezx-audio.h
-
-drivers/sound/ezx-common.c
-
-drivers/sound/ezx-common.h
-
-drivers/sound/ezx-e680.c
-
-drivers/sound/ezx-e680.h
-
-drivers/sound/ezx-nssp.c
-
-drivers/sound/ezx-phone.c
-
-drivers/sound/ezx-vibrator.c
-
-drivers/sound/ezx-vibrator.h
-
-drivers/sound/msnd.h
-
-drivers/sound/msnd_pinnacle.c
-
-drivers/sound/sound_core.c
-
-drivers/sound/wavfront.c
-
-drivers/usb/dsplog_usb.c
-
-drivers/usb/hub.c
-
-drivers/usb/ipcusb.c
-
-drivers/usb/ipcusb.h
-
-drivers/usb/usb-ohci-wmmx.c
-
-drivers/usb/usb-ohci.c
-
-drivers/usb/usb.c
-
-drivers/usbd/acm_fd/acm.c
-
-drivers/usbd/acm_fd/trace.c
-
-drivers/usbd/Config.in
-
-drivers/usbd/Makefile
-
-drivers/usbd/ep0.c
-
-drivers/usbd/trace.c
-
-drivers/usbd/trace.h
-
-drivers/usbd/usbd-bi.c
-
-drivers/usbd/usbd-bi.h
-
-drivers/usbd/usbd-bops.c
-
-drivers/usbd/usbd-func.h
-
-drivers/usbd/usbd-procfs.c
-
-drivers/usbd/usbd.c
-
-drivers/usbd/usbdezx.c
-
-drivers/usbd/cfg11_fd/Config.in
-
-drivers/usbd/cfg11_fd/Makefile
-
-drivers/usbd/cfg11_fd/cfg11.c
-
-drivers/usbd/dsplog_fd/Config.in
-
-drivers/usbd/dsplog_fd/Makefile
-
-drivers/usbd/dsplog_fd/dsplog.c
-
-drivers/usbd/network_fd/Makefile
-
-drivers/usbd/network_fd/network.c
-
-drivers/usbd/nm_fd/Config.in
-
-drivers/usbd/nm_fd/Makefile
-
-drivers/usbd/nm_fd/net_monitor.c
-
-drivers/usbd/pst_fd/Config.in
-
-drivers/usbd/pst_fd/Makefile
-
-drivers/usbd/pst_fd/pst-fd.c
-
-drivers/usbd/pst_fd/ptf_buf.c
-
-drivers/usbd/pst_fd/ptf_buf.h
-
-drivers/usbd/pst_fd/ptfproto.c
-
-drivers/usbd/pst_fd/ptfproto.h
-
-drivers/usbd/pxa_bi/Makefile
-
-drivers/usbd/storage_fd/storage.c
-
-drivers/usbd/wmmx_bi/Makefile
-
-drivers/usbd/wmmx_bi/wmmx.c
-
-drivers/video/clgenfb.c
-
-drivers/video/fbcon.c
-
-drivers/video/fbmem.c
-
-drivers/video/inflate.c
-
-drivers/video/misc.c
-
-drivers/video/pxafb.c
-
-drivers/video/pxafb.h
-
-fs/super.c
-
-fs/cramfs/inode.c
-
-fs/fat/fatfs_syms.c
-
-fs/fat/inode.c
-
-fs/fat/misc.c
-
-fs/proc/proc_misc.c
-
-fs/vfat/namei.c
-
-include/asm-arm/ioctls.h
-
-include/asm-arm/memory.h
-
-include/asm-arm/termios.h
-
-include/asm-arm/arch-mx1ads/platform.h
-
-include/asm-arm/arch-pxa/ezx.h
-
-include/asm-arm/arch-pxa/hardware.h
-
-include/asm-arm/arch-pxa/irq.h
-
-include/asm-arm/arch-pxa/irqs.h
-
-include/asm-arm/arch-pxa/keypad.h
-
-include/asm-arm/arch-pxa/memory.h
-
-include/asm-arm/arch-pxa/pxa-regs.h
-
-include/asm-arm/arch-pxa/system.h
-
-include/asm-arm/arch-pxa/uncompress.h
-
-include/asm-arm/arch-sa1100/SA-1100.h
-
-include/linux/apm_bios.h
-
-include/linux/cramfs_fs_sb.h
-
-include/linux/ezx_roflash.h
-
-include/linux/ezxusbd.h
-
-include/linux/fb.h
-
-include/linux/keypad.h
-
-include/linux/led_pxa_e680.h
-
-include/linux/mc146818rtc.h
-
-include/linux/mc6821.h
-
-include/linux/miscdevice.h
-
-include/linux/ppp-comp.h
-
-include/linux/ppp_channel.h
-
-include/linux/pxa_camera.h
-
-include/linux/rwsem.h
-
-include/linux/serial.h
-
-include/linux/serialP.h
-
-include/linux/soundcard.h
-
-include/linux/sysctl.h
-
-include/linux/tty.h
-
-include/linux/tty_driver.h
-
-include/linux/vibrator.h
-
-include/linux/videodev.h
-
-include/linux/mmc/mmc_ll.h
-
-include/linux/mmc/mmc_protocol.h
-
-include/linux/mtd/map.h
-
-init/do_mounts.c
-
-init/main.c
-
-kernel/context.c
-
-kernel/printk.c
-
-kernel/sched.c
-
-lib/rwsem-spinlock.c
-
-mm/page_alloc.c
-
-mm/slab.c
-
-net/core/sock.c
-
-net/ipv4/af_inet.c
-
-net/ipv4/devinet.c
-
-net/ipv4/fib_frontend.c
-
-net/ipv4/tcp_output.c
-
-scripts/mkdep.c
-</small>
+{| border="1" cellpadding="2"
+!width="150"|kernel
+!width="300"|Detail
+!width="50"|Ported to 2.6
+|- 
+| init/do_mounts.c
+| 
+|
+|-
+| init/main.c
+| 
+|
+|-
+| kernel/context.c
+| 
+|
+|-
+| kernel/printk.c
+| 
+|
+|-
+| kernel/sched.c
+| 
+|
+|-
+| lib/rwsem-spinlock.c
+| 
+|
+|-
+| mm/page_alloc.c
+| 
+|
+|-
+| mm/slab.c
+| 
+|
+|-
+| net/core/sock.c
+| 
+|
+|-
+| net/ipv4/af_inet.c
+| 
+|
+|-
+| net/ipv4/devinet.c
+| 
+|
+|-
+| net/ipv4/fib_frontend.c
+| 
+|
+|-
+| net/ipv4/tcp_output.c
+| 
+|
+|-
+| scripts/mkdep.c
+|
+|
+|}
+
+
+{| border="1" cellpadding="2"
+!width="150"|arch/arm/..
+!width="300"|Detail
+!width="50"|Ported to 2.6
+|- 
+| boot/compressed/head-xscale.S
+| 
+|
+|- 
+| config.in
+| 
+|
+|- 
+| def-configs/ezx-680
+| 
+|
+|- 
+| kernel/head-armv.S
+| 
+|
+|- 
+| mach-ezx/a780.c
+| 
+|
+|- 
+| mach-ezx/apm.c
+| 
+|
+|- 
+| mach-ezx/generic.c
+| 
+|
+|- 
+| mach-ezx/irq.c
+| 
+|
+|- 
+| mach-ezx/pm.c
+| 
+|
+|- 
+| mach-ezx/pxabus_ldm.c
+| 
+|
+|- 
+| mach-ezx/sleep.S
+| 
+|
+|- 
+| mach-ezx/usb_sw.c
+| 
+|
+|- 
+| mach-ezx/useroff.c
+| 
+|
+|- 
+| mach-mx1ads/arch.c
+| 
+|
+|- 
+| mach-pxa/sleep.S
+| 
+|
+|- 
+| mm/discontig.c
+| 
+|
+|- 
+| mm/init.c
+| 
+|
+|}
+
+
+{| border="1" cellpadding="2"
+!width="80"|drivers/..
+!width="300"|Detail
+!width="50"|Ported to 2.6
+|- 
+| block/Config.in
+| 
+|
+|- 
+| block/Makefile
+| 
+|
+|- 
+| block/roflash/ezx_parts.c
+| 
+|
+|- 
+| block/roflash/roflash.c
+| 
+|
+|- 
+| char/gpio_test.c
+| 
+|
+|- 
+| char/led_pxa_e680.c
+| 
+|
+|- 
+| char/n_tty.c
+| 
+|
+|- 
+| char/pfs168_spi.c
+| 
+|
+|- 
+| char/sa1100-rtc.c
+| 
+|
+|- 
+| char/serial.c
+| 
+|
+|- 
+| char/tty_io.c
+| 
+|
+|- 
+| i2c/a780_camera.c
+| 
+|
+|- 
+| i2c/boomer.c
+| 
+|
+|- 
+| i2c/e680_camera.c
+| 
+|
+|- 
+| i2c/i2c-adap-pxa.c
+| 
+|
+|- 
+| i2c/i2c-adcm2700.c
+| 
+|
+|- 
+| i2c/i2c-adcm2700.h
+| 
+|
+|- 
+| i2c/i2c-algo-pxa.c
+| 
+|
+|- 
+| isdn/hisax/hfc_pci.c
+| 
+|
+|- 
+| media/video/adcm3800.c
+| 
+|
+|- 
+| media/video/adcm3800.h
+| 
+|
+|- 
+| media/video/adcm3800_hw.c
+| 
+|
+|- 
+| media/video/adcm3800_hw.h
+| 
+|
+|- 
+| media/video/camera.h
+| 
+|
+|- 
+| media/video/ci.h
+| 
+|
+|- 
+| media/video/e680_camera.c
+| 
+|
+|- 
+| media/video/pxa_camera.c
+| 
+|
+|- 
+| media/video/pxa_camera_micron.c
+| 
+|
+|- 
+| media/video/pxa_camera_ov.c
+| 
+|
+|- 
+| message/i2o/i2o_proc.c
+| 
+|
+|- 
+| misc/Config.in
+| 
+|
+|- 
+| misc/ezx-button.c
+| 
+|
+|- 
+| misc/ezx-button.h
+| 
+|
+|- 
+| misc/ezx-emu.c
+| 
+|
+|- 
+| misc/ezx-emu.h
+| 
+|
+|- 
+| misc/ezx-log.c
+| 
+|
+|- 
+| misc/ezx-ts.c
+| 
+|
+|- 
+| misc/ezx-ts.h
+| 
+|
+|- 
+| misc/fmradio.c
+| 
+|
+|- 
+| misc/fmradio.h
+| 
+|
+|- 
+| misc/keylight.c
+| 
+|
+|- 
+| misc/keylight.h
+| 
+|
+|- 
+| misc/keypad-e398.c
+| 
+|
+|- 
+| misc/keypad-panasonic.c
+| 
+|
+|- 
+| misc/keypad.c
+| 
+|
+|- 
+| misc/keypad.h
+| 
+|
+|- 
+| misc/log.c
+| 
+|
+|- 
+| misc/log.h
+| 
+|
+|- 
+| misc/ssp_pcap.h
+| 
+|
+|- 
+| misc/ssp_pcap_main.c
+| 
+|
+|- 
+| mtd/chips/cfi_cmdset_0001.c
+| 
+|
+|- 
+| mtd/chips/cfi_cmdset_0001_mp.c
+| 
+|
+|- 
+| mtd/chips/cfi_probe.c
+| 
+|
+|- 
+| mtd/maps/bulverde.c
+| 
+|
+|- 
+| mtd/maps/mbx860.c
+| 
+|
+|- 
+| mtd/maps/mot-mvp.c
+| 
+|
+|- 
+| mtd/maps/powerplus.c
+| 
+|
+|- 
+| net/ariadne.c
+| 
+|
+|- 
+| net/ariadne.h
+| 
+|
+|- 
+| net/bsd_comp.c
+| 
+|
+|- 
+| net/de4x5.c
+| 
+|
+|- 
+| net/defxx.c
+| 
+|
+|- 
+| net/ppp_async.c
+| 
+|
+|- 
+| net/ppp_deflate.c
+| 
+|
+|- 
+| net/ppp_generic.c
+| 
+|
+|- 
+| net/ibm_ocp/ibm_ocp_enet.c
+| 
+|
+|- 
+| net/ibm_ocp/ibm_ocp_phy.c
+| 
+|
+|- 
+| net/pcmcia/smc91c92_cs.c
+| 
+|
+|- 
+| net/skfp/h/supern_2.h
+| 
+|
+|- 
+| pci/pci.ids
+| 
+|
+|- 
+| pcmcia/m8xx_pcmcia.c
+| 
+|
+|- 
+| scsi/dpt/dptsig.h
+| 
+|
+|- 
+| serial/serial_8250_pnp.c
+| 
+|
+|- 
+| sound/Config.in
+| 
+|
+|- 
+| sound/ezx-a780.c
+| 
+|
+|- 
+| sound/ezx-a780.h
+| 
+|
+|- 
+| sound/ezx-asspm.c
+| 
+|
+|- 
+| sound/ezx-assps.c
+| 
+|
+|- 
+| sound/ezx-audio.c
+| 
+|
+|- 
+| sound/ezx-audio.h
+| 
+|
+|- 
+| sound/ezx-common.c
+| 
+|
+|- 
+| sound/ezx-common.h
+| 
+|
+|- 
+| sound/ezx-e680.c
+| 
+|
+|- 
+| sound/ezx-e680.h
+| 
+|
+|- 
+| sound/ezx-nssp.c
+| 
+|
+|- 
+| sound/ezx-phone.c
+| 
+|
+|- 
+| sound/ezx-vibrator.c
+| 
+|
+|- 
+| sound/ezx-vibrator.h
+| 
+|
+|- 
+| sound/msnd.h
+| 
+|
+|- 
+| sound/msnd_pinnacle.c
+| 
+|
+|- 
+| sound/sound_core.c
+| 
+|
+|- 
+| sound/wavfront.c
+| 
+|
+|- 
+| usb/dsplog_usb.c
+| 
+|
+|- 
+| usb/hub.c
+| 
+|
+|- 
+| usb/ipcusb.c
+| 
+|
+|- 
+| usb/ipcusb.h
+| 
+|
+|- 
+| usb/usb-ohci-wmmx.c
+| 
+|
+|- 
+| usb/usb-ohci.c
+| 
+|
+|- 
+| usb/usb.c
+| 
+|
+|- 
+| usbd/acm_fd/acm.c
+| 
+|
+|- 
+| usbd/acm_fd/trace.c
+| 
+|
+|- 
+| usbd/Config.in
+| 
+|
+|- 
+| usbd/Makefile
+| 
+|
+|- 
+| usbd/ep0.c
+| 
+|
+|- 
+| usbd/trace.c
+| 
+|
+|- 
+| usbd/trace.h
+| 
+|
+|- 
+| usbd/usbd-bi.c
+| 
+|
+|- 
+| usbd/usbd-bi.h
+| 
+|
+|- 
+| usbd/usbd-bops.c
+| 
+|
+|- 
+| usbd/usbd-func.h
+| 
+|
+|- 
+| usbd/usbd-procfs.c
+| 
+|
+|- 
+| usbd/usbd.c
+| 
+|
+|- 
+| usbd/usbdezx.c
+| 
+|
+|- 
+| usbd/cfg11_fd/Config.in
+| 
+|
+|- 
+| usbd/cfg11_fd/Makefile
+| 
+|
+|- 
+| usbd/cfg11_fd/cfg11.c
+| 
+|
+|- 
+| usbd/dsplog_fd/Config.in
+| 
+|
+|- 
+| usbd/dsplog_fd/Makefile
+| 
+|
+|- 
+| usbd/dsplog_fd/dsplog.c
+| 
+|
+|- 
+| usbd/network_fd/Makefile
+| 
+|
+|- 
+| usbd/network_fd/network.c
+| 
+|
+|- 
+| usbd/nm_fd/Config.in
+| 
+|
+|- 
+| usbd/nm_fd/Makefile
+| 
+|
+|- 
+| usbd/nm_fd/net_monitor.c
+| 
+|
+|- 
+| usbd/pst_fd/Config.in
+| 
+|
+|- 
+| usbd/pst_fd/Makefile
+| 
+|
+|- 
+| usbd/pst_fd/pst-fd.c
+| 
+|
+|- 
+| usbd/pst_fd/ptf_buf.c
+| 
+|
+|- 
+| usbd/pst_fd/ptf_buf.h
+| 
+|
+|- 
+| usbd/pst_fd/ptfproto.c
+| 
+|
+|- 
+| usbd/pst_fd/ptfproto.h
+| 
+|
+|- 
+| usbd/pxa_bi/Makefile
+| 
+|
+|- 
+| usbd/storage_fd/storage.c
+| 
+|
+|- 
+| usbd/wmmx_bi/Makefile
+| 
+|
+|- 
+| usbd/wmmx_bi/wmmx.c
+| 
+|
+|- 
+| video/clgenfb.c
+| 
+|
+|- 
+| video/fbcon.c
+| 
+|
+|- 
+| video/fbmem.c
+| 
+|
+|- 
+| video/inflate.c
+| 
+|
+|- 
+| video/misc.c
+| 
+|
+|- 
+| video/pxafb.c
+| 
+|
+|- 
+| video/pxafb.h
+|
+|
+|}
+
+
+{| border="1" cellpadding="2"
+!width="150"|fs/..
+!width="300"|Detail
+!width="50"|Ported to 2.6
+|- 
+| super.c
+| 
+|
+|- 
+| cramfs/inode.c
+| 
+|
+|- 
+| fat/fatfs_syms.c
+| 
+|
+|- 
+| fat/inode.c
+| 
+|
+|- 
+| fat/misc.c
+| 
+|
+|- 
+| proc/proc_misc.c
+| 
+|
+|- 
+| vfat/namei.c
+|
+|
+|}
+
+
+{| border="1" cellpadding="2"
+!width="150"|include/..
+!width="300"|Detail
+!width="50"|Ported to 2.6
+|- 
+| asm-arm/ioctls.h
+| 
+|
+|- 
+| asm-arm/memory.h
+| 
+|
+|- 
+| asm-arm/termios.h
+| 
+|
+|- 
+| asm-arm/arch-mx1ads/platform.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/ezx.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/hardware.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/irq.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/irqs.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/keypad.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/memory.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/pxa-regs.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/system.h
+| 
+|
+|- 
+| asm-arm/arch-pxa/uncompress.h
+| 
+|
+|- 
+| asm-arm/arch-sa1100/SA-1100.h
+| 
+|
+|- 
+| linux/apm_bios.h
+| 
+|
+|- 
+| linux/cramfs_fs_sb.h
+| 
+|
+|- 
+| linux/ezx_roflash.h
+| 
+|
+|- 
+| linux/ezxusbd.h
+| 
+|
+|- 
+| linux/fb.h
+| 
+|
+|- 
+| linux/keypad.h
+| 
+|
+|- 
+| linux/led_pxa_e680.h
+| 
+|
+|- 
+| linux/mc146818rtc.h
+| 
+|
+|- 
+| linux/mc6821.h
+| 
+|
+|- 
+| linux/miscdevice.h
+| 
+|
+|- 
+| linux/ppp-comp.h
+| 
+|
+|- 
+| linux/ppp_channel.h
+| 
+|
+|- 
+| linux/pxa_camera.h
+| 
+|
+|- 
+| linux/rwsem.h
+| 
+|
+|- 
+| linux/serial.h
+| 
+|
+|- 
+| linux/serialP.h
+| 
+|
+|- 
+| linux/soundcard.h
+| 
+|
+|- 
+| linux/sysctl.h
+| 
+|
+|- 
+| linux/tty.h
+| 
+|
+|- 
+| linux/tty_driver.h
+| 
+|
+|- 
+| linux/vibrator.h
+| 
+|
+|- 
+| linux/videodev.h
+| 
+|
+|- 
+| linux/mmc/mmc_ll.h
+| 
+|
+|- 
+| linux/mmc/mmc_protocol.h
+| 
+|
+|- 
+| linux/mtd/map.h
+|
+|
+|}
