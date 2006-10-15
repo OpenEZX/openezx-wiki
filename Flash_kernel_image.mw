@@ -13,3 +13,5 @@ Just replace the old module with the new one and follow the flashkit README.
 If your phone is unlocked, you can flash your own zImage into /dev/mtd4 . But be aware that the size of you zImage could not be higher then 900kbyte.
 
 [[Category:Development]]
+[[Category:A780]]
+[[Category:E680]]
