@@ -1,0 +1,7 @@
+It is possible to get a serial console without opening the phone.
+
+You can set the [[EMU]] in to a mode which acts as serial port. You get RX and TX from the mini usb plug, but need a external MAX3232 and a power source for the MAX3232.
+
+Also you need to enable this emu mode in the kernel.
+
+We will update this information within the next days.
