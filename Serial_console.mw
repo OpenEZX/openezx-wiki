@@ -5,3 +5,7 @@ You can set the [[EMU]] in to a mode which acts as serial port. You get RX and T
 Also you need to enable this emu mode in the kernel.
 
 We will update this information within the next days.
+
+== Enable emu serial mode in the kernel ==
+
+In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead.
