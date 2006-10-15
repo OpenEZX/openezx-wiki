@@ -9,3 +9,6 @@ We will update this information within the next days.
 == Enable emu serial mode in the kernel ==
 
 In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead.
+
+[[Category:A780]]
+[[Category:E680]]
