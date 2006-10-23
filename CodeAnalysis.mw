@@ -631,31 +631,31 @@ Changes made by Motorola to MVista kernel
 !width="50"|Ported to 2.6
 |- 
 | super.c
-| 
+| change, flash support
 |
 |- 
 | cramfs/inode.c
-| 
+| large changes for roflash cramfs linear and block support
 |
 |- 
 | fat/fatfs_syms.c
-| 
+| minor change, notification to user space if fat fs fails
 |
 |- 
 | fat/inode.c
-| 
+| changes, user not allowed to modify attributes of fat file
 |
 |- 
 | fat/misc.c
-| 
+| minor change, support for fat panic
 |
 |- 
 | proc/proc_misc.c
-| 
+| minor change, reporting of potential free pages with method slabfree_read_proc
 |
 |- 
 | vfat/namei.c
-|
+| minor changes, hidden (for windows) and sync dir mods
 |
 |}
 
