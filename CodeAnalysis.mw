@@ -14,7 +14,7 @@ Changes made by Motorola to MVista kernel
 !width="50"|Ported to 2.6
 |- 
 | init/do_mounts.c
-| mounting cramfs root
+| minor, mounting cramfs root
 |
 |-
 | init/main.c
@@ -148,203 +148,191 @@ Changes made by Motorola to MVista kernel
 !width="50"|Ported to 2.6
 |- 
 | block/Config.in
-| 
+| minor, inclusion of roflash config
 |
 |- 
 | block/Makefile
-| 
+| minor, include roflash subdir
 |
 |- 
 | block/roflash/ezx_parts.c
-| 
+| new file, ezx roflash partitions
 |
 |- 
 | block/roflash/roflash.c
-| 
+| Motorola read only block device driver for cramfs
 |
 |- 
 | char/gpio_test.c
-| 
+| equivalent to Harald's gpiotool, although also does USB overvoltage checks
 |
 |- 
 | char/led_pxa_e680.c
-| 
+| new file, led gpio handling
 |
 |- 
 | char/n_tty.c
-| 
-|
-|- 
-| char/pfs168_spi.c
-| 
+| minor change, throttling release for btuart. Also test_bit and set_bit param change
 |
 |- 
 | char/sa1100-rtc.c
-| 
+| unsure of changes, comment states add queue apm event
 |
 |- 
 | char/serial.c
-| 
+| number of changes, serial mux support - receive_chars calls serial_mux_dispatcher, btuart throttling (flip flow control), bt wakeup handling, ICL (mux) uart handling
 |
 |- 
 | char/tty_io.c
-| 
-|
+| minor, bt uart flow control - queuing of task
+| not required
 |- 
 | i2c/a780_camera.c
-| 
+| new file
 |
 |- 
 | i2c/boomer.c
-| 
+| new file, appears to be AP to loudspeaker related
 |
 |- 
 | i2c/e680_camera.c
-| 
+| new file
 |
 |- 
 | i2c/i2c-adap-pxa.c
-| 
+| MV file, Motorola added pm suspend/resume hooks
 |
 |- 
 | i2c/i2c-adcm2700.c
-| 
+| new file, camera module
 |
 |- 
 | i2c/i2c-adcm2700.h
-| 
+| new file, camera module
 |
 |- 
 | i2c/i2c-algo-pxa.c
-| 
-|
-|- 
-| isdn/hisax/hfc_pci.c
-| 
+| minor, disable pxa bus scanning
 |
 |- 
 | media/video/adcm3800.c
-| 
+| new file, camera module
 |
 |- 
 | media/video/adcm3800.h
-| 
+| new file, camera module
 |
 |- 
 | media/video/adcm3800_hw.c
-| 
+| new file, camera module
 |
 |- 
 | media/video/adcm3800_hw.h
-| 
+| new file, camera module
 |
 |- 
 | media/video/camera.h
-| 
+| new file, camera module
 |
 |- 
 | media/video/ci.h
-| 
+| new file, camera module
 |
 |- 
 | media/video/e680_camera.c
-| 
+| new file, camera module
 |
 |- 
 | media/video/pxa_camera.c
-| 
+| new file, camera module
 |
 |- 
 | media/video/pxa_camera_micron.c
-| 
+| new file, camera module
 |
 |- 
 | media/video/pxa_camera_ov.c
-| 
-|
-|- 
-| message/i2o/i2o_proc.c
-| 
+| new file, camera module
 |
 |- 
 | misc/Config.in
-| 
+| minor change for keypad, keylight & fm radio configs
 |
 |- 
 | misc/ezx-button.c
-| 
+| new file, /dev/button read/write and button gpio handling
 |
 |- 
 | misc/ezx-button.h
-| 
+| new file
 |
 |- 
 | misc/ezx-emu.c
-| 
+| new file, EMU handling, uart/usb switching
 |
 |- 
 | misc/ezx-emu.h
-| 
+| new file, EMU handling, uart/usb switching
 |
 |- 
 | misc/ezx-log.c
-| 
+| new file, kernel panic logging
 |
 |- 
 | misc/ezx-ts.c
-| 
+| new file, touchscreen
 |
 |- 
 | misc/ezx-ts.h
-| 
+| new file, touchscreen
 |
 |- 
 | misc/fmradio.c
-| 
+| new file, fm radio i2c driver support 
 |
 |- 
 | misc/fmradio.h
-| 
+| new file, fm radio i2c driver support 
 |
 |- 
 | misc/keylight.c
-| 
+| new file, pcap keylight control
 |
 |- 
 | misc/keylight.h
-| 
+| new file, pcap keylight control
 |
 |- 
 | misc/keypad-e398.c
-| 
+| new file, /dev/keypad.. handling
 |
 |- 
 | misc/keypad-panasonic.c
-| 
+| new file, /dev/keypad.. handling
 |
 |- 
 | misc/keypad.c
-| 
+| new file, /dev/keypad.. handling
 |
 |- 
 | misc/keypad.h
-| 
+| new file, /dev/keypad.. handling
 |
 |- 
 | misc/log.c
-| 
+| new file, kernel panic logging
 |
 |- 
 | misc/log.h
-| 
+| new file, kernel panic logging
 |
 |- 
 | misc/ssp_pcap.h
-| 
+| new file, power control
 |
 |- 
 | misc/ssp_pcap_main.c
-| 
+| new file, power control - usb, ts, sleep/wakeup, headjack change, cable attach
 |
 |- 
 | mtd/chips/cfi_cmdset_0001.c
