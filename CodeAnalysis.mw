@@ -336,371 +336,291 @@ Changes made by Motorola to MVista kernel
 |
 |- 
 | mtd/chips/cfi_cmdset_0001.c
-| 
+| not analysed changes, comment states added notification of flash status before sleep, lockdown of L18 and initialisation of pm_flash device
 |
 |- 
 | mtd/chips/cfi_cmdset_0001_mp.c
-| 
+| not analysed changes, comment states added defines specific to ezx and L18 lockdown mechanism
 |
 |- 
 | mtd/chips/cfi_probe.c
-| 
+| not analysed changes, comment states added Intel MTD patch code
 |
 |- 
 | mtd/maps/bulverde.c
-| 
-|
-|- 
-| mtd/maps/mbx860.c
-| 
+| not analysed changes, comment states unlock/lockdown relative blocks in L18 chip
 |
 |- 
 | mtd/maps/mot-mvp.c
-| 
-|
-|- 
-| mtd/maps/powerplus.c
-| 
-|
-|- 
-| net/ariadne.c
-| 
-|
-|- 
-| net/ariadne.h
-| 
-|
-|- 
-| net/bsd_comp.c
-| 
-|
-|- 
-| net/de4x5.c
-| 
-|
-|- 
-| net/defxx.c
-| 
+| unsure if new MV file specifically for ezx, comment states for MVP user and boot flash
 |
 |- 
 | net/ppp_async.c
-| 
-|
-|- 
-| net/ppp_deflate.c
-| 
+| minor change, added idle case to IO control
 |
 |- 
 | net/ppp_generic.c
-| 
-|
-|- 
-| net/ibm_ocp/ibm_ocp_enet.c
-| 
-|
-|- 
-| net/ibm_ocp/ibm_ocp_phy.c
-| 
-|
-|- 
-| net/pcmcia/smc91c92_cs.c
-| 
-|
-|- 
-| net/skfp/h/supern_2.h
-| 
-|
-|- 
-| pci/pci.ids
-| 
-|
-|- 
-| pcmcia/m8xx_pcmcia.c
-| 
-|
-|- 
-| scsi/dpt/dptsig.h
-| 
-|
-|- 
-| serial/serial_8250_pnp.c
-| 
+| minor change, idle timer and major number change
 |
 |- 
 | sound/Config.in
-| 
+| minor change, vibrator and sound driver config inclusion
 |
 |- 
 | sound/ezx-a780.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-a780.h
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-asspm.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-assps.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-audio.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-audio.h
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-common.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-common.h
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-e680.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-e680.h
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-nssp.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-phone.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-vibrator.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/ezx-vibrator.h
-| 
-|
-|- 
-| sound/msnd.h
-| 
-|
-|- 
-| sound/msnd_pinnacle.c
-| 
+| new file, sound handling
 |
 |- 
 | sound/sound_core.c
-| 
-|
-|- 
-| sound/wavfront.c
-| 
+| minor change, added dsp16 device and audio
 |
 |- 
 | usb/dsplog_usb.c
-| 
+| new file, usb dsp log driver
 |
 |- 
 | usb/hub.c
-| 
+| minor change, wake up the baseband if GPIO 41 is 1 in usb_hub_port_connect_change
 |
 |- 
 | usb/ipcusb.c
-| 
+| new file, the mux cli driver
 |
 |- 
 | usb/ipcusb.h
-| 
+| new file, the mux cli driver
 |
 |- 
 | usb/usb-ohci-wmmx.c
-| 
+| MV file, changes by Moto for GPIO set up for external transceiver or for connection to Neptune
 |
 |- 
 | usb/usb-ohci.c
-| 
+| MV file, interesting changes for workaround of some unknown Bulverde bug
 |
 |- 
 | usb/usb.c
-| 
+| minor changes, disable hotplug and usb free trap if called from interupt
 |
 |- 
 | usbd/acm_fd/acm.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/acm_fd/trace.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/Config.in
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/ep0.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/trace.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/trace.h
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbd-bi.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbd-bi.h
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbd-bops.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbd-func.h
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbd-procfs.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbd.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/usbdezx.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/cfg11_fd/Config.in
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/cfg11_fd/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/cfg11_fd/cfg11.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/dsplog_fd/Config.in
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/dsplog_fd/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/dsplog_fd/dsplog.c
-| 
+| Motorola usb gadget file, not analysed
 |
 |- 
 | usbd/network_fd/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/network_fd/network.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/nm_fd/Config.in
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/nm_fd/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/nm_fd/net_monitor.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/Config.in
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/pst-fd.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/ptf_buf.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/ptf_buf.h
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/ptfproto.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pst_fd/ptfproto.h
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/pxa_bi/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/storage_fd/storage.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/wmmx_bi/Makefile
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | usbd/wmmx_bi/wmmx.c
-| 
-|
-|- 
-| video/clgenfb.c
-| 
+| Belcarra usb gadget file, not analysed
 |
 |- 
 | video/fbcon.c
-| 
+| minor change to show Moto logo
 |
 |- 
 | video/fbmem.c
-| 
+| change, addition of double buffering support
 |
 |- 
 | video/inflate.c
-| 
+| MV file, minor change, added winzip support
 |
 |- 
 | video/misc.c
-| 
+| MV file, minor change to decompress logo
 |
 |- 
 | video/pxafb.c
-| 
+| MV file, changes for backlight timer, 18bpp/19bpp and double buffering support
 |
 |- 
 | video/pxafb.h
-|
+| MV file, changes for backlight timer, 18bpp/19bpp and double buffering support
 |
 |}
 
