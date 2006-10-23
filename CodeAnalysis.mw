@@ -3,7 +3,9 @@
 
 This is currently work in progress
 
-Changes made by Motorola to stock kernel
+Changes made by Motorola to MVista kernel
+
+(MV kernel = 2.4.17/20 kernel + Igno Molnar scheduling changes + range of MV drivers)
 
 
 {| border="1" cellpadding="2"
@@ -12,59 +14,59 @@ Changes made by Motorola to stock kernel
 !width="50"|Ported to 2.6
 |- 
 | init/do_mounts.c
-| 
+| mounting cramfs root
 |
 |-
 | init/main.c
-| 
+| interesting initialisation changes for USB. start_kernel pulls down USB, init pulls up USB. Also boot tracing mods and ssp_pcap_init called in in do_basic_setup
 |
 |-
 | kernel/context.c
-| 
+| minor change to context_thread for MV RT threading
 |
 |-
 | kernel/printk.c
-| 
+| minor changes for logging, new method logbuf_info
 |
 |-
 | kernel/sched.c
-| 
+| difficult to identify, large MV changes - backported Ingo Molnar work
 |
 |-
 | lib/rwsem-spinlock.c
-| 
+| minor new method for trying to get a read lock on a semaphore
 |
 |-
 | mm/page_alloc.c
-| 
+| minor changes, discontiguous memory support
 |
 |-
 | mm/slab.c
-| 
+| minor change to report potentially free pages slab_cache_freeable_info
 |
 |-
 | net/core/sock.c
-| 
+| minor change, commented out permission check for clients using raw sockets
 |
 |-
 | net/ipv4/af_inet.c
-| 
+| minor change, bind to port 500 for VPN
 |
 |-
 | net/ipv4/devinet.c
-| 
+| minor change, related to CSD calls, commented out permission check for CAP_NET_ADMIN
 |
 |-
 | net/ipv4/fib_frontend.c
-| 
+| minor change, related to CSD calls, commented out permission check for CAP_NET_ADMIN
 |
 |-
 | net/ipv4/tcp_output.c
-| 
+| minor SYN compatibility change
 |
 |-
 | scripts/mkdep.c
-|
+| using newer version of mkdep compared with version in stock 2.4.20 kernel
 |
 |}
 
