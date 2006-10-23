@@ -5,7 +5,7 @@ This is currently work in progress
 
 Changes made by Motorola to MVista kernel
 
-(MV kernel = 2.4.17/20 kernel + Igno Molnar scheduling changes + range of MV drivers)
+(MV kernel = 2.4.17/20 kernel + Igno Molnar scheduling changes + XIP + range of MV drivers)
 
 
 {| border="1" cellpadding="2"
@@ -77,23 +77,23 @@ Changes made by Motorola to MVista kernel
 !width="50"|Ported to 2.6
 |- 
 | boot/compressed/head-xscale.S
-| 
+| minor, identification of MACH_TYPE_EZX
 |
 |- 
 | config.in
-| 
+| EZX config
 |
 |- 
 | def-configs/ezx-680
-| 
+| ezx-680 config
 |
 |- 
 | kernel/head-armv.S
-| 
+| PHYS_OFFSET for ezx
 |
 |- 
 | mach-ezx/a780.c
-| 
+| New files, potentially derived from Mainstone, Motorola EZX architecture definition
 |
 |- 
 | mach-ezx/apm.c
@@ -128,20 +128,16 @@ Changes made by Motorola to MVista kernel
 | 
 |
 |- 
-| mach-mx1ads/arch.c
-| 
-|
-|- 
 | mach-pxa/sleep.S
-| 
+| set BVD_MEMC_SIGHTING to 0
 |
 |- 
 | mm/discontig.c
-| 
+| minor, increased number of nodes for discontiguous memory
 |
 |- 
 | mm/init.c
-| 
+| minor, reserve first page for exiting sleep and user off mode
 |
 |}
 
