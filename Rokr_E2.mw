@@ -13,5 +13,32 @@ Even though we now have one E2 for development purpose, not too much about the h
 [[Image:ROKR-E2-2.jpg]]
 |}
 
+Kernel: Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE) #1 Jan 1,2003
+
+CPU:
+Processor       : Intel XScale-PXA27x rev 7 (v5l)||
+BogoMIPS        : 103.76
+Features        : swp half thumb fastmult edsp
+CPU implementor : 0x69
+CPU architecture: 5TE
+CPU variant     : 0x0
+CPU part        : 0x411
+CPU revision    : 7
+Cache type      : undefined 5
+Cache clean     : undefined 5
+Cache lockdown  : undefined 5
+Cache unified   : harvard
+I size          : 32768
+I assoc         : 32
+I line length   : 32
+I sets          : 32
+D size          : 32768
+D assoc         : 32
+D line length   : 32
+D sets          : 32
+
+RAM: 45 MB
+
+
 [[Category:Hardware]]
 [[Category:ROKR_E2]]
