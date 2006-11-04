@@ -110,5 +110,7 @@ These are the included plugins:
  ./usr/helix/wma_fileformat.so
  ./usr/helix/wmarend.so
 
+This is a link to a dump of the directory structure and files found with firmware 43P: [[E2_FindDump]]
+
 [[Category:Hardware]]
 [[Category:ROKR_E2]]
