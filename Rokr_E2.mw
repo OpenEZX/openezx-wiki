@@ -16,6 +16,7 @@ Even though we now have one E2 for development purpose, not too much about the h
 Kernel: Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE) #1 Jan 1,2003
 
 CPU:
+<nowiki>
 Processor       : Intel XScale-PXA27x rev 7 (v5l)||
 BogoMIPS        : 103.76
 Features        : swp half thumb fastmult edsp
@@ -36,9 +37,60 @@ D size          : 32768
 D assoc         : 32
 D line length   : 32
 D sets          : 32
+</nowiki>
 
 RAM: 45 MB
 
+Seems to use Helix 10.0 mediaplayer for tunes. However it is missing the oggfformat.so plugin so Ogg/Vorbis files do not play on this device (yet!)
+
+These are the included plugins:
+<nowiki>
+
+ ./usr/helix/aacff.so
+ ./usr/helix/amrn.so
+ ./usr/helix/amrw.so
+ ./usr/helix/atrc.so
+ ./usr/helix/audplin.so
+ ./usr/helix/clntcore.so
+ ./usr/helix/cook.so
+ ./usr/helix/dmp4.so
+ ./usr/helix/drv2.so
+ ./usr/helix/drvc.so
+ ./usr/helix/httpfsys.so
+ ./usr/helix/hxsdp.so
+ ./usr/helix/midfformat.so
+ ./usr/helix/mp3fformat.so
+ ./usr/helix/mp3render.so
+ ./usr/helix/mp4fformat.so
+ ./usr/helix/mp4v.so
+ ./usr/helix/raac.so
+ ./usr/helix/ramfformat.so
+ ./usr/helix/ramrender.so
+ ./usr/helix/rarender.so
+ ./usr/helix/rmfformat.so
+ ./usr/helix/rv20.so
+ ./usr/helix/rv30.so
+ ./usr/helix/rv40.so
+ ./usr/helix/sipr.so
+ ./usr/helix/smplfsys.so
+ ./usr/helix/vidplin.so
+ ./usr/helix/wma_fileformat.so
+ ./usr/helix/wmarend.so
+</nowiki>
+
+Here is a map of the flash memory:
+Filesystem           1k-blocks      Used Available Use% Mounted on
+rootfs                   56752     56752         0 100% /
+/dev/root                56752     56752         0 100% /
+/dev/roflash1            10968     10968         0 100% /usr/language
+/dev/roflash2            26308     26308         0 100% /usr/data_resource
+/dev/roflash3              452       452         0 100% /usr/setup
+/dev/roflash4              116       116         0 100% /usr/securesetup
+/dev/mtdblock8            6144       884      5260  15% /ezx_user
+/dev/mtdblock9           12160      1204     10956  10% /ezxlocal
+/dev/mmca1              122912     10304    112608   9% /mmc/mmca1
+
+Note: /dev/mmca1 is my SD card
 
 [[Category:Hardware]]
 [[Category:ROKR_E2]]
