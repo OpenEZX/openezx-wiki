@@ -110,7 +110,17 @@ These are the included plugins:
  ./usr/helix/wma_fileformat.so
  ./usr/helix/wmarend.so
 
+== Interesting Files ==
+
 This is a link to a dump of the directory structure and files found with firmware 43P: [[E2_FindDump]]
+
+This is a link to a dump of the running processes found on firmware 33P: [[E2_Running_Processes]]
+
+== The motoac kernel modifications ==
+
+The Rokr E2 (and presumably the A1200) restrict access to certain areas of the filesystem for the root account through a Motorola modified version of SELinux.  Motorola released the source for this under the GPL as part of their kernel source code release.  Work has begun to examine this code and find out if there are any ways to modify the security policy on the phone.  Of interest is the /etc/acpolicy.cfg binary file.  This file can be read by calling various functions in the security/motoac/acpolicy.c in the kernel source tree.
+
+This is a link to a dump of the strings found in the acpolicy.cfg file distributed with firmware 33P: [[E2_acpolicy.cfg_strings]]
 
 [[Category:Hardware]]
 [[Category:ROKR_E2]]
