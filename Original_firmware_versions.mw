@@ -19,6 +19,21 @@ Motorola distributes several variants of firmware for the [[A780]] specialized f
   DSP: 62252500
   Technology: Quad-Band GSM
 
+== Getting your software version on the Rokr E2 ==
+
+The procedure to enter 'www008w' is a bit different on the Rokr E2.  The "Insert Wait" menu item is removed if the last character is already "w".  You need to put other digits/symbols between the "w"s and go back and delete them.  Once you have deleted all of the extraneous digits the phone will immediately show the software version.
+
+In detail:
+
+* Press a number on the keypad to enter the "Entering:" screen (basically the phone dialing screen.).
+* Open the options menu and select "Insert Wait".
+* Now insert a temporary digit (I use "1").
+* Now put the next "w" in via the "Insert Wait" like in the second step.
+* complete the rest of the string using the above technique when necessary.
+* You should now have a string similar to "1w1w1w008w".  Go back and delete the extraneous digits.
+* You should now see the software version.  
+
+== Other methods to get your software version ==
 
 Alternatively, via telnet or Samba look at:
  /etc/ap_version.txt
