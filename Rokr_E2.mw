@@ -114,3 +114,6 @@ This is a link to a dump of the directory structure and files found with firmwar
 
 [[Category:Hardware]]
 [[Category:ROKR_E2]]
+
+== Interesting Info ==
+You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the power key again, you will go into the bootloader flash mode. Remove battery to reboot.
