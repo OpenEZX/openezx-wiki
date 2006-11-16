@@ -127,3 +127,11 @@ This is a link to a dump of the strings found in the acpolicy.cfg file distribut
 
 == Interesting Info ==
 You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the power key again, you will go into the bootloader flash mode. Remove battery to reboot.
+
+
+== External Links ==
+
+*[https://opensource.motorola.com/sf/projects/rokre2 Official Motorola RORK E2 GPL Repository]
+*[http://www.e2mod.com/ Motorola RORK E2 Modders Home] 
+*[http://rokre2.jconserv.net/index.php MotoROKR E2]
+*[http://www.motomodders.net/Default.aspx?tabid=55&view=topics&forumid=80 MotoModders E2 forum]
