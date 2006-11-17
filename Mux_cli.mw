@@ -10,8 +10,8 @@ Motorola has made a couple of proprietary additions to the standard 27.010 basic
 
 1. Sequence number & ack
 
-After every receive the AP sends an ack with the sequence number for the next frame
-for the BP to use (the sequence number wraps back to zero upon reaching 4).
+After every receive the AP (application processor) sends an ack with the sequence number for the next frame
+for the BP (baseband processor) to use (the sequence number wraps back to zero upon reaching 4).
 
 This addition is unusual for a 27.010 implementation and appears to be a deliberate
 mechanism to limit the throughput of the link, potentially a problem with the UART.
