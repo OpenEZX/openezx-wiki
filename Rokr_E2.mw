@@ -92,7 +92,7 @@ MTD structure (/proc/mtd):
    mtd10: 00020000 00020000 "TEST_CMD"
    mtd11: 00020000 00020000 "LOGO"
    mtd12: 000c0000 00020000 "FOTA"
-   mtd13: 00020000 00020000 "RESE
+   mtd13: 00020000 00020000 "RESERVE"
 
 Note that only mtd8 and mtd9 are mounted as block devices.
 
