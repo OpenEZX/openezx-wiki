@@ -75,6 +75,27 @@ Here is a map of the flash memory:
 
 Note: /dev/mmca1 is my SD card
 
+
+MTD structure (/proc/mtd):
+
+    dev : size     erasesize  name
+   mtd0 : 00008000 00008000 "CADDO_SECOND"
+   mtd1 : 00008000 00008000 "ITUNES"
+   mtd2 : 00008000 00008000 "CADDO_PRIMARY"
+   mtd3 : 00008000 00008000 "FOTA_REV"
+   mtd4 : 00040000 00020000 "MBM"
+   mtd5 : 00020000 00020000 "CONFIG"
+   mtd6 : 00020000 00020000 "BLOB"
+   mtd7 : 00100000 00020000 "KERNEL"
+   mtd8 : 00600000 00020000 "USERFS_DB"
+   mtd9 : 00be0000 00020000 "USERFS_GENERAL"
+   mtd10: 00020000 00020000 "TEST_CMD"
+   mtd11: 00020000 00020000 "LOGO"
+   mtd12: 000c0000 00020000 "FOTA"
+   mtd13: 00020000 00020000 "RESE
+
+Note that only mtd8 and mtd9 are mounted as block devices.
+
 == Media Player ==
 Seems to use Helix 10.0 mediaplayer for tunes. However it is missing the oggfformat.so plugin so Ogg/Vorbis files do not play on this device (yet!)
 
