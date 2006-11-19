@@ -149,6 +149,7 @@ This is a link to a dump of the strings found in the acpolicy.cfg file distribut
 == Interesting Info ==
 You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the power key again, you will go into the bootloader flash mode. Remove battery to reboot.
 
+The PCM sound device driver only supports 2-channel, 16-bit LE audio.
 
 == External Links ==
 
