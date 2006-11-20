@@ -32,8 +32,6 @@ cat /proc/meminfo
  Serial          : 0000000000000000
 
 == RAM == 
-cat /proc/meminfo
-
         total:    used:    free:  shared: buffers:  cached:
  Mem:  47722496 46157824  1564672        0   954368 24412160
  Swap:        0        0        0
