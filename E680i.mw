@@ -1,4 +1,31 @@
 The '''E680i''' is pretty much the same as the [[E680]].  
 
+== CPU ==
+Processor       : Intel XScale-Bulverde rev 7 (v5l)
+BogoMIPS        : 291.63
+Features        : swp half thumb fastmult edsp
+CPU implementor : 0x69
+CPU architecture: 5TE
+CPU variant     : 0x0
+CPU part        : 0x411
+CPU revision    : 7
+Cache type      : undefined 5
+Cache clean     : undefined 5
+Cache lockdown  : undefined 5
+Cache unified   : harvard
+I size          : 32768
+I assoc         : 32
+I line length   : 32
+I sets          : 32
+D size          : 32768
+D assoc         : 32
+D line length   : 32
+D sets          : 32
+
+Hardware        : Motorola Ezx Platform
+Revision        : 0000
+Serial          : 0000000000000000
+
+
 [[Category:Hardware]]
 [[Category:E680i]]
