@@ -1,7 +1,7 @@
 The '''E680i''' is pretty much the same as the [[E680]].  
 
 == CPU ==
-Processor       : Intel XScale-Bulverde rev 7 (v5l)
+Processor       : Intel XScale-Bulverde rev 7 (v5l)||
 BogoMIPS        : 291.63
 Features        : swp half thumb fastmult edsp
 CPU implementor : 0x69
