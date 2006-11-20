@@ -29,7 +29,27 @@ Linux/armv5tel 2.4.20_mvlcee30-mainstone
  Revision        : 0000
  Serial          : 0000000000000000
 
+== RAM == 
+# cat /proc/meminfo
 
+        total:    used:    free:  shared: buffers:  cached:
+ Mem:  47722496 46157824  1564672        0   954368 24412160
+ Swap:        0        0        0
+ MemTotal:        46604 kB
+ MemFree:          1528 kB
+ MemShared:           0 kB
+ Buffers:           932 kB
+ Cached:          23840 kB
+ SwapCached:          0 kB
+ Active:          20832 kB
+ Inactive:        17760 kB
+ HighTotal:           0 kB
+ HighFree:            0 kB
+ LowTotal:        46604 kB
+ LowFree:          1528 kB
+ SwapTotal:           0 kB
+ SwapFree:            0 kB
+ Committed_AS:    58604 kB
 
 
 [[Category:Hardware]]
