@@ -5,7 +5,7 @@ MontaVista Linux Consumer Electronics Edition 3.0
 Linux/armv5tel 2.4.20_mvlcee30-mainstone
 
 == CPU ==
- cat /proc/meminfo
+cat /proc/meminfo
 
  Processor       : Intel XScale-Bulverde rev 7 (v5l)||
  BogoMIPS        : 291.63
