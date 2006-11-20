@@ -77,9 +77,7 @@ And the partitions :
  /dev/mtdblock2            5312      2700      2612  51% /usr/SYSjava
  /dev/mmca1             2009184    211744   1797440  11% /mmc/mmca1    <--- SD CARD
 
-
 MTD structure (/proc/mtd):
-
   dev:    size   erasesize name
  mtd0: 00020000  00008000  "Bootloader"
  mtd1: 000e0000  00020000  "Kernel"
