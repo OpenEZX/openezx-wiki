@@ -52,7 +52,6 @@ The '''E680i''' is pretty much the same as the [[E680]].
 == Flash Memory ==
 Here is a map of the flash memory:
  ROFLASH Driver status: Ready
-
  ROFLASH area name is rootfs
  ROFLASH area size = 26083328 bytes
  ROFLASH area offset = 1179648 bytes
