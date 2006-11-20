@@ -51,6 +51,22 @@ The '''E680i''' is pretty much the same as the [[E680]].
 
 == Flash Memory ==
 Here is a map of the flash memory:
+ROFLASH Driver status: Ready
+
+ ROFLASH area name is rootfs
+ ROFLASH area size = 26083328 bytes
+ ROFLASH area offset = 1179648 bytes
+ ROFLASH area l_x_b(10)
+ ROFLASH area name is NO-USE
+ ROFLASH area size = 0 bytes
+ ROFLASH area offset = 27262976 bytes
+ ROFLASH area l_x_b(1000)
+ ROFLASH area name is setup
+ ROFLASH area size = 131072 bytes
+ ROFLASH area offset = 33161216 bytes
+ ROFLASH area l_x_b(1000)
+
+And the partitions :
  Filesystem           1k-blocks      Used Available Use% Mounted on
  rootfs                   55324     55324         0 100% /
  /dev/root                55324     55324         0 100% /
