@@ -2,7 +2,6 @@ The '''E680i''' is pretty much the same as the [[E680]].
 
 == Kernel ==
  MontaVista Linux Consumer Electronics Edition 3.0
-
  Linux version 2.4.20_mvlcee30-mainstone (BJDC@LINUX) (GCC 3.x for XSCALE) #1 Jan 1,2003
 
 == CPU ==
