@@ -155,6 +155,36 @@ You can boot into flash mode by holding the "Voice Key" on the right side of the
 
 The PCM sound device driver only supports 2-channel, 16-bit LE audio.
 
+==Motorola SElinux Policy==
+
+The ROKR 33P build's security policy can be found in the binary file /etc/acpolicy.cfg.  Here is a summary for user 'root':
+
+ Filesystem:
+   /usr/*      protected resource (r-x)
+   /bin/*      protected resource (r-x)
+   /sbin/*     protected resource (r-x)
+   /etc/*      protected resource (r-x)
+   /.backup/*  protected resource (r-x)
+
+ Processes:
+   Defined Domains:
+      1: moto_domain
+          /bin/fakelogin3
+          /usr/SYSqtapp/drm/drmapp*
+          /usr/sbin/in.telnetd
+          /bin/bash
+          /bin/sh
+          /bin/ash
+          /usr/SYSqtapp/am/am*
+          /usr/SYSqtapp/phone/*
+          /etc/ac_getflexbit
+      2: carrier
+      3: trusted
+      4: Untrusted
+
+Note that a more restrictive policy is defined for user "ezx".
+
+
 == External Links ==
 
 *[https://opensource.motorola.com/sf/projects/rokre2 Official Motorola RORK E2 GPL Repository]
