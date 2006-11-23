@@ -122,7 +122,17 @@ Plug the phone and the host together with a USB cable. On the console you should
 
 You can play back the console messages with the '''dmesg''' command. If you look in /proc/bus/devices, you will find a device with a manufacturer ID of ''Motorola'' and a product ID of ''Motorola USB Modem''.
 
-== Using the modem hack ==
+== Change Modem Mode  ==
+
+'''Using the shell'''
+
+ echo "AT+mode=99" > /dev/ttyACM0
+
+For the ROKR_E2:
+
+ echo "AT+mode=13" > /dev/ttyACM0
+
+'''Using Minicom'''
 
 Install minicom if it's not installed. On Debian, I used:
 
@@ -139,6 +149,8 @@ At this point you can type Hayes modem commands to the phone. This is useful for
 Type '''AT+mode=99''' followed by carriage return. The phone goes out of modem mode at this point, so you won't get an "OK". (If +mode=99 does not work, try +mode=13. That seems to do the trick on a1200 here).
 
 Exit minicom.
+
+== Configuring the USB Network device ==
 
 When you gave that "mode" command, the phone caused the host to re-enumerate its USB device - which looks like unplugging it and plugging it in again, but you didn't touch the cable. Now, the USB device has changed its flavor! The console should say something like:
 
