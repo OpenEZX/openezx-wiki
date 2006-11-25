@@ -96,6 +96,61 @@ MTD structure (/proc/mtd):
 
 Note that only mtd8 and mtd9 are mounted as block devices.  For 33P, "ITUNES" is empty.  "LOGO" contains a GIF89a image at offset 0x800, used as the operator logo on boot.
 
+== Flashing the E2 ==
+
+The ROKR E2 can be flashed from linux using the [[http://moto4lin.sourceforge.net/wiki/FlashingEZX] moto4lin ezxflash tools.  The E2 AP (linux) flash data is held in a .sbf file.  Use moto4lin's ''parseheader'' then ''unsbf'' to extract the code groups (memory regions).  Some of the regions are cramfs images and can be mounted as a loopback file:
+
+   mount -t cramfs {file.bin} -o loop,offset={n} /mountpoint/path
+
+Cramfs Code Groups:
+
+   Address file  Offset  Mountpoint          Notes
+   ------------  ------  ----------          -----
+   001a0000.bin      0   /usr/data_resource  /dev/roflash2
+   01ca0000.bin   4096   /usr/securesetup    /dev/roflash4
+   01de0000.bin      0   /usr/language       /dev/roflash1
+   025e0000.bin      0   /usr/setup          /dev/roflash3
+   02600000.bin   4096   /                   /dev/root
+
+
+JFFS2 Code Groups
+
+   00aa0000.bin      0   /ezx_user           /dev/mtd8, /dev/mtdblock8, "USERFS_DB"
+   010a0000.bin      0   /ezxlocal           /dev/mtd9, /dev/mtdblock9, "USERFS_GENERAL"
+
+Partial Cramfs Code Groups:
+
+   a0de0000.bin 0x220000    / (?)    (??) (Extended root fs? Debugging root?)     
+
+Other Code Groups:
+  
+   00060000.bin  -  Maps to mtd5 CONFIG - (Has kernel boot args?)
+   00080000.bin  -  Bootloader - Maps to mtd6 "BLOB"
+   000a0000.bin  -  Maps to mtd7 "KERNEL"
+   01ce0000.bin  -  Operator logo at offset 0x800.  Maps to mtd11 "LOGO"
+   03fc8000.bin  -  ?? (AP->BP comms?  BIOS?) no mtd mapping 
+   10040000.bin  -  ??
+   10080000.bin  -  ?? (200 bytes long)
+   100800c8.bin  -  ?? Has references to "sim", IMEI Lock, SEEM, call meters, IMELODY ringtone, SMS, an GEM
+                       Contains 16-bit text:  
+                           "Motorola Phone ED3F9710: Motorola Communications Class B"
+                           "Motorola Communication Interface0"
+                           "Audio Control Interface"
+                           "Linear Streaming Audio MiCrophone Interface"
+                           "Logarithm Streaming Aucio Microphone interface"
+                           "Linear Streaming Audio Speaker Interface"
+                           "Logarithmic Streaming Audio Speaker Interface"
+                           "Accessory2Motorola MCU Data Logger"
+                           "Motorola Test Command"
+                           "Motorola DSP Logger"
+                           "Motorola DSP Debugger"
+                           "Motorola Data Interface" 
+                           ...more...
+   10330000.bin  -  ?? (2048 bytes long)
+   10350000.bin  -  ?? Contains 16-bit text "Motorola's Flash Neptune LTE2"
+   10390000.bin  -  ?? Byte patterns looks like image assets
+
+
 == Media Player ==
 Seems to use Helix 10.0 mediaplayer for tunes. However it is missing the oggfformat.so plugin so Ogg/Vorbis files do not play on this device (yet!)
 
@@ -150,11 +205,6 @@ This is a link to a dump of the strings found in the acpolicy.cfg file distribut
 [[Category:Hardware]]
 [[Category:ROKR_E2]]
 
-== Interesting Info ==
-You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the power key again, you will go into the bootloader flash mode. Remove battery to reboot.
-
-The PCM sound device driver only supports 2-channel, 16-bit LE audio.
-
 ==Motorola SElinux Policy==
 
 The ROKR 33P build's security policy can be found in the binary file /etc/acpolicy.cfg.  Here is a summary for user 'root':
@@ -184,6 +234,10 @@ The ROKR 33P build's security policy can be found in the binary file /etc/acpoli
 
 Note that a more restrictive policy is defined for user "ezx".
 
+== Interesting Info ==
+You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the power key again, you will go into the bootloader flash mode. Remove battery to reboot.
+
+The PCM sound device driver only supports 2-channel, 16-bit LE audio.
 
 == External Links ==
 
