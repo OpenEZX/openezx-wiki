@@ -41,7 +41,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 ===AGPS Processor (Motorola Telematics MG4100)===
 
 *Attached to UART of BP
-*Has it\u2019s own Flash and RAM (2MB?)
+*Has it's own Flash and RAM (2MB?)
 
 
 ===PCAP2===
@@ -61,7 +61,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 ====RF2722====
 *GPRS/EDGE capable receiver (RX)
 ====RF3144====
-*quad-band power amplifier (TX))))
+*quad-band power amplifier (TX)
 
 
 
@@ -97,7 +97,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 *provides gprs0 / grps1 network devices
 
 ====ipsec.o====
-*proprietary ipsec stack (don\u2019t we already have two GPL licensed?)
+*proprietary ipsec stack (don't we already have two GPL licensed?)
 *Copyright Certicom Corp
 
 
