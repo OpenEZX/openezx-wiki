@@ -119,7 +119,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 
 ===Bootloader===
 *EZX bootloader
-*based on GPL licensed blob (source code not yet released by Motorola)
+*based on GPL licensed blob
 *low-level initialization code (GPIO config, clock, ...)
 *vendor specific USB device allows for:
 **transfer of executable code from USB host
