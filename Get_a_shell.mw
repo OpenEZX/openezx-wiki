@@ -150,6 +150,9 @@ Type '''AT+mode=99''' followed by carriage return. The phone goes out of modem m
 
 Exit minicom.
 
+These tricks don't work on some of the A780 models (according to Harald Welte the German models), since "+mode=99" was disabled.  So you have to
+use linloader and switch usbd using the /proc file. See below.
+
 == Configuring the USB Network device ==
 
 When you gave that "mode" command, the phone caused the host to re-enumerate its USB device - which looks like unplugging it and plugging it in again, but you didn't touch the cable. Now, the USB device has changed its flavor! The console should say something like:
