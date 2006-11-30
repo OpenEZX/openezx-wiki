@@ -1,1 +1,19 @@
 The main processing unit of a computing device.  This unit is what runs the operating system as well as all user applications.
+
+The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm Intel PXA270]:
+* ARMv5TE ARM core
+* [http://www.intel.com/design/pca/prodbref/251669.htm iWMMX] extensions
+* 48MB of RAM
+* 48MB of DiskOnChip Flash memory
+* SD I/O (SDCard/MMC/Transflash/MemoryStick/...) Interface
+* SIM card interface (not used)
+* SpeedStep Power management
+* USB Host Controller
+* USB Device Controller
+* USB OTG support
+* PCMCIA/CompactFlash interface (not used)
+* Keypad Controller
+* QuickCapture Camera interface 
+* Three UART's
+* [[GPIO]] assignment
+This is the beast that runs Linux.
