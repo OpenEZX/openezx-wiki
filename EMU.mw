@@ -12,6 +12,12 @@ The A780 has a mini USB connector that motorola calls "Enhanced Mini USB" or in 
 The A780 has a mini USB connector that has some alternate pinout / functions.
 There is code in the kernel sources /drivers/misc/ezx-emu.c.
 
+== Charging modes ==
+There are at least two different charging modes.
+* Mode 1: The battery is '''not''' completely discharged. The CPU is running and can decide which kind of USB cable is attached. Power only or also data connection. In this mode you can use charging with USB data cable and USB power supply.
+* Mode 2: The battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
+
+
 == Normal USB device/accesory mode ==
 
 Pinout :
