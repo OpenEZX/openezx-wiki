@@ -1,1 +1,4 @@
 The A780 camera is a OmniVision OV9640 1.3MegaPixel Camera Module. It is directly attached to the AP.
+
+
+The E680 features an Agilent ADCM2700 VGA camera module. It is attached to the I2C and AP.
