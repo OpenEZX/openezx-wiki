@@ -1,3 +1,12 @@
+The BP is a ARM7TDMI core that implements the GSM stack. Digital baseband processing is done by an Onyx (566xx) DSP core that is next to the ARM7TDMI.  Like the AP, it has a JTAG port that is connected to easily-accessible pads on the PCB.
+
+The BP used in the EZX Phones is a Freescale "Neptune LTE", which is an "E"DGE enhanced version of some prior Neptune chipset.  A number of non-smart GSM Phones from Motorola have only a version of that BP (and no AP).
+
+The BP runs the Nucleus operating system (produced by Mentor Graphics) from it's own 32MBit Flash.
+
+AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB link ''IPC'' for Inter-Processor Communication.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
+
+
 Processing unit dedicated to [http://en.wikipedia.org/wiki/Baseband baseband] functions.  (somebody want to clarify this?)
 
 Most smart phones (and many not-so-smart phones) will contain two processors.  The OS, user interface, and applications will run on the main applications processor (AP), such as an ARM-based CPU.  The actual phone radio communications and control software, however, are seperated out and run on a seperate CPU, called the Baseband Processor (BP).  The AP communicates to the BP over a defined control link, such as a serial connection or via GPIO lines coming from the AP.
