@@ -4,6 +4,22 @@
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 The '''A780''' is sold in East Asia since August 2004, and in Europe/US since August 2005. There are a some different variants (with GPS, without GPS). Like the previous A7xx phones, it's a flip phone. See EMU for information about the [[EMU]] (Enhanced Mini USB) on the A780.
 
+[[AP]]
+
+[[BP]]
+
+[[PCAP2]]
+
+[[Bluetooth]]
+
+[[GPS]]
+
+[[Sound]]
+
+[[vibrator]]
+
+[[EMU]]
+
 [http://www.motorola.com/motoinfo/product/details/0,,70,00.html Motorola A780 product page].
 </div>
 | width="30%" style="vertical-align:top" |
@@ -11,74 +27,10 @@ The '''A780''' is sold in East Asia since August 2004, and in Europe/US since Au
 |}
 
 
-== Baseband Processor (BP) ==
-
-The BP is a ARM7TDMI core that implements the GSM stack. Digital baseband processing is done by an Onyx (566xx) DSP core that is next to the ARM7TDMI.  Like the AP, it has a JTAG port that is connected to easily-accessible pads on the PCB.
-
-The BP used in the EZX Phones is a Freescale "Neptune LTE", which is an "E"DGE enhanced version of some prior Neptune chipset.  A number of non-smart GSM Phones from Motorola have only a version of that BP (and no AP).
-
-The BP runs the Nucleus operating system (produced by Mentor Graphics) from it's own 32MBit Flash.
-
-AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB link ''IPC'' for Inter-Processor Communication.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
-
-== Camera ==
-
-The A780 camera is a OmniVision OV9640 1.3MegaPixel Camera Module. It is directly attached to the AP.
-
-== Keypad ==
-
-All keys and buttons are directly attached to the AP.
-
-== LEDs ==
-
-One main LED illuminating the keypad, one aux LED illuminating the HOME key. Both featuring 32 levels.
-
-== Vibrator ==
-
-The vibrator is attached to [[PCAP2]].  The [[AP]] can program it via [[SPI]].
-
-== Sound ==
-
-Microphone, speaker, ringtone speaker and stereo headset are all attached to PCAP2
-
-The kernel uses an OSS sound driver to access these. There are three sound devices: <tt>/dev/dsp</tt>, <tt>/dev/dsp16</tt> and <tt>/dev/audio</tt>. I do not know, if <tt>/dev/audio</tt> has any purpose. <tt>/dev/dsp</tt> can only
-output stereo, and <tt>/dev/dsp16</tt> can only output mono. Both use signed 16-bit (2'complements) integers. You set <tt>/dev/dsp</tt> to 8000 or 44100Hz, and <tt>/dev/dsp16</tt> only to 8000Hz. (See [http://www.opensound.com/pguide/oss.pdf The Opensound Programmers Guide] for a quick howto). You can write raw audio or PCM wave file to the devices and read raw audio from them. 
-
-To select the input or output source, open <tt>/dev/mixer</tt> and ioctl SOUND_MIXER_WRITE_OUTSRC or SOUND_MIXER_RECSRC. OUTSRC can be HEADSET_OUT (mono), LOUDERSPEAKER_OUT, EARPIECE_OUT or HEADJACK_OUT (see ezx-common.h in the kernel). SOUND_MIXER_RECSRC doesnt accept all values it should according to the kernel header file. Setting it to 2 should enable the builtin mono microphone.
-
-== Platform Control Audio Power IC (PCAP2) ==
-The [[PCAP2]] is a Motorola [[ASIC]] that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/[[SPI]] to both [[AP]] and [[BP]].
-
-It includes a number of linear and switching power regulators, taking care of the diverse voltage and power requirements of the various digital and analogue subsystems of the phone.
-
-It also has the built-in microphone and speakers attached.  Audio data is exchanged between PCAP2, AP, BP and the Bluetooth chip using SPI.  It includes a Stereo [http://en.wikipedia.org/wiki/Digital-to-analog_converter DAC] (for mp3 playing, ...) and a mono DAC for the voice audio.
-
-[[PCAP2]]
-
-== Bluetooth ==
-There is a Broadcom BCM2035 controller attached to one the BTUART of the AP (ttyS1)
-
-== Serial Console ==
-There is no official serial console.  However, the STUART of the AP (ttyS2) can be used as a serial console.  There are two test pads (TP440=TxD and TP441=RxD) on the PCB.  Also, you'll have to pass "console=ttyS2" to the kernel at boot time (which doesn't seem possible with the original bootloader).  However, if you run your own kernel, you can easily add this to CONFIG_CMDLINE.
 
 
 
-== Charging modes ==
-There are at least two different charging modes.
-* Mode 1: The battery is '''not''' completely discharged. The CPU is running and can decide which kind of USB cable is attached. Power only or also data connection. In this mode you can use charging with USB data cable and USB power supply.
-* Mode 2: The battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
 
-== EMU / USB port ==
-The A780 has a mini USB connector that motorola calls "Enhanced Mini USB" or in short "EMU". The Enhancement consists of several different modes that the port can be be swicthed into. The different modes are implemented by several analog CMOS switches and MOSFETs, which are controlled by the PCAP chip. Pin4 of the mini USB port is connected to a ADC inside the PCAP so that the voltage level on this pin can be measured by the BP, in order to identify a connected peripherial by simple resistor voltage dividers.
-
-* Ordinary USB client, (i.e. the phone can emulate usb storage, usb modem etc, and charge the battery from the 5 volt USB supply)
-* Charger., In this mode, the phone draws more current (up to 1,25A instead of the 500ma limit of USB host ports). 
-* Car Charger,  
-* Headset Interface (stereo audio out, mono mic in)
-* A Async Serial Port (3volt / 0 volt logic level)
-* A Factory Test and Flash Interface
-
-More details can be found here [[EMU]]
 
 [[Category:Hardware]]
 [[Category:A780]]
