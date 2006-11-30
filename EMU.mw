@@ -1,5 +1,14 @@
 == EMU (Enhanced Mini USB) ==
 
+The A780 has a mini USB connector that motorola calls "Enhanced Mini USB" or in short "EMU". The Enhancement consists of several different modes that the port can be be swicthed into. The different modes are implemented by several analog CMOS switches and MOSFETs, which are controlled by the PCAP chip. Pin4 of the mini USB port is connected to a ADC inside the PCAP so that the voltage level on this pin can be measured by the BP, in order to identify a connected peripherial by simple resistor voltage dividers.
+
+* Ordinary USB client, (i.e. the phone can emulate usb storage, usb modem etc, and charge the battery from the 5 volt USB supply)
+* Charger., In this mode, the phone draws more current (up to 1,25A instead of the 500ma limit of USB host ports). 
+* Car Charger,  
+* Headset Interface (stereo audio out, mono mic in)
+* A Async Serial Port (3volt / 0 volt logic level)
+* A Factory Test and Flash Interface
+
 The A780 has a mini USB connector that has some alternate pinout / functions.
 There is code in the kernel sources /drivers/misc/ezx-emu.c.
 
