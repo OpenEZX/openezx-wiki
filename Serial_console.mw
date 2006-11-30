@@ -1,3 +1,6 @@
+There is no official serial console.  However, the STUART of the AP (ttyS2) can be used as a serial console.  There are two test pads (TP440=TxD and TP441=RxD) on the PCB.  Also, you'll have to pass "console=ttyS2" to the kernel at boot time (which doesn't seem possible with the original bootloader).  However, if you run your own kernel, you can easily add this to CONFIG_CMDLINE.
+
+
 It is possible to get a serial console without opening the phone.
 
 You can set the [[EMU]] in to a mode which acts as serial port. You get RX and TX from the mini usb plug, but need a external MAX3232 and a power source for the MAX3232.
