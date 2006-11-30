@@ -4,3 +4,6 @@ The kernel uses an OSS sound driver to access these. There are three sound devic
 output stereo, and <tt>/dev/dsp16</tt> can only output mono. Both use signed 16-bit (2'complements) integers. You set <tt>/dev/dsp</tt> to 8000 or 44100Hz, and <tt>/dev/dsp16</tt> only to 8000Hz. (See [http://www.opensound.com/pguide/oss.pdf The Opensound Programmers Guide] for a quick howto). You can write raw audio or PCM wave file to the devices and read raw audio from them. 
 
 To select the input or output source, open <tt>/dev/mixer</tt> and ioctl SOUND_MIXER_WRITE_OUTSRC or SOUND_MIXER_RECSRC. OUTSRC can be HEADSET_OUT (mono), LOUDERSPEAKER_OUT, EARPIECE_OUT or HEADJACK_OUT (see ezx-common.h in the kernel). SOUND_MIXER_RECSRC doesnt accept all values it should according to the kernel header file. Setting it to 2 should enable the builtin mono microphone.
+
+
+Sound hardware is a LM4857 from National Semiconductors. It is attached to the I2C and PCAP2.
