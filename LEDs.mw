@@ -1,3 +1,7 @@
 A780
 
 One main LED illuminating the keypad, one aux LED illuminating the HOME key. Both featuring 32 levels.
+
+E680
+
+One multicolor LED attached to PCAP2 and AP. One blue cursor pad LED attached to AP (via TC_MM_EN).
