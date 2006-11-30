@@ -4,11 +4,15 @@ Some informations which chips are on the E680.
 
 [[Image:E680-front.jpg|800px]]
 
-
+== Testpads ==
 
 01: Pads for the [[BP]]. Possible JTAG. Needs to be confirmed.
 
 02: Pads for the [[AP]]. Possible JTAG and STUART. Needs to be confirmed.
+
+There are more "small" testpads. A guess is that we get some [[GPIO]] levels here.
+
+== Chips ==
 
 03: RF chips?
 
