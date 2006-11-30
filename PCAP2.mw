@@ -1,3 +1,9 @@
+The [[PCAP2]] is a Motorola [[ASIC]] that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/[[SPI]] to both [[AP]] and [[BP]].
+
+It includes a number of linear and switching power regulators, taking care of the diverse voltage and power requirements of the various digital and analogue subsystems of the phone.
+
+It also has the built-in microphone and speakers attached.  Audio data is exchanged between PCAP2, AP, BP and the Bluetooth chip using SPI.  It includes a Stereo [http://en.wikipedia.org/wiki/Digital-to-analog_converter DAC] (for mp3 playing, ...) and a mono DAC for the voice audio.
+
 <b>P</b>ower management, <b>C</b>lock and <b>A</b>udio <b>P</b>eripheral
 
 Features:
