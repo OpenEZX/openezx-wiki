@@ -14,27 +14,27 @@ There are more "small" testpads. A guess is that we get some [[GPIO]] levels her
 
 == Chips ==
 
-03: RF chips?
+03: MC13777F REV 5.11 RHXW0610  (RF chip?)
 
-04: RF chips?
+04: SAWTEK 890036 614K079 (RF chip?)
 
-05: RF chips?
+05: XJAK6H09 MMM6022FP K0609 KOREA (RF chip?)
 
-06: [[Bluetooth]]
+06: 95l14CN A 0602 1336 [[Bluetooth]]
 
-07: 
+07: TEA5767 CF5189 02 TPG06092
 
-08:
+08: Y762C 0617E ACK
 
-09:
+09: 5188450M18 63AD2LT 980@ 22 DC 2.2
 
-10: [[BP]]?
+10: SC29332VG L93S CTBD0605 CHINA [[BP]]?
 
-11: [[BP]]?
+11: 1020W0YB01 5619A348 Z61954NMD  [[BP]]?
 
-12: M-Systems flash
+12: M-Systems DiskOnChip MCP MS07-D9SD7-B3 JAPAN0609KAD-R34034
 
-13: [[AP]]
+13: PXA271 05312 A6027759 K6040291A PHILIPINES (Chip socket: K6030122H-0122)  [[AP]]
 
 
 This pages needs to be filled up with chip numbers and links to specification.
