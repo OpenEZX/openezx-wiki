@@ -1,1 +1,2 @@
-The E680 has an FM radio that is controlled via I2C.
+The E680 has a NXP TEA5767 FM radio that is controlled via I2C.
+http://www.nxp.com/pip/TEA5767HN_V2.html
