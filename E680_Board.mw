@@ -24,7 +24,7 @@ Some informations which chips are on the E680.
 |-
 | 03
 | MC13777F REV 5.11 RHXW0610
-| Motorola - GSM RF Front End IC
+| Motorola - Quad-Band GPRS GSM RF Front End IC
 |
 |-
 | 04
@@ -35,7 +35,7 @@ Some informations which chips are on the E680.
 | 05
 | XJAK6H09 MMM6022FP K0609 KOREA
 | Motorola - RF Power Amplifier
-|
+| [http://gsmrepair.net/product_info.php/products_id/741/power_amplefiers/power_amplifier_mmm6022]
 |-
 | 06
 | 95l14CN A 0602 1336
@@ -45,7 +45,7 @@ Some informations which chips are on the E680.
 | 07
 | TEA5767 CF5189 02 TPG06092
 | NXP (ex Philips) - Single-Chip [[FM Radio]]
-| http://www.nxp.com/acrobat/datasheets/TEA5767HN_4.pdf
+| [http://www.nxp.com/acrobat/datasheets/TEA5767HN_4.pdf]
 |-
 | 08
 | Y762C 0617E ACK
@@ -60,7 +60,7 @@ Some informations which chips are on the E680.
 | 10
 | SC29332VG L93S CTBD0605 CHINA
 | Motorola - CPU [[BP]]
-|
+| [http://gsmrepair.net/product_info.php/products_id/576/ics/cpu/cpu_sc29332vg_for_motorola_v600]
 |-
 | 11
 | 1020W0YB01 5619A348 Z61954NMD
@@ -69,7 +69,7 @@ Some informations which chips are on the E680.
 |-
 | 12
 | M-Systems DiskOnChip MCP MS07-D9SD7-B3 JAPAN0609KAD-R34034
-|
+| DiskOnChip flash.
 |
 |-
 | 13
