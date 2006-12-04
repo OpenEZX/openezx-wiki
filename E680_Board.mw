@@ -4,37 +4,82 @@ Some informations which chips are on the E680.
 
 [[Image:E680-front.jpg|800px]]
 
-== Testpads ==
 
-01: Pads for the [[BP]]. Possible JTAG. Needs to be confirmed.
-
-02: Pads for the [[AP]]. Possible JTAG and STUART. Needs to be confirmed.
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! #
+! Chip label
+! Function
+! Comments 
+|-
+| 01
+|
+| Pads for the [[BP]]. Possible JTAG. Needs to be confirmed. 
+|
+|-
+| 02
+|
+| Pads for the [[AP]]. Possible JTAG and STUART. Needs to be confirmed.
+|
+|-
+| 03
+| MC13777F REV 5.11 RHXW0610
+| Motorola - GSM RF Front End IC
+|
+|-
+| 04
+| SAWTEK 890036 614K079
+| TriQuint (ex Sawtek) - RF Receive Filter Bank Module
+|
+|-
+| 05
+| XJAK6H09 MMM6022FP K0609 KOREA
+| Motorola - RF Power Amplifier
+|
+|-
+| 06
+| 95l14CN A 0602 1336
+| [[Bluetooth]]
+|
+|-
+| 07
+| TEA5767 CF5189 02 TPG06092
+| NXP (ex Philips) - Single-Chip [[FM Radio]]
+| http://www.nxp.com/acrobat/datasheets/TEA5767HN_4.pdf
+|-
+| 08
+| Y762C 0617E ACK
+| Yamaha - Stereo Hybrid Music Synthesizer
+|
+|-
+| 09
+| 5188450M18 63AD2LT 980@ 22 DC 2.2
+| Motorola - [[PCAP2]]
+|
+|-
+| 10
+| SC29332VG L93S CTBD0605 CHINA
+| Motorola - CPU [[BP]]
+|
+|-
+| 11
+| 1020W0YB01 5619A348 Z61954NMD
+|
+|
+|-
+| 12
+| M-Systems DiskOnChip MCP MS07-D9SD7-B3 JAPAN0609KAD-R34034
+|
+|
+|-
+| 13
+| PXA271 05312 A6027759 K6040291A PHILIPINES (Chip socket: K6030122H-0122)  
+| [[AP]]
+|
+|}
 
 There are more "small" testpads. A guess is that we get some [[GPIO]] levels here.
 
-== Chips ==
-
-03: MC13777F REV 5.11 RHXW0610 - Motorola - GSM RF Front End IC
-
-04: SAWTEK 890036 614K079 - TriQuint (ex Sawtek) - RF Receive Filter Bank Module
-
-05: XJAK6H09 MMM6022FP K0609 KOREA - Motorola - RF Power Amplifier
-
-06: 95l14CN A 0602 1336 [[Bluetooth]]
-
-07: TEA5767 CF5189 02 TPG06092 - NXP (ex Philips) - Single-Chip [[FM Radio]] - http://www.nxp.com/acrobat/datasheets/TEA5767HN_4.pdf
-
-08: Y762C 0617E ACK - Yamaha - Stereo Hybrid Music Synthesizer
-
-09: 5188450M18 63AD2LT 980@ 22 DC 2.2 - Motorola - [[PCAP2]]
-
-10: SC29332VG L93S CTBD0605 CHINA - Motorola - CPU [[BP]]? 
-
-11: 1020W0YB01 5619A348 Z61954NMD  [[BP]]?
-
-12: M-Systems DiskOnChip MCP MS07-D9SD7-B3 JAPAN0609KAD-R34034
-
-13: PXA271 05312 A6027759 K6040291A PHILIPINES (Chip socket: K6030122H-0122)  [[AP]]
-
-
 This pages needs to be filled up with chip numbers and links to specification.
+
+If we find datasheets or other good informations we should start a extra page for the chip.
