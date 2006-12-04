@@ -22,7 +22,7 @@ There are more "small" testpads. A guess is that we get some [[GPIO]] levels her
 
 06: 95l14CN A 0602 1336 [[Bluetooth]]
 
-07: TEA5767 CF5189 02 TPG06092 - NXP (ex Philips) - Single-Chip FM Stereo Radio - http://www.nxp.com/acrobat/datasheets/TEA5767HN_4.pdf
+07: TEA5767 CF5189 02 TPG06092 - NXP (ex Philips) - Single-Chip [[FM Radio]] - http://www.nxp.com/acrobat/datasheets/TEA5767HN_4.pdf
 
 08: Y762C 0617E ACK - Yamaha - Stereo Hybrid Music Synthesizer
 
