@@ -196,6 +196,8 @@ This is a link to a dump of the running processes found on firmware 33P: [[E2_ru
 
 /usr/SYSqtapp/phone/vibrateprocess -playperiod {n} will cause the phone to vibrate for {n} seconds (default=1)
 
+libezxtapi.so (C, no mangeled names) communicates with the BP through a pair of PF_LOCAL UDP sockets to place calls, record audio, get BP version information, possibly check subsidy lock status, etc.
+
 == The motoac kernel modifications ==
 
 The Rokr E2 (and presumably the A1200) restrict access to certain areas of the filesystem for the root account through a Motorola modified version of SELinux.  Motorola released the source for this under the GPL as part of their kernel source code release.  Work has begun to examine this code and find out if there are any ways to modify the security policy on the phone.  Of interest is the /etc/acpolicy.cfg binary file.  This file can be read by calling various functions in the security/motoac/acpolicy.c in the kernel source tree.
