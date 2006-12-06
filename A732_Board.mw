@@ -1,0 +1,48 @@
+[[Image:A732-pcb1-back.jpg|800px]]
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! #
+! Chip label
+! Function
+! Comments 
+|-
+| 01
+| 4050LDYT01 A5527816 7552I151A
+|
+|
+|-
+| 02
+|
+| test pads
+|
+|-
+| 03
+| 61 2113A
+| Autoswitching Power Mux
+|
+|-
+| 04
+| DAL MP 61220 4243
+|
+|
+|-
+| 05
+| TWL3016B2Z 61E5H5TR
+|
+|
+|-
+| 06
+| Y788-W 0603NAWB
+| Yamaha Poly-Buzzer Control IC
+|
+|-
+| 07
+| Si4210 GM 0552CC KAKF
+| single-chip transceiver for quad-band GSM/GPRS
+| [http://www.silabs.com/tgwWebApp/public/web_content/products/Wireless/Aero_RF_Transceivers/en/Si4210.htm]
+|-
+| 08
+| SKY77328-13 316088LI 0607 MX
+| Power Amplifier Samsung/LG/Pantech
+| 
+|}
