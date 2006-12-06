@@ -1,5 +1,6 @@
 [[Image:A732-pcb1-back.jpg|800px]]
 [[Image:A732-pcb2-back.jpg|800px]]
+[[Image:A732-keyboard.jpg|800px]]
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
 ! #
@@ -46,4 +47,24 @@
 | SKY77328-13 316088LI 0607 MX
 | Power Amplifier Samsung/LG/Pantech
 | 
+|-
+| 09
+| AIT701X 0603-8S1SG 842193
+|
+|
+|-
+| 10
+| 66150E1 62AX3L
+| should be BlueTooth TI BRF6150 E1 if I'm not mistakin
+|
+|-
+| 11
+| NQV SW
+|
+|
+|-
+| 12
+| PNR 78349 9M PHL 514 E
+| perhaps Keyboard controller (Finger recognition?)
+|
 |}
