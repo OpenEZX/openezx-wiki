@@ -25,6 +25,7 @@
 * AP/BP interaction
 ** implement handshake procedure to put BP in non-flash-mode
 ** Finish reimplementation of mux_cli and grpsv modules
+* Fix bluetooth init. Test with the in kernel driver.
 * Make GPS data available to userspace. The gps is connected at BP. ([[A780]] only)
 * proprietary flash file systems
 ** Look into reimplementing the proprietary flash fs drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
