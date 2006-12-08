@@ -61,7 +61,6 @@
 * Get rid of Software:: namespace. Merge content in existing pages.
 ** [[Software::AP::Motorola]]
 ** [[Software::AP::OpenEZX]]
-** [[Software::DSP]]
 * Fill up [[Rootfs on NFS]].
 * Fill up [[Serial console]].
 [[Category:Development]]
