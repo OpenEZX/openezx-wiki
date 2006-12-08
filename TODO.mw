@@ -5,7 +5,7 @@
 * Video
 ** Port and cleanup video capture driver (camera)
 * Sound
-** Port and cleanup sound drivers (oss -> alsa)
+** Port and cleanup sound drivers (oss -> alsa (ASoC))
 * Power Management
 ** Add 'device power off' mode so 'halt -p' works
 ** Port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
@@ -37,14 +37,17 @@
 
 = Bootloader =
 
-* Get reblob working to load another blob via blob. We can test bootloader changes fine this way.
-* Create a modified bootloader that allows for multiboot configurations. It could actually include SD/TF support for booting kernels from there.
+* Use u-boot
+** Flash support
+** TF/SD support
+** Network support
+** Commandinterface over usb.
+** Firmware updates.
 
 = Userspace (Openembedded and others) =
 
-* Telephone applications 
+* OpenMoko [http://www.openmoko.org/] software stack.
 * Port gpsd to communicate with several gps applications. ([[A780]] only)
-* Disable infrared support in opie on phones without infrared.
 
 = Wiki =
 
