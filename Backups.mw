@@ -32,9 +32,9 @@ Read [[Get_a_shell#Creating_a_backup|Get a shell]] for a simple method to backup
 
 However, please note: ''This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools''.  See [[#Firmware_2|Using Mass Storage USB Mode#Firmware]].
 
-==Using [[Guides::Mass Storage USB Mode|Mass Storage USB Mode]]==
+==Using Mass Storage USB Mode==
 
-If you are just getting started and haven't setup all of these fancy hacks yet, you can still backup your phone (well, almost completely).  You need to first get your phone working in [[Guides::Mass Storage USB Mode|Mass Storage USB Mode (see this guide if you need help getting there)]].  Once you have mounted both mass storage devices on the phone, you should archive the contents of each. Remember that there are hidden files and directories (for both Windows and Linux users) that should be copied as well.
+If you are just getting started and haven't setup all of these fancy hacks yet, you can still backup your phone (well, almost completely).  You need to first get your phone working in Mass Storage USB Mode (see this guide if you need help getting there).  Once you have mounted both mass storage devices on the phone, you should archive the contents of each. Remember that there are hidden files and directories (for both Windows and Linux users) that should be copied as well.
 
 ===Backup Flash Disks With tar===
 
