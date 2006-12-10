@@ -12,7 +12,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 *A PXA270 Xscale (AP) based PDA in one case
 
 
-===Application Processor (PXA270)===
+===Application Processor ([http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm PXA270])===
 
 *Runs heavily modified linux-2.4.20 kernel
 *48MB RAM
@@ -25,7 +25,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 *directly attached to camera module
 
 
-===Baseband Processor (Neptune LTE)===
+===Baseband Processor ([http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=i.250-22&nodeId=01J4Fsm6cyHs6S Neptune LTE Platform])===
 
 *contains ARM7TDMI for GSM stack
 *contains 566xx DSP for digital baseband
@@ -82,7 +82,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 **Intel VFM (hatcreek.o)
 **m-systems DiskOnChip (tffs.o)
 **third unknown
-
+*A1200 and ROKR E2 have custom Selinux static kernel module
 
 ===Modules===
 
