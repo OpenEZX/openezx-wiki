@@ -1,17 +1,21 @@
-There is no official serial console.  However, the STUART of the AP (ttyS2) can be used as a serial console.  There are two test pads (TP440=TxD and TP441=RxD) on the PCB.  Also, you'll have to pass "console=ttyS2" to the kernel at boot time (which doesn't seem possible with the original bootloader).  However, if you run your own kernel, you can easily add this to CONFIG_CMDLINE.
-
+== [[EMU]] in serial mode ==
 
 It is possible to get a serial console without opening the phone.
 
 You can set the [[EMU]] in to a mode which acts as serial port. You get RX and TX from the mini usb plug, but need a external MAX3232 and a power source for the MAX3232.
 
-Also you need to enable this emu mode in the kernel.
+In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add '''console=ttyS0,115200n8 console=tty0''' to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages even on the framebuffer.
 
-We will update this information within the next days.
+The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch with a config option. 
 
-== Enable emu serial mode in the kernel ==
+We will update the information howto build an adapter within the next days.
 
-In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead.
+
+== Soldering wires on the test pads ==
+=== [[A780]] ===
+The STUART of the AP (ttyS2) can be used as a serial console.  There are two test pads (TP440=TxD and TP441=RxD) on the PCB.  Also, you'll have to pass "console=ttyS2" to the kernel at boot time (which doesn't seem possible with the original bootloader).  However, if you run your own kernel, you can easily add this to CONFIG_CMDLINE.
+=== [[E680]] ===
+We are pretty sure that there are also test pads for an uart on test pads of the [[E680]] PCB. Unfortunately we don't get it working until now.
 
 [[Category:A780]]
 [[Category:E680]]
