@@ -53,14 +53,13 @@
 = Wiki =
 
 * Get rid of Guides:: namespace. Merge content in existing pages.
-** [[Guides::Backups]]
 ** [[Guides::File_Systems]]
 ** [[Guides::USB_Mass_Storage_Mode]]
-** [[Guides::Crosscompile]]
 ** [[Guides::Newbie]]
 * Get rid of Software:: namespace. Merge content in existing pages.
 ** [[Software::AP::Motorola]]
 ** [[Software::AP::OpenEZX]]
 * Fill up [[Rootfs on NFS]].
 * Fill up [[Serial console]].
+* Fill ip [[JTAG]].
 [[Category:Development]]
