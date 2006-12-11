@@ -1,6 +1,3 @@
-The a780 comes loaded with some roflash, vfm and fat16 file systems.  VFM is pretty ugly, it's an Intel propritary filesystem designed for very small flash storage devices.  FAT16 doesn't need anything said about that.  So, say you blow that $50 on a super-cool 1GB Transflash card, are you going to format it FAT 16?
-
-This guide
 =Getting Drivers and Tools=
 You will need various tools to pull this off, some of which aren't on your phone
 
