@@ -26,7 +26,7 @@ Note that reflash mode appears to also place the baseband into reflash mode (app
 
 We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c.
 
-UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.
+'''UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.'''
 
 Shouldn't that be magic bootup flags that tell the bootloader e.g. whether this startup is supposed to be a genuine full-boot or a resume back to a running session living in SDRAM?
 At least that's what some PocketPC bootloaders do...
@@ -46,7 +46,7 @@ rather random flag variations below). -am
 |-
 | 0x12345678
 | Need to fill.
-| It's called PASS_THRU_FLAG in a780-blob/src/blob/main.c (potentially useful if can produce)
+| If blob reads this FLAG value it will enter an passthrough mode. In this mode the host can communicate directly with the BP.
 |-
 | 0x95aa95aa
 | Need to fill.
