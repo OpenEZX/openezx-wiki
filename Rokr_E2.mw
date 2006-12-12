@@ -39,7 +39,14 @@ Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE)
  D sets          : 32
 
 == RAM ==
-45 MB
+
+80MB Physical (/dev/mem)
+
+ 0x3F000000-0x3FFFFFFF  (16MB)
+ 0xA0000000-0xA3FFFFFF  (64MB)
+
+
+45MB in-system
 
         total:    used:    free:  shared: buffers:  cached:
  Mem:  47509504 45441024  2068480        0   466944 19390464
