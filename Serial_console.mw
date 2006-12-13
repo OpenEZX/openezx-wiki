@@ -8,8 +8,17 @@ In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EM
 
 The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch with a config option. 
 
-We will update the information howto build an adapter within the next days.
+=== Build your own [[EMU]] - serial adapter ===
 
+To build your own [[EMU]] to serial adapter you need an external 3.3V power source since the 1.8V from the cell phone is too weak to power the MAX3232.
+
+Parts used:
+* 1* MAX3232
+* 5* Capacitor 0.1µF
+* 1* Mini USB plug type-B
+* 1* DE-9 female connector
+
+[[Image:Emu-uart.png]]
 
 == Soldering wires on the test pads ==
 === [[A780]] ===
