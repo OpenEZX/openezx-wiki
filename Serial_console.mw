@@ -52,10 +52,9 @@ Applicatons processor debug port:
  nTRST /   TDO   | ?(D/NC) \ nRESET \
     TDI        TMS        TCK    ?(DATA)
 
-The lines marked NC are either inputs to an unknown source or they are no connects.  The lines marked data have a signal on them, but I do not know what they are hooked up to.
+The lines marked NC are either inputs to an unknown source or they are no connects.  
 
-ST_TDX and ST_RDX are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.
-
+ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  
 
 [[Category:A780]]
 [[Category:E680]]
