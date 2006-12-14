@@ -26,7 +26,7 @@ The ST_UART signals ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configur
 
 nTRST, TDI, TDO, TMS, TCK, nRESET are JTag signals.
 
-The FFUART, BTUART, and the ST_UART all appear to be configured, but I do not know what they are connected to.
+The FFUART, BTUART, and the ST_UART all appear to be configured, but I do not know what the FFUART is connected to.  
 
 [[Category:Rokr E2]]
 [[Category:A1200]]
