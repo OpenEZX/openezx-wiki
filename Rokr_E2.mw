@@ -187,7 +187,7 @@ Other Code Groups:
 
 == [[Debug Port]] ==
 
-The appears to be two [[Debug Port]s on the Rokr E2.  The one on the front provides JTag access to the Applications Processor and access to the the ST_UART for a serial console.  The other is assumed for the base-band.
+The appears to be two [[Debug Port]]s on the Rokr E2.  The one on the front provides JTag access to the Applications Processor and access to the the ST_UART for a serial console.  The other is assumed for the base-band.
 
 == Media Player ==
 Seems to use Helix 10.0 mediaplayer for tunes. However it is missing the oggfformat.so plugin so Ogg/Vorbis files do not play on this device (yet!)
