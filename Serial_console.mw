@@ -29,6 +29,33 @@ Parts used:
 The STUART of the AP (ttyS2) can be used as a serial console.  There are two test pads (TP440=TxD and TP441=RxD) on the PCB.  Also, you'll have to pass "console=ttyS2" to the kernel at boot time (which doesn't seem possible with the original bootloader).  However, if you run your own kernel, you can easily add this to CONFIG_CMDLINE.
 === [[E680]] ===
 We are pretty sure that there are also test pads for an uart on test pads of the [[E680]] PCB. Unfortunately we don't get it working until now.
+=== Rokr E2 ===
+On the Rokr E2 boards there are two debug ports, one on the front and one on the back.  The one on the front is the debug/jtag port for the applications processor (PXA270).  It is located on the opposite side from the keylock switch. The one on the back is assumed to be the debug/jtag port for the baseband.  The connector is made by FOXCONN, QT510166-L010-7F.  The male connector that you will need to access the port without soldering under a microscope is QT500166-L020-9F.  
+
+Applicatons processor debug port:
+                     
+    ?(NC)       GND    ST_TDX    VSUPPLY
+ ?(NC) \  ?(NC)  | ?(NC) |  ST_RDX /  
+    \   \    \   |   |   |    /   /
+     1   2   3   4   5   6   7   8       |
+     |   |   |   |   |   |   |   |       |
+#######################################  |
+#    |   |   |   |   |   |   |   |    #  |
+#  #################################  #  |
+#  #################################  #  |  <-Side of
+#  #################################  #  |    the PCB
+#    |   |   |   |   |   |   |   |    #  |
+#######################################  |
+     |   |   |   |   |   |   |   |       |
+    16  15  14  13  12  11  10   9       |
+   /   /    /   |    |   \    \   \
+nTRST /   TDO   | ?(D/NC) \ nRESET \
+    TDI        TMS        TCK    ?(DATA)
+
+The lines marked NC are either inputs to an unknown source or they are no connects.  The lines marked data have a signal on them, but I do not know what they are hooked up to.
+
+ST_TDX and ST_RDX are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.
+
 
 [[Category:A780]]
 [[Category:E680]]
