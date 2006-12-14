@@ -82,7 +82,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 **Intel VFM (hatcreek.o)
 **m-systems DiskOnChip (tffs.o)
 **third unknown
-*A1200 and ROKR E2 have custom Selinux static kernel module
+*A1200 and ROKR E2 have custom Selinux static kernel module called [[motoac]]
 
 ===Modules===
 
