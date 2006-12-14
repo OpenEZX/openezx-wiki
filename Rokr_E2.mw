@@ -242,9 +242,6 @@ The Rokr E2 (and presumably the A1200) can restrict access to certain areas of t
 
 This is a link to a dump of the strings found in the acpolicy.cfg file distributed with firmware 33P: [[E2_acpolicy.cfg_strings]]
 
-[[Category:Hardware]]
-[[Category:ROKR_E2]]
-
 ==Motorola SElinux Policy==
 
 The ROKR 33P build's security policy can be found in the binary file /etc/acpolicy.cfg.  Here is a summary for user 'root':
@@ -286,3 +283,7 @@ The PCM sound device driver only supports 16-bit LE audio.
 *[http://rokre2.jconserv.net/index.php MotoROKR E2]
 *[http://www.motomodders.net/Default.aspx?tabid=55&view=topics&forumid=80 MotoModders E2 forum]
 *[http://www.freemod.net/index.php Rokr E2 Modding]
+
+[[Category:Hardware]]
+[[Category:ROKR_E2]]
+[[Category:Development]]
