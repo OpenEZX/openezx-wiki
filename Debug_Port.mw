@@ -1,0 +1,29 @@
+On the Rokr E2 boards there are two debug ports, one on the front and one on the back.  The one on the front is the debug/jtag port for the applications processor (PXA270).  It is located on the opposite side from the key-lock switch. The one on the back is assumed to be the debug/jtag port for the baseband.  The connector is made by FOXCONN, QT510166-L010-7F.  The male connector that you will need to access the port is QT500166-L020-9F.  
+
+Applicatons processor debug port:
+                     
+     ?(NC)       GND    ST_TDX      VSUPPLY
+  ?(NC) \  ?(NC)  | ?(NC) |  ST_RXD /  
+     \   \    \   |   |   |    /   /
+      1   2   3   4   5   6   7   8       |
+      |   |   |   |   |   |   |   |       |
+ #######################################  |
+ #    |   |   |   |   |   |   |   |    #  |
+ #  #################################  #  |
+ #  #################################  #  |  <-Side of
+ #  #################################  #  |    the PCB
+ #    |   |   |   |   |   |   |   |    #  |
+ #######################################  |
+      |   |   |   |   |   |   |   |       |
+     16  15  14  13  12  11  10   9       |
+    /   /    /   |    |   \    \   \
+ nTRST /   TDO   | ?(NC)   \ nRESET \
+     TDI        TMS        TCK    ?(NC)
+
+The lines marked NC are either inputs to an unknown source or they are no connects.  
+
+The ST_UART signals ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  Please see the [[Serial Console]] page to see how to wire to this UART.  
+
+nTRST, TDI, TDO, TMS, TCK, nRESET are JTag signals.
+
+The FFUART, BTUART, and the ST_UART all appear to be configured, but I do not know what they are connected to.
