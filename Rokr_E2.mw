@@ -103,6 +103,34 @@ MTD structure (/proc/mtd):
 
 Note that only mtd8 and mtd9 are mounted as block devices.  For 33P, "ITUNES" is empty.  "LOGO" contains a GIF89a image at offset 0x800, used as the operator logo on boot.
 
+Motorola Flash Memory Regions, label, and filename (from /etc/flashmem.map)
+
+  0x00000000 - 0x0001FFFF   caddo               (caddo_data.bin)
+  0x00020000 - 0x0005FFFF   mbm                 (mbm.bin)
+  0x00060000 - 0x000607FF   cdtcsf              (cdtcsf)
+  0x00060800 - 0x00066FFF   cdt                 (cdt.bin)
+  0x00067000 - 0x0007FFFF   kct                 (kct.bin)
+  0x00080000 - 0x000807FF   blobcsf             (blobcsf)
+  0x00080800 - 0x0009FFFF   blob                (blob)
+  0x000A0000 - 0x000A07FF   kernelcsf           (kernelcsf)
+  0x000A0800 - 0x0019FFFF   kernel              (zImage)
+  0x001A0000 - 0x00A9FFFF   resource            (resource.img)
+  0x00AA0000 - 0x0109FFFF   userdb              (userfs_db.img)
+  0x010A0000 - 0x01C9FFFF   usergeneral         (userfs_general.img)
+  0x01CA0000 - 0x01CA0FFF   securesetupcsf      (securesetupcsf)
+  0x01CA1000 - 0x01CBFFFF   securesetup         (secure_setup.img)
+  0x01CC0000 - 0x01CDFFFF   tcmd                (tcmd)
+  0x01CE0000 - 0x01CE07FF   logocsf             (logocsf)
+  0x01CE0800 - 0x01CFFFFF   logo                (logo.img)
+  0x01D00000 - 0x01DBFFFF   fota                (fota.img)
+  0x01DC0000 - 0x01DDFFFF   paniclog            (N/A)
+  0x01DE0000 - 0x025DFFFF   language            (language.img)
+  0x025E0000 - 0x025FFFFF   setup               (setup.img)
+  0x02600000 - 0x02600FFF   rootcsf             (rootcsf)
+  0x02601000 - 0x03FFFFFF   root                (rootfs_cramfs.img)
+  0xA0200000 - 0xA024FFFF   rdl                 (rdl)
+
+
 == Flashing the E2 ==
 
 The ROKR E2 can be flashed from linux using the [[http://moto4lin.sourceforge.net/wiki/FlashingEZX] moto4lin ezxflash tools.  The E2 AP (linux) flash data is held in a .sbf file.  Use moto4lin's ''parseheader'' then ''unsbf'' to extract the code groups (memory regions).  Some of the regions are cramfs images and can be mounted as a loopback file:
@@ -207,7 +235,7 @@ libezxtapi.so (C, no mangeled names) communicates with the BP through a pair of 
 
 == The motoac kernel modifications ==
 
-The Rokr E2 (and presumably the A1200) restrict access to certain areas of the filesystem for the root account through a Motorola modified version of SELinux.  Motorola released the source for this under the GPL as part of their kernel source code release.  Work has begun to examine this code and find out if there are any ways to modify the security policy on the phone.  Of interest is the /etc/acpolicy.cfg binary file.  This file can be read by calling various functions in the security/motoac/acpolicy.c in the kernel source tree.
+The Rokr E2 (and presumably the A1200) can restrict access to certain areas of the filesystem and tasks through a Motorola modified version of SELinux and policy called [[motoac]].  Motorola released the source for this under the GPL as part of their kernel source code release.
 
 This is a link to a dump of the strings found in the acpolicy.cfg file distributed with firmware 33P: [[E2_acpolicy.cfg_strings]]
 
