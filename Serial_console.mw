@@ -34,22 +34,22 @@ On the Rokr E2 boards there are two debug ports, one on the front and one on the
 
 Applicatons processor debug port:
                      
-    ?(NC)       GND    ST_TDX    VSUPPLY
- ?(NC) \  ?(NC)  | ?(NC) |  ST_RDX /  
-    \   \    \   |   |   |    /   /
-     1   2   3   4   5   6   7   8       |
-     |   |   |   |   |   |   |   |       |
-#######################################  |
-#    |   |   |   |   |   |   |   |    #  |
-#  #################################  #  |
-#  #################################  #  |  <-Side of
-#  #################################  #  |    the PCB
-#    |   |   |   |   |   |   |   |    #  |
-#######################################  |
-     |   |   |   |   |   |   |   |       |
-    16  15  14  13  12  11  10   9       |
-   /   /    /   |    |   \    \   \
-nTRST /   TDO   | ?(D/NC) \ nRESET \
+     ?(NC)       GND    ST_TDX    VSUPPLY
+  ?(NC) \  ?(NC)  | ?(NC) |  ST_RDX /  
+     \   \    \   |   |   |    /   /
+      1   2   3   4   5   6   7   8       |
+      |   |   |   |   |   |   |   |       |
+ #######################################  |
+ #    |   |   |   |   |   |   |   |    #  |
+ #  #################################  #  |
+ #  #################################  #  |  <-Side of
+ #  #################################  #  |    the PCB
+ #    |   |   |   |   |   |   |   |    #  |
+ #######################################  |
+      |   |   |   |   |   |   |   |       |
+     16  15  14  13  12  11  10   9       |
+    /   /    /   |    |   \    \   \
+ nTRST /   TDO   | ?(D/NC) \ nRESET \
     TDI        TMS        TCK    ?(DATA)
 
 The lines marked NC are either inputs to an unknown source or they are no connects.  The lines marked data have a signal on them, but I do not know what they are hooked up to.
