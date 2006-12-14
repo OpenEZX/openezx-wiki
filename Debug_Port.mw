@@ -22,7 +22,7 @@ Applicatons processor debug port:
 
 The lines marked NC are either inputs to an unknown source or they are no connects.  
 
-The ST_UART signals ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  Please see the [[Serial Console]] page to see how to wire to this UART.  
+The ST_UART signals ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  Please see the [[Serial console]] page to see how to wire to this UART.  
 
 nTRST, TDI, TDO, TMS, TCK, nRESET are JTag signals.
 
