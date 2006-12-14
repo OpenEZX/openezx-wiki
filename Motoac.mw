@@ -1,0 +1,26 @@
+'''Motorola Access Control Policy (SElinux)'''
+
+The ROKR E2 contains Security Enhanced Linux modifications to the kernel.  Motorola's SElinux policy is called '''motoac''', and is available as part of the GPL source releases.
+
+== Startup ==
+
+The access policy is enabled or disabled during startup by a "flexbit" setting in '''/usr/securesetup/ezx_security.cfg'''.  In rc2.d,  '''S10acgetflex.sh''' sets the policy as active or inactive durin boot.  The policy default flex state can be checked by running this script, or by entering:
+
+   export LD_LIBRARY_PATH=/usr/lib/ezx/lib
+   /etc/ac_getflexbit
+
+The ac_getflexbit application will echo "disable AC!!!" if the default state is disabled in the flex file.
+
+== Enable/Disable ==
+
+The access control policy can be enabled or disabled from a user-space application with:
+
+   #include <linux/ac_class.h>
+   ...
+   int state=0;  /* 1==Enable, 0==Disable */
+   syscall(__NR_security, AC_POLICY_MAGIC, AC_SYSCALL_ENABLE, &state);
+
+
+== Firmware Default States ==
+
+   ROKR E2    R564_G_12.02.33P    disabled.
