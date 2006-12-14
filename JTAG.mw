@@ -21,7 +21,7 @@ You need
 
 == JTAG on EZX ==
 
-The EZX phones (at least A780 and E680/E680i) offer JTAG pads on the PCB for both the AP and the BP.
+The EZX phones (at least A780, E680/E680i, a1200 and Rokr E2) offer JTAG pads on the PCB for both the AP and the BP.
 
 === JTAG on AP ===
 
@@ -32,9 +32,7 @@ There are ports of older versions of this windows C++ program to Linux (jflash-l
 Harald is working on getting a working JTAG configuration with his A780, stay tuned.
 
 === A working JTAG configuration with E680i ===
-
-[http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Read here]
-
+* [http://www.motorolafans.com/index.php?name=Forums&file=viewtopic&t=3268 Read here]
 
 === External links ===
 * [http://hardware-hacking.com/JTAG JTAG] at [http://hardware-hacking.com hardware-hacking.com]
