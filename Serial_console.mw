@@ -2,21 +2,23 @@
 
 It is possible to get a serial console without opening the phone.
 
-You can set the [[EMU]] in to a mode which acts as serial port. You get RX and TX from the mini usb plug, but need a external MAX3232 and a power source for the MAX3232.
+You can set the [[EMU]] into a mode which acts as serial port. You get RX and TX from the mini usb plug, but need an external
+level shifter like MAX3232 and a power source for the MAX3232.
 
-In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add '''console=ttyS0,115200n8 console=tty0''' to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages even on the framebuffer.
+In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add '''console=ttyS0,115200n8 console=tty0''' to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages on the framebuffer at the same time.
 
-The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch with a config option. 
+The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch via a config option. 
 
 === Build your own [[EMU]] - serial adapter ===
 
-To build your own [[EMU]] to serial adapter you need an external 3.3V power source since the 2.775V from the cell phone is too weak to power the MAX3232.
+To build your own [[EMU]] to serial adapter you need an external 3.3V power source since the 2.775V from the cell phone is
+believed to be too weak to power the MAX3232 in some cases.
 
 The default color coding for the mini USB signaling is included in the schematic.
 
 Parts used:
 * 1* MAX3232
-* 5* Capacitor 0.1µF
+* 5* Capacitor 0.1µF (= 100nF, Code 104)
 * 1* [[http://en.wikipedia.org/wiki/Universal_Serial_Bus#Mini-USB_signaling Mini USB plug type B]]
 * 1* [[http://en.wikipedia.org/wiki/D-subminiature DE-9 female connector]]
 
