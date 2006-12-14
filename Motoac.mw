@@ -4,7 +4,7 @@ The ROKR E2 contains Security Enhanced Linux modifications to the kernel.  Motor
 
 == Startup ==
 
-The access policy is enabled or disabled during startup by a "flexbit" setting in '''/usr/securesetup/ezx_security.cfg'''.  In rc2.d,  '''S10acgetflex.sh''' sets the policy as active or inactive durin boot.  The policy default flex state can be checked by running this script, or by entering:
+The access policy is enabled or disabled during startup by a "flexbit" setting in '''/usr/securesetup/ezx_security.cfg'''.  In rc2.d,  '''S10acgetflex.sh''' sets the policy as active or inactive during boot.  The policy default flex state can be checked by running this script, or by entering:
 
    export LD_LIBRARY_PATH=/usr/lib/ezx/lib
    /etc/ac_getflexbit
