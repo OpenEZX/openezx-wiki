@@ -30,31 +30,7 @@ The STUART of the AP (ttyS2) can be used as a serial console.  There are two tes
 === [[E680]] ===
 We are pretty sure that there are also test pads for an uart on test pads of the [[E680]] PCB. Unfortunately we don't get it working until now.
 === [[Rokr E2]] ===
-On the Rokr E2 boards there are two debug ports, one on the front and one on the back.  The one on the front is the debug/jtag port for the applications processor (PXA270).  It is located on the opposite side from the keylock switch. The one on the back is assumed to be the debug/jtag port for the baseband.  The connector is made by FOXCONN, QT510166-L010-7F.  The male connector that you will need to access the port without soldering under a microscope is QT500166-L020-9F.  
-
-Applicatons processor debug port:
-                     
-     ?(NC)       GND    ST_TDX    VSUPPLY
-  ?(NC) \  ?(NC)  | ?(NC) |  ST_RDX /  
-     \   \    \   |   |   |    /   /
-      1   2   3   4   5   6   7   8       |
-      |   |   |   |   |   |   |   |       |
- #######################################  |
- #    |   |   |   |   |   |   |   |    #  |
- #  #################################  #  |
- #  #################################  #  |  <-Side of
- #  #################################  #  |    the PCB
- #    |   |   |   |   |   |   |   |    #  |
- #######################################  |
-      |   |   |   |   |   |   |   |       |
-     16  15  14  13  12  11  10   9       |
-    /   /    /   |    |   \    \   \
- nTRST /   TDO   | ?(D/NC) \ nRESET \
-    TDI        TMS        TCK    ?(DATA)
-
-The lines marked NC are either inputs to an unknown source or they are no connects.  
-
-ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  
+The [[Debug Port]] page describes the connector for the ST_UART and the JTag lines for the [[Rokr E2]].  
 
 [[Category:A780]]
 [[Category:E680]]
