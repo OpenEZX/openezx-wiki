@@ -8,11 +8,26 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 
 ==Hardware==
 
+===Family Names===
+
+Bulverde refers to the Intel PXA CPU platform, of which all EZX phone models are currently a subset.
+
+EZX family subsets and handsets (some here here)
+
+*A780:  [[A780]],[[E680]]
+*Barbados:
+*Martinique:
+*Hainan:
+*Sumatra:  [[RORK E2]]
+
+
+===Processors===
+
 *A Motorola Neptune LTE based mobile phone (BP) plus
 *A PXA270 Xscale (AP) based PDA in one case
 
 
-===Application Processor ([http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm PXA270])===
+====Application Processor ([http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm PXA270])====
 
 *Runs heavily modified linux-2.4.20 kernel
 *48MB RAM
@@ -25,7 +40,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 *directly attached to camera module
 
 
-===Baseband Processor ([http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=i.250-22&nodeId=01J4Fsm6cyHs6S Neptune LTE Platform])===
+====Baseband Processor ([http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=i.250-22&nodeId=01J4Fsm6cyHs6S Neptune LTE Platform])====
 
 *contains ARM7TDMI for GSM stack
 *contains 566xx DSP for digital baseband
@@ -38,7 +53,7 @@ Original Disclaimer: All Information is based on observation (of A780), and may 
 *2MB external RAM
 
 
-===AGPS Processor (Motorola Telematics MG4100)===
+====AGPS Processor (Motorola Telematics MG4100)====
 
 *Attached to UART of BP
 *Has it's own Flash and RAM (2MB?)
