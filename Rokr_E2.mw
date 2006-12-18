@@ -38,6 +38,8 @@ Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE)
  D line length   : 32
  D sets          : 32
 
+Default power management clock settings appear to be 104Mhz, 208Mhz, and 312Mhz at 1.35v.
+
 == RAM ==
 
 80MB Physical (/dev/mem)
