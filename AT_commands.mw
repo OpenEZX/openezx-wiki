@@ -1,4 +1,14 @@
 The EZX phones support a wider range of AT commands. Some of them are official GSM commands other are extension.
+
+We should compare the commands to one known of the 3GPP standards:
+
+http://www.3gpp.org/ftp/Specs/archive/07_series/07.07/0707-780.zip
+http://www.3gpp.org/ftp/Specs/archive/27_series/27.007/27007-720.zip
+
+But even other documents in this directories are interesting for some parts of the commands:
+
+http://www.3gpp.org/ftp/Specs/archive/07_series/
+http://www.3gpp.org/ftp/Specs/archive/27_series/
 <pre>
 AT+ALERT
 AT+BTTONE=
