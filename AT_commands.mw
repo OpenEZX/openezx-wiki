@@ -1,5 +1,5 @@
 The EZX phones support a wider range of AT commands. Some of them are official GSM commands other are extension.
-
+<pre>
 AT+ALERT
 AT+BTTONE=
 AT+CACM:
@@ -454,3 +454,4 @@ AT+SHOW:
 AT+STTONE
 AT+USBSTAT=%d,%d
 AT+VA=%d
+</pre>
