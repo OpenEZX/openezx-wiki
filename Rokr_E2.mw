@@ -226,15 +226,24 @@ These are the included plugins:
 
 == Interesting Files ==
 
-This is a link to a dump of the directory structure and files found with firmware 43P: [[E2_FindDump]]
+*This is a link to a dump of the directory structure and files found with firmware 43P: [[E2_FindDump]]
 
-This is a link to a dump of the running processes found on firmware 33P: [[E2_running_processes]]
+*This is a link to a dump of the running processes found on firmware 33P: [[E2_running_processes]]
 
-/usr/SYSqtapp/phone/alertprocess -playvol {n} -playfile foo.wav will play the foo.wav audio file at volume {n} (0-10).
+*/usr/SYSqtapp/phone/alertprocess -playvol {n} -playfile foo.wav will play the foo.wav audio file at volume {n} (0-10).
 
-/usr/SYSqtapp/phone/vibrateprocess -playperiod {n} will cause the phone to vibrate for {n} seconds (default=1)
+*/usr/SYSqtapp/phone/vibrateprocess -playperiod {n} will cause the phone to vibrate for {n} seconds (default=1)
 
-libezxtapi.so (C, no mangeled names) communicates with the BP through a pair of PF_LOCAL UDP sockets to place calls, record audio, get BP version information, possibly check subsidy lock status, etc.
+*libezxtapi.so (C, no mangeled names) communicates with the BP through a pair of PF_LOCAL UDP sockets to place calls, record audio, get BP version information, possibly check subsidy lock status, etc.
+
+*/lib/modules/logger.o logs events to a pair of files on ezxlocal.  Usage:
+
+  insmod /usr/modules/logger.o
+  /usr/SYStapi/aplog_mode.sh 1
+
+This will start logging, as per the writeable policy in /ezxlocal/ezx_aplog.cfg.  The default is to log MUX and output files to /ezxlocal/downloads/mystuff/ as logging.map and logged.map
+
+*/etc/init.d/ezxenvr.sh sets up all session variables necessary for executing apps.
 
 == The motoac kernel modifications ==
 
