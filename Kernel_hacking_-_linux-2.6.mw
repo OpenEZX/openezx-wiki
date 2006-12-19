@@ -22,19 +22,5 @@ If everything works fine you can find the zImage in arch/arm/boot/ . You can use
 * Use MACHINE=a780 and DISTRO=ezx
 * 'bitbake virtual/kernel'
 
-== Building kernel modules for the original Motorola kernel ==
-
-Change the EXTRAVERSION in kernel Makefile to _mvlcee30-mainstone instead of _pnail.
-
-Steps:
-Download the [http://www.motorolafans.com/index.php?name=Downloads&file=details&id=197 patch] for the [http://sourceforge.net/projects/e680 kernel] from ''download->E680i/A780->scripts/programs'' section.
-
- gzip -cd patch-2.4.17-pnail-0.1.gz | patch -p0
- cd linux-2.4.17
- cp arch/arm/def-configs/ezx-780 .config
- make ARCH=arm CROSS_COMPILE=arm-linux- oldconfig
- make ARCH=arm CROSS_COMPILE=arm-linux- dep
- make ARCH=arm CROSS_COMPILE=arm-linux- zImage
- make ARCH=arm CROSS_COMPILE=arm-linux- modules
 
 [[Category:Development]]
