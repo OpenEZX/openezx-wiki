@@ -1,0 +1,21 @@
+Exploring the original Motorola linux-2.4 kernel tree, can help in porting functionalities to OpenEZX kernel tree based on linux-2.6.
+
+These efforts are mainly for study and the OpenEZX project does not intend to support 2.4 kernels in the long run.
+
+== Building original Motorola kernel and kernel modules ==
+
+Steps (config for A780):
+
+* download the [https://opensource.motorola.com/sf/frs/do/downloadFile/projects.a780e680/frs.a780_e680_source.a780_e680/frs1003?dl=1 kernel],
+* apply the [http://people.openezx.org/ao2/patches-2.4.20-motorola-ezx1.tar.bz2 patchset] using quilt.
+* configure the kernel using for example [http://people.openezx.org/ao2/linux-2.4.20-a780.config this] config file.
+
+And then:
+
+ make ARCH=arm CROSS_COMPILE=arm-linux- oldconfig
+ make ARCH=arm CROSS_COMPILE=arm-linux- dep
+ make ARCH=arm CROSS_COMPILE=arm-linux- zImage
+ make ARCH=arm CROSS_COMPILE=arm-linux- modules
+
+
+[[Category:Development]]
