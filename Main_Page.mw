@@ -53,7 +53,7 @@ This is a collaborative effort to collect information about Motorola's EZX phone
 * How to create [[Backups]] of the EZX device
 * How to [[Get a shell]] on the EZX device
 * How to [[Crosscompile]] for the EZX device
-* [[Kernel hacking]]
+* [[Kernel hacking - linux-2.6]]
 * GUI stuff: [[Handheld Environments]]
 * How to use the [[JTAG]] interface
 * [[TODO]]
