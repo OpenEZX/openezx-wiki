@@ -226,6 +226,14 @@ These are the included plugins:
  ./usr/helix/wma_fileformat.so
  ./usr/helix/wmarend.so
 
+
+== Browser ==
+
+Official ROM version 33P uses Opera 8.5.2023.
+
+   CLIENT: MOT-E2/R564_G_12.02.32P Mozilla/4.0 (compatible; MSIE 6.0; Motorola ROKR E2)
+
+
 == Interesting Files ==
 
 *This is a link to a dump of the directory structure and files found with firmware 43P: [[E2_FindDump]]
