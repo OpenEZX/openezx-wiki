@@ -68,6 +68,7 @@ Default power management clock settings appear to be 104Mhz, 208Mhz, and 312Mhz 
  SwapTotal:           0 kB
  SwapFree:            0 kB
  Committed_AS:    57172 kB
+But in linux-2.4.17\arch\arm\def-configs\ezx-sumatra CONFIG_EZXBASE_SDRAM_32_16 is set,I think it should be 48M,more close to 47509504
 
 == Flash Memory ==
 Here is a map of the flash memory:
