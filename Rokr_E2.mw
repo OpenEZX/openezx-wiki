@@ -108,6 +108,8 @@ Note that only mtd8 and mtd9 are mounted as block devices.  For 33P, "ITUNES" is
 
 Motorola Flash Memory Regions, label, and filename (from /etc/flashmem.map)
 
+Physical address 0 to 32M is occupied by flash chip 0 of AP,and 32M-64M by flash 1,they are both "Intel StrataFlash® Wireless Memory System (LV18/LV30 SCSP) 1024-Mbit LV family",Manufacturer Code:0x89,Device Identifier Code of chip 0:0x881c,and chip 1:8819,the datasheet can be downloaded from http://download.intel.com/design/flcomp/datashts/25385403.pdf.
+
   0x00000000 - 0x0001FFFF   caddo               (caddo_data.bin)
   0x00020000 - 0x0005FFFF   mbm                 (mbm.bin)
   0x00060000 - 0x000607FF   cdtcsf              (cdtcsf)
@@ -132,7 +134,6 @@ Motorola Flash Memory Regions, label, and filename (from /etc/flashmem.map)
   0x02600000 - 0x02600FFF   rootcsf             (rootcsf)
   0x02601000 - 0x03FFFFFF   root                (rootfs_cramfs.img)
   0xA0200000 - 0xA024FFFF   rdl                 (rdl)
-
 
 == Flashing the E2 ==
 
