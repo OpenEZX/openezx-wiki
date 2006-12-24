@@ -48,6 +48,8 @@ Default power management clock settings appear to be 104Mhz, 208Mhz, and 312Mhz 
  0xA0000000-0xA3FFFFFF  (64MB)
 
 
+This should be wrong!As the value read from MDCNFG is 0x0bae2bcd,it should have 2 SDRAM chips,1 in partition 0,size 32M,the other in partition 3,size 16M,both 16bits.
+
 45MB in-system
 
         total:    used:    free:  shared: buffers:  cached:
