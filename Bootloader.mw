@@ -15,6 +15,7 @@ Motorola has released their modified (GPL'd) blob version, see http://ftp.gpl-de
 * '''A780:''' press camera and jogdial(scrollwheel) button while power on. 
 * '''E680(i):''' press camera and volume down button while power on.
 * '''ROKR E2:''' press the camera button while powering on the ROKR E2. '''This phone don't display the blob bootscreen we see on the other phones.'''
+* '''A1200:''' press voicedial button while power on.
 
 = Communication with the bootloader =
 
