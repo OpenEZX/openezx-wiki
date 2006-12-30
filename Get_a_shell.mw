@@ -301,6 +301,8 @@ There is a samba server running on the phone. ''smbclient -L'' only shows the sh
 
 The command line will be somewhat more useful once you install busybox.
 
+At least the [[Rokr_E2|ROKR E2]] has NFS support in the kernel.  An NFS export on the host can be mounted with the "noloop" option.
+
 === Issues ===
 
 There seem to be certain A780's where the modem mode trick doesn't work on, more info on this follows.
