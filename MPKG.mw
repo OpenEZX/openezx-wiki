@@ -23,14 +23,22 @@ In this small example we will package a program called foobar.
  OsVersion=1.1       ''???''
  Shared=2            ''Where you seen icon (User1, Extra, Gamesetc.''
  Type=Application    ''What other types are available?''
+                     ''1=Sub-menu, 2=Application, 3=Browser App(?),''
+                     ''4=?(uses Action registry to launch possilby dual-use apps, such''
+                     ''as SYSqtapp/camera/camera, which is used for both still''
+                     ''and video capture, but are separate icons in the UI)''
 
 If your target ezx device supports animated icons:
 
  AniIcon=anim.gif    ''Animated gif used when icon gains focus''
 
-Other entries (may not be supported on all ezx platforms):
+Other (optional) entries (may not be supported on all ezx platforms):
 
  Args={arguments}    ''Arguments passed to Exec''
+ Visible=[0|1]       ''Application is visible to user(?)''
+ Url=[http URL]      ''For Type==3''
+ Action=[Reg Name]   ''For Type==4''
+ LockEnabled=[0|1]   ''??''
 
 ==Icons==
 
