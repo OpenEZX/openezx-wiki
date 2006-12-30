@@ -270,6 +270,14 @@ This will start logging, as per the writeable policy in /ezxlocal/ezx_aplog.cfg.
 
 */etc/init.d/ezxenvr.sh sets up all session variables necessary for executing apps.
 
+*start-stop-daemon can be used like a "sudo -u root" by scripts run as user ezx:
+
+   start-stop-daemon --start --chuid root --exec {command} (command's arguments...)
+
+Note that +s executables will fail unless user ezx makes a copy:
+
+   cp /bin/mknod /tmp/mknod; start-stop-daemon --start --chuid root --exec /tmp/mknod /tmp/device c 1 2
+
 == The motoac kernel modifications ==
 
 The Rokr E2 (and presumably the A1200) can restrict access to certain areas of the filesystem and tasks through a Motorola modified version of SELinux and policy called [[motoac]].  Motorola released the source for this under the GPL as part of their kernel source code release.
