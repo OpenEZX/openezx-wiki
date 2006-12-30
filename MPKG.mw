@@ -24,6 +24,14 @@ In this small example we will package a program called foobar.
  Shared=2            ''Where you seen icon (User1, Extra, Gamesetc.''
  Type=Application    ''What other types are available?''
 
+If your target ezx device supports animated icons:
+
+ AniIcon=anim.gif    ''Animated gif used when icon gains focus''
+
+Other entries (may not be supported on all ezx platforms):
+
+ Args={arguments}    ''Arguments passed to Exec''
+
 ==Icons==
 
 There are two different types of icons. The big and the small one.
