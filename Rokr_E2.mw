@@ -278,6 +278,8 @@ Note that +s executables will fail unless user ezx makes a copy:
 
    cp /bin/mknod /tmp/mknod; start-stop-daemon --start --chuid root --exec /tmp/mknod /tmp/device c 1 2
 
+*A set/license of the [http://www.intel.com/cd/software/products/asmo-na/eng/302910.htm Intel Performance Primitives] exists in /usr/lib/ezx/lib/libipp-??.so.  Headers can be downloaded free from the [https://registrationcenter.intel.com/EvalCenter/EvalForm.aspx?productid=599 Intel evaluation download page.]
+
 == The motoac kernel modifications ==
 
 The Rokr E2 (and presumably the A1200) can restrict access to certain areas of the filesystem and tasks through a Motorola modified version of SELinux and policy called [[motoac]].  Motorola released the source for this under the GPL as part of their kernel source code release.
