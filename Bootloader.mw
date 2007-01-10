@@ -147,6 +147,10 @@ BOOT_G_00.02.05R_SUMATRA
 
 MBM FLASH MODE
 
+The bootloader of the A1200 enters an USB BP pass through mode if you press the voice dial key in Flash mode. 
+Note that it seems to take some seconds before switching to the new mode is possible.
+
 [[Category:Development]]
 [[Category:A780]]
+[[Category:A1200]]
 [[Category:E680]]
