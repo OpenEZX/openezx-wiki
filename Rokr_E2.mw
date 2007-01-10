@@ -137,6 +137,7 @@ Physical address 0 to 32M is occupied by flash chip 0 of AP,and 32M-64M by flash
   0x02601000 - 0x03FFFFFF   root                (rootfs_cramfs.img)
   0xA0200000 - 0xA024FFFF   rdl                 (rdl)
 
+
 == Flashing the E2 ==
 
 The ROKR E2 can be flashed from linux using the [[http://moto4lin.sourceforge.net/wiki/FlashingEZX] moto4lin ezxflash tools.  The E2 AP (linux) flash data is held in a .sbf file.  Use moto4lin's ''parseheader'' then ''unsbf'' to extract the code groups (memory regions).  Some of the regions are cramfs images and can be mounted as a loopback file:
@@ -191,9 +192,10 @@ Other Code Groups:
    10350000.bin  -  ?? Contains 16-bit text "Motorola's Flash Neptune LTE2"
    10390000.bin  -  ?? Byte patterns looks like image assets
 
+
 == [[Debug Port]] ==
 
-The appears to be two [[Debug Port]]s on the Rokr E2.  The one on the front provides JTag access to the Applications Processor and access to the the ST_UART for a serial console.  The other is assumed for the base-band.
+There appears to be two [[Debug Port]]s on the Rokr E2.  The one on the front provides JTag access to the Applications Processor and access to the the ST_UART for a serial console.  The other is assumed for the base-band.
 
 
 == Kernel NFS Support ==
@@ -279,6 +281,9 @@ Note that +s executables will fail unless user ezx makes a copy:
    cp /bin/mknod /tmp/mknod; start-stop-daemon --start --chuid root --exec /tmp/mknod /tmp/device c 1 2
 
 *A set/license of the [http://www.intel.com/cd/software/products/asmo-na/eng/302910.htm Intel Performance Primitives] (verison "5.0 Gold" in ROM 33P) exists in /usr/lib/ezx/lib/libipp-??.so.  Headers can be downloaded free from the [https://registrationcenter.intel.com/EvalCenter/EvalForm.aspx?productid=599 Intel evaluation download page.]
+
+* The libezxappbase.so.1 contains a number of WiFi-related routines.
+
 
 == The motoac kernel modifications ==
 
