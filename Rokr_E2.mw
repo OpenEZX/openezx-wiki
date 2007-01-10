@@ -320,6 +320,13 @@ You can boot into flash mode by holding the "Voice Key" on the right side of the
 
 The PCM sound device driver only supports 16-bit LE audio.
 
+== ROM Version Discrepancies (from 33P) ==
+
+=== R564_G_12.00.43P ===
+
+*No MPKG installer/MPKG installer disabled (handset from China Mobile)
+
+
 == External Links ==
 
 *[https://opensource.motorola.com/sf/projects/rokre2 Official Motorola RORK E2 GPL Repository]
