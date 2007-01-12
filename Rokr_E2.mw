@@ -321,7 +321,7 @@ The ROKR 33P build's security policy can be found in the binary file /etc/acpoli
 Note that a more restrictive policy is defined for user "ezx".
 
 == Interesting Info ==
-You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the power key again, you will go into the bootloader flash mode. Remove battery to reboot.
+You can boot into flash mode by holding the "Voice Key" on the right side of the phone while powering up the phone. If you push the voice key again, you will go into the BP flash mode. Remove battery to reboot.
 
 The PCM sound device driver only supports 16-bit LE audio.
 
