@@ -18,7 +18,8 @@ Features:
 
 The [[PCAP2]] has 32 25-bit registers which can be read and written via [[Serial Peripheral Interface|SPI]]. The PCAP2 has two different SPI busses (called ''primary'' and ''secondary''). The primary SPI bus is connected to the [[Baseband Processor|baseband processor]] - the secondary is connected to the [[Application Processor|application processor]]. Some of the registers may only be written from the primary SPI bus. It is unknown if the registers accesed from the primary and secondary buses are the same or different sets.
 
-The following registers are accessible only from the primary SPI bus and their location is unknown: VREG_MASK (cont
+The following registers are accessible only from the primary SPI bus and their location is unknown: VREG_MASK (cont 
+//The orgin version missed registors,all the registors can be found in include/linux/power_ic.h, and there is another almost same copy of the registers definition in drivers/misc/ssp_pcap.h,who knows what differences are between them and why to have 2 copies  plz tell me(dotmonkey at gmail.com) :-)
 
 {| border="0" cellpadding="2" cellspacing="2" align="top"
 |- style="background:#bfbfbf; font-weight: bold"
@@ -26,69 +27,69 @@ The following registers are accessible only from the primary SPI bus and their l
 !Name
 !Description 
 |-
-|0x00 ||ISR   ||Interrupt status
+|0x00 ||ISR   ||Interrupt status regiter
 |-
-|0x01 ||MSR   ||Interrupt mask (?)
+|0x01 ||IMR   ||Interrupt mask register
 |-
-|0x02 ||PSTAT ||Power status
+|0x02 ||PSTAT ||Processor status register
 |-
-|0x03 ||???   ||
+|0x03 ||INT_SEL ||Interrupt select register
 |-
-|0x04 ||???   ||
+|0x04 ||SWCTRL   ||Switching regulator control register
 |-
-|0x05 ||???   ||
+|0x05 ||VREG1   ||Regulator bank 1 control register
 |-
-|0x06 ||VREG2    ||standby/low Power for V[1-10]
+|0x06 ||VREG2    ||Regulator bank 2 control register
 |-
-|0x07 ||AUX_VREG ||control bits for VAUX[1-4]
+|0x07 ||AUX_VREG ||Auxiliary regulator control register
 |-
-|0x08 ||BATT_DAC ||
+|0x08 ||BATT_DAC ||Battery control register
 |-
-|0x09 ||ADC1 ||
+|0x09 ||ADC1 || AtoD control register
 |-
-|0x0a ||ADC2 ||
+|0x0a ||ADC2 || AtoD result register
 |-
-|0x0b ||AUD_CODEC ||
+|0x0b ||AUD_CODEC ||Audio codec control register
 |-
-|0x0c ||AUD_RX_AMPS ||
+|0x0c ||AUD_RX_AMPS ||Rx audio amplifiers control register
 |-
-|0x0d ||ST_DAC ||
+|0x0d ||ST_DAC || Stereo DAC control register
 |-
-|0x0e ||???   ||
+|0x0e ||RTC_TOD   ||Real Time Clock time of day register
 |-
-|0x0f ||???   ||
+|0x0f ||RTC_TODA   ||RTC time of day alarm register
 |-
-|0x10 ||???   ||
+|0x10 ||RTC_DAY   ||RTC day register
 |-
-|0x11 ||???   ||
+|0x11 ||RTC_DAYA   ||RTC day alarm register
 |-
-|0x12 ||???   ||
+|0x12 ||MTRTMR  ||AtoD monitor timer register
 |-
-|0x13 ||???   ||
+|0x13 ||PWRCTRL   ||Power control register.
 |-
-|0x14 ||BUSCTRL ||
+|0x14 ||BUSCTRL ||Connectivity register
 |-
-|0x15 ||PERIPH || Backlight / LED control
+|0x15 ||PERIPH || Peripheral control register
 |-
-|0x16 ||???   ||
+|0x16 ||AUX_VREG_MASK   ||Auxiliary regulator mask register
 |-
-|0x17 ||???   ||
+|0x17 ||VENDOR_REV   ||
 |-
-|0x18 ||LOWPWR_CTRL ||
+|0x18 ||LOWPWR_CTRL ||Regulator low power control register
 |-
-|0x19 ||???   ||
+|0x19 ||PERIPH_MASK  ||Peripheral control register
 |-
-|0x1a ||TX_AUD_AMPS ||
+|0x1a ||TX_AUD_AMPS ||Tx audio amplifiers control register
 |-
-|0x1b ||GP_REG ||
+|0x1b ||GP    || General purpose register
 |-
-|0x1c ||???   ||
+|0x1c ||TEST1   ||
 |-
-|0x1d ||???   ||
+|0x1d ||TEST2  ||
 |-
-|0x1e ||???   ||
+|0x1e ||VENDOR_TEST1   ||
 |-
-|0x1f ||???   ||
+|0x1f ||VENDOR_TEST2   ||
 |}
 
 == VAUX2 ==
