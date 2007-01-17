@@ -200,13 +200,12 @@ There appears to be two [[Debug Port]]s on the Rokr E2.  The one on the front pr
 
 == Kernel NFS Support ==
 
-The ROKR E2's kernel (v 33P) has static NFS support.  After starting a [[get_a_shell|telnet session]], an exported NSF volume can be mounted with:
+The ROKR E2's kernel has static NFS support.  After starting a [[get_a_shell|telnet session]], an exported NSF volume can be mounted with:
 
   mkdir /tmp/mnt
   mount -t nfs 192.168.1.1:/{export} /tmp/mnt -o nolock
 
 Note that 'nolock' must be used, as no port mapper exists on the phone.
-
 
 == Media Player ==
 Seems to use Helix 10.0 mediaplayer for tunes. However it is missing the oggfformat.so plugin so Ogg/Vorbis files do not play on this device (yet!)
