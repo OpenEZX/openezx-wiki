@@ -49,9 +49,9 @@ There are two different types of icons. The big and the small one.
 
 =Create a package=
 
-$ tar czf foobar.mpkg foobar
+$ tar -czf foobar.mpkg --numeric-owner --owner=2000 --group=2000 foobar
 
-NOTE:  At least the app manager for the ROKR E2 in version 45P preserves the tar files' uid and gid attributes (b.  When installing to the memory card this should not make any difference, as vfat does not support uid or gid attributes.  However, when installing to the phone's memory (/ezxlocal), this can prohibit write access to the installed directory if 'ezx' is not the owner.
+NOTE:  At least the app manager for the ROKR E2 in version 45P preserves the tar files' uid and gid attributes (but not permissions).  When installing to the memory card this should not make any difference, as FAT does not support uid or gid attributes.  However, when installing to the phone's memory (/ezxlocal), this can prohibit application write access to the installed directory if 'ezx' is not the owner.
 
 =Install a package=
 
