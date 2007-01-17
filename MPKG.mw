@@ -51,6 +51,8 @@ There are two different types of icons. The big and the small one.
 
 $ tar czf foobar.mpkg foobar
 
+NOTE:  At least the app manager for the ROKR E2 in version 45P preserves the tar files' uid and gid attributes (b.  When installing to the memory card this should not make any difference, as vfat does not support uid or gid attributes.  However, when installing to the phone's memory (/ezxlocal), this can prohibit write access to the installed directory if 'ezx' is not the owner.
+
 =Install a package=
 
 '''A780:''' This phone can handle mpkg natively. European phones have MPKG installer disabled. A special MPKG installer or flashed phone is required. I don't know if the same is aplicable for Asian A780's
