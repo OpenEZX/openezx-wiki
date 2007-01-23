@@ -7,6 +7,9 @@ level shifter like MAX3232 and a power source for the MAX3232.
 
 In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add '''console=ttyS0,115200n8 console=tty0''' to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages on the framebuffer at the same time.
 
+In order to login via serial console you have to make sure the following line is in /etc/inittab:<br>
+T0:23:respawn:/sbin/getty -L ttyS0 115200 vt100
+
 The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch via a config option. 
 
 === Build your own [[EMU]] - serial adapter ===
