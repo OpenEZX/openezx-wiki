@@ -1,4 +1,4 @@
-The BP is a ARM7TDMI core that implements the GSM stack. Digital baseband processing is done by an Onyx (566xx) DSP core that is next to the ARM7TDMI.  Like the AP, it has a JTAG port that is connected to easily-accessible pads on the PCB.
+The BP is a ARM7TDMI core that implements the GSM stack. Digital baseband processing is done by an Onyx (566xx) DSP core that is next to the ARM7TDMI.  Like the AP, it has a [[JTAG]] port that is connected to easily-accessible pads on the PCB.
 
 The BP used in the EZX Phones is a Freescale "Neptune LTE", which is an "E"DGE enhanced version of some prior Neptune chipset.  A number of non-smart GSM Phones from Motorola have only a version of that BP (and no AP).
 
