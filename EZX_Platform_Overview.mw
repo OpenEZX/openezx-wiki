@@ -39,7 +39,7 @@ EZX family subset names and their handsets (some help here)
 *directly attached to camera module
 
 
-====Baseband Processor ([http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=i.250-22&nodeId=01J4Fsm6cyHs6S Neptune LTE Platform])====
+====[[Baseband_Processor|Baseband Processor]] ([http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=i.250-22&nodeId=01J4Fsm6cyHs6S Neptune LTE Platform])====
 
 *contains ARM7TDMI for GSM stack
 *contains 566xx DSP for digital baseband
@@ -50,7 +50,6 @@ EZX family subset names and their handsets (some help here)
 *Connects to GSM SIM module
 *8MB external flash
 *2MB external RAM
-
 
 ====AGPS Processor (Motorola Telematics MG4100)====
 
