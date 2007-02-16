@@ -108,6 +108,12 @@ Steps:
 * At some later point, the work queue invokes the send_worker function. All waiting frames at that point are processed, for each frame checking that the underlying driver is connected and capable of handling the frame (by calling mux_chars_in_serial_buffer) before invoking the basic_write method to transfer the frame to the underlying driver (usb currently).
 
 
+'''Using a line discipline'''
+
+
+The ts0710_mux driver requires particular methods to be called upon data being sent or data being received. The names are encapsulated in defines COMM_MUX_SENDER and COMM_MUX_DISPATCHER. The use of these hardcoded names restricts portability, requiring that each transport be modified to call these methods at the correct time.
+
+To remove this dependency, and to allow for traversal between muxed and non muxed modes, a line discipline can be used. The line discipline is then responsible for calling the hardcoded ts0710_mux method, allowing the multiplexing protocol to be used with any transport. The user can switch between muxed and non muxed operation by switching the line discipline associated, using ioctl call TIOCSETD.
 
 
 '''TODO - coming soon'''
