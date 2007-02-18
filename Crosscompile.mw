@@ -17,4 +17,6 @@ If you are using an RPM-based Linux distribution, you can try the toolchain avai
 
 Another possibility is to use the [http://www.mkezx.org/ MkEzx build framework] which starts by building a crosstool based on ezx-crosstool then allows  you to produce native application by automatically fetching source code, applying patches, cross-compiling and building packages for you. MkEzx also features a Gtk+ graphic user interface called gmkezx.
 
+There is also a package with the bits needed to build a Motorola compatible toolchain with openembedded. Mickey has done it: http://www.linuxtogo.org/~mickeyl/tools/oe-iwmmxt.tar.bz2
+
 [[Category:Development]]
