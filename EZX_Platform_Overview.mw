@@ -26,18 +26,17 @@ EZX family subset names and their handsets (some help here)
 *A PXA270 Xscale (AP) based PDA in one case
 
 
-====Application Processor ([http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm PXA270])====
+====Application Processor ([http://www.chipdocs.com/datasheets/datasheet-pdf/Intel/PXA270.html PXA270])====
 
 *Runs heavily modified linux-2.4.20 kernel
 *48MB RAM
-*48MB "wireless" flash
+*32MB "wireless" [http://www.intel.com/design/flcomp/datashts/252633.htm StrataFlash]
 *software-configurable clock speed up to 400MHz
 *JTAG port on test pads, BSDL file and JFlash available
 *SPI/SSP interface to PCAP and BP
 *directly attached to LCD display
 *directly attached to touch screen, buttons
 *directly attached to camera module
-
 
 ====[[Baseband_Processor|Baseband Processor]] ([http://www.freescale.com/webapp/sps/site/prod_summary.jsp?code=i.250-22&nodeId=01J4Fsm6cyHs6S Neptune LTE Platform])====
 
