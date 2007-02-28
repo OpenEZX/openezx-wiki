@@ -31,6 +31,7 @@ EZX family subset names and their handsets (some help here)
 *Runs heavily modified linux-2.4.20 kernel
 *48MB RAM
 *32MB "wireless" [http://www.intel.com/design/flcomp/datashts/252633.htm StrataFlash]
+** contains bootloader, kernel, rootfs, /ezxlocal, /usr/setup and a logo bitmap.
 *software-configurable clock speed up to 400MHz
 *JTAG port on test pads, BSDL file and JFlash available
 *SPI/SSP interface to PCAP and BP
@@ -76,6 +77,10 @@ EZX family subset names and their handsets (some help here)
 *quad-band power amplifier (TX)
 
 
+===Flash chips ([http://www.m-systems.com/NR/rdonlyres/9D12C607-DE69-4270-B7DF-D869456DD683/0/DiskOnChip_Based_MCP07_Rev10.pdf DiskOnChip based MCP])===
+*16MB SDRAM
+*64MB DiskOnChip G3
+**contains /diska and /usr/language
 
 ==Software==
 
