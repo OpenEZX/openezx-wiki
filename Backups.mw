@@ -55,7 +55,7 @@ You may also want to include the date in your output file name (e.g., <code>/cyg
  cd /cygdrive/g
  tar czf /cygdrive/c/mmc01.tgz .
 
-The only thing you cannot backup this way is the /ezxlocal file system since this isn't availble (without hacking) when in mass storage mode.  Once you get LinLoader and/or telnet running, it's a relativly simple task using either a shell script or the [[Guides::Backups#Backup_Flash_Disks_With_netcat method]]
+The only thing you cannot backup this way is the /ezxlocal file system since this isn't availble (without hacking) when in mass storage mode.  Once you get LinLoader and/or telnet running, it's a relativly simple task using either a shell script or the Guides::Backups#Backup_Flash_Disks_With_netcat method
 
 ====Linux Users====
 
