@@ -925,6 +925,6 @@ AT+SHOW:
 
 AT+STTONE
 
-AT+USBSTAT=%d,%d
+AT+USBSTAT=%d,%d: This command is needed on at least [[A780]]/[[E680]] to turn off the watchdog in the [[BP]]. On this phones the [[BP]] is connected through USB.
 
 AT+VA=%d
