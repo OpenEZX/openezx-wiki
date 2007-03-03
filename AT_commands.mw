@@ -12,6 +12,13 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/
 
 http://www.3gpp.org/ftp/Specs/archive/27_series/
 
+'''All official commands should not be listed here. They are defined in the standards and should not been duplicated here.'''
+
+TODO:
+
+* Remove official AT commands from this list.
+* Describe the other commands.
+
 === Supported AT commands of the [[BP]] ===
 
 AT+ALERT
