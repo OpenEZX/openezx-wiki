@@ -4,7 +4,7 @@ The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302
 * ARMv5TE ARM core
 * [http://www.intel.com/design/pca/prodbref/251669.htm iWMMX] extensions
 * 48MB of RAM
-* 48MB of DiskOnChip Flash memory
+* 32MB "wireless" StrataFlash Flash memory
 * SD I/O (SDCard/MMC/Transflash/MemoryStick/...) Interface
 * SIM card interface (not used)
 * SpeedStep Power management
