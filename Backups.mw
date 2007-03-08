@@ -1,13 +1,17 @@
 Before hacking on your EZX phone you should probably create backups of all contents on the phone, as things may break.
 
+==What you need to backup==
+
+To fully backup your EZX phone, you have to backup the firmware and user data.
+
 ===Flash Disks===
 
 The [[A780]] has two internal flash devices, a 32 MB "wireless" StrataFlash and a 64 MB DiskOnChip in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to SD slot. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via netcat, dd or tar (explained below).
 
 ===Firmware===
 
-The part of the firmware that is on StrataFlash contains the data for the root file system, the [[bootloader]], Kernel, /usr/setup, /ezxlocal and a logo.
-The part that is on the DiskOnChip contains /usr/language and /diska.
+The part of the firmware that is on StrataFlash contains the data for the root file system, the [[bootloader]], Kernel, /usr/setup and a logo.
+The part that is on the DiskOnChip contains /usr/language.
 Looking at the [[A780]] mount points:
 
  # df -k
@@ -21,6 +25,9 @@ Looking at the [[A780]] mount points:
  /dev/mmca1              246912    193056     53856  79% /mmc/mmca1
 
 the devices /dev/root and /dev/roflash2 are mounted from the StrataFlash. However, they cannot be accurately copied from the filesystem. DumpFW (below) will solve this problem.
+
+===User data===
+The /diska and /ezxlocal contains user data, they can be copied easily with dd ou tar.
 
 ==Using USBLAN Mode==
 
