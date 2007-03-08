@@ -1,9 +1,5 @@
 Before hacking on your EZX phone you should probably create backups of all contents on the phone, as things may break.
 
-==What You Will Need To Backup==
-
-There are two essential pieces of data that should be backed up: the firmware and the DiskOnChip.
-
 ===Flash Disks===
 
 The [[A780]] has two internal flash devices, a 32 MB "wireless" StrataFlash and a 64 MB DiskOnChip in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to SD slot. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via netcat, dd or tar (explained below).
