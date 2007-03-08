@@ -2,15 +2,17 @@ Before hacking on your EZX phone you should probably create backups of all conte
 
 ==What You Will Need To Backup==
 
-There are two essential pieces of data that should be backed up: the flash disk(s) and the firmware.
+There are two essential pieces of data that should be backed up: the firmware and the DiskOnChip.
 
 ===Flash Disks===
 
-The [[A780]] has an internal 48 MB disk-on-a-chip flash drive in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to SD slot. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via netcat, dd or tar (explained below).
+The [[A780]] has two internal flash devices, a 32 MB "wireless" StrataFlash and a 64 MB DiskOnChip in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to SD slot. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via netcat, dd or tar (explained below).
 
 ===Firmware===
 
-The firmware is on [[TODO|(TODO: What hardware device specifically?)]] and contains the data for the root file system, the [[bootloader]] and who knows what else [[TODO|(somebody educated fill this in please)]]. Looking at the [[A780]] mount points:
+The part of the firmware that is on StrataFlash contains the data for the root file system, the [[bootloader]], Kernel, /usr/setup, /ezxlocal and a logo.
+The part that is on the DiskOnChip contains /usr/language and /diska.
+Looking at the [[A780]] mount points:
 
  # df -k
  Filesystem           1k-blocks      Used Available Use% Mounted on
@@ -22,7 +24,7 @@ The firmware is on [[TODO|(TODO: What hardware device specifically?)]] and conta
  /dev/tffsb1              40858     11230     29628  28% /diska
  /dev/mmca1              246912    193056     53856  79% /mmc/mmca1
 
-the devices /dev/root, /dev/tffsa (?), and /dev/roflash2 are mounted from firmware devices [[TODO|(again, please verify)]]. However, the firmware cannot be accurately copied from the filesystem. DumpFW (below) will solve this problem.
+the devices /dev/root and /dev/roflash2 are mounted from the StrataFlash. However, they cannot be accurately copied from the filesystem. DumpFW (below) will solve this problem.
 
 ==Using USBLAN Mode==
 
