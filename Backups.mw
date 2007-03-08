@@ -27,7 +27,7 @@ Looking at the [[A780]] mount points:
 the devices /dev/root and /dev/roflash2 are mounted from the StrataFlash. However, they cannot be accurately copied from the filesystem. DumpFW (below) will solve this problem.
 
 ===User data===
-The /diska and /ezxlocal contains user data, they can be copied easily with dd ou tar.
+The /diska(on the DiskOnChip) and /ezxlocal(on the StrataFlash) contains user data, they can be copied easily with dd or tar.
 
 ==Using USBLAN Mode==
 
