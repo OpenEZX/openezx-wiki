@@ -37,11 +37,13 @@
 = Bootloader =
 
 * Use u-boot
-** Flash support
+** Use u-boot as a secondary bootloader
+** Flash support (CFI)
 ** TF/SD support
 ** Network support
 ** Commandinterface over usb.
 ** Firmware updates.
+** Use u-boot as a primary bootloader
 
 = Userspace (Openembedded and others) =
 
