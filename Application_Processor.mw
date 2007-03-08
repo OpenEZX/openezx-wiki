@@ -1,6 +1,6 @@
 The main processing unit of a computing device.  This unit is what runs the operating system as well as all user applications.
 
-The CPU is a [http://www.intel.com/design/embeddedpca/applicationsprocessors/302302.htm Intel PXA270]:
+The CPU is a [http://www.chipdocs.com/datasheets/datasheet-pdf/Intel/PXA270.html Intel PXA270]:
 * ARMv5TE ARM core
 * [http://www.intel.com/design/pca/prodbref/251669.htm iWMMX] extensions
 * 48MB of RAM
