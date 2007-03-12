@@ -6,6 +6,7 @@
 ** Port and cleanup sound drivers (oss -> alsa (ASoC))
 * Power Management
 ** Add 'device power off' mode so 'halt -p' works
+** Add suspend/resume support
 ** Port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
 ** Add DPM bits to all other drivers
 ** Test, try, fail...
