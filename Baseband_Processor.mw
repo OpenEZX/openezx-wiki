@@ -4,7 +4,7 @@ The BP used in the EZX Phones is a Freescale "Neptune LTE", which is an "E"DGE e
 
 The BP runs the Nucleus operating system (produced by Mentor Graphics) from it's own 32MBit Flash.
 
-AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB link ''IPC'' for Inter-Processor Communication.  In addition to the usb lines, there are a couple of handshake signals between AP and BP.
+AP and BP are connected via USB (AP: Host, BP: Device).  Motorola calls this USB link ''IPC'' for Inter-Processor Communication.  In addition to the usb lines, there are a couple of [[BP_Handshake | handshake]] signals between AP and BP.
 
 
 Processing unit dedicated to [http://en.wikipedia.org/wiki/Baseband baseband] functions.  (somebody want to clarify this?)
