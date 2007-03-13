@@ -7,7 +7,7 @@
 * GPIO_BB_WDI:
 ** only if CONFIG_PM: interrupt handler that queues KRNL_BP_WDI event
 
-* GPIO_BB_RDY:
+* GPIO_BP_RDY:
 ** has irq handler, during handshake BOTH_EDGES, after handshake FALLING edge
 ** as long as handshake is not completed, calls handshake()
 ** if handshake has just completed, disable WDI2 irq and reconfig RDY to FALLING
