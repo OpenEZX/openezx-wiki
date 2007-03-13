@@ -1,0 +1,35 @@
+== handshake / interaction pins between AP and BP. ==
+
+* GPIO_BB_WDI2:
+** if this ever goes LOW during or before handshake, we power off the AP.
+** has FALLING_EDGE IRQ handler, which powers down the phone
+
+* GPIO_BB_WDI:
+** only if CONFIG_PM: interrupt handler that queues KRNL_BP_WDI event
+
+* GPIO_BB_RDY:
+** has irq handler, during handshake BOTH_EDGES, after handshake FALLING edge
+** as long as handshake is not completed, calls handshake()
+** if handshake has just completed, disable WDI2 irq and reconfig RDY to FALLING
+** if handshake is over, submit read urb
+
+
+== handshake itself ==
+
+* step1 (blob):
+** MCU_INT_SW as input, BP_RDY as input
+** if they both come up as high, increment step and break
+** if timeout exceeded, power off
+** '''this step requires that you keep the power button pressed.'''
+
+* step2 (kernel):
+** if BP_RDY == LOW
+*** config INT_SW as output, set it to LOW
+*** increment step
+*** '''The BP watchdog timer starts after completing step2.'''
+
+* step3 (kernel):
+** if (BP_RDY == HIGH)
+*** increment step
+*** delay_backlight? (timer in 0.3sec), switches on bklight
+*** set INT_SW to HIGH
