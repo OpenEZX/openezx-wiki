@@ -22,7 +22,7 @@
 * SPI (arch/arm/mach-pxa/spi.c)
 ** Consider using ssp-interrupt-based transfers for stuff like touchscreen and only use polling drivers from within interrupt handler.  Or even better: make interrupt priorities work in a way that the PCAP interrupt chaining handler can use interrupt-based SPI transfers (unrealistic, but worth invesetigating)
 * AP/BP interaction
-** implement handshake procedure to put BP in non-flash-mode
+** implement [[BP_Handshake | handshake]] procedure to put BP in non-flash-mode
 ** Finish reimplementation of mux_cli and grpsv modules
 * Fix bluetooth init. Test with the in kernel driver.
 * Make GPS data available to userspace. The gps is connected at BP. ([[A780]] only)
