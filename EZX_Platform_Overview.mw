@@ -29,7 +29,7 @@ EZX family subset names and their handsets (some help here)
 ====Application Processor ([http://www.chipdocs.com/datasheets/datasheet-pdf/Intel/PXA270.html PXA270])====
 
 *Runs heavily modified linux-2.4.20 kernel
-*48MB RAM ([http://wiki.openezx.org/Talk:EZX_Platform_Overview See discussion])
+*48MB RAM
 *32MB "wireless" [http://www.intel.com/design/flcomp/datashts/252633.htm StrataFlash]
 ** contains bootloader, kernel, rootfs, /ezxlocal, /usr/setup and a logo bitmap.
 *software-configurable clock speed up to 400MHz
