@@ -1,5 +1,6 @@
 The A780 camera is a OmniVision OV9640 1.3MegaPixel Camera Module. It is directly attached to the AP.
 
+Looks like there are multiple camera modules..
 My a780 reports a mt9m111 Camera module on the 2.4 dmesg. - WyrM
 
 
