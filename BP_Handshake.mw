@@ -20,20 +20,19 @@
 ** MCU_INT_SW as input, BP_RDY as input
 ** if they both come up as high, increment step and break
 ** if timeout exceeded, power off
-** '''this step requires that you keep the power button pressed.'''
+** '''this step requires that you keep the power button pressed. Otherwise BP_WDI2 goes LOW on step3'''
 
 * step2 (kernel):
 ** if BP_RDY == LOW
 *** config INT_SW as output, set it to LOW
 *** increment step
-*** '''The BP watchdog timer starts after completing step2.'''
+*** '''The BP watchdog timer starts after completing step2.(or step3? im not sure)'''
 
 * step3 (kernel):
 ** if (BP_RDY == HIGH)
 *** increment step
 *** delay_backlight? (timer in 0.3sec), switches on bklight
 *** set INT_SW to HIGH
-
 
 == Other sources of information ==
 [http://lists.openezx.org/pipermail/openezx-devel/2006-May/000372.html][http://lists.openezx.org/pipermail/openezx-devel/2006-May/000435.html] - Harald Welte's emails about BP handshake.
