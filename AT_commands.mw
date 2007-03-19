@@ -14,12 +14,41 @@ http://www.3gpp.org/ftp/Specs/archive/27_series/
 
 '''All official commands should not be listed here. They are defined in the standards and should not been duplicated here.'''
 
-TODO:
+== Sound / Call related ==
+*AT+EACC=<val> (mux4)
+**64 turns loudspeaker ON, 0 turn it off.
+*AT+DTSE= "<val>",1 (mux0)
+**Sends <val> dtmf tone.
+**I dont know why they dont used the standard +VTS
+
+== BlueTooth related ==
+*AT+EBTP=<val> (mux4)
+**Turns bluetooth on (1) and off (0)
+
+== Time / Alarm related ==
+*All commands (and replies) use a date in the format: "<year>/<month>/<day>,<hour>:<minute>:<second>"
+*AT+ENTTIME=<val> (mux4)
+**Gets the network time
+**with <val>=1 replies with +ETIME: "<datetime>"
+*AT+ERTCAV=0 (mux4)
+**Turns all alarms off.
+*AT+ERTCAV=1, "<val>" (mux4)
+**Turns the phone on at time <val>. Used for the alarm. Repeat to add more.
+
+== GPRS / Call related ==
+*AT+CAPF= 12,1,1 (mux6)
+**Turns GPRS ON
+*AT+CAPF= 12,1,0 (mux6)
+**Turns GPRS OFF
+*AT+ESPN
+** Unknown - Appears as a query command (? at the end) when turning gprs on.
+
+== TODO: ==
 
 * Remove official AT commands from this list.
 * Describe the other commands.
 
-=== Supported AT commands (and replies) of the [[BP]] ===
+=== All supported AT commands (and replies) of the [[BP]] ===
 
 AT+ALERT
 
@@ -91,8 +120,6 @@ AT+CCFC_ERROR:
 
 AT+CCFC_OK
 
-AT+CCLK
-
 AT+CCTP:
 
 AT+CCWA:
@@ -141,10 +168,6 @@ AT+CFSN
 
 AT+CFSN:%%%dS
 
-AT+CFUN=0
-
-AT+CFUN=1
-
 AT+CGACT?
 
 AT+CGACT:%8D,%8D
@@ -157,68 +180,7 @@ AT+CGATT?
 
 AT+CGATT=%d
 
-AT+CGDCONT
-
-AT+CGDCONT?
-
-AT+CGDCONT:%%8D,%%%dc,%%%dc,%%%dc,%%8d,%%8d
-
-AT+CGEQMIN
-
-AT+CGEQMIN?
-
-AT+CGEQMIN:%%8D,%%32D,%%16D,%%16D,%%16D,%%16D,%%32D,%%16D,%%%dS,%%%dS,%%32D,%%16D,%%16D
-
-AT+CGEQREQ
-
-AT+CGEQREQ?
-
-AT+CGEQREQ:%%8D,%%32D,%%16D,%%16D,%%16D,%%16D,%%32D,%%16D,%%%dS,%%%dS,%%32D,%%16D,%%16D
-
-AT+CGPADDR=
-
-AT+CGPADDR:%%8D,%%%dC
-
-AT+CGQMIN
-
-AT+CGQMIN=?
-
-AT+CGQMIN:
-
-AT+CGQMIN?
-
-AT+CGQMIN:%8D,%32d,%32d,%32d,%32d,%32d
-
-AT+CGQREQ
-
-AT+CGQREQ=?
-
-AT+CGQREQ:
-
-AT+CGQREQ?
-
-AT+CGQREQ:%8D,%32d,%32d,%32d,%32d,%32d
-
-AT+CGREG:
-
-AT+CGREG?
-
-AT+CGREG:%%8D,%%8D,%%4s,%%4S
-
-AT+CGREG=%d
-
-AT+CGSMS:
-
-AT+CGSMS?
-
-AT+CGSMS=%d
-
-AT+CGSN
-
-AT+CGSN:%%%dS
-
 AT+CGTACT
-
 
 AT+CIEV:
 
@@ -235,48 +197,6 @@ AT+CLCC:%%8D,%%8D,%%8D,%%8D,%%8D,%%%ds,%%8D,%%%du
 AT+CLCH
 
 AT+CLCH:%32d
-
-AT+CLCK:%8D,%8D
-
-AT+CLCK="AB",2
-
-AT+CLCK="AB",%d,"%s",%d
-
-AT+CLCK="AC",2
-
-AT+CLCK="AC",%d,"%s",%d
-
-AT+CLCK="AG",2
-
-AT+CLCK="AG",%d,"%s",%d
-
-AT+CLCK="AI",2
-
-AT+CLCK="AI",%d,"%s",%d
-
-AT+CLCK="AO",2
-
-AT+CLCK="AO",%d,"%s",%d
-
-AT+CLCK="FD",2
-
-AT+CLCK="FD",%d,"%s"
-
-AT+CLCK="IR",2
-
-AT+CLCK="IR",%d,"%s",%d
-
-AT+CLCK="OI",2
-
-AT+CLCK="OI",%d,"%s",%d
-
-AT+CLCK="OX",2
-
-AT+CLCK="OX",%d,"%s",%d
-
-AT+CLCK="SC",2
-
-AT+CLCK="SC",%d,"%s"
 
 AT+CLIN:
 
