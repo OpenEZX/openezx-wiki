@@ -19,7 +19,7 @@ TODO:
 * Remove official AT commands from this list.
 * Describe the other commands.
 
-=== Supported AT commands of the [[BP]] ===
+=== Supported AT commands (and replies) of the [[BP]] ===
 
 AT+ALERT
 
