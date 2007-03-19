@@ -20,7 +20,7 @@
 ** MCU_INT_SW as input, BP_RDY as input
 ** if they both come up as high, increment step and break
 ** if timeout exceeded, power off
-** '''this step requires that you keep the power button pressed. Otherwise BP_WDI2 goes LOW on step3'''
+** '''this step requires that you keep the power button pressed. Otherwise BB_WDI2 goes LOW on step3'''
 
 * step2 (kernel):
 ** if BP_RDY == LOW
