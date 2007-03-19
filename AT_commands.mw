@@ -47,6 +47,7 @@ http://www.3gpp.org/ftp/Specs/archive/27_series/
 
 * Remove official AT commands from this list.
 * Describe the other commands.
+* On which mux device USBSTAT is sent??
 
 === All supported AT commands (and replies) of the [[BP]] ===
 
