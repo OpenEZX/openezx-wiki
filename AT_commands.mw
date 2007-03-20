@@ -55,22 +55,6 @@ AT+ALERT
 
 AT+BTTONE
 
-AT+CAMM:
-
-AT+CAMM?
-
-AT+CAMM="%s"
-
-AT+CAOC:
-
-AT+CAOC=0,0
-
-AT+CAOC=0,5
-
-AT+CAOC=0,%d
-
-AT+CAOC:%%%dS
-
 AT+CAPF=12,1,%d
 
 AT+CBM:
@@ -81,55 +65,7 @@ AT+CBSM?
 
 AT+CBSM=%d
 
-AT+CBST?
-
-AT+CBST:%16D,%8D,%8D
-
-AT+CBST=%d,%d,%d
-
-AT+CCFC
-
-AT+CCFC:
-
-AT+CCFC=0,%d,"%s",%d,1
-
-AT+CCFC=0,%d,"%s",%d,2
-
-AT+CCFC=0,%d,"%s",%d,4
-
-AT+CCFC=1,%d,"%s",%d,1
-
-AT+CCFC=2,2,,,1
-
-AT+CCFC=2,%d,"%s",%d,1
-
-AT+CCFC=3,%d,"%s",%d,1
-
-AT+CCFC=4,4
-
-AT+CCFC=4,4,,,1
-
-AT+CCFC=5,%d,"%s",%d,1
-
-AT+CCFC=%d,2,,,1
-
-AT+CCFC=%d,2,,,2
-
-AT+CCFC=%d,2,,,4
-
-AT+CCFC_ERROR:
-
-AT+CCFC_OK
-
 AT+CCTP:
-
-AT+CCWA:
-
-AT+CCWA=1,%d,1
-
-AT+CCWA=,2
-
-AT+CCWA:%8D,%8D
 
 AT+CDSM=%d,%d
 
@@ -169,45 +105,11 @@ AT+CFSN
 
 AT+CFSN:%%%dS
 
-AT+CGACT?
-
-AT+CGACT:%8D,%8D
-
-AT+CGACT=%d,%d
-
-AT+CGATT:
-
-AT+CGATT?
-
-AT+CGATT=%d
-
-AT+CGTACT
-
-AT+CIEV:
-
-AT+CIMI
-
-AT+CIMI:%%%dS
-
-AT+CKPD=%c
-
-AT+CLCC
-
-AT+CLCC:%%8D,%%8D,%%8D,%%8D,%%8D,%%%ds,%%8D,%%%du
-
 AT+CLCH
 
 AT+CLCH:%32d
 
 AT+CLIN:
-
-AT+CLIP:
-
-AT+CLIR?
-
-AT+CLIR:%8D,%8D
-
-AT+CLIR=%d
 
 AT+CLK:
 
@@ -216,10 +118,6 @@ AT+CLNIR?
 AT+CLNIR:%8D
 
 AT+CLNIR=%d
-
-AT+CLVL=%d
-
-AT+CME ERROR:
 
 AT+CMEP:
 
@@ -241,125 +139,15 @@ AT+CMGS:%8D
 
 AT+CMGS=%d
 
-AT+CMOD:
-
-AT+CMOD?
-
-AT+CMOD=%d
-
 AT+CMPN:
-
-AT+CMS ERROR:
 
 AT+CMSM:
 
 AT+CMT:
 
-AT+CMUT=%d
-
-AT+COLP:
-
-AT+COPS=?
-
-AT+COPS=%d,2,"%s"
-
-AT+COPS:%%%ds
-
-AT+CPBR:
-
-AT+CPBR:%%16D,%%%dS,%%8D,%%%dU
-
-AT+CPBR:%%%dR,%%8d,%%8d
-
-AT+CPBS:%%%dS,%%16d,%%16D
-
-AT+CPBS="FD";+CPBR=?
-
-AT+CPBS="FD";+CPBR=%d,%d
-
-AT+CPBS="FD";+CPBS?
-
-AT+CPBS="FD";+CPBW
-
-AT+CPBS="FD";+CPBW=%d
-
-AT+CPBS="ON";+CPBR=?
-
-AT+CPBS="ON";+CPBR=%d,%d
-
-AT+CPBS="ON";+CPBS?
-
-AT+CPBS="ON";+CPBW
-
-AT+CPBS="ON";+CPBW=%d
-
-AT+CPBS="%s";+CPBR=?
-
-AT+CPBS="%s";+CPBS?
-
-AT+CPBS="SD";+CPBR=?
-
-AT+CPBS="SD";+CPBR=%d,%d
-
-AT+CPBS="SD";+CPBS?
-
-AT+CPBS="SM";+CPBR=?
-
-AT+CPBS="SM";+CPBR=%d,%d
-
-AT+CPBS="SM";+CPBS?
-
-AT+CPBS="SM";+CPBW
-
-AT+CPBS="SM";+CPBW=%d
-
-AT+CPIN?
-
-AT+CPIN=1,"%s"
-
-AT+CPIN=2,"%s"
-
-AT+CPIN:%%%dS
-
-AT+CPOL?
-
-AT+CPOL:%%8D,%%8D,%%%dS
-
-AT+CPOL=%d,2
-
-AT+CPOL=%d,2,"%s"
-
-AT+CPUC?
-
-AT+CPUC:%%%dS,%%%dS
-
-AT+CPUC="%s","%s"
-
 AT+CPUR=1;+CPIN="%s","%s"
 
-AT+CPWD="AB","%s","%s"
-
-AT+CPWD="P2","%s","%s"
-
-AT+CPWD="PK","%s","%s"
-
-AT+CPWD="SC","%s","%s"
-
 AT+CPWR=%d
-
-AT+CREG:
-
-AT+CREG?
-
-AT+CREG:%%8D,%%8D,%%4s,%%4S
-
-AT+CREG=%d
-
-AT+CRLP
-
-AT+CRLP?
-
-AT+CRLP:%16D,%16D,%16D,%16D,%8d,%16d
 
 AT+CRRM
 
@@ -380,8 +168,6 @@ AT+CSCL?
 AT+CSCL:%8d
 
 AT+CSCL=%d,%d
-
-AT+CSIM:
 
 AT+CSMS?
 
