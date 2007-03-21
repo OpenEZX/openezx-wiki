@@ -1,7 +1,7 @@
 = Kernel =
 * Stress test the 48MB ram.
 * Video
-** Port and cleanup video capture driver (camera)
+** Test, finish porting and cleanup video capture driver (camera)
 * Sound
 ** Port and cleanup sound drivers (oss -> alsa (ASoC))
 * Power Management
@@ -15,7 +15,7 @@
 ** Use a reasonable keymap
 ** Add driver for keypad backlight (pcap-based). Question: What kind of userspace interface (if any)
 * Touchscreen (drivers/input/touchscreen/pcap_ts.c)
-** Test and finalize touchscreen driver
+** Clean-up touchscreen driver
 * MMC/SD/TF (drivers/mmc/pxamci.c)
 ** Find out why 4-bit wide MMC/SD transfers don't seem to work with LaF0rge's patch
 ** Port various fixes from OpenTom SD/MMC stack
