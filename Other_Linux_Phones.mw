@@ -4,7 +4,7 @@ This page collects information about non-Motorola Linux-based mobile phones. Thi
 
 * [http://www.imcosys.com/ ImCoSys Smartphone] TI OMAP 730-Prozessor 200 MHz, Quadband-GSM, GPRS, Bluetooth 1.2, WLAN IEEE 802.11b, USB, RS232, 64MB Flash, 64MB RAM - but where are the sources?
 (announced for June 2006) (The company reports on their webpage that the OS is an Embedded Linux. I noticed on a reseller page that it is not covered by the GPL. I sent an email to the company and it answered that in fact the phone does not base on Linux. Looks like a GPL violation or a confusion between the marketing and the development guys. I contact them again and will update the entry after the next answer. ... After more than two weeks the company does not react. So there are only two possibilities. First if their answer was correct then they misuse the name Linux to promote their phone or second they violate the GPL. The website still notice that it is a Linux inside.) 
-* [http://linuxdevices.com/articles/AT2559540724.html Grundig Dreamphone G500i] developed by Purple Labs (did they release source code yet?)
+* [http://linuxdevices.com/articles/AT2559540724.html Grundig Dreamphone G500i] [http://www.grundigmobile.com/mobilephones/business/B700 B700] [http://www.grundigmobile.com/mobilephones/umts/U900 U900] developed by Purple Labs (did they release source code yet?)
 * [http://linuxdevices.com/news/NS9996556326.html Neuf Twin]
 * [http://www.road-gmbh.de/produkte/index.html ROAD GmbH] three versions: S101, S101K, L101 / GSM with EDGE, WLAN, Bluetooth, IRDA, USB 2.0, SD-Card, kernel 2.6
 * [http://www.openmoko.com/ OpenMoko Neo1973]
