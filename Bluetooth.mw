@@ -1,3 +1,20 @@
 [[A780]]
 
-There is a Broadcom BCM2035 controller attached to one the BTUART of the AP (ttyS1)
+There is a [http://www.ortodoxism.ro/datasheets2/3/06trr5goqrikdkiex84zzo8oj13y.pdf Broadcom BCM2035] controller attached to one the BTUART of the AP (ttyS1)
+
+The 2.4 Kernel has some custom ioctl's to set/clear 2 GPIO pins for the bcm (BT_RESET and BT_WAKEUP). There is also a userspace application (dload) which resets the bt chip(via ioctl), place it in a "rom patching" state, send a bunch of patches and set the btaddr. 
+
+The 2.4 procedure to turn Bluetooth on is as follows:
+*send AT+EBTP=1 to BP (power on bcm2035)
+*run userspace dload application
+**reset the bt chip (via ioctls)
+***TODO: better specify the ioctls involved.
+**send a bunch of patches to the original firmware
+***there are 25 patches (''':''')
+***them a full firmware? ('''@00''')
+**set the btaddr
+*end
+
+I have straced the ''dload'' application, understood the rom patching protocol, and rewrite a new one from scratch. Next week i will reimplement the ioctls in the kernel and see if i can send the firmware to the chip. I dont know if its necessary to properly hciattach, but its nice to have a gpl tool to patch the firmware of the bcm2035, and it was fun to write :).
+
+WyrM
