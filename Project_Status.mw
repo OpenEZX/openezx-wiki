@@ -20,7 +20,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 ! [[E895]]
 ! [[Rokr E2]]
 |- style="background:#efefef;"
-| [[CPU]]
+| [[AP | CPU]]
 | ?
 | ?
 | ?
@@ -224,7 +224,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| GSM, GPRS - Neptune LTE (mux_cli)
+| [[BP | GSM, GPRS - Neptune LTE (mux_cli)]]
 | ?
 | ?
 | ?
