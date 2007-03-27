@@ -20,7 +20,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 ! [[E895]]
 ! [[Rokr E2]]
 |- style="background:#efefef;"
-| CPU
+| [[CPU]]
 | ?
 | ?
 | ?
@@ -32,7 +32,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 |- style="background:#efefef;"
-| RAM
+| [[RAM]]
 | ?
 | ?
 | ?
@@ -44,7 +44,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:yellow" | 80%
 |- style="background:#efefef;"
-| Internal Flash
+| [[Internal Flash]]
 | ?
 | ?
 | ?
@@ -56,7 +56,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| External SD/MMC/ TransFlash
+| [[External SD/MMC/TF]]
 | ?
 | ?
 | ?
@@ -68,7 +68,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Camera
+| [[Camera]]
 | ?
 | ?
 | ?
@@ -80,7 +80,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Power Management
+| [[Power Management]]
 | ?
 | ?
 | ?
@@ -92,7 +92,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| USB Host
+| [[USB]] Host
 | ?
 | ?
 | ?
@@ -104,7 +104,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| USB Device
+| [[USB]] Device
 | ?
 | ?
 | ?
@@ -116,7 +116,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| USB OTG
+| [[USB]] OTG
 | ?
 | ?
 | ?
@@ -128,7 +128,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Touchscreen
+| [[Touchscreen]]
 | ?
 | ?
 | ?
@@ -140,7 +140,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | —
 |- style="background:#efefef;"
-| Keypad
+| [[Keypad]]
 | ?
 | ?
 | ?
@@ -152,7 +152,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Vibrator
+| [[Vibrator]]
 | ?
 | ?
 | ?
@@ -164,7 +164,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Sound
+| [[Sound]]
 | ?
 | ?
 | ?
@@ -176,7 +176,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| FM Radio
+| [[FM Radio]]
 | ?
 | ?
 | ?
@@ -188,7 +188,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 |- style="background:#efefef;"
-| Bluetooth
+| [[Bluetooth]]
 | ?
 | ?
 | ?
@@ -212,7 +212,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | &mdash;
 | &mdash;
 |- style="background:#efefef;"
-| Serial
+| [[Serial]]
 | ?
 | ?
 | ?
