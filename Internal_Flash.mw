@@ -1,0 +1,5 @@
+EZX phones have two distinct flash chips for firmware/user data storage, a 32MB Intel Strataflash and a 64MB m-systems DiskOnChip G3.
+
+The StrataFlash contains the bootloader, kernel, rootfs, /usr/setup(factory configuration), /ezxlocal(user data) and a logo partition. This chip is fully supported by the Linux MTD layer.
+
+The DiskOnChip contains /diska(user data), /usr/language(localization). There is NO gpl driver for this chip! Its supported on linux only through a proprietary tffs kernel module for 2.4 series.
