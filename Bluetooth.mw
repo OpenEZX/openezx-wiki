@@ -10,11 +10,13 @@ The 2.4 procedure to turn Bluetooth on is as follows:
 **reset the bt chip (via ioctls)
 ***TODO: better specify the ioctls involved.
 **send a bunch of patches to the original firmware
-***there are 25 patches (''':''')
+***there are 26 patches (''':''')
 ***them a full firmware? ('''@00''')
 **set the btaddr
 *end
 
 I have straced the ''dload'' application, understood the rom patching protocol, and rewrite a new one from scratch. Next week i will reimplement the ioctls in the kernel and see if i can send the firmware to the chip. I dont know if its necessary to properly hciattach, but its nice to have a gpl tool to patch the firmware of the bcm2035, and it was fun to write :).
+
+update: No GPIO activity was necessary, i developed an userspace app to initialize/attach the bcm2035. Download from http://people.openezx.org/wyrm/bcm2035-tool.tgz
 
 WyrM
