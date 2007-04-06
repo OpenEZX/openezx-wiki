@@ -139,6 +139,7 @@ In case you followed all steps correctly and the only thing you get is white col
 
 If you enter the bootloader on the ROKR E2 you get a red background with black font displaying something like this:
 
+{{{
 FLASH_KEY_PRESS
 
 boot Module:                                                                                                                                                                                      
@@ -146,11 +147,13 @@ boot Module:
 BOOT_G_00.02.05R_SUMATRA                                                                                                                                                                          
 
 MBM FLASH MODE
+}}}
 
-The bootloader of the A1200 enters an USB BP pass through mode if you press the voice dial key in Flash mode. 
+The bootloader of the A1200/E2 enters an USB BP pass through mode if you press the voice dial key in Flash mode. 
 Note that it seems to take some seconds before switching to the new mode is possible.
 
 The same trick works for E2. You need tor press the camera button again.
+( Really? there is no camera button but voicedail button in my E2! jicknan)
 
 USB ID's: 22b8:4903
 
