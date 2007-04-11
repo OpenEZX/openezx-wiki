@@ -3,7 +3,9 @@
 * Video
 ** Test, finish porting and cleanup video capture driver (camera)
 * Sound
-** Port and cleanup sound drivers (oss -> alsa (ASoC))
+** Document the PCAP2 audio registers/bits
+** Write an ASOC codec driver for the PCAP2
+** Write an ASOC machine driver for the ezx platform
 * Power Management
 ** Add 'device power off' mode so 'halt -p' works
 ** Add suspend/resume support
