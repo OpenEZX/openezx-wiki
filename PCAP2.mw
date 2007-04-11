@@ -226,4 +226,17 @@ The PCAP2 has a 10-Bit A/D-converter. Two groups, each with 7 analog inputs can 
 | 6 || NONTS_MODE || ???
 |}
 
+== Sound ==
+The PCAP2 deals with everything audio related on the EZX platform.
+
+It supports 16 bit mono and stereo audio, and comunicates with the AP via ssp/pcm. It does all the audio routing, between speakers/mic/headphone and ap/bp.
+
+There are at least 4 registers that are used on audio. (todo: describe the bits)
+*0x0b AUD_CODEC
+*0x0c AUD_RX_AMPS
+*0x0d ST_DAC
+*0x1a TX_AUD_AMPS
+
+And at least 2 registers used for routing audio for audio peripherals (USB-EMU and headphone) (todo: describe registers and bits)
+
 [[Category:Hardware]]
