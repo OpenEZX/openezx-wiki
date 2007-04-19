@@ -1,4 +1,4 @@
-The [[PCAP2]] is a Motorola [[ASIC]] that takes care of power management, sound and some other miscellaneous functions.  It is connected via SSP/[[SPI]] to both [[AP]] and [[BP]].
+The [[PCAP2]] is a Motorola [[ASIC]] that takes care of power management, [[sound]], touchscreen and [[EMU]].  It is connected via SSP/[[SPI]] to both [[AP]] and [[BP]].
 
 It includes a number of linear and switching power regulators, taking care of the diverse voltage and power requirements of the various digital and analogue subsystems of the phone.
 
