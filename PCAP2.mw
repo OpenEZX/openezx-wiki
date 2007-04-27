@@ -225,6 +225,8 @@ The PCAP2 has a 10-Bit A/D-converter. Two groups, each with 7 analog inputs can 
 |-
 | 6 || NONTS_MODE || ???
 |}
+== Peripheral Control ==
+TODO: Describe pstat bits.
 
 == Sound ==
 The PCAP2 deals with everything audio related on the EZX platform.
