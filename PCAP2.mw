@@ -32,7 +32,7 @@ The following registers are accessible only from the primary SPI bus and their l
 |-
 |0x01 ||IMR   ||Interrupt mask register
 |-
-|0x02 ||PSTAT ||Processor status register
+|0x02 ||PSTAT ||Peripheral status register
 |-
 |0x03 ||INT_SEL ||Interrupt select register
 |-
