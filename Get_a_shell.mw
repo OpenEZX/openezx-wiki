@@ -179,9 +179,9 @@ once you're logged in, you should adjust the mtu on the phone side, too:
 
 === Windows ===
 
-A free driver is available for Windows XP users on the [http://www.motorolafans.com/MotorolaFansPHPbb/viewtopic.php?t=3337 motorolafans.com forum].  For A780 users, you will need to hack the .inf file as described in that thread.
+A free driver is available for Windows XP users on the [http://www.motorolafans.com/forums/viewtopic.php?t=3337 motorolafans.com forum].  For A780 users, you will need to hack the .inf file as described in that thread.
 
-Windows 2k users have no other choice but to use the [http://www.motorolafans.com/index.php?option=com_remository&Itemid=49&func=download&id=68&chk=2aec44ceae5d1f057fadcfbe90ab52c6&no_html=1&fname=btblan-demo-15ec-f001-10-26-2004.zip Belcarra demo driver] (while the link is still good) which was neither intended nor licensed for public consumption.  Alternately, you can install [http://distrowatch.com Linux :)].  For A780 users, the .inf file for the Belcarra driver will have to be hacked as well.  To hack the .inf, you will have to go through each section where there are entries for other devices and duplicate them with the Vendor ID / Product ID string of <code>VID_22b8&PID_600c</code>.
+Windows 2k users have no other choice but to use the [http://www.motorolafans.com/index.php?option=com_remository&Itemid=49&func=fileinfo&id=68 Belcarra demo driver] (while the link is still good) which was neither intended nor licensed for public consumption.  Alternately, you can install [http://distrowatch.com Linux :)].  For A780 users, the .inf file for the Belcarra driver will have to be hacked as well.  To hack the .inf, you will have to go through each section where there are entries for other devices and duplicate them with the Vendor ID / Product ID string of <code>VID_22b8&PID_600c</code>.
 
 [[TODO|TODO: Post torrent for Belcarra driver & more newbie-friendly instructions for the .inf mods]]
 
