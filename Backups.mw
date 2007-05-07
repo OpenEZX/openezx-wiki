@@ -77,7 +77,7 @@ I have experienced (driver?) problems with the external TransFlash on my A780 wh
 
 ===Firmware===
 
-Now, we need to backup the firmware. By far, the easiest way to do this is to nab [http://www.motorolafans.com/MotorolaFansPHPbb/download.php?id=1005 DumpFW] from motorolafans.com, read it's [http://motorolafans.com/MotorolaFansPHPbb/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/MotorolaFansPHPbb/profile.php?mode=viewprofile&u=1129 jumit] & [http://motorolafans.com/MotorolaFansPHPbb/profile.php?mode=viewprofile&u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
+Now, we need to backup the firmware. By far, the easiest way to do this is to nab [http://www.motorolafans.com/forums/download.php?id=1005 DumpFW] from motorolafans.com, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/profile.php?mode=viewprofile&u=1129 jumit] & [http://motorolafans.com/forums/profile.php?mode=viewprofile&u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
 
 Once it completes, copy the firmware files firmware.dump and tffsa.dmp to your hard drive. It is advisable to notate the firmware version you have extracted as well.
 
