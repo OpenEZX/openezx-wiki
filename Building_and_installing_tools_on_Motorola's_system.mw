@@ -9,7 +9,7 @@ You will need various tools to pull this off, some of which aren't on your phone
 |- style="background:#efefef;"
 | ext3.o, jdb.0, ext2.o, loop.o, umsdos.o
 | Drivers for various file systems.  I personally recomend ext2 for swap files and ext3 for normal-use file systems.
-| [http://www.motorolafans.com/MotorolaFansPHPbb/viewtopic.php?t=1049 This posting on motorolafans.com] and/or [http://sourceforge.net/projects/e680 The E680 Sourceforge site.]
+| [http://www.motorolafans.com/forums/viewtopic.php?t=1049 This posting on motorolafans.com] and/or [http://sourceforge.net/projects/e680 The E680 Sourceforge site.]
 |- style="background:#efefef;"
 | fdisk
 | Change the partitions on your disks  WARNING: This is a loaded gun for the uninitated!
