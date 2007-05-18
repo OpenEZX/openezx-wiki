@@ -229,15 +229,129 @@ The PCAP2 has a 10-Bit A/D-converter. Two groups, each with 7 analog inputs can 
 TODO: Describe pstat bits.
 
 == Sound ==
-The PCAP2 deals with everything audio related on the EZX platform.
+The PCAP2 deals with everything audio related on the EZX platform. Its connected to AP and BP via SSP. It can play as slave and master (Motorola's kernel uses PCAP as master).
+It supports 16 bit mono and stereo audio. It does all the audio routing, between speakers/mic/headphone and ap/bp.
 
-It supports 16 bit mono and stereo audio, and comunicates with the AP via ssp/pcm. It does all the audio routing, between speakers/mic/headphone and ap/bp.
 
-There are at least 4 registers that are used on audio. (todo: describe the bits)
-*0x0b AUD_CODEC
-*0x0c AUD_RX_AMPS
-*0x0d ST_DAC
-*0x1a TX_AUD_AMPS
+There are at least 4 registers that are used on audio.
+*0x0b AUD_CODEC                                 BP codec ??
+        0       audihpf                         Input high pass filer enable
+        1       smb                             Master/Slave select
+        2       audohpf                         Output high pass filter enable
+        3       cd_ts                           ??????
+        4       dlm                             ??????
+        5       adith                           ??????
+        6-8     cdc clk                         Codec clock config
+                0       13m0
+                1       15m36
+                2       16m8
+                3       19m44
+                4       26m0
+        9       cdc clk inv
+        10      fs inv
+        11      df reset                        Reset codec ?? 
+        12      cdc en                          Enable codec
+        13      cdc clk en                      Enable codec clock
+        14      fs 8k 16k                       sample rate select
+                0       8k
+                1       16k
+        15      dig aud in
+        16      clk in sel                      Clock source select
+        17      mic2 mux
+        18-22   mic2ig
+        23      mic2ig pri adj
+        24      cdc pri adj
+
+*0x0c AUD_RX_AMPS                               Speaker/output mixer
+        0       a1 en                           enable earpiece
+        1       a2 en                           enable louderspeaker
+        2-3     unknown
+        4       a4 en                           nc?
+        5       aright en                       enable headset right
+        6       aleft en                        enable headset left
+        7       cd byp                          bp codec bypass  ????
+        8       cdc sw                          telephone switch to right pga ????
+                0
+                1       enable telephone
+        9       st dac sw                       stereo switch
+        10      pga in sw                       clean close pga_inr into pga  ????
+        11      pga r en                        enable pga right
+        12      pga l en                        enable pga left
+        13-16                                   audio output gain (crap 16 step mono control for the master volume)
+        17      a1ctrl
+        18      unknown
+        19-20   mono
+                0       R_L_STEREO              stereo
+                1       RL                      mono
+                2       RL 3db
+                3       RL 6db                  louderspeaker
+        21      audog pri adj
+        22      mono pri adj
+        23-24   rx pri adj
+
+*0x0d ST_DAC                                    stereo codec
+        0       smb st dac
+                0       bitclk output
+        1       stdet en
+        2-4     st clk                          stereo dac clock config
+                0       clk in 13m0
+                1       clk in 15m36
+                2       clk in 16m8
+                3       clk in 19m44
+                4       clk in 26m0
+                5       clk in ext mclk
+                6       clk in fsync
+                7       clk in bitclk
+        5       clk en                          enable codec clock
+        6       df reset st dac                 codec reset
+        7       dac en                          enable dac
+        8-11    sample rate
+                0       8k
+                1       11k
+                2       12k
+                3       16k
+                4       22k
+                5       24k
+                6       32k
+                7       44k
+                8       48k
+                9-15    unknown
+        12      dig aud in st dac               used on init audio IO=part1
+        13-14   dig aud fs
+                0       audio interface normal pcm
+                1       audio interface network
+                2       audio interface i2s
+                3       unknown
+        15-16   bclk
+                0       slot 16
+                1       slot 8
+                2       slot 4
+                3       slot 2
+        17      st clk inv
+        18      st fs inv
+        19      st dac clk in sel              Clock source select
+        20-23   unknown
+        24      st dac pri adj
+
+*0x1a TX_AUD_AMPS                       Mic/input mixer
+        0-4     audio input gain        (32 step volume control for the mic)
+        5       a3 enable               enable headset mic inv
+        6       a3 mux
+        7       a5 enable               enable handset mic inv
+        8       a5 mux
+        9       ext mic mux             carkit input
+        10      mb on2                  enable headset mic
+        11      mb on1                  enable handset mic
+        12      a1id tx
+        13      a1 config
+        14      ahs config
+        15      a2 config
+        16-18   unknown
+        19      audio lowpwr
+        20      audio stby
+        21      v2 en 2                 connected to bp . power bp codec?
+        22      audig pri adj
+        23-24   tx pri adj
 
 And at least 2 registers used for routing audio for audio peripherals (USB-EMU and headphone) (todo: describe registers and bits)
 
