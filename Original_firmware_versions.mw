@@ -30,7 +30,7 @@ In detail:
 * Now move the insertion point between the firt digit and the first inserted "w". (Ex. 1|w)
 * Now add three more "w" in via the "Insert Wait" like in the second step.
 * Insert "008" before the last "w".
-* You should now have a string similar to "1www008w".  Go back and delete the firts digits.
+* You should now have a string similar to "1www008w".  Go back and delete the first digit.
 * You should now see the software version, it will show only for 20 seconds.
 
 == Other methods to get your software version ==
