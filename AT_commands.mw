@@ -35,6 +35,12 @@ http://www.3gpp.org/ftp/Specs/archive/27_series/
 *AT+ERTCAV=1, "<val>" (mux4)
 **Turns the phone on at time <val>. Used for the alarm. Repeat to add more.
 
+== PowerOff Related==
+* AT+CPWR:%d
+** Turns BP off?
+* AT+EKEV: 19,1
+** a notification command that can be read on mux4 when power key is pressed for a while. When tapisrv reads that, it sends "AT+CPWR=1\r" on mux4 and then shut down the phone.
+
 == GPRS / Call related ==
 *AT+CAPF= 12,1,1 (mux6)
 **Turns GPRS ON
@@ -344,6 +350,8 @@ AT+EINR:%%16D,%%%dS,%%8D,%%%dU
 AT+EINR:%32D
 
 AT+EINR=%d,%d
+
+AT+EKEV: %d,%d
 
 AT+ELAI?
 
