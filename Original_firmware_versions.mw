@@ -39,6 +39,18 @@ Alternatively, via telnet or Samba look at:
  /etc/ap_version.txt
  /tmp/VersionInfo
 
+== Known versions Rokr E2 ==
+
+{| border="1"
+| AP || BP || BP Flex || DSP || Info
+|-
+| R564_G_12.00.47P
+| R564_G_12.00.47P
+| GSZMTRPERARLA045
+| 63272700
+| From Argentina.(Company Personal) 
+|)
+
 == Known versions A780 ==
 
 {| border="1"
