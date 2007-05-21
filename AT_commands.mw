@@ -36,8 +36,8 @@ http://www.3gpp.org/ftp/Specs/archive/27_series/
 **Turns the phone on at time <val>. Used for the alarm. Repeat to add more.
 
 == PowerOff Related==
-* AT+CPWR:%d
-** Turns BP off?
+* AT+CPWR=1
+** Turns BP off.
 * AT+EKEV: 19,1
 ** a notification command that can be read on mux4 when power key is pressed for a while. When tapisrv reads that, it sends "AT+CPWR=1\r" on mux4 and then shut down the phone.
 
