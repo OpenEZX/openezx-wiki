@@ -7,24 +7,23 @@
 ** Write an ASOC codec driver for the PCAP2
 ** Write an ASOC machine driver for the ezx platform
 * Power Management
-** Port all the driver specific dpm bits from Motorolas 2.4.20 to 2.6.x
-** Add DPM bits to all other drivers
-** Test, try, fail...
+** More testing with bp driver/mux_cli
 * Keypad
 ** Clean up the already working keypad driver
 ** Use a reasonable keymap
-** Add driver for keypad backlight (pcap-based). Question: What kind of userspace interface (if any)
-* MMC/SD/TF (drivers/mmc/pxamci.c)
-** Find out why 4-bit wide MMC/SD transfers don't seem to work with LaF0rge's patch
-** Port various fixes from OpenTom SD/MMC stack
 * AP/BP interaction
 ** implement [[BP_Handshake | handshake]] procedure to put BP in non-flash-mode (i dont think its possible)
-** Finish reimplementation of mux_cli and grpsv modules
-* Make GPS data available to userspace. The gps is connected at BP. ([[A780]] only)
+** Finish reimplementation of grpsv modules
+* GPS
+** Trace lapisrv on phone boot-up, determine if the gps firmware is inside bp firmware or inside lapisrv.
+*** If inside lapisrv steal it.
+*** If inside bp firmware determine the command used to upload it to the GPS module
+** Write an userspace app to init the gps module
+** Add support to gpsd
 * proprietary flash file systems
 ** Look into reimplementing the DiskOnChip G3 drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
 * Non-A780/E680 stuff
-** Check how the other (later) motorola Linux smartphones differ and merge their device-specific code into our 2.6.x kernel tree
+** Initial hardware support for a1200, e2, e6
 * Enchanced Mini USB (EMU)
 ** add support for motorola-compatible cable/device detection and apropriate switching of USB device / UART / phone-powered / ... support
 ** think on how to do runtime device profile switching with usb-gadget and the horribly broken PXA270 UDC (read errata, it's barely useable). Alternatively try supporting multiple interfaces or configurations (also quite impossible with broken controller)
