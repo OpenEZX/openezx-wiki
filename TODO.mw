@@ -41,7 +41,11 @@
 ** Use u-boot as a primary bootloader
 
 = Userspace (Openembedded and others) =
-
+* boot_usb
+** Add support for initrd uploading
+** Add support for parameter passing (i dont know if the original blob supports it)
+** if the original blob doesnt support parameter passing, implement it on blob2 (just enable the already available code)
+* Implement our own RDL software, using a minimal linux kernel with MTD support and initrd
 * OpenMoko [http://www.openmoko.org/] software stack.
 * Port gpsd to communicate with several gps applications. ([[A780]] only)
 
