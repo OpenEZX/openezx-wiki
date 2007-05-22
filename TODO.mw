@@ -48,6 +48,9 @@
 * Implement our own RDL software, using a minimal linux kernel with MTD support and initrd
 * OpenMoko [http://www.openmoko.org/] software stack.
 * Port gpsd to communicate with several gps applications. ([[A780]] only)
+* OpenTAPI
+** Implement poweroff procedure, on SIGTERM
+** Implement AP date updating based on BP information on boot.
 
 = Wiki =
 
