@@ -355,4 +355,6 @@ There are at least 4 registers that are used on audio.
 
 And at least 2 registers used for routing audio for audio peripherals (USB-EMU and headphone) (todo: describe registers and bits)
 
+I have discovered (by accident) that PCAP is also aware of the BP mode, when BP is in flash mode, PCAP will interrupt AP with ONOFFI, this doesnt happen when BP is in normal mode.
+
 [[Category:Hardware]]
