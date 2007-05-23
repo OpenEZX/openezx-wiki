@@ -230,7 +230,14 @@ TODO: Describe pstat bits.
 
 == Sound ==
 The PCAP2 deals with everything audio related on the EZX platform. Its connected to AP and BP via SSP. It can play as slave and master (Motorola's kernel uses PCAP as master).
-It supports 16 bit mono and stereo audio. It does all the audio routing, between speakers/mic/headphone and ap/bp.
+
+It supports 16 bit mono and stereo audio. It does all the audio routing, between speakers/mic/headphone and ap/bp. 
+
+On the E680 there is another amplifier (lm7845) for the boomer, and a MIDI chipset.
+
+A780 has a attenuate GPIO to mute audio output and avoid codec power on noise.
+
+PCAP audio clock is feed by the AP 13MHZ clock when using the ST_DAC or BP clock when using the AUD_CODEC.
 
 
 There are at least 4 registers that are used on audio.
@@ -352,6 +359,12 @@ There are at least 4 registers that are used on audio.
         21      v2 en 2                 connected to bp . power bp codec?
         22      audig pri adj
         23-24   tx pri adj
+
+* PCAP registers dump on 2.4
+** Right after boot (FIXME)
+** When playing stereo audio (FIXME)
+** On a call (FIXME)
+** When recording (FIXME)
 
 And at least 2 registers used for routing audio for audio peripherals (USB-EMU and headphone) (todo: describe registers and bits)
 
