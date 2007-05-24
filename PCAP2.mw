@@ -361,9 +361,61 @@ There are at least 4 registers that are used on audio.
         23-24   tx pri adj
 
 * PCAP registers dump on 2.4
-** Right after boot (FIXME)
-** When playing stereo audio (FIXME)
-** On a call (FIXME)
+** Right after boot
+ ISR             00000000
+ MSR             0003EDBD
+ PSTAT           002207C0
+ VREG2           000020AC
+ VREG            00325BD2
+ BATT_DAC        00200000
+ ADC1            000A0000
+ ADC2            00000000
+ AUD_CODEC       00000007
+ AUD_RX_AMPS     00034000
+ AUD_ST_DAC      00059001
+ BUSCTRL         000002B4
+ PERIPH          00000000
+ LOWPWR          00D57103
+ AUD_TX_AMPS     00200016
+ GP              00000100
+** When playing stereo audio
+ ISR             00000000 
+ MSR             0003EDBD
+ PSTAT           002207C0
+ VREG2           000020AC
+ VREG            00325BD2
+ BATT_DAC        00200000
+ ADC1            000A01DC
+ ADC2            000FFCEB
+ AUD_CODEC       00010007
+ AUD_RX_AMPS     001B5A02
+ AUD_ST_DAC      000D97A0
+ BUSCTRL         000002B4
+ PERIPH          00000000
+ LOWPWR          00D57103
+ AUD_TX_AMPS     00200016
+ GP              00000100
+ <4>Snd driver w20076 <7 DEBUG>: ASSCR0 = 0x1000bf
+ <4>Snd driver w20076 <7 DEBUG>: ASSCR1 = 0x23200100
+ <4>Snd driver w20076 <7 DEBUG>: ASSPSP = 0x100002
+ <4>Snd driver w20076 <7 DEBUG>: ASSSR = 0x40f024
+** On a call
+ ISR             00000000
+ MSR             0003EDBD
+ PSTAT           002207C0
+ VREG2           000020AC
+ VREG            00325BD2
+ BATT_DAC        00200000
+ ADC1            000A01DC
+ ADC2            000FFCBF
+ AUD_CODEC       00003005
+ AUD_RX_AMPS     0008E901
+ AUD_ST_DAC      00000000
+ BUSCTRL         000002B4
+ PERIPH          00000000
+ LOWPWR          00D57103
+ AUD_TX_AMPS     00200910
+ GP              00000100
 ** When recording (FIXME)
 
 And at least 2 registers used for routing audio for audio peripherals (USB-EMU and headphone) (todo: describe registers and bits)
