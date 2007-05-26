@@ -5,7 +5,7 @@ This phone is also known as E690. Has Passed FCC (IHDT6GP1)
 
 == CPU ==
  Processor       : Intel XScale-PXA27x rev 7 (v5l)
- BogoMIPS        : 103.76
+ BogoMIPS        : 311.28
  Features        : swp half thumb fastmult edsp
  CPU implementor : 0x69
  CPU architecture: 5TE
@@ -28,6 +28,7 @@ This phone is also known as E690. Has Passed FCC (IHDT6GP1)
  Hardware        : Motorola Ezx Platform
  Revision        : 0000
  Serial          : 0000000000000000
+
 == RAM ==
          total:    used:    free:  shared: buffers:  cached:
  Mem:  47489024 45465600  2023424        0  1671168 23351296
