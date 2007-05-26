@@ -48,6 +48,7 @@ This phone is also known as E690. Has Passed FCC (IHDT6GP1)
  SwapTotal:           0 kB
  SwapFree:            0 kB
  Committed_AS:    48704 kB
+
 ==  Flash Memory ==
 /proc/roflash_info
  ROFLASH Driver status: Ready
