@@ -30,6 +30,8 @@ This phone is also known as E690. Has Passed FCC (IHDT6GP1)
  Serial          : 0000000000000000
 
 == RAM ==
+/proc/meminfo
+
          total:    used:    free:  shared: buffers:  cached:
  Mem:  47489024 45465600  2023424        0  1671168 23351296
  Swap:        0        0        0
