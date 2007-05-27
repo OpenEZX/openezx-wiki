@@ -163,7 +163,7 @@ When you gave that "mode" command, the phone caused the host to re-enumerate its
  usb 4-2: new full speed USB device using uhci_hcd and address 9
  usb0: register usbnet at usb-0000:00:10.2-2, pseudo-MDLM (BLAN) device, 8e:36:06:d5:16:9d
 
-And now /proc/bus/devices should contain a device with manufacturer ID of ''Motorola'' and product id of ''Motorola USBLAN''.
+And now /proc/bus/usb/devices should contain a device with manufacturer ID of ''Motorola'' and product id of ''Motorola USBLAN''.
 
 Configure the network interface with
 
