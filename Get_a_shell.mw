@@ -122,7 +122,7 @@ Plug the phone and the host together with a USB cable. On the console you should
 
  cdc_acm 4-2:1.0: ttyACM0: USB ACM device
 
-You can play back the console messages with the '''dmesg''' command. If you look in /proc/bus/devices, you will find a device with a manufacturer ID of ''Motorola'' and a product ID of ''Motorola USB Modem''.
+You can play back the console messages with the '''dmesg''' command. If you look in /proc/bus/usb/devices, you will find a device with a manufacturer ID of ''Motorola'' and a product ID of ''Motorola USB Modem''.
 
 == Change Modem Mode  ==
 
