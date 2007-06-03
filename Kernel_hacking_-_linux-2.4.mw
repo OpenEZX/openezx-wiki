@@ -4,6 +4,8 @@ These efforts are mainly for study and the OpenEZX project does not intend to su
 
 == Building original Motorola kernel and kernel modules ==
 
+You would need to get ezx-crosstool first. We have some information about how to [[Crosscompile|setup]].
+
 Steps (config for A780):
 
 * download the [https://opensource.motorola.com/sf/frs/do/downloadFile/projects.a780e680/frs.a780_e680_source.a780_e680/frs1003?dl=1 kernel],
@@ -17,5 +19,6 @@ And then:
  make ARCH=arm CROSS_COMPILE=arm-linux- zImage
  make ARCH=arm CROSS_COMPILE=arm-linux- modules
 
+If everything works fine you can find the zImage in arch/arm/boot/
 
 [[Category:Development]]
