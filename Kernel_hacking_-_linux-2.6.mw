@@ -1,26 +1,20 @@
-The OpenEZX kernel tree bases on a [http://www.kernel.org vanilla 2.6 kernel]. At the moment we use 2.6.16.
+The OpenEZX kernel tree bases on a [http://www.kernel.org vanilla 2.6 kernel]. At the moment we use 2.6.21.
 
 We use [http://savannah.nongnu.org/projects/quilt quilt] to handle our -ezx kernel tree. You can find the latest patchset [http://svn.openezx.org/branches/kernel-2.6.21-patches/ here].
 
 Please notice that the development is still in an early state. You should know what you are doing, if you test this.
 
-== Building OpenEZX kernel with ezx-crosstool ==
-
-Obviously you need to get ezx-crosstool first. We have some information about how to [[Crosscompile|setup]].
-
-Next step should be to get a vanilla kernel and our patchset.
-
-With crosscompiler and patchset you should be able to compile new kernels with just this line:
-
- make ARCH=arm CROSS_COMPILE=arm-linux- zImage
-
-If everything works fine you can find the zImage in arch/arm/boot/ . You can use this zImage together with [[Bootloader#Communication_with_the_bootloader|boot_usb]] to boot the phone with this kernel once.
-
 == Building OpenEZX kernel with openembedded ==
 
 * Setup OE according to http://www.openembedded.org/wiki/GettingStarted
-* Use MACHINE=a780 and DISTRO=ezx
-* 'bitbake virtual/kernel'
+* Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2007.1</tt>
+* Run <tt>$ bitbake virtual/kernel</tt>
 
+=== Notes ===
+* the kernel built with OE expects the rootfs on the '''first''' partition of external flash (<tt>root=/dev/mmcblk0p1</tt>),
+* while the default OpenEZX config expects it on the '''second''' partition (<tt>root=/dev/mmcblk0p2</tt>); whith this setup you can use the first partition to store some data and access it when booting the original software.
+* The STUART console is disabled by default to speed up the booting process. If you want to re-enable it, you have to apply ''ezx-enable-stuart.patch'', and add <tt>console=ttyS2,115200n8</tt> to your <tt>CONFIG_CMDLINE</tt>.
+
+You can use the zImage together with [[Bootloader#Communication_with_the_bootloader|boot_usb]] to boot the phone with this kernel.
 
 [[Category:Development]]
