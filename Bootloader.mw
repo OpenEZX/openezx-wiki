@@ -17,6 +17,7 @@ Motorola has released their modified (GPL'd) blob version, see http://ftp.gpl-de
 * '''ROKR E2:''' press voicedail button while power on. (Red bootloader screen)
 * '''ROKR E6:''' press camera button while power on. (Red bootloader screen)
 * '''A1200:''' press voicedial button while power on. (Red bootloader screen)
+* '''A910:''' press voicedial button while power on. (Red bootloader screen)
 
 = Communication with the bootloader =
 
