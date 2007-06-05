@@ -10,7 +10,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 |- style="background:#bfbfbf; font-weight: bold"
 ! Feature
 ! [[A728]]
-! [[A732]]
 ! [[A760]]
 ! [[A768]]
 ! [[A780]]
@@ -22,7 +21,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 ! [[Rokr E6]]
 |- style="background:#efefef;"
 | [[AP | CPU]]
-| ?
 | ?
 | ?
 | ?
@@ -38,7 +36,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:lime" | 100%
 | ?
 | style="background:yellow" | 80%
@@ -48,7 +45,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:yellow" | 80%
 |- style="background:#efefef;"
 | [[LCD]]
-| ?
 | ?
 | ?
 | ?
@@ -64,7 +60,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:yellow" | 50%
 | ?
 | style="background:red" | 0%
@@ -74,7 +69,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[External SD/MMC/TF]]
-| ?
 | ?
 | ?
 | ?
@@ -90,7 +84,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:red" | 30%
 | ?
 | style="background:red" | 0%
@@ -100,7 +93,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Power Management]]
-| ?
 | ?
 | ?
 | ?
@@ -116,7 +108,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:red" | 20%
 | ?
 | style="background:red" | 0%
@@ -126,7 +117,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[USB]] Device
-| ?
 | ?
 | ?
 | ?
@@ -142,7 +132,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:red" | 0%
 | ?
 | style="background:red" | 0%
@@ -152,7 +141,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Touchscreen]]
-| ?
 | ?
 | ?
 | ?
@@ -168,7 +156,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:lime" | 100%
 | ?
 | style="background:red" | 0%
@@ -178,7 +165,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Vibrator]]
-| ?
 | ?
 | ?
 | ?
@@ -194,7 +180,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:red" | 30%
 | ?
 | style="background:red" | 0%
@@ -204,7 +189,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[FM Radio]]
-| ?
 | ?
 | ?
 | ?
@@ -220,7 +204,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:yellow" | 80%
 | ?
 | style="background:red" | 0%
@@ -230,7 +213,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[GPS]]
-| &mdash;
 | &mdash;
 | &mdash;
 | &mdash;
@@ -246,7 +228,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:red" | 20%
 | ?
 | style="background:red" | 0%
@@ -259,7 +240,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | ?
 | ?
-| ?
 | style="background:yellow" | 80%
 | ?
 | style="background:red" | 0%
@@ -269,7 +249,6 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[JTAG]]
-| ?
 | ?
 | ?
 | ?
