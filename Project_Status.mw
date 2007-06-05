@@ -28,7 +28,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:lime" | 100%
 | style="background:lime" | 100%
 | ?
 | style="background:lime" | 100%
@@ -41,11 +41,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:yellow" | 80%
 | style="background:lime" | 100%
 | ?
-| style="background:lime" | 100%
-| style="background:lime" | 100%
+| style="background:yellow" | 80%
+| style="background:yellow" | 80%
 |- style="background:#efefef;"
 | [[LCD]]
 | ?
@@ -54,7 +54,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:red" | 30%
 | style="background:lime" | 100%
 | ?
 | style="background:red" | 30%
@@ -67,11 +67,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:yellow" | 50%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:yellow" | 50%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[External SD/MMC/TF]]
 | ?
@@ -80,11 +80,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:red" | 5%
 | style="background:lime" | 100%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Camera]]
 | ?
@@ -93,11 +93,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:red" | 30%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 0%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Power Management]]
 | ?
@@ -106,11 +106,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:yellow" | 80%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:yellow" | 80%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[USB]] Host
 | ?
@@ -119,11 +119,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:red" | 20%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 20%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[USB]] Device
 | ?
@@ -132,11 +132,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:lime" | 100%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[USB]] OTG
 | ?
@@ -145,11 +145,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:red" | 0%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 0%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Touchscreen]]
 | ?
@@ -158,11 +158,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:red" | 5%
 | style="background:lime" | 100%
 | ?
 | —
-| ?
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Keypad]]
 | ?
@@ -171,11 +171,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:lime" | 100%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Vibrator]]
 | ?
@@ -184,11 +184,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:lime" | 100%
 | ?
-| ?
+| style="background:red" | 0%
 | &mdash;
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Sound]]
 | ?
@@ -197,11 +197,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:red" | 30%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 5%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[FM Radio]]
 | ?
@@ -210,7 +210,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | &mdash;
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 0%
 | ?
 | ?
@@ -223,11 +223,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:yellow" | 80%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:yellow" | 80%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[GPS]]
 | &mdash;
@@ -249,11 +249,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:red" | 20%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 20%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[BP | GSM, GPRS - Neptune LTE (mux_cli)]]
 | ?
@@ -262,11 +262,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:yellow" | 80%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:yellow" | 80%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[JTAG]]
 | ?
@@ -275,11 +275,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | ?
 | style="background:red" | 20%
 | ?
-| ?
+| style="background:red" | 0%
 | style="background:red" | 20%
 | ?
-| ?
-| ?
+| style="background:red" | 0%
+| style="background:red" | 0%
 |- style="background:#efefef;"
 |}
 
