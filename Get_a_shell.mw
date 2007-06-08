@@ -114,7 +114,7 @@ On your Linux host, load the USB ATM (modem) and USB network drivers:
  modprobe usbnet
  modprobe cdc-acm
 
-For A910, Rokr E2 and maybe others, we need CONFIG_USBNET_ZAURUS (zaurus.o):
+Depending on your host configuration, you will need to modprobe zaurus (CONFIG_USBNET_ZAURUS):
 
  modprobe zaurus
 
