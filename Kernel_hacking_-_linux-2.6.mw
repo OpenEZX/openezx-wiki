@@ -1,6 +1,6 @@
 The OpenEZX kernel tree bases on a [http://www.kernel.org vanilla 2.6 kernel]. At the moment we use 2.6.21.
 
-We use [http://savannah.nongnu.org/projects/quilt quilt] to handle our -ezx kernel tree. You can find the latest patchset [http://svn.openezx.org/branches/kernel-2.6.21-patches/ here].
+We use [http://savannah.nongnu.org/projects/quilt quilt] to handle our -ezx kernel tree. You can find the latest patchset [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here].
 
 Please notice that the development is still in an early state. You should know what you are doing, if you test this.
 
