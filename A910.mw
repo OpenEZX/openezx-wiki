@@ -14,5 +14,112 @@ https://opensource.motorola.com/sf/projects/a910
 | width="30%" style="vertical-align:top" |
 [[Image:A910-2.jpg]]
 |}
+
+== Kernel ==
+ MontaVista(R) Linux(R) Consumer Electronics Edition 3.1
+ Linux/armv5tel 2.4.20_mvlcee31-mainstone_pxa27x
+
+== CPU ==
+/proc/cpuinfo
+ Processor	: Intel XScale-PXA27x rev 7 (v5l)
+ BogoMIPS	: 103.82
+ Features	: swp half thumb fastmult edsp 
+ CPU implementor	: 0x69
+ CPU architecture: 5TE
+ CPU variant	: 0x0
+ CPU part	: 0x411
+ CPU revision	: 7
+ Cache type	: undefined 5
+ Cache clean	: undefined 5
+ Cache lockdown	: undefined 5
+ Cache unified	: harvard
+ I size		: 32768
+ I assoc		: 32
+ I line length	: 32
+ I sets		: 32
+ D size		: 32768
+ D assoc		: 32
+ D line length	: 32
+ D sets		: 32
+ 
+ Hardware	: Motorola Ezx Platform
+ Revision	: 0000
+ Serial		: 0000000000000000
+
+== RAM ==
+/proc/meminfo
+         total:    used:    free:  shared: buffers:  cached:
+ Mem:  47529984 46227456  1302528        0  1089536 27389952
+ Swap:        0        0        0
+ MemTotal:        46416 kB
+ MemFree:          1272 kB
+ MemShared:           0 kB
+ Buffers:          1064 kB
+ Cached:          26748 kB
+ SwapCached:          0 kB
+ Active:          23696 kB
+ Inactive:        14356 kB
+ HighTotal:           0 kB
+ HighFree:            0 kB
+ LowTotal:        46416 kB
+ LowFree:          1272 kB
+ SwapTotal:           0 kB
+ SwapFree:            0 kB
+ Committed_AS:    51644 kB
+
+== Flash Memory ==
+/proc/roflash_info 
+ ROFLASH Driver status: Ready
+ 
+ ROFLASH area name is rootfs
+ ROFLASH area size = 27652096 bytes
+ ROFLASH area offset = 5902336 bytes
+ ROFLASH area l_x_b(10)
+ ROFLASH area name is language
+ ROFLASH area size = 8388608 bytes
+ ROFLASH area offset = 30932992 bytes
+ ROFLASH area l_x_b(1000)
+ ROFLASH area name is data_resource
+ ROFLASH area size = 10092544 bytes
+ ROFLASH area offset = 1703936 bytes
+ ROFLASH area l_x_b(1000)
+ ROFLASH area name is setup
+ ROFLASH area size = 131072 bytes
+ ROFLASH area offset = 5767168 bytes
+ ROFLASH area l_x_b(10)
+ ROFLASH area name is secure_setup
+ ROFLASH area size = 126976 bytes
+ ROFLASH area offset = 29626368 bytes
+ ROFLASH area l_x_b(1000)
+
+df
+ Filesystem           1k-blocks      Used Available Use% Mounted on
+ rootfs                   59660     59660         0 100% /
+ /dev/root                59660     59660         0 100% /
+ /dev/roflash1            15020     15020         0 100% /usr/language
+ /dev/roflash2            19764     19764         0 100% /usr/data_resource
+ /dev/roflash3              452       452         0 100% /usr/setup
+ /dev/roflash4               80        80         0 100% /usr/securesetup
+ /dev/mtdblock8            6144      1196      4948  20% /ezx_user
+ /dev/mtdblock9           11136      9736      1400  88% /ezxlocal
+ /dev/mmca1               60880     48336     12544  80% /mmc/mmca1
+
+/proc/mtd
+ dev:    size   erasesize  name
+ mtd0: 00008000 00008000 "CADDO_SECOND"
+ mtd1: 00008000 00008000 "ITUNES"
+ mtd2: 00008000 00008000 "CADDO_PRIMARY"
+ mtd3: 00008000 00008000 "FOTA_REV"
+ mtd4: 00040000 00020000 "MBM"
+ mtd5: 00020000 00020000 "CONFIG"
+ mtd6: 00020000 00020000 "BLOB"
+ mtd7: 00100000 00020000 "KERNEL"
+ mtd8: 00600000 00020000 "USERFS_DB"
+ mtd9: 00ae0000 00020000 "USERFS_GENERAL"
+ mtd10: 00020000 00020000 "TEST_CMD"
+ mtd11: 00020000 00020000 "LOGO"
+ mtd12: 000c0000 00020000 "FOTA"
+ mtd13: 00020000 00020000 "RESERVE"
+
 [[Category:Hardware]]
 [[Category:A910]]
