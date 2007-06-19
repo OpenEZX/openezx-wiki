@@ -20,7 +20,6 @@ http://www.3gpp.org/ftp/Specs/archive/27_series/
 *AT+DTSE= "<val>",1 (mux0)
 **Sends <val> dtmf tone.
 **I dont know why they dont used the standard +VTS
-**tried and pain stakingly tested none of this commands work on the model A732 (error)only ,most of the official commands work  but cant speak for the other models
 
 == BlueTooth related ==
 *AT+EBTP=<val> (mux4)
