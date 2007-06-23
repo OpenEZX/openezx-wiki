@@ -58,7 +58,7 @@ Instead of having to do a short between pin 2 and 3, a pullup resistor between p
 
 == Fast Charger ==
 Pinout :
-* 1 + 5 volts @ 1,250 ma
+* 1   5 volts @ 1,250 ma
 * 2 Short to pin 3
 * 3 short to pin 2
 * 4 440kohm pulldown
