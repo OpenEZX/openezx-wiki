@@ -263,7 +263,7 @@ Official ROM version 33P uses Opera 8.5.2023.
 
 */lib/modules/logger.o logs events to a pair of files on ezxlocal.  Usage:
 
-  insmod /usr/modules/logger.o
+  insmod /lib/modules/logger.o
   /usr/SYStapi/aplog_mode.sh 1
 
 This will start logging, as per the writeable policy in /ezxlocal/ezx_aplog.cfg.  The default is to log MUX and output files to /ezxlocal/downloads/mystuff/ as logging.map and logged.map
@@ -281,7 +281,6 @@ Note that +s executables will fail unless user ezx makes a copy:
 *A set/license of the [http://www.intel.com/cd/software/products/asmo-na/eng/302910.htm Intel Performance Primitives] (verison "5.0 Gold" in ROM 33P) exists in /usr/lib/ezx/lib/libipp-??.so.  Headers can be downloaded free from the [https://registrationcenter.intel.com/EvalCenter/EvalForm.aspx?productid=599 Intel evaluation download page.]
 
 * The libezxappbase.so.1 contains a number of WiFi-related routines.
-
 
 == The motoac kernel modifications ==
 
