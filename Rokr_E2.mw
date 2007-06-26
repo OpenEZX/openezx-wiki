@@ -140,7 +140,7 @@ Physical address 0 to 32M is occupied by flash chip 0 of AP,and 32M-64M by flash
 
 == Flashing the E2 ==
 
-The ROKR E2 can be flashed from linux using the [[http://moto4lin.sourceforge.net/wiki/FlashingEZX] moto4lin ezxflash tools.  The E2 AP (linux) flash data is held in a .sbf file.  Use moto4lin's ''parseheader'' then ''unsbf'' to extract the code groups (memory regions).  Some of the regions are cramfs images and can be mounted as a loopback file:
+The ROKR E2 can be flashed from linux using the [http://moto4lin.sourceforge.net/wiki/FlashingEZX moto4lin ezxflash tools].  The E2 AP (linux) flash data is held in a .sbf file.  Use moto4lin's ''parseheader'' then ''unsbf'' to extract the code groups (memory regions).  Some of the regions are cramfs images and can be mounted as a loopback file:
 
    mount -t cramfs {file.bin} -o loop,offset={n} /mountpoint/path
 
@@ -191,7 +191,6 @@ Other Code Groups:
    10330000.bin  -  ?? (2048 bytes long)
    10350000.bin  -  ?? Contains 16-bit text "Motorola's Flash Neptune LTE2"
    10390000.bin  -  ?? Byte patterns looks like image assets
-
 
 == [[Debug Port]] ==
 
