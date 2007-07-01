@@ -1,1 +1,13 @@
+{| width="100%"
+|-
+|style="vertical-align:top" |
+<div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
+The '''A732''' is a slider phone developed for Asian market mainly due special thermo-sensitive keyboard which allows you to enter chinese characters by simply drawing them on it. This phone it said to be run linux but until now nobody managed to connect into the phone, or switch it to the usblan mode. This phone is also not being recognised by cdc-acm.
 
+[[A732_Board]]
+
+[http://www.motorola.com/motoinfo/product/details/0,,116,00.html Motorola A732 product page].
+</div>
+| width="30%" style="vertical-align:top" |
+[[Image:Motorola_a732.jpg]]
+|}
