@@ -13,6 +13,13 @@ The 2.4 procedure to turn Bluetooth on is as follows:
 ***there are 26 patches (''':''')
 ***them a full firmware? ('''@00''')
 **set the btaddr
+*** NOTE: the bdaddr can be taken from the banner shown on <tt>/dev/mux0</tt>, after the copyright banner there is a line like:
+*:   <pre>+EBAD:0,21,168,160,160,160</pre>
+*: the numbers above are the octets of the bdaddr, in decimal.
+*:
+*: The example above translates into the bdaddr:
+*:   <pre>00:15:A8:A0:A0:A0</pre>
+
 *end
 
 I have straced the ''dload'' application, understood the rom patching protocol, and rewrite a new one from scratch. Next week i will reimplement the ioctls in the kernel and see if i can send the firmware to the chip. I dont know if its necessary to properly hciattach, but its nice to have a gpl tool to patch the firmware of the bcm2035, and it was fun to write :).
