@@ -54,7 +54,13 @@ Alternatively, via telnet or Samba look at:
 |
 |
 |
-| Indonesia/Vietnam version. 192.168.1.2 works, but telnet/ftp/samba is unavailable.
+| Indonesia/Vietnam version. MotNet launches, but telnet/ftp/samba is unavailable.
+|-
+| 
+| R564_G_12.00.45P
+| GSZSMTRT678PZ02A
+| 63272700
+| Polish/Lithuanian version. MotNet launches, telnet/ftp/samba available.
 |}
 
 == Known versions A780 ==
