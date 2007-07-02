@@ -54,7 +54,7 @@ Alternatively, via telnet or Samba look at:
 |
 |
 |
-| Indonesia/Vietnam version. Shell access disabled 
+| Indonesia/Vietnam version. 192.168.1.2 works, but telnet/ftp/samba is unavailable.
 |}
 
 == Known versions A780 ==
