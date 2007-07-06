@@ -3,8 +3,7 @@
 |style="vertical-align:top" |
 <div style="display:table;margin:0; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 The '''A732''' is a slider phone developed for Asian market mainly due special thermo-sensitive keyboard which allows you to enter chinese characters by simply drawing them on it.<br /><br />
-'''This phone it said to run linux by Motorola though we are not sure.'''<br /><br />
-Until now nobody managed to switch it into usblan mode. On linux it is also not being recognised by cdc-acm as a modem device. It is being recognised on Windows though. There is a lot of interesting technologies built in. My firmware analysis shown following:
+On linux it is also not being recognised by cdc-acm as a modem device. It is being recognised on Windows though. There is a lot of interesting technologies built in. My firmware analysis shown following:
 <ul>
  <li>'''VoiceStar-M v0.80'''</li>
  <ul>
