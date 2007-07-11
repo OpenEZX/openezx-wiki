@@ -3,7 +3,7 @@
 |style="vertical-align:top" |
 <div style="display:table;margin:0; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 The '''A732''' is a slider phone developed for Asian market mainly due special thermo-sensitive keyboard which allows you to enter chinese characters by simply drawing them on it.<br /><br />
-On linux it is also not being recognised by cdc-acm as a modem device. It is being recognised on Windows though. There is a lot of interesting technologies built in. My firmware analysis shown following:
+On linux it is also not being recognized by cdc-acm as a modem device. It is being recognised on Windows though. There is a lot of interesting technologies built in. My firmware analysis shown following:
 <ul>
  <li>'''VoiceStar-M v0.80'''</li>
  <ul>
@@ -23,196 +23,200 @@ On linux it is also not being recognised by cdc-acm as a modem device. It is bei
  </ul>
 </ul>
 
- <li>'''ENTERING INTO A732 BOOT LOADER MODE BY ZAH PRIL'''
-<ul>
- You can enter the boot loader mode while powering  up your a732 phone by pressing the power and voice key simultaneously  ie remeber motorola start screen appears thats when you press buttons than suddenly seems like phone has shut off but it hasnt than after 3 seconds phone automatically turns on and resumes normal operation but when it automatically resumes the start up screen wont appear untill the next time your fone is turned of than on again.
-<ul>
 [[A732_Board]]
 
 [http://www.motorola.com/motoinfo/product/details/0,,116,00.html Motorola A732 product page].
 
-<p>'''Supported modem commands''' (extracted from firmware)</p>
+</div>
 
+'''ENTERING INTO A732 BOOT LOADER MODE BY ZAH PRIL'''
+
+You can enter the boot loader mode while powering up your a732 phone by pressing the power and voice key simultaneously
+ie remember motorola start screen appears thats when you press buttons than suddenly seems like phone has shut off but
+it hasnt than after 3 seconds phone automatically turns on and resumes normal operation but when it automatically resumes
+the start up screen wont appear untill the next time your phone is turned of than on again.
+
+<p>'''SUPPORTED MODEM COMMANDS''' (extracted from firmware)</p>
 <div style="float:left;width:23%;padding:2px;">
-AT CLAC
-<br />AT CACM
-<br />AT CAMM
-<br />AT CAOC
-<br />AT CBC
-<br />AT CBST
-<br />AT CCCN
-<br />AT CCFC
-<br />AT CCLK
-<br />AT CCUG
-<br />AT CCWA
-<br />AT CCWE
-<br />AT CEER
-<br />AT CFUN
-<br />AT CGACT
-<br />AT CGANS
-<br />AT CGATT
-<br />AT CGAUTO
-<br />AT CGCLASS
-<br />AT CGDATA
-<br />AT CGDCONT
-<br />AT CGEREP
-<br />AT CGMI
-<br />AT CGMM
-<br />AT CGMR
-<br />AT CGPADDR
-<br />AT CGQMIN
-<br />AT CGQREQ
-<br />AT CGREG
-<br />AT CGSMS
-<br />AT CGSN
-<br />AT CHLD
-<br />AT CHUP
-<br />AT CIMI
-<br />AT CIND
-<br />AT CLAC
-<br />AT CLAE
-<br />AT CLAN
-<br />AT CLCC
-<br />AT CLCK
-<br />AT CLIP
-<br />AT CLIR
-<br />AT CLVL
-<br />AT CMEE
-<br />AT CMER
-<br />AT CMGC
-<br />AT CMGD
-<br />AT CMGF
-<br />AT CMGL
-<br />AT CMGR
-<br />AT CMGS
-<br />AT CMGW
-<br />AT CMMS
-<br />AT CMOD
-<br />AT CMSS
-<br />AT CMUT
-<br />AT CMUX
-<br />AT CNMA
-<br />AT CNMI
-<br />AT CNUM
-<br />AT COLP
-<br />AT COPN
-<br />AT COPS
-<br />AT CPAS
+AT+CLAC
+<br />AT+CACM
+<br />AT+CAMM
+<br />AT+CAOC
+<br />AT+CBC
+<br />AT+CBST
+<br />AT+CCCN
+<br />AT+CCFC
+<br />AT+CCLK
+<br />AT+CCUG
+<br />AT+CCWA
+<br />AT+CCWE
+<br />AT+CEER
+<br />AT+CFUN
+<br />AT+CGACT
+<br />AT+CGANS
+<br />AT+CGATT
+<br />AT+CGAUTO
+<br />AT+CGCLASS
+<br />AT+CGDATA
+<br />AT+CGDCONT
+<br />AT+CGEREP
+<br />AT+CGMI
+<br />AT+CGMM
+<br />AT+CGMR
+<br />AT+CGPADDR
+<br />AT+CGQMIN
+<br />AT+CGQREQ
+<br />AT+CGREG
+<br />AT+CGSMS
+<br />AT+CGSN
+<br />AT+CHLD
+<br />AT+CHUP
+<br />AT+CIMI
+<br />AT+CIND
+<br />AT+CLAC
+<br />AT+CLAE
+<br />AT+CLAN
+<br />AT+CLCC
+<br />AT+CLCK
+<br />AT+CLIP
+<br />AT+CLIR
+<br />AT+CLVL
+<br />AT+CMEE
+<br />AT+CMER
+<br />AT+CMGC
+<br />AT+CMGD
+<br />AT+CMGF
+<br />AT+CMGL
+<br />AT+CMGR
+<br />AT+CMGS
+<br />AT+CMGW
+<br />AT+CMMS
+<br />AT+CMOD
+<br />AT+CMSS
+<br />AT+CMUT
+<br />AT+CMUX
+<br />AT+CNMA
+<br />AT+CNMI
+<br />AT+CNUM
+<br />AT+COLP
+<br />AT+COPN
+<br />AT+COPS
+<br />AT+CPAS
 </div>
 <div style="float:left;width:23%;padding:2px;">
-AT CPBF
-<br />AT CPBR
-<br />AT CPBS
-<br />AT CPBW
-<br />AT CPIN
-<br />AT CPINC
-<br />AT CPMS
-<br />AT CPOL
-<br />AT CPUC
-<br />AT CPWD
-<br />AT CR
-<br />AT CRC
-<br />AT CREG
-<br />AT CRES
-<br />AT CRLP
-<br />AT CRSL
-<br />AT CRSM
-<br />AT CSAS
-<br />AT CSCA
-<br />AT CSCB
-<br />AT CSCS
-<br />AT CSDH
-<br />AT CSMP
-<br />AT CSMS
-<br />AT CSNS
-<br />AT CSQ
-<br />AT CSSN
-<br />AT CSTA
-<br />AT CSVM
-<br />AT CTFR
-<br />AT CUSD
-<br />AT DR
-<br />AT DSCC
-<br />AT DSCE
-<br />AT DSCP
-<br />AT DSCR
-<br />AT FAA
-<br />AT FAP
-<br />AT FBO
-<br />AT FBS
-<br />AT FBU
-<br />AT FCC
-<br />AT FCLASS
-<br />AT FCQ
-<br />AT FCR
-<br />AT FCS
-<br />AT FCT
-<br />AT FDR
-<br />AT FDT
-<br />AT FEA
-<br />AT FFC
-<br />AT FHS
-<br />AT FIE
-<br />AT FIP
-<br />AT FIS
-<br />AT FIT
-<br />AT FKS
-<br />AT FLI
-<br />AT FLO
-<br />AT FLP
-<br />AT FMI
-<br />AT FMM
-<br />AT FMR
-<br />AT FMS
+AT+CPBF
+<br />AT+CPBR
+<br />AT+CPBS
+<br />AT+CPBW
+<br />AT+CPIN
+<br />AT+CPINC
+<br />AT+CPMS
+<br />AT+CPOL
+<br />AT+CPUC
+<br />AT+CPWD
+<br />AT+CR
+<br />AT+CRC
+<br />AT+CREG
+<br />AT+CRES
+<br />AT+CRLP
+<br />AT+CRSL
+<br />AT+CRSM
+<br />AT+CSAS
+<br />AT+CSCA
+<br />AT+CSCB
+<br />AT+CSCS
+<br />AT+CSDH
+<br />AT+CSMP
+<br />AT+CSMS
+<br />AT+CSNS
+<br />AT+CSQ
+<br />AT+CSSN
+<br />AT+CSTA
+<br />AT+CSVM
+<br />AT+CTFR
+<br />AT+CUSD
+<br />AT+DR
+<br />AT+DSCC
+<br />AT+DSCE
+<br />AT+DSCP
+<br />AT+DSCR
+<br />AT+FAA
+<br />AT+FAP
+<br />AT+FBO
+<br />AT+FBS
+<br />AT+FBU
+<br />AT+FCC
+<br />AT+FCLASS
+<br />AT+FCQ
+<br />AT+FCR
+<br />AT+FCS
+<br />AT+FCT
+<br />AT+FDR
+<br />AT+FDT
+<br />AT+FEA
+<br />AT+FFC
+<br />AT+FHS
+<br />AT+FIE
+<br />AT+FIP
+<br />AT+FIS
+<br />AT+FIT
+<br />AT+FKS
+<br />AT+FLI
+<br />AT+FLO
+<br />AT+FLP
+<br />AT+FMI
+<br />AT+FMM
+<br />AT+FMR
+<br />AT+FMS
 </div>
 <div style="float:left;width:23%;padding:2px;">
-AT FND
-<br />AT FNR
-<br />AT FNS
-<br />AT FPA
-<br />AT FPI
-<br />AT FPP
-<br />AT FPS
-<br />AT FPW
-<br />AT FRQ
-<br />AT FRY
-<br />AT FSA
-<br />AT FSP
-<br />AT GCAP
-<br />AT GCI
-<br />AT GMI
-<br />AT GMM
-<br />AT GMR
-<br />AT GSN
-<br />AT ICF
-<br />AT IFC
-<br />AT ILRR
-<br />AT IPR
-<br />AT MW
-<br />AT MWE
-<br />AT MR
-<br />AT MRE
-<br />AT MS
-<br />AT MWA
-<br />AT MN
-<br />AT MTEST
-<br />AT SYSTEM
-<br />AT MODE
-<br />AT MDBL
-<br />AT CKPD
-<br />AT MAID
-<br />AT VTS
-<br />AT WS46
-<br />AT�TL
+AT+FND
+<br />AT+FNR
+<br />AT+FNS
+<br />AT+FPA
+<br />AT+FPI
+<br />AT+FPP
+<br />AT+FPS
+<br />AT+FPW
+<br />AT+FRQ
+<br />AT+FRY
+<br />AT+FSA
+<br />AT+FSP
+<br />AT+GCAP
+<br />AT+GCI
+<br />AT+GMI
+<br />AT+GMM
+<br />AT+GMR
+<br />AT+GSN
+<br />AT+ICF
+<br />AT+IFC
+<br />AT+ILRR
+<br />AT+IPR
+<br />AT+MW
+<br />AT+MWE
+<br />AT+MR
+<br />AT+MRE
+<br />AT+MS
+<br />AT+MWA
+<br />AT+MN
+<br />AT+MTEST
+<br />AT+SYSTEM
+<br />AT+MODE
+<br />AT+MDBL
+<br />AT+CKPD
+<br />AT+MAID
+<br />AT+VTS
+<br />AT+WS46
+<br />AT%ACTL
 <br />AT%ALS
 <br />AT%BOOT
-<br />AT�ND
+<br />AT%BAND
 <br />AT%FLTBAND
 <br />AT%REJ
-<br />AT�CM
-<br />AT�OC
-<br />AT�BS
-<br />AT�CME
+<br />AT%CACM
+<br />AT%CAOC
+<br />AT%CCBS
+<br />AT%CCCME
 <br />AT%CGAATT
 <br />AT%CGMM
 <br />AT%CNAP
@@ -223,7 +227,7 @@ AT FND
 <br />AT%CTV
 <br />AT%CTVE
 <br />AT%CUNS
-<br />AT�CTEST
+<br />AT%FACTEST
 <br />AT%NRG
 <br />AT%PPP
 <br />AT%PBRA
@@ -268,8 +272,8 @@ AT%PBRE
 <br />AT%WAP
 <br />AT%CPRI
 <br />AT%CMEL
-<br />AT�FS
-<br />AT�ER
+<br />AT%CFFS
+<br />AT%CEER
 <br />AT%CNTR
 <br />AT%PING
 <br />AT%ICQ
@@ -281,13 +285,13 @@ AT%PBRE
 <br />AT%RSTEEP
 <br />AT%FORMAT
 <br />AT%ENGMODE
-<br />AT�LA
+<br />AT%CALA
 <br />AT%MCSI
-<br />AT�C_IND
+<br />AT%ADC_IND
 <br />AT%HASHVAL
 <br />AT%MRS
 <br />AT%MSCAP
-<br />AT�CINFO
+<br />AT%FACINFO
 <br />AT%IPR
 <br />AT%IMEISV
 <br />AT%BTREADY
@@ -295,7 +299,6 @@ AT%PBRE
 <br />AT%BTHCICMD
 <br />AT%TBU
 <br />AT%SRCID
-</div>
 </div>
 | width="30%" style="vertical-align:top" |
 [[Image:Motorola_a732.jpg]]
