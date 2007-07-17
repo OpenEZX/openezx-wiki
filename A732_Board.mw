@@ -1,4 +1,4 @@
-'''The A732 phone is not linux based. This site is only for reference if other people are interested in these pictures.'''
+'''The A732 phone is not EZX phone. This site is only for reference if other people are interested in these pictures.'''
 
 [[Image:A732-pcb1-back.jpg|800px]]
 [[Image:A732-pcb2-back.jpg|800px]]
@@ -11,8 +11,8 @@
 ! Comments 
 |-
 | 01
-| 4050LDYT01 A5527816 7552I151A
-| Perhaps flash?
+| Motorola 4050LDYT01 A5527816 7552I151A
+| Flash memory
 |
 |-
 | 02
@@ -26,9 +26,9 @@
 |
 |-
 | 04
-| Texas Instruments D751685AZZA
-| Arm7 Calypso Plus - 52Mhz
-|
+| Texas Instruments OMAP 750 (D751685AZZA)
+| Embedded TMS320C54x DSP (GSM/GPRS Class 12 baseband), 384KB shared SRAM, E-GPRS interface for EDGE co-processor
+| [http://focus.ti.com/general/docs/wtbu/wtbuproductcontent.tsp?templateId=6123&navigationId=12001&contentId=4678]
 |-
 | 05
 | TWL301682Z 61E5H5TR
