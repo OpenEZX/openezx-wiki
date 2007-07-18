@@ -17,6 +17,10 @@ In this small example we will package a program called foobar.
  BigIcon=foobar.png  ''Big icon''
  Comment=Foo Bar     ''Comment''
  Exec=foobar         ''Executable''
+ MimeType: optional. It is for document based app,which means the app can open some documents.Mimetype
+           specifies what kind of documents the app can open. See /etc/mime.types for the list of known
+           mimetypes.
+ MimeTypeIcons: The icon that associates with the documents.
  Icon=foobar-sm.png  ''Small icon''
  Name=foobar         ''Program name''
  Version=0.1         ''???''
