@@ -328,6 +328,12 @@ The PCM sound device driver only supports 16-bit LE audio.
 
 *No MPKG installer/MPKG installer disabled (handset from China Mobile)
 
+=== R564_G_12.01.46P ===
+
+* Phone was purchased in China 2007/07, phone and firmware branded with China Mobile (中国移动)
+* No mpkg installer.
+* No USBNET connection option but IP access could be enabled with AT commands from modem mode.  Handset would respond to ping (192.168.1.2).
+* However, all ports were closed; no telnet or smb access.
 
 == External Links ==
 
