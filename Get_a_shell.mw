@@ -132,7 +132,7 @@ You can play back the console messages with the '''dmesg''' command. If you look
 
  echo "AT+mode=99" > /dev/ttyACM0
 
-For the ROKR E2, the A910 and the E6:
+For the [[Rokr E2]], the [[A910]] and the [[Rokr E6]]:
 
  echo "AT+mode=13" > /dev/ttyACM0
 
