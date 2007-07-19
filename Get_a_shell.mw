@@ -222,7 +222,7 @@ The "AppLinkRecord100000101" and "uid = 100000101" should have an identical numb
   Directory = ../../../../mmc/mmca1/.system/QTDownLoad/loader
   Type = 2
 
-A1200 needs different setup. This should go into CardRegister file (in .system/Java):
+A1200 and E6 needs different setup. This should go into CardRegister file (in .system/Java):
 
   [863f87db-7e13-c673-a56b-aeec28347561]
   AniIcon =
