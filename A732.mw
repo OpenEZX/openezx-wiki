@@ -29,6 +29,12 @@ On linux it is also not being recognized by cdc-acm as a modem device. It is bei
 
 </div>
 
+'''ENTERING THE TEST MODE'''
+
+Enter *#**372# and press call button. Test mode menu will show up where you can see version of firmware and perform test of the phone.
+
+googled ;-) by [[User:Frankie|Miro]] 22:06, 20 July 2007 (CEST)
+
 '''ENTERING INTO A732 BOOT LOADER MODE BY ZAH PRIL'''
 
 You can enter the boot loader mode while powering up your a732 phone by pressing the power and voice key simultaneously
