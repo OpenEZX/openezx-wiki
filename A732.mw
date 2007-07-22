@@ -3,6 +3,18 @@
 |style="vertical-align:top" |
 <div style="display:table;margin:0; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 The '''A732''' is a slider phone developed for Asian market mainly due special thermo-sensitive keyboard which allows you to enter chinese characters by simply drawing them on it.<br /><br />
+
+'''Final statement of our research:'''
+
+ - A732 is not EZX phone
+ - A732 is being produced by CMCS(Chi Mei Communication Systems)
+   along with V690, V878, MPx200, V872, MPx220, A668, C168, W220, C168i
+ - A732 have different hw architecture as EZX phones and runs until now
+   unknown OS on the AP which is most likely something homebrew CMCS
+ - A732 can communicate via E2P which we are currently analyzing
+ - we are currently discovering the possibilities of getting in internal
+   filesystem of this phone
+
 On linux it is also not being recognized by cdc-acm as a modem device. It is being recognised on Windows though. There is a lot of interesting technologies built in. My firmware analysis shown following:
 <ul>
  <li>'''VoiceStar-M v0.80'''</li>
