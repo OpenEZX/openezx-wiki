@@ -9,6 +9,7 @@ The '''A732''' is a slider phone developed for Asian market mainly due special t
    along with V690, V878, MPx200, V872, MPx220, A668, C168, W220, C168i
  - A732 have different hw architecture as EZX phones and runs until now
    unknown OS on the AP which is most likely something homebrew CMCS
+ - A732 can communicate via E2P which we are currently analyzing
  - we are currently discovering the possibilities of getting in internal
    filesystem of this phone
 
