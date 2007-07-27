@@ -1,6 +1,18 @@
 [[Image:Razr2.jpg]]
 ----
 
-Motorola has announced the release of three new RAZR models, collectively called RAZR2.  The RAZR2-V8 supports GSM EDGE, RAZR2-V9 supports HSDPA, and RAZR2-V9m supports CDMA EV-DO.   The V8 is to ship July 07, with the other models following Q3.  At least one version is said to run the same EZX build as the [[Rizr_Z6|RIZR Z6]].  The RAZR2 will feature a 500Mhz ARM11 CPU[http://www.fiercewireless.com/story/moto-media-monster-is-z8-but-razr2-is-new/2007-05-15]
+Motorola has announced the release of three new RAZR models, collectively called RAZR2.  The RAZR2-V8 is the only Linux/EZX based model.  The V9 and V9m are based on the Motorola Synergy OS, supposedly because EZX does not yet support HSDPA (V9) or CDMA EV-DO (V9m).   The V8 supports Quad-band GSM EDGE, and unlike the 2 V9 devices, does '''not''' have expandable memory via flash cards.  Instead, the V8 comes with either 512MB or 2GB of memory.  As of July 2007, the V8 is available officially in Korea and Hong Kong for approximately US$450 without contract, and via eBay elsewhere.
+
+MOTORAZR V8 Features:
+
+*500Mhz ARM11 CPU[http://www.fiercewireless.com/story/moto-media-monster-is-z8-but-razr2-is-new/2007-05-15]
+*Bluetooth Class 2 V2.0 (A2DP & AVRCP support)
+*"Morphing touch sensitive haptics controls" or "external display with contextual touch interaction" depending on your "marketing-speak" preference
+*dual 240x320 18-bit displays (internal, external)
+*WMP11 support
+*2MP Camera (still),  QCIF (MP4 video)
+*EDGE Class-12
+*2mm slimmer than original RAZR
+
 
 [http://www.siamphone.com/news/2007/motorola/razr2/page.htm Asia launch photos]
