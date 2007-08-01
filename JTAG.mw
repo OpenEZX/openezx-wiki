@@ -2,7 +2,7 @@
 
 JTAG is a standard interface for in-system testing and debugging.  It works by placing a debug macrocell in front of (almost) every Pin/Signal that enters or leaves a particular device.  Those debug cells are interconnected serially, so that in the end they form one long (e.g. 600bit wide) shift register.
 
-[http://www.jtag.com/main.php  JTAG] is an industry standard developed by/under the  Joint Test Action Group that developed it. It was approved as [http://doi.ieeecomputersociety.org/10.1109/TEST.1997.639596 IEEE  standard 1149.1 ]
+JTAG is an industry standard developed by/under the  Joint Test Action Group that developed it. It was approved as [http://doi.ieeecomputersociety.org/10.1109/TEST.1997.639596 IEEE  standard 1149.1 ]
 
 By using a five-wire connection (the JTAG Port) built into the to-be-tested/debugged device, an external entity can use serial shifting to read/write information to each and every signal.
 
@@ -35,5 +35,7 @@ Harald is working on getting a working JTAG configuration with his A780, stay tu
 
 === External links ===
 * [http://hardware-hacking.com/JTAG JTAG] at [http://hardware-hacking.com hardware-hacking.com]
+* [http://www.xjtag.com/  XJTAG]
+* [http://www.jtag.com/main.php  JTAG Technologies]
 
 [[Category:Development]]
