@@ -38,6 +38,8 @@ Contains installed Java MIDlet Jar file and icon
 Contains installed Java MIDlet settings
 
 = diskb =
+Always empty,nor can be seen in GUI.
+Maybe it is the most useless directory.
 
 = etc =
 Various system configuration files
