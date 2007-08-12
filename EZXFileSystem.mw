@@ -37,6 +37,9 @@ Contains installed Java MIDlet Jar file and icon
 ====== diska/.system/java/DownloadApps/MIDlet00514/rms ======
 Contains installed Java MIDlet settings
 
+=== diska/.system/QTDownload ===
+Contains all of the qt applications(created by mpkg packages) installed on phone
+
 = diskb =
 Always empty,nor can be seen in GUI.
 Maybe it is the most useless directory.
