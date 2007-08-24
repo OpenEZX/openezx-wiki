@@ -7,7 +7,8 @@ Please notice that the development is still in an early state. You should know w
  == Building OpenEZX kernel with openembedded ==
 
 * Setup OE according to http://www.openembedded.org/wiki/GettingStarted
- * Note: BitBake 1.6.8 or higher is required. FC6 RPM of BitBake is currently version 1.6.6, so it will not work. Recommended way is running it without install.
+ * Note: BitBake 1.6.8 or higher is required. FC6 RPM of BitBake is currently version 1.6.6, so it will not work.
+   Recommended way is running it without install.
  * Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2007.1</tt> in local.conf
 * Apply OpenEZX patches
  * Copy http://svn.openezx.org/trunk/src/kernel-2.6/patches/ to the Linux source tree
