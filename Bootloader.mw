@@ -152,8 +152,7 @@ MBM FLASH MODE
 The bootloader of the A1200/E2/A910 enters an USB BP pass through mode if you press the voice dial key in Flash mode. 
 Note that it seems to take some seconds before switching to the new mode is possible.
 
-The same trick works for E2. You need tor press the camera button again.
-( Really? there is no camera button but voicedail button in my E2! jicknan)
+The same trick works for E2. Once you are in bootloader mode, you need to press the voicedial button again to get USB BP pass through mode.
 
 USB ID's: 22b8:4903
 
