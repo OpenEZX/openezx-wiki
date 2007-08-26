@@ -25,6 +25,7 @@ setting the path to suit your OE setup.
  === Notes ===
 * the kernel built with OE expects the rootfs on the '''first''' partition of external flash (<tt>root=/dev/mmcblk0p1</tt>),
 * while the default OpenEZX config expects it on the '''second''' partition (<tt>root=/dev/mmcblk0p2</tt>); with this setup you can use the first partition to store some data and access it when booting the original software.
+* by default this '''second''' partition must be ext3 fs.
 * The STUART console is disabled by default to speed up the booting process. If you want to re-enable it, you have to apply ''ezx-enable-stuart.patch'', and add <tt>console=ttyS2,115200n8</tt> to your <tt>CONFIG_CMDLINE</tt>.
 
 You can use the zImage together with [[Bootloader#Communication_with_the_bootloader|boot_usb]] to boot the phone with this kernel.
