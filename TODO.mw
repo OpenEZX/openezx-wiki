@@ -1,4 +1,4 @@
- = Kernel =
+= Kernel =
 * Stress test the 48MB ram.
 * Video
 ** Test, finish porting and cleanup video capture driver (camera)
@@ -29,7 +29,7 @@
 ** think on how to do runtime device profile switching with usb-gadget and the horribly broken PXA270 UDC (read errata, it's barely useable). Alternatively try supporting multiple interfaces or configurations (also quite impossible with broken controller)
 ** USB host support on EMU!
 
- = Bootloader =
+= Bootloader =
 
 * Use u-boot
 ** Use u-boot as a secondary bootloader
