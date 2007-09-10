@@ -50,11 +50,11 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 | style="background:lime" | 100%
 | style="background:red" | 30%
-| style="background:red" | 30%
+| style="background:yellow" | 50%
 | style="background:lime" | 100%
 | style="background:red" | 0%
-| style="background:red" | 30%
-| style="background:red" | 30%
+| style="background:yellow" | 50%
+| style="background:yellow" | 50%
 |- style="background:#efefef;"
 | [[Internal Flash]]
 | style="background:red" | 0%
@@ -122,7 +122,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 | style="background:lime" | 100%
 | style="background:red" | 0%
-| style="background:red" | 0%
+| style="background:red" | 30%
 | style="background:lime" | 100%
 | style="background:red" | 0%
 | style="background:red" | 0%
@@ -180,10 +180,10 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
-| style="background:red" | 30%
+| style="background:yellow" | 80%
 | style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 5%
+| style="background:yellow" | 50%
+| style="background:yellow" | 50%
 | style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
@@ -216,7 +216,7 @@ kernel. You can find futher information to get a feature working up to 100% in o
 | &mdash;
 | &mdash;
 | &mdash;
-| style="background:red" | 0%
+| style="background:yellow" | 80%
 | &mdash;
 | &mdash;
 | &mdash;
