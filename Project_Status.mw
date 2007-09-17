@@ -6,283 +6,143 @@ Free Software. This page tracks the progress of this effort.
 The list of hardware parts we have working Free Software drivers for in the 2.6
 kernel. You can find futher information to get a feature working up to 100% in our [[TODO]] list.
 
+We dont support [[A728]], [[A760]], [[A768]], [[A910]] and [[E895]]. If you own one of those phones
+and want openezx on it, contact us on openezx-devel.
+
 {| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Feature
-! [[A728]]
-! [[A760]]
-! [[A768]]
 ! [[A780]]
-! [[A910]]
 ! [[A1200]]
 ! [[E680]]
-! [[E895]]
 ! [[Rokr E2]]
 ! [[Rokr E6]]
 |- style="background:#efefef;"
 | [[AP | CPU]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
-| style="background:lime" | 100%
-| style="background:red" | 0%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 |- style="background:#efefef;"
 | [[RAM]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
 | style="background:yellow" | 80%
 | style="background:yellow" | 80%
 | style="background:lime" | 100%
-| style="background:red" | 0%
-| style="background:yellow" | 80%
 | style="background:yellow" | 80%
 |- style="background:#efefef;"
 | [[LCD]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
-| style="background:red" | 30%
 | style="background:yellow" | 50%
 | style="background:lime" | 100%
-| style="background:red" | 0%
 | style="background:yellow" | 50%
 | style="background:yellow" | 50%
 |- style="background:#efefef;"
 | [[Internal Flash]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:yellow" | 50%
 | style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:yellow" | 50%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[External SD/MMC/TF]]
-| &mdash;
-| &mdash;
-| &mdash;
 | style="background:lime" | 100%
-| style="background:red" | 0%
 | style="background:red" | 5%
 | style="background:lime" | 100%
 | style="background:red" | 0%
 | style="background:red" | 0%
-| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Camera]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:red" | 30%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Power Management]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:yellow" | 80%
 | style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:yellow" | 80%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-|- style="background:#efefef;"
-| [[USB]] Host
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 20%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 20%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[USB]] Device
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
-| style="background:red" | 0%
 | style="background:red" | 30%
 | style="background:lime" | 100%
 | style="background:red" | 0%
 | style="background:red" | 0%
-| style="background:red" | 0%
-|- style="background:#efefef;"
-| [[USB]] OTG
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Touchscreen]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
-| &mdash;
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 | &mdash;
-| —
 | style="background:lime" | 100%
 |- style="background:#efefef;"
 | [[Keypad]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
 | style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Vibrator]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 100%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | &mdash;
 | style="background:red" | 0%
 | style="background:red" | 0%
-| style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Sound]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 95%
-| style="background:red" | 0%
 | style="background:yellow" | 50%
 | style="background:yellow" | 80%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[FM Radio]]
 | &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
 | style="background:red" | 0%
 | style="background:red" | 0%
-| &mdash;
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[Bluetooth]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 90%
 | style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 90%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[GPS]]
-| &mdash;
-| &mdash;
-| &mdash;
 | style="background:yellow" | 80%
-| &mdash;
-| &mdash;
 | &mdash;
 | &mdash;
 | &mdash;
 | &mdash;
 |- style="background:#efefef;"
 | [[Serial]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:red" | 20%
 | style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:red" | 20%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[BP | GSM, GPRS - Neptune LTE (mux_cli)]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:yellow" | 80%
 | style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:yellow" | 80%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
 | [[JTAG]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:red" | 20%
-| style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:yellow" | 80%
-| style="background:red" | 0%
 | style="background:red" | 20%
 | style="background:red" | 0%
-|- style="background:#efefef;"
-| [[WiFi]]
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-| style="background:red" | 0%
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-|- style="background:#efefef;"
-| [[IR]]
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
 |- style="background:#efefef;"
 |}
 
