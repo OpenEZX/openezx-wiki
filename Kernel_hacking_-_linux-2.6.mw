@@ -4,25 +4,30 @@ We use [http://savannah.nongnu.org/projects/quilt quilt] to handle our -ezx kern
 
 Please notice that the development is still in an early state. You should know what you are doing, if you test this.
 
- == Building OpenEZX kernel with openembedded ==
+== Building OpenEZX kernel ==
+* Download a vanilla, 2.6.21 kernel from www.kernel.org, untar it.
+* Download the Official OpenEZX patchset from [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here] and put all patches inside patches/ on the kernel source folder.
+* apply the quilt patchset, by running ´quilt push -a´
+* run ´make -f patches/Makefile.OpenEZX CROSS_COMPILE=<path to your toolchain>´
+* This will build zImages and modules to all currently supported phones.
+ Note: You can download a binary toolchain [http://www.codesourcery.com/gnu_toolchains/arm/download.html here] (for a fast quick start)
+ Or build your own with OE. See the next section.
+ You can also use OE toolchain to build the Official OpenEZX patchset,
+ just pass, the following variable:
+  CROSS_COMPILE=/path_to_OE/build/tmp/cross/bin/arm-angstrom-linux-gnueabi- zImage
+
+
+== Building OpenEZX kernel with openembedded ==
+* Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
 
 * Setup OE according to http://www.openembedded.org/wiki/GettingStarted
  * Note: BitBake 1.6.8 or higher is required. FC6 RPM of BitBake is currently version 1.6.6, so it will not work.
    Recommended way is running it without install.
  * Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2007.1</tt> in local.conf
-* Apply OpenEZX patches
- * Copy http://svn.openezx.org/trunk/src/kernel-2.6/patches/ to the Linux source tree
- * Run <tt>$ quilt push -a</tt>
+
 * Run <tt>$ bitbake virtual/kernel</tt>
 
-
-You can also use OE toolchain by hand if you need it, just run:
-
- PATH=$PATH:/path_to_OE/build/tmp/cross/bin make ARCH=arm CROSS_COMPILE=arm-angstrom-linux-gnueabi-
-
-setting the path to suit your OE setup.
-
- === Notes ===
+=== Notes ===
 * the kernel built with OE expects the rootfs on the '''first''' partition of external flash (<tt>root=/dev/mmcblk0p1</tt>),
 * while the default OpenEZX config expects it on the '''second''' partition (<tt>root=/dev/mmcblk0p2</tt>); with this setup you can use the first partition to store some data and access it when booting the original software.
 * by default this '''second''' partition must be ext3 fs.
