@@ -145,17 +145,31 @@ FLASH_KEY_PRESS
 
 boot Module:                                                                                                                                                                                      
 
-BOOT_G_00.02.05R_SUMATRA                                                                                                                                                                          
+BOOT_G_00.02.05R_SUMATRA                                                          
+                                                                                                                
 
 MBM FLASH MODE
 
 The bootloader of the A1200/E2/A910 enters an USB BP pass through mode if you press the voice dial key in Flash mode. 
 Note that it seems to take some seconds before switching to the new mode is possible.
 
-The same trick works for E2. You need tor press the camera button again.
+The same trick works for E2. You need to press the camera button again.
 ( Really? there is no camera button but voicedail button in my E2! jicknan)
 
 USB ID's: 22b8:4903
+
+
+For ROKR E6, the bootloader(red screen with black text) shows the following:
+
+FLASH_KEY_PRESS
+
+Boot_Module:
+
+BOOT_G_00.02.21P_MACAU
+
+MBM FLASH MODE
+
+And to get the "USB BP Pass Through Mode", press the camera button again.
 
 [[Category:Development]]
 [[Category:A780]]
