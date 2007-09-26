@@ -43,24 +43,29 @@ And ifconfig shows:
           collisions:0 txqueuelen:1000 
           RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
 
-== Getting USBstorage ==
+== Other modes ==
+
+=== USBstorage ===
 
  AT+mode=24                              
  OK
 
 Then get:
 
- usb 4-2: new high speed USB device using ehci_hcd and address 12
- usb 4-2: configuration #1 chosen from 1 choice
  Initializing USB Mass Storage driver...
  scsi2 : SCSI emulation for USB Mass Storage devices
  usbcore: registered new interface driver usb-storage
  USB Mass Storage support registered.
- usb-storage: device found at 12
- usb-storage: waiting for device to settle before scanning
  usb-storage: device scan complete
  scsi 2:0:0:0: Direct-Access     Motorola MSnc.                 PQ: 1 ANSI: 0 CCS
  usb 4-2: reset high speed USB device using ehci_hcd and address 12
  scsi 2:0:0:1: Direct-Access     Motorola MSnc.                 PQ: 1 ANSI: 0 CCS
  scsi 2:0:0:0: Attached scsi generic sg1 type 0
  scsi 2:0:0:1: Attached scsi generic sg2 type 0
+
+=== MTP ===
+
+ AT+mode=26                              
+ OK
+
+Desktop then reports it detects PTP camera.
