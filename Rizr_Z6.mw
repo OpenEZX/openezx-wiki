@@ -16,3 +16,29 @@ Features:
 *Talk Time: approximately 180-420 minutes; Standby Time: approximately 200-400 hours
 
 It is now named ROKR Z6, and the source code is expected to be avaliable at https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokrz6/frs
+
+== USB Exploring ==
+
+On the way of trying to [[Get_a_shell]], I discovered the usbnet mode:
+
+ AT+mode=8                                                                       
+ OK
+
+Result on the host side:
+
+ usb 4-1: USB disconnect, address 7
+ usb 1-1: new full speed USB device using uhci_hcd and address 2
+ usb 1-1: not running at top speed; connect to a high speed hub
+ usb 1-1: configuration #1 chosen from 1 choice
+ usbcore: registered new interface driver cdc_ether
+ usb0: register 'zaurus' at usb-0000:00:1d.0-1, pseudo-MDLM (BLAN) device, 56:bf:ae:e3:71:f5
+ usbcore: registered new interface driver zaurus
+
+And ifconfig shows:
+
+ usb0      Link encap:Ethernet  HWaddr 56:BF:AE:E3:71:F5  
+          BROADCAST MULTICAST  MTU:1494  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
