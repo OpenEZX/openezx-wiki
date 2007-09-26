@@ -17,7 +17,7 @@ Features:
 
 It is now named ROKR Z6, and the source code is expected to be avaliable at https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokrz6/frs
 
-== USB Exploring ==
+== Getting USBnet ==
 
 On the way of trying to [[Get_a_shell]], I discovered the usbnet mode:
 
