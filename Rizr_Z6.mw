@@ -69,3 +69,18 @@ Then get:
  OK
 
 Desktop then reports it detects PTP camera.
+
+== Enter the bootloader ==
+
+Hold down * # while power on
+
+Screen read:
+
+ Bootloader
+ 03.CD
+ 
+ 
+ Battery OK
+ OK to Progra
+ Transfer Mode:
+ USB
