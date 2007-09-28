@@ -158,19 +158,19 @@ For in depth analysis of the code see [[CodeAnalysis]]
 ===Libraries===
 *glibc
 
- ====Bluetooth====
+====Bluetooth====
 *proprietary userspace program directly opens HCI
 
- ====GPS====
+====GPS====
 *no NMEA, no serial device emulation :(
 *proprietary library via mux_cli kernel module
 
- ====UI====
+====UI====
 *embeddedQt
 *Motorola EZX toolkit
 *Low-level devices (framebufffer, etc) accessable.
 
- === Partitions ===
+=== Partitions ===
 
 {|
 | CodeGroup
@@ -247,7 +247,8 @@ mtd2: 00580000 00020000 "VFM_Filesystem"
 mtd3: 00020000 00020000 "Logo"
 </pre>
 
- ===Bootloader===
+===Bootloader===
+
 *EZX bootloader
 *based on GPL licensed blob
 *low-level initialization code (GPIO config, clock, ...)
