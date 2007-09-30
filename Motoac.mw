@@ -18,7 +18,7 @@ The access control policy can be enabled or disabled from a user-space applicati
    #include <linux/ac_class.h>
    ...
    int state=0;  /* 1==Enable, 0==Disable */
-   syscall(__NR_security, AC_POLICY_MAGIC, AC_SYSCALL_ENABLE,
+   syscall(__NR_security, AC_POLICY_MAGIC, AC_SYSCALL_ENABLE, &state);
 
  == Firmware Default States ==
 
