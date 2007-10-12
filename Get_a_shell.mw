@@ -307,6 +307,11 @@ The command line will be somewhat more useful once you install busybox.
 
 At least the [[Rokr_E2|ROKR E2]] has NFS support in the kernel.  An NFS export on the host can be mounted with the "noloop" option.
 
+=== Switching to usblan mode===
+There is a small utility that allows you to do this that can be installed with no extra configuration on some A780 phones (i.e no LinLoader)
+
+You can download it from the motorolafans download page http://www.motorolafans.com/forums/local_links.php?catid=25
+
 === Issues ===
 
 There seem to be certain A780's where the modem mode trick doesn't work on, more info on this follows.
