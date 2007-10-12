@@ -34,7 +34,7 @@ this text:
    <integer>8888</integer>
  </dict>
 
-After reboot, when connecting the phone, a device /dev/tty.usbmodem3B11 should appear (and disappear when you switch the phone to usblan mode, see below).
+After reboot, when connecting the phone, a device /dev/tty.usbmodem3B11 should appear (and disappear when you switch the phone to usblan mode, see below). Once the phone is in usblan mode it will identify as something like en3. In the Network control panel, set this to be configured manually and set the ip address to 192.168.1.1 (or whatever is appropriate for your setup).
 
 This is known to work when [[#Using LinLoader]].
 
