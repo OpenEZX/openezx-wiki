@@ -5,15 +5,15 @@ NOTE: This is time demanding. I used allmost two hours just to flash the phone. 
 
 This guide will give you the opportunity to:
 
-	* boot the original ezx rootfs as normal
-	* boot openezxkernel with rootfs on the Transflash card with pushing the cam button for a few sec.
-	* boot openezxkernel as allways with usb-boot and rootfs on the Transflash card. 
+  * boot the original ezx rootfs as normal
+  * boot openezxkernel with rootfs on the Transflash card with pushing the cam button for a few sec.
+  * boot openezxkernel as allways with usb-boot and rootfs on the Transflash card. 
 
 REQUIREMENTS:
 
 On your host: cramfs-tools
 
-On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it isent included by default ]
+On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it is included by default ]
 			
 For yourself: Guts :-), mabye a beer if your overage, something to read and a backup-phone is something goes wrong :-( . 
 
@@ -24,18 +24,22 @@ I just do this for fun, and i dont see the point of not sharing this.
 
 <b>YOU DO THIS AT YOUR OWN RISC</b>
 
-goxboxlive 
-
 Thanks to openezx developers, Openembedded community and motorolafans for letting us do all this geeky stuff.
-
 
 == FILES IN THIS HOWTO ==
 
+http://www.linuxtogo.org/~goxboxlive/A780/bootloader/
+
 HOWTO_FLASH_A780.TXT 			[This readme]
+
 boot_usb				[Normal usb booter]
+
 boot_usb-blop2				[The usb booter you should use after flashing your phone]
+
 console-a780-mtd-image.tar.bz2		[A linux rootfs image including mtd-utils]
+
 zImage-2.6.23-1-mtd-a780		[The usual openezx kernel image to use for backup your phone]	
+
 zImage-2.6.23-1-mtd-a780-alternate	[The openezx kernel zImage to use for flashing your phone and after flashing the phone, next time you want to upgrade your 
 					zImage just be sure that the zImage includes mtd-a780-alternate ] 
 
