@@ -1,0 +1,188 @@
+== HOWTO GET A DUAL BOOT SYSTEM ON YOUR A780 ==
+
+
+NOTE: This is time demanding. I used allmost two hours just to flash the phone. It also take some time to backup your phone.
+
+This guide will give you the opportunity to:
+
+	* boot the original ezx rootfs as normal
+	* boot openezxkernel with rootfs on the Transflash card with pushing the cam button for a few sec.
+	* boot openezxkernel as allways with usb-boot and rootfs on the Transflash card. 
+
+REQUIREMENTS:
+
+On your host: cramfs-tools
+
+On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it isent included by default ]
+			
+For yourself: Guts :-), mabye a beer if your overage, something to read and a backup-phone is something goes wrong :-( . 
+
+As allways:
+
+Remember, this might break your device, i am not responsable if something happends.
+I just do this for fun, and i dont see the point of not sharing this.
+
+<b>YOU DO THIS AT YOUR OWN RISC</b>
+
+goxboxlive 
+
+Thanks to openezx developers, Openembedded community and motorolafans for letting us do all this geeky stuff.
+
+
+== FILES IN THIS HOWTO ==
+
+HOWTO_FLASH_A780.TXT 			[This readme]
+boot_usb				[Normal usb booter]
+boot_usb-blop2				[The usb booter you should use after flashing your phone]
+console-a780-mtd-image.tar.bz2		[A linux rootfs image including mtd-utils]
+zImage-2.6.23-1-mtd-a780		[The usual openezx kernel image to use for backup your phone]	
+zImage-2.6.23-1-mtd-a780-alternate	[The openezx kernel zImage to use for flashing your phone and after flashing the phone, next time you want to upgrade your 
+					zImage just be sure that the zImage includes mtd-a780-alternate ] 
+
+
+== STEP BY STEP GUIDE ==
+
+1) Charge your battery full [very important]
+
+2) Backup your partions on your A780:
+	
+[Boot Linux with zImage-2.6.23-1-mtd-a780 and ssh to the phone from your computer]
+
+[Computer as root]:
+	ssh 192.168.0.202
+[A780]:
+	mkdir -p /backup/original
+	cat /proc/mtd
+
+[it should give you this output:]
+
+dev:    size   erasesize  name
+mtd0: 00020000 00008000 "Bootloader"
+mtd1: 000e0000 00020000 "Kernel"
+mtd2: 018e0000 00020000 "rootfs"
+mtd3: 00580000 00020000 "VFM_Filesystem"
+mtd4: 00020000 00020000 "setup"
+mtd5: 00020000 00020000 "Logo"
+root@a780:/$
+
+[Then backup your filesystem]
+
+	if=/dev/mtd0 of=/backup/original/mtd0 [it might give you "Illegal instruction" at the end as it did with me, but it's OK]
+        if=/dev/mtd1 of=/backup/original/mtd1 [it might give you "Illegal instruction" at the end as it did with me, but it's OK]
+        if=/dev/mtd2 of=/backup/original/mtd2 [it might give you "Illegal instruction" at the end as it did with me, but it's OK]
+        if=/dev/mtd3 of=/backup/original/mtd3 [it might give you "Illegal instruction" at the end as it did with me, but it's OK]
+        if=/dev/mtd4 of=/backup/original/mtd4 [it might give you "Illegal instruction" at the end as it did with me, but it's OK]
+        if=/dev/mtd5 of=/backup/original/mtd5 [it might give you "Illegal instruction" at the end as it did with me, but it's OK]
+	sync
+	reboot
+
+3) Save the files in the backup folder to your computer
+
+[Computer as root]:
+	mkdir /media/transflash
+	mount -t ext2 /dev/sda2 /media/transflash [I'll assume that the block device of the TRANSFLASH card is called /dev/sda. Replace this with the correct device on your system] 		
+	mkdir -p ~/a780/original
+	mkdir -p ~/a780/resized
+	mkdir 
+	cp /media/transflash/backup/original/* ~/a780/original/
+	cd ~/a780/resized/
+	cp ~/a780/original/mtd1 moto-kernel.mtd2
+	wget http://people.openezx.org/wyrm/00020000.bin
+	mv ~/a780/resized/00020000.bin bootloader2.mtd1
+	wget http://linuxtogo.org/~goxboxlive/zImage-2.6.23-1-mtd-a780-alternate
+	mv zImage-2.6.23-1-mtd-a780-alternate openezx-kernel.mtd4
+
+4) We are now going to resize the original rootfs.
+
+[Computer as root]:
+	mkdir /mtn/mtd2
+	mount -o loop -t cramfs /~home/a780/mtd2 /mnt/cramfs
+	cd /mnt/cramfs
+	tar cf ../mtd2.tar *
+	mkdir /tmp/mtd2
+	tar xpf mtd2.tar -C /tmp/mtd2
+	cd /tmp/mtd2
+	rm usr/sbin/smbd [you will miss samba and wouldnt be able to browse your files on A780 from windows (i think,dont know for sure)] 
+	pico etc/init.d/samba [Use your favorit texteditor, i am using "pico": Comment out line with # that includes smbd in section (start and (restart] exit with [ctrl + o] +  [enter] + [ctrl + x] [enter]
+	rm usr/SYSqtapp/wvimps/wvimps [WVIMPS is Wirelless Village Instant Messenger. It is present on all stock firmwares, but do not show on the Main Menu. There are a few people who have tried to make it work, but it doesnt. So what a heck, just delete it.]
+	cd ..
+	mkcramfs mtd2 mtd2.rootfs.mtd3	[We use .mtd3 endig because this should now be flashed to mtd3 instead of mtd2] 
+	umount /tmp/mtd2
+	cp mtd2.edited.mtd3 ~/a780/resized/
+	cd ~/a780/resized/
+	mkdir /media/transflash/backup/resized
+	cp * /media/transflash/backup/resized/
+	sync
+	umount /media/transflash
+
+5) Power on your A780 and charge it full again [very important]
+
+6) Now we need to boot up linux again on A780, but now with a diffrent kernel for flashing your phone :-) (scary) 
+
+[Boot Linux with zImage-2.6.23-1-mtd-a780-alternate  and ssh to the phone from your computer]
+
+[Computer]:
+        ssh 192.168.0.202
+[A780]
+	cat /proc/mtd
+
+[it should give you this output:]
+
+dev:    size   erasesize  name
+mtd0: 00020000 00008000 "Bootloader (RO)"
+mtd1: 00020000 00020000 "Bootloader 2"
+mtd2: 000e0000 00020000 "Moto Kernel"
+mtd3: 01760000 00020000 "rootfs"
+mtd4: 00180000 00020000 "OpenEZX Kernel"
+mtd5: 005a0000 00020000 "ezxlocal"
+mtd6: 00020000 00020000 "setup"
+mtd7: 00020000 00020000 "Logo"
+root@a780:~$
+
+[To save battery before we start to flash turn off your backlight so the battery last longer]
+	
+	echo "0" > /sys/class/backlight/ezx-bl/brightness
+	
+[Now flash your phone it might take up to two hours as it did for me, important fully charged battery (i cant say this enough) ]
+
+	flash_unlock /dev/mtd1
+	flash_eraseall /dev/mtd1
+	flashcp bootloader2.mtd1 /dev/mtd1
+	flash_unlock /dev/mtd2
+	flash_eraseall /dev/mtd2
+	flashcp moto-kernel.mtd2 /dev/mtd2
+        flash_unlock /dev/mtd3
+        flash_eraseall /dev/mtd3
+        flashcp /tmp/mtd2.rootfs.mtd3 /dev/mtd3  [Yes this is correct, mtd2.rootfs.mtd3 is going to mtd3 now because of the extra bootloader, this step take over an hour]
+	flash_unlock /dev/mtd4
+	flash_eraseall /dev/mtd4
+	flashcp openezx-kernel.mtd4 /dev/mtd4
+	sync
+	reboot
+7)
+
+Now your done, reboot the phone and test out the original evnirement with normal power on.
+
+8)
+
+Now, test to boot the openezx kernel. Swithc off phone and then held the cam button for a few sec, it should boot openezx.
+
+9)
+
+To boot openezx from usb mode you will have to use the boot_usb-blop2 instead of the useuall one. 
+
+
+10)
+
+Next time there is an update of the openezx kernel and you want to update, you will just have to flash /dev/mtd4. 
+Just be sure that it inlcudes mtd-a780-alternate.
+But you will need to boot from usb-boot to do this, not with the cam button boot.
+
+        flash_unlock /dev/mtd4
+        flash_eraseall /dev/mtd4
+        flashcp openezx-NEW-kernel.mtd4 /dev/mtd4 
+
+
+TROUBLESHOOTING:
+
+No idea, it just went successfully for me, so i didnt need to do any troubleshooting :-) .
