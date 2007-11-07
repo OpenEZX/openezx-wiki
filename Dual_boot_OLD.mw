@@ -196,13 +196,14 @@ But you will need to boot from usb-boot to do this, not with the cam button boot
 
 '''The phone wont turn on with the Motorola firmware, but works with OpenEZX (holding the camera button).'''
  Something went wrong when building or flashing the '''rootfs''', mount it again on your PC, check the files and permissions,
- assure that the total size of the '''cramfs''' image is less than 24510464 bytes. Boot with zImage-*-mtd-alternate, and flash it again.
+ assure that the total size of the '''cramfs''' image is less than 24510464 bytes. Boot with zImage-*-mtd-alternate, and flash the
+ rootfs(mtd3) again.
 
 
 '''I cant enter the bootloader screen!'''
  Man, you are screwed! Now you have a nice looking paper weight. (just joking ;) )
  Remove the battery. Hold the camera + jog buttons, place the battery while holding the keys. The phone will enter the bootloader
- (yes, even without pressing the power button). Use boot_usb to send zImage-*-mtd-alternate and reflash the '''*Motorola* zImage'''.
+ (yes, even without pressing the power button). Use boot_usb to send zImage-*-mtd-alternate and reflash blob2(mtd1) and the '''*Motorola* zImage'''(mtd2).
 
 
 '''I still cant enter the bootloader screen!'''
@@ -212,4 +213,4 @@ But you will need to boot from usb-boot to do this, not with the cam button boot
 '''I still cant enter the bootloader screen! And my battery is charged.'''
  Man, you are screwed! Now you have a nice looking paper weight. (Not a joke :( )
  Note: by following the above howto this "extreme bricking" is '''impossible''' to happen, the zImages provided by goxboxlive,
- and the source code on svn.openezx marks the bootloader partition as read-only.
+ and the source code on svn.openezx marks the bootloader partition(mtd0) as read-only.
