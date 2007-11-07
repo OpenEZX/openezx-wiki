@@ -34,7 +34,7 @@ HOWTO_FLASH_A780.TXT 			[This readme]
 
 boot_usb				[Normal usb booter]
 
-boot_usb-blop2				[The usb booter you should use after flashing your phone]
+boot_usb-blop2				[The usb booter you should use after flashing your phone] (Just use a recent version from svn.openezx, the default boot_usb supports blob2 -WM).
 
 console-a780-mtd-image.tar.bz2		[A linux rootfs image including mtd-utils]
 
@@ -53,10 +53,10 @@ zImage-2.6.23-1-mtd-a780-alternate	[The openezx kernel zImage to use for flashin
 [Boot Linux with zImage-2.6.23-1-mtd-a780 and ssh to the phone from your computer]
 
 [Computer as root]:
-	ssh 192.168.0.202
+ ssh 192.168.0.202
 [A780]:
-	mkdir -p /backup/original
-	cat /proc/mtd
+ mkdir -p /backup/original
+ cat /proc/mtd
 
 [it should give you this output:]
 
@@ -126,9 +126,10 @@ zImage-2.6.23-1-mtd-a780-alternate	[The openezx kernel zImage to use for flashin
 [Boot Linux with zImage-2.6.23-1-mtd-a780-alternate  and ssh to the phone from your computer]
 
 [Computer]:
-        ssh 192.168.0.202
+ ssh 192.168.0.202
+
 [A780]
-	cat /proc/mtd
+ cat /proc/mtd
 
 [it should give you this output:]
 
@@ -163,6 +164,7 @@ zImage-2.6.23-1-mtd-a780-alternate	[The openezx kernel zImage to use for flashin
   flashcp openezx-kernel.mtd4 /dev/mtd4
   sync
   reboot
+
 7)
 
 Now your done, reboot the phone and test out the original evnirement with normal power on.
@@ -173,14 +175,8 @@ Now, test to boot the openezx kernel. Switch off phone and then held the cam but
 
 9)
 
-To boot openezx from usb mode you will have to use the boot_usb-blop2 instead of the useuall one. 
-
-
-10)
-
 Next time there is an update of the openezx kernel and you want to update, you will just have to flash /dev/mtd4. 
 Just be sure that it inlcudes mtd-a780-alternate.
-But you will need to boot from usb-boot to do this, not with the cam button boot.
 
   flash_unlock /dev/mtd4
   flash_eraseall /dev/mtd4
