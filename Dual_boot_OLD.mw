@@ -13,7 +13,7 @@ REQUIREMENTS:
 
 On your host: cramfs-tools
 
-On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it is included by default ]
+On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it isen't included by default ]
 			
 For yourself: Guts :-), mabye a beer if your overage, something to read and a backup-phone is something goes wrong :-( . 
 
