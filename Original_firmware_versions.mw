@@ -42,9 +42,13 @@ Alternatively, via telnet or Samba look at:
 == Known versions ==
 
 {| border="1" cellpadding="5" cellspacing="0"
-! AP || BP || BP Flex || DSP || Info
+! style="background:#efefef;" | AP
+! style="background:#efefef;" | BP
+! style="background:#efefef;" | BP Flex 
+! style="background:#efefef;" | DSP 
+! style="background:#efefef;" | Info
 |-
-! colspan="5" | ROKR E2
+! colspan="5" style="background:#ffdead;" | ROKR E2
 |-
 | R564_G_12.00.47P
 | R564_G_12.00.47P
@@ -58,13 +62,13 @@ Alternatively, via telnet or Samba look at:
 | 63272700
 | Indonesia/Vietnam version. MotNet launches, but telnet/ftp/samba is unavailable. No mpkg install
 |-
-| 
+| R564_G_12.00.45P
 | R564_G_12.00.45P
 | GSZSMTRT678PZ02A
 | 63272700
 | Polish/Lithuanian version. MotNet launches, telnet/ftp/samba available.
 |-
-! colspan="5" | A780
+! colspan="5" style="background:#ffdead;" | A780
 |-
 | R52_G_0D.43.A3P
 | R52_G_0D.32.B1P
@@ -156,7 +160,7 @@ Alternatively, via telnet or Samba look at:
 | 6221A100
 | Bought on eBay from french powerseller http://stores.ebay.fr/Purnima-Digital-FR , imported from Hong Kong. Branded for China Mobile. Apparently no GPS. Quad-Band GSM. USB Modem mode hack works
 |-
-! colspan="5" | A768
+! colspan="5" style="background:#ffdead;" | A768
 |-
 | R503_G_00.16.A1R
 | 
@@ -170,7 +174,7 @@ Alternatively, via telnet or Samba look at:
 | 
 | 
 |-
-! colspan="5" | ROKR E6
+! colspan="5" style="background:#ffdead;" | ROKR E6
 |-
 | R533_G_11.12.06P
 | R533_G_11.12.06P
@@ -178,7 +182,7 @@ Alternatively, via telnet or Samba look at:
 | 63343400
 | Modded to Quad-Band GSM + Edge. Bought from Ebay. Seems to be imported from Hong Kong. Unbranded.
 |-
-! colspan="5" | A1200
+! colspan="5" style="background:#ffdead;" | A1200
 |-
 | R532H2_G_11.20.09P
 | R532H2_G_11.20.09PB
@@ -204,7 +208,7 @@ Alternatively, via telnet or Samba look at:
 | 631F1F00
 | Technology: Quad-Band GSM. Bought in Brazil Nov/2007
 |-
-! colspan="5" | E680i
+! colspan="5" style="background:#ffdead;" | E680i
 |-
 | E680I_G_0D.C5.A3P
 | E680I_G_0D.B0.B1P
@@ -212,6 +216,10 @@ Alternatively, via telnet or Samba look at:
 | 62282800
 | Technology: Tri-Band GSM. Bought in Hong Kong from Ebay
 |-
-! AP || BP || BP Flex || DSP || Info
+! style="background:#efefef;" | AP
+! style="background:#efefef;" | BP
+! style="background:#efefef;" | BP Flex 
+! style="background:#efefef;" | DSP 
+! style="background:#efefef;" | Info
 |-
 |}
