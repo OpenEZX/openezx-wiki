@@ -39,10 +39,12 @@ Alternatively, via telnet or Samba look at:
  /etc/ap_version.txt
  /tmp/VersionInfo
 
-== Known versions Rokr E2 ==
+== Known versions ==
 
-{| border="1"
-| AP || BP || BP Flex || DSP || Info
+{| border="1" cellpadding="5" cellspacing="0"
+! AP || BP || BP Flex || DSP || Info
+|-
+! colspan="5" | ROKR E2
 |-
 | R564_G_12.00.47P
 | R564_G_12.00.47P
@@ -61,12 +63,8 @@ Alternatively, via telnet or Samba look at:
 | GSZSMTRT678PZ02A
 | 63272700
 | Polish/Lithuanian version. MotNet launches, telnet/ftp/samba available.
-|}
-
-== Known versions A780 ==
-
-{| border="1"
-| AP || BP || BP Flex || DSP || Info
+|-
+! colspan="5" | A780
 |-
 | R52_G_0D.43.A3P
 | R52_G_0D.32.B1P
@@ -155,50 +153,65 @@ Alternatively, via telnet or Samba look at:
 | R52_G_0D.37.A2P
 | R52_G_0D.27.B1P
 | GSOA780T672ZD013
-|6221A100
+| 6221A100
 | Bought on eBay from french powerseller http://stores.ebay.fr/Purnima-Digital-FR , imported from Hong Kong. Branded for China Mobile. Apparently no GPS. Quad-Band GSM. USB Modem mode hack works
+|-
+! colspan="5" | A768
+|-
+| R503_G_00.16.A1R
+| 
+| 
+| 
+| 
+|-
+| R503_G_00.18.A2R
+| 
+| 
+| 
+| 
+|-
+! colspan="5" | ROKR E6
+|-
+| R533_G_11.12.06P
+| R533_G_11.12.06P
+| GSZMCAUT678SW01C
+| 63343400
+| Modded to Quad-Band GSM + Edge. Bought from Ebay. Seems to be imported from Hong Kong. Unbranded.
+|-
+! colspan="5" | A1200
+|-
+| R532H2_G_11.20.09P
+| R532H2_G_11.20.09PB
+| GSZHNANT676TS013D
+| 631F1F00
+| Technology: Quad-Band GSM. Bought in Thailand around 2006/Early 2007
+|-
+| R532_G_11.00.44P
+| R532_G_11.00.44P
+| GSZHNANT675WB00C
+| 631F1F00
+| Technology: Quad-Band GSM. Bought in Hong Kong in September 2006
+|-
+| R532_G_11.00.53P
+| R532_G_11.00.53P
+| GSZHNANT675WB013
+| 631F1F00
+| Technology: Quad-Band GSM. Bought from Exotic Cellular shortly before Christmas 2006
+|-
+| R532L4_G_11.40.1AR
+| R532L4_G_11.40.1AR
+| GSZ1200L00CLABRLA010
+| 631F1F00
+| Technology: Quad-Band GSM. Bought in Brazil Nov/2007
+|-
+! colspan="5" | E680i
+|-
+| E680I_G_0D.C5.A3P
+| E680I_G_0D.B0.B1P
+| GCOE680I000SA006
+| 62282800
+| Technology: Tri-Band GSM. Bought in Hong Kong from Ebay
+|-
+! AP || BP || BP Flex || DSP || Info
+|-
 |}
-
-== Known version A768 ==
-
-R503_G_00.16.A1R
-R503_G_00.18.A2R
-
-== Known version A1200 ==
-
-  R532H2_G_11.20.09P
-  BP: R532H2_G_11.20.09PB
-  BPFlex: GSZHNANT676TS013D
-  DSP: 631F1F00
-  Technology: Quad-Band GSM
-* Bought in Thailand around 2006/Early 2007
-
-  R532_G_11.00.44P
-  BP: R532_G_11.00.44P
-  BPFlex: GSZHNANT675WB00C
-  DSP: 631F1F00
-  Technology: Quad-Band GSM
-* Bought in Hong Kong in September 2006
-
-  R532_G_11.00.53P
-  BP: R532_G_11.00.53P
-  BPFlex: GSZHNANT675WB013
-  DSP: 631F1F00
-  Technology: Quad-Band GSM
-* Bought from Exotic Cellular shortly before Christmas 2006
-
-  R532L4_G_11.40.1AR
-  BP: R532L4_G_11.40.1AR
-  BPFlex: GSZ1200L00CLABRLA010
-  DSP: 631F1F00
-  Technology: Quad-Band GSM
-* Bought in Brazil Nov/2007
-
-== Known version E680i ==
-
-  E680I_G_0D.C5.A3P
-  BP: E680I_G_0D.B0.B1P
-  BPFlex: GCOE680I000SA006
-  DSP: 62282800
-  Technology: Tri-Band GSM
-* Bought in Hong Kong from Ebay
