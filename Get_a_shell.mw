@@ -317,6 +317,38 @@ You can download it from the motorolafans download page http://www.motorolafans.
 There seem to be certain A780's where the modem mode trick doesn't work on, more info on this follows.
 *  LinLoader works, so if AT+mode=99 returns an error, dont bother and use the second part of the tutorial -- Kosta
 
+=== Phones without telnet enabled ===
+
+Some phones doesn't have telnet enabled by default. To work around this issue:
+
+* Get nc ([http://en.wikipedia.org/wiki/Netcat] netcat) compiled to the target phone;
+* Put the executable in the CF card;
+* Create a file named nc.lin with:
+
+ #!/bin/sh
+ /mmc/mmca1/tools/nc -l -n -e /bin/sh -s 192.168.1.2 -p 8888 -v >$0.out 2>$0.err
+
+* And run it on the phone with linloader
+
+This will run nc on the phone, programmed to spawn an ash shell.
+
+Please note that /mmc/mmca1/nc should point to the path where the executable is on the phone.
+In the example, I've stored nc inside the a folder "tools" in the memory card ("/mmc/mmca1" is the root of the mounted card).
+The redirections (> and 2>) create files with the contents of stderr and stdout, and can be opened with the phone text editor for debug.
+
+* After running the script on the phone (opening the file with linloader), connect to the phone:
+ nc 192.168.1.2 8888
+
+If you like the shell prompt ($, #, etc), run the shell in interactive mode:
+ /bin/ash -i
+(sh is a link to the [http://en.wikipedia.org/wiki/Almquist_shell ash shell])
+
+You should login as user ezx.
+If you need to be root, you should edit the linloader file, find this two lines:
+ GroupID = ezx
+ UserID = ezx
+and change ezx to root.
+
 === Creating a backup ===
 
 * This section is a duplicate of [[Backups]] although it has better netcat information as well as some tar goodies (except that the tar code below appears to miss /.backup).
