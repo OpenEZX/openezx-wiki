@@ -38,7 +38,7 @@ It has a file manager, but trying to install ordinary mpkg files gives the messa
  Revision        : 0000
  Serial          : 0000000000000000
 
- == RAM ==
+== RAM ==
 /proc/meminfo
 
          total:    used:    free:  shared: buffers:  cached:
@@ -60,7 +60,7 @@ It has a file manager, but trying to install ordinary mpkg files gives the messa
  SwapFree:            0 kB
  Committed_AS:    48704 kB
 
- == External Links ==
+== External Links ==
 
 *[http://www.motorola.com.cn/E6/ Official Motorola RORK E6 site]
 *[http://www.motorolafans.com/forums/viewforum.php?f=28 MotorolaFans E690 Forum]
