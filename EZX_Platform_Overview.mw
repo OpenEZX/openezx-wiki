@@ -151,7 +151,7 @@ For in depth analysis of the code see [[CodeAnalysis]]
 *hooks into netfilter to intercept DNS packets ?!?
 *provides gprs0 / grps1 network devices
 
- ====ipsec.o====
+====ipsec.o====
 *proprietary ipsec stack (don't we already have two GPL licensed?)
 *Copyright Certicom Corp
 
