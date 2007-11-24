@@ -7,7 +7,8 @@ A rootfs with OPIE is also [[Handheld_Environments|available]].
 Goxboxlive has build an 
 [http://www.linuxtogo.org/~goxboxlive/A780/images/OpenMoko-openmoko-image-glibc-ipk-P1-Snapshot-20071026-a780.rootfs.tar.bz2 OpenMoko] 
 and a 
-[http://www.linuxtogo.org/~goxboxlive/A780/images/Qtopia-4.3.0-snapshot-25102007-2.6.23-1-r1-a780.tar.bz2  Qtopia ] snapshot (20071026) for the A780.//
-A readme can be found [http://www.linuxtogo.org/~goxboxlive/A780/images/README here]
+[http://www.linuxtogo.org/~goxboxlive/A780/images/Qtopia-4.3.0-snapshot-25102007-2.6.23-1-r1-a780.tar.bz2  Qtopia ] simage (20071026) for the A780.
+
+Instructions can be found [http://www.linuxtogo.org/~goxboxlive/A780/images/README here]
 
 [[Category:Development]]
