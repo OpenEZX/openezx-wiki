@@ -15,12 +15,12 @@ On your host: cramfs-tools
 
 On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it isn't included by default ]
 			
-For yourself: Guts :-), mabye a beer if your overage, something to read and a backup-phone is something goes wrong :-( . 
+For yourself: Guts :-), mabye a beer if your overage, something to read and a backup-phone if something goes wrong :-( . 
 
 As allways:
 
-Remember, this might break your device, i am not responsable if something happends.
-I just do this for fun, and i dont see the point of not sharing this.
+Remember, this might break your device, i am not responsible if something happends.
+I just do this for fun, and i don't see the point of not sharing this.
 
 <b>YOU DO THIS AT YOUR OWN RISC</b>
 
