@@ -210,3 +210,5 @@ Just be sure that it inlcudes mtd-a780-alternate.
  Man, you are screwed! Now you have a nice looking paper weight. (Not a joke :( )
  Note: by following the above howto this "extreme bricking" is '''impossible''' to happen, the zImages provided by goxboxlive,
  and the source code on svn.openezx marks the bootloader partition(mtd0) as read-only.
+
+Edit-Test
