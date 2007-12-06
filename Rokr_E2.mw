@@ -18,7 +18,7 @@ Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE)
 
 == CPU ==
  Processor       : Intel XScale-PXA27x rev 7 (v5l)||
- BogoMIPS        : 103.76
+ BogoMIPS        : 311.28
  Features        : swp half thumb fastmult edsp
  CPU implementor : 0x69
  CPU architecture: 5TE
