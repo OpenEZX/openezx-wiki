@@ -3,7 +3,7 @@
 
 Motorola has announced the release of three new RAZR models, collectively called RAZR2.  The RAZR2-V8 is the only Linux/MotoMAGX based model.  The V9 and V9m are based on the Motorola Synergy OS, supposedly because Linux does not yet support HSDPA (V9) or CDMA EV-DO (V9m).   The V8 supports Quad-band GSM EDGE, and unlike the 2 V9 devices, does '''not''' have expandable memory via flash cards.  Instead, the V8 comes with either 512MB or 2GB of memory.  As of July 2007, the V8 is available officially in Korea and Hong Kong for approximately US$450 without contract, and via eBay elsewhere.
 
-MOTORAZR V8 Features:
+== MOTORAZR V8 Features ==
 
 *500Mhz ARM11 CPU[http://www.fiercewireless.com/story/moto-media-monster-is-z8-but-razr2-is-new/2007-05-15]
 *Bluetooth Class 2 V2.0 (A2DP & AVRCP support)
@@ -19,3 +19,19 @@ MOTORAZR V8 Features:
 [http://www.siamphone.com/news/2007/motorola/razr2/page.htm Asia launch photos]
 
 [https://opensource.motorola.com/sf/sfmain/do/viewProject/projects.razr2v8 Motorola RAZR2 V8 Sources]
+
+== Entering boot loader ==
+
+To enter boot loader mode turn off the RAZR2 V8. Then press and hold both the '*' and '#' buttons and press the power button.
+
+The screen will display:<br/>
+<pre>
+Bootloader
+A3.C9
+Battery OK
+OK to Program
+Connect USB
+Data Cable
+</pre>
+
+Connect the USB cable and the Display will show "Transfer Mode: USB". In this mode boot_usb can talk to the phone, but transfers don't seem to succeed.
