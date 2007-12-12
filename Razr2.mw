@@ -20,6 +20,14 @@ Motorola has announced the release of three new RAZR models, collectively called
 
 [https://opensource.motorola.com/sf/sfmain/do/viewProject/projects.razr2v8 Motorola RAZR2 V8 Sources]
 
+== Chips used ==
+* SKY77512 Skyworks quad band EDGE FEM
+* BCM2045KWBG Broadcom Bluetooth module
+* SC13783VK5 Freescale OEM_EXC NEED TP(?)
+* SC29364VK
+* TY9000C010
+* MMM6000 Freescale Quad Band GSM/EDGE Transciever [http://www.freescale.com/files/wireless_comm/doc/fact_sheet/MMM60006027FS.pdf]
+
 == Entering boot loader ==
 
 To enter boot loader mode turn off the RAZR2 V8. Then press and hold both the '*' and '#' buttons and press the power button.
