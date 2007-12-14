@@ -31,7 +31,7 @@ Linux version 2.6.10_dev(gcc version 3.4.3 (MontaVista 3.4.3-25.0.96.custom 2006
 
 Some ARM 6TEJ acordding to [http://wiki.openezx.org/Rizr_Z6_Details#.2Fproc.2Fcpuinfo /proc/cpuinfo]
 
-== RAM ＝＝
+== RAM ==
 
 60M acordding to [http://wiki.openezx.org/Rizr_Z6_Details#.2Fproc.2Fcmdline kernel cmdline]
 
