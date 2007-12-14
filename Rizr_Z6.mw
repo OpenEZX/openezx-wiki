@@ -23,6 +23,18 @@ Features:
 
 The opensource portion of its source code is available at https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokrz6/frs
 
+== Kernel ==
+
+Linux version 2.6.10_dev(gcc version 3.4.3 (MontaVista 3.4.3-25.0.96.custom 2006-06-12))
+
+== CPU ==
+
+Some ARM 6TEJ acordding to [http://wiki.openezx.org/Rizr_Z6_Details#.2Fproc.2Fcpuinfo /proc/cpuinfo]
+
+== RAM ＝＝
+
+60M acordding to [http://wiki.openezx.org/Rizr_Z6_Details#.2Fproc.2Fcmdline kernel cmdline]
+
 == Getting USBnet ==
 
 On the way of trying to [[Get_a_shell]], I discovered the usbnet mode:
