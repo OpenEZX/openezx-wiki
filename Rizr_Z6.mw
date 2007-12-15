@@ -1,4 +1,33 @@
 The new MOTOROKR Z6 (formerly MOTORIZR Z6) is available for direct purchase from Motorola.
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| ROKR Z6
+|-
+| Codename:
+| -
+|-
+| Generation:
+| 3rd (Black bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| No
+|-
+| [[Project_Status |Device support]]:
+| -
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/rokrz6
+|-
+| PCB pictures:
+| -
+|}
+
+
 [[Image:Motorola-rizr-z6.jpg]]
 
 There is an unlocked GSM version and CDMA provider versions:
