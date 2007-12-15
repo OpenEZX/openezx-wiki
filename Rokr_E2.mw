@@ -1,6 +1,35 @@
 {| width="100%"
 |-
 |style="vertical-align:top" |
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| ROKR E2
+|-
+| Codename:
+| Sumatra
+|-
+| Generation:
+| 2nd (Red bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| No
+|-
+| [[Project_Status |Device support]]:
+| Bootup and partially framebuffer
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/rokre2
+|-
+| PCB pictures:
+| -
+|}
+
+
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 
 The '''ROKR E2''' is the second incarnation of Motorola's music phone. Unlike the original ROKR E1, it doesn't work with Apple's iPod/iTunes store, but with some Motorola-own store for downloading music.
