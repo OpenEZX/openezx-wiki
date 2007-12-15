@@ -1,16 +1,34 @@
 {| width="100%"
 |-
 |style="vertical-align:top" |
-<div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-The [[A910]] is [http://www.golem.de/0507/39510.html supposed to be available in early 2006] (German article). It will have built-in WLAN (802.11b/g).
 
-This phone is now available in France with the mobile operator [http://www.orange.fr Orange].
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| A910
+|-
+| Codename:
+| Martinique
+|-
+| Generation:
+| 2nd (Red bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| Yes
+|-
+| [[Project_Status |Device support]]:
+| Bootup and partially framebuffer
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/a910
+|-
+| PCB pictures:
+| http://people.openezx.org/stefan/photos/A910/
+|}
 
-The open source code has been released by Motorola for the R57_G_10.06.48R firmware on 02/15/2007 at the A910 project page: 
-
-https://opensource.motorola.com/sf/projects/a910
-
-</div>
 | width="30%" style="vertical-align:top" |
 [[Image:A910-2.jpg]]
 |}
