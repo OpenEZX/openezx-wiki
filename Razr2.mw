@@ -43,3 +43,13 @@ Data Cable
 </pre>
 
 Connect the USB cable and the Display will show "Transfer Mode: USB". In this mode boot_usb can talk to the phone, but transfers don't seem to succeed.
+
+== USB modes ==
+Set your RAZR2 USB setting to modem, connect to /dev/ttyACM0 (you'll need the module cdc-acm) and then type the following command to change USB modes:
+
+* AT+MODE=0 Seems to be the current (ACM) mode
+* AT+MODE=8 Networking (What IP? 192.168.16.2 doesn't seem to work). Module zaurus needed
+* AT+MODE=24 USB mass storage
+* AT+MODE=26 PTP Picture transfer protocol
+
+All other values return ERROR and don't seem to have any effect
