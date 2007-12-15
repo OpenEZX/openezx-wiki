@@ -1,6 +1,35 @@
 {| width="100%"
 |-
 |style="vertical-align:top" |
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| A768
+|-
+| Codename:
+| -
+|-
+| Generation:
+| -
+|-
+| [[Project_devices |Project device]]:
+| No
+|-
+| [[Project_Status |Device support]]:
+| -
+|-
+| Motorola source code:
+| -
+|-
+| PCB pictures:
+| -
+|}
+
+
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 The '''A768''' is a revamped version of the original [[A760]].
 
