@@ -1,6 +1,35 @@
 {| width="100%"
 |-
 |style="vertical-align:top" |
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| A1200
+|-
+| Codename:
+| Hainan
+|-
+| Generation:
+| 2nd (Red bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| Yes
+|-
+| [[Project_Status |Device support]]:
+| Bootup and partially framebuffer
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/a1200
+|-
+| PCB pictures:
+| http://wiki.openezx.org/A1200_Board
+|}
+
+
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 
 The '''A1200''' is another Motorola Linux phone. It was recently rebranded as "Ming" phone. First available in
