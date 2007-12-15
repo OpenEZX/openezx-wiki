@@ -1,6 +1,35 @@
 {| width="100%"
 |-
 |style="vertical-align:top" |
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| E680
+|-
+| Codename:
+| -
+|-
+| Generation:
+| 1st (Blue bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| Yes
+|-
+| [[Project_Status |Device support]]:
+| Working communication with BP
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/a780e680
+|-
+| PCB pictures:
+| http://wiki.openezx.org/E680_Board
+|}
+
+
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 
 The '''E680''' is from a hard- and software point very similar to the [[A780]], although there are some differences. It doesn't have a flip and you have a SD card slot instead a microSD. The E680 is only known to be sold in Asia.
