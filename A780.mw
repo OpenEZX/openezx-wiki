@@ -1,6 +1,36 @@
 {| width="100%"
 |-
 |style="vertical-align:top" |
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| A780
+|-
+| Codename:
+| -
+|-
+| Generation:
+| 1st (Blue bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| Yes
+|-
+| [[Project_Status |Device support]]:
+| First phonecall
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/a780e680
+|-
+| PCB pictures:
+| 
+|}
+
+
+
 <div style="margin:0;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
 The '''A780''' is sold in East Asia since August 2004, and in Europe/US since August 2005. There are a some different variants (with GPS, without GPS). Like the previous A7xx phones, it's a flip phone. See EMU for information about the [[EMU]] (Enhanced Mini USB) on the A780.
 
