@@ -1,3 +1,31 @@
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| RAZR2 V8
+|-
+| Codename:
+| -
+|-
+| Generation:
+| 3rd (Black bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| No
+|-
+| [[Project_Status |Device support]]:
+| -
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/razr2v8
+|-
+| PCB pictures:
+| -
+|}
+
+
 [[Image:Razr2.jpg]]
 ----
 
