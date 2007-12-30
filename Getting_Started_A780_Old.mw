@@ -1,0 +1,140 @@
+= How to try OpenEZX on your A780 =
+
+=== DANGER - WORK IN PROGRESS! DON'T FOLLOW THIS YET ===
+
+
+This HowTo is intended for people who are new to the OpenEZX project. It aims to provide the basic information required to use a computer running Linux to boot the oezx kernel on the A780, with the rootfs on a TransFlash Card. It does not interfere with your phone's original software (though does allow you to, so tread carefully!). The images we will use will be provided by OpenEmbedded's [http://www.angstrom-distribution.org/ Angstrom Distribution]
+
+WARNING: Following these steps should not break your phone, but there is a possibility it could. They didn't break mine, nor many others who have done it before me. The authors, nor the OpenEZX Project accept no responsibility for any problems (with your phone, or otherwise!) that might arise as a result of following these instructions.
+
+==== What we're going to do ====
+* Download an image of the rootfs (what will become '/' when OpenEZX boots) from the Angstrom distribution
+* Format the TransFlash card for use with OEZX
+* Unpack the rootfs image to the second partition
+* Send a kernel to the phone and boot it via a program called boot_usb on the Linux computer
+* Once linux has booted, set up the network connection between computer and phone
+* Update the phone's software with ipkg
+
+Note that because we're booting the phone via usb cable the [[Baseband Processor]] starts in reflash mode, so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with a different method (see [[Dual boot]])
+
+== Putting an image on a TransFlash Card ==
+
+==== 1. Download a recent image from OpenEmbedded ====
+There are pre-compiled images and kernels for the A780 in sub folders at
+
+http://www.angstrom-distribution.org/unstable/images/a780/
+
+For what we are planning to do any of the images should be acceptable. Choose the one you want and download it.
+
+''For the sake of this tutorial I will be assuming it is in ~/oezx/images'' If you save it to a different location remember to change the commands you put into the command line.
+
+
+==== 2. Make a partition on your card for the rootfs ====
+
+You need two partitions on your card. The kernels we will use are preconfigured to boot from the SECOND partition
+The card layout will be as follows
+
+ 1. FAT filesystem to be used for media files with the original firmware - could also be mounted under oezx
+ 2. EXT2 filesystem to be used as '/' with OpenEZX
+
+If you aren't familiar with how to create these partitions then skip to the [[#Creating the Partitions]] section at the end of this tutorial.
+
+==== 3. Unpacking the image on to the card ====
+
+Assuming you have followed the procedure outlined in [[#Creating the Partitions]] below you will need to mount the new partions. As root or using sudo, type
+
+''Assuming your card is at /dev/sda''
+
+ mkdir /media/sda2
+ mount -t ext2 /dev/sda2 /media/sda2
+ cd /media/sda2
+
+And otherwise, ensure you have mounted the second partition of the card and entered the folder it is mounted to. Then type (as root, or using sudo)
+
+ tar jxvpf ~/oezx/images/[NAME OF YOUR IMAGE]
+ sync
+ cd ~/
+ umount /media/sda2
+
+== Booting a Kernel using boot_usb ==
+
+boot_usb is a tool written by the OpenEZX developers that uploads a kernel to a Motorola EZX phone using the USB cable. More info about this process lives at [[Bootloader]]
+
+==== 1. Get a kernel to boot ====
+
+Before you use boot_usb you need a kernel image to boot. We can get one from the internet (the same location the rootfs image came from), or from the image we just wrote to the card. It will be in the 'boot' folder and will be called something like 'zImage-2.6.23.1-ezxdev'. At the time of writing it was typically ~1.4mb. 
+''It is not essential to match the kernel with the image, but older kernels may not work with newer images.''
+
+Place the kernel somewhere on the computer (I'll use ~/oezx/kernels)
+
+==== 2. Get boot_usb ====
+
+In the same place as you got your rootfs images from ([[http://www.angstrom-distribution.org/unstable/images/a780/ Angstrom's Images]])there was probably another file called 'boot_usb' or 'ezx-boot-usb'. Download this to a location on your computer (I'll use ~/oezx/tools)
+
+==== 3. Boot the kernel ====
+
+First you need to put the phone in the right mode. First ensure the flash card you prepared earlier is inside it, then
+
+* Turn it off
+* Hold down the jog-dial and the camera button
+* push the power button
+
+A blue screen with some writing on it should appear.
+
+Connect the phone to the USB cable.
+
+On the computer, from the command line, as root run
+
+ cd /home/youruser/oezx/tools
+ chmod +x ezx-boot-usb                  <-- Or boot_usb, whichever you are using
+ ./ezx-boot-usb PATH_TO_KERNEL          <-- we used ~/oezx/kernels/zImage-2.6.23.1-ezxdev
+
+After a short time the screen should go funny, then you should see Linux booting!
+
+=== That's all for now, netowrk setup to come ===
+
+
+== Creating the Partitions ==
+
+(copied from goxboxlive's howto here http://www.linuxtogo.org/~goxboxlive/A780/images/README)
+The TRANSFLASH card needs to be partitioned into two partitions: one small FAT/EXT2 partition, and one EXT2 partition used as root file system. I'll assume that the block device of the TRANSFLASH card is called /dev/sda. Replace this with the correct device on your system.
+
+==== Create partitions, for example a 300MB /dev/sda1 and /dev/sda2 using the rest ====
+
+Open a shell and type:
+
+ fdisk /dev/sda
+ h				<-- just to have a look around :)
+ n
+ p
+ <use default/ press enter>		
+  1
+ +300M
+ n
+ p
+ 2
+ <use default/ press enter>	
+ <use default/ press enter>	
+  w
+
+==== Create file systems, a VFAT/EXT2 on /dev/sda1 and EXT2 on /dev/sda2: ====
+
+ mkdosfs /dev/sda1 (for VFAT) or mke2fs /dev/sda1 (for EXT2)
+ mke2fs /dev/sda2
+
+==== Unpack the GUI-image onto sda2: ====
+
+ mount -t ext2 /dev/sda2 /mnt
+ cd /mnt
+ tar jxvpf "/PATH_TO_the GUI image Qtopia/Openmoko or whatever"
+ sync (wait until it finish)
+ cd /	
+ umount /mnt
+
+== Sources ==
+Thanks to goxboxlive's tutorials here
+http://www.linuxtogo.org/~goxboxlive/A780/bootloader/HOWTO_FLASH_A780.TXT 
+and here
+http://www.linuxtogo.org/~goxboxlive/A780/images/README
+
+wyrm for his help on motorolafans forum and irdakabel for help on irc.
