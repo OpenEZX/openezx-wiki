@@ -1,3 +1,11 @@
+:''Regretfully, there seems to be something broken on the server. Attempting to create images in reduced size generates the following error message:''
+
+  Error creating thumbnail: convert: no decode delegate for this image format
+  `/mnt/storage/www/wikis/openezx/images/1/17/Img_2947_Or.jpg'. convert: missing an image filename
+  `/mnt/storage/www/wikis/openezx/images/thumb/1/17/Img_2947_Or.jpg/800px-Img_2947_Or.jpg'.
+
+
+
 [[Image:Img_2947_Or.jpg]]
 
 [[Image:Img_2948_Or.jpg]]
@@ -29,4 +37,4 @@
 [[Image:Img_2962_Or.jpg]]
 
 
-Images from https://totalueberwachung.de/~alphaone/openezx/gallery/
+''Images from https://totalueberwachung.de/~alphaone/openezx/gallery/ ''
