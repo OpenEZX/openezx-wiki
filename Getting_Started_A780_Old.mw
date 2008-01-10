@@ -5,6 +5,9 @@
 
 This HowTo is intended for people who are new to the OpenEZX project. It aims to provide the basic information required to use a computer running Linux to boot the oezx kernel on the A780, with the rootfs on a TransFlash Card. It does not interfere with your phone's original software (though does allow you to, so tread carefully!). The images we will use will be provided by OpenEmbedded's [http://www.angstrom-distribution.org/ Angstrom Distribution]
 
+It covers some of the same information as this document (though that goes in to greater detail about the Angstrom system)
+http://linuxtogo.org/gowiki/AngstromManual
+
 WARNING: Following these steps should not break your phone, but there is a possibility it could. They didn't break mine, nor many others who have done it before me. The authors, nor the OpenEZX Project accept no responsibility for any problems (with your phone, or otherwise!) that might arise as a result of following these instructions.
 
 ==== What we're going to do ====
