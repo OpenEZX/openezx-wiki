@@ -139,6 +139,55 @@ df
  mtd12: 000c0000 00020000 "FOTA"
  mtd13: 00020000 00020000 "RESERVE"
 
+lsmod
+ Module                  Size  Used by    Not tainted
+ sd83xx                137956   2
+ sdio                   27660   0  [sd83xx]
+ modem_relay             3600   0  (unused)
+ modem_ppp_async         7892   0  (unused)
+ modem_ppp_generic      16772   0  [modem_ppp_async]
+ ipsec                 328920   0  (unused)
+ gprsv                   7604   0
+ modem_bridge            2360   0  [modem_relay modem_ppp_generic gprsv]
+ ppp_async               7148   0  (unused)
+ ppp_generic            21028   0  [ppp_async]
+ slhc                    4968   0  [modem_ppp_generic ppp_generic]
+ mux_cli                30356  12
+ paniclogger            13432   0  (unused)
+
+modinfo /lib/modules/sdio.o
+ filename:    /lib/modules/sdio.o
+ description: "Marvell SD8385 SDIO Driver"
+ author:      "Marvell International Ltd."
+ license:     "GPL"
+ parm:        mode int
+ parm:        clkdiv int
+
+modinfo /lib/modules/sd83xx.o
+ filename:    /lib/modules/sd83xx.o
+ description: "Marvell SD8385 WLAN Driver"
+ author:      "Marvell International Ltd."
+ license:     "GPL"
+ parm:        mfgmode int
+
+The code for this SDIO Marvell chipset will be soon in linux mainline, infos and code here:
+* http://lists.infradead.org/mailman/listinfo/libertas-dev
+* http://git.infradead.org/?p=libertas-2.6.git;a=summary
+
+
+ls -l /usr/SYSqtapp/wsp
+ total 943
+ -rwxr-xr-x    1 ezx      ezx         41220 Jan  1  1970 diagnose_reader
+ -rwsr-sr-x    1 root     root        77856 Jan  1  1970 wcmserver
+ -rwsr-sr-x    1 root     root         4773 Jan  1  1970 wlan_mod_helper
+ -rwxr-xr-x    1 ezx      ezx        411228 Jan  1  1970 wlanapp
+ -rwsr-sr-x    1 root     root         3022 Jan  1  1970 wlanext
+ -rwsr-sr-x    1 root     root       191532 Jan 23 16:49 wpa_supplicant
+ -rwsr-sr-x    1 root     root       233472 Jan 23 20:12 wsp
+
+wsp could mean Wireless Session Protocol
+
+
 ==Version numbers==
 ===By Orange France===
 ;AP Flex: Secure setup: GAS_EMEA_GSZA910ORFR0_E013
