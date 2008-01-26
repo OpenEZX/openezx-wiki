@@ -80,7 +80,7 @@ rather random flag variations below). -am
 | No idea.
 |-
 | 0x6b6b6b6b
-| Need to fill.
+| [http://wiki.openezx.org/images/2/25/IGP7383.jpg]
 | Defined in ezx.h (lubbock.h too) "SLEEP_FLAG"
 |-
 | 0x3c7c3c7c
