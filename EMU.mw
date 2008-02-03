@@ -18,17 +18,17 @@ There are at least two different charging modes.
 * Mode 2: The battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
 
 
-== Normal USB device/accesory mode ==
+== Normal USB device/accessory mode ==
 
 Pinout :
-* 1 +5 volts input used to charge the phones battery at max 500ma.
+* 1 +5 volts input used to charge the phones battery at max 500mA.
 * 2 Data-
 * 3 Data+
-* 4 (NC/left open) voltage at adc aprox 2,4-2,8 volt (there seems to be an internal pullup resistor of unknown value)
+* 4 (NC/left open) voltage at adc approx 2,4-2,8 volt (there seems to be an internal pullup resistor of unknown value)
 * 5 GND
 
-In this mode, the Data- and Data+ lines will be routed to a USB transceiver located in PCAP chip, which is connected to the AP (PXA270) via the USB2 single ended interface (GPIO pins 34,35,36,39, 40, and 53). There is a 1,5kohm pullup resistor between the D+ as required by the USB standard to signal a high speed device (12mbits). This resistor is switchable by the PCAP bit BUSCTRL_USB_PU (+3,3volt or high Z). There is a second switchable pullup resistor on the d+ line which is used for charger detection.  This resistor seems to be switched off (high Z) when setting the PCAP bit BUSCTRL_VUSB_MSTR_EN. However this does not happen instantly but with some delay (about 5-10 sec).
-It doesn't happen every time I tried. About 1 in 10 times it didn't work. It apears as if the firmware of the Baseband Processor is scanning from time to time the PCAP bits and then switches the resistor accordingly. I speculate therefore this resistor is connected to a GPIO on the Baseband processor and thats why there is no code in motorolas kernel.
+In this mode, the Data- and Data+ lines will be routed to a USB transceiver located in PCAP chip, which is connected to the AP (PXA270) via the USB2 single ended interface (GPIO pins 34,35,36,39, 40, and 53). There is a 1,5kOhm pullup resistor between the D+ as required by the USB standard to signal a high speed device (12mbits). This resistor is switchable by the PCAP bit BUSCTRL_USB_PU (+3,3volt or high Z). There is a second switchable pullup resistor on the d+ line which is used for charger detection.  This resistor seems to be switched off (high Z) when setting the PCAP bit BUSCTRL_VUSB_MSTR_EN. However this does not happen instantly but with some delay (about 5-10 sec).
+It doesn't happen every time I tried. About 1 in 10 times it didn't work. It appears as if the firmware of the Baseband Processor is scanning from time to time the PCAP bits and then switches the resistor accordingly. I speculate therefore this resistor is connected to a GPIO on the Baseband processor and thats why there is no code in Motorolas kernel.
 
 == UART mode ==
 
