@@ -28,7 +28,7 @@ The following registers are accessible only from the primary SPI bus and their l
 !Name
 !Description 
 |-
-|0x00 ||ISR   ||Interrupt status regiter
+|0x00 ||ISR   ||Interrupt status register
 |-
 |0x01 ||IMR   ||Interrupt mask register
 |-
