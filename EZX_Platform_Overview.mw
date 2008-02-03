@@ -62,13 +62,12 @@ EZX family subset names and their handsets (some help here)
 ===PCAP2===
 
 *Power management, Clock and Audio Peripheral (PCAP)
-*produces a 16 different voltages
+*produces 16 different voltages
 *handles all mono/stereo audio
 *connected to 2 speakers, microphone, vibrator
 *clock generation
 *SPI/SSP interface to AP and BP
 *Backlight control
-
 
 ===RF Subsystems (A780)===
 ====RF6003====
