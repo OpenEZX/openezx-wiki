@@ -15,7 +15,7 @@
 ** implement [[BP_Handshake | handshake]] procedure to put BP in non-flash-mode (i dont think its possible)
 ** Finish reimplementation of grpsv modules
 * GPS
-** Trace lapisrv on phone boot-up, determine if the gps firmware is inside bp firmware or inside lapisrv.
+** Trace lapisrv on phone boot-up, determine if the GPS firmware is inside bp firmware or inside lapisrv.
 *** If inside lapisrv steal it.
 *** If inside bp firmware determine the command used to upload it to the GPS module
 ** Write an userspace app to init the gps module
@@ -24,8 +24,8 @@
 ** Look into reimplementing the DiskOnChip G3 drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
 * Non-A780/E680 stuff
 ** Initial hardware support for a1200, e2, e6
-* Enchanced Mini USB (EMU)
-** add support for motorola-compatible cable/device detection and apropriate switching of USB device / UART / phone-powered / ... support
+* Enhanced Mini USB (EMU)
+** add support for Motorola-compatible cable/device detection and appropriate switching of USB device / UART / phone-powered / ... support
 ** think on how to do runtime device profile switching with usb-gadget and the horribly broken PXA270 UDC (read errata, it's barely useable). Alternatively try supporting multiple interfaces or configurations (also quite impossible with broken controller)
 ** USB host support on EMU!
 * Use u-boot
