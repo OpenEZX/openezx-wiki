@@ -236,7 +236,7 @@ It supports 16 bit mono and stereo audio. It does all the audio routing, between
 On the E680 there is another amplifier (lm7845) for the boomer, and a MIDI chipset.
 -- Is this really lm7845?? the entire internet and National's website
 doesn't list anything for this...
-"Boomer" is the marketing name for some NS amplifier chips. Listed as I2C capable Boomer chips on NS website are e.g. LM4931, LM4934, LM4936, LM4855, LM4857, LM4859. Could "LM7845" actually be LM4857??? Yup, it most likely is, since one of Stefan's fotos shows an IC directly near the audio-related ICs which matches exactly geometry- and package-wise. And the LM4857... is being used in the Neo1973!! --> drivers galore!?!?
+"Boomer" is the marketing name for some NS amplifier chips. Listed as I2C capable Boomer chips on NS website are e.g. LM4931, LM4934, LM4936, LM4855, LM4857, LM4859. Could "LM7845" actually be LM4857??? Yup, it most likely is, since one of Stefan's fotos shows an IC directly near the audio-related ICs which matches exactly geometry- and package-wise. NO, it ''dead certainly'' is!! Witness a nice little untitled E680 image in NS's AudioSystem.pdf file which describes LM4857 mobile applications!! And the LM4857... is being used in the Neo1973!! --> drivers galore!?!?
 
 
 A780 has a attenuate GPIO to mute audio output and avoid codec power on noise.
