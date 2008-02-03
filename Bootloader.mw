@@ -21,7 +21,7 @@ Motorola has released their modified (GPL'd) blob version, see http://ftp.gpl-de
 
  = Communication with the bootloader =
 
-Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] is available here: http://svn.openezx.org/trunk/src/host/boot_usb. You need [http://libusb.sourceforge.net/ libusb], version 0.1.12 is recommended.
+Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace application for communication with the bootloader over USB. At the moment you can use it to load a selfcompiled kernel into RAM and execute it. This gives the possibility to test kernels without having to reflash the phone again and again. [[boot_usb]] source is available here: http://svn.openezx.org/trunk/src/host/boot_usb. You need [http://libusb.sourceforge.net/ libusb], version 0.1.12 is recommended. An x86 binary can be found e.g. at [http://www.angstrom-distribution.org/unstable/images/a780/20071207/ezx-boot-usb]
 
 Note that reflash mode appears to also place the baseband into reflash mode (appearing as a usb device, if you enable the pxa hub). It appears that use of the baseband is not possible whilst it is in this mode.
 
