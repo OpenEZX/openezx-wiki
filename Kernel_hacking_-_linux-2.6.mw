@@ -9,6 +9,7 @@ Please notice that the development is still in an early state. You should know w
 * Download the Official OpenEZX patchset from [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here] and put all patches inside patches/ on the kernel source folder. The daring or development-bound guys may use a devel patchset located [http://svn.openezx.org/branches/ here] against the corresponding kernel version instead.
 * apply the quilt patchset, by running ´quilt push -a´
 * run ´make -f patches/Makefile.OpenEZX CROSS_COMPILE=<path to your toolchain>´
+  where path means toolchain directory _plus_ architecture-specific prefix of toolchain binaries.
 * This will build zImages and modules to all currently supported phones.
  Note: You can download a binary toolchain [http://www.codesourcery.com/gnu_toolchains/arm/download.html here] (for a fast quick start)
  Or build your own with OE. See the next section.
