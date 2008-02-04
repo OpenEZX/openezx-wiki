@@ -6,7 +6,7 @@ Please notice that the development is still in an early state. You should know w
 
 == Building OpenEZX kernel ==
 * Download a vanilla, 2.6.21 kernel from www.kernel.org, untar it.
-* Download the Official OpenEZX patchset from [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here] and put all patches inside patches/ on the kernel source folder.
+* Download the Official OpenEZX patchset from [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here] and put all patches inside patches/ on the kernel source folder. The daring or development-bound guys may use a devel patchset located [http://svn.openezx.org/branches/ here] against the corresponding kernel version instead.
 * apply the quilt patchset, by running ´quilt push -a´
 * run ´make -f patches/Makefile.OpenEZX CROSS_COMPILE=<path to your toolchain>´
 * This will build zImages and modules to all currently supported phones.
@@ -15,7 +15,6 @@ Please notice that the development is still in an early state. You should know w
  You can also use OE toolchain to build the Official OpenEZX patchset,
  just pass, the following variable:
   CROSS_COMPILE=/path_to_OE/build/tmp/cross/bin/arm-angstrom-linux-gnueabi- zImage
-
 
 == Building OpenEZX kernel with openembedded ==
 * Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
