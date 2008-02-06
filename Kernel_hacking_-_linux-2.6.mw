@@ -15,6 +15,10 @@ Please notice that the development is still in an early state. You should know w
  You can also use OE toolchain to build the Official OpenEZX patchset,
  just pass, the following variable:
   CROSS_COMPILE=/path_to_OE/build/tmp/cross/bin/arm-angstrom-linux-gnueabi- zImage
+ At least in case of the binary Codesourcery toolchain,
+ you might need to disable CONFIG_BINFMT_AOUT and CONFIG_BINFMT_MISC,
+ since otherwise you might get a SEGMENT_SIZE kernel build error
+ (it seems those two are not really supported on ARM and it's not problematic anyway).
 
 == Building OpenEZX kernel with openembedded ==
 * Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
