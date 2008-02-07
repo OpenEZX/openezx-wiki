@@ -31,6 +31,7 @@ Please notice that the development is still in an early state. You should know w
 * Run <tt>$ bitbake virtual/kernel</tt>
 
 === Notes ===
+* The last command will fail if you have "." in your PATH
 * the kernel expects the rootfs on the '''second''' partition of external flash (<tt>root=/dev/mmcblk0p2</tt>), with this setup you can use the first partition to store some data and access it when booting the original software (recently also kernels built by OE started to follow this convention).
 * by default this '''second''' partition must be ext2 fs.
 * The STUART console is disabled by default to speed up the booting process. If you want to re-enable it, you have to apply ''ezx-enable-stuart.patch'', and add <tt>console=ttyS2,115200n8</tt> to your <tt>CONFIG_CMDLINE</tt>.
