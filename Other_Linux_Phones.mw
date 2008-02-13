@@ -1,4 +1,38 @@
 This page collects information about non-Motorola Linux-based mobile phones. This is useful as many parts of OpenEZX are probably usable for other phones, too (and vice versa).
+
+== LiMo Foundation ==
+The [http://www.limofoundation.org LiMo Foundation] is an industry committee tasked with creating a Linux-based mobile OS and application stack with a unified API. Its [http://www.limofoundation.org/current-members/index.php members] include Motorola, Vodafone, LG, Samsung, and Nokia (through Trolltech).  The beta API was released Feb 2008 to members, and is due for public release H2/2008 with the first phones Q4/2008.  The following LiMo-based phones were [http://www.limofoundation.org/press-releases/limo-press-releases/limo-foundation-unveils-first-limo-handsets.html announced] Feb 2008 at Mobile World Congress in Spain.
+
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Manufacturer
+! Models
+|-
+| Motorola
+| MOTO U9, MOTO Z6w, [[Rokr_Z6|ROKR Z6]], [[Razr2|RAZR2 V8]], RAZR2 V8 Luxury Edition, [[Rokr_E8|ROKR E8]]
+|-
+| NEC (for NTT DoCoMo)
+| FOMA N905i, FOMA N905iμ, FOMA N705i, FOMA N705iμ
+|-
+| Panasonic (for NTT DoCoMo)
+| FOMA P905i, FOMA P905iTV, FOMA P705i, FOMA P705iμ
+|-
+| Samsung
+| SGH-i800
+|-
+| LG
+| Unnamed LiMo Prototype
+|-
+| Aplix
+| [http://www.limofoundation.org/opal.html OPAL] (Hardware Reference Handset)
+|-
+| [http://www.purplelabs.com Purple Labs]
+| [http://www.purplelabs.com/product-purple-magic.php Purple Magic] (sub $100 3G handset)
+|-
+|}
+
+
 == Non-Motorola Linux Phones ==
 
 * [http://www.imcosys.com/ ImCoSys Smartphone] TI OMAP 730-Prozessor 200 MHz, Quadband-GSM, GPRS, Bluetooth 1.2, WLAN IEEE 802.11b, USB, RS232, 64MB Flash, 64MB RAM - but where are the sources?
