@@ -48,35 +48,35 @@ rather random flag variations below). -am
 | It's called OFF_FLAG in ezx.h
 |-
 | 0x12345678
-| Need to fill.
+| -
 | If blob reads this FLAG value it will enter an passthrough mode. In this mode the host can communicate directly with the BP.
 |-
 | 0x95aa95aa
-| Need to fill.
+| -
 | Reproducible. Power off phone over night and enter bootloader first gives you this flag. Perhaps indicates long time off.  Also detected after the battery runs out, after recharging the value was set back to OFF_FLAG.
 |-
 | 0x958a95aa
-| Need to fill.
+| -
 | Reproducible.
 |-
 | 0xd5aa95aa
-| [http://shell.studenti.unina.it/~ospite/tmp/d5aa95aa.jpg]
-| Need to fill.
+| -
+| No idea.
 |-
 | 0x558a95aa
-| [http://shell.studenti.unina.it/~ospite/tmp/558a95aa.jpg]
-| Need to fill.
+| 
+| No idea.
 |-
 | 0x1caabca8
-| Need to fill.
+| -
 | Possible Low power.
 |-
 | 0x15babdae
-| Need to fill.
+| -
 | Low Power. System did not start. Only bootloader.
 |-
 | 0x60d56f34
-| Need to fill.
+| -
 | No idea.
 |-
 | 0x6b6b6b6b
@@ -84,15 +84,15 @@ rather random flag variations below). -am
 | Defined in ezx.h (lubbock.h too) "SLEEP_FLAG"
 |-
 | 0x3c7c3c7c
-| Need to fill.
+| -
 | No idea.
 |-
 | 0x0C1D2E3F
-| Need to fill.
+| -
 | Defined in ezx.h "REFLASH_FLAG" tested for by blob (not actually seen yet, anyone?)
 |}
 
- = RESET =
+= RESET =
 
 The reset value seems to be 0x00000001. 
 
