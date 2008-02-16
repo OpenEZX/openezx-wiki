@@ -25,7 +25,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 
 Note that reflash mode appears to also place the baseband into reflash mode (appearing as a usb device, if you enable the pxa hub). It appears that use of the baseband is not possible whilst it is in this mode.
 
- = FLAG =
+= FLAG =
 
 We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c.
 
@@ -100,13 +100,13 @@ This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.
 
 A value of 0x00000001 means that a hardware reset has occured.
 
- = BRESET =
+= BRESET =
 
 The reset value seems to be 0x00000000. 
 
 This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in PSPR (Power Manager Scratch Pad Register).
 
- = ARESET =
+= ARESET =
 
 The reset value seems to be 0x00000000. 
 
@@ -169,7 +169,7 @@ BOOT_G_00.02.21P_MACAU
 
 MBM FLASH MODE
 
-And to get the "USB BP Pass Through Mode", press the camera button again.
+To get the "USB BP Pass Through Mode" with the 2nd generation phones (red bootloader screen), press again the button which triggered the bootloader (camera or voicedial button).
 
 [[Category:Development]]
 [[Category:A780]]
