@@ -168,7 +168,7 @@ Now, test to boot the openezx kernel. Switch off phone and then hold the cam but
 10)
 
 Next time there is an update of the openezx kernel and you want to update, you will just have to flash /dev/mtd4. 
-Just be sure that it inlcudes mtd-a780-alternate.  Note: the default openezx patch set for 2.6.23 sets mtd-a780-alternate by default.  Also, flash_unlock and flashcp are contained in the openembedded mtd-utils package.
+Just be sure that it includes mtd-a780-alternate.  Note: the default openezx patch set for 2.6.23 sets mtd-a780-alternate by default.  Also, flash_unlock and flashcp are contained in the openembedded mtd-utils package.
 
   flash_unlock /dev/mtd4
   flashcp -v openezx-NEW-kernel.mtd4 /dev/mtd4
