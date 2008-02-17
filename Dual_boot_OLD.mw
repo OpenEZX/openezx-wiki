@@ -41,7 +41,7 @@ Thanks to openezx developers, Openembedded community and motorolafans for lettin
 
 1) Charge your battery full [very important]
 
-2) Put console-a780-mtd-image.tar.bz2 on transflash partition 2.
+2) Extract console-a780-mtd-image.tar.bz2 to transflash partition 2.
 
 3) Backup your partitions on your A780:
 	
@@ -171,8 +171,7 @@ Next time there is an update of the openezx kernel and you want to update, you w
 Just be sure that it inlcudes mtd-a780-alternate.  Note: the default openezx patch set for 2.6.23 sets mtd-a780-alternate by default.  Also, flash_unlock and flashcp are contained in the openembedded mtd-utils package.
 
   flash_unlock /dev/mtd4
-  flashcp -v openezx-NEW-kernel.mtd4 /dev/mtd4 
-
+  flashcp -v openezx-NEW-kernel.mtd4 /dev/mtd4
 
 == Troubleshooting: ==
 
