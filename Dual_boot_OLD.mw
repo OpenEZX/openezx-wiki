@@ -97,7 +97,7 @@ Thanks to openezx developers, Openembedded community and motorolafans for lettin
   mkdir /mtn/mtd2
   mount -o loop -t cramfs ~/a780/mtd2 /mnt/cramfs
   cd /mnt/cramfs
-  tar cf /mnt/mtd2.tar *
+  tar cf /mnt/mtd2.tar * .*
   mkdir /tmp/mtd2
   tar xpf mtd2.tar -C /tmp/mtd2
   cd /tmp/mtd2
