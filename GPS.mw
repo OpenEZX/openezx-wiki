@@ -32,9 +32,8 @@ context by the /dev/mux14 device file. The name AP stands for the application
 processor and in particular for any application which implments the protocol
 to communicate with the GPS module.
 
-We use the original messages names, but a different style for function
-names.
-
+We use the original messages names, but in gpsmux code a different style for function
+names is used.
 
 =Protocol Overview=
 
