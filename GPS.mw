@@ -11,8 +11,157 @@ This is all tied into enhanced cellular 911.
 
 A GPS chip is only available in the A780.
 
-The following information is only useful for the original Motorola 2.4 kernel. There is no GPS access on the 2.6 kernel yet.
-
 mack has been able to activate the GPS and get a stream of raw data from it by talking to /dev/mux14, emulating lapisrv. Floe built on that by writing [http://www.motorolafans.com/forums/viewtopic.php?t=3221 gpsdump], a tool to decode the messages. lurker has written a [http://www.motorolafans.com/forums/viewtopic.php?t=3221 minimalistic gpsd implementation] based on Floe's gpsdump, which could theoretically work with [http://qpegps.sourceforge.net/ qpegps].
+
+GPS works with openezx kernel using [http://people.openezx.org/ao2/gps/gpsmux-2007-09-06-201620.tar.bz2 gpsmux], but it's not fully functional yet. [http://gpsd.berlios.de/ GPSd] integration is also planned, but we are not able to give a deadline about that integration (read: please help, help, help).
+
+=Platform Overview=
+
+The structural layout of the GPS system in Motorola A780 looks like that:
+
+The AGPS module is wired to the Baseband Processor, on the latter there should
+be a software layer that talks with GPS and provides its services to the
+Application Processor. The Application Processor can access these services
+via the mux_cli driver (on /dev/mux14).
+
+Another bit of notation:
+
+We follow the strings found in 'lapisrv' from original Motorola EZX software.
+The name BP is used for the baseband processor, represented in this particular
+context by the /dev/mux14 device file. The name AP stands for the application
+processor and in particular for any application which implments the protocol
+to communicate with the GPS module.
+
+We use the original messages names, but a different style for function
+names.
+
+
+=Protocol Overview=
+
+There are several classes of messages:
+* Request by AP with response from BP
+* Unsolicited messages coming from BP
+* One way messages from AP?? (to verify)
+
+The first are used to set parameters on the GPS unit or to request data
+or to register to a service (like periodical geolocation notification).
+The second are used to notify AP about GPS state change.
+
+==Typical sequence==
+
+ 01. AP --> BP Get Status:         REQUEST (To see if the GPS is on or off)
+ 02. BP --> AP Get Status:        RESPONSE
+ 03. AP --> BP Set GPS Db Data:    REQUEST (To turn the GPS on)
+ 04. BP --> AP Status Change: NOTIFICATION (user status)
+ 05. BP --> AP Set GPS Db Data:   RESPONSE
+ 06. AP --> BP Get Location:       REQUEST (sets also the frequence of the responses)
+ 07. BP --> AP Status Change: NOTIFICATION (now reports also the FIX status)
+ ...
+ 10. BP --> AP Get Location:      RESPONSE (periodically)
+ 11. BP --> AP Get Location:      RESPONSE (periodically)
+ ...
+ 14. BP --> AP Status Change: NOTIFICATION
+ ...
+ 16. BP --> AP Get Location:      RESPONSE (periodically)
+ 17. AP --> BP Abort Location:     REQUEST
+ 14. BP --> AP Status Change: NOTIFICATION (stop reporting FIX status)
+ 16. BP --> AP Abort Location:    RESPONSE
+ 17. AP --> BP Set GPS Db Data:    REQUEST (To turn the GPS off)
+ 18. BP --> AP Status Change: NOTIFICATION (user status)
+ 19. BP --> AP Set GPS Db Data:   RESPONSE
+ END
+
+
+=Messages format=
+
+Every message is composed of a header a payload and a trailer.
+
+==Header==
+
+The header is 8 bytes in size and has the following structure:
+ start_magic:   2 bytes (always "\x50\x00")
+ msg_len:       1 byte (the length of the whole message
+                      included header and trailer)
+ msg_id:        1 byte
+ session_id:    1 byte
+ trasaction_id: 1 byte
+
+===NOTE===
+unsolicited messages have always session_id and transaction_id = 0
+
+==Trailer==
+
+The trailer is 2 bytes in size:
+ end_magic:   2 bytes (always "\xcf\xb0")
+
+==Payload==
+
+The payload size depends on the message type.
+
+
+=Request and Respose (RnR) messages=
+
+A list of the supported RnR messages:
+
+ GEOLOCATION_APBP_REQ
+ GEOLOCATION_APBP_RES
+ GEOLOCATION_ABORT_APBP_REQ
+ GEOLOCATION_ABORT_APBP_RES
+ DB_WRITE_APBP_REQ
+ DB_WRITE_APBP_RES
+ DB_READ_APBP_REQ
+ DB_READ_APBP_RES
+ GET_STATUS_APBP_REQ
+ GET_STATUS_APBP_RES
+ LAST_KNOWN_GEOLOCATION_APBP_REQ
+ DISTANCE_AND_AZIMUTH_APBP_REQ
+ DISTANCE_AND_AZIMUTH_APBP_RES
+ PROXIMITY_ADD_APBP_REQ
+ PROXIMITY_ADD_APBP_RES
+ PROXIMITY_REM_APBP_REQ
+ PROXIMITY_REM_APBP_RES
+
+
+==GEOLOCATION==
+
+The geolocation message is used to request the periodical notifications of
+the user GPS coordinates.
+
+===Request===
+
+the fields of the payload Request message are:
+
+ responseTime:              4 bytes
+ horizontalAccuracy:        4 bytes
+ verticalAccuracy:          4 bytes
+ preferredPowerConsumption: 4 bytes
+ interval:                  4 bytes
+ reportCriteria:            4 bytes
+ costAllowed:               1 byte
+ addressInfoRequired:       1 byte
+ speedAndCourseRequired:    1 byte
+ altitudeRequired:          1 byte
+
+
+===Response===
+TODO
+
+
+=Unolicited messages (UM)=
+
+ STATUS_CHANGE_BPAP_IND
+ LOCATION_NOTIFICATION_BPAP_IND
+ NOTIFICATION_STATUS_BPAP_IND
+
+
+=Unclassified commands=
+
+ LOCATION_NOTIFICATION_APBP_RES
+ PROXIMITY_HIT_APBP_IND
+
+We still do not know how they are used!
+
+
+
 
 [[Category:A780]]
