@@ -1,0 +1,59 @@
+== Warning ==
+Calling is under development and not ready for end-users jet. Esspecially the "echo1 > /proc/pcap" might '''damage''' your phone, since I wrote this patch blindly with values I found on the Mailing List without knowing what they mean.
+
+== Purpose of this small howto ==
+Showing that calling with audio works, but nicer integration into the kernel is necessary. DEVELOPERS WANTED.
+
+== Prerequisites ==
+I assume you have a working userspace installed. I assume you know how to build a kernel.
+* Linux Kernel; 2.6.23 and 2.6.24 should work.
+*# Apply the patches from svn.openezx.org
+*# Apply [http://lists.openezx.org/pipermail/openezx-devel/attachments/20071230/e96a2c71/ezx-pcap-ugly-proc-interface.bin this] ugly patch to enable pcap-writes from userspace
+* /angstrom/build/tmp/cross/bin/arm-angstrom-linux-gnueabi-gcc -o openbpaudio [http://lists.openezx.org/pipermail/openezx-devel/attachments/20080217/11fa8244/openbpaudio.c openbpaudio.c]
+* minicom: ipkg install minicom
+
+== Calling ==
+login 4 times (terminal1-terminal4) to your phone
+ terminal-1$ killall ezxd;
+ terminal-1$ cat /dev/mux0
+
+ terminal-2$ minicom
+Now use the menu to configure minicom. It should talk to /dev/mux4. 115200 8n1 work fine.
+
+ ate1
+This tells the BP to echo the characters we enter.
+
+ AT+CPIN=1,"XXXX"
+Replace XXXX with your PIN
+
+ ATDXXXXXXXXXXXXXX
+Replace XXXXXXX with the number you want to call.
+Now it should ring on the other side of the line.
+
+ ATH
+Hangup.
+
+ +CLIP: "XXXXXXXXXX",129
+If you see this on terminal1 (the one where you did cat /dev/mux0), it meens you are recieving a call.
+
+ ATA
+Accept the call.
+
+
+== Audio on Calls ==
+So far we manged to make calls, but without sound. This is because the internal audio routing needs setup.
+
+After ATDXXXXX(or ATA):
+ terminal-3$ openbpaudio
+Yes, the tiny tool we compiled before. It just does an open("/dev/snd/pcmC0D2p", O_RDONLY);
+
+ terminal-4$ echo1 > /proc/pcap
+Setting PCAP-Registers. That's why we needed an extra kernel-patch above.
+
+And now, it still might not work.
+
+ terminal-4$ echo1 > /proc/pcap
+ terminal-3$ openbpaudio
+ terminal-4$ echo1 > /proc/pcap
+
+Yust repeat, and now you should get audio in both directions.
