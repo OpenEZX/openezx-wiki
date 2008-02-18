@@ -11,7 +11,7 @@ This guide will give you the opportunity to:
 
 Requirements:
 
-On your host: cramfs-tools
+On your host: cramfs-tools (called cramfsprogs on Debian)
 
 On your A780: mtd-utils [ It's included in console-a780-mtd-image.tar.bz2, if you use another image be sure to install it, because it isn't included by default ]
 			
