@@ -60,3 +60,7 @@ And now, it still might not work.
  terminal-4$ echo1 > /proc/pcap
 
 Yust repeat, and now you should get audio in both directions.
+
+== TODO ==
+# Integrate setting of PCAP-Registes into the Sound-SOC-Driver.
+# "Port" gsmd from openmoko to ezx
