@@ -107,7 +107,7 @@ Thanks to openezx developers, Openembedded community and motorolafans for lettin
   cd ..
   mkcramfs mtd2 mtd2.rootfs.edited.mtd3	[We use .mtd3 ending because this should now be flashed to mtd3 instead of mtd2] 
   umount /mnt/mtd2
-  mv mtd2.rootf2.edited.mtd3 ~/a780/resized/
+  mv mtd2.rootfs.edited.mtd3 ~/a780/resized/
   cd ~/a780/resized/
   mkdir /media/transflash/backup/resized
   cp * /media/transflash/backup/resized/
@@ -151,7 +151,7 @@ Thanks to openezx developers, Openembedded community and motorolafans for lettin
   flash_unlock /dev/mtd2
   flashcp -v moto-kernel.mtd2 /dev/mtd2
   flash_unlock /dev/mtd3
-  flashcp -v mtd2.rootf2.edited.mtd3 /dev/mtd3  [Yes this is correct, mtd2.rootfs.edited.mtd3 is going to mtd3 now because of the extra bootloader, this step takes over an hour]
+  flashcp -v mtd2.rootfs.edited.mtd3 /dev/mtd3  [Yes this is correct, mtd2.rootfs.edited.mtd3 is going to mtd3 now because of the extra bootloader, this step takes over an hour]
   flash_unlock /dev/mtd4
   flashcp -v openezx-kernel.mtd4 /dev/mtd4
   sync
