@@ -2,7 +2,7 @@ Here is how to get a shell on the phone, using a Linux host computer. This proce
 
 If you aren't careful, you can mess up your phone to the point that it will take a skilled person to restore an E680, and an A780 might have to be sent for factory service.
 
-This howto is specifically for Linux or Mac OS X and a specific version of the A780. For further howto's and questions check [http://www.motorolafans.com motorolafans.com].
+This howto is mainly intended for Linux or Mac OS X and a specific phones. For further howto's and questions check [http://www.motorolafans.com motorolafans.com].
 
 By default, the A780 would set its IP address to 192.168.1.2. ''This won't work'' if your system already has a network configured that would include 192.168.1.2. Since this is a network commonly used for DHCP, that could be a problem.
 
@@ -128,6 +128,10 @@ You can play back the console messages with the '''dmesg''' command. If you look
 
 == Change Modem Mode  ==
 
+In A68 you can simply change the modem type by visiting the Settings applet on the phone and
+changing ***USBNET*** to On. The phone will display the IP number assigned, so far I only saw
+192.168.1.1.
+
 '''Using the shell'''
 
  echo "AT+mode=99" > /dev/ttyACM0
@@ -143,7 +147,7 @@ Install minicom if it's not installed. On Debian, I used:
  apt-get install minicom
 
 Start minicom. Type '''Control-A''' and then '''o''' to get the setup screen.
-Set the serial port to '''/dev/ttyACM0'''. 
+Set the serial port to '''/dev/ttyACM0'''.  
 Also have a look at the serial settings, I needed to adjust them to
 '''38400 8N1''' (I am normally using 9600 8N1, which the A780 did not like).
 Save that as the default. Exit out of minicom with '''Control-A''' '''x''' and start it again.
@@ -188,6 +192,8 @@ Windows 2k users have no other choice but to use the [http://www.motorolafans.co
 [[TODO|TODO: Post torrent for Belcarra driver & more newbie-friendly instructions for the .inf mods]]
 
 You will also need to setup the Windows network adapter.  However, this cannot be done until after you have gotten your phone into USBLAN mode (the following sections).  Once you do, however, you will have a new "network connection", in Control Panel/Network & Dial-up Connections, Probably called "Local Area Network x" where x is the highest number.  Configure that, set the IP address you want to use on your PC for the connection (it must be the same subnet that the phone is going to be on).
+
+
 
 == Using LinLoader ==
 
