@@ -42,6 +42,30 @@ The '''A768''' is a revamped version of the original [[A760]].
 
 Processor - Intel XScale with BogoMIPS 192
 
+== Firmwares ==
+
+So far, firmware version seen is a768_g_00.b2.a4p  
+
+
+== Montavista Linux ==
+
+'''df -k'''
+  
+  Filesystem           1k-blocks      Used Available Use% Mounted on
+  /dev/root                33884     33884         0 100% /
+  /dev/roflash1            15916     15916         0 100% /usr/language
+  /dev/roflash2               68        68         0 100% /usr/setup
+  /dev/mtdblock2            4804      1532      3272  32% /ezxlocal
+  /dev/tffsa1              59752      8708     50428  15% /diska
+
+'''cat /proc/mtd'''
+
+  dev:    size   erasesize  name
+  mtd0: 00020000 00020000 "Bootloader"
+  mtd1: 000e0000 00020000 "Kernel"
+  mtd2: 00500000 00020000 "VFM_Filesystem"
+  mtd3: 00020000 00020000 "Logo"
+
 == Resources ==
 * [http://tux.medhas.org/static/a768i.html Motorola A768i and GNU/Linux]
 * [http://tud.at/programm/a768i.html Using the Motorola A768i smartphone with GNU/Linux]
