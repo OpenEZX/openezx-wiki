@@ -129,7 +129,7 @@ You can play back the console messages with the '''dmesg''' command. If you look
 == Change Modem Mode  ==
 
 In A68 you can simply change the modem type by visiting the Settings applet on the phone and
-changing ***USBNET*** to On. The phone will display the IP number assigned, so far I only saw
+changing '''USBNET''' to On. The phone will display the IP number assigned, so far I only saw
 192.168.1.1.
 
 '''Using the shell'''
