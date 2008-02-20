@@ -28,6 +28,8 @@ This phone is also known as E690. Has Passed FCC (IHDT6GP1)
 |}
 
 
+[[Image:moto-rokr_e6.jpg]]
+
 == Caveats ==
 Got a China Mobile version. Switching to MotNet via AT+mode=13 works, but there are no active ports.
 It has a file manager, but trying to install ordinary mpkg files gives the message "Installation failed. Package invalid."
