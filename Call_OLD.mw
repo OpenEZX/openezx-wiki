@@ -23,7 +23,7 @@ login 4 times (terminal1-terminal4) to your phone
  terminal-2$ minicom
 Now use the menu to configure minicom. It should talk to /dev/mux4. 115200 8n1 work fine.
 
- ate1
+ ATE1
 This tells the BP to echo the characters we enter.
 
  AT+CPIN=1,"XXXX"
