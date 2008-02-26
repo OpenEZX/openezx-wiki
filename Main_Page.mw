@@ -61,6 +61,7 @@ This is a collaborative effort to collect information about Motorola's EZX GSM p
 * How to create [[Backups]] of the EZX device
 * How to [[Get a shell]] on the EZX device
 * How to [[Crosscompile]] for the EZX device
+* How to make [[Call|calls]] ''(very experimental)''
 * [[Kernel hacking - linux-2.6]]
 * [[Kernel hacking - linux-2.4]]
 * GUI stuff: [[Handheld Environments]]
