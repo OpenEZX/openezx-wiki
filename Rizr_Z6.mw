@@ -34,7 +34,7 @@ There is an unlocked GSM version and CDMA provider versions:
 
 *Verizon MOTORIZR Z6tv
 *Alltel MOTOROKR Z6m
-(the CDMA versions have not been confirmed to use MOTOMAGX or meet all the features below, Z6m is said not to run MOTOMAGX.)
+The CDMA versions do not run MOTOMAGX, they run the same P2K OS as other CDMA motorola phones.
 
 As announced on MWC, there will be a MOTOMAGX-running, WiFi-enabled (for UMA like on A910) version of Z6 soon, named Z6w.
 
@@ -52,6 +52,9 @@ Features:
 *Talk Time: approximately 180-420 minutes; Standby Time: approximately 200-400 hours
 
 The opensource portion of its source code is available at https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokrz6/frs
+
+== Security ==
+[[Z6 Security]]
 
 == Kernel ==
 
