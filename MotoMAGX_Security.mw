@@ -1,0 +1,95 @@
+The Z6 has 5 known security measures that are currently preventing progress with the hacking of the device
+
+== Digital signatures ==
+On the Z6, several key components of the system (including the root filesystem, kernel and bootloader) are digitally signed. New versions of these components cannot be downloaded unless they are signed with the Motorola Z6 RSA private key that only Motorola have.
+
+== Allowed mounts ==
+On the Z6, once the Motorola security module has initialized, only certain mounts can be triggered with the mount command, these are:
+/dev/mmca1 /mmc/mmca1 vfat
+/dev/loop/0 /ezxlocal/download/mystuff vfat
+/dev/mtdblock/mass_storage /mnt/msc_int0 yaffs
+/dev/mtdblock/mass_storage /mnt/msc_int0 yaffs2
+devpts /dev/pts devpts
+This means you cannot remount the root filesystem (for example)
+
+== Protected files, directories and apps ==
+On the Z6, there are certain files & directories that can only be accessed by certain privileged apps (e.g. the apps for doing Windows Media DRM). The protected items are:
+/etc/pds/janus/hashsdidmap.dat
+/etc/pds/janus/hashsdidmap.bak
+/etc/pds/security/ivtcounter.dat
+/etc/pds/security/ivtcounter.bak
+/etc/pds/security/ivtkey.dat
+/etc/pds/security/ivtkey.bak
+/etc/pds/security/keyring.dat
+/etc/pds/security/keyring.bak
+/etc/pds/security/keymaptable.dat
+/etc/pds/security/keymaptable.bak
+/etc/pds/security/janusCertTemplate.dat
+/etc/pds/security/janusCertTemplate.bak
+/etc/pds/security/janusDeviceCert.dat
+/etc/pds/security/janusDeviceCert.bak
+/etc/pds/security/ivt.dat
+/etc/pds/security/ivt.bak
+/ezxlocal/etc/tpa/bctr.dat
+/ezxlocal/etc/tpa/ivt.dat
+/ezxlocal/etc/tpa/ivt.temp
+/ezxlocal/etc/tpa/ivt.lock
+/ezxlocal/etc/tpa/keymgr.lock
+/ezxlocal/etc/tpa/tpa.log
+/ezxlocal/etc/tpa/persistent
+/ezxlocal/etc/tpa/persistent/ivtcounter.lock
+/ezxlocal/etc/tpa/persistent/ivtkey.lock
+/ezxlocal/etc/tpa/persistent/janusTimeStamp.dat
+/ezxlocal/etc/tpa/persistent/janusTimeStamp.bak
+/ezxlocal/etc/tpa/persistent/simPinStore.dat
+/ezxlocal/etc/tpa/persistent/simPinStore.bak
+/ezxlocal/etc/tpa/persistent/keyring.lock
+/ezxlocal/etc/tpa/persistent/keymaptable.lock
+/ezxlocal/etc/tpa/persistent/janusCertTemplate.lock
+/ezxlocal/etc/tpa/persistent/janusDeviceCert.lock
+/ezxlocal/etc/tpa/persistent/janusTimeStamp.lock
+/ezxlocal/etc/tpa/persistent/simPinStore.lock
+/ezxlocal/etc/tpa/persistent/ivt.lock
+/ezxlocal/etc/tpa/persistent/secclkJanusOffset.dat
+/ezxlocal/etc/tpa/persistent/secclkNitzOffset.dat
+/ezxlocal/etc/tpa/persistent/secclkAlarm.dat
+/ezxlocal/etc/tpa/persistent/secclkDrift.dat
+/ezxlocal/etc/tpa/persistent/secclkLastRtcVal.dat
+/ezxlocal/etc/tpa/persistent/secclkOMA2DRMOffset.dat
+/ezxlocal/etc/tpa/persistent/secclkUserOffset.dat
+/ezxlocal/etc/tpa/persistent/secclkJanusOffset.lock
+/ezxlocal/etc/tpa/persistent/secclkNitzOffset.lock
+/ezxlocal/etc/tpa/persistent/secclkAlarm.lock
+/ezxlocal/etc/tpa/persistent/secclkDrift.lock
+/ezxlocal/etc/tpa/persistent/secclkLastRtcVal.lock
+/ezxlocal/etc/tpa/persistent/secclkOMA2DRMOffset.lock
+/ezxlocal/etc/tpa/persistent/secclkUserOffset.lock
+/ezxlocal/etc/tpa/persistent/secclkJanusOffset.bak
+/ezxlocal/etc/tpa/persistent/secclkNitzOffset.bak
+/ezxlocal/etc/tpa/persistent/secclkAlarm.bak
+/ezxlocal/etc/tpa/persistent/secclkDrift.bak
+/ezxlocal/etc/tpa/persistent/secclkLastRtcVal.bak
+/ezxlocal/etc/tpa/persistent/secclkOMA2DRMOffset.bak
+/ezxlocal/etc/tpa/persistent/secclkUserOffset.bak
+/etc/pds/janus
+/etc/pds/security
+/ezxlocal/etc/tpa
+
+The apps that have access to some or all of these files are:
+/usr/local/bin/secclkd
+/bin/tcmd
+/bin/modem_services
+/usr/local/bin/generate_ivt
+/usr/bin/mediaplayer
+/usr/SYSqtapp/mediaplayer/mediaplayer
+/usr/bin/mfmsp/mfmsp
+/usr/SYSqtapp/mystuff/mystuff
+/usr/SYSjava/kvm
+/usr/SYSqtapp/mtp/mtpmgr
+/usr/SYSqtapp/messaging/messaging
+/usr/SYSqtapp/motosync/motosync
+/usr/SYSqtapp/email/email
+/usr/SYSqtapp/calendar/calendar
+
+== Kernel module protection ==
+On the Z6, the kernel module load code will only load a module if its listed in /etc/modules.hash and the SHA1 hashes match up.
