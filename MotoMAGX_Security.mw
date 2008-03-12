@@ -5,11 +5,13 @@ On the Z6, several key components of the system (including the root filesystem, 
 
 == Allowed mounts ==
 On the Z6, once the Motorola security module has initialized, only certain mounts can be triggered with the mount command, these are:
-/dev/mmca1 /mmc/mmca1 vfat
-/dev/loop/0 /ezxlocal/download/mystuff vfat
-/dev/mtdblock/mass_storage /mnt/msc_int0 yaffs
-/dev/mtdblock/mass_storage /mnt/msc_int0 yaffs2
-devpts /dev/pts devpts
+
+ /dev/mmca1 /mmc/mmca1 vfat
+ /dev/loop/0 /ezxlocal/download/mystuff vfat
+ /dev/mtdblock/mass_storage /mnt/msc_int0 yaffs
+ /dev/mtdblock/mass_storage /mnt/msc_int0 yaffs2
+ devpts /dev/pts devpts
+
 This means you cannot remount the root filesystem (for example)
 
 == Protected files, directories and apps ==
