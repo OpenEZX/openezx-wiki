@@ -82,6 +82,72 @@ Set your RAZR2 USB setting to modem, connect to /dev/ttyACM0 (you'll need the mo
 
 All other values return ERROR and don't seem to have any effect
 
+
+== Proc reports ==
+
+=== Version ===
+
+Linux version 2.6.10_dev(gcc version 3.4.3 (MontaVista 3.4.3-25.0.96.custom 2006-06-12))
+
+=== crypto ===
+
+ name         : sha1
+ module       : kernel
+ type         : digest
+ blocksize    : 64
+ digestsize   : 20
+
+=== modules ===
+
+ modemrelay           5288  0 - Live 0xbf081000
+ modembridge          3200  1 modemrelay, Live 0xbf07f000
+ brassboard_tr_fx2lp 31044  0 - Live 0xbf076000
+ generic_cf           6120  0 - Live 0xbf073000
+ pbg_if              14680  0 - Live 0xbf06e000
+ mtp_if              15112  0 - Live 0xbf069000
+ msc_if              22804  0 - Live 0xbf062000
+ tty_if              19821  0 - Live 0xbf05c000
+ network_if          20344  0 - Live 0xbf056000
+ otgcore             64404  7 brassboard_tr_fx2lp,generic_cf,pbg_if,mtp_if,msc_if,tty_if,network_if, Live 0xbf045000
+ coredump            10004  0 - Live 0xbf041000
+ suapi              114785 25 - Live 0xbf023000
+ haptics              6844  0 - Live 0xbf020000
+ netmux_linkdriver    8024  0 - Live 0xbf01d000
+ netmux              56804 21 netmux_linkdriver, Live 0xbf00e000
+ mpmdrv              27952  1 - Live 0xbf006000
+ profilerdrv          6124  1 - Live 0xbf003000
+ gpiodev              6816  0 - Live 0xbf000000
+
+=== cpu ===
+
+ Processor       : Some Random V6 Processor rev 1 (v6l)
+ BogoMIPS        : 88.46
+ Features        : swp half thumb fastmult vfp edsp java
+ CPU implementer : 0x41
+ CPU architecture: 6TEJ
+ CPU variant     : 0x1
+ CPU part        : 0xb36
+ CPU revision    : 1
+ Cache type      : write-back
+ Cache clean     : cp15 c7 ops
+ Cache lockdown  : format C
+ Cache format    : Harvard
+ I size          : 16384
+ I assoc         : 4
+ I line length   : 32
+ I sets          : 128
+ D size          : 16384
+ D assoc         : 4
+ D line length   : 32
+ D sets          : 128
+ 
+ Hardware        : Motorola Product - Lido
+ Revision        : 0021
+
+
+
+
+
 == External Links ==
 
 *[https://ezx.darktech.org/ Power of Linux] - Russian Z6/V8 software project (porting unix tools)
