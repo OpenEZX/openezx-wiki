@@ -175,6 +175,8 @@ Configure the network interface with
 
  ifconfig usb0 192.168.1.1 netmask 255.255.255.0 mtu 900
 
+''Note that on some devices, such as the ROKR2-Z8, the handset IP net is '''192.168.16.XXX'''''
+
 and log in to your phone as "root" (no password is set, simply press return):
 
  telnet 192.168.1.2
@@ -192,8 +194,6 @@ Windows 2k users have no other choice but to use the [http://www.motorolafans.co
 [[TODO|TODO: Post torrent for Belcarra driver & more newbie-friendly instructions for the .inf mods]]
 
 You will also need to setup the Windows network adapter.  However, this cannot be done until after you have gotten your phone into USBLAN mode (the following sections).  Once you do, however, you will have a new "network connection", in Control Panel/Network & Dial-up Connections, Probably called "Local Area Network x" where x is the highest number.  Configure that, set the IP address you want to use on your PC for the connection (it must be the same subnet that the phone is going to be on).
-
-
 
 == Using LinLoader ==
 
