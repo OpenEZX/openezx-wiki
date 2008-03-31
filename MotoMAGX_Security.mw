@@ -1,7 +1,7 @@
 The Z6 has 5 known security measures that are currently preventing progress with the hacking of the device
 
 == Digital signatures ==
-On the Z6, several key components of the system (including the root filesystem, kernel and bootloader) are digitally signed. New versions of these components cannot be downloaded unless they are signed with the Motorola Z6 RSA private key that only Motorola have.
+On the Z6, several key components of the system (including the ramdownloader, root filesystem, kernel and bootloaders) are digitally signed. New versions of these components cannot be loaded unless they are signed with the Motorola Z6 RSA private key that only Motorola have.
 
 == Allowed mounts ==
 On the Z6, once the Motorola security module has initialized, only certain mounts can be triggered with the mount command, these are:
