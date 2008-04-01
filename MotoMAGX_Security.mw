@@ -14,7 +14,7 @@ On the Z6, once the Motorola security module has initialized, only certain mount
 
 This means you cannot remount the root filesystem (for example). Note that mounting the /dev/pts file for telnet purposes IS allowed, as is remounting the memory card and the ezxlocal mass storage areas with noexec disabled (i.e. you can then run apps from memcard and /ezxlocal/download/mystuff)
 
-The list of allowed mounts is stored in the file /etc/allowed_mounts. This file is read by the mot_security.sh file and fed to the motsecurity_sysfs.ko module (which provides an interface to the motsecurity driver in /security/motsecurity.c in the kernel source). Once mot_security.sh feeds the list of allowed mounts to motsecurity.c it sends a flag to lock the allowed mounts list (preventing anyone else from updating it any further).
+The list of allowed mounts is stored in the file /etc/allowed_mounts. This file is read by the /etc/initservices/services/mot_security.sh file and fed (via ''cat'') to the motsecurity_sysfs.ko module (which provides a sysfs interface to the motsecurity driver in /security/motsecurity.c in the kernel source). Once mot_security.sh feeds the list of allowed mounts to motsecurity.c it sends a flag (via ''echo 1 > /sys/security/mounts_locked'') to lock the allowed mounts list, preventing anyone else from updating it further.  The lock can be read by manually inserting the module /lib/modules/motsecurity_sysfs.ko, but can not yet be set after the initial lock at startup.
 
 This feature is controlled by CONFIG_MOT_SECURE_MOUNT in the kernel config.
 
