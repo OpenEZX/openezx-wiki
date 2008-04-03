@@ -103,3 +103,6 @@ This is covered by /security/motsecurity.c in the kernel source and by CONFIG_MO
 
 == Kernel module protection ==
 On the Z6, the kernel module load code will only load a module if its SHA1 hash is in /etc/modules.hash. There is also code to make sure that it only works if /etc/modules.hash is on the root filesystem (to prevent use of chroot) /kernel/module.c has the code for this feature and CONFIG_MOT_FEAT_MODULE controls it.
+
+== External links ==
+*[http://ecosystem.motorola.com/get-inspired/whitepapers/security-whitepaper.pdf MotoMAGX security whitepaper]
