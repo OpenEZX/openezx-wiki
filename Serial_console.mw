@@ -16,8 +16,7 @@ The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch
 
 === Build your own [[EMU]] - serial adapter ===
 
-To build your own [[EMU]] to serial adapter you need an external 3.3V power source since the 2.775V from the cell phone is
-believed to be too weak to power the MAX3232 in some cases.
+To build your own [[EMU]] to serial adapter you need an external 3.3V power source since the 2.775V from the cell phone is too weak to power the MAX3232.  A 2.9V supply can be used, but it is out of spec for the part.
 
 The default color coding for the mini USB signaling is included in the schematic.
 
