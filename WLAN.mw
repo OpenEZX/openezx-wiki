@@ -1,0 +1,32 @@
+=WLAN=
+
+Motorola A910 has a Marvell Libertas 8385 SDIO WLAN adapter.
+
+In linux-2.6.24 there is a driver for this cards and [http://svn.openezx.org/branches/kernel-2.6.24.x-patches/ openezx patchset] offers partial support for it on A910 from revision 2109.
+
+==Status==
+Only some rough tests has been made: we can associate to an AP using WPA-PSK with
+wpa_supplicant, and ssh works fine. Power consumption,
+and other association schemes, have not been tested.
+
+==How to use it==
+Checkout the code and use the supplied <tt>defconfig-a910</tt> (which uses
+nfsroot). A binary firmware is needed, it comes with the 2.4 code,
+the required files are:
+ ./drivers/net/wireless/8385/if/if_sdio/helper_sd.bin
+ ./drivers/net/wireless/8385/if/if_sdio/sd8385.bin
+
+Put them in <tt>/lib/firmware</tt> in your rootfs and rename (or link) the helper
+binary to <tt>sd8385_helper.bin</tt>
+
+Layout of <tt>/lib/firmware</tt> must be as follows:
+ /lib/firmware/sd8385.bin
+ /lib/firmware/sd8385_helper.bin
+
+There are also other firmwares available on the web [http://www.avr32linux.org/twiki/bin/view/Main/WirelessNetworking 1] and [http://www.pudn.com/downloads97/sourcecode/embed/detail396197.html 2], but
+we don't know what difference they have.
+
+==Note==
+In original code there were some workarounds to
+prevent power leakage, but I haven't understood them and hence you find
+them commented in openezx code. (ao2)
