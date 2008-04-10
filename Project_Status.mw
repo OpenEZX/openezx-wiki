@@ -53,7 +53,7 @@ and want openezx on it, contact us on openezx-devel.
 |- style="background:#efefef;"
 | [[External SD/MMC/TF]]
 | style="background:lime" | 100%
-| style="background:red" | 0%
+| style="background:yellow" | 50%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 | style="background:red" | 0%
@@ -77,7 +77,7 @@ and want openezx on it, contact us on openezx-devel.
 |- style="background:#efefef;"
 | [[USB]] Device
 | style="background:lime" | 100%
-| style="background:red" | 0%
+| style="background:red" | 30%
 | style="background:red" | 30%
 | style="background:lime" | 100%
 | style="background:red" | 0%
@@ -101,7 +101,7 @@ and want openezx on it, contact us on openezx-devel.
 |- style="background:#efefef;"
 | [[Vibrator]]
 | style="background:lime" | 100%
-| style="background:red" | 0%
+| style="background:lime" | 100%
 | style="background:red" | 0%
 | &mdash;
 | style="background:red" | 0%
@@ -163,9 +163,9 @@ and want openezx on it, contact us on openezx-devel.
 | style="background:red" | 20%
 | style="background:red" | 0%
 |- style="background:#efefef;"
-| [[Wifi]]
+| [[WLAN]]
 | &mdash;
-| style="background:red" | 0%
+| style="background:yellow" | 80%
 | &mdash;
 | &mdash;
 | &mdash;
