@@ -28,6 +28,35 @@ nTRST, TDI, TDO, TMS, TCK, nRESET are JTag signals.
 
 The FFUART, BTUART, and the ST_UART all appear to be configured, but I do not know what the FFUART is connected to.  
 
+==Serial port via Debug port:==
+Serial port output via PL2303HX with internal level shifter.
+ Consider yourself LARTed!
+ blob version 2.0.5-pre2-Intel for barbados
+ Copyright (C) 1999 2000 2001 Jan-Derk Bakker and Erik Mouw
+ blob comes with ABSOLUTELY NO WARRANTY; read the GNU GPL for details.
+ This is free software, and you are welcome to redistribute it
+ under certain conditions; read the GNU GPL for details.
+ ELF sections layout:
+  0x5c000000 - 0x5c00950c .text
+  0x5c00950c - 0x5c009534 .rodata
+  0x5c00acc8 - 0x5c00cbc4 .data
+  0x5c00cbc4 - 0x5c00cbc4 .got
+  0x5c00cbc4 - 0x5c00cd90 .commandlist
+  0x5c00cd90 - 0x5c00cdf0 .initlist
+  0x5c00cdf0 - 0x5c00ce08 .exitlist
+  0x5c00ce08 - 0x5c00ce38 .ptaglist
+  0x5c010000 - 0x5c021dac .bss
+  0x5c01fdac - 0x5c021dac .stack (in .bss)
+ Current stack pointer: 0x5c021b0c
+ check Option 1,2 in/out by GPDR0 is f38b0010
+ Entering AP normal start up ...
+ Blob memory address: 0xa0de007c.
+ Booting Non-XIP RAMOS Kernel!!!Autoboot in progress, press any key to stop *** a
+ rgv[0] = boot
+ SDRAM is 32MB
+ Starting kernel ...
+ Uncompressing Linux........................................................ done
+ , booting the kernel.
 [[Category:Rokr E2]]
 [[Category:A1200]]
 [[Category:Hardware]]
