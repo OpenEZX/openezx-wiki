@@ -57,6 +57,38 @@ Serial port output via PL2303HX with internal level shifter.
  Starting kernel ...
  Uncompressing Linux........................................................ done
  , booting the kernel.
+
+blob command list:
+ Autoboot aborted
+ Type "help" to get a list of commands
+ blob> help
+ *** argv[0] = help
+ The following commands are supported:
+ * reset
+ * reboot
+ * boot
+ * download
+ * go
+ * xdownload
+ * flash
+ * speed
+ * status
+ * fill
+ * memtest
+ * reload
+ * reblob
+ * fwrite
+ * ferase
+ * clockinfo
+ * memcpy
+ * poke
+ * peek
+ * dump
+ * bitchg
+ * call
+ * help
+ Use "help command" to get help on a specific command
+
 [[Category:Rokr E2]]
 [[Category:A1200]]
 [[Category:Hardware]]
