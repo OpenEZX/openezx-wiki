@@ -11,7 +11,20 @@ This is a collaborative effort to collect information about Motorola's EZX GSM p
 <div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
 '''[[:Category:Hardware|Hardware]]'''
 
-* [[A728]], [[A760]], [[A768]], [[A780]], [[A910]], [[A1200]], [[E680]], [[E680i]], [[E680g]], [[E690]], [[Rokr E2]], [[Rokr E6]], [[Rokr E8]], [[Rizr Z6]], [[Razr2|Razr 2]], [[i876]]
+Gen 1:
+
+* [[A728]], [[A760]], [[A768]], [[A780]], [[E680]], [[E680i]], [[E680g]], [[i876]]
+
+Gen 2:
+
+* [[A910]], [[A1200]], [[Rokr E2]], [[Rokr E6|Rokr E6 (E690)]]
+
+Gen 3 (MotoMAGX):
+
+* [[Rokr E8]], [[Rizr Z6]], [[Razr2|Razr2 V8]]
+
+Misc:
+
 * [[EZX_Platform_Overview|EZX Hardware Overview]]
 * [[EMU]] Motorola Enhanced Mini USB
 * [[PCAP2]]
