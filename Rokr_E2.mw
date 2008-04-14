@@ -53,6 +53,9 @@ More details:
  # busybox uname -a
  Linux (none) 2.4.20_mvlcee31-mainstone_pxa27x #1 Jan 1,2003 armv5tel unknown
 
+In totally:
+ MontaVista Linux Kernel + Framebuffer + Qte + ezx/Chemalon
+
 == CPU ==
  Processor       : Intel XScale-PXA27x rev 7 (v5l)||
  BogoMIPS        : 311.28
