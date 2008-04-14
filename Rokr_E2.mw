@@ -43,7 +43,15 @@ Even though we now have one E2 for development purpose, not too much about the h
 |}
 
 == Kernel ==
-Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE) #1 Jan 1,2003
+ Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE) #1 Jan 1,2003
+
+More details:
+
+ MontaVista(R) Linux(R) Consumer Electronics Edition 3.1
+ Linux/armv5tel 2.4.20_mvlcee31-mainstone_pxa27x
+ 
+ # busybox uname -a
+ Linux (none) 2.4.20_mvlcee31-mainstone_pxa27x #1 Jan 1,2003 armv5tel unknown
 
 == CPU ==
  Processor       : Intel XScale-PXA27x rev 7 (v5l)||
