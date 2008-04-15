@@ -15,29 +15,25 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | align="center"|Yes
 | Executable code to read/write other codegroups.
 |-
-| 1
-| align="center"|Yes
-| Bootloader
-|-
-| 2
-| align="center"|Yes
-| (Part of Bootloader?)
-|-
-| 3
+| 30
 | align="center"|No
-| (Part of Bootloader?)
+| Motorola Boot Manager (MBM)
 |-
 | 31
 | align="center"|Yes
-|
+| Memory Map of some kind
+|-
+| 32
+| align="center"|Yes
+| Baseband Bootloader
 |-
 | 34
 | align="center"|Yes
-|
+| Linux Boot Loader
 |-
 | 35
 | align="center"|Yes
-|
+| Kernel
 |-
 | 36
 | align="center"|Yes
@@ -45,15 +41,15 @@ At the end of each signed code group is a signature block.  Groups that do not h
 |-
 | 37
 | align="center"|No
-|
+| Mass Storage/user filesystem?
 |-
 | 41
 | align="center"|Yes
 | Kernel boot parameters
 |-
 | 42
-| align="center"|Yes
-|
+| align="center"|No
+| Boot Logo
 |-
 | 43
 | align="center"|No
@@ -64,8 +60,8 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | Squashfs image mounted as /usr/securesetup
 |-
 | 45
-| align="center"|No
-|
+| align="center"|Yes
+| Baseband software
 |-
 | 46
 | align="center"|Yes
@@ -73,11 +69,11 @@ At the end of each signed code group is a signature block.  Groups that do not h
 |-
 | 48
 | align="center"|No
-|
+| More user filesytem stuff
 |-
 | 49
 | align="center"|Yes
-|
+| USB Firmware
 |-
 | 52
 | align="center"|No
