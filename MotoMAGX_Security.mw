@@ -3,6 +3,8 @@ The Z6 has the following known security measures that are currently preventing p
 == Digital signatures ==
 On the Z6, several key components of the system (including the ramdownloader, root filesystem, kernel and bootloaders) are digitally signed. New versions of these components cannot be loaded unless they are signed with the Motorola Z6 RSA private key that only Motorola have. The signature checks are somewhere in the bootloaders.
 
+At the end of each signed code group is a signature block.  Groups that do not have this signature are not checked, and a table exists (somewhere) that holds which groups should be checked (i.e. removing the signature block does not stop the check.)
+
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Code Group
@@ -83,6 +85,8 @@ On the Z6, several key components of the system (including the ramdownloader, ro
 |-
 
 |}
+
+The Signature block appears to have a header and two similar sections approximately 388 bytes each.  The first section looks related to the code group, that is the same for a code group regardless of content.  The second differs between all code group files.   Where there are differences between these blocks, they are only in 128-byte sections (the signature).
 
 == Allowed mounts ==
 On the Z6, once the Motorola security module has initialized, only certain mounts can be triggered with the mount command, these are:
