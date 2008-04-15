@@ -3,6 +3,87 @@ The Z6 has the following known security measures that are currently preventing p
 == Digital signatures ==
 On the Z6, several key components of the system (including the ramdownloader, root filesystem, kernel and bootloaders) are digitally signed. New versions of these components cannot be loaded unless they are signed with the Motorola Z6 RSA private key that only Motorola have. The signature checks are somewhere in the bootloaders.
 
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Code Group
+! Signed?
+! Contents
+|-
+| RamDownloader
+| align="center"|Yes
+| Executable code to read/write other codegroups.
+|-
+| 1
+| align="center"|Yes
+| Bootloader
+|-
+| 2
+| align="center"|Yes
+| (Part of Bootloader?)
+|-
+| 3
+| align="center"|No
+| (Part of Bootloader?)
+|-
+| 31
+| align="center"|Yes
+|
+|-
+| 34
+| align="center"|Yes
+|
+|-
+| 35
+| align="center"|Yes
+|
+|-
+| 36
+| align="center"|Yes
+| Squashfs image mounted as / (root)
+|-
+| 37
+| align="center"|No
+|
+|-
+| 41
+| align="center"|Yes
+| Kernel boot parameters
+|-
+| 42
+| align="center"|Yes
+|
+|-
+| 43
+| align="center"|No
+| Squashfs image mounted as /usr/setup
+|-
+| 44
+| align="center"|Yes
+| Squashfs image mounted as /usr/securesetup
+|-
+| 45
+| align="center"|No
+|
+|-
+| 46
+| align="center"|Yes
+| Squashfs image mounted as /usr/language
+|-
+| 48
+| align="center"|No
+|
+|-
+| 49
+| align="center"|Yes
+|
+|-
+| 52
+| align="center"|No
+| Squashfs image mounted as /usr/data_resource
+|-
+
+|}
+
 == Allowed mounts ==
 On the Z6, once the Motorola security module has initialized, only certain mounts can be triggered with the mount command, these are:
 
