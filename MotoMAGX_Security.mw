@@ -120,8 +120,8 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | 56
 | align="center"|?
 | bploader.img
-| 
-|-|}
+|- 
+|}
 
 MEM_MAP (Code Group 31)
 
