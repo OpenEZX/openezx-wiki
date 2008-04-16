@@ -3,84 +3,129 @@ The Z6 has the following known security measures that are currently preventing p
 == Digital signatures ==
 On the Z6, several key components of the system (including the ramdownloader, root filesystem, kernel and bootloaders) are digitally signed. New versions of these components cannot be loaded unless they are signed with the Motorola Z6 RSA private key that only Motorola have. The signature checks are somewhere in the bootloaders.
 
-At the end of each signed code group is a signature block.  Groups that do not have this signature are not checked, and a table exists (somewhere) that holds which groups should be checked (i.e. removing the signature block does not stop the check.)
+At the end of each signed code group is a signature block.  Groups that do not have this signature are not checked, and a table exists in code group 31 (MEM_MAP) that holds which groups should be checked (i.e. removing the signature block does not stop the check.)
 
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Code Group
 ! Signed?
+! Name (Mem Map)
 ! Contents
-|-
-| RamDownloader
-| align="center"|Yes
-| Executable code to read/write other codegroups.
 |-
 | 30
 | align="center"|Yes
+| mbm.img
 | Motorola Boot Manager (MBM)
 |-
-| 31
+| 31(a)
 | align="center"|Yes
-| Memory Map of some kind
+| mbmloader.img
+| Ramloader
+|-
+| 31(b)
+| align="center"|Yes
+| cdt.bin
+| MEM_MAP (see below)
 |-
 | 32
 | align="center"|Yes
+|
 | Baseband Bootloader
 |-
 | 34
 | align="center"|Yes
+| lbl
 | Linux Boot Loader
 |-
 | 35
 | align="center"|Yes
+| zImage
 | Kernel
 |-
 | 36
 | align="center"|Yes
+| rootfs.img
 | Squashfs image mounted as / (root)
 |-
 | 37
 | align="center"|No
+| userfs.img
 | Mass Storage/user filesystem?
+|-
+| 38
+| align="center"|?
+| pdsfs.img
+|
 |-
 | 41
 | align="center"|Yes
+| atags.img
 | Kernel boot parameters
 |-
 | 42
 | align="center"|No
+| logo.bin
 | Boot Logo
 |-
 | 43
 | align="center"|No
+| setup.img
 | Squashfs image mounted as /usr/setup
 |-
 | 44
 | align="center"|Yes
+| securesetup.img
 | Squashfs image mounted as /usr/securesetup
 |-
 | 45
 | align="center"|Yes
+| gsm_scmall_build.bin
 | Baseband software
 |-
 | 46
 | align="center"|Yes
+| language.img
 | Squashfs image mounted as /usr/language
 |-
 | 48
 | align="center"|No
+| mass_storage.img
 | More user filesytem stuff
 |-
 | 49
 | align="center"|Yes
+| usb_firm.bin
 | USB Firmware
 |-
 | 52
 | align="center"|No
+| resource.img
 | Squashfs image mounted as /usr/data_resource
 |-
+| 54
+| align="center"|?
+| kpanic
+| kernel panic dump
+|-
+| 54
+| align="center"|?
+| rsv
+| 
+|-
+| 55
+| align="center"|?
+| mbmbackup.img
+| (Motorola Boot Manager backup?)
+|-
+| 56
+| align="center"|?
+| bploader.img
+| 
+|-|}
 
-|}
+MEM_MAP (Code Group 31)
+
+Code group 31 holds a table referred to by the bootloader as MEM_MAP.  For each codegroup, this table contains: code group number, name, start address, end address, signature type, signature start address, signature end address.
 
 The Signature block appears to have a header and two similar sections approximately 388 bytes each.  The first section looks related to the code group, that is the same for a code group regardless of content.  The second differs between all code group files.   Where there are differences between these blocks, they are only in 128-byte sections (the signature).
 
