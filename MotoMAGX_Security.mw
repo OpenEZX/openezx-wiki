@@ -16,7 +16,7 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | Executable code to read/write other codegroups.
 |-
 | 30
-| align="center"|No
+| align="center"|Yes
 | Motorola Boot Manager (MBM)
 |-
 | 31
