@@ -102,7 +102,7 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | resource.img
 | Squashfs image mounted as /usr/data_resource
 |-
-| 54
+| 53
 | align="center"|?
 | kpanic
 | kernel panic dump
