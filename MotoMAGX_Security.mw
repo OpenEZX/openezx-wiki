@@ -91,6 +91,8 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | align="center"|No
 | mass_storage.img
 | Yaffs2 image mounted as /mnt/msc_int0
+Contains a vfat img loop mounted as
+/ezxlocal/download/mystuff 
 |-
 | 49
 | align="center"|Yes
