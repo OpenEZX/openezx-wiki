@@ -44,7 +44,7 @@ As of March 6, 2008, [http://www.limofoundation.org/technical-documents.html API
 * [http://www.road-gmbh.de/produkte/index.html ROAD GmbH] three versions: S101, S101K, L101 / GSM with EDGE, WLAN, Bluetooth, IRDA, USB 2.0, SD-Card, kernel 2.6
 * [http://www.openmoko.com/ OpenMoko Neo1973]
 * [http://trolltech.com/products/qtopia/greenphone Trolltech Greenphone] no longer being sold - they recommend the OpenMoko Neo1973 as development platform.
-* [http://www.28.com E28 Holdings Limited] is an ODM that makes inexpensive (US$300 MSRP) Linux-based dual-mode GSM/WiFi handsets.  They have offices in Shanghai, Hong Kong, and Chicago. At least E2831s "SmartCore" GUI is a proprietary one, the linux kernel seems to be a MontaVista one (No GPL code release?)
+* [http://www.28.com E28 Holdings Limited] is an ODM that makes inexpensive (US$300 MSRP) Linux-based dual-mode GSM/WiFi handsets.  They have offices in Shanghai, Hong Kong, and Chicago. At least E2831s´ "SmarCore" GUI is a proprietary one, the linux kernel seems to be a MontaVista one (No GPL code release?)
 * [http://www.i-mobilephone.com/ i-Mobile] has released a linux-based touch-screen smartphone called the [http://www.i-mobilephone.com/i-cms/webpage_mobilefeature.aspx?brand_id=10&series_id=5&id=954 904].  iMobile is a Thai carrier brand of ODM company [http://www.samartcorp.com/indexen.php Samart].
 
 == Linux Mobile Phone OS Vendors ==
