@@ -50,12 +50,12 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | 37
 | align="center"|No
 | userfs.img
-| Mass Storage/user filesystem?
+| Jffs2 image mounted as /ezxlocal
 |-
 | 38
 | align="center"|?
 | pdsfs.img
-|
+| Yaffs2 image mounted as /etc/pds
 |-
 | 41
 | align="center"|Yes
@@ -90,7 +90,7 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | 48
 | align="center"|No
 | mass_storage.img
-| More user filesytem stuff
+| Yaffs2 image mounted as /mnt/msc_int0
 |-
 | 49
 | align="center"|Yes
@@ -120,6 +120,7 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | 56
 | align="center"|?
 | bploader.img
+|
 |- 
 |}
 
