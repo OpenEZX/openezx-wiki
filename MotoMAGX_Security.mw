@@ -128,7 +128,7 @@ Contains a vfat img loop mounted as
 
 MEM_MAP (Code Group 31)
 
-Code group 31 holds a table referred to by the bootloader as MEM_MAP.  For each codegroup, this table contains: code group number, name, start address, end address, signature type, signature start address, signature end address.
+Code group 31 holds a table referred to by the bootloader as MEM_MAP.  For each codegroup, this table contains: code group number, name, start address, end address, signature type, signature start address.
 
 The Signature block appears to have a header and two similar sections approximately 388 bytes each.  The first section looks related to the code group, that is the same for a code group regardless of content.  The second differs between all code group files.   Where there are differences between these blocks, they are only in 128-byte sections (the signature).
 
