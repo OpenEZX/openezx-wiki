@@ -53,7 +53,7 @@ At the end of each signed code group is a signature block.  Groups that do not h
 | Jffs2 image mounted as /ezxlocal
 |-
 | 38
-| align="center"|?
+| align="center"|No
 | pdsfs.img
 | Yaffs2 image mounted as /etc/pds
 |-
@@ -105,22 +105,22 @@ Contains a vfat img loop mounted as
 | Squashfs image mounted as /usr/data_resource
 |-
 | 53
-| align="center"|?
+| align="center"|No
 | kpanic
 | kernel panic dump
 |-
 | 54
-| align="center"|?
+| align="center"|No
 | rsv
 | 
 |-
 | 55
-| align="center"|?
+| align="center"|No
 | mbmbackup.img
 | (Motorola Boot Manager backup?)
 |-
 | 56
-| align="center"|?
+| align="center"|No
 | bploader.img
 |
 |- 
