@@ -10,35 +10,36 @@ If we'll see, which sections of ELF file doesn't affect module hash - we can fin
 
 I had chosen motsecurity_sysfs.ko module, which contains suitable branch instruction (funny thing - module with motsecurity in his name helps to break security of the phone), and I didn't find better code, than a code that disables module's hash checking in runtime.
 
-% arm-linux-gnueabi-objdump -rd motsecurity_sysfs.ko
-...
- 140:   e2855001        add     r5, r5, #1      ; 0x1
- 144:   ea000008        b       16c <init_module-0xf0>
- 148:   e5113030        ldr     r3, [r1, #-48]
-...
+  % arm-linux-gnueabi-objdump -rd motsecurity_sysfs.ko
+  ...
+  140:   e2855001        add     r5, r5, #1      ; 0x1
+  144:   ea000008        b       16c <init_module-0xf0>
+  148:   e5113030        ldr     r3, [r1, #-48]
+  ...
 
 As we can see, on 0x144 there is a unconditional branch to +0x28. If we'll analyze logic module's text, we can find yout that this branch happens when module finds '\n' in text written to /sys/security/allowed_mounts. Let's ajust the code with relocation 
-% arm-linux-gnueabi-objdump -rd motsecurity_sysfs_new.ko
- 140:   e2855001        add     r5, r5, #1      ; 0x1
- 144:   ea000008        b       28 <init_module-0x234>
-                        144: R_ARM_JUMP24       __this_module
- 148:   e5113030        ldr     r3, [r1, #-48]
-
+  % arm-linux-gnueabi-objdump -rd motsecurity_sysfs_new.ko
+  ...
+  140:   e2855001        add     r5, r5, #1      ; 0x1
+  144:   ea000008        b       28 <init_module-0x234>
+                         144: R_ARM_JUMP24       __this_module
+  148:   e5113030        ldr     r3, [r1, #-48]
+  ...
 __this_module is a symbol that can mean "start of .gnu.linkonce.this_module section". So, now this instruction can be interpreted as "unconditionally branch to code, which is placed in .gnu.linkonce.this_module+0x28". 0x28 is a great choice, because it points to space which is reserved to null-terminated kernel name string. We have enough space to execute following code
-ptr:    .word 0xc005f914
-old:    .word 0xebfffdb1
-new:    .word 0xe3a00000
-        sub     r7, pc, #0x14
-        ldmia   r7, {r4, r5, r6}
-        ldr     r7, [r4]
-        cmp     r5, r7
-        streq   r6, [r4]
-        mvn     r0, #0x1
-        sub     sp, fp, #0x20
-        ldmia   sp, {r4, r5, r6, r7, r8, fp, sp, pc}
+  ptr:    .word 0xc005f914
+  old:    .word 0xebfffdb1
+  new:    .word 0xe3a00000
+          sub     r7, pc, #0x14
+          ldmia   r7, {r4, r5, r6}
+          ldr     r7, [r4]
+          cmp     r5, r7
+          streq   r6, [r4]
+          mvn     r0, #0x1
+          sub     sp, fp, #0x20
+          ldmia   sp, {r4, r5, r6, r7, r8, fp, sp, pc}
 which safely changes a word at 0xc005f914 from 0xebfffdb1 (call hash cheking subroutine) to 0xe3a00000 (put 0 to r0, successful "checking") and returns from orignal sysfs write handler. Let's put it in ELF section
-% arm-linux-gnueabi-objdump -rD motsecurity_sysfs_new.ko
-...
+  % arm-linux-gnueabi-objdump -rD motsecurity_sysfs_new.ko
+  ...
   1c:   c005def4        strgtd  sp, [r5], -r4
   20:   ebfffdb1        bl      fffff6ec <cleanup_module+0xfffff3ec>
   24:   e3a00000        mov     r0, #0  ; 0x0
@@ -50,6 +51,6 @@ which safely changes a word at 0xc005f914 from 0xebfffdb1 (call hash cheking sub
   3c:   e3e00001        mvn     r0, #1  ; 0x1
   40:   e24bd020        sub     sp, fp, #32     ; 0x20
   44:   e89da9f0        ldmia   sp, {r4, r5, r6, r7, r8, fp, sp, pc}
-...
+  ...
 
 First three instruction is actually our data, our entry point of this code is 0x28. In current example the string with a name should be shortened - to "motsecurity_sys" for example.
