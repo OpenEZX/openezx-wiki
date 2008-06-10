@@ -54,3 +54,12 @@ which safely changes a word at 0xc005f914 from 0xebfffdb1 (call hash cheking sub
   ...
 
 First three instruction is actually our data, our entry point of this code is 0x28. In current example the string with a name should be shortened - to "motsecurity_sys" for example.
+
+You can get working example for 44R Z6 firmware [http://l2open.net/motsec.ko here]. Please ensure that you have 6ccb945a8bd6726df807cdba7992c5c63eb4d246 listed in trusted hashes (/etc/modules.hash), and that your kernel's md5 is 34517c12b2f6c9cb7a8898345ddc1b1f (you can calculate it on /dev/mtdblock/kern).
+
+== Better way to patch a kernel ==
+
+As we can obtain an addresses of kernel symbols using kallsyms, we can can make this exploit to be more convinient. It would be hard (or even impossible) to use kallsyms lookup subroutines from our kernelspace code, so it is possible to write userspace helper, that looks address of module_hash_verify in /proc/kallsyms, modifies module's code to use that address and inserts module. It should be fairly simple. The kernelmode code itself should replace first to words of module_hash_verify with          
+  e3a00000  mov     r0, #0
+  e12fff1e  bx      lr
+If we'd assume that module_hash_verify's code consists of at least to instructions, it would be fairly safe to do such substitution. Thanks for WyrM for idea.
