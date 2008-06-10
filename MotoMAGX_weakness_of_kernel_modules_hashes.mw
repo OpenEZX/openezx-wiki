@@ -17,7 +17,7 @@ I had chosen motsecurity_sysfs.ko module, which contains suitable branch instruc
   148:   e5113030        ldr     r3, [r1, #-48]
   ...
 
-As we can see, on 0x144 there is a unconditional branch to +0x28. If we'll analyze logic module's text, we can find yout that this branch happens when module finds '\n' in text written to /sys/security/allowed_mounts. Let's ajust the code with relocation 
+As we can see, on 0x144 there is a unconditional branch to +0x28. If we'll analyze logic module's text, we can find out that this branch happens when module finds '\n' in text written to /sys/security/allowed_mounts. Let's adjust the code with relocation 
   % arm-linux-gnueabi-objdump -rd motsecurity_sysfs_new.ko
   ...
   140:   e2855001        add     r5, r5, #1      ; 0x1
