@@ -62,4 +62,4 @@ You can get working example for 44R Z6 firmware [http://l2open.net/motsec.ko her
 As we can obtain an addresses of kernel symbols using kallsyms, we can can make this exploit to be more convinient. It would be hard (or even impossible) to use kallsyms lookup subroutines from our kernelspace code, so it is possible to write userspace helper, that looks address of module_hash_verify in /proc/kallsyms, modifies module's code to use that address and inserts module. It should be fairly simple. The kernelmode code itself should replace first to words of module_hash_verify with          
   e3a00000  mov     r0, #0
   e12fff1e  bx      lr
-If we'd assume that module_hash_verify's code consists of at least two instructions, it would be fairly safe to do such substitution. Thanks for WyrM for idea.
+If we'd assume that module_hash_verify's code consists of at least two instructions, it would be fairly safe to do such substitution. Thanks for WyrM for idea. Simple and dirty implementation is [http://people.openezx.org/dmitriy/magx_module here].
