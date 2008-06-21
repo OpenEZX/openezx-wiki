@@ -17,7 +17,7 @@ Flash memory can also be programmed via JTAG, sometimes directly, sometimes indi
 You need
 * A JTAG Adaptor (can be built very easily for PC parallel port).
 * JTAG software for your PC.
-* Definition of the JTAG cells (usually BSDL). Learn a bit about [http://www.xjtag.com/jtag-bsdl.php Boundary Scan Design Language].
+* Definition of the JTAG cells (usually BSDL). Learn a bit about [http://www.xjtag.com/jtag-bsdl.php Boundary Scan Description Language].
 
  == JTAG on EZX ==
 
