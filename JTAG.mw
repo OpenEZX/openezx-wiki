@@ -2,11 +2,11 @@
 
 JTAG is a standard interface for in-system testing and debugging.  It works by placing a debug macrocell in front of (almost) every Pin/Signal that enters or leaves a particular device.  Those debug cells are interconnected serially, so that in the end they form one long (e.g. 600bit wide) shift register.
 
-JTAG is an industry standard developed by/under the  Joint Test Action Group that developed it. It was approved as [http://doi.ieeecomputersociety.org/10.1109/TEST.1997.639596 IEEE  standard 1149.1 ]
+JTAG, the  Joint Test Action Group, invented a test interface for test boards by driving and sampling pins of chips on the board. The IEEE formed a committee to modify the concept and make it an industry standard. It was approved as [http://doi.ieeecomputersociety.org/10.1109/TEST.1997.639596 IEEE  standard 1149.1 ] JTAG now refers to the standard even though the standard is different.
 
-By using a five-wire connection (the JTAG Port) built into the to-be-tested/debugged device, an external entity can use serial shifting to read/write information to each and every signal.
+The 1149 standard requires that the chip implement all of the Boundary Scan instructions where the board test program can sample and drive all of the pins of the chip. The sampled values, drive values and control values (for bi-direction pins) are shifted in and out with a big shift register called the boundary scan chain. Two or more scanned chips can talk to each other via the pins to check for opens and shorts.
 
-Combined with the ability to halt and manually control the device's clock rate, this can be used for single-step debugging.
+The Boundary Scan chain is just one data register DR that all chips implement. The manufacturer is free to add any other DR they want. Each new DR is selected for shifting by shifting in a manufacturer defined instruction to the instruction register IR. There is no standard for what these new instructions do. You could have an address DR and a data DR for programming on chip PROMs for instance. The AP also has very interesting DRs that can be used for debug. You have a halt instruction and you can read the current instruction and current address as DRs. You can trace several instruction in a trace buffer and dump them. The most useful DR is the breakpoint register where you can halt when an instruction reads or writes a certain address. See chapter 26 of [http://www.phytec.com/pdf/datasheets/PXA270_UM.pdf]
 
 Also, by accessing the memory bus, and manually exercising the respective chip select signals, an external entity can read/write to the system memory, and e.g. download some code into it.  
 
