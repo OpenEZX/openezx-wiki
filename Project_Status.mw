@@ -139,19 +139,27 @@ and want openezx on it, contact us on openezx-devel.
 | &mdash;
 | &mdash;
 |- style="background:#efefef;"
-| [[Serial_console|Serial]]
-| style="background:red" | 20%
-| style="background:red" | 0%
-| style="background:red" | 0%
-| style="background:red" | 20%
-| style="background:red" | 0%
-| style="background:red" | 0%
-|- style="background:#efefef;"
 | [[BP | GSM, GPRS - Neptune LTE (mux_cli)]]
 | style="background:yellow" | 80%
 | style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:yellow" | 80%
+| style="background:red" | 0%
+| style="background:red" | 0%
+|- style="background:#efefef;"
+| [[WLAN]]
+| &mdash;
+| style="background:yellow" | 80%
+| &mdash;
+| &mdash;
+| &mdash;
+| &mdash;
+|- style="background:#efefef;"
+| [[Serial_console|Serial]]
+| style="background:red" | 20%
+| style="background:red" | 0%
+| style="background:red" | 0%
+| style="background:red" | 20%
 | style="background:red" | 0%
 | style="background:red" | 0%
 |- style="background:#efefef;"
@@ -162,14 +170,6 @@ and want openezx on it, contact us on openezx-devel.
 | style="background:yellow" | 80%
 | style="background:red" | 20%
 | style="background:red" | 0%
-|- style="background:#efefef;"
-| [[WLAN]]
-| &mdash;
-| style="background:yellow" | 80%
-| &mdash;
-| &mdash;
-| &mdash;
-| &mdash;
 |- style="background:#efefef;"
 |}
 
