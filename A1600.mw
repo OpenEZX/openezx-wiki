@@ -21,7 +21,7 @@ Unfortunately, the MOTOMING A1600 is not 3G enabled, offering only quad-band GSM
 '''Motorola Ming 2 A1600 specs include:'''
 
     * Quad band GSM (850/900/1800/1900), GPRS connectivity
-    * Faster CPU
+    * Faster CPU - Marvell PXA270 Applications Processor
     * Linux OS
     * 3.2 megapixel camera with autofocus and LED flashlight
     * Wi-Fi connectivity
@@ -33,3 +33,5 @@ Unfortunately, the MOTOMING A1600 is not 3G enabled, offering only quad-band GSM
 ==Links==
 
 [http://www.motorola.com.cn/a1600/ Motorola China A1600 page]
+[http://gullfoss2.fcc.gov/oetcf/eas/reports/ViewExhibitReport.cfm?mode=Exhibits&RequestTimeout=500&calledFromFrame=N&application_id=189289&fcc_id='IHDP56HT1' 
+FFC report on the A1600 Ming 2]
