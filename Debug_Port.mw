@@ -48,11 +48,9 @@ Applications processor debug port for the A1200:
 
 The lines marked NC are either inputs to an unknown source or they are no connects.  
 
-The ST_UART signals ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  Please see the [[Serial console]] page to see how to wire to this UART.  
+The ST_UART signals ST_TDX and ST_RDX, GPIO 47 and 46 respectively, are configured as a serial port in sumantra.c of the kernel and hw_init.c of the boot loader.  Please see the [[Serial console]] page to see how to wire to this UART.  The FFUART, BTUART, and the ST_UART all appear to be configured, but I do not know what the FFUART is connected to.  
 
-nTRST, TDI, TDO, TMS, TCK, nRESET are JTag signals.
-
-The FFUART, BTUART, and the ST_UART all appear to be configured, but I do not know what the FFUART is connected to.  
+nTRST, TDI, TDO, TMS, TCK, nRESET are JTag signals.  To use JTAG on the phones an external power source was added to keep the Applications Processor voltage up when the phone ended a low power state.  I applied 2.9V to V_Reff and VCC on the Rokr E2 and A1200.  
 
 ==Serial port via Debug port:==
 Serial port output via PL2303HX with internal level shifter.
