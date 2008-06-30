@@ -1,6 +1,6 @@
 On the Rokr E2  and A1200 boards there are two debug ports.  One on the front and one on the back of the Rokr E2.  The one on the front is the debug/jtag port for the applications processor (PXA270).  It is located on the opposite side from the key-lock switch. The one on the back is assumed to be the debug/jtag port for the baseband.  The connector is made by FOXCONN, QT510166-L010-7F.  The male connector that you will need to access the port is [http://www.foxconn.com/NWInG/search/Product_Details_Report.asp?P_PN=QT500166-L020-9F&P_type=Board-to-Board%20Connector&P_Family=Board%20to%20Board%20Connector&P_Series=Board%20to%20Board%20Connector%200.5mm%20Pitch%20%20&searchTypeID=4 QT500166-L020-9F] ([http://www.foxconn.com/NWInG/search/WebLog.asp?userip=62.226.216.134&searchTypeID=4&productIndustry=&productType=Board%2Dto%2DBoard+Connector&productFamily=Board+to+Board+Connector&productSeries=Board+to+Board+Connector+0%2E5mm+Pitch++&productNo=QT500166-L020-9F&fileClassID=4&account=&IsFileExist=1&filename=&fileVersion= Spec]).
 
-Applicatons processor debug port:
+Applications processor debug port for the Rokr E2:
                      
      ?(NC)       GND    ST_TDX      VSUPPLY
   ?(NC) \  ?(NC)  | ?(NC) |  ST_RXD /  
@@ -19,6 +19,30 @@ Applicatons processor debug port:
     /   /    /   |    |   \    \   \
  nTRST /   TDO   | ?(NC)   \ nRESET \
      TDI        TMS        TCK    ?(NC)
+
+Applications processor debug port for the A1200:
+
+ | 
+ |<-Side of PCB, Top port 
+ |                      
+ |      nRESET     ?(NC)    TDO       nTRST
+ |   ?(NC) \   TCK   |  TMS  |   TDI   /  
+ |      \   \    \   |   |   |    /   /
+ |       1   2   3   4   5   6   7   8     
+ |       |   |   |   |   |   |   |   |     
+ |  #######################################
+ |  #    |   |   |   |   |   |   |   |    #
+ |  #  #################################  #
+ |  #  #################################  #
+ |  #  #################################  #
+ |  #    |   |   |   |   |   |   |   |    #
+ |  #######################################
+ |       |   |   |   |   |   |   |   |     
+ |      16  15  14  13  12  11  10   9     
+ |     /    /    /   |   |   \    \   \
+ | VSUPPLY / ST_TDX  |  GND   \  ?(NC) \
+ |      ST_RXD     ?(NC)     ?(NC)    ?(NC)
+ | 
 
 The lines marked NC are either inputs to an unknown source or they are no connects.  
 
