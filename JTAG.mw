@@ -21,7 +21,7 @@ You need
 
 == JTAG on EZX ==
 
-Some EZX phones are known to have the JTAG pins wired out for the Applications Processor and the Baseband Processor.  The A780 and E680/E680i have testpads that have the required signals.  The a1200 and Rokr E2 phones have [Debug Port]s that contain the JTAG signals.
+Some EZX phones are known to have the JTAG pins wired out for the Applications Processor and the Baseband Processor.  The A780 and E680/E680i have testpads that have the required signals.  The a1200 and Rokr E2 phones have [[Debug Port]]s that contain the JTAG signals.
 
 === JTAG on AP ===
 
