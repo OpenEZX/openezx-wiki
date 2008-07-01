@@ -216,5 +216,7 @@ Setup: GAS_EMEA_GSZA910BTUK0_S071 Resource: GAS_EMEA_GSZA910BTUK0_R57_G_10.07.7R
 ;BP S/W version: R57_G_10.07.07R
 ;DSP S/W Version: 63343400
 
+At least in this firmware, the WiFi appears to be locked to BT Home WiFi internet routers.   The device will connect to a WiFi router, and from the router side the connection will be established, but then the phone will timeout with a connection failed.   Flashing to an unbranded firmware allows any WiFi connection.  Oddly, Helix does not seem to allow a RTSP connection over WiFi.
+
 [[Category:Hardware]]
 [[Category:A910]]
