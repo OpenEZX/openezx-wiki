@@ -1,4 +1,5 @@
- The main processing unit of a computing device.  This unit is what runs the operating system as well as all user applications.
+ The main processing unit of a computing device.
+ This unit is what runs the operating system as well as all user applications.
 
 The CPU is a [http://www.chipdocs.com/datasheets/datasheet-pdf/Intel/PXA270.html Intel PXA270]:
 * ARMv5TE ARM core
