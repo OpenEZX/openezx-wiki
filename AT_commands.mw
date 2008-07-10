@@ -585,11 +585,19 @@ Motorola Banner. ''+MBAN: Copyright 2000-2002 Motorola, Inc.''
 
 ====AT+MMGL:====
 
-====AT+MMGL=%d====
+Contains a SMS message on SIM. This is a result of the +MMGL query command. Extension to 07.07 +CMGL.
+
+====AT+MMGL="%s"====
+
+List messages from SIM. Extension to 07.07 +CMGL with command "HEADER ONLY".
 
 ====AT+MMGR:%8D,%8D====
 
+List a number messages from SIM. Extension to 07.07 +CMGR.
+
 ====AT+MMGR=%d====
+
+List one message from SIM. Extension to 07.07 +CMGR.
 
 ====AT+MODE?====
 
