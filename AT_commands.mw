@@ -55,7 +55,7 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 == TODO: ==
 
-* Remove official AT commands from this list.
+* Remove official AT commands from this list [in progress]
 * Describe the other commands.
 * On which mux device USBSTAT is sent??
 
@@ -135,20 +135,6 @@ AT+CMEP?
 
 AT+CMEP=%d
 
-AT+CMGD=%d
-
-AT+CMGL:
-
-AT+CMGL=%d
-
-AT+CMGR:%8D,%8D
-
-AT+CMGR=%d
-
-AT+CMGS:%8D
-
-AT+CMGS=%d
-
 AT+CMPN:
 
 AT+CMSM:
@@ -160,12 +146,6 @@ AT+CPUR=1;+CPIN="%s","%s"
 AT+CPWR=%d
 
 AT+CRRM
-
-AT+CSCA?
-
-AT+CSCA:%%%dS,%%8D
-
-AT+CSCA="%s"
 
 AT+CSCB:
 
@@ -193,15 +173,9 @@ AT+CSPL?
 
 AT+CSPL=%d
 
-AT+CSQ
-
-AT+CSQ:%8D,%8D
-
 AT+CSSI:
 
 AT+CSSU:
-
-AT+CUSD=%d,"%s"
 
 AT+CUSR:
 
