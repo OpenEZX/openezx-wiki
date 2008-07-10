@@ -121,9 +121,9 @@ Indicator Event Reporting: +CIEV: <mode>,<value>
 
 Expected values:
 
- * 1, <signal strength>: 0 = weakest, 5 = maximum.
- * 2,0 ?
- * 7,0 ?
+* 1, <signal strength>: 0 = weakest, 5 = maximum.
+* 2,0 ?
+* 7,0 ?
 
 ====AT+CLCH====
 
