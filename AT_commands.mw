@@ -391,7 +391,11 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 ====AT+EONS:====
 
-====AT+EOPER:====
+====AT+EOPER:%d[,%s]====
+
+Operator Registration: ''+EOPER: 5,"262-03"''
+
+This is slightly related to the standard +CREG event. Value seems in conformance to +CREG, operator name unfortunately only available as area code. EZX seems to match the SIM list of operators to gather the operator code. I have yet to find out how to do that, since neither +COPN nor +COPL are implemented.
 
 ====AT+EPANIC:====
 
