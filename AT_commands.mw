@@ -117,8 +117,13 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 ====AT+CIEV:%d,%d:====
 
-"Indicator Event Reporting". Mode = 1 seems to be signal strength, valueI have seen 1,x (signal strenght), 2,0 (?), and 7,0
-(?)
+Indicator Event Reporting: +CIEV: <mode>,<value>
+
+Expected values:
+
+ * 1, <signal strength>: 0 = weakest, 5 = maximum.
+ * 2,0 ?
+ * 7,0 ?
 
 ====AT+CLCH====
 
