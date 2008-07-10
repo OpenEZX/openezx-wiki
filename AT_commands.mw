@@ -115,15 +115,7 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 ====AT+CFSN:%%%dS====
 
-====AT+CIEV:%d,%d====
 
-Indicator Event Reporting: +CIEV: <mode>,<value>
-
-Expected values:
-
-* 1, <signal strength>: 0 = weakest, 5 = maximum.
-* 2, <edge coverage>: 0 = no
-* 7,0 ?
 
 ====AT+CLCH====
 
