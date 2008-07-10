@@ -115,7 +115,7 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 ====AT+CFSN:%%%dS====
 
-====AT+CIEV:%d,%d:====
+====AT+CIEV:%d,%d====
 
 Indicator Event Reporting: +CIEV: <mode>,<value>
 
