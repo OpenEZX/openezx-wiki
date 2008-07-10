@@ -75,7 +75,11 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 ====AT+CBSM=%d====
 
-====AT+CCTP:====
+====AT+CCTP:%d,"%s"====
+
+Call Transfer Progress: ''+CCTP: 1,"12345678"''
+
+First value could be callid (as per 07.07 +CCLC), second value is peer number.
 
 ====AT+CDSM=%d,%d====
 
