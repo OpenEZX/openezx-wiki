@@ -61,532 +61,539 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
 === All supported AT commands (and replies) of the [[BP]] ===
 
-AT+ALERT
+====AT+ALERT====
 
-AT+BTTONE
+====AT+BTTONE====
 
-AT+CAPF=12,1,%d
+====AT+CAPF=12,1,%d====
 
-AT+CBM:
+====AT+CBM:====
 
-AT+CBSM:
+====AT+CBSM:====
 
-AT+CBSM?
+====AT+CBSM?====
 
-AT+CBSM=%d
+====AT+CBSM=%d====
 
-AT+CCTP:
+====AT+CCTP:====
 
-AT+CDSM=%d,%d
+====AT+CDSM=%d,%d====
 
-AT+CDST=%d
+====AT+CDST=%d====
 
-AT+CDST=%d,%d
+====AT+CDST=%d,%d====
 
-AT+CDST:%%%dS
+====AT+CDST:%%%dS====
 
-AT+CDSV:%32D,%32D
+====AT+CDSV:%32D,%32D====
 
-AT+CDSV=%d
+====AT+CDSV=%d====
 
-AT+CDSV=%d,%d
+====AT+CDSV=%d,%d====
 
-AT+CECH=%d,%d
+====AT+CECH=%d,%d====
 
-AT+CEFR=0
+====AT+CEFR=0====
 
-AT+CEFR=1
+====AT+CEFR=1====
 
-AT+CEFR=2
+====AT+CEFR=2====
 
-AT+CEFR=3
+====AT+CEFR=3====
 
-AT+CEFR:%%8D,%%%dC
+====AT+CEFR:%%8D,%%%dC====
 
-AT+CEFR:%%8D,%%%dU
+====AT+CEFR:%%8D,%%%dU====
 
-AT+CEFS:
+====AT+CEFS:====
 
-AT+CEME:
+====AT+CEME:====
 
-AT+CESS:
+====AT+CESS:====
 
-AT+CFSN
+====AT+CFSN====
 
-AT+CFSN:%%%dS
+====AT+CFSN:%%%dS====
 
-AT+CLCH
+====AT+CIEV:%d,%d:====
 
-AT+CLCH:%32d
+"Indicator Event Reporting". Mode = 1 seems to be signal strength, valueI have seen 1,x (signal strenght), 2,0 (?), and 7,0
+(?)
 
-AT+CLIN:
+====AT+CLCH====
 
-AT+CLK:
+====AT+CLCH:%32d====
 
-AT+CLNIR?
+====AT+CLIN:====
 
-AT+CLNIR:%8D
+====AT+CLK:====
 
-AT+CLNIR=%d
+====AT+CLNIR?====
 
-AT+CMEP:
+====AT+CLNIR:%8D====
 
-AT+CMEP?
+====AT+CLNIR=%d====
 
-AT+CMEP=%d
+====AT+CMEP:====
 
-AT+CMPN:
+====AT+CMEP?====
 
-AT+CMSM:
+====AT+CMEP=%d====
 
-AT+CMT:
+====AT+CMPN:====
 
-AT+CPUR=1;+CPIN="%s","%s"
+====AT+CMSM:====
 
-AT+CPWR=%d
+====AT+CMT:====
 
-AT+CRRM
+====AT+CPUR=1;+CPIN="%s","%s"====
 
-AT+CSCB:
+====AT+CPWR=%d====
 
-AT+CSCB?
+====AT+CRRM====
 
-AT+CSCB=%d
+====AT+CSCB:====
 
-AT+CSCL?
+====AT+CSCB?====
 
-AT+CSCL:%8d
+====AT+CSCB=%d====
 
-AT+CSCL=%d,%d
+====AT+CSCL?====
 
-AT+CSMS?
+====AT+CSCL:%8d====
 
-AT+CSMS:%8D,%8D,%8D
+====AT+CSCL=%d,%d====
 
-AT+CSMS:%8D,%8D,%8D,%8D
+====AT+CSMS?====
 
-AT+CSMS=%d
+====AT+CSMS:%8D,%8D,%8D====
 
-AT+CSPL:
+====AT+CSMS:%8D,%8D,%8D,%8D====
 
-AT+CSPL?
+====AT+CSMS=%d====
 
-AT+CSPL=%d
+====AT+CSPL:====
 
-AT+CSSI:
+====AT+CSPL?====
 
-AT+CSSU:
+====AT+CSPL=%d====
 
-AT+CUSR:
+====AT+CSSI:====
 
-AT+CUSS:
+====AT+CSSU:====
 
-AT+CUSSD:
+====AT+CUSR:====
 
-AT+CVMN?
+====AT+CUSS:====
 
-AT+CVMN:%%%dS
+====AT+CUSSD:====
 
-AT+CVMN="%s"
+====AT+CVMN?====
 
-AT+DTSE="%c",%d
+====AT+CVMN:%%%dS====
 
-AT+DTST?
+====AT+CVMN="%s"====
 
-AT+DTST:%8D
+====AT+DTSE="%c",%d====
 
-AT+DTST=%d
+====AT+DTST?====
 
-AT+EACC=%u
+====AT+DTST:%8D====
 
-AT+EACH=%u
+====AT+DTST=%d====
 
-AT+EAPA?
+====AT+EACC=%u====
 
-AT+EAPA:%%%dS,%%8D,%%8D
+====AT+EACH=%u====
 
-AT+EAPA="%s",%d,%d
+====AT+EAPA?====
 
-AT+EAPC?
+====AT+EAPA:%%%dS,%%8D,%%8D====
 
-AT+EAPC:%%32D,%%32D,%%32D,%%32D,%%32D,%%%dS
+====AT+EAPA="%s",%d,%d====
 
-AT+EAPD
+====AT+EAPC?====
 
-AT+EAPD?
+====AT+EAPC:%%32D,%%32D,%%32D,%%32D,%%32D,%%%dS====
 
-AT+EAPD:%%8D,%%8D,%%8D,%%8D,%%%dS,%%%dS,%%32D,%%32D,%%32D
+====AT+EAPD====
 
-AT+EAPF=0,4,0
+====AT+EAPD?====
 
-AT+EAPF=0,4,1,%d
+====AT+EAPD:%%8D,%%8D,%%8D,%%8D,%%%dS,%%%dS,%%32D,%%32D,%%32D====
 
-AT+EAPF=11,1,0
+====AT+EAPF=0,4,0====
 
-AT+EAPF=11,1,1,%d
+====AT+EAPF=0,4,1,%d====
 
-AT+EAPF=12,1,0
+====AT+EAPF=11,1,0====
 
-AT+EAPF=12,1,1,%d
+====AT+EAPF=11,1,1,%d====
 
-AT+EAPF=13,1,0
+====AT+EAPF=12,1,0====
 
-AT+EAPF=13,1,1,%d
+====AT+EAPF=12,1,1,%d====
 
-AT+EAPF=6,4,0
+====AT+EAPF=13,1,0====
 
-AT+EAPF=6,4,1,%d
+====AT+EAPF=13,1,1,%d====
 
-AT+EAPF=8,1,0
+====AT+EAPF=6,4,0====
 
-AT+EAPF=8,1,1,%d
+====AT+EAPF=6,4,1,%d====
 
-AT+EAPF:%8D,%8D,%8D
+====AT+EAPF=8,1,0====
 
-AT+EAPG?
+====AT+EAPF=8,1,1,%d====
 
-AT+EAPG:%%%dS
+====AT+EAPF:%8D,%8D,%8D====
 
-AT+EAPP?
+====AT+EAPG?====
 
-AT+EAPP:%%8D,%%8D,%%32D,%%32D,%%%dS
+====AT+EAPG:%%%dS====
 
-AT+EAPT?
+====AT+EAPP?====
 
-AT+EAPT:%%32D
+====AT+EAPP:%%8D,%%8D,%%32D,%%32D,%%%dS====
 
-AT+EAPU?
+====AT+EAPT?====
 
-AT+EAPU:%%%dS
+====AT+EAPT:%%32D====
 
-AT+EAPU="%s"
+====AT+EAPU?====
 
-AT+EART?
+====AT+EAPU:%%%dS====
 
-AT+EART:%16D
+====AT+EAPU="%s"====
 
-AT+EART=%d
+====AT+EART?====
 
-AT+EAUD:
+====AT+EART:%16D====
 
-AT+EBAC:
+====AT+EART=%d====
 
-AT+EBPV:
+====AT+EAUD:====
 
-AT+EBROM?
+====AT+EBAC:====
 
-AT+EBROM:%%32D,%%%dU,%%%dU
+====AT+EBPV:====
 
-AT+ECBD:
+====AT+EBROM?====
 
-AT+ECBD?
+====AT+EBROM:%%32D,%%%dU,%%%dU====
 
-AT+ECBD=%d
+====AT+ECBD:====
 
-AT+ECCC:
+====AT+ECBD?====
 
-AT+ECDR:
+====AT+ECBD=%d====
 
-AT+ECDR?
+====AT+ECCC:====
 
-AT+ECSP?
+====AT+ECDR:====
 
-AT+ECSP:%8D,%8D
+====AT+ECDR?====
 
-AT+ECSS:
+====AT+ECSP?====
 
-AT+ECTM=%d
+====AT+ECSP:%8D,%8D====
 
-AT+EDCH=%u
+====AT+ECSS:====
 
-AT+EFLEX:
+====AT+ECTM=%d====
 
-AT+EFNN
+====AT+EDCH=%u====
 
-AT+EHOZ:
+====AT+EFLEX:====
 
-AT+EHSS=%d
+====AT+EFNN====
 
-AT+EICD:
+====AT+EHOZ:====
 
-AT+EIDATA:%%8D,%%8D,%%%dU
+====AT+EHSS=%d====
 
-AT+EIDATA=%d
+====AT+EICD:====
 
-AT+EIMG?
+====AT+EIDATA:%%8D,%%8D,%%%dU====
 
-AT+EIMG:%%8D,%%8D,%%%dU
+====AT+EIDATA=%d====
 
-AT+EINFO:%%16D,%%16D,%%16D,%%16D
+====AT+EIMG?====
 
-AT+EINFO="%s"
+====AT+EIMG:%%8D,%%8D,%%%dU====
 
-AT+EINR=?
+====AT+EINFO:%%16D,%%16D,%%16D,%%16D====
 
-AT+EINR:%%16D,%%%dS,%%8D,%%%dU
+====AT+EINFO="%s"====
 
-AT+EINR:%32D
+====AT+EINR=?====
 
-AT+EINR=%d,%d
+====AT+EINR:%%16D,%%%dS,%%8D,%%%dU====
 
-AT+EKEV: %d,%d
+====AT+EINR:%32D====
 
-AT+ELAI?
+====AT+EINR=%d,%d====
 
-AT+ELAI:%8D,%8D,%8D,%8D,%8D
+====AT+EKEV: %d,%d====
 
-AT+ELOCK:
+====AT+ELAI?====
 
-AT+ELOCK?
+====AT+ELAI:%8D,%8D,%8D,%8D,%8D====
 
-AT+ELOCK=%d
+====AT+ELOCK:====
 
-AT+EMBEEP
+====AT+ELOCK?====
 
-AT+EMCR=0
+====AT+ELOCK=%d====
 
-AT+EMCR=1
+====AT+EMBEEP====
 
-AT+EMGA?
+====AT+EMCR=0====
 
-AT+EMGA:%%%dS
+====AT+EMCR=1====
 
-AT+EMGA="%s"
+====AT+EMGA?====
 
-AT+EMGL:
+====AT+EMGA:%%%dS====
 
-AT+EMGL=4
+====AT+EMGA="%s"====
 
-AT+EMGW=%d,%d,%d
+====AT+EMGL:====
 
-AT+EMPC:
+====AT+EMGL=4====
 
-AT+EMPC="%s"
+====AT+EMGW=%d,%d,%d====
 
-AT+EMPI:
+====AT+EMPC:====
 
-AT+EMPI?
+====AT+EMPC="%s"====
 
-AT+EMSR:
+====AT+EMPI:====
 
-AT+EMUTE:
+====AT+EMPI?====
 
-AT+EMWF=%d,%d
+====AT+EMSR:====
 
-AT+ENITZTIME:
+====AT+EMUTE:====
 
-AT+ENITZTIME?
+====AT+EMWF=%d,%d====
 
-AT+ENMA=%d,%d,%d,%d
+====AT+ENITZTIME:====
 
-AT+ENTNAME:
+====AT+ENITZTIME?====
 
-AT+ENTTIME:
+====AT+ENMA=%d,%d,%d,%d====
 
-AT+ENTTIME?
+====AT+ENTNAME:====
 
-AT+ENTTIME=%d
+====AT+ENTTIME:====
 
-AT+EONS:
+====AT+ENTTIME?====
 
-AT+EOPER:
+====AT+ENTTIME=%d====
 
-AT+EPANIC:
+====AT+EONS:====
 
-AT+EPING
+====AT+EOPER:====
 
-AT+EPING:
+====AT+EPANIC:====
 
-AT+EPMS?
+====AT+EPING====
 
-AT+EPMS:%16D
+====AT+EPING:====
 
-AT+EPOM=%d,%d
+====AT+EPMS?====
 
-AT+EPROV:
+====AT+EPMS:%16D====
 
-AT+EPROV?
+====AT+EPOM=%d,%d====
 
-AT+ERDL:
+====AT+EPROV:====
 
-AT+EREADY
+====AT+EPROV?====
 
-AT+ERED:
+====AT+ERDL:====
 
-AT+ERTR=0
+====AT+EREADY====
 
-AT+ERTR=10
+====AT+ERED:====
 
-AT+ERTR=9
+====AT+ERTR=0====
 
-AT+ERTR=%d
+====AT+ERTR=10====
 
-AT+ERTR:%%%dS
+====AT+ERTR=9====
 
-AT+ESATA=%d
+====AT+ERTR=%d====
 
-AT+ESATE="%s",%d,%d,%d,%d
+====AT+ERTR:%%%dS====
 
-AT+ESATM:
+====AT+ESATA=%d====
 
-AT+ESATM=%d,%d
+====AT+ESATE="%s",%d,%d,%d,%d====
 
-AT+ESATM=%d,%d,%d
+====AT+ESATM:====
 
-AT+ESATM=%d,%d,%d,%d,"%s"
+====AT+ESATM=%d,%d====
 
-AT+ESATP:
+====AT+ESATM=%d,%d,%d====
 
-AT+ESATR=%d,"%s"
+====AT+ESATM=%d,%d,%d,%d,"%s"====
 
-AT+ESATSD
+====AT+ESATP:====
 
-AT+ESATSD:
+====AT+ESATR=%d,"%s"====
 
-AT+ESCER:
+====AT+ESATSD====
 
-AT+ESCER?
+====AT+ESATSD:====
 
-AT+ESCL=%d
+====AT+ESCER:====
 
-AT+ESCR
+====AT+ESCER?====
 
-AT+ESIMR:%%16D,%%16D,%%16D,%%16D,%%%dU
+====AT+ESCL=%d====
 
-AT+ESIMR=%d,%d,%d,"%s"
+====AT+ESCR====
 
-AT+ESIMW:%%16D
+====AT+ESIMR:%%16D,%%16D,%%16D,%%16D,%%%dU====
 
-AT+ESIMW=%d,%d,%d,%d,"%s","%s"
+====AT+ESIMR=%d,%d,%d,"%s"====
 
-AT+ESLS:
+====AT+ESIMW:%%16D====
 
-AT+ESMOC:
+====AT+ESIMW=%d,%d,%d,%d,"%s","%s"====
 
-AT+ESMT:
+====AT+ESLS:====
 
-AT+ESPN?
+====AT+ESMOC:====
 
-AT+ESPN:%%8D,%%%dU
+====AT+ESMT:====
 
-AT+ESTC=%d,"%s",%d,%d
+====AT+ESPN?====
 
-AT+ETIME:
+====AT+ESPN:%%8D,%%%dU====
 
-AT+ETTYM:
+====AT+ESTC=%d,"%s",%d,%d====
 
-AT+ETTYM?
+====AT+ETIME:====
 
-AT+ETTYM=%d
+====AT+ETTYM:====
 
-AT+ETTYT:
+====AT+ETTYM?====
 
-AT+EVMN?
+====AT+ETTYM=%d====
 
-AT+EVMN:%%8D,%%%dS,%%%du
+====AT+ETTYT:====
 
-AT+EVMN=%d,"%s","%s"
+====AT+EVMN?====
 
-AT+EWEL:
+====AT+EVMN:%%8D,%%%dS,%%%du====
 
-AT+FCLASS=0
+====AT+EVMN=%d,"%s","%s"====
 
-AT+FCLASS=%d
+====AT+EWEL:====
 
-AT+FRH=%d
+====AT+FCLASS=0====
 
-AT+FRM=%d
+====AT+FCLASS=%d====
 
-AT+FRS=%d
+====AT+FRH=%d====
 
-AT+FTH=%d
+====AT+FRM=%d====
 
-AT+FTM=%d
+====AT+FRS=%d====
 
-AT+FTS=%d
+====AT+FTH=%d====
 
-AT+MAAD:
+====AT+FTM=%d====
 
-AT+MAAD?
+====AT+FTS=%d====
 
-AT+MAAD=%d
+====AT+MAAD:====
 
-AT+MARD:
+====AT+MAAD?====
 
-AT+MARD?
+====AT+MAAD=%d====
 
-AT+MARD=%d
+====AT+MARD:====
 
-AT+MBDN=?
+====AT+MARD?====
 
-AT+MBDN?
+====AT+MARD=%d====
 
-AT+MBDN:%8D
+====AT+MBDN=?====
 
-AT+MBDN:%%8D,%%%dS,%%%du
+====AT+MBDN?====
 
-AT+MBDN=%d,"%s","%s"
+====AT+MBDN:%8D====
 
-AT+MCCI:
+====AT+MBDN:%%8D,%%%dS,%%%du====
 
-AT+MCNT?
+====AT+MBDN=%d,"%s","%s"====
 
-AT+MCNT:%%8D,%%8D
+====AT+MCCI:====
 
-AT+MCNT=%d,%d
+====AT+MCNT?====
 
-AT+MDAI=%d
+====AT+MCNT:%%8D,%%8D====
 
-AT+MEBA=0
+====AT+MCNT=%d,%d====
 
-AT+MEBA:%32d
+====AT+MDAI=%d====
 
-AT+MECM:
+====AT+MEBA=0====
 
-AT+MECM=3,%d
+====AT+MEBA:%32d====
 
-AT+MECM=%d,%d
+====AT+MECM:====
 
-AT+MEDA=%d,%d,"%s"
+====AT+MECM=3,%d====
 
-AT+MEFT:
+====AT+MECM=%d,%d====
 
-AT+MEFT?
+====AT+MEDA=%d,%d,"%s"====
 
-AT+MEFT=0,%d
+====AT+MEFT:====
 
-AT+MEFT=1,%d
+====AT+MEFT?====
 
-AT+MERP:
+====AT+MEFT=0,%d====
 
-AT+MFTS:
+====AT+MEFT=1,%d====
 
-AT+MGLLCD=?
+====AT+MERP:====
 
-AT+MGLLCD:
+====AT+MFTS:====
 
-AT+MGLLCD=%d,%u,%d,%d
+====AT+MGLLCD=?====
 
-AT+MICT:
+====AT+MGLLCD:====
 
-AT+MMGL:
+====AT+MGLLCD=%d,%u,%d,%d====
 
-AT+MMGL=%d
+====AT+MICT:====
 
-AT+MMGR:%8D,%8D
+====AT+MMGL:====
 
-AT+MMGR=%d
+====AT+MMGL=%d====
 
-AT+MTXDATA
+====AT+MMGR:%8D,%8D====
 
-AT+NREC=%d
+====AT+MMGR=%d====
 
-AT+SCAN=%d
+====AT+MTXDATA====
 
-AT+SHOW:
+====AT+NREC=%d====
 
-AT+STTONE
+====AT+SCAN=%d====
 
-AT+USBSTAT=%d,%d: This command is needed on at least [[A780]]/[[E680]] to turn off the watchdog in the [[BP]]. On this phones the [[BP]] is connected through USB.
+====AT+SHOW:====
 
-AT+VA=%d
+====AT+STTONE====
+
+====AT+USBSTAT=%d,%d:====
+
+This command is needed on at least [[A780]]/[[E680]] to turn off the watchdog in the [[BP]]. On this phones the [[BP]] is connected through USB.
+
+====AT+VA=%d====
