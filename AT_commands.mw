@@ -147,7 +147,7 @@ Expected values:
 
 ====AT+CMPN:====
 
-====AT+CMSM:====
+====AT+CMSM:%d====
 
 ====AT+CMT:====
 
