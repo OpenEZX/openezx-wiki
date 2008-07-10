@@ -591,6 +591,10 @@ Motorola Banner. ''+MBAN: Copyright 2000-2002 Motorola, Inc.''
 
 ====AT+MMGR=%d====
 
+====AT+MODE?====
+
+Returns Modem (0) or Phonebook mode. Set command seems to work, but BP fails to reinitialize virtual channel.
+
 ====AT+MTXDATA====
 
 ====AT+NREC=%d====
