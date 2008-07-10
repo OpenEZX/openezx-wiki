@@ -1,22 +1,20 @@
 The EZX phones support a wider range of AT commands. Some of them are official GSM commands other are extension.
 
 We should compare the commands to one known of the 3GPP standards:
+* http://www.3gpp.org/ftp/Specs/archive/07_series/07.07/0707-780.zip
+* http://www.3gpp.org/ftp/Specs/archive/27_series/27.007/27007-720.zip
 
-http://www.3gpp.org/ftp/Specs/archive/07_series/07.07/0707-780.zip
-
-http://www.3gpp.org/ftp/Specs/archive/27_series/27.007/27007-720.zip
-
-But even other documents in this directories are interesting for some parts of the commands:
-
-http://www.3gpp.org/ftp/Specs/archive/07_series/
-
-http://www.3gpp.org/ftp/Specs/archive/27_series/
+Also other documents in this directories are interesting for some parts of the commands:
+* http://www.3gpp.org/ftp/Specs/archive/07_series/
+* http://www.3gpp.org/ftp/Specs/archive/27_series/
 
 SMS-Related AT commands:
+* http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 
-http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
+'''Note: Official commands should not be listed here. They are already defined in the standards.'''
 
-'''All official commands should not be listed here. They are defined in the standards and should not been duplicated here.'''
+== Power / Setup ==
+AT+USBSTAT (mux4)
 
 == Sound / Call related ==
 *AT+EACC=<val> (mux4)
@@ -42,6 +40,7 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 == PowerOff Related==
 * AT+CPWR=1
 ** Turns BP off.
+** what about +CPWR=6 ?
 * AT+EKEV: 19,1
 ** a notification command that can be read on mux4 when power key is pressed for a while. When tapisrv reads that, it sends "AT+CPWR=1\r" on mux4 and then shut down the phone.
 
@@ -53,13 +52,9 @@ http://www.3gpp.org/ftp/Specs/archive/07_series/07.05/0705-701.zip
 *AT+ESPN (mux0)
 ** Unknown - Appears as a query command (? at the end) when turning gprs on.
 
-== TODO: ==
+== Motorola Extension commands (and replies) of the [[BP]] ==
 
-* Remove official AT commands from this list [in progress]
-* Describe the other commands.
-* On which mux device USBSTAT is sent??
-
-=== All supported AT commands (and replies) of the [[BP]] ===
+See also the origin of this: https://lists.gnumonks.org/pipermail/openezx-devel/2006-December/000917.html
 
 ====AT+ALERT====
 
