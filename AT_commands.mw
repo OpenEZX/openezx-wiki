@@ -609,7 +609,6 @@ Returns Modem (0) or Phonebook mode. Set command seems to work, but BP fails to 
 ====AT+STTONE====
 
 ====AT+USBSTAT=%d,%d:====
-
-This command is needed on at least [[A780]]/[[E680]] to turn off the watchdog in the [[BP]]. On this phones the [[BP]] is connected through USB.
+This command is to signal [[BP]] about mini-USB port status (as BP is responsible to control charging on A780/E680), it has no relation with the watchdog at all.
 
 ====AT+VA=%d====
