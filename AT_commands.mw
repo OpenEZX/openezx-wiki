@@ -124,7 +124,11 @@ Sent after a call connection has been cleared. It probably includes the GSM reas
 
 ====AT+CLCH:%32d====
 
-====AT+CLIN:====
+====AT+CLIN:%d====
+
+Call Line Indicator: ''+CLIN: 0''
+
+Unsolicited response, sent during an incoming call. Looks like it indicates the GSM line the call has allocated.
 
 ====AT+CLK:====
 
