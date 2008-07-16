@@ -108,7 +108,11 @@ First value could be callid (as per 07.07 +CCLC), second value is peer number.
 
 ====AT+CEME:====
 
-====AT+CESS:====
+====AT+CESS:%d,%d====
+
+''+CESS: 3, 14''
+
+Sent after a call connection has been cleared. It probably includes the GSM reason. It might bear resemblence to the answers to +CEER (extended error report) (which is not implemented on EZX), however it is unfortunately not GSM 04.08 Annex H.
 
 ====AT+CFSN====
 
