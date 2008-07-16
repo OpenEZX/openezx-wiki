@@ -182,10 +182,6 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+CSPL=%d====
 
-====AT+CSSI:====
-
-====AT+CSSU:====
-
 ====AT+CUSR:====
 
 ====AT+CUSS:====
