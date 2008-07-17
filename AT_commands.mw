@@ -62,6 +62,22 @@ AT+USBSTAT (mux4)
 *AT+ESPN (mux0)
 ** Unknown - Appears as a query command (? at the end) when turning gprs on.
 
+== Fax commands ==
+
+*AT+FRH=%d
+**Receive DATA with HDLC Frame, [4] page 380
+*AT+FRM=%d
+**Receive Data, [4] page 378
+*AT+FRS=%d
+**Receive Silence, [4] page 375
+*AT+FTH=%d
+**Transmit DATA with HDLC Frame, [4] page 378
+*AT+FTM=%d
+**Transmit Data, [4] page 376
+*AT+FTS=%d
+**Transmit Silence, [4] page 375
+
+
 == Motorola Extension commands (and replies) of the [[BP]] ==
 
 See also the origin of this: https://lists.gnumonks.org/pipermail/openezx-devel/2006-December/000917.html
@@ -489,17 +505,6 @@ This is slightly related to the standard +CREG event. Value seems in conformance
 
 ====AT+EWEL:====
 
-====AT+FRH=%d====
-
-====AT+FRM=%d====
-
-====AT+FRS=%d====
-
-====AT+FTH=%d====
-
-====AT+FTM=%d====
-
-====AT+FTS=%d====
 
 ====AT+MAAD:====
 
