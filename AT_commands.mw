@@ -512,11 +512,9 @@ This is slightly related to the standard +CREG event. Value seems in conformance
 
 ====AT+MAAD=%d====
 
-====AT+MARD:====
-
-====AT+MARD?====
-
 ====AT+MARD=%d====
+
+Enable/Disable Auto-Redial, [3] page 67
 
 ====AT+MBAN=%s====
 
@@ -578,6 +576,8 @@ Motorola Banner. ''+MBAN: Copyright 2000-2002 Motorola, Inc.''
 
 Contains a SMS message on SIM. This is a result of the +MMGL query command. Extension to 07.07 +CMGL.
 
+Motorola List Messages [3], page 138
+
 ====AT+MMGL="%s"====
 
 List messages from SIM. Extension to 07.07 +CMGL with command "HEADER ONLY".
@@ -586,6 +586,8 @@ List messages from SIM. Extension to 07.07 +CMGL with command "HEADER ONLY".
 
 List a number messages from SIM. Extension to 07.07 +CMGR.
 
+Motorola Read Message, [3] page 143
+
 ====AT+MMGR=%d====
 
 List one message from SIM. Extension to 07.07 +CMGR.
@@ -593,6 +595,8 @@ List one message from SIM. Extension to 07.07 +CMGR.
 ====AT+MODE?====
 
 Returns Modem (0) or Phonebook mode. Set command seems to work, but BP fails to reinitialize virtual channel.
+
+Select Interface Mode, [3] page 250
 
 ====AT+MTXDATA====
 
