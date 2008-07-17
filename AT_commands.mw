@@ -355,9 +355,9 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+EMGW=%d,%d,%d====
 
-====AT+EMPC:====
-
 ====AT+EMPC="%s"====
+
+Unlocking or Locking Subsidy Code, [4] page 274
 
 ====AT+EMPI:====
 
