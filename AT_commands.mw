@@ -146,8 +146,6 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+CMSM:%d====
 
-====AT+CMT:====
-
 ====AT+CPUR=1;+CPIN="%s","%s"====
 
 ====AT+CPWR=%d====
