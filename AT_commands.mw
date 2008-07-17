@@ -13,6 +13,16 @@ SMS-Related AT commands:
 
 '''Note: Official commands should not be listed here. They are already defined in the standards.'''
 
+Some of the motorola commands can also be found in command references for other chips:
+
+[1]  http://developer.motorola.com/docstools/developerguides/G24-Lite_AT_Commands_Reference_Manual.pdf
+
+[2]  http://www.phys.unsw.edu.au/~mcba/iridium/Motorola_AT_Command_Set.pdf
+
+[3]  http://www.motorola.com/governmentandenterprise/contentdir/he_IL/Files/C18_AT_Commands.pdf
+
+[4]  http://www.hw.cz/pdf/motorola/g24_at_commands_reference_manual.pdf
+
 == Power / Setup ==
 AT+USBSTAT (mux4)
 
