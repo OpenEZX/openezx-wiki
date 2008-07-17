@@ -122,10 +122,9 @@ First value could be callid (as per 07.07 +CCLC), second value is peer number.
 
 Unsolicited response, sent after a call connection has been cleared (disconnect). It probably includes the GSM reason. It might bear resemblence to the answers to +CEER (extended error report) (which is not implemented on EZX), however it is unfortunately not GSM 04.08 Annex H.
 
-====AT+CFSN====
-
 ====AT+CFSN:%%%dS====
 
+Read Factory Serial Number [4], page 80
 
 
 ====AT+CLCH====
