@@ -498,10 +498,6 @@ This is slightly related to the standard +CREG event. Value seems in conformance
 
 ====AT+EWEL:====
 
-====AT+FCLASS=0====
-
-====AT+FCLASS=%d====
-
 ====AT+FRH=%d====
 
 ====AT+FRM=%d====
