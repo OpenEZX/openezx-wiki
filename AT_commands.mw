@@ -62,8 +62,6 @@ See also the origin of this: https://lists.gnumonks.org/pipermail/openezx-devel/
 
 ====AT+CAPF=12,1,%d====
 
-====AT+CBM:====
-
 ====AT+CBSM:====
 
 ====AT+CBSM?====
@@ -156,25 +154,11 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+CRRM====
 
-====AT+CSCB:====
-
-====AT+CSCB?====
-
-====AT+CSCB=%d====
-
 ====AT+CSCL?====
 
 ====AT+CSCL:%8d====
 
 ====AT+CSCL=%d,%d====
-
-====AT+CSMS?====
-
-====AT+CSMS:%8D,%8D,%8D====
-
-====AT+CSMS:%8D,%8D,%8D,%8D====
-
-====AT+CSMS=%d====
 
 ====AT+CSPL:====
 
