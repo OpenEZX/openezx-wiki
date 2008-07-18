@@ -482,6 +482,7 @@ This is slightly related to the standard +CREG event. Value seems in conformance
 ====AT+ESMT:====
 
 ====AT+ESPN?====
+Service provider name in hex-coded unicode string
 
 ====AT+ESPN:%%8D,%%%dU====
 
