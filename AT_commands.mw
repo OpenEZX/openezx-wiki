@@ -212,7 +212,6 @@ Unsolicited response, sent after a call connection has been cleared (disconnect)
 
 Read Factory Serial Number [4], page 80
 
-
 ====AT+CLCH====
 
 ====AT+CLCH:%32d====
