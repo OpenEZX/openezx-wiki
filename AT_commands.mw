@@ -1,3 +1,26 @@
+= AT command primer =
+
+The AT (Attention) command protocol is used to communicate over a serial line discipline. It combines request/response commands with unsolicited responses that can occur at any time.
+
+The request/response commands often use a request prefix (e.g. '+CPIN') that is included in the answer. That way it is simple to match incoming responses to requests. Note though that this is not mandatory (as is the case for the major part of the GSM standards...)
+
+We distinguish four variants of an AT command. Implementation of all variants is mandatory, usually it depends on the AT command in question.
+
+* Execute command
+* Test command
+* Set command
+* Get command
+
+== Execute Command ==
+
+The execute command is commonly used to trigger simple actions that require no parameters. Example:
+
+  AT+CSQ
+  
+  +CSQ: 22,99
+
+= AT on Motorola EZX =
+
 The EZX phones support a wider range of AT commands. Some of them are official GSM commands other are extension.
 
 We should compare the commands to one known of the 3GPP standards:
