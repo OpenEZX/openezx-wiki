@@ -474,7 +474,7 @@ Unlocking or Locking Subsidy Code, [4] page 274
 
 Operator Registration: ''+EOPER: 5,"262-03"''
 
-This is slightly related to the standard +CREG event. Value seems in conformance to +CREG, operator name unfortunately only available as area code. EZX seems to match the SIM list of operators to gather the operator code. I have yet to find out how to do that, since neither +COPN nor +COPL are implemented.
+This is slightly related to the standard +CREG event. Value is not in conformance to +CREG, operator name unfortunately only available as area code. EZX seems to match the SIM list of operators to gather the operator code. I have yet to find out how to do that, since neither +COPN nor +COPL are implemented.
 
 ====AT+EPANIC:====
 
