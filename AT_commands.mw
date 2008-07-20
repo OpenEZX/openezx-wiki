@@ -21,7 +21,7 @@ The execute command is commonly used to trigger simple actions that require no p
   AT+CSQ
   
   +CSQ: 22,99
-
+  
   OK
 
 == Test command ==
@@ -31,9 +31,9 @@ The execute command is commonly used to trigger simple actions that require no p
 The test command is commonly used to query the valid parameters of a command. Example:
 
   AT+CMER=?
-
+  
   +CMER: (0-2), (0), (0), (0-2), (0,1)
-
+  
   OK
 
 == Get command ==
@@ -43,9 +43,9 @@ The test command is commonly used to query the valid parameters of a command. Ex
 The get command is commonly used to retrieve the current settings. Example:
 
   AT+CMER?
-
+  
   +CMER: 0,0,0,0,0
-
+  
   OK
 
 == Set command ==
@@ -55,7 +55,7 @@ The get command is commonly used to retrieve the current settings. Example:
 The set command is commonly used to set the current settings. Example:
 
   AT+CMER=2,0,0,2,1
-
+  
   OK
 
 == Unsolicited response ==
