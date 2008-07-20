@@ -2,16 +2,19 @@
 
 The AT (Attention) command protocol is used to communicate over a serial line discipline. It combines request/response commands with unsolicited responses that can occur at any time.
 
-The request/response commands often use a request prefix (e.g. '+CPIN') that is included in the answer. That way it is simple to match incoming responses to requests. Note though that this is not mandatory (as is the case for the major part of the GSM standards...)
+The request/response commands often use a request prefix (e.g. 'AT+CPIN?') that is included in the answer (e.g. '+CPIN="READY"'). That way it is simple to match incoming responses to requests. Note though that this is not mandatory (as is the case for the major part of the GSM standards anyways...)
 
-We distinguish four variants of an AT command. Implementation of all variants is mandatory, usually it depends on the AT command in question.
+We have to distinguish four+one variants of an AT command. Implementation of all variants is mandatory, usually it depends on the AT command in question.
 
 * Execute command
 * Test command
 * Set command
 * Get command
+* Unsolicited response
 
 == Execute Command ==
+
+* '''''AT'''<command>''
 
 The execute command is commonly used to trigger simple actions that require no parameters. Example:
 
@@ -23,6 +26,8 @@ The execute command is commonly used to trigger simple actions that require no p
 
 == Test command ==
 
+* '''''AT'''<command>'''=?'''''
+
 The test command is commonly used to query the valid parameters of a command. Example:
 
   AT+CMER=?
@@ -32,6 +37,8 @@ The test command is commonly used to query the valid parameters of a command. Ex
   OK
 
 == Get command ==
+
+* '''''AT'''<command>'''?'''''
 
 The get command is commonly used to retrieve the current settings. Example:
 
@@ -43,6 +50,8 @@ The get command is commonly used to retrieve the current settings. Example:
 
 == Set command ==
 
+* '''''AT'''<command>'''='''<parameters>''
+
 The set command is commonly used to set the current settings. Example:
 
   AT+CMER=2,0,0,2,1
@@ -51,13 +60,15 @@ The set command is commonly used to set the current settings. Example:
 
 == Unsolicited response ==
 
+* ''<command>''':'''<parameters>''
+
 The unsolicited response is commonly used to indicate a settings change. Example:
 
   +CREG: 0
 
 = AT on Motorola EZX =
 
-The EZX phones support a wider range of AT commands. Some of them are official GSM commands other are extension.
+The EZX phones support a wide range of AT commands. Some of them are official GSM commands, other are extension.
 
 We should compare the commands to one known of the 3GPP standards:
 * http://www.3gpp.org/ftp/Specs/archive/07_series/07.07/0707-780.zip
