@@ -129,8 +129,6 @@ AT+USBSTAT (mux4)
 **Turns GPRS ON
 *AT+CAPF= 12,1,0 (mux6)
 **Turns GPRS OFF
-*AT+ESPN (mux0)
-** Unknown - Appears as a query command (? at the end) when turning gprs on.
 
 == Fax commands ==
 
