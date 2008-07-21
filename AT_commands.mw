@@ -6,11 +6,11 @@ The request/response commands often use a request prefix (e.g. 'AT+CPIN?') that 
 
 We have to distinguish four+one variants of an AT command. Implementation of all variants is optional -- usually it depends on the AT command in question.
 
-* Execute command
-* Test command
-* Set command
-* Get command
-* Unsolicited response
+# Execute command
+# Test command
+# Set command
+# Get command
+# Unsolicited response
 
 == Execute Command ==
 
