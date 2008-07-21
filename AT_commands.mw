@@ -1,3 +1,5 @@
+__NOTOC__
+
 = AT command primer =
 
 The AT (Attention) command protocol is used to communicate over a serial line discipline. It combines request/response commands with unsolicited responses that can occur at any time.
