@@ -4,7 +4,7 @@ The AT (Attention) command protocol is used to communicate over a serial line di
 
 The request/response commands often use a request prefix (e.g. 'AT+CPIN?') that is included in the answer (e.g. '+CPIN="READY"'). That way it is simple to match incoming responses to requests. Note though that this is not mandatory (as is the case for the major part of the GSM standards anyways...)
 
-We have to distinguish four+one variants of an AT command. Implementation of all variants is mandatory, usually it depends on the AT command in question.
+We have to distinguish four+one variants of an AT command. Implementation of all variants is optional -- usually it depends on the AT command in question.
 
 * Execute command
 * Test command
