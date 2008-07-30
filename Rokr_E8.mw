@@ -8,16 +8,16 @@
 | ROKR E8
 |-
 | Codename:
-|
+| Elba
 |-
 | Generation:
-| 
+| 3Gen
 |-
 | [[Project_devices |Project device]]:
 |
 |-
 | [[Project_Status |Device support]]:
-| -
+| - Motorola kernel boots. (using [[MotoMAGX second-stage loader |second-stage loader]]).
 |-
 | Motorola source code:
 | https://opensource.motorola.com/sf/projects/rokre8
