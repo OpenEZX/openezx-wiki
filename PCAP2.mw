@@ -200,9 +200,9 @@ The PCAP2 has a 10-Bit A/D-converter. Two groups, each with 7 analog inputs can 
 |-
 | TS_REFENB || ADC1[21] || ???
 |-
-| BATT_I_POLARITY || ADC1[22] || ???
+| BATT_I_POLARITY || ADC1[22] || Battery polarity invert bit
 |-
-| BATT_I_ADC || ADC1[23] || ???
+| BATT_I_ADC || ADC1[23] || Simultaneous read of voltage and current
 |}
 
 === Touchscreen modes ===
