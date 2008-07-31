@@ -77,11 +77,11 @@ and want openezx on it, contact us on openezx-devel.
 |- style="background:#efefef;"
 | [[USB]] Device
 | style="background:lime" | 100%
-| style="background:red" | 30%
-| style="background:red" | 30%
+| style="background:yellow" | 50%
+| style="background:yellow" | 50%
 | style="background:lime" | 100%
-| style="background:red" | 0%
-| style="background:red" | 0%
+| style="background:yellow" | 50%
+| style="background:yellow" | 50%
 |- style="background:#efefef;"
 | [[Touchscreen]]
 | style="background:lime" | 100%
