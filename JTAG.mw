@@ -2,7 +2,7 @@
 
 JTAG is a standard interface for in-system testing and debugging.  It works by placing a debug macrocell in front of (almost) every Pin/Signal that enters or leaves a particular device.  Those debug cells are interconnected serially, so that in the end they form one long (e.g. 600bit wide) shift register.
 
-JTAG, the  Joint Test Action Group, invented a test interface for test boards by driving and sampling pins of chips on the board. The IEEE formed a committee to modify the concept and make it an industry standard. It was approved as [http://doi.ieeecomputersociety.org/10.1109/TEST.1997.639596 IEEE  standard 1149.1 ] JTAG now refers to the standard even though the standard is different.
+JTAG, the  Joint Test Action Group, invented a test interface for test boards by driving and sampling pins of chips on the board. The IEEE formed a committee to modify the concept and make it an industry standard. It was approved as [http://doi.ieeecomputersociety.org/10.1109/TEST.1997.639596 IEEE  standard 1149.1 ] JTAG now refers to the standard even though the standard is different. Other [http://www.jtagtest.com/jtag-standards JTAG - related standards are available here].
 
 The 1149 standard requires that the chip implement all of the Boundary Scan instructions where the board test program can sample and drive all of the pins of the chip. The sampled values, drive values and control values (for bi-direction pins) are shifted in and out with a big shift register called the boundary scan chain. Two or more scanned chips can talk to each other via the pins to check for opens and shorts.
 
@@ -33,3 +33,6 @@ Harald is working on getting a working JTAG configuration with his A780, stay tu
 
 === A working JTAG configuration with E680i ===
 * [http://www.motorolafans.com/forums/showthread.php?t=2991 Working JTAG for E680i]
+
+=== JTAG Pinouts  ===
+* [http://www.jtagtest.com/pinouts/ JTAG pinouts / connectors for various interfaces]
