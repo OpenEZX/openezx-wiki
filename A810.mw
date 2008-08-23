@@ -1,1 +1,41 @@
-According to a photo on the FCC site, the A810 features a TI OMAP processor, possibly the OMAP850 model (which means it differs a lot from the Intel/Marvell PXA powered 2nd generation devices). Unlike its clamshell siblings, the a810 offers a standard candy-bar design, and it is equipped with a less-powerful 2-megapixel camera, suggesting that this is the low-end MotoMing.
+{| width="100%"
+|-
+|style="vertical-align:top" |
+
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| A810
+|-
+| Codename:
+| Hailing(?)
+|-
+| Generation:
+| - (ODM product)
+|-
+| [[Project_devices |Project device]]:
+| -
+|-
+| [[Project_Status |Device support]]:
+| -
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/a810
+|-
+| PCB pictures:
+| -
+|}
+|}
+Motorola A810 is a ODM product developed by [http://e28.com E28 Limited]. Unlike its clamshell siblings, the A810 offers a standard candy-bar design, and it is equipped with a less-powerful 2-megapixel camera, suggesting that this is the low-end alternative to MotoMing.
+
+== Kernel ==
+Montavista CEE 3.1 Linux 2.4.20
+
+== CPU ==
+ARM926T core as part of TI OMAP 730 chip.
+
+
+[[Category:Hardware]]
