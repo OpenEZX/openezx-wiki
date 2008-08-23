@@ -31,11 +31,12 @@
 |}
 Motorola A810 is a ODM product developed by [http://e28.com E28 Limited]. Unlike its clamshell siblings, the A810 offers a standard candy-bar design, and it is equipped with a less-powerful 2-megapixel camera, suggesting that this is the low-end alternative to MotoMing.
 
+Phone introduces E28's proprietary software stack to Motorola users, some firmware's sections (at least kernel) are digitally signed by Motorola.
+
 == Kernel ==
 Montavista CEE 3.1 Linux 2.4.20
 
 == CPU ==
-ARM926T core as part of TI OMAP 730 chip.
-
+ARM926JE-S core as part of TI OMAP 730 chip.
 
 [[Category:Hardware]]
