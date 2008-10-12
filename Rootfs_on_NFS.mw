@@ -2,20 +2,25 @@
 
 ====1. Configure the PC's USB Network.====
 
-Look if you can insmod the modules cdc_subset and usbnet: both are needed
+So, at first you need to load/install the modules "usbnet", perhaps also "cdc_subset".
 
 Assign the IP address to suit your kernel's config/CMDLINE
 
-''Example /etc/network/interfaces (works on ubuntu)''
+''Example /etc/network/interfaces (for debian based distros)''
  #Addition for the EZX network interface
  auto usb0
- mapping hotplug
-         map usb0
  iface usb0 inet static
          address 192.168.0.200
          netmask 255.255.255.0
          broadcast 192.168.0.255
 
+There is a bug on ubuntu, causing this solution to only work once at each boot.
+''See [https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/130437]''
+
+I found a workaround on this page:
+''[http://wiki.openmoko.org/wiki/USB_Networking#Ubuntu_Issues]''
+
+You simply need to remove ''DRIVERS=="*?"'' in the file ''/etc/udev/rules.d/85-ifupdown.rules'' (the big ''ACTION=="add"'' line).
 ====2. Install NFS. ====
 
 On ubuntu :
