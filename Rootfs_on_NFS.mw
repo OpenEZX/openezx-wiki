@@ -14,6 +14,14 @@ Assign the IP address to suit your kernel's config/CMDLINE
          netmask 255.255.255.0
          broadcast 192.168.0.255
 
+It's often recommended to use these lines too:
+ 
+ mapping hotplug
+ script grep
+ map usb0
+
+''Note that I still need to do an "ifup usb0", when I plug my phone on the ubuntu machine...''
+
 There is a bug on ubuntu, causing this solution to only work once at each boot.
 ''See [https://bugs.launchpad.net/ubuntu/+source/ifupdown/+bug/130437]''
 
