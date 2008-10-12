@@ -20,7 +20,8 @@ There is a bug on ubuntu, causing this solution to only work once at each boot.
 I found a workaround on this page:
 ''[http://wiki.openmoko.org/wiki/USB_Networking#Ubuntu_Issues]''
 
-You simply need to remove ''DRIVERS=="*?"'' in the file ''/etc/udev/rules.d/85-ifupdown.rules'' (the big ''ACTION=="add"'' line).
+(You simply need to move ''DRIVERS=="*?"'' in the file ''/etc/udev/rules.d/85-ifupdown.rules'' from GOTO to the big ''ACTION=="add"'' line.)
+
 ====2. Install NFS. ====
 
 On ubuntu :
