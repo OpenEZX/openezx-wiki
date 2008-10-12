@@ -1,3 +1,32 @@
-Example kernel commandline for nfs root. Please adjust for your personal needs.
+''You can tell the kernel to mount an NFS root, over the USBNet interface on a linux host box.''
 
-CMDLINE_ROOT = "root=/dev/nfs nfsroot=192.168.1.10:/PATH/TO/YOUR/EXPORT rootdelay=5 3"
+====1. Configure the PC's USB Network.====
+
+Look if you can insmod the modules cdc_subset and usbnet: both are needed
+
+Assign the IP address to suit your kernel's config/CMDLINE
+
+''Example /etc/network/interfaces''
+ #Addition for the EZX network interface
+ mapping hotplug
+         map usb0
+ iface usb0 inet static
+         address 192.168.0.200
+         netmask 255.255.255.0
+         broadcast 192.168.0.255
+====2. Install NFS. ====
+
+On ubuntu :
+ sudo apt-get install nfsboot (depends on bind9, atftpd, openbsd-inetd)
+ sudo apt-get install nfs-common nfs-kernel-server
+
+Edit /etc/export to suit the path the kernel will be waiting for.
+
+''Example /etc/export''
+''(You can add some mounting options here too):''
+ /PATH/TO/YOUR/NFSROOT/EXPORT   192.168.0.202(rw,no_root_squash,async)
+
+====3. Example kernel command line for nfs root.====
+
+'' Please adjust for your personal needs.''
+ CMDLINE_ROOT = "root=/dev/nfs nfsroot=192.168.0.200:/PATH/TO/YOUR/NFSROOT/EXPORT/ rootdelay=5"
