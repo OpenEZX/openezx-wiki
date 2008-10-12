@@ -6,7 +6,7 @@ Look if you can insmod the modules cdc_subset and usbnet: both are needed
 
 Assign the IP address to suit your kernel's config/CMDLINE
 
-''Example /etc/network/interfaces''
+''Example /etc/network/interfaces (works on ubuntu)''
  #Addition for the EZX network interface
  auto usb0
  mapping hotplug
