@@ -94,7 +94,7 @@ On the computer, from the command line, as root run
 
 After a short time the screen should go funny, then you should see Linux booting!
 
-=== That's all for now, network setup to come ===
+ Networks configuration (except bridging): see [[Rootfs_on_NFS]]
 
 == Creating the Partitions ==
 
