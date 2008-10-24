@@ -2,8 +2,6 @@
 
 Motorola A910 has a Marvell Libertas 8385 SDIO WLAN adapter.
 
-In linux-2.6.24 there is a driver for this cards and [http://svn.openezx.org/branches/kernel-2.6.24.x-patches/ openezx patchset] offers partial support for it on A910 from revision 2109.
-
 ==Status==
 Only some rough tests has been made: we can associate to an AP using WPA-PSK with
 wpa_supplicant, and ssh works fine. Power consumption,
