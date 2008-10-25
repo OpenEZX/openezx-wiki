@@ -40,3 +40,7 @@ Montavista CEE 3.1 Linux 2.4.20
 ARM926JE-S core as part of TI OMAP 730 chip.
 
 [[Category:Hardware]]
+
+== Flash memory ==
+
+NAND flash module with OTP protection.
