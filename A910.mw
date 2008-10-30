@@ -232,7 +232,7 @@ Resource : GAS_EMEA_GSZA910IIPTVNF01_R58_G_10.01.378P_R002
 ;BP Flex version:GSZA910INEUFFR022
 ;BP S/W version:R58_G_10.01.378P
 ;DSP S/W version:---
-
+;Boot Module: BOOT_G_00.02.49P_MART_REF
 This firmware use a more standart network configuration, have a SIP voip support, and the wifi is not restricted to UMA compatibles APs.
 
 == Battery ==
