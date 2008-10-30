@@ -202,13 +202,14 @@ wsp could mean Wireless Session Protocol
 
 ==Version numbers==
 ===By Orange France===
-;AP Flex: Secure setup: GAS_EMEA_GSZA910ORFR0_E013
-Setup: GAS_EMEA_GSZA910ORFR0_S068 Resource: GAS_EMEA_GSZA910ORFR0_R57_TG_10.08.01R_A_R001
+;AP Flex:
+Secure setup: GAS_EMEA_GSZA910ORFR0_E013
+Setup: GAS_EMEA_GSZA910ORFR0_S068
+Resource: GAS_EMEA_GSZA910ORFR0_R57_TG_10.08.01R_A_R001
 ;AP S/W version: R57_G_10-08.01R_A
 ;BP Flex version: GSZA910BPORAFR046
 ;BP S/W version: R57_G_10.08.01R_A
 ;DSP S/W Version: 63343400
-
 
 ===By BT UK===
 ;AP Flex:
