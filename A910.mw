@@ -211,14 +211,28 @@ Setup: GAS_EMEA_GSZA910ORFR0_S068 Resource: GAS_EMEA_GSZA910ORFR0_R57_TG_10.08.0
 
 
 ===By BT UK===
-;AP Flex: Secure setup: GAS_EMEA_GSZA910BTUK0_E006
-Setup: GAS_EMEA_GSZA910BTUK0_S071 Resource: GAS_EMEA_GSZA910BTUK0_R57_G_10.07.7R_R001
+;AP Flex: 
+Secure setup: GAS_EMEA_GSZA910BTUK0_E006
+Setup: GAS_EMEA_GSZA910BTUK0_S071
+Resource: GAS_EMEA_GSZA910BTUK0_R57_G_10.07.7R_R001
 ;AP S/W version: R57_G_10.07.07R
 ;BP Flex version: GSZA910BTUK03C
 ;BP S/W version: R57_G_10.07.07R
-;DSP S/W Version: 63343400
+;DSP S/W version: 63343400
 
 At least in this firmware, the WiFi appears to be locked to BT Home WiFi internet routers.   The device will connect to a WiFi router, and from the router side the connection will be established, but then the phone will timeout with a connection failed.   Flashing to an unbranded firmware allows any WiFi connection.  Oddly, Helix does not seem to allow a RTSP connection over WiFi.
+
+===By Neuf (french virtual operator)===
+;AP Flex:
+Secure setup: GAS_EMEA_GSZA910IIPTVNF01_E002
+Setup: GAS_EMEA_GSZA910IIPTVNF01_S066
+Resource : GAS_EMEA_GSZA910IIPTVNF01_R58_G_10.01.378P_R002
+;AP S/W version:R58_G_10.01.378P
+;BP Flex version:GSZA910INEUFFR022
+;BP S/W version:R58_G_10.01.378P
+;DSP S/W version:---
+
+This firmware use a more standart network configuration, have a SIP voip support, and the wifi is not restricted to UMA compatibles APs.
 
 == Battery ==
 
