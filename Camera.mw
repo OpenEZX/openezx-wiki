@@ -1,7 +1,7 @@
 EZX phones can have different camera sensor modules:
 * OmniVision OV9640 1.3 MegaPixel (found on A780)
 * Micron [http://www.datasheetarchive.com/search.php?q=MT9M111 MT9M111] 1.3 MegaPixel (found on A780 and A910) (I2C address 0x5d)
-* Micron MI2021 2 MegaPixel (used on A1200). According to [http://www.asia-optical.com.tw/pdf/aoci/pdf_c/154.pdf this] document, the sensor is also called MT9D111.
+* Micron MI2010 2 MegaPixel (used on A1200). According to [http://www.asia-optical.com.tw/pdf/aoci/pdf_c/154.pdf this] document, the sensor is also called MT9D111.
 * Agilent ADCM2700 VGA (found on E680) (I2C address 0x53). This is the one of the three cameras which is said to not have a public datasheet available (thanks Agilent). I'm suspecting that it might be this camera when powered down which is blocking my i2c bus (FM radio at 0x60, FM amplifier at 0x7c, lots of i2c timeouts without any interrupts), but without datasheet it's rather harder to decipher.
 
 Sensor module is controlled via I2C bus and attached to AP via PXA Camera Interface for image data tranfers.
