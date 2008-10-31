@@ -135,3 +135,650 @@ Screen read:
  OK to Progra
  Transfer Mode:
  USB
+
+=== Detailed system informations ===
+
+=== /proc/cpuinfo ===
+
+ Processor	: Some Random V6 Processor rev 1 (v6l)
+ BogoMIPS	: 265.40
+ Features	: swp half thumb fastmult vfp edsp java 
+ CPU implementer	: 0x41
+ CPU architecture: 6TEJ
+ CPU variant	: 0x1
+ CPU part	: 0xb36
+ CPU revision	: 1
+ Cache type	: write-back
+ Cache clean	: cp15 c7 ops
+ Cache lockdown	: format C
+ Cache format	: Harvard
+ I size		: 16384
+ I assoc		: 4
+ I line length	: 32
+ I sets		: 128
+ D size		: 16384
+ D assoc		: 4
+ D line length	: 32
+ D sets		: 128
+ 
+ Hardware	: Motorola Product - Ascension
+ Revision	: 0021
+ Serial		: 0000000000000000
+
+=== /proc/meminfo ===
+
+ MemTotal:        53632 kB
+ MemFree:          1972 kB
+ Buffers:          1012 kB
+ Cached:          23144 kB
+ SwapCached:          0 kB
+ Active:          36644 kB
+ Inactive:         4624 kB
+ HighTotal:           0 kB
+ HighFree:            0 kB
+ LowTotal:        53632 kB
+ LowFree:          1972 kB
+ SwapTotal:           0 kB
+ SwapFree:            0 kB
+ Dirty:              44 kB
+ Writeback:           0 kB
+ Mapped:          34236 kB
+ Slab:             5388 kB
+ CommitLimit:     26816 kB
+ Committed_AS:    99872 kB
+ PageTables:       1708 kB
+ VmallocTotal:   196608 kB
+ VmallocUsed:      2160 kB
+ VmallocChunk:  4112384 kB
+
+=== /proc/bootinfo ===
+
+ POWERUPREASON : 0x00000080
+ USB_FW_ADDRESS : 0x93a00000
+ USB_FW_SIZE : 0x00004000
+ MBM_VERSION : 0x000003cd
+ MBM_LOADER_VERSION : 0x000003cd
+ BOARDID : 0xffffffff
+ FLAT_DEV_TREE_ADDRESS : 0xffffffff
+ RAM_DISK_START_ADDRESS : 0xffffffff
+ RAM_DISK_SIZE : 0x00000000
+ FLASHING_COMPLETED : 0x00000001
+ LOGO_VERSION : _ASIA_GSQACENT678TR_G010
+ MEMORY_TYPE : 0x0001
+ BATTERY_STATUS_AT_BOOT : 0x0001
+ BOOT_FREQUENCY : 0x00000002
+
+=== /proc/cmdline ===
+
+ipu_mem=4444K@0x93700000 brdrev=P3A noinitrd console=/dev/null rw mem=60M@0x90000000 init=/linuxrc ip=off root=/dev/mtdblock/root mtdparts=nand0:192k@256k(pds),128k(setup),256k(logo),128k(secure),1536k@1088k(kern)ro,3968k(bpsw),29680k(root)ro,7680k(lang),7m(user),10752k(resrc),66512k(mass_storage),16k(kpanic),2672k(rsv)
+
+=== /proc/devices ===
+
+ Character devices:
+  1 mem
+  4 /dev/vc/0
+  4 tty
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+  7 vcs
+ 10 misc
+ 13 input
+ 29 fb
+ 81 video4linux
+ 90 mtd
+ 108 ppp
+ 128 ptm
+ 136 pts
+ 207 ttymxc
+ 220 power_ic
+ 221 accy
+ 237 suapipriv
+ 238 suapi
+ 239 netmux
+ 240 direct
+ 241 ediodev
+ 242 gpiodev
+ 243 sim
+ 244 efuse
+ 245 apal
+ 246 sahara
+ 247 dam
+ 248 ssi2
+ 249 ssi1
+ 250 mxc_ipu_pp
+ 251 mxc_ipu_pf
+ 252 mxc_ipc
+ 253 mxc_mu
+ 254 devfs
+
+Block devices:
+  1 ramdisk
+  7 loop
+ 31 mtdblock
+ 243 mmc
+
+=== /proc/filesystems ===
+
+ nodev	sysfs
+ nodev	rootfs
+ nodev	bdev
+ nodev	proc
+ nodev	sockfs
+ nodev	pipefs
+ nodev	futexfs
+ nodev	tmpfs
+ nodev	eventpollfs
+ nodev	devpts
+ 	cramfs
+ 	squashfs
+ nodev	ramfs
+ nodev	relayfs
+ 	vfat
+ nodev	devfs
+ nodev	jffs2
+ 	yaffs
+ 	yaffs2
+ nodev	mqueue
+
+=== /proc/interrupts ===
+
+           CPU0
+  6:          0   mxc_mu_mcug
+  8:          6   mxcmci
+  9:      98558   mxcmci
+ 10:         47   MXC I2C
+ 15:         61   SAHARA
+ 20:          2   sim
+ 21:      18213   sim
+ 24:        705   mxckpd
+ 25:          1   rtc
+ 28:      59986   rtc_sw
+ 29:    1581165   MXC Timer Tick
+ 33:     149261   mxc_nd
+ 34:      46210   mxcsdma
+ 41:          0   mxc_ipu
+ 42:        535   mxc_ipu
+ 47:       3921   mxc_mu_rx
+ 48:       5215   mxc_mu_tx
+ 49:          0   scc
+ 50:          0   scc
+ 55:          0   WDOG2
+ 58:         80   Atlas irq: SCM-A11
+ 59:          0   mmc card detect
+ 60:         22   slider
+ 61:          0   bp_panic
+ Err:          0
+
+=== /proc/iomem ===
+
+ 43f90000-43f90fff : serial_mxc
+ 43f94000-43f94fff : serial_mxc
+ 50004000-50007fff : mxcmci.0
+   50004000-50007fff : mxcmci
+ 50008000-5000bfff : mxcmci.1
+   50008000-5000bfff : mxcmci
+ 5000c000-5000cfff : serial_mxc
+ 53fc0000-53fc1000 : mxc_ipu
+ 90000000-93bfffff : System RAM
+   90023000-9024a187 : Kernel text
+   9024c000-902dba8b : Kernel data
+
+=== /proc/misc ===
+
+ 55 supanic
+ 56 mpm_stats
+ 57 mpm
+ 58 profiler
+ 59 rtc_stopwatch
+ 244 cami2c
+ 135 rtc
+ 60 mxckpdB;
+ 61 mxckpdI
+ 62 mxckpdJ
+ 63 mxckpd
+
+=== /proc/modules ===
+
+ suapi 117725 25 - Live 0xbf024000
+ netmux_linkdriver 7992 0 - Live 0xbf021000
+ netmux 56708 21 netmux_linkdriver, Live 0xbf012000
+ mpmdrv 26032 1 - Live 0xbf00a000
+ profilerdrv 6124 1 - Live 0xbf007000
+ gpiodev 6848 0 - Live 0xbf004000
+ coredump 9684 0 - Live 0xbf000000
+
+=== /proc/mtd ===
+
+ dev:    size   erasesize  name
+ mtd0: 00030000 00004000 "pds"
+ mtd1: 00020000 00004000 "setup"
+ mtd2: 00040000 00004000 "logo"
+ mtd3: 00020000 00004000 "secure"
+ mtd4: 00180000 00004000 "kern"
+ mtd5: 003e0000 00004000 "bpsw"
+ mtd6: 01cfc000 00004000 "root"
+ mtd7: 00780000 00004000 "lang"
+ mtd8: 00700000 00004000 "user"
+ mtd9: 00a80000 00004000 "resrc"
+ mtd10: 040f4000 00004000 "mass_storage"
+ mtd11: 00004000 00004000 "kpanic"
+ mtd12: 0029c000 00004000 "rsv"
+
+=== /proc/partitions ===
+
+ major minor  #blocks  name
+ 
+   7     0      64423 loop0
+  31     0        192 mtdblock0
+  31     1        128 mtdblock1
+  31     2        256 mtdblock2
+  31     3        128 mtdblock3
+  31     4       1536 mtdblock4
+  31     5       3968 mtdblock5
+  31     6      29680 mtdblock6
+  31     7       7680 mtdblock7
+  31     8       7168 mtdblock8
+  31     9      10752 mtdblock9
+  31    10      66512 mtdblock10
+  31    11         16 mtdblock11
+  31    12       2672 mtdblock12
+ 243     0     975360 mmcblk0
+ 243     1     975295 mmcblk0p1
+
+=== /proc/version ===
+
+Linux version 2.6.10_dev(gcc version 3.4.3 (MontaVista 3.4.3-25.0.96.custom 2006-06-12))
+
+=== /proc/yaffs (part) ===
+
+YAFFS built:
+
+$Id: yaffs_fs.c,v 1.33 2005/10/27 22:24:04 marty Exp $
+
+$Id: yaffs_guts.c,v 1.22 2005/10/13 02:17:00 charles Exp $
+
+=== ifconfig -a ===
+
+ lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:56 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:56 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:3641 (3.5 KiB)  TX bytes:3641 (3.5 KiB)
+
+ muxtest_n Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+ psd_data5 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+ psd_data6 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+ psd_data7 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+ psd_data8 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+ psd_data9 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+ psd_data1 Link encap:UNSPEC  HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+=== mount ===
+
+ /dev/root on / type squashfs (ro)
+ none on /dev type devfs (rw)
+ proc on /proc type proc (rw,nodiratime)
+ sysfs on /sys type sysfs (rw)
+ none on /dev/shm type tmpfs (rw,nosuid,nodev,noexec)
+ /dev/mtdblock/user on /ezxlocal type jffs2 (rw,sync,noatime,nosuid,nodev,noexec)
+ /dev/mtdblock/setup on /usr/setup type squashfs (ro,noexec)
+ /dev/mtdblock/secure on /usr/securesetup type squashfs (ro,noexec)
+ /dev/mtdblock/pds on /etc/pds type yaffs (rw,sync,noatime,nosuid,nodev,noexec,shred)
+ /dev/mtdblock/resrc on /usr/data_resource type squashfs (ro,noexec)
+ /dev/mtdblock/lang on /usr/language type squashfs (ro)
+ /dev/mtdblock/mass_storage on /mnt/msc_int0 type yaffs (rw,sync,noatime,nosuid,nodev,noexec)
+ /dev/loop/0 on /ezxlocal/download/mystuff type vfat  (rw,sync,nodiratime,nosuid,nodev,uid=2000,gid=233,fmask=0022,dmask=0022,shortname=mixed,utf8)
+ /dev/mmca1 on /mmc/mmca1 type vfat (rw,noatime,nodiratime,uid=2000,gid=233,fmask=0002,dmask=0002,shortname=mixed,utf8)
+
+=== df ===
+
+ Filesystem           1k-blocks      Used Available Use% Mounted on
+ /dev/root                28640     28640         0 100% /
+ none                      4096       168      3928   4% /dev/shm
+ /dev/mtdblock/user        7168       708      6460  10% /ezxlocal
+ /dev/mtdblock/setup         64        64         0 100% /usr/setup
+ /dev/mtdblock/secure        64        64         0 100% /usr/securesetup
+ /dev/mtdblock/pds          192       160        32  83% /etc/pds
+ /dev/mtdblock/resrc       8576      8576         0 100% /usr/data_resource
+ /dev/mtdblock/lang        6288      6288         0 100% /usr/language
+ /dev/mtdblock/mass_storage    66512      1840     64672   3% /mnt/msc_int0
+ /dev/loop/0              63416       711     62705   1% /ezxlocal/download/mystuff
+ /dev/mmca1              975040    430016    545024  44% /mmc/mmca1
+
+=== Environment Variables ===
+
+<pre>
+AM_SYS_STATE_SHM_PATH='/usr/SYSqtapp/am'
+BROWSER_FS_ROOT='/ezxlocal/download/browser'
+EZX_APP_WRITE_PATH='/ezxlocal/download/appwrite'
+EZX_DOWNLOAD_RES_ICON_PATH='/usr/data_resource/skin/default2'
+EZX_EXTRA_SYS_DATA_PATH='/ezxlocal/.system/'
+EZX_INSTALLED_QT_PATH='/ezxlocal'
+EZX_LANG='/usr/language/'
+EZX_LOCAL_APP_WRITE_PATH='/ezxlocal/download/appwrite'
+EZX_LOCAL_DOWNLOAD_PATH='/ezxlocal/download/'
+EZX_LOCAL_PATH='/ezxlocal/'
+EZX_NATIVE_APP_PATH='/usr/SYSqtapp'
+EZX_PLUGINS_DIR='/hatcreek/plugins'
+EZX_PRELOAD_APP_PATH='/usr/data_resource/preloadapps'
+EZX_RES_FONT_PATH='/usr/language/fonts'
+EZX_RES_ICON_PATH='/usr/data_resource/icon'
+EZX_RES_SOUNDS_PATH='/usr/data_resource/sound'
+EZX_RES_SOUNDS_RINGTONES_PATH='/usr/data_resource/sound/ringtones'
+EZX_RES_SOUNDS_SLIDERTONE_PATH='/usr/data_resource/sound/slider_tones'
+EZX_RES_SOUNDS_UISOUNDS_PATH='/usr/data_resource/sound/ui_sounds'
+EZX_RES_STRING_PATH='/usr/language/string'
+FLASH_MOUNT_PATH='/ezxlocal'
+HOME='/'
+IFS=' 	
+'
+J2ME_POLICY_DIR='/usr/securesetup'
+J2ME_SECURITY_DIR='/ezxlocal/download/java'
+J2ME_SYSDATA_DIR='/ezxlocal/download/mystuff/.system/java'
+JAVA_HOME_CARD1='/mmc/mmca1/.system/java'
+JAVA_HOME_CARD2='/mmc/mmcb1/.system/java'
+JAVA_HOME_FLASH='/ezxlocal/download/mystuff/.system/java'
+LD_HWCAP_MASK=''
+LD_LIBRARY_PATH='/usr/lib/ezx/lib:/usr/lib:/lib:/usr/language/vui/english/lib:/usr/language/vui/mandarin/lib:/usr/language/vui/common/lib:/usr/local/lib'
+LJ_CONFIG='/ezxlocal/download/appwrite'
+LJ_DATA_PRIVATE='/ezxlocal/download/appwrite'
+LJ_DATA_VISIBLE='/ezxlocal/download/mystuff/.system'
+LOCPATH='/usr/language/string'
+MIDP_SYSDIR='/ezx_user/download/appwrite/java'
+MYSTUFF_DATA_PATH='/ezxlocal/download/mystuff/'
+PATH='/usr/bin:/bin:/usr/sbin:/sbin'
+PPID='858'
+PREF_LANGUAGE_PATH='/usr/language/string'
+PS1='\w \$ '
+PS2='> '
+PS4='+ '
+PWD='/'
+QTDIR='/usr/lib/ezx'
+QWS_DISPLAY=':0'
+SHELL='/bin/sh'
+TERM='linux'
+TAP_HOME='/ezxlocal/'
+T='GMT-8:0:0'
+USER='root'
+dm_setting_plugin='/usr/lib/ezx/lib/dm_plugin'
+dm_setting_root='/ezxlocal/download/appwrite/setup'
+</pre>
+
+=== ps ===
+
+  PID  Uid     VmSize Stat Command
+    1 root        660 S   init       
+    2 root            SW< [ksoftirqd/0]
+    3 root            SW< [desched/0]
+    4 root            SW< [events/0]
+    5 root            SW< [khelper]
+    6 root            SW< [kthread]
+    7 root            SW< [kblockd/0]
+    8 root            SW  [pdflush]
+    9 root            SW  [pdflush]
+   11 root            SW< [aio/0]
+   10 root            SW  [kswapd0]
+   12 root            SW< [LCD_ESD]
+   13 root            SW< [mtdblockd]
+   14 root            SW  [ksim_module_deb]
+   15 root            SW  [keventd]
+   16 root            SW  [kdebounced]
+   17 root            SW  [kusbdetd]
+   18 root            SW< [mmcqd]
+   43 root            SWN [jffs2_gcd_mtd8]
+   72 root       3448 S   /usr/SYSqtapp/windowsserver/windowsserver -qws 
+   83 root            SW< [mpm_workq/0]
+   94 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+   96 root      10748 S < /usr/SYSqtapp/phone/phone 
+   97 root        740 S < /usr/SYSqtapp/sound/soundmanager 
+   98 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+   99 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+  100 root        740 S < /usr/SYSqtapp/sound/soundmanager 
+  101 root        740 S < /usr/SYSqtapp/sound/soundmanager 
+  102 root        740 S < /usr/SYSqtapp/sound/soundmanager 
+  104 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+  105 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+  106 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+  109 root      10748 S   /usr/SYSqtapp/phone/phone 
+  110 root      10748 S   /usr/SYSqtapp/phone/phone 
+  111 root        576 S   /usr/local/bin/secclkd 
+  121 root        468 S   /usr/local/bin/panic_daemon 
+  123 root        544 S   /usr/bin/usbd 
+  125 root        252 S   /usr/bin/nvm_daemon 
+  127 root        468 S   /usr/local/bin/panic_daemon 
+  128 root        544 S   /usr/bin/usbd 
+  130 root        436 S   /usr/bin/apmd 
+  137 root        772 S   /etc/scim/scim 
+  139 root        700 S   /bin/translation_layer 
+  144 root        544 S   /usr/bin/usbd 
+  145 root        772 S   /etc/scim/scim 
+  146 root        772 S   /etc/scim/scim 
+  147 root        772 S   /etc/scim/scim 
+  141 root        664 S   /bin/tl_sim_transport 
+  151 root        628 S   /bin/tl_subsidy_lock 
+  153 root       1884 S   /bin/modem_services 
+  156 root        628 S   /bin/link_manager 
+  157 root        548 S   /bin/tl_efem_transport 
+  158 root       9472 S   /usr/SYSqtapp/am/bin/am 
+  160 root        456 S   /bin/devcontd -debug 7 
+  162 root        700 S   /bin/translation_layer 
+  163 root        700 S   /bin/translation_layer 
+  164 root        664 S   /bin/tl_sim_transport 
+  165 root        664 S   /bin/tl_sim_transport 
+  166 root        548 S   /bin/tl_efem_transport 
+  167 root        548 S   /bin/tl_efem_transport 
+  168 root        628 S   /bin/tl_subsidy_lock 
+  169 root        628 S   /bin/tl_subsidy_lock 
+  170 root        480 S   /etc/initservices/startup/50ssd start 
+  174 root        688 S   dmi_manager 
+  175 root       1796 S   /bin/tcmd 
+  176 root       1796 S   /bin/tcmd 
+  178 root       1796 S   /bin/tcmd 
+  179 root       1796 S   /bin/tcmd 
+  181 root        688 S   dmi_manager 
+  187 root        688 S   dmi_manager 
+  188 root        688 S   dmi_manager 
+  194 root        620 S   /usr/bin/opprofdaemon 
+  195 root        620 S   /usr/bin/opprofdaemon 
+  196 root        560 S   /usr/bin/opproftransport 
+  198 root       2892 S   /usr/bin/db_daemon -nosearch -tapi -delay 7 
+  201 root        620 S   /usr/bin/opprofdaemon 
+  200 root        560 S   /usr/bin/opproftransport 
+  204 root        264 S   /etc/initservices/startup/90accyd start 
+  206 root        528 S   /etc/initservices/startup/90battd start 
+  212 root        560 S   /usr/bin/opproftransport 
+  214 root        376 S   /usr/local/bin/nand_watchdog -d10 -t254 -T100000 -s4 
+  220 root       1884 S   /bin/modem_services 
+  221 root       1884 S   /bin/modem_services 
+  243 root       2892 S   /usr/bin/db_daemon -nosearch -tapi -delay 7 
+  244 root       2892 S   /usr/bin/db_daemon -nosearch -tapi -delay 7 
+  247 ezx        8692 S   /usr/SYSqtapp/messaging/messaging 
+  252 root       2892 S   /usr/bin/db_daemon -nosearch -tapi -delay 7 
+  256 root       2988 S   /usr/SYSqtapp/opera/brwdaemon 
+  261 root       5992 S   /usr/SYSqtapp/windowsserver/misc1 
+  270 root       5992 S   /usr/SYSqtapp/windowsserver/misc1 
+  271 root       5992 S   /usr/SYSqtapp/windowsserver/misc1 
+  344 root       2892 S   /usr/bin/db_daemon -nosearch -tapi -delay 7 
+  355 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+  514 root       2988 S   /usr/SYSqtapp/opera/brwdaemon 
+  819 ezx        6156 S   /usr/SYSqtapp/mystuff/mystuff 
+  820 root       8788 S   /usr/SYSqtapp/opera/opera -passive 
+  821 root       8788 S   /usr/SYSqtapp/opera/opera -passive 
+  822 root       8788 S   /usr/SYSqtapp/opera/opera -passive 
+  838 root            SW< [loop0]
+  843 root       3448 S   /usr/bin/mfmsp/mfmsp 
+  844 root       3448 S   /usr/bin/mfmsp/mfmsp 
+  845 root       3448 S   /usr/bin/mfmsp/mfmsp 
+  846 root       3448 S   /usr/bin/mfmsp/mfmsp 
+  847 root       3448 S N /usr/bin/mfmsp/mfmsp 
+  848 root       3448 S   /usr/bin/mfmsp/mfmsp 
+  849 root       3448 S   /usr/bin/mfmsp/mfmsp 
+  857 root        916 S < /usr/SYSqtapp/sound/soundmanager 
+  890 root        688 S   /bin/sh /mmc/mmca1/ps.lin 
+  891 root        684 R   ps auxwww
+
+=== Mounts allowed by the security code ===
+  /dev/mmca1 /mmc/mmca1 vfat
+  /dev/loop/0 /ezxlocal/download/mystuff vfat
+  /dev/mtdblock/mass_storage /mnt/msc_int0 yaffs
+  /dev/mtdblock/mass_storage /mnt/msc_int0 yaffs2
+  devpts /dev/pts devpts
+
+=== Groups listed in /etc/groups ===
+  root:*:0:root
+  ezx:*:233:
+  ezx_java:*:234:ezx,sys_java
+  sys_java:*:235
+  downloadQT:*:236
+  ezx_resource:*:237
+
+=== Contents of /etc/modules ===
+  /lib/modules/gpiodev.ko
+  /lib/modules/profilerdrv.ko
+  /lib/modules/mpmdrv.ko
+  /lib/modules/netmux.ko
+  /lib/modules/netmux_linkdriver.ko
+  /lib/modules/i2c-dev.ko
+
+=== Output from lsmod ===
+
+  modemrelay              5320  0 
+  modembridge             3232  1 modemrelay
+  brassboard_tr_fx2lp    30276  0 
+  generic_cf              6152  0 
+  pbg_if                 14648  0 
+  mtp_if                 15080  0 
+  msc_if                 22964  0 
+  tty_if                 19821  0 
+  network_if             20344  0 
+  otgcore                63272  7 brassboard_tr_fx2lp,generic_cf,pbg_if,mtp_if,msc_if,tty_if,network_if
+  coredump               10036  0 
+  suapi                 114817  25 
+  netmux_linkdriver       8056  0 
+  netmux                 56708  19 netmux_linkdriver
+  mpmdrv                 27952  1 
+  profilerdrv             6124  1 
+  gpiodev                 6848  0
+
+=== Users listed in /etc/passwd ===
+  root::0:0:root:/root:/bin/ash
+  ezx:*:2000:233:EZX:/tmp:
+  sys_java:*:2001:235:systemJava:/tmp:
+  downloadQT:*:2002:236:downloadQT:/tmp:
+  ezx_resource:*:2003:237:resource:/tmp:
+
+=== Output from netstat ===
+
+  Active Internet connections (w/o servers)
+  Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+  tcp        0      0 localhost.localdom:4303 localhost.localdom:5000 ESTABLISHED
+  tcp        0      0 192.168.16.2:telnet     192.168.16.1:49610      ESTABLISHED
+  tcp        0      0 localhost.localdom:5000 localhost.localdom:4303 ESTABLISHED
+  Active UNIX domain sockets (w/o servers)
+  Proto RefCnt Flags       Type       State         I-Node Path
+  unix  2      [ ]         DGRAM                    1329     /tmp/msintsock
+  unix  2      [ ]         DGRAM                    970      /tmp/dataLinkManager1
+  unix  2      [ ]         DGRAM                    980      /tmp/dataDevice0
+  unix  2      [ ]         DGRAM                    982      /tmp/dataDevice1
+  unix  2      [ ]         DGRAM                    984      /tmp/dataDevice2
+  unix  2      [ ]         DGRAM                    986      /tmp/dataDevice3
+  unix  2      [ ]         DGRAM                    988      /tmp/dataDevice4
+  unix  2      [ ]         DGRAM                    990      /tmp/dataDevice5
+  unix  2      [ ]         DGRAM                    992      /tmp/dataDevice6
+  unix  3      [ ]         STREAM     CONNECTED     3765     /tmp/pm_lcdCh
+  unix  3      [ ]         STREAM     CONNECTED     3764     
+  unix  3      [ ]         STREAM     CONNECTED     2534     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     2533     
+  unix  3      [ ]         STREAM     CONNECTED     2530     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     2529     
+  unix  3      [ ]         STREAM     CONNECTED     2525     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     2524     
+  unix  3      [ ]         STREAM     CONNECTED     2440     /tmp/waltz-push
+  unix  3      [ ]         STREAM     CONNECTED     2439     
+  unix  3      [ ]         STREAM     CONNECTED     2077     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     2076     
+  unix  3      [ ]         STREAM     CONNECTED     2073     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     2072     
+  unix  3      [ ]         STREAM     CONNECTED     2049     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     2048     
+  unix  3      [ ]         STREAM     CONNECTED     2021     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     2020     
+  unix  3      [ ]         STREAM     CONNECTED     2018     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     2017     
+  unix  42     [ ]         STREAM     CONNECTED     2016     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     2015     
+  unix  3      [ ]         STREAM     CONNECTED     1877     /tmp/db_ipc
+  unix  3      [ ]         STREAM     CONNECTED     1991     
+  unix  3      [ ]         STREAM     CONNECTED     1953     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     1952     
+  unix  3      [ ]         STREAM     CONNECTED     1437     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1436     
+  unix  3      [ ]         STREAM     CONNECTED     1433     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1432     
+  unix  3      [ ]         STREAM     CONNECTED     1421     /tmp/battsock
+  unix  3      [ ]         STREAM     CONNECTED     1383     
+  unix  3      [ ]         STREAM     CONNECTED     1361     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1360     
+  unix  3      [ ]         STREAM     CONNECTED     1352     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1351     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1350     
+  unix  3      [ ]         STREAM     CONNECTED     1347     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1340     /tmp/tapisock
+  unix  3      [ ]         STREAM     CONNECTED     1339     
+  unix  3      [ ]         STREAM     CONNECTED     1336     /tmp/tapisock
+  unix  2      [ ]         DGRAM                    1330     
+  unix  3      [ ]         STREAM     CONNECTED     1326     
+  unix  3      [ ]         STREAM     CONNECTED     1306     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     1305     
+  unix  3      [ ]         STREAM     CONNECTED     1302     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     1301     
+  unix  3      [ ]         STREAM     CONNECTED     1184     
+  unix  3      [ ]         STREAM     CONNECTED     1158     /tmp/usbsocket
+  unix  3      [ ]         STREAM     CONNECTED     1157     
+  unix  3      [ ]         STREAM     CONNECTED     1068     
+  unix  3      [ ]         STREAM     CONNECTED     1166     /tmp/qtembedded-ezx/QtEmbedded-0
+  unix  3      [ ]         STREAM     CONNECTED     833
