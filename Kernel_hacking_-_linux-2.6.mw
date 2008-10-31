@@ -1,24 +1,29 @@
-The OpenEZX kernel tree bases on a [http://www.kernel.org vanilla 2.6 kernel]. At the moment we use 2.6.21.
-
-We use [http://savannah.nongnu.org/projects/quilt quilt] to handle our -ezx kernel tree. You can find the latest patchset [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here].
-
 Please notice that the development is still in an early state. You should know what you are doing, if you test this.
 
+We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches ina git tree. Please make sure you have it installed before starting development.
+
 == Building OpenEZX kernel ==
-* Download a vanilla, 2.6.21 kernel from www.kernel.org, untar it.
-* Download the Official OpenEZX patchset from [http://svn.openezx.org/trunk/src/kernel-2.6/patches/ here] and put all patches inside patches/ on the kernel source folder. The daring or development-bound guys may use a devel patchset located [http://svn.openezx.org/branches/ here] against the corresponding kernel version instead.
-* apply the quilt patchset, by running ´quilt push -a´
-* run ´make -f patches/Makefile.OpenEZX CROSS_COMPILE=<path to your toolchain>´ where path means toolchain directory _plus_ architecture-specific prefix of toolchain binaries.
-* This will build zImages and modules to all currently supported phones.
- Note: You can download a binary toolchain [http://www.codesourcery.com/gnu_toolchains/arm/download.html here] (for a fast quick start)
- Or build your own with OE. See the next section.
- You can also use OE toolchain to build the Official OpenEZX patchset,
- just pass, the following variable:
-  CROSS_COMPILE=/path_to_OE/build/tmp/cross/bin/arm-angstrom-linux-gnueabi- zImage
- At least in case of the binary Codesourcery toolchain,
- you might need to disable CONFIG_BINFMT_AOUT and CONFIG_BINFMT_MISC,
- since otherwise you might get a SEGMENT_SIZE kernel build error
- (it seems those two are not really supported on ARM and it's not problematic anyway).
+* Get the kernel sources:
+ git pull git://git.openezx.org/openezx.git
+
+* Make the repo topgit aware:
+ tg remote --populate origin
+
+* Checkout our development branch:
+ git co ezx/current
+
+* Use the ezx_defconfig for the first build:
+ cp arch/arm/configs/ezx_defconfig .config
+ make oldconfig
+
+* Make sure you have a proper toolchain installed. We have pre-built ones for [x86] and [x86_64]
+ sudo tar xzf toolchain
+ 
+* Build the kernel:
+ make ARCH=arm CROSS_COMPILE=/usr/local/angstrom/arm/bin/arm-angstrom-linux-gnueabi- zImage
+
+* Update your tree later:
+ git co master && gut pull && git co ezx/current && tg update
 
 == Building OpenEZX kernel with openembedded ==
 * Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
