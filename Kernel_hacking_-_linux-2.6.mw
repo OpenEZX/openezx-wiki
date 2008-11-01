@@ -4,13 +4,13 @@ We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches ina g
 
 == Building OpenEZX kernel ==
 * Get the kernel sources:
- git pull git://git.openezx.org/openezx.git
+ git clone git://git.openezx.org/openezx.git
 
 * Make the repo topgit aware:
  tg remote --populate origin
 
 * Checkout our development branch:
- git co ezx/current
+ git checkout ezx/current
 
 * Use the ezx_defconfig for the first build:
  cp arch/arm/configs/ezx_defconfig .config
