@@ -14,7 +14,7 @@ We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches ina g
 
 * Use the ezx_defconfig for the first build:
  cp arch/arm/configs/ezx_defconfig .config
- make oldconfig
+ make ARCH=arm oldconfig
 
 * Make sure you have a proper toolchain installed. We have pre-built ones for [x86] and [x86_64]
  sudo tar xzf toolchain
@@ -23,7 +23,7 @@ We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches ina g
  make ARCH=arm CROSS_COMPILE=/usr/local/angstrom/arm/bin/arm-angstrom-linux-gnueabi- zImage
 
 * Update your tree later:
- git co master && gut pull && git co ezx/current && tg update
+ git checkout master && git pull && tg remote --populate origin && git checkout ezx/current && tg update
 
 == Building OpenEZX kernel with openembedded ==
 * Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
