@@ -1,36 +1,38 @@
 = Kernel =
-* Video
-** Test, finish porting and cleanup video capture driver (camera)
+* Camera
+** Fix a780 issues with mainline mt9m11 sensor driver
+** Sensor driver for a1200, e680, e2 and e6
+
+
 * Sound
-** Document the PCAP2 audio registers/bits
-** Write an ASOC codec driver for the PCAP2
-** Write an ASOC machine driver for the ezx platform
-* Power Management
-** More testing with bp driver/mux_cli
-* AP/BP interaction
-** implement [[BP_Handshake | handshake]] procedure to put BP in non-flash-mode (i dont think its possible)
+** Fix the MONO DAI (test playback and fix capture noise)
+** Port the e680 lm4857 boomer driver from svn, check if it is possible to hack the openmoko/neo driver and make it generic
+
+
+* BP
 ** Finish reimplementation of grpsv modules
-* GPS
-** Trace lapisrv on phone boot-up, determine if the GPS firmware is inside bp firmware or inside lapisrv.
-*** If inside lapisrv steal it.
-*** If inside bp firmware determine the command used to upload it to the GPS module
-* proprietary flash file systems
-** Look into reimplementing the DiskOnChip G3 drivers, though I don't think that is particularly important, we could run our code 100% on SD/Transflash
+
+
 * Enhanced Mini USB (EMU)
-** add support for Motorola-compatible cable/device detection and appropriate switching of USB device / UART / phone-powered / ... support
-** think on how to do runtime device profile switching with usb-gadget and the horribly broken PXA270 UDC (read errata, it's barely useable). Alternatively try supporting multiple interfaces or configurations (also quite impossible with broken controller)
-** USB host support on EMU!
-* Use u-boot
-** Use u-boot as a secondary bootloader
-** Flash support (CFI)
-** TF/SD support
-** Commandinterface over usb.
-** Firmware updates.
-** Use u-boot as a primary bootloader
-* Implement our own RDL software, using a minimal linux kernel with MTD support and initrd
-* Freesmartphone Software Stack [http://www.freesmartphone.org/]
-** Implement poweroff procedure, on SIGTERM
-** Implement AP date updating based on BP information on boot.
+** Write the driver
+
+
+* MTD
+** Port the mapping from svn[http://svn.openezx.org/branches/kernel-2.6.25.x-patches/]
+** Look into what is needed to support the 2nd gen nor chips into mainline
+** Check if the NAND on gen1 devices are worth to support
+
+
+* keypad
+** port the flip/lockswitch code from svn
+
+
+* RTC driver based on PCAP
+* Port leds and vibrator code from svn
+
+
+== Userspace ==
+* Fix X for 18bpp frame buffers
 
 = Wiki =
 
