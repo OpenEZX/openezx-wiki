@@ -1,1 +1,32 @@
-#REDIRECT [[Call OLD]]
+For the old version please look at [[Call OLD]], but it is now deprecated and may be removed at any time.
+
+== Warning ==
+Calling is under development and not ready for end-users yet, there are still bugs in BP and ASoC drivers.
+
+This procedure doesn't work always, you may have to retry several times.
+
+This Howto was tested only on a [[A780]].
+
+==Prerequisites==
+you need:
+* a kernel built from our git repository, see [[Kernel hacking - linux-2.6]]
+* a configured userspace environment whith [http://svn.openezx.org/trunk/src/userspace/ezxd/ ezxd] and alsamixer.
+* gen-blob installed, see [[Dual boot]]
+
+==Calling==
+
+First run the kernel with BP in normal mode, and use alsamixer to set the <tt>DAI Select</tt> control to <tt>Stereo</tt> (or anything else but <tt>BP</tt>).
+
+Follow this commands to place a call, replace the Xs with the right values:
+
+* make sure you stick to GSM mode:
+ echo -en "AT+CFUN=1\r\n" | nc localhost 7100
+
+* insert your pin, so to register with the network:
+ echo -en "AT+CPIN=1,\"XXXX\"\r\n" | nc localhost 7100
+wait some time to let Network Registration complete
+
+* place your call:
+ echo -en "ATDXXX\r\n" | nc localhost 7100
+
+* run alsamixer and set <tt>DAI Select</tt> to <tt>BP</tt>, you ''should'' hear the other party.
