@@ -1,6 +1,6 @@
 Please notice that the development is still in an early state. You should know what you are doing, if you test this.
 
-We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches ina git tree. Please make sure you have it installed before starting development.
+We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches in a git tree. Please make sure you have it installed before starting development.
 
 == Building OpenEZX kernel ==
 * Get the kernel sources:
