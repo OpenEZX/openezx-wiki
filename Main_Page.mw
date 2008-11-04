@@ -76,9 +76,10 @@ Misc:
 * How to create [[Backups]] of the EZX device
 * How to [[Get a shell]] on the EZX device
 * How to [[Crosscompile]] for the EZX device
-* How to make [[Call|calls]] ''(very experimental)''
-* [[Kernel hacking - linux-2.6]]
 * [[Kernel hacking - linux-2.4]]
+* [[Kernel hacking - linux-2.6]]
+* [[Dual boot]]
+* How to make [[Call|calls]] ''(very experimental)''
 * GUI stuff: [[Handheld Environments]]
 * How to use the [[JTAG]] interface
 * [[TODO]]
@@ -87,7 +88,6 @@ Misc:
 * [[Rootfs on SD]]
 * [[Rootfs on NFS]]
 * [[Flash kernel image]]
-* [[Dual boot]]
 * [[Serial console]]
 * [[MPKG]] fileformat
 
