@@ -23,7 +23,7 @@ It also enables multiboot, you can keep your original software and start experim
 ===What's needed===
 
 * gen-blob sources and a proper toolchain to build it, or alternatively an already compiled gen-blob, see [http://people.openezx.org/wyrm/gen-blob/ here].
-* openezx kernel [http://people.openezx.org/ao2/snapshots/zImage-2.6.25-ezxdev-20081102-a780 zImage] with MTD support and [http://people.openezx.org/ao2/snapshots/modules-2.6.25-ezxdev-20081102-a780.tar.gz modules] needed for vfat support.
+* openezx kernel ([http://people.openezx.org/ao2/snapshots/zImage-2.6.25-ezxdev-20081102-a780 a780 zImage]) with MTD support and [http://people.openezx.org/ao2/snapshots/modules-2.6.25-ezxdev-20081102-a780.tar.gz modules] needed for vfat support.
 * mtd-utils installed in the rootfs used with the openezx kernel
 
 ===Partitionig===
@@ -80,7 +80,7 @@ If you have previosly installed [http://svn.openezx.org/trunk/src/blob/blob2/ bl
 
  # cat /dev/mtd2 > zImage-2.4
 
-and go on with the previous indications.
+and go on with the previous instructions.
 
 ==Note for A1200 users==
 For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing:
