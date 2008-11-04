@@ -1,1 +1,113 @@
-#REDIRECT [[Dual boot OLD]]
+For the old page look at [[Dual boot OLD]], it may be removed at any time.
+
+=Dual boot with gen-blob=
+
+'''ALL THE INFORMATION AND CODE IN THIS PACKAGE ARE PROVIDED AS-IS, WITHOUT WARRANTY OF ANY KIND. DONT BLAME ME IF YOU BRICK YOUR PHONE.'''
+'''ALL THE CODE AND BINARY FILES IN THIS PACKAGE ARE FREE TO USE AND REDISTRIBUTE, WITH A GPL LICENSE OR SIMILAR.'''
+
+The first part of the tutorial has been tested only on Motorola A780.
+Don't flash gen-blob on A910, it can't access MMC on this phone.
+
+==What is gen-blob==
+
+gen-blob is a second stage bootloader for the Motorola EZX phones, developed
+by Daniel Ribeiro starting from the sources of the EZX version of 'blob'
+bootloader released by Motorola.
+
+It lets you have the phone with its BP (Baseband Processor) in
+normal mode, this enables the use of GSM and several other services on EZX
+phones (GPS, if available, and charging batteries, just to mention some).
+
+It also enables multiboot, you can keep your original software and start
+experimenting with the (too) many Free alternatives, loading kernels and
+userspace software from the external SD/MMC card (let's simply call it MMC in
+this document).
+
+==Installing gen-blob==
+
+===What's needed===
+
+* gen-blob sources and a proper toolchain to build it, or alternatively an
+  already compiled gen-blob, see here: http://people.openezx.org/wyrm/gen-blob/ 
+* openezx kernel with MTD support and modules needed for vfat:
+  http://people.openezx.org/ao2/snapshots/zImage-2.6.25-ezxdev-20081102-a780
+  http://people.openezx.org/ao2/snapshots/modules-2.6.25-ezxdev-20081102-a780.tar.gz
+* mtd-utils installed in the rootfs used with the openezx kernel
+
+===Partitionig===
+
+gen-blob expects a FAT16/FAT32 as the first partition on MMC card, it loads
+the kernel from there, you could also use this partition as storage shared
+between the original software and the alternative ones. The other partitions
+should be choosen according to the requirements of the kernel you are going to
+load.  Usually OpenEZX kernels expect an ext2 partition as the second one,
+from which they load the rootfs.
+
+For instance, here'a a possible directory layout needed by gen-blob in the
+first partition:
+  .
+  `-- boot
+      |-- menu.lst
+      |-- default
+      `-- zImage-openezx
+
+And the content of menu.lst should be
+  # menu.lst
+  # default machid (used when booting /boot/default)
+  machid		1740
+
+  title		Motorola 2.4
+  kernel		/boot/default
+
+  title		A780 OpenEZX
+  kernel		/boot/zImage-openezx
+  machid		1740
+
+You also need a configured rootfs in the second partition, use the modules
+provided above so you can mount the first partition when running openezx
+kernel.
+
+==Installation==
+
+Use an openezx kernel with CONFIG_MTD_EZX_A780:
+
+Save the current kernel:
+ # cat /dev/mtd1 > zImage-2.4
+ # mount /dev/mmcblk0p1 /mnt/
+ # cp zImage-2.4 /mnt/boot/default
+
+Check your config
+ # $EDITOR /mnt/boot/menu.lst
+
+Flash gen-blob with mtd-utils:
+ # flashcp -v gen-blob /dev/mtd1
+
+==Usage==
+
+Hold the following key when sending via boot_usb (or powering on when
+flashed).
+* Scroll Down (volume -): Boot menu loaded from MMC card
+* Scroll UP (Volume +): USB ready mode
+Not holding any key boots /boot/default without any FB activity.
+
+
+==Note for blob2 users==
+
+If you have previosly installed blob2:
+http://svn.openezx.org/trunk/src/blob/blob2/
+you have your kernel in mtd2 instead of mtd1, but the rootfs location stay the
+same, so you have just to dump the kernel from the right partition:
+
+ # cat /dev/mtd2 > zImage-2.4
+
+and go on with the prvious
+
+==Note for A1200 users==
+For A1200 (and probably others), the kernel is offset by 2048 bytes on
+the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of
+gen-blob before flashing:
+	# dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-for-a1200
+
+==References==
+
+http://people.openezx.org/wyrm/gen-blob/README
