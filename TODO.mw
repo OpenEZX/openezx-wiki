@@ -4,7 +4,7 @@
 
 
 * Camera
-** Fix a780 issues with mainline mt9m11 sensor driver
+** Fix a780 issues with mainline mt9m111 sensor driver
 ** Sensor driver for a1200, e680, e2 and e6
 
 
