@@ -27,7 +27,6 @@ Follow this commands to place a call, replace the Xs with the right values:
 * insert your pin, so to register with the network:
  echo -en "AT+CPIN=1,\"XXXX\"\r\n" | nc localhost 7100
 
-
 * wait some time to let Network Registration complete and place your call:
  echo -en "ATDXXX\r\n" | nc localhost 7100
 
