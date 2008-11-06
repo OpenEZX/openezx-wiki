@@ -30,7 +30,7 @@ It also enables multiboot, you can keep your original software and start experim
 
 gen-blob expects a FAT16/FAT32 as the first partition on MMC card, it loads the kernel from there, you could also use this partition as storage shared between the original software and the alternative ones. The other partitions should be choosen according to the requirements of the kernel you are going to load. Usually OpenEZX kernels expect an ext2 partition as the second one, from which they load the rootfs.
 
-For instance, here'a a possible directory layout needed by gen-blob in the first partition:
+For instance, here's a possible directory layout needed by gen-blob in the first partition:
   .
   `-- boot
       |-- menu.lst
