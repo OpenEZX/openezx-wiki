@@ -16,9 +16,6 @@ We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches in a 
  cp arch/arm/configs/ezx_defconfig .config
  make ARCH=arm oldconfig
 
-* Make sure you have a proper toolchain installed. We have pre-built ones for [x86] and [x86_64]
- sudo tar xzf toolchain
- 
 * Build the kernel:
  make ARCH=arm CROSS_COMPILE=/usr/local/angstrom/arm/bin/arm-angstrom-linux-gnueabi- zImage
 
