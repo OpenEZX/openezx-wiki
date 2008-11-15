@@ -1,0 +1,8 @@
+CDMA Windows Mobile Smartphone
+
+Contains EZX PCAP2 chip connected to spi.
+
+QVGA (240x320) 16-bit tft display
+QWERTY Keyboard
+MiniSD card interface on PXA MCI
+mini-USB EMU port (client)
