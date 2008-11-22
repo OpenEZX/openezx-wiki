@@ -105,7 +105,7 @@ AT+USBSTAT (mux4)
 **Sends <val> dtmf tone.
 **I dont know why they dont used the standard +VTS
 *AT+EPOM=1,0
-**Seems to login to network on E6.
+**Seems registration to the network on E6.
 
 == BlueTooth related ==
 *AT+EBTP=<val> (mux4)
