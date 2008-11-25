@@ -153,39 +153,30 @@ AT+USBSTAT (mux4)
 
 
 *AT+MODE=8
-
 **PST, new HW
 
 *AT+MODE=9
-
 **Testagent
 
 *AT+MODE=10
-
 **AP logger
 
 *AT+MODE=11
-
 **motcdc; will find a new HW: Belcarra: VID:22B8 PID:6004
 
 *AT+MODE=12
-
 **MotDSPLog, new HW
 
 *AT+MODE=13
-
 **MotNet, New HW: USBLAN
 
 *AT+MODE=24
-
 **Mass storage
 
 *AT+MODE=30
-
 **MODEM enter test data mode
 
 *AT+MODE=31
-
 **MODEM exit
 
 == Motorola Extension commands (and replies) of the [[BP]] ==
