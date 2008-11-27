@@ -182,7 +182,7 @@ modinfo /lib/modules/sd83xx.o
  license:     "GPL"
  parm:        mfgmode int
 
-The code for this SDIO Marvell chipset will be soon in linux mainline, infos and code here:
+The code for this SDIO Marvell chipset is actually on linux mainline, more infos and code here:
 * http://lists.infradead.org/mailman/listinfo/libertas-dev
 * http://git.infradead.org/?p=libertas-2.6.git;a=summary
 
@@ -198,7 +198,6 @@ ls -l /usr/SYSqtapp/wsp
  -rwsr-sr-x    1 root     root       233472 Jan 23 20:12 wsp
 
 wsp could mean Wireless Session Protocol
-
 
 ==Version numbers==
 ===By Orange France===
