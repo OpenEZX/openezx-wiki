@@ -95,44 +95,8 @@ Some of the motorola commands can also be found in command references for other 
 
 [4]  http://www.hw.cz/pdf/motorola/g24_at_commands_reference_manual.pdf
 
-== Power / Setup ==
-AT+USBSTAT (mux4)
-
-== Sound / Call related ==
-*AT+EACC=<val> (mux4)
-**64 turns loudspeaker ON, 0 turn it off.
-*AT+DTSE= "<val>",1 (mux0)
-**Sends <val> dtmf tone.
-**I dont know why they dont used the standard +VTS
-*AT+EPOM=1,0
-**Seems registration to the network on E6.
-
-== BlueTooth related ==
-*AT+EBTP=<val> (mux4)
-**Turns bluetooth on (1) and off (0)
-
 == Time / Alarm related ==
 *All commands (and replies) use a date in the format: "<year>/<month>/<day>,<hour>:<minute>:<second>"
-*AT+ENTTIME=<val> (mux4)
-**Gets the network time
-**with <val>=1 replies with +ETIME: "<datetime>"
-*AT+ERTCAV=0 (mux4)
-**Turns all alarms off.
-*AT+ERTCAV=1, "<val>" (mux4)
-**Turns the phone on at time <val>. Used for the alarm. Repeat to add more.
-
-== PowerOff Related==
-* AT+CPWR=1
-** Turns BP off.
-** what about +CPWR=6 ?
-* AT+EKEV: 19,1
-** a notification command that can be read on mux4 when power key is pressed for a while. When tapisrv reads that, it sends "AT+CPWR=1\r" on mux4 and then shut down the phone.
-
-== GPRS / Call related ==
-*AT+CAPF= 12,1,1 (mux6)
-**Turns GPRS ON
-*AT+CAPF= 12,1,0 (mux6)
-**Turns GPRS OFF
 
 == Fax commands ==
 
@@ -149,36 +113,6 @@ AT+USBSTAT (mux4)
 *AT+FTS=%d
 **Transmit Silence, [4] page 375
 
-== Phone mode switching (tested on A1200) ==
-
-
-*AT+MODE=8
-**PST, new HW
-
-*AT+MODE=9
-**Testagent
-
-*AT+MODE=10
-**AP logger
-
-*AT+MODE=11
-**motcdc; will find a new HW: Belcarra: VID:22B8 PID:6004
-
-*AT+MODE=12
-**MotDSPLog, new HW
-
-*AT+MODE=13
-**MotNet, New HW: USBLAN
-
-*AT+MODE=24
-**Mass storage
-
-*AT+MODE=30
-**MODEM enter test data mode
-
-*AT+MODE=31
-**MODEM exit
-
 == Motorola Extension commands (and replies) of the [[BP]] ==
 
 See also the origin of this: https://lists.gnumonks.org/pipermail/openezx-devel/2006-December/000917.html
@@ -188,6 +122,11 @@ See also the origin of this: https://lists.gnumonks.org/pipermail/openezx-devel/
 ====AT+BTTONE====
 
 ====AT+CAPF=12,1,%d====
+
+* AT+CAPF= 12,1,1 (mux6)
+** Turns GPRS ON
+* AT+CAPF= 12,1,0 (mux6)
+** Turns GPRS OFF
 
 ====AT+CBSM:====
 
@@ -275,6 +214,10 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+CPWR=%d====
 
+* AT+CPWR=1
+** Turns BP off.
+** what about +CPWR=6 ?
+
 ====AT+CRRM====
 
 ====AT+CSCL?====
@@ -303,6 +246,9 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+DTSE="%c",%d====
 
+* AT+DTSE="<val>",1 (mux0)
+** Sends <val> dtmf tone.
+
 ====AT+DTST?====
 
 ====AT+DTST:%8D====
@@ -310,6 +256,8 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 ====AT+DTST=%d====
 
 ====AT+EACC=%u====
+
+Seen on mux4. 64 turns loudspeaker ON, 0 turn it off.
 
 ====AT+EACH=%u====
 
@@ -383,6 +331,9 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+EBAC:====
 
+===AT+EBTP=%d===
+Seen on mux4, turns bluetooth on (1) and off (0)
+
 ====AT+EBPV:====
 
 ====AT+EBROM?====
@@ -443,6 +394,11 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+EKEV: %d,%d====
 
+Key Event Notification
+
+* AT+EKEV: 19,1
+** a notification command that can be read on mux4 when power key is pressed for a while. When tapisrv reads that, it sends "AT+CPWR=1\r" on mux4 and then shut down the phone.
+
 ====AT+ELAI?====
 
 ====AT+ELAI:%8D,%8D,%8D,%8D,%8D====
@@ -465,11 +421,13 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 
 ====AT+EMGA="%s"====
 
-====AT+EMGL:====
+====AT+EMGL====
 
-====AT+EMGL=4====
+Extension of +CMGL, list messages without changing their status to read.
 
 ====AT+EMGW=%d,%d,%d====
+
+Extension of +CMGW, without any restrictions wrt. status.
 
 ====AT+EMPC="%s"====
 
@@ -493,11 +451,13 @@ Unlocking or Locking Subsidy Code, [4] page 274
 
 ====AT+ENTNAME:====
 
-====AT+ENTTIME:====
+====AT+ENTTIME====
 
-====AT+ENTTIME?====
+*AT+ENTTIME=<val> (mux4)
+**Gets the network time
+**with <val>=1 replies with +ETIME: "<datetime>"
 
-====AT+ENTTIME=%d====
+*+ENTTIME? queries network time.
 
 ====AT+EONS:====
 
@@ -505,7 +465,7 @@ Unlocking or Locking Subsidy Code, [4] page 274
 
 Operator Registration: ''+EOPER: 5,"262-03"''
 
-This is slightly related to the standard +CREG event. Value is not in conformance to +CREG, operator name unfortunately only available as area code. EZX seems to match the SIM list of operators to gather the operator code. I have yet to find out how to do that, since neither +COPN nor +COPL are implemented.
+This is slightly related to the standard +CREG event. Value is not in conformance to +CREG, operator name unfortunately only available as MCC & MNC. Operating system seems to match the SIM list of operators to gather the operator code. I have yet to find out how to do that, since neither +COPN nor +COPL are implemented.
 
 ====AT+EPANIC:====
 
@@ -519,6 +479,11 @@ This is slightly related to the standard +CREG event. Value is not in conformanc
 
 ====AT+EPOM=%d,%d====
 
+* AT+EPOM=1,0
+** Seems registration to the network on E6.
+
+Extension to 07.07 +COPS?
+
 ====AT+EPROV:====
 
 ====AT+EPROV?====
@@ -528,6 +493,12 @@ This is slightly related to the standard +CREG event. Value is not in conformanc
 ====AT+EREADY====
 
 ====AT+ERED:====
+
+====AT+ERTCAV=%d[,%s]====
+* AT+ERTCAV=0 (mux4)
+** Turns all alarms off.
+* AT+ERTCAV=1,"<val>" (mux4)
+** Turns the phone on at time <val>. Used for the alarm. Repeat to add more.
 
 ====AT+ERTR=0====
 
@@ -695,7 +666,35 @@ List one message from SIM. Extension to 07.07 +CMGR.
 
 ====AT+MODE?====
 
-Returns Modem (0) or Phonebook mode. Set command seems to work, but BP fails to reinitialize virtual channel.
+Test command returns Modem (0) or Phonebook mode (1). Set command seems to work, but BP fails to reinitialize virtual channel. Other valid modes seems to be:
+
+
+*AT+MODE=8
+**PST, new HW
+
+*AT+MODE=9
+**Testagent
+
+*AT+MODE=10
+**AP logger
+
+*AT+MODE=11
+**motcdc; will find a new HW: Belcarra: VID:22B8 PID:6004
+
+*AT+MODE=12
+**MotDSPLog, new HW
+
+*AT+MODE=13
+**MotNet, New HW: USBLAN
+
+*AT+MODE=24
+**Mass storage
+
+*AT+MODE=30
+**MODEM enter test data mode
+
+*AT+MODE=31
+**MODEM exit
 
 Select Interface Mode, [3] page 250
 
@@ -711,5 +710,7 @@ Select Interface Mode, [3] page 250
 
 ====AT+USBSTAT=%d,%d:====
 This command is to signal [[BP]] about mini-USB port status (as BP is responsible to control charging on A780/E680), it has no relation with the watchdog at all.
+
+Enable charging the battery over USB with AT+USBSTAT=255,1
 
 ====AT+VA=%d====
