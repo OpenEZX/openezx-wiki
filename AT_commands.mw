@@ -182,6 +182,12 @@ Unsolicited response, sent after a call connection has been cleared (disconnect)
 
 Read Factory Serial Number [4], page 80
 
+====AT+CGTACT====
+
+AT+CGTACT=1,1,0,\"brt\",\"brt\",\"0.0"
+
+establishes a GPRS connection. It is yet unclear how this relates to the standard commands.
+
 ====AT+CLCH====
 
 ====AT+CLCH:%32d====
