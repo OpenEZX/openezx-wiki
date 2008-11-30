@@ -1,4 +1,4 @@
-''You can tell the kernel to mount an NFS root, over the USBNet interface on a linux host box.''
+''With the OpenEzx kernel, here is how to mount an NFS root, over the USBNet interface on a linux host box.''
 
 ====1. Configure the PC's USB Network.====
 
