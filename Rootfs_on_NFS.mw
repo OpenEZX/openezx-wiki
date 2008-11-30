@@ -1,5 +1,7 @@
 ''With the OpenEzx kernel, here is how to mount an NFS root, over the USBNet interface on a linux host box.''
 
+Assuming you have the nfs support and usbnet compiled and working on your kernel.
+
 ====1. Configure the PC's USB Network.====
 
 So, at first you need to load/install the modules "usbnet", perhaps also "cdc_subset".
