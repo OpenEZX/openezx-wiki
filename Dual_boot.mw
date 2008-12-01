@@ -54,7 +54,7 @@ You also need a configured rootfs in the second partition, use the modules provi
 
 ==Installation==
 
-Use an openezx kernel with CONFIG_MTD_EZX_A780 like the one suggested above.
+Use an '''OpenEzx kernel''' with CONFIG_MTD_EZX_A780 like the one suggested above.
 
 Save the current kernel:
  # cat /dev/mtd1 > zImage-2.4
