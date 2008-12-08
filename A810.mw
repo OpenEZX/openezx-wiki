@@ -33,6 +33,8 @@ Motorola A810 is a ODM product developed by [http://e28.com E28 Limited]. Unlike
 
 Phone introduces E28's proprietary software stack to Motorola users, some firmware's sections (at least kernel) are digitally signed by Motorola.
 
+Judging from videos found on YouTube, somebody ported Android to the A810.
+
 == Kernel ==
 Montavista CEE 3.1 Linux 2.4.20
 
