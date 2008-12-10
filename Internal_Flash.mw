@@ -1,10 +1,14 @@
-Gen1 EZX phones have two distinct flash chips for firmware/user data storage, a 32MB Intel Strataflash (NOR) and a 64MB m-systems DiskOnChip G3 (NAND).
+*Gen1 EZX phones have two distinct flash chips for firmware/user data storage, a 32MB Intel Strataflash (NOR) and a 64MB m-systems DiskOnChip G3 (NAND).
 
 The StrataFlash contains the bootloader, kernel, rootfs, /usr/setup(factory configuration), /ezxlocal(user data) and a logo partition. This chip is fully supported by the Linux MTD layer.
 
 The DiskOnChip contains /diska(user data), /usr/language(localization). There is NO gpl driver for this chip! Its supported on linux only through a proprietary tffs kernel 
-module for 2.4 series.
- 
+module for 2.4 series. The limitation is due to the patents M-system uses, reading /drivers/mtd/mftl.c (a driver for this type of chips) you can find: 
 
+''  A signed copy of this agreement from M-Systems is kept on file by Red Hat UK Limited. In the unlikely event that you need access to it, please contact dwmw2@redhat.com for assistance. ''
 
-Gen2 devices are limited to a 64 MB Intel Strataflash NOR memory chip.
+In 2006, Sandisk bought M-systems, with probably the patents coming with their products...
+
+.
+*Gen2 devices are limited to a 64 MB Intel Strataflash NOR memory chip. 
+An OpenEzx patch exist for mainline 2.6 kernel, in december, 2008 it's still in the [http://svnweb.openezx.org svn]  (old) depository], or there is also one for A1200 there: [http://people.openezx.org/wyrm/a1200-mtd.patch]
