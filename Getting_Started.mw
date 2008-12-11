@@ -40,7 +40,7 @@ For what we are planning to do any of the images should be acceptable. Choose th
 ''For the sake of this tutorial I will be assuming it is in ~/oezx/images'' If you save it to a different location remember to change the commands you put into the command line.
 
 Note that [http://people.openezx.org Developper's web spaces] are also generally full of testing images that you just have to unpack in your sd to try :) .
-In the [[Rootfs On SD]] page, there is a rootfs "collection".
+In the [[Rootfs on SD]] page, there is a rootfs "collection".
 
 ==== 2. Make a partition on your card for the rootfs ====
 
