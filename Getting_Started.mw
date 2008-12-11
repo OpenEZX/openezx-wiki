@@ -23,7 +23,7 @@ Most of the alternatives systems (we will called them the "rootfs") have their o
 Note that because we're booting the phone via usb cable the [[Baseband Processor]] starts in "flash mode", so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with a different method.
 Also, there is a bug in the mainline pxa-udc's driver (not used in openezx's 2.6.25 or older kernels) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a "second stage bootloader", gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.
 
-'''Gen-blob can be launched with boot-usb''' for testing, before the kernel itself with the special command "./bootusb gen-blob 0" (without quotes) I'll explain later in this page. 
+'''Gen-blob can be launched with boot-usb''' for testing, before the kernel itself with the special command "./boot_usb gen-blob 0" (without quotes) I'll explain later in this page. 
 
 If you want to go further and '''flash your phone with gen-blob''', the "second stage bootloader", you can follow this page [[Dual boot]].
 The pros will be that you'll be able to use OpenEzx without a computer attached to usb, the cons, is -only- that you'll need an Sd/Mmc card to launch the original Motorola's software (as at the moment there is no other solutions), and that you'll have to flash gen-blob itself in the internal flash, this will of course '''avoid the warranty'''.
@@ -79,7 +79,7 @@ bootusb is a tool written by the OpenEZX developers that uploads a kernel to a M
 *So now an OpenEzx kernel needs a machine id to properly work on the desired phone.
 See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
 
-You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config in buildlog-XX file)] for quickly give a try at a recent kernel.
+You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config in buildlog-XX file)] to quickly try a recent kernel.
 
 Older kernels will maybe respond to olds machids (i.e. 876 for A1200) and maybe not work on all phones, so '''be very carefull'''!
 
