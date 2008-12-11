@@ -71,10 +71,12 @@ And otherwise, ensure you have mounted the second partition of the card and ente
 
 == Booting a Kernel using bootusb and gen-blob ==
 
-bootusb is a tool written by the OpenEZX developers that uploads a kernel to a Motorola EZX phone using the USB cable. More info about this process lives at [[Bootloader]]
+OpenEzx's bootusb is a tool that uploads a kernel to a Motorola EZX phone, using the USB cable. More info about this process lives at [[Bootloader]]
+
+Here we are just trying gen-blob for its "usb" mode, more modes and infos on gen-blob lives in [[Dual boot]].
 
 ==== 1. Get a kernel to boot ====
-History: ''until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decide to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the machine independant kernel, and this was working with differents machine id's than now. (this due to a double registration in kernel...now fixed)''
+History: ''until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decided to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independant kernel', and this was working with differents machine id's than now. (this due to a double registration in kernel's database...now fixed)''
 
 *So now an OpenEzx kernel needs a machine id to properly work on the desired phone.
 See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
@@ -83,7 +85,7 @@ You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's
 
 Older kernels will maybe respond to olds machids (i.e. 876 for A1200) and maybe not work on all phones, so '''be very carefull'''!
 
-For instuctions on how to build a custom OpenEzx kernel, refer to [[Kernel hacking - linux-2.6]].
+For instructions on how to build a custom OpenEzx kernel, refer to [[Kernel hacking - linux-2.6]].
 
 ==== 2. Get bootusb and genblob ====
 
@@ -99,16 +101,16 @@ Install svn, then:
  # chmod +x boot_usb
 
 This should have created a file named "boot_usb"
+If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
+From kernel version 2.6.28, you shouldn't need to configure the kernel at all for this.
 
 Optionnaly you can append the right svn's revision number to its file name.
  # mv boot_usb bootUsb-Rxxxx (where xxxx is the right revision number)
 
-If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
-From kernel version 2.6.28, you shouldn't need to configure the kernel at all for this.
 
 Simply get genblob's sources the same way with:
  # svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
-Building genblob will not be described yet,here... i don't have the time, sorry ;-)
+Building genblob will not be described yet,here... i don't have the time... sorry! ;-)
 
 ==== 3. Boot the kernel ====
 
@@ -125,12 +127,13 @@ Connect the phone to the USB cable if it wasn't done yet and wait some few secon
 
 You should now '''hold the vol+''' button, then, on the computer, as root or sudo-ing, run:
            
-# ./boot_usb genblob 0            
+ # ./boot_usb genblob 0            
 
-Now you enter gen-blob's "USB" mode. And gen-blob can load a kernel to ram, exaclty as it has itself be loaded.
+Now release the VOL+ key, this was fast! You just entered gen-blob's "USB" mode. And gen-blob can load a kernel to ram, exaclty as it has itself be loaded.
+
 So you just need a last boot_usb command to do the job for you:
 
-# ./boot_usb zImage-xxxx <machid> "<optionnals commandline parameters (quoted)>"
+ # ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>"
 
 After a short time the screen should go funny, then you should see Linux booting!
 
@@ -144,15 +147,20 @@ Machine id's (machid):
 * A910	-	1745
 see [http://www.arm.linux.org.uk/developer/machines/download.php] for more details.
 
-Optionnal command line parameters: 
+'''Optionnal command line parameters:''' 
 
-Could be any standart kernel command line (so called "CMDLINE") parameters in quotes.
-i.e.: "rootfstype=ext3" Overide default's rootfs partition's filesystem type...
+Could be any standart kernel command line (so called "CMDLINE") parameters (in quotes and separated by a space in the bootusb command).
 
-Defaults parameters can be easily find [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example browsing the openezx git source code] searching for the "CONFIG_CMDLINE".
+i.e.: Overide default filesystem type for rootfs partition:
+ rootfstype=ext3
+Network configuration can be overidden to suit your configuration as well with the "IP" param.: 
+ ip=<client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>
+See also [[Rootfs on NFS]] for the nfs-specifics parameters.
+
+Defaults parameters can be easily find and changes rarely [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example browsing the openezx git source code] searching for the "CONFIG_CMDLINE".
 
 ==== 4. Network configuration:==== 
-see [[Rootfs_on_NFS]] network configuration (except bridging).
+See [[Rootfs on NFS]] for network configuration that can be used as well for ssh-ing, telnet-ing, etc...into the phone. (Fixme: add bridging setup)
 
 == Creating the Partitions ==
 
