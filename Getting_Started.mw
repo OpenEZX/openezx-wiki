@@ -87,11 +87,10 @@ For instuctions on how to build a custom OpenEzx kernel, refer to [[Kernel hacki
 
 ==== 2. Get bootusb and genblob ====
 
-You can download bootusb (last revision 2367 at the time of writing) form here [http://frederi.ifrance.com/bootusb2367]
-Pick genblob from [http://peoples.openezx.org/wyrm/gen-blob
+You can download bootusb (last revision 2367 at the time of writing) form [http://frederi.ifrance.com/bootusb2367 here].
+Pick genblob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
-You must always use a recent bootusb revision, so install from the source.
-
+You must always use a recent bootusb revision, so install from the sources like this:
 Install svn, then:
  # svn co http://svn.openezx.org/trunk/src/host/boot_usb/
  # autogen.sh
@@ -99,17 +98,17 @@ Install svn, then:
  # make
  # chmod +x boot_usb
 
-This now should build a file named "boot_usb"
+This should have created a file named "boot_usb"
 
-Optionnaly you can append the right revision number to its file name.
+Optionnaly you can append the right svn's revision number to its file name.
+ # mv boot_usb bootUsb-Rxxxx (where xxxx is the right revision number)
 
-If this don't work, maybe you need a configured for ARM linux kernel tree (and at least version 2.6.27) to point to. 
+If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
+From kernel version 2.6.28, you shouldn't need to configure the kernel at all for this.
 
-
-Simply get genblob'source the same way with:
-# svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
-Building will not be described yet, i don't have the time, sorry ;-)
-Here we are just trying genblob for its "usb" mode, more modes and infos lives in [[Dual boot]].
+Simply get genblob's sources the same way with:
+ # svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
+Building genblob will not be described yet,here... i don't have the time, sorry ;-)
 
 ==== 3. Boot the kernel ====
 
