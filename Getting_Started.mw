@@ -1,0 +1,200 @@
+= How to try OpenEZX 2.6.xx kernel on an EZX phone=
+
+=== Warning - This, even if it change nothing on your original phone's software, could easily damage your phone. ===
+
+WARNING: Following these steps should not break your phone, but there is a possibility it could. They didn't break mine, nor many others who have done it before me. The authors, nor the OpenEZX Project accept no responsibility for any problems (with your phone, or otherwise!) that might arise as a result of following these instructions.
+
+As long as you don't write to the [[Internal Flash]], either to store the alternative rootfs, or change or add a bootloader, OpenEzx does not interfere with your phone's original software (though does allow you to, so be careful!) and may not avoid your phone's warranty.
+
+These EZX phones are very specific devices, so there has been a lot of work to find a way to boot a custom and (almost) fully functionnal 2.6 kernel, near from what you do when you compile a new kernel on a linux box. But there are things (like bootloader) that remains unchanged on the phone and are specifics to those devices.
+This how-to will try to describe the specifics workarounds and tools used to boot an OpenEzx kernel and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], or even, '''with some modifications''' on our kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), [http://code.google.com/android/ Android], and any alternative systems that may run in our phones.
+
+Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis, can be build with their OpenEmbedded's "distribution" scripts collection and images may also be downloadable at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
+
+==== What we are going to do ====
+* Build or download a precompiled kernel.
+* Build or download a precompiled rootfs.
+* Format the TransFlash card for use with OEZX.
+* Unpack the rootfs image to the second partition.
+* Send an OpenEzx kernel to your phone for booting it via usb with the help of "bootusb" a program using motorola's special flashing protocol.
+* Review the kernel's functionnalities, and the differents parameters you can add when launching it (CMDLINE parameters).
+* Enhance the phone's distros, installing software with ipkg.
+
+Note that because we're booting the phone via usb cable the [[Baseband Processor]] starts in "flash mode", so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with a different method.
+Also, there is a bug in the mainline pxa-udc's driver (not used in openezx's 2.6.25 or older kernels) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a "second stage bootloader", gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.
+
+'''Gen-blob can be launched with boot-usb''' for testing, before the kernel itself with the special command "./bootusb gen-blob 0" (without quotes) I'll explain later in this page. 
+
+If you want to go further and '''flash your phone with gen-blob''', the "second stage bootloader", you can follow this page [[Dual boot]].
+The pros will be that you'll be able to use OpenEzx without a computer attached to usb, the cons, is -only- that you'll need an Sd/Mmc card to launch the original Motorola's software (as at the moment there is no other solutions), and that you'll have to flash gen-blob itself in the internal flash, this will of course '''avoid the warranty'''.
+
+== Putting an image on a TransFlash Card ==
+
+==== 1. Download a recent image from OpenEmbedded ====
+There are pre-compiled images and kernels for the A780 (that may works also with others phones) in sub folders at
+
+http://www.angstrom-distribution.org/unstable/images/a780/
+
+For what we are planning to do any of the images should be acceptable. Choose the one you want and download it.
+
+''For the sake of this tutorial I will be assuming it is in ~/oezx/images'' If you save it to a different location remember to change the commands you put into the command line.
+
+Note that [http://people.openezx.org Developper's web spaces] are also generally full of testing images that you just have to unpack in your sd to try :) .
+In the [[Rootfs On SD]] page, there is a rootfs "collection".
+
+==== 2. Make a partition on your card for the rootfs ====
+
+You need two partitions on your card. The kernels we will use are preconfigured to boot from the SECOND partition
+The card layout will be as follows
+
+ 1. FAT filesystem to be used for media files with the original firmware - could also be mounted under oezx
+ 2. EXT2 filesystem to be used as '/' with OpenEZX
+
+If you aren't familiar with how to create these partitions then skip to the [[#Creating the Partitions]] section at the end of this tutorial.
+
+==== 3. Unpacking the image on to the card ====
+
+Assuming you have followed the procedure outlined in [[#Creating the Partitions]] below you will need to mount the new partions. As root or using sudo, type
+
+''Assuming your card is at /dev/sda''
+
+ mkdir /media/sda2
+ mount -t ext2 /dev/sda2 /media/sda2
+ cd /media/sda2
+
+And otherwise, ensure you have mounted the second partition of the card and entered the folder it is mounted to. Then type (as root, or using sudo)
+
+ tar jxvpf ~/oezx/images/[NAME OF YOUR IMAGE]
+ sync
+ cd ~/
+ umount /media/sda2
+
+== Booting a Kernel using bootusb and gen-blob ==
+
+bootusb is a tool written by the OpenEZX developers that uploads a kernel to a Motorola EZX phone using the USB cable. More info about this process lives at [[Bootloader]]
+
+==== 1. Get a kernel to boot ====
+''History: until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decide to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the machine independant kernel, and this was working with differents machine id's than now. (this due to a double registration in kernel...now fixed)
+''
+*So now an OpenEzx kernel needs a machine id to properly work on the desired phone.
+See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
+
+You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config in buildlog-XX file)] for quickly give a try at a recent kernel.
+
+Older kernels will maybe respond to olds machids (i.e. 876 for A1200) and maybe not work on all phones, so '''be very carefull'''!
+
+
+==== 2. Get bootusb and genblob ====
+
+You can download bootusb (last revision 2367 at the time of writing) form here [http://frederi.ifrance.com/bootusb2367]
+Pick genblob from [http://peoples.openezx.org/wyrm/gen-blob
+
+You must always use a recent bootusb revision, so install from the source.
+
+Install svn, then:
+ # svn co http://svn.openezx.org/trunk/src/host/boot_usb/
+ # autogen.sh
+ # ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
+ # make
+ # chmod +x boot_usb
+
+This now should build a file named "boot_usb"
+
+Optionnaly you can append the right revision number to its file name.
+
+If this don't work, maybe you need a configured for ARM linux kernel tree (and at least version 2.6.27) to point to. 
+
+
+Simply get genblob'source the same way with:
+# svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
+Building will not be described yet, i don't have the time, sorry ;-)
+Here we are just trying genblob for its "usb" mode, more modes and infos lives in [[Dual Boot]].
+
+==== 3. Boot the kernel ====
+
+First you need to put the phone in the right mode. Ensure the flash card you prepared earlier is inside it, then:
+
+* Turn off the phone
+* Hold down the jog-dial and the camera button or on some others phones hold the VR key instead.
+* push the power button
+** This should be enought to switch the phone in "'''flash mode'''"
+A blue screen with some writing on it should appear on Gen1 devices.
+A red screen should appear in Gen2 devices.
+
+Connect the phone to the USB cable if it wasn't done yet and wait some few second for the device to be properly enumerated by your box.
+
+You should now '''hold the vol+''' button, then, on the computer, as root or sudo-ing, run:
+           
+# ./bootusb genblob 0            
+
+Now you enter gen-blob's "USB" mode. And gen-blob can load a kernel to ram, exaclty as it has itself be loaded.
+So you just need a last bootusb command to do the job for you:
+
+# ./bootusb zImage-xxxx <machid> "<optionnals commandline parameters (quoteds)>"
+
+After a short time the screen should go funny, then you should see Linux booting!
+
+Machine id's (machid): 
+
+A780		1740
+e680		1741
+A1200		1742
+E6		1743
+E2		1744
+A910		1745
+see [http://www.arm.linux.org.uk/developer/machines/download.php] for more details.
+
+Optionnal command line parameters: 
+
+Could be any standart kernel command line (so called "CMDLINE") parameters in quotes.
+i.e.: "rootfstype=ext3" Overide default's rootfs partition's filesystem type...
+
+Defaults parameters can be easily find [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example browsing the openezx git source code] searching for the "CONFIG_CMDLINE".
+
+==== 4. Network configuration:==== 
+see [[Rootfs_on_NFS]] network configuration (except bridging).
+
+== Creating the Partitions ==
+
+(copied from goxboxlive's howto here http://www.linuxtogo.org/~goxboxlive/A780/images/README)
+The TRANSFLASH card needs to be partitioned into two partitions: one small FAT/EXT2 partition, and one EXT2 partition used as root file system. I'll assume that the block device of the TRANSFLASH card is called /dev/sda. Replace this with the correct device on your system.
+
+==== Create partitions, for example a 300MB /dev/sda1 and /dev/sda2 using the rest ====
+
+Open a shell and type:
+
+ fdisk /dev/sda
+ h				<-- just to have a look around :)
+ n
+ p
+ <use default/ press enter>		
+  1
+ +300M
+ n
+ p
+ 2
+ <use default/ press enter>	
+ <use default/ press enter>	
+  w
+
+==== Create file systems, a VFAT/EXT2 on /dev/sda1 and EXT2 on /dev/sda2: ====
+
+ mkdosfs /dev/sda1 (for VFAT) or mke2fs /dev/sda1 (for EXT2)
+ mke2fs /dev/sda2
+
+==== Unpack the GUI-image onto sda2: ====
+
+ mount -t ext2 /dev/sda2 /mnt
+ cd /mnt
+ tar jxvpf "/PATH_TO_the GUI image Qtopia/Openmoko or whatever"
+ sync (wait until it finish)
+ cd /	
+ umount /mnt
+
+== Sources ==
+Thanks to goxboxlive's tutorials here
+http://www.linuxtogo.org/~goxboxlive/A780/bootloader/HOWTO_FLASH_A780.TXT 
+and here
+http://www.linuxtogo.org/~goxboxlive/A780/images/README
+
+wyrm for his help on motorolafans forum and irdakabel for help on irc.
