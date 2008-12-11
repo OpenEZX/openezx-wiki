@@ -117,7 +117,7 @@ First you need to put the phone in the right mode. Ensure the flash card you pre
 * Turn off the phone
 * Hold down the jog-dial and the camera button or on some others phones hold the VR key instead.
 * push the power button
-** This should be enought to switch the phone in "'''flash mode'''"
+** This should be enough to switch the phone in "'''flash mode'''"
 A blue screen with some writing on it should appear on Gen1 devices.
 A red screen should appear in Gen2 devices.
 
@@ -125,12 +125,12 @@ Connect the phone to the USB cable if it wasn't done yet and wait some few secon
 
 You should now '''hold the vol+''' button, then, on the computer, as root or sudo-ing, run:
            
-# ./bootusb genblob 0            
+# ./boot_usb genblob 0            
 
 Now you enter gen-blob's "USB" mode. And gen-blob can load a kernel to ram, exaclty as it has itself be loaded.
-So you just need a last bootusb command to do the job for you:
+So you just need a last boot_usb command to do the job for you:
 
-# ./bootusb zImage-xxxx <machid> "<optionnals commandline parameters (quoteds)>"
+# ./boot_usb zImage-xxxx <machid> "<optionnals commandline parameters (quoted)>"
 
 After a short time the screen should go funny, then you should see Linux booting!
 
