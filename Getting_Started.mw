@@ -151,7 +151,7 @@ After a short time the screen should go funny, then you should see Linux booting
 gen-blob have also a fixed machine id, it's 0.
 See [http://www.arm.linux.org.uk/developer/machines/download.php] for more details.
 
-'''Optionnal command line parameters:''' 
+'''Optional command line parameters:''' 
 
 Could be any standart kernel command line (so called "CMDLINE") parameters (in quotes and separated by a space in the bootusb command).
 
