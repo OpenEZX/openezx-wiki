@@ -74,8 +74,8 @@ And otherwise, ensure you have mounted the second partition of the card and ente
 bootusb is a tool written by the OpenEZX developers that uploads a kernel to a Motorola EZX phone using the USB cable. More info about this process lives at [[Bootloader]]
 
 ==== 1. Get a kernel to boot ====
-''History: until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decide to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the machine independant kernel, and this was working with differents machine id's than now. (this due to a double registration in kernel...now fixed)
-''
+History: ''until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decide to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the machine independant kernel, and this was working with differents machine id's than now. (this due to a double registration in kernel...now fixed)''
+
 *So now an OpenEzx kernel needs a machine id to properly work on the desired phone.
 See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
 
@@ -83,6 +83,7 @@ You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's
 
 Older kernels will maybe respond to olds machids (i.e. 876 for A1200) and maybe not work on all phones, so '''be very carefull'''!
 
+For instuctions on how to build a custom OpenEzx kernel, refer to [[Kernel hacking - linux-2.6]].
 
 ==== 2. Get bootusb and genblob ====
 
