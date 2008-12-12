@@ -6,8 +6,9 @@ WARNING: Following these steps should not break your phone, but there is a possi
 
 As long as you don't write to the [[Internal Flash]], either to store the alternative rootfs, or change or add a bootloader, OpenEzx does not interfere with your phone's original software (though does allow you to, so be careful!) and may not avoid your phone's warranty.
 
-These EZX phones are very specific devices, so there has been a lot of work to find a way to boot a custom and (almost) fully functionnal 2.6 kernel, near from what you do when you compile a new kernel on a linux box. But there are things (like bootloader) that remains unchanged on the phone and are specifics to those devices.
-This how-to will try to describe the specifics workarounds and tools used to boot an OpenEzx kernel and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], or even, '''with some modifications''' on our kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), [http://code.google.com/android/ Android], and any alternative systems that may run in our phones.
+Smartphones are highly integrated and very specific devices, this is why trying to build and boot a custom 2.6 kernel differs a little from the things you do when you compile a new kernel on a linux box. There are things (like specifics bootloader) that remains unchanged on the phone and forces us to use specific softwares especially (and well!) designed for this Motorola's hardware.
+
+This how-to will try to describe the specifics workarounds and tools used to boot an OpenEzx kernel and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], or even, '''with some quite discutables modifications''' on our kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), the very last, [http://code.google.com/android/ Android], and any alternative systems that may run in our phones.
 
 
 ==== What we are going to do ====
@@ -22,7 +23,7 @@ This how-to will try to describe the specifics workarounds and tools used to boo
 Note that because we're booting the phone via usb cable the [[Baseband Processor]] starts in "flash mode", so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with a different method.
 Also, there is a bug in the mainline pxa-udc's driver (not used in openezx's 2.6.25 or older kernels) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a second stage bootloader, gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.
 
-'''Gen-blob can be launched with boot-usb''' for testing, (before sending the kernel itself) with the special command "./boot_usb gen-blob 0" (without quotes) I'll explain later in this page. 
+'''Gen-blob will be launched with boot-usb''' for testing, (before sending the kernel itself) with the special command "./boot_usb gen-blob 0" (without quotes) I'll explain later in this page. 
 
 If you want to go further and '''flash your phone with gen-blob''', the "second stage bootloader", you can follow this page [[Dual boot]].
 The pros will be that you'll be able to use OpenEzx without a computer attached to usb, the cons, is -only- that you'll need an Sd/Mmc card to launch the original Motorola's software (as at the moment there is no other solutions), and that you'll have to flash gen-blob itself in the internal flash, this will of course '''avoid the warranty'''.
