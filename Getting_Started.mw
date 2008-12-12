@@ -8,7 +8,7 @@ As long as you don't write to the [[Internal Flash]], either to store the altern
 
 Smartphones are highly integrated and very specific devices, this is why trying to build and boot a custom 2.6 kernel differs a little from the things you do when you compile a new kernel on a linux box. There are things (like specifics bootloader) that remains unchanged on the phone and forces us to use specific softwares especially (and well!) designed for this Motorola's hardware.
 
-This how-to will try to describe the specifics workarounds and tools used to boot an OpenEzx kernel and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], or even, '''with some quite discutables modifications''' on our kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), the very last, [http://code.google.com/android/ Android], and any alternative systems that may run in our phones.
+This how-to will try to describe the specifics workarounds and tools used to boot an OpenEzx kernel and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], or even, '''with some quite discutables modifications''' on our kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), the very last, partially closed source, [http://code.google.com/android/ Android], and any alternative systems that may run in our phones.
 
 
 ==== What we are going to do ====
@@ -79,7 +79,7 @@ OpenEzx's bootusb is a tool that uploads a kernel to a Motorola EZX phone, using
 Here we are just trying gen-blob for its "usb" mode, more modes and infos on gen-blob lives in [[Dual boot]].
 
 ==== 1. Get a kernel to boot ====
-History: ''until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decided to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independant kernel', and this was working with differents machine id's than now. (this due to a double registration in kernel's database...now fixed)''
+History: ''until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decided to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independant kernel', and this was working with differents machine id's than now. (this due to a double registration in kernel's database...now fixed). Note also that old kernels sometimes don't support any commandline parameters.''
 
 *So now an OpenEzx kernel needs a machine id to properly work on the desired phone.
 See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
@@ -105,7 +105,7 @@ Install svn, then:
 
 This should have created a file named "boot_usb"
 If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
-From kernel version 2.6.28, you shouldn't need to configure the kernel at all for this.
+From kernel version 2.6.28rc1, you shouldn't need to configure the kernel at all for this.
 
 Optionnaly you can append the right svn's revision number to its file name.
  # mv boot_usb bootUsb-Rxxxx (where xxxx is the right revision number)
@@ -176,13 +176,13 @@ The TRANSFLASH card needs to be partitioned into two partitions: one FAT/EXT2 pa
 Open a shell and launch the GNU fdisk utility:
 
  # fdisk -l
-*identify your Sd/Mmc card, then, assuming you find this is /dev/mmcblk0
+*identify your Sd/Mmc card, then, assuming you find this is: /dev/mmcblk0
  # fdisk /dev/mmcblk0
-*Delete all partition of the sd (datas will be lost), (push [d] until there is no more parts). 
-*Then create a first partiton of a size of 600MB. (push [n]).
-*Then create a second partition with the rest of the leaving size, (push [n] again).
-*Change the first partition to type "b" (vfat) and the second to type "83" (linux), (by pushing [t] this time).
-*Write the changes and exit, (push [w]).
+*Delete all partition of the sd (datas will be lost), ''(push [d] until there is no more parts).'' 
+*Then create a first partiton of a size of 600MB. ''(push [n]).''
+*Then create a second partition with the rest of the leaving size, ''(push [n] again).''
+*Change the first partition to type "b" (vfat) and the second to type "83" (linux), ''(by pushing [t], this time).''
+*Write the changes and exit, ''(push [w]).''
 
 ==== Create file systems, a VFAT/EXT2 on /dev/sda1 and EXT2 on /dev/sda2: ====
 
@@ -190,7 +190,8 @@ Open a shell and launch the GNU fdisk utility:
  # mke2fs /dev/sda2
 
 == Other tutorials (outdated) ==
-goxboxlive's tutorials here
+goxboxlive's tutorials here, describing a flash method using an OpenEzx kernel and mtd-utils.
+
 http://www.linuxtogo.org/~goxboxlive/A780/bootloader/HOWTO_FLASH_A780.TXT 
 and here
 http://www.linuxtogo.org/~goxboxlive/A780/images/README
