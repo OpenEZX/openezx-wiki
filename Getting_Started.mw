@@ -16,14 +16,14 @@ This how-to will try to describe the specifics workarounds and tools used to boo
 * Build or download a precompiled rootfs.
 * Format the TransFlash card for use with OEZX.
 * Unpack the rootfs image to the second partition.
-* Send an OpenEzx kernel to your phone for booting it via usb with the help of "bootusb" a program using motorola's special flashing protocol.
+* Send an OpenEzx kernel to your phone for booting it via usb with the help of "boot_usb" a program using motorola's special flashing protocol.
 * Review the kernel's functionnalities, and the differents parameters you can add when launching it (CMDLINE parameters).
 * Enhance the phone's distros, installing software with ipkg.
 
 Note that because we're booting the phone via usb cable the [[Baseband Processor]] starts in "flash mode", so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with a different method.
 Also, there is a bug in the mainline pxa-udc's driver (not used in openezx's 2.6.25 or older kernels) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a second stage bootloader, gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.
 
-'''Gen-blob will be launched with boot-usb''' for testing, (before sending the kernel itself) with the special command "./boot_usb gen-blob 0" (without quotes) I'll explain later in this page. 
+'''Gen-blob will be launched with boot_usb''' for testing, (before sending the kernel itself) with the special command "./boot_usb gen-blob 0" (without quotes) I'll explain later in this page. 
 
 If you want to go further and '''flash your phone with gen-blob''', the "second stage bootloader", you can follow this page [[Dual boot]].
 The pros will be that you'll be able to use OpenEzx without a computer attached to usb, the cons, is -only- that you'll need an Sd/Mmc card to launch the original Motorola's software (as at the moment there is no other solutions), and that you'll have to flash gen-blob itself in the internal flash, this will of course '''avoid the warranty'''.
@@ -50,7 +50,7 @@ In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
 You need two partitions on your card. The kernels we will use are preconfigured to boot from the SECOND partition
 The card layout will be as follows
 
- 1. FAT filesystem to be used for media files with the original firmware - could also be mounted under oezx, and to store genblob's boot menu.
+ 1. FAT filesystem to be used for media files with the original firmware - could also be mounted under oezx, and to store gen-blob's boot menu.
  2. EXT2 filesystem to be used as '/' with OpenEZX
 
 If you aren't familiar with how to create these partitions then skip to the [[#Creating the Partitions]] section at the end of this tutorial.
@@ -72,9 +72,9 @@ And otherwise, ensure you have mounted the second partition of the card and ente
  cd ~/
  umount /media/sda2
 
-== Booting a Kernel using bootusb and gen-blob ==
+== Booting a Kernel using boot_usb and gen-blob ==
 
-OpenEzx's bootusb is a tool that uploads a kernel to a Motorola EZX phone, using the USB cable. More info about this process lives at [[Bootloader]]
+OpenEzx's boot_usb is a tool that uploads a kernel to a Motorola EZX phone, using the USB cable. More info about this process lives at [[Bootloader]]
 
 Here we are just trying gen-blob for its "usb" mode, more modes and infos on gen-blob lives in [[Dual boot]].
 
@@ -90,12 +90,12 @@ Older kernels will maybe respond to olds machids (i.e. 876 for A1200) and maybe 
 
 For instructions on how to build a custom OpenEzx kernel, refer to [[Kernel hacking - linux-2.6]].
 
-==== 2. Get bootusb and genblob ====
+==== 2. Get boot_usb and gen-blob ====
 
-You can download bootusb (last revision 2367 at the time of writing) form [http://frederi.ifrance.com/bootusb2367 here].
-Pick genblob from [http://peoples.openezx.org/wyrm/gen-blob here].
+You can download boot_usb (last revision 2367 at the time of writing) from [http://frederi.ifrance.com/bootusb2367 here].
+Pick gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
-You must always use a recent bootusb revision, so install from the sources like this:
+You must always use a recent boot_usb revision, so install from the sources like this:
 Install svn, then:
  # svn co http://svn.openezx.org/trunk/src/host/boot_usb/
  # autogen.sh
@@ -108,12 +108,12 @@ If this don't work, make sure you pointed to a configured for ARM linux kernel's
 From kernel version 2.6.28rc1, you shouldn't need to configure the kernel at all for this.
 
 Optionnaly you can append the right svn's revision number to its file name.
- # mv boot_usb bootUsb-Rxxxx (where xxxx is the right revision number)
+ # mv boot_usb BootUsb-Rxxxx (where xxxx is the right revision number)
 
 
-Simply get genblob's sources the same way with:
+Simply get gen-blob's sources the same way with:
  # svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
-Building genblob will not be described yet,here... i don't have the time... sorry! ;-)
+Building gen-blob will not be described yet,here... i don't have the time... sorry! ;-)
 
 ==== 3. Boot the kernel ====
 
@@ -131,9 +131,10 @@ Wait some few seconds for the device to be properly enumerated by your box.
 
 * Now '''hold the vol+''' button, then, on the computer, as root or sudo-ing, run:
            
- # ./boot_usb genblob 0            
+ # ./boot_usb gen-blob 0            
 
 Ok, release the VOL+ key, this was fast! You just entered gen-blob's "USB" mode. And gen-blob can load a kernel to ram, exaclty as it has itself be loaded.
+You should see "USB Ready" in the top of the screen at this step.
 
 * So you just need a last boot_usb command that will do the job for you:
 
@@ -154,7 +155,7 @@ See [http://www.arm.linux.org.uk/developer/machines/download.php] for more detai
 
 '''Optional command line parameters:''' 
 
-Could be any standart kernel command line (so called "CMDLINE") parameters (in quotes and separated by a space in the bootusb command).
+Could be any standart kernel command line (so called "CMDLINE") parameters (in quotes and separated by a space in the boot_usb command).
 
 i.e.: Overide default filesystem type for rootfs partition:
  rootfstype=ext3
