@@ -92,7 +92,7 @@ For instructions on how to build a custom OpenEzx kernel, refer to [[Kernel hack
 
 ==== 2. Get boot_usb and gen-blob ====
 
-You can download boot_usb (last revision 2367 at the time of writing) from [http://frederi.ifrance.com/bootusb2367 here].
+You can download boot_usb (last revision 2367 at the time of writing) from [http://openezx.org/download/boot_usb-0.3.tar.gz here].
 Pick gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
 You must always use a recent boot_usb revision, so install from the sources like this:
@@ -107,13 +107,8 @@ This should have created a file named "boot_usb"
 If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
 From kernel version 2.6.28rc1, you shouldn't need to configure the kernel at all for this.
 
-Optionnaly you can append the right svn's revision number to its file name.
- # mv boot_usb BootUsb-Rxxxx (where xxxx is the right revision number)
-
-
-Simply get gen-blob's sources the same way with:
- # svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
-Building gen-blob will not be described yet,here... i don't have the time... sorry! ;-)
+Get gen-blob's sources the same way with:
+ # svn co http://svn.openezx.org/trunk/src/blob/gen-blob/ 
 
 ==== 3. Boot the kernel ====
 
