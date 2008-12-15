@@ -2,7 +2,7 @@ In order to crosscompile you will need a compiler/linker/archiver, include files
 
 === Toolchain ===
 
-To crosscompile your own software for the EZX phone, you need a toolchain. There are currenly two toolchains floating around, both based on Dan Kegel's "crosstool" scripts to bootstrap the tools. The
+To crosscompile your own software for the '''original firmware''' present in EZX phones, you need a toolchain. There are currenly two toolchains floating around, both based on Dan Kegel's "crosstool" scripts to bootstrap the tools. The
 only important note is that the default ARM targets for crosstool will 
 not work on this phone -- it uses a different word order ("VFP") for
 the floating point emulation.  The scripts at the linked site automatically apply a needed patch to binutils.
