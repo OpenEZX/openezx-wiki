@@ -7,7 +7,7 @@ only important note is that the default ARM targets for crosstool will
 not work on this phone -- it uses a different word order ("VFP") for
 the floating point emulation.  The scripts at the linked site automatically apply a needed patch to binutils.
 
-There is also http://lsb.blogdns.com/ezx-crosstool (remember to apply [http://people.openezx.org/stefan/patches/update_to_crosstool-0.42_and_PATH_MAX_fix.diff this patch]) which can be used together with http://lsb.blogdns.com/ezx-devkit or [http://sourceforge.net/projects/libxze2 libxze2] to build native GUI apps (i.e. they don't need opie).
+There is also http://lsb.blogdns.com/ezx-crosstool (remember to apply [http://people.openezx.org/ao2/update_to_crosstool-0.42_and_PATH_MAX_fix.diff this patch]) which can be used together with http://lsb.blogdns.com/ezx-devkit or [http://sourceforge.net/projects/libxze2 libxze2] to build native GUI apps (i.e. they don't need opie).
 
 If you are using an RPM-based Linux distribution, you can try the toolchain available at http://www.codeminders.com/ezx/. Binary RPMs there are tested of Redhat Fedora Core 5 x86_64 architecture. You should be able to rebuild from SRPMs on ther distributions as well. SRPM produces several RPMs, but mostly likely you just need to install  "crosstool-gcc-3.3.2-glibc-2.3.2-arm-linux-devel" if you just want to compile applications. RPMs are provided by [http://www.codeminders.com Codeminders].
 
