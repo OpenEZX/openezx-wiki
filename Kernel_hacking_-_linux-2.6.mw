@@ -2,6 +2,8 @@ Please notice that the development is still in an early state. You should know w
 
 We are using [http://repo.or.cz/w/topgit.git topgit] to manage our patches in a git tree. Please make sure you have it installed before starting development.
 
+The preferred toolchain for building the kernel is the openembedded toolchain (see [[Crosscompile]]).  However, it is still recommended that the kernel be built by hand (see instructions below) rather than using bitbake.
+
 == Building OpenEZX kernel ==
 * Get the kernel sources:
  git clone git://git.openezx.org/openezx.git
