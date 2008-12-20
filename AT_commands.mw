@@ -481,6 +481,8 @@ This is slightly related to the standard +CREG event. Value is not in conformanc
 
 ====AT+EPMS?====
 
+* Query the number of SMS slots on the SIM card. '''Note''': This command will only work the first time.
+
 ====AT+EPMS:%16D====
 
 ====AT+EPOM=%d,%d====
