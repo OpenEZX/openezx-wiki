@@ -485,6 +485,8 @@ This is slightly related to the standard +CREG event. Value is not in conformanc
 
 ====AT+EPMS:%16D====
 
+* Response to +EPMS? Value is number of SMS slots on SIM.
+
 ====AT+EPOM=%d,%d====
 
 * AT+EPOM=1,0
