@@ -1,0 +1,31 @@
+== Entering boot loader ==
+
+To enter boot loader mode turn off the ZN5. Then press and hold both the '*' and '#' buttons and press the power button.
+
+The screen will display:<br/>
+<pre>
+Bootloader
+06.2A
+
+Battery OK
+OK to Program
+Connect USB
+Data Cable
+</pre>
+
+Connect the USB cable and the Display will show "Transfer Mode: USB". 
+
+== USB modes ==
+
+Set your ZN5 USB setting to modem, connect to /dev/ttyACM0 (you'll need to [[Get_a_shell#Preparing_the_host|Prepare the host]]) and then [[Get_a_shell#Change_Modem_Mode|Change the Modem Mode]] with one of these values:
+
+* AT+MODE=0 Seems to be the current (ACM) mode
+* AT+MODE=8 Networking (''IP address is '''???.???.???.???'' see: [[Get a shell]]'')
+* AT+MODE=24 USB mass storage
+* AT+MODE=26 PTP Picture transfer protocol
+
+Other values return ERROR and don't seem to have any effect. The above values cause minicom to "return OK", the phone beeps and minicom quits. So far this is like the [[Razr2]], but there must be a missing step to discover.
+
+== See also ==
+
+The [[Razr2|RAZR2 V8]] runs a similar Linux platform on the same processor.
