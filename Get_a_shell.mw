@@ -148,13 +148,13 @@ Install minicom if it's not installed. On Debian, I used:
 
 Start minicom. Type '''Control-A''' and then '''o''' to get the setup screen.
 Set the serial port to '''/dev/ttyACM0'''.  
-Also have a look at the serial settings, I needed to adjust them to
-'''38400 8N1''' (I am normally using 9600 8N1, which the A780 did not like).
+Also have a look at the serial settings. For the A780, you may need to adjust them to.
+'''38400 8N1'''. The default of '''115200 8N1''' seems to work for the ZN5.
 Save that as the default. Exit out of minicom with '''Control-A''' '''x''' and start it again.
 
 At this point you can type Hayes modem commands to the phone. This is useful for GPRS, etc., but that's another tutorial.
 
-Type '''AT+mode=99''' followed by carriage return. The phone goes out of modem mode at this point, so you won't get an "OK". (If +mode=99 does not work, try +mode=13. That seems to do the trick on a1200 here).
+Type '''AT+mode=99''' followed by carriage return. The phone goes out of modem mode at this point, so you won't get an "OK". (Or try +mode=13 on an a1200 or +mode=8 on a RAZR2 V8 or ZN5).
 
 Exit minicom.
 
