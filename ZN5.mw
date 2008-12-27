@@ -26,6 +26,21 @@ Set your ZN5 USB setting to modem, connect to /dev/ttyACM0 (you'll need to [[Get
 
 Other values return ERROR and don't seem to have any effect. The above values cause minicom to "return OK", the phone beeps and minicom quits. So far this is like the [[Razr2]], but there must be a missing step to discover.
 
-== See also ==
+== Compatible applications ==
 
-The [[Razr2|RAZR2 V8]] runs a similar Linux platform on the same processor.
+The following applications have been reported to install and run on with the software installed shipped by Motorola. (The T-mobile branded ZN5 [http://tnkgrl.wordpress.com/2008/12/04/motorola-zn5-the-good-the-bad-and-the-ugly/ reportedly restricts network access for Java applications]. 
+
+* Google Maps for Mobile
+* Opera Mini 4.2 (unsigned)
+* Gmail Mobile
+* ShoZu (a chat program, comes pre-installed)
+* Nimbuzz, a chat program
+* Gizmo, a chat and VOIP program
+* MidpSSH
+* [http://www.getjar.com/products/1004/dropOff dropOff], a game
+* [http://www.getjar.com/products/4808/Pipes Pipes], a game
+
+== See Also ==
+
+* The [[Razr2|RAZR2 V8]] runs a similar Linux platform on the same processor.
+* [http://www.getjar.com/software/Motorola/Motozine_ZN5 GetJar.com downloads for the ZN5] should run on the ZN5, but not all have been tested
