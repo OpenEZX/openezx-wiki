@@ -126,6 +126,8 @@ Plug the phone and the host together with a USB cable. On the console you should
 
 You can play back the console messages with the '''dmesg''' command. If you look in /proc/bus/usb/devices, you will find a device with a manufacturer ID of ''Motorola'' and a product ID of ''Motorola USB Modem''.
 
+If are using Ubuntu Gutsy or Hardy releases, the zaurus module may be missing, due to [https://bugs.launchpad.net/ubuntu/+source/linux-source-2.6.22/+bug/162003 this bug]. It is reportedly fixed in Intrepid Ibex.
+
 == Change Modem Mode  ==
 
 In A68 you can simply change the modem type by visiting the Settings applet on the phone and
