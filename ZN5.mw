@@ -169,7 +169,7 @@ Linux (none) 2.6.10_dev  armv6l unknown
  Hardware        : Motorola Product - SCM-A11 Phone
  Revision        : 0021
 
-== cat /proc/cmdline ==
+=== cat /proc/cmdline ===
 
   noinitrd console=/dev/null rw mem=58M@0x90000000 init=/linuxrc root=/dev/mtdblock/root brdrev=P0A   
   motobldlabel=R6637_G_81.03.0DR   
