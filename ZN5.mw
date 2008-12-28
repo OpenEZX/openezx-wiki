@@ -26,6 +26,157 @@ Set your ZN5 USB setting to modem, connect to /dev/ttyACM0 (you'll need to [[Get
 
 Other values return ERROR and don't seem to have any effect. The above values cause minicom to "return OK", the phone beeps and minicom quits. So far this is like the [[Razr2]], but there must be a missing step to discover.
 
+== Proc reports ==
+
+=== uname -a ===
+
+Linux (none) 2.6.10_dev  armv6l unknown
+
+=== cat /proc/crypto ===
+
+  name         : cipher_null
+  module       : kernel
+  type         : cipher
+  blocksize    : 1
+  min keysize  : 0
+  max keysize  : 0
+  
+  name         : digest_null
+  module       : kernel
+  type         : digest
+  blocksize    : 1
+  digestsize   : 0
+  
+  name         : compress_null
+  module       : kernel
+  type         : compression
+  
+  name         : md4
+  module       : kernel
+  type         : digest
+  blocksize    : 64
+  digestsize   : 16
+  
+  name         : md5
+  module       : kernel
+  type         : digest
+  blocksize    : 64
+  digestsize   : 16
+  
+  name         : sha1
+  module       : kernel
+  type         : digest
+  blocksize    : 64
+  digestsize   : 20
+  
+  name         : sha256
+  module       : kernel
+  type         : digest
+  blocksize    : 64
+  digestsize   : 32
+  
+  name         : sha384
+  module       : kernel
+  type         : digest
+  blocksize    : 96
+  digestsize   : 48
+  
+  name         : sha512
+  module       : kernel
+  type         : digest
+  blocksize    : 128
+  digestsize   : 64
+  
+  name         : des
+  module       : kernel
+  type         : cipher
+  blocksize    : 8
+  min keysize  : 8
+  max keysize  : 8
+  
+  name         : des3_ede
+  module       : kernel
+  type         : cipher
+  blocksize    : 8
+  min keysize  : 24
+  max keysize  : 24
+  
+  name         : aes
+  module       : kernel
+  type         : cipher
+  blocksize    : 16
+  min keysize  : 16
+  max keysize  : 32
+  
+  name         : arc4
+  module       : kernel
+  type         : cipher
+  blocksize    : 1
+  min keysize  : 1
+  max keysize  : 256
+  
+  name         : deflate
+  module       : kernel
+  type         : compression
+
+
+=== cat /proc/modules ===
+
+  sd8xxx 162288 1                                    - Live 0xbf0d7000
+  sdio 20668 2 sd8xxx, Live 0xbf0d0000
+  modemrelay 5288 0                                  - Live 0xbf0cd000
+  modembridge 3200 1 modemrelay, Live 0xbf0cb000
+  coredump 11064 0                                   - Live 0xbf08d000
+  tvout_driver 11068 0                               - Live 0xbf089000
+  suapi 114945 17                                    - Live 0xbf06b000
+  dmcam 5236 0                                       - Live 0xbf068000
+  dmmsg 19672 1 dmcam, Live 0xbf062000
+  dmspi 9916 2 dmcam,dmmsg, Live 0xbf05e000
+  fuse 27148 2                                       - Live 0xbf056000
+  fm_radio 3668 0                                    - Live 0xbf054000
+  ihal 22704 22                                      - Live 0xbf04d000
+  netmux_linkdriver 8504 0                           - Live 0xbf049000
+  netmux 52456 25 netmux_linkdriver, Live 0xbf03b000
+  mpmdrv 28080 1                                     - Live 0xbf033000
+  profilerdrv 6156 1                                 - Live 0xbf030000
+  gpiodev 7776 0                                     - Live 0xbf02d000
+  sipcdrv 177592 0                                   - Live 0xbf000000
+
+
+=== cat /proc/cpu ===
+
+ Processor       : Some Random V6 Processor rev 1 (v6l)
+ BogoMIPS        : 88.66
+ Features        : swp half thumb fastmult vfp edsp java
+ CPU implementer : 0x41
+ CPU architecture: 6TEJ
+ CPU variant     : 0x1
+ CPU part        : 0xb36
+ CPU revision    : 1
+ Cache type      : write-back
+ Cache clean     : cp15 c7 ops
+ Cache lockdown  : format C
+ Cache format    : Harvard
+ I size          : 16384
+ I assoc         : 4
+ I line length   : 32
+ I sets          : 128
+ D size          : 16384
+ D assoc         : 4
+ D line length   : 32
+ D sets          : 128
+ 
+ Hardware        : Motorola Product - SCM-A11 Phone
+ Revision        : 0021
+
+== cat /proc/cmdline ==
+
+  noinitrd console=/dev/null rw mem=58M@0x90000000 init=/linuxrc root=/dev/mtdblock/root brdrev=P0A   
+  motobldlabel=R6637_G_81.03.0DR   
+  mtdparts=nand0:1152k@896k(pds),128k@2176k(logo_cli),128k(panel_script)ro,128k(device_tree)ro,128k(setup),
+  256k(logo),128k(secure),1664k(kern)ro,3968k(bpsw),256k(ho_data),256k(fota_ua)ro,384k(ua_temp),256k(ua_backup),
+  42m@9984k(root)ro,9m(user),9m(lang),18944k(resrc),6m(fota_up),407m(mass_storage),128k(kpanic),10880k(rsv
+
 == Compatible applications ==
 
 The following applications have been reported to install and run on with the software installed shipped by Motorola. (The T-mobile branded ZN5 [http://tnkgrl.wordpress.com/2008/12/04/motorola-zn5-the-good-the-bad-and-the-ugly/ reportedly restricts network access for Java applications]. 
