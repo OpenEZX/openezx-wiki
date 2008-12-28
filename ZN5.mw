@@ -1,3 +1,73 @@
+== Enabling Telnet Access ==
+
+You can access the ZN5 command line by telnet over both USB and wifi. To use USB networking,
+you'll need to prepare the host, as described on [[Get a shell]]
+
+In either case, the following files should be copied to the ".system" folder of the microSD card.
+You'll need to update the lines that say "IMEI = " with your IMEI number. It is printed on a 
+sticker behind the battery.
+
+The phone should then be rebooted. A "Telnet" option will appear under the
+Games menu. Clicking it will appear to do nothing, but telnetd will be
+activated and stay active until the phone is rebooted again.
+
+If the host is properly prepared, the ZN5 should now be accessible over
+'usbnet' through through 192.168.16.2.
+
+Telnet is also accessible over wifi. You can find the IP to use over wifi
+through "Settings: Wifi: Current Connection". It is assumed that both
+your host computer and the phone are connected to the same wireless
+access point. For maximum security, turn wifi power off before starting through the phone settings, 
+and reboot after you are done. Realize that if both wifi and telnet or enabled, others
+on the same wireless network could also potentially access the phone. 
+
+Use the username "root". The password is empty by default.
+
+Copy this to '''script.sh''' in the ".system" folder of the microSD card. 
+Any leading spaces on the lines should be removed. 
+
+ #!/bin/sh
+ busybox killall inetd
+ if ! mount |grep -q devpts; then mount -t devpts devpts /dev/pts; fi
+ 
+ # This is is the key line. It starts up "engineering mode" on the phone, including telnetd
+ inetd /etc/inetd.engr
+ sleep 3
+ /usr/local/bin/vendor_usb 13
+ sleep 5
+ if ! ifconfig | grep -q 192.168.16.2; then ifconfig usbl0 192.168.16.2 broadcast 192.168.16.7 netmask 255.255.255.248; fi
+
+Copy this to "CardRegistry" in .system/java folder:
+
+ [5a95bdf3-b9ff-4893-891e-0b781587f1e0]
+ AniIcon =
+ AppID = {5a95bdf3-b9ff-4893-891e-0b781587f1e0}
+ Args = /mmc/mmca1/.system/script.sh;/mmc/mmca1/.system/script.sh
+ Attribute = 1
+ BigIcon = Files/suiteicon.png
+ Daemon = 0
+ Directory = ../../../bin
+ Erasable = 1
+ Exec = sh
+ GroupID = root
+ IMEI = # YOUR IMEI HERE
+ Icon = Files/suiteicon.png
+ InstalledDate = 2007/9/1
+ LockEnabled = 0
+ Name = Telnet
+ SVGIcon =
+ Shared = 1
+ Size = 138985
+ Type = 2
+ UserID = root
+ Vendor =
+
+Copy this to "MemoryCardConfig" in the .system/java folder:
+
+ [5a95bdf3-b9ff-4893-891e-0b781587f1e0]
+ Folder = 67dc1191-2928-4938-abce-1a73cb5ce490
+ IMEI = # YOUR IMEI HERE
+
 == Entering boot loader ==
 
 To enter boot loader mode turn off the ZN5. Then press and hold both the '*' and '#' buttons and press the power button.
