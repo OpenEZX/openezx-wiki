@@ -72,6 +72,8 @@ Data Cable
 
 Connect the USB cable and the Display will show "Transfer Mode: USB". In this mode boot_usb can talk to the phone, but transfers don't seem to succeed.
 
+See [[Bootloader]] for details on on booting an alternate kernel.
+
 == USB modes ==
 Set your RAZR2 USB setting to modem, connect to /dev/ttyACM0 (you'll need the module cdc-acm) and then type the following command to change USB modes:
 
