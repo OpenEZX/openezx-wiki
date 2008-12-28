@@ -20,7 +20,7 @@ Connect the USB cable and the Display will show "Transfer Mode: USB".
 Set your ZN5 USB setting to modem, connect to /dev/ttyACM0 (you'll need to [[Get_a_shell#Preparing_the_host|Prepare the host]]) and then [[Get_a_shell#Change_Modem_Mode|Change the Modem Mode]] with one of these values:
 
 * AT+MODE=0 Seems to be the current (ACM) mode
-* AT+MODE=8 Networking (''IP address is '''???.???.???.???'' see: [[Get a shell]]'')
+* AT+MODE=8 Networking (''IP address is '''192.168.16.2''' see: [[Get a shell]]'')
 * AT+MODE=24 USB mass storage
 * AT+MODE=26 PTP Picture transfer protocol
 
