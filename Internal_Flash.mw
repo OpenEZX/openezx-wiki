@@ -12,3 +12,28 @@ In 2006, Sandisk bought M-systems, with probably the patents coming with their p
 .
 *Gen2 devices are limited to a 64 MB Intel Strataflash NOR memory chip. 
 An OpenEzx patch exist for mainline 2.6 kernel, in december, 2008 it's still in the [http://svnweb.openezx.org svn]  (old) depository], or there is also one for A1200 there: [http://people.openezx.org/wyrm/a1200-mtd.patch]
+
+
+*The A1200 kernel source from [https://opensource.motorola.com motorola] contains a MTD mapping that don't match my phone.
+''Luckilly'', there is some kind of security table read by MBM, on flash at 0x60800. On my phone it looks like this:
+
+          NAME          |TYPE| ID |  START |  END   |SIG STRT|SIG END |
+ mbm.bin                 0001 001e 00020000 0005ffff 00000000 00000000
+ kct.bin_cdt.bin         0016 001f 00060800 0007ffff 00060000 000607ff
+ blob                    0016 0020 00080800 0009ffff 00080000 000807ff
+ zImage                  0016 0021 000a0800 0019ffff 000a0000 000a07ff
+ resource.img            0000 0022 001a0000 00a9ffff 00000000 00000000
+ userfs_db.img           0000 0023 00aa0000 0109ffff 00000000 00000000
+ userfs_general.img      0000 0024 010a0000 0189ffff 00000000 00000000
+ secure_setup.img        0016 0025 018a1000 018bffff 018a0000 018a0fff
+ tcmd_data               0000 0026 018c0000 018dffff 00000000 00000000
+ logo.img                0016 0027 018e0800 018fffff 018e0000 018e07ff
+ fota.img                0000 0028 01900000 019bffff 00000000 00000000
+ language.img            0000 0029 019e0000 025dffff 00000000 00000000
+ setup.img               0000 002a 025e0000 025fffff 00000000 00000000
+ rootfs_cramfs.img       0016 002b 02601000 03ffffff 02060000 02600fff
+ blob-nohwinit           0000 00ff a0de0000 a0dfffff 00000000 00000000
+ zImage-ramos            0000 00ff a0e00000 a0ffffff 00000000 00000000
+ rootfs_ramos.img        0000 00ff a1000000 a13ffccc 00000000 00000000
+ erase_table             0000 00ff a13ffd00 a13fffff 00000000 00000000
+Note that the 4 last entries are for RAM memory, and you can see which partitions are offset by 2KB or 4KB.
