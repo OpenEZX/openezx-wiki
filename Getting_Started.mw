@@ -92,10 +92,10 @@ For instructions on how to build a custom OpenEzx kernel, refer to [[Kernel hack
 
 ==== 2. Get boot_usb and gen-blob ====
 
-You can download boot_usb (last revision 2367 at the time of writing) from [http://openezx.org/download/boot_usb-0.3.tar.gz here].
+You can download boot_usb_0.3 (SVN revision 2367) [http://openezx.org/download/boot_usb-0.3.tar.gz here].
 Pick gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
-You must always use a recent boot_usb revision, so install from the sources like this:
+Compiling from the sources:
 Install svn, then:
  # svn co http://svn.openezx.org/trunk/src/host/boot_usb/
  # autogen.sh
