@@ -71,6 +71,7 @@ And otherwise, ensure you have mounted the second partition of the card and ente
  sync
  cd ~/
  umount /media/sda2
+ # remember our SD card is named /dev/sda here, and this may differ on your own computer.
 
 == Booting a Kernel using boot_usb and gen-blob ==
 
