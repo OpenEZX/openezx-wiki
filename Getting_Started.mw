@@ -139,13 +139,14 @@ After a short time the screen should go funny, then you should see Linux booting
 
 '''Machine id's (machid):''' 
 
-* A780	-	1740
-* e680	-	1741
-* A1200	-	1742
-* E6	-	1743
-* E2	-	1744
-* A910	-	1745
-gen-blob have also a fixed machine id, it's 0.
+* A780				-	1740
+* e680				-	1741
+* A1200				-	1742
+* E6				-	1743
+* E2				-	1744
+* A910				-	1745
+* No MachID (i.e. for genblob)	-	0
+
 See [http://www.arm.linux.org.uk/developer/machines/download.php] for more details.
 
 '''Optional command line parameters:''' 
