@@ -82,12 +82,13 @@ Here we are just trying gen-blob for its "usb" mode, more modes and infos on gen
 ==== 1. Get a kernel to boot ====
 History: ''until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decided to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independant kernel', and this was working with differents machine id's than now. (this due to a double registration in kernel's database...now fixed). Note also that old kernels sometimes don't support any commandline parameters.''
 
-*So now an OpenEzx kernel needs a machine id to properly work on the desired phone.
+* So, older kernels (wich will maybe respond to old EZX machid: 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very carefull''' (can be dangerous to try and support cannot be easily done)!
+
+* => now an OpenEzx kernel needs a machine id to properly work on the desired phone.
 See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
 
 You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config in buildlog-XX file)] to quickly try a recent kernel.
 
-Older kernels will maybe respond to olds machids (i.e. 876 for A1200) and maybe not work on all phones, so '''be very carefull'''!
 
 For instructions on how to build a custom OpenEzx kernel, refer to [[Kernel hacking - linux-2.6]].
 
