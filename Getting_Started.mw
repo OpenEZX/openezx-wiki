@@ -177,8 +177,8 @@ Open a shell and launch the GNU fdisk utility:
  # fdisk /dev/mmcblk0
  # # remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 *Delete all partition of the sd (datas will be lost), ''(push [d] until there is no more parts).'' 
-*Then create a first partiton of a size of 600MB. ''(push [n]).''
-*Then create a second partition with the rest of the leaving size, ''(push [n] again).''
+*Then create a first partiton of a size of 600MB. ''(push [n]) and reply the 'wizard' in the example, we reply '1' then '+600M'.''
+*Then create a second partition with the rest of the leaving size, ''(push [n]... again).''
 *Change the first partition to type "b" (vfat) and the second to type "83" (linux), ''(by pushing [t], this time).''
 *Write the changes and exit, ''(push [w]).''
 
