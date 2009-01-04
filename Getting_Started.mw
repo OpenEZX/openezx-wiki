@@ -168,13 +168,14 @@ See [[Rootfs on NFS]] for network configuration that can be used as well for ssh
 
 The TRANSFLASH card needs to be partitioned into two partitions: one FAT/EXT2 partition, and one EXT2 partition used as root file system. I'll assume that the block device of the TRANSFLASH card is called /dev/sda. Replace this with the correct device on your system.
 
-==== Create partitions, for example a 600MB /dev/sda1 and /dev/sda2 using the rest ====
+==== Create partitions, for example a first 600MB fat/fat32 partition and a second ext2 one using the rest ====
 
 Open a shell and launch the GNU fdisk utility:
 
  # fdisk -l
 *identify your Sd/Mmc card, then, assuming you find this is: /dev/mmcblk0
  # fdisk /dev/mmcblk0
+ # # remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 *Delete all partition of the sd (datas will be lost), ''(push [d] until there is no more parts).'' 
 *Then create a first partiton of a size of 600MB. ''(push [n]).''
 *Then create a second partition with the rest of the leaving size, ''(push [n] again).''
@@ -185,6 +186,7 @@ Open a shell and launch the GNU fdisk utility:
 
  # mkdosfs /dev/sda1 (for VFAT)
  # mke2fs /dev/sda2
+ # # remember here the sd card is called /dev/sda but this can be different on your computer.
 
 == Other tutorials (outdated) ==
 goxboxlive's tutorials here, describing a flash method using an OpenEzx kernel and mtd-utils.
