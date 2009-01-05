@@ -79,10 +79,18 @@ EZX family subset names and their handsets (some help here)
 *quad-band power amplifier (TX)
 
 
-===Flash chips ([http://www.m-systems.com/NR/rdonlyres/9D12C607-DE69-4270-B7DF-D869456DD683/0/DiskOnChip_Based_MCP07_Rev10.pdf DiskOnChip based MCP])===
-*16MB SDRAM
-*64MB DiskOnChip G3
-**contains /diska and /usr/language
+===Flash chips [[Internal Flash]]===
+*'''On Gen1 hardware''':
+**48MB SDRAM
+**64MB DiskOnChip G3 (NAND) [http://www.m-systems.com/NR/rdonlyres/9D12C607-DE69-4270-B7DF-D869456DD683/0/DiskOnChip_Based_MCP07_Rev10.pdf DiskOnChip based MCP]
+***contains /diska and /usr/language
+**32MB Intel Strataflash (NOR)
+***contains the bootloader, kernel, most of the rootfs, and logo.
+
+*'''On Gen2 hardware''':
+**48MB SDRAM
+**64MB Intel Strataflash (NOR)
+***Contains the bootloader, AP and BP rootfs and kernels, some partitions for flex settings, AP config...
 
 ==Software==
 
