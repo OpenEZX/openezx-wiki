@@ -96,8 +96,8 @@ After a short time the screen should go funny, then you should see Linux booting
 
 {| border="0" cellpadding="2" cellspacing="2" align="top"
 |- style="background:#bfbfbf; font-weight: bold"
-! Machine ID
 ! Phone
+! MachID
 |- style="background:#ffffee;"
 | A780
 | 1740 
