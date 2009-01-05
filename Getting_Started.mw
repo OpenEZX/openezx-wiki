@@ -35,8 +35,9 @@ For a 2.6 kernel to boot <sup>[[#Foot1|PXA-UDC bug]]</sup> (case right for 2.6.2
 
 * Older kernels <sup>[[#Foot2|oldies]]</sup>,(wich will maybe respond to old EZX machid: 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very carefull''' (can be dangerous to try and support cannot be easily done)!
 
-* => now an OpenEZX kernel is build for all the EZX phones and you need to spcecy a machine id for it to properly work on the desired phone.
-See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
+* => Now an OpenEZX kernel is build for all the EZX phones and you need to specify a machine id for it to properly work on the desired phone.
+See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] or [http://wiki.openezx.org/Getting_Started#Machine_id.27s_.28machid.29 more easy], to find the good machid of your phone.
+
 
 You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config and build logs are also avalaibles)] to quickly try a recent kernel.
 
