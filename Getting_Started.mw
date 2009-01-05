@@ -35,8 +35,8 @@ For a 2.6 kernel to boot <sup>[[#Foot1|PXA-UDC bug]]</sup> (case right for 2.6.2
 
 * Older kernels <sup>[[#Foot2|oldies]]</sup>,(wich will maybe respond to old EZX machid: 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very carefull''' (can be dangerous to try and support cannot be easily done)!
 
-* => Now an OpenEZX kernel is build for all the EZX phones and you need to specify a machine id for it to properly work on the desired phone.
-See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] or [http://wiki.openezx.org/Getting_Started#Machine_id.27s_.28machid.29 more easy], to find the good machid of your phone.
+* => now an OpenEZX kernel is build for all the EZX phones and you need to spcecy a machine id for it to properly work on the desired phone.
+See around 1740 at [http://www.arm.linux.org.uk/developer/machines/download.php here] to find the good machid of your phone.
 
 You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config and build logs are also avalaibles)] to quickly try a recent kernel.
 
@@ -190,8 +190,6 @@ For what we are planning to do any of the images should be acceptable. Choose th
 Note that [http://people.openezx.org Developper's web spaces] are also generally full of testing images that you just have to unpack in your sd to try :) .
 In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
 
-''For the sake of this tutorial I will be assuming it is in ~/oezx/images'' If you save it to a different location remember to change the commands you put into the command line.
-
 
 === Unpacking the image on to the card ===
 
@@ -204,8 +202,9 @@ Assuming you have followed the procedure outlined in [[#Creating the Partitions]
  cd /media/sda2
 
 And otherwise, ensure you have mounted the second partition of the card and entered the folder it is mounted to. Then type (as root, or using sudo)
-
- tar jxvpf ~/oezx/images/[NAME OF YOUR IMAGE]
+ #for a .tar.bz2 compressed image:
+ tar xvjf /PATH/OF/THE/DOWNLOADED/IMAGE/<NAME OF YOUR IMAGE>
+ # (use tar -xvzf for a .tar.gz compressed image)
  sync
  cd ~/
  umount /media/sda2
