@@ -83,10 +83,11 @@ Wait some few seconds for the device to be properly enumerated by your box.
            
  # ./boot_usb gen-blob 0            
 
-Ok, release the VOL+ key, this was fast! You just entered gen-blob's "USB" mode. And gen-blob can load a kernel to ram, exaclty as it has itself be loaded.
-You should see "USB Ready" in the top of the screen at this step.
+Ok, wait one more second then release the VOL+ key. You just entered gen-blob's "USB" mode.
 
-* So you just need a last boot_usb command that will do the job for you:
+You should see "'''USB Ready'''" in the top of the screen at this step.
+
+* So you just need a last boot_usb command to load the kernel:
 
  # ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>"
 
