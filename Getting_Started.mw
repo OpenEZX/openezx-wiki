@@ -151,7 +151,8 @@ For now, the kernel can boot, but does it stop to a step it search for a 'rootfs
 
 The TRANSFLASH card needs to be partitioned into two partitions: one FAT/EXT2 partition, and one EXT2 partition used as root file system.
 
-First partition on the Sd need to be a FAT or FAT32 partiton, formated with dos, windows, or dosfstools on linux.It is used for media files with the original firmware - could also be mounted under oezx, and to store gen-blob's boot menu.
+First partition on the Sd need to be a FAT or FAT32 partition, formated with dos, windows, or dosfstools (mkfs.vfat) on linux. It is used for media files with the original firmware optionnaly to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well.
+
 Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX
 
 === Create partitions===
@@ -210,7 +211,6 @@ And otherwise, ensure you have mounted the second partition of the card and ente
  cd ~/
  umount /media/sda2
  # remember our SD card is named /dev/sda here, and this may differ on your own computer.
-
 
 == Other tutorials (outdated) ==
 goxboxlive's tutorials here, describing a flash method using an OpenEzx kernel and mtd-utils.
