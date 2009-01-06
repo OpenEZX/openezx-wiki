@@ -139,6 +139,7 @@ Defaults parameters (that are compiled in kernel by default) change rarely, chan
 
 
 [[Rootfs on NFS]] is a solution to store the root filesystem, and booting your phone with linux stored in a place in your hard-disk, instead of having it on the SD card, and can be easier to experiment, to try some softwares on the phone from an hard-disk folder...
+Extract the rootfs image of your choice on the "export" folder on your computer as describe below on the "rootfs on SD/MMC" section. Of course, doing this way, you can skip the partitonning and formatting the SD card steps of this tutorial too.
 
 See [[Rootfs on NFS]] for network configuration too (computer and phone sides). (Fixme: add bridging setup)
 Note that USB network in OpenEZX differs from USB networking on stock firmwares, so there maybe some changes to understand, explained in this page.
