@@ -113,6 +113,9 @@ Ok, wait one more second then release the VOL+ key. You just entered gen-blob's 
 
 You should see "'''USB Ready'''" in the top of the screen at this step.
 
+'''Important note for gen1''' devices: At this step you will need
+to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the kernel will not work.
+
 * So you just need a last boot_usb command to load the kernel:
 
  # ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>"
@@ -133,7 +136,6 @@ All parameters are described in /Documentation/kernel-parameters.txt text of the
 This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpfull too.
 
 Defaults parameters (that are compiled in kernel by default) change rarely, change them yourself for your convenience, or just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example browsing the openezx git source code] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE=".
-
 
 == B) Network and NFS solution to try OpenEZX==
 
