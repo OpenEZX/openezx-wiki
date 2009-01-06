@@ -13,7 +13,7 @@ Following these steps should not break your phone, but there is a possibility it
 As long as you don't write to the [[Internal Flash]], either to store the alternative rootfs, or change or add a bootloader, OpenEZX does not interfere with your phone's original software (though does allow you to, so be careful!) but '''legaly''', it might avoid your phone's warranty...
 
 
-== Get boot_usb, gen-blob, and the kernel ==
+== A) Get boot_usb, gen-blob, and boot the kernel ==
 
 
 OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable, doing the 'ram-loading' such as the bootloader itself. More infos at [[Bootloader]]
@@ -135,7 +135,7 @@ This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lk
 Defaults parameters (that are compiled in kernel by default) change rarely, change them yourself for your convenience, or just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example browsing the openezx git source code] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE=".
 
 
-==Network and NFS solution to try OpenEZX==
+== B) Network and NFS solution to try OpenEZX==
 
 
 [[Rootfs on NFS]] is a solution to store the root filesystem, and booting your phone with linux stored in a place in your hard-disk, instead of having it on the SD card, and can be easier to experiment, to try some softwares on the phone from an hard-disk folder...
@@ -143,7 +143,7 @@ Defaults parameters (that are compiled in kernel by default) change rarely, chan
 See [[Rootfs on NFS]] for network configuration too (computer and phone sides). (Fixme: add bridging setup)
 Note that USB network in OpenEZX differs from USB networking on stock firmwares, so there maybe some changes to understand, explained in this page.
 
-==Putting a rootfs image on an (Micro) SD Card to try or use OpenEZX==
+== C) Putting a rootfs image on an (Micro) SD Card to try or use OpenEZX==
 
 
 For now, the kernel can boot, but does it stop to a step it search for a 'rootfs' and hangs up writing some "unable to find rootfs at:" lines? This is normal, we will try to fix this in the next paragraphs. :-)
