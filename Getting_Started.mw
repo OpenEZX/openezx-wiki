@@ -14,7 +14,7 @@ As long as you don't write to the [[Internal Flash]], either to store the altern
 
 == Get the boot_usb, gen-blob, and the kernel ==
 
-OpenEZX's boot_usb is a tool that can be used to uploads a kernel to a Motorola EZX phone, using the USB cable, doing the 'ram-loading' such as the bootloader itself. More infos at [[Bootloader]]
+OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable, doing the 'ram-loading' such as the bootloader itself. More infos at [[Bootloader]]
 
 Note that because we're booting the phone via usb cable, the [[Baseband Processor]] starts in "flash mode", so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with [[Dual boot|gen-blob flashed]] (flashing it also bring an easier boot and USB will not be needed to upload a kernel anymore).
 
