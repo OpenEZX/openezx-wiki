@@ -155,7 +155,7 @@ First partition on the Sd need to be a FAT or FAT32 partition, formated with dos
 
 Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX
 
-===Creating partitions===
+===Creating the partitions===
 
 For this first example we recommend a first 600MB fat/fat32 partition and a second ext2 one using the rest. (My config for an 1Gig SD)
 
@@ -194,7 +194,7 @@ In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
 
 === Unpacking the image into the card ===
 
-Assuming you have followed the procedure outlined in [[#Creating the Partitions]] below you will need to mount the new partions. As root or using sudo, type
+Assuming you have followed the procedure outlined in [[#Creating the partitions]] below you will need to mount the new partions. As root or using sudo, type
 
 ''Assuming your card is at /dev/sda, in command line, type:''
 
