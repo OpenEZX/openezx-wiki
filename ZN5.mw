@@ -67,6 +67,26 @@ Copy this to "MemoryCardConfig" in the .system/java folder:
  [5a95bdf3-b9ff-4893-891e-0b781587f1e0]
  Folder = 67dc1191-2928-4938-abce-1a73cb5ce490
  IMEI = # YOUR IMEI HERE
+ move the directory where you
+== Transferring files to the phone (FTP alternative) ==
+
+Files can be transfered to the ZN5s internal storage using netcat, which is already installed 
+on the phone. This depends on having telnet access, described above.
+
+On the phone, to receive foo.txt, using port 5600:
+
+    busybox nc -p 5600 -l >/ezxlocal/download/mystuff/foo.txt
+
+On your Linux desktop, using the same IP you telnet'ed to:
+
+    nc -v -w 2 192.168.1.104 5600 </home/mark/Desktop/foo.txt
+
+Netcat may give some warnings, even if it succeeds. For example:
+
+    192.168.1.104: inverse host lookup failed: Unknown host
+    (UNKNOWN) [192.168.1.104] 5600 (?) open
+
+That's it! You can now see "foo.txt" listed through the file manager on the phone. 
 
 == Entering boot loader ==
 
