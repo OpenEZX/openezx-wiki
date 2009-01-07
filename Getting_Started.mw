@@ -42,11 +42,12 @@ Pick a compiled gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
 Compiling from the sources:
 Install svn, then:
-  svn co http://svn.openezx.org/trunk/src/host/boot_usb/
-  autogen.sh
-  ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
-  make
-  chmod +x boot_usb
+ svn co http://svn.openezx.org/trunk/src/host/boot_usb/
+ cd boot_usb
+ ./autogen.sh
+ ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
+ make
+ chmod +x boot_usb
 
 This should have created a file named "boot_usb"
 If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
