@@ -1,9 +1,9 @@
-'''How to try OpenEZX 2.6.xx kernel on an EZX phone'''
-This little introduction to OpenEZX should help you to boot a custom kernel on theses highly integrated and very specific devices called 'EZX phones', and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], [http://gpe.handhelds.org/ GPE] , or '''even''', with some modifications on the kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), the very last (partially closed source), [http://code.google.com/android/ Android], and any alternative systems (or fun stuff :) ) that can run in these Motorola's phones.
+'''Trying an OpenEZX kernel on a Motorola EZX phone, step by step'''
+
+This little introduction to OpenEZX should help you to boot a custom kernel on theses highly integrated and very specific devices called 'EZX phones', and finally, to test the [http://www.freesmartphone.org/index.php/Main_Page FSO], [http://wiki.openmoko.org/wiki/Main_Page Openmoko], [http://qtopia.net/modules/devices/ Qt-extended], [http://opie.handhelds.org/cgi-bin/moin.cgi/ Opie], [http://gpe.handhelds.org/ GPE] , or '''even''', with some modifications on the kernel ([http://www.motorolafans.com/forums/android-os/21887-porting-andoid-a1200-ming.html]), the very last (partially closed source), [http://code.google.com/android/ Android], and any other (alternative) systems (or fun stuff :-) ) that can run in these Motorola's phones.
+
 
 '''Please try to follow theses differents steps in the good order:'''
-
-
 ==Warning==
 
 
@@ -16,25 +16,25 @@ As long as you don't write to the [[Internal Flash]], either to store the altern
 == A) Get boot_usb, gen-blob, and boot the kernel ==
 
 
-OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable, doing the 'ram-loading' such as the bootloader itself. More infos at [[Bootloader]]
+OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable, doing the 'ram-loading' such as the bootloader itself. More infos at [[Bootloader]].
 
-Note that because we're booting the phone via usb cable, the [[Baseband Processor]] starts in "flash mode", so it is not possible to use it as a modem (i.e for phonecalls, texts, etc) (or use bluetooth) unless you boot the phone with [[Dual boot|gen-blob flashed]] (flashing it also bring an easier boot and USB will not be needed to upload a kernel anymore).
+Note that because we're booting the phone via usb cable, the [[Baseband Processor]] starts in "flash mode" and shutdown by itself, so it is not possible to use the phone as a modem (i.e for phonecalls, SMS, etc...) or use bluetooth unless you boot the phone with [[Dual boot|gen-blob flashed]] (flashing it also bring an easier boot and USB will not be needed to upload a kernel anymore).
 
-For a 2.6 kernel to boot <font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font> (case right for 2.6.25 or higher OpenEZX-patched kernels => not for older ones) we must use a second stage bootloader : that is 'genblob' (generic EZX blob). 
+For a 2.6 kernel to boot due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we must use a second stage bootloader : that is 'genblob' (for generic EZX blob). 
 
 === Get a kernel ===
 
-* Older kernels <font color=blue><sup>[[#Foot2|oldies]]</sup></font>,(wich will maybe respond to old EZX machid: 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very carefull''' (can be dangerous to try and support cannot be easily done)!
+* Older kernels <font color=blue><sup>[[#Foot2|oldies]]</sup></font>,(wich will maybe respond to old EZX machid: 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very carefull''' (can be dangerous to try 'blindly' an old build, and support cannot be easily done)!
 
-* '''=>''' Now an OpenEZX kernel is build for all the EZX phones and you need to specify a '''machine id''' for it to properly work on the desired phone.
-See [http://wiki.openezx.org/Getting_Started#Machine_id.27s_.28machid.29 below], to find the good machid of your phone.
+'''=>''' Now an OpenEZX kernel is build for all the EZX phones and you need to specify '''the right machine id''' for it to properly work on the desired phone.
+See [[#Machine id's (machid)]], to find the good machid of your phone.
 
 
 You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config and build logs are also avalaibles)] to quickly try a recent kernel.
 
 
 For instructions on how to build a custom OpenEZX kernel, refer to [[Kernel hacking - linux-2.6]].
-See also /Documentation/arm/README in the kernel source tree.
+See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/README;hb=HEAD /Documentation/arm/README] in the kernel source tree.
 
 ===Get boot_usb and gen-blob===
 
@@ -89,14 +89,14 @@ Get gen-blob's sources the same way with:
 |
 |}
 
-See [http://www.arm.linux.org.uk/developer/machines/download.php] (our devices are aoround 1740, as you noticed) for more infos.
+See [http://www.arm.linux.org.uk/developer/machines/download.php] (our devices are around 1740, as you noticed) for more infos.
 
 ===Sending the kernel to boot===
 
-First you need to put the phone in the right mode. Ensure the flash card you prepared earlier is inside it, then:
+First you need to put the phone in the right mode.
 
 * Turn off the phone
-* Hold down the jog-dial and the camera button or on some others phones hold the VR key instead.
+* Hold down the jog-dial and the camera button, or, on some others phones, hold the VR key instead.
 * push the power button
 This should be enough to switch the phone in "'''flash mode'''"
 A blue screen with some writing on it should appear on Gen1 devices.
@@ -113,7 +113,7 @@ Ok, wait one more second then release the VOL+ key. You just entered gen-blob's 
 
 You should see "'''USB Ready'''" in the top of the screen at this step.
 
-'''Important note for gen1''' devices: At this step you will need
+'''Important note for gen1 devices (A780/e680):''' At this step you will need
 to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the kernel will not work.
 
 * So you just need a last boot_usb command to load the kernel:
@@ -132,19 +132,21 @@ Network configuration can be overidden to suit your configuration as well with t
  ip=<client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>
  #note that the last 3 (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.
 
-All parameters are described in /Documentation/kernel-parameters.txt text of the kernel source tree.
-This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpfull too.
+All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
+This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpful too.
 
-Defaults parameters (that are compiled in kernel by default) change rarely, change them yourself for your convenience, or just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example browsing the openezx git source code] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE=".
+Defaults parameters (that are compiled in kernel by default) change rarely. Change them yourself for your convenience and build your kernel (it has no sense to build a kernel just for that as it's very simple to overide any parameter in bootusb command), but it's surely interesting to just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE=".
+
 
 == B) Network and NFS solution to try OpenEZX==
 
 
 [[Rootfs on NFS]] is a solution to store the root filesystem, and booting your phone with linux stored in a place in your hard-disk, instead of having it on the SD card, and can be easier to experiment, to try some softwares on the phone from an hard-disk folder...
-Extract the rootfs image of your choice on the "export" folder on your computer as describe below on the [#Unpacking the image into the card] section. Of course, doing this way, you can skip the steps partitonning, and formatting the SD card of this tutorial as well.
+Extract the rootfs image of your choice on the "export" folder on your computer as describe below on the [[#Unpacking an image into the card]] section. Of course, doing this way, you can skip the steps partitonning, and formatting the SD card of this tutorial as well.
 
 See [[Rootfs on NFS]] for network configuration too (computer and phone sides). (Fixme: add bridging setup)
 Note that USB network in OpenEZX differs from USB networking on stock firmwares, so there maybe some changes to understand, explained in this page.
+
 
 == C) Putting a rootfs image on an (Micro) SD Card to try or use OpenEZX==
 
@@ -163,13 +165,14 @@ For this first example we recommend a first 600MB fat/fat32 partition and a seco
 
 Open a shell and launch the GNU fdisk utility:
 
- # fdisk -l
-*identify your Sd/Mmc card, then, assuming you find this is: /dev/mmcblk0
- # fdisk /dev/mmcblk0
- # # remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
+  fdisk -l
+  # identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
+  fdisk /dev/mmcblk0
+  # remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
+
 *Delete all partition of the sd (datas will be lost), ''(push [d] until there is no more parts).'' 
 *Then create a first partiton of a size of 600MB. ''(push [n]) and reply the 'wizard' in the example, we reply '1' then '+600M'.''
-*Then create a second partition with the rest of the leaving size, ''(push [n]... again reply to more or less suit your needs and follow our advises.).''
+*Then create a second partition with the rest of the leaving size, ''(push [n]... again reply to more or less suit your needs and follow this guide).''
 *Change the first partition to type "b" (vfat) ''(by pushing [t], this time).''
 *Type again [t] and change the second to type "83" (linux). 
 *Write the changes and exit, ''(push [w]).''
@@ -195,35 +198,41 @@ For what we are planning to do any of the images should be acceptable. Choose th
 Note that [http://people.openezx.org Developper's web spaces] are also generally full of testing images that you just have to unpack in your sd to try :) .
 In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
 
-===Unpacking the image into the card===
+===Unpacking an image into the card===
 
-Assuming you have followed the procedure outlined in [[#Creating the partitions]] below you will need to mount the new partions. As root or using sudo, type
+Assuming you have followed the procedure outlined in [[#Creating the partitions]] below you will need to mount the new partitions. As root or using sudo, type
 
 ''Assuming your card is at /dev/sda, in command line, type:''
 
- mkdir /media/sda2
- mount -t ext2 /dev/sda2 /media/sda2
- cd /media/sda2
+ #as root, or using sudo: 
+ mount -t ext2 /dev/sda2 /SD/MMC/MOUNTING/FOLDER
+ 
+You have mounted the SD or MMC card.
+Then for extracting the rootfs image, type:
 
-And otherwise, ensure you have mounted the second partition of the card and entered the folder it is mounted to. Then type (as root, or using sudo)
- #for a .tar.bz2 compressed image:
+ #as root, or using sudo: 
+ cd /SD/MMC/MOUNTING/FOLDER/
  tar xvjf /PATH/OF/THE/DOWNLOADED/IMAGE/<NAME OF YOUR IMAGE>
- # (use tar -xvzf for a .tar.gz compressed image)
+ # works for a .tar.bz2 compressed image
+ # use tar -xvzf for a .tar.gz compressed image
  sync
+ #ensure copying is finish before doing anything else
  cd ~/
- umount /media/sda2
+ #exit that folder before unmounting the SD
+ umount /dev/sda2
  # remember our SD card is named /dev/sda here, and this may differ on your own computer.
 
-===Add software to the distro===
+===Add softwares to the distro's rootfs===
 
 To find how the distros package management system works, please refer to their own website (see links in the first paragraph on top of this page).
-Some use ipgk, pkg systems, all of them offers a lot of attractive softwares in several repositories.
+Some use ipgk, pkg systems and software package, all of them offers a lot of attractive softwares in several repositories.
+Trying eabi arm binaries packages can work, (extraction of debian armel packages? ) might also work, for simple tools.
 
 '''Footnotes:'''
 
-<span id="Foot1"><sup><font color=red>pxa-udc bug</font></sup> There is a bug in the mainline pxa-udc's driver (not used in OpenEZX's 2.6.25 or older kernels) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a second stage bootloader, gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.</span>
+<span id="Foot1"><sup><font color=red>pxa-udc bug</font></sup><small> There is a bug in the mainline pxa-udc's driver (not used in OpenEZX's 2.6.25 or older kernels that used a different pxa-udc driver and don't necessite the 'boot_usb gen-blob 0' command) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a second stage bootloader, gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.</small></span>
 
-<span id="Foot2"><sup><font color=red>Oldies</font></sup> History: until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decided to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independant kernel', and this was working with differents machine id's than now. (this due to a double registration in kernel's database...now fixed). Note also that old kernels sometimes don't support any commandline parameters.</span>
+<span id="Foot2"><sup><font color=red>Oldies</font></sup><small> History: until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developpers decided to use machid and some variables into the kernel, this succeed and gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independant kernel', and this was working with differents machine id's than now. (this due to a double registration in kernel's database...now fixed). Note also that old kernels sometimes don't support any commandline parameters.</small></span>
 
 
 
