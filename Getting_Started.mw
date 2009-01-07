@@ -162,7 +162,7 @@ The SD/MMC card needs to be partitioned into two partitions: one FAT(or VFAT) pa
 
 For this first example we recommend a first 600MB fat/fat32 partition and a second ext2 one using the rest. (My config for an 1Gig SD)
 
-Open a shell and launch the GNU fdisk utility:
+Open a shell and launch the GNU fdisk utility (always as root or sudo-ing):
  fdisk -l
 Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
  fdisk /dev/mmcblk0
