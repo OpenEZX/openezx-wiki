@@ -44,11 +44,11 @@ Pick a compiled gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
 Compiling from the sources:
 Install svn, then:
- # svn co http://svn.openezx.org/trunk/src/host/boot_usb/
- # autogen.sh
- # ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
- # make
- # chmod +x boot_usb
+  svn co http://svn.openezx.org/trunk/src/host/boot_usb/
+  autogen.sh
+  ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
+  make
+  chmod +x boot_usb
 
 This should have created a file named "boot_usb"
 If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
@@ -107,7 +107,7 @@ Wait some few seconds for the device to be properly enumerated by your box.
 
 * Now '''hold the vol+''' button, then, on the computer, as root or sudo-ing, run:
            
- # ./boot_usb gen-blob 0            
+ ./boot_usb gen-blob 0            
 
 Ok, wait one more second then release the VOL+ key. You just entered gen-blob's "USB" mode.
 
@@ -118,7 +118,7 @@ to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the ke
 
 * So you just need a last boot_usb command to load the kernel:
 
- # ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>"
+ ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>"
 
 After a short time the screen should go funny, then you should see Linux booting!
 
@@ -130,7 +130,7 @@ i.e.: Overide default filesystem type for rootfs partition:
  rootfstype=ext3
 Network configuration can be overidden to suit your configuration as well with the "IP" param.: 
  ip=<client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>
- #note that the last 3 (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.
+Note that the last 3 (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.
 
 All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
 This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpful too.
@@ -165,10 +165,10 @@ For this first example we recommend a first 600MB fat/fat32 partition and a seco
 
 Open a shell and launch the GNU fdisk utility:
 
-  fdisk -l
-  # identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
-  fdisk /dev/mmcblk0
-  # remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
+ fdisk -l
+Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
+ fdisk /dev/mmcblk0
+Remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 
 *Delete all partition of the sd (datas will be lost), ''(push [d] until there is no more parts).'' 
 *Then create a first partiton of a size of 600MB. ''(push [n]) and reply the 'wizard' in the example, we reply '1' then '+600M'.''
@@ -181,9 +181,9 @@ Open a shell and launch the GNU fdisk utility:
 
 Partitions are made, but need to be formatted to be used:
 
- # mkdosfs /dev/sda1 (for VFAT)
- # mke2fs /dev/sda2
- # # remember here the sd card is called /dev/sda but this can be different on your computer.
+ mkdosfs /dev/sda1 (for VFAT)
+ mke2fs /dev/sda2
+Remember here the sd card is called /dev/sda but this can be different on your computer.
 
 ===Download a recent image from OpenEmbedded===
 
@@ -204,23 +204,22 @@ Assuming you have followed the procedure outlined in [[#Creating the partitions]
 
 ''Assuming your card is at /dev/sda, in command line, type:''
 
- #as root, or using sudo: 
+as root, or using sudo: 
  mount -t ext2 /dev/sda2 /SD/MMC/MOUNTING/FOLDER
  
 You have mounted the SD or MMC card.
 Then for extracting the rootfs image, type:
 
- #as root, or using sudo: 
+Also as root, or using sudo: 
  cd /SD/MMC/MOUNTING/FOLDER/
  tar xvjf /PATH/OF/THE/DOWNLOADED/IMAGE/<NAME OF YOUR IMAGE>
- # works for a .tar.bz2 compressed image
- # use tar -xvzf for a .tar.gz compressed image
+Works for a .tar.bz2 compressed image, use 'tar -xvzf' for a .tar.gz compressed image.
  sync
- #ensure copying is finish before doing anything else
+Ensure copying is finish before doing anything else.
  cd ~/
- #exit that folder before unmounting the SD
+Exit that folder before unmounting the SD
  umount /dev/sda2
- # remember our SD card is named /dev/sda here, and this may differ on your own computer.
+Remember our SD card is named /dev/sda here, and this may differ on your own computer.
 
 ===Add softwares to the distro's rootfs===
 
