@@ -29,9 +29,7 @@ For a 2.6 kernel to boot due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]
 '''=>''' Now an OpenEZX kernel is build for all the EZX phones and you need to specify '''the right machine id''' for it to properly work on the desired phone.
 See [[#Machine id's (machid)]], to find the good machid of your phone.
 
-
 You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config and build logs are also avalaibles)] to quickly try a recent kernel.
-
 
 For instructions on how to build a custom OpenEZX kernel, refer to [[Kernel hacking - linux-2.6]].
 See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/README;hb=HEAD /Documentation/arm/README] in the kernel source tree.
@@ -138,7 +136,7 @@ This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lk
 Defaults parameters (that are compiled in kernel by default) change rarely. Change them yourself for your convenience and build your kernel (it has no sense to build a kernel just for that as it's very simple to overide any parameter in bootusb command), but it's surely interesting to just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE="
 ("console=tty1 root=/dev/mmcblk0p2 rootfstype=ext2 rootdelay=1 ip=192.168.0.202:192.168.0.200:192.168.0.200:255.255.255.0 debug" at the time of writing).
 
-This page, [[Serial console]] describes a (custom hardware is also needed) customisation, that may also interest you, and describe the use of the console= parameter.
+This page, [[Serial console]] describes a (custom hardware is also needed) customization, that may also interest you, and describe the use of the console= parameter.
 
 == B) Network and NFS solution to try OpenEZX==
 
@@ -154,11 +152,7 @@ Note that USB network in OpenEZX differs from USB networking on stock firmwares,
 
 For now, the kernel can boot, but does it stop to a step it search for a 'rootfs' and hangs up writing some "unable to find rootfs at:..." lines? This is normal, we will try to fix this in the next paragraphs. :-)
 
-The SD/MMC card needs to be partitioned into two partitions: one FAT/EXT2 partition, and one EXT2 partition used as root file system.
-
-First partition on the Sd need to be a FAT or FAT32 partition, formated with dos, windows, or dosfstools (mkfs.vfat) on linux. It is used for media files with the original firmware optionnaly to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well.
-
-Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX.
+The SD/MMC card needs to be partitioned into two partitions: one FAT(or VFAT) partition, and one EXT2 partition used as root file system.
 
 ===Creating the partitions===
 
@@ -170,24 +164,29 @@ Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
  fdisk /dev/mmcblk0
 Remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 
-*Delete all partition of the sd (datas will be lost), ''(push [d] until there is no more parts).'' 
-*Then create a first partiton of a size of 600MB. ''(push [n]) and reply the 'wizard' in the example, we reply '1' then '+600M'.''
+*Delete all partition of the SD/MMC (datas will be lost), ''(push [d] until there is no more parts).'' 
+*Then create a first partition of a size of 600MB. ''(push [n]) and reply the 'wizard' in the example, we reply '1' then '+600M'.''
 *Then create a second partition with the rest of the leaving size, ''(push [n]... again reply to more or less suit your needs and follow this guide).''
 *Change the first partition to type "b" (vfat) ''(by pushing [t], this time).''
 *Type again [t] and change the second to type "83" (linux). 
 *Write the changes and exit, ''(push [w]).''
 
-===Creating file systems, we need a first VFAT and second EXT2===
+===Creating file systems (format), we need a first VFAT and second EXT2===
 
 Partitions are made, but need to be formatted to be used:
 
- mkdosfs /dev/sda1 (for VFAT)
- mke2fs /dev/sda2
-Remember here the sd card is called /dev/sda but this can be different on your computer.
+First partition on the Sd need to be a FAT or FAT32 partition, formated with dos, windows, phone's original operating system, or dosfstools (mkfs.vfat) on a linux box. It is used for media files with the original firmware optionaly to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well.
+
+ mkfs.vfat /dev/sda1 (for VFAT)
+
+Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX.
+
+ mkfs.ext2 /dev/sda2
+
+Remember here the sd card is called /dev/sda (and first and second parts of it respectively /dev/sda1 and /dev/sda2) but this can be different on your computer.
 
 ===Download a recent image from OpenEmbedded===
-
-Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's "distribution" scripts collection and images may also be downloadable at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
+Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's "distribution" scripts collection and images may also be download-able at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
 
 There are pre-compiled images and kernels for the A780 (that might works also with others phones) in sub folders at
 
@@ -200,7 +199,7 @@ In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
 
 ===Unpacking an image into the card===
 
-Assuming you have followed the procedure outlined in [[#Creating the partitions]] below you will need to mount the new partitions. 
+Now that we have prepared two new partitions (as long as you don't use gen-blob dual boot functions, you -strictly speaking- will only need the ext2 partition and you can let the phone stock operating system format the VFAT one for you). 
 
 ''Assuming your card is at /dev/sda, in command line, type:''
 
