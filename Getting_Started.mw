@@ -136,11 +136,11 @@ At the time of writing, default command line is:
 ''Network configuration can be overridden to suit your configuration as well with:''
  ip=<client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>
 Note that the last three (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.
+
 console= parameter is explained and some of its uses are described on [[Serial console]] (custom hardware/cable is also needed).
 
 All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
 This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpful too.
-
 
 == B) Network and NFS solution to try OpenEZX==
 
