@@ -200,7 +200,7 @@ In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
 
 ===Unpacking an image into the card===
 
-Assuming you have followed the procedure outlined in [[#Creating the partitions]] below you will need to mount the new partitions. As root or using sudo, type
+Assuming you have followed the procedure outlined in [[#Creating the partitions]] below you will need to mount the new partitions. 
 
 ''Assuming your card is at /dev/sda, in command line, type:''
 
