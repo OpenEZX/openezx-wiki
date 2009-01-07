@@ -135,8 +135,10 @@ Note that the last 3 (<hostname>, <device>, <autoconf>) aren't necessary to have
 All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
 This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpful too.
 
-Defaults parameters (that are compiled in kernel by default) change rarely. Change them yourself for your convenience and build your kernel (it has no sense to build a kernel just for that as it's very simple to overide any parameter in bootusb command), but it's surely interesting to just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE=".
+Defaults parameters (that are compiled in kernel by default) change rarely. Change them yourself for your convenience and build your kernel (it has no sense to build a kernel just for that as it's very simple to overide any parameter in bootusb command), but it's surely interesting to just take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] searching for that /arch/arm/configs/ezx_defconfig at the line "CONFIG_CMDLINE="
+("console=tty1 root=/dev/mmcblk0p2 rootfstype=ext2 rootdelay=1 ip=192.168.0.202:192.168.0.200:192.168.0.200:255.255.255.0 debug" at the time of writing).
 
+This page, [[Serial console]] describes a (custom hardware is also needed) customisation, that may also interest you, and describe the use of the console= parameter.
 
 == B) Network and NFS solution to try OpenEZX==
 
@@ -150,10 +152,14 @@ Note that USB network in OpenEZX differs from USB networking on stock firmwares,
 
 == C) Putting a rootfs image on an (Micro) SD Card to try or use OpenEZX==
 
+It is possible to get a serial console without opening the phone.
 
+You can set the EMU into a mode which acts as serial port. You get RX and TX from the mini usb plug, but need an external level shifter like MAX3232 and a power source for the MAX3232.
+
+In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add console=ttyS0,115200n8 console=tty0 to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages on the framebuffer at the same time. 
 For now, the kernel can boot, but does it stop to a step it search for a 'rootfs' and hangs up writing some "unable to find rootfs at:" lines? This is normal, we will try to fix this in the next paragraphs. :-)
 
-The TRANSFLASH card needs to be partitioned into two partitions: one FAT/EXT2 partition, and one EXT2 partition used as root file system.
+The SD/MMC card needs to be partitioned into two partitions: one FAT/EXT2 partition, and one EXT2 partition used as root file system.
 
 First partition on the Sd need to be a FAT or FAT32 partition, formated with dos, windows, or dosfstools (mkfs.vfat) on linux. It is used for media files with the original firmware optionnaly to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well.
 
@@ -163,7 +169,11 @@ Second (and others) partition should be linux and formatted in EXT2 (or any othe
 
 For this first example we recommend a first 600MB fat/fat32 partition and a second ext2 one using the rest. (My config for an 1Gig SD)
 
-Open a shell and launch the GNU fdisk utility:
+Open a shell and launch the GNU fdisk utility:It is possible to get a serial console without opening the phone.
+
+You can set the EMU into a mode which acts as serial port. You get RX and TX from the mini usb plug, but need an external level shifter like MAX3232 and a power source for the MAX3232.
+
+In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add console=ttyS0,115200n8 console=tty0 to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages on the framebuffer at the same time. 
 
  fdisk -l
 Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
@@ -204,22 +214,23 @@ Assuming you have followed the procedure outlined in [[#Creating the partitions]
 
 ''Assuming your card is at /dev/sda, in command line, type:''
 
-as root, or using sudo: 
+ #as root, or using sudo: 
  mount -t ext2 /dev/sda2 /SD/MMC/MOUNTING/FOLDER
  
-You have mounted the SD or MMC card.
-Then for extracting the rootfs image, type:
+ #You have mounted the SD or MMC card.
+ #Then for extracting the rootfs image, type:
 
-Also as root, or using sudo: 
+ #Also as root, or using sudo: 
  cd /SD/MMC/MOUNTING/FOLDER/
  tar xvjf /PATH/OF/THE/DOWNLOADED/IMAGE/<NAME OF YOUR IMAGE>
-Works for a .tar.bz2 compressed image, use 'tar -xvzf' for a .tar.gz compressed image.
+ #Works for a .tar.bz2 compressed image, use 'tar -xvzf' for a .tar.gz compressed image.
  sync
-Ensure copying is finish before doing anything else.
+ #This ensure copying is finish before doing anything else.
+
  cd ~/
-Exit that folder before unmounting the SD
+ #Exit its folder before unmounting the SD/MMC.
  umount /dev/sda2
-Remember our SD card is named /dev/sda here, and this may differ on your own computer.
+ #Remember our SD card is named /dev/sda here, and this may differ on your own computer.
 
 ===Add softwares to the distro's rootfs===
 
