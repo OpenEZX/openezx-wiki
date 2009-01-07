@@ -179,15 +179,15 @@ Remember here the sd card is called /dev/mmcblk0 but this can be different on yo
 
 Partitions are made, but need to be formatted to be used:
 
-First partition on the Sd need to be a FAT or FAT32 partition, formated with dos, windows, phone's original operating system, or dosfstools (mkfs.vfat) on a linux box. It is used for media files with the original firmware optionally to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well.
+First partition on the Sd need to be a FAT or FAT32 partition, it is used for media files with the original firmware optionally to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well. You can format it with dos, windows, phone's original operating system, or dosfstools (mkfs.vfat) on a linux box:
 
  mkfs.vfat /dev/sda1 (for VFAT)
 
-Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX.
+Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX:
 
  mkfs.ext2 /dev/sda2
 
-Remember here the sd card is called /dev/sda (and first and second parts of it respectively /dev/sda1 and /dev/sda2) but this can be different on your computer.
+Remember here the SD card is called /dev/sda (and first and second parts of it respectively /dev/sda1 and /dev/sda2) but this can be different on your computer.
 
 ===Download a recent image from OpenEmbedded===
 Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's "distribution" scripts collection and images may also be download-able at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
