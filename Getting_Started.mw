@@ -178,7 +178,7 @@ Remember here the sd card is called /dev/mmcblk0 but this can be different on yo
  Then create a second partition ----------------------> ''push [n] again ('2' then [ENTER], the default use all resting space)''
  Change the first partition to windows type ----------> ''push [t], and [b] ("b" means vfat type)''
  Change the second partition to linux type -----------> ''just to ensure, as all new GNU fdisk parts are set to type "83"''
- Write this partition table --------------------------> ''push [w], this confirm and exit (datas will be lost)''
+ Write this partition table --------------------------> ''push [w], this confirm and exit (datas will be lost use [q]for cancel)''
 
 ===Creating file systems (format), we need a first VFAT and second EXT2===
 
