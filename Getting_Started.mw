@@ -152,18 +152,13 @@ Note that USB network in OpenEZX differs from USB networking on stock firmwares,
 
 == C) Putting a rootfs image on an (Micro) SD Card to try or use OpenEZX==
 
-It is possible to get a serial console without opening the phone.
-
-You can set the EMU into a mode which acts as serial port. You get RX and TX from the mini usb plug, but need an external level shifter like MAX3232 and a power source for the MAX3232.
-
-In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add console=ttyS0,115200n8 console=tty0 to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages on the framebuffer at the same time. 
-For now, the kernel can boot, but does it stop to a step it search for a 'rootfs' and hangs up writing some "unable to find rootfs at:" lines? This is normal, we will try to fix this in the next paragraphs. :-)
+For now, the kernel can boot, but does it stop to a step it search for a 'rootfs' and hangs up writing some "unable to find rootfs at:..." lines? This is normal, we will try to fix this in the next paragraphs. :-)
 
 The SD/MMC card needs to be partitioned into two partitions: one FAT/EXT2 partition, and one EXT2 partition used as root file system.
 
 First partition on the Sd need to be a FAT or FAT32 partition, formated with dos, windows, or dosfstools (mkfs.vfat) on linux. It is used for media files with the original firmware optionnaly to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well.
 
-Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX
+Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX.
 
 ===Creating the partitions===
 
