@@ -25,8 +25,9 @@ EZX family subset names and their handsets (some help here)
 
 ===Processors===
 
-*A Motorola Neptune LTE based mobile phone (BP) plus
-*A PXA270 Xscale (AP) based PDA in one case
+* A Motorola Neptune LTE based mobile phone (BP) plus
+* A PXA270 Xscale (AP) based PDA in one case
+* Freescale SCM-A11 (ZN5)
 
 
 ====Application Processor ([http://www.chipdocs.com/datasheets/datasheet-pdf/Intel/PXA270.html PXA270])====
@@ -58,7 +59,6 @@ EZX family subset names and their handsets (some help here)
 
 *Attached to UART of BP
 *Has it's own Flash and RAM (2MB?)
-
 
 ===PCAP2===
 
