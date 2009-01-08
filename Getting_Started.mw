@@ -129,7 +129,7 @@ to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the ke
 
 * So you just need a last boot_usb command to load the kernel:
 
- ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>"
+ ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>" <initrd>
 
 After a short time the screen should go funny, then you should see Linux booting!
 
