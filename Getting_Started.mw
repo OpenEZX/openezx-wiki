@@ -175,7 +175,7 @@ The SD/MMC card needs to be partitioned into two partitions: one FAT(or VFAT) pa
 
 For this first example, I recommend a first 600MB fat/fat32 partition and a second ext2 one using the rest (my config for an 1Gig SD).
 
-'''BACKUP YOUR DATAS ON THE SD BEFORE GOING FURTHER, NEXT STEPS WILL ERASE THEM'''
+'''BACKUP YOUR DATAS ON THE SD BEFORE GOING FURTHER, NEXT STEPS WILL ERASE THEM!'''
 
 Open a shell and launch the GNU fdisk utility (always as root or sudo-ing):
  fdisk -l
@@ -187,7 +187,7 @@ Remember here the sd card is called /dev/mmcblk0 but this can be different on yo
  Then create a first partition of a size of 600MB ----> ''push [n] and reply the 'wizard' ('1' then '+600M')''
  Then create a second partition ----------------------> ''push [n] again ('2' then [ENTER], the default use all resting space)''
  Change the first partition to windows type ----------> ''push [t], and [b] ("b" means vfat type)''
- Change the second partition to linux type -----------> ''just to ensure, as all new GNU fdisk parts are set to type "83"''
+ Change the second partition to linux type -----------> ''just to ensure, as GNU fdisk's new parts are always type "83"''
  Write this partition table --------------------------> ''push [w], this confirm and exit (datas will be lost use [q]for cancel)''
 
 ===Creating file systems (format), we need a first VFAT and second EXT2===
