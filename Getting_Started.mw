@@ -212,6 +212,7 @@ There are pre-compiled images and kernels for the A780 (that might works also wi
 http://www.angstrom-distribution.org/unstable/images/a780/
 And recently :
 http://downloads.freesmartphone.org/fso-unstable/images/
+
 For what we are planning to do any of the images should be acceptable. Choose the one you want and download it.
 
 Note that [http://people.openezx.org Developer's web spaces] are also generally full of testing images that you just have to unpack in your sd to try :) .
