@@ -55,13 +55,13 @@ From kernel version 2.6.28rc1, you shouldn't need to configure the kernel at all
 
 Get the lastest gen-blob compiled with:
 Make sure you have the arm-angstrom-linux-gnueabi toolchain.
-Also you'll need a configured 'stock' 2.4 montavista/motorola kernel (take it at [opensource.motorola.com], run setup.sh, and you're done).
+Also you'll need a configured 'stock' 2.4 montavista/motorola kernel (take it at [https://opensource.motorola.com/sf/sfmain/do/home opensource.motorola.com], run setup.sh, and you're done).
  svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
  # adapt your 2.4 kernel source path and the one of angstrom toolchain path too, if necessary.
  # in case of an error, delete config.cache then run ./configure again.
  ./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=/PATH/TO/A/CONFIGURED/2.4.17/EZX/KERNEL/TREE --enable-usb --host=/usr/local/angstrom/arm/bin/
  make
-This should have created a file named "blob" (in /src/blob/)
+This should have created a file named "blob" (in /src/blob/).
 
 ===Machine id's (machid)=== 
 
