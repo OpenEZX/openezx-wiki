@@ -61,6 +61,7 @@ Also you'll need a configured 'stock' 2.4 montavista/motorola kernel (take it at
  # in case of an error, delete config.cache then run ./configure again.
  ./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=/PATH/TO/A/CONFIGURED/2.4.17/EZX/KERNEL/TREE --enable-usb --host=/usr/local/angstrom/arm/bin/
  make
+This should have created a file named "blob" (in /src/blob/)
 
 ===Machine id's (machid)=== 
 
