@@ -40,8 +40,12 @@ You can download boot_usb_0.3 (SVN revision 2367) [http://openezx.org/download/b
 Pick a compiled boot_usb from [http://peoples.openezx.org/gmzhuo/boot_usb here].
 Pick a compiled gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
 
-Compiling from the sources:
+- Compiling boot_usb from the sources:
+
 Install svn, then:
+Make sure to have an ARM configured linux kernel's tree to point to, and at least version 2.6.27 (Kernels versions 2.6.28rc1 and highter don't need to be configured at all).
+You also need to have the libusb-devel package installed (recommended version >= 0.1.12).
+
  svn co http://svn.openezx.org/trunk/src/host/boot_usb/
  cd boot_usb
  ./autogen.sh
@@ -49,19 +53,17 @@ Install svn, then:
  make
  chmod +x boot_usb
 
-This should have created a file named "boot_usb"
-If this don't work, make sure you pointed to a configured for ARM linux kernel's tree and at least version 2.6.27.
-From kernel version 2.6.28rc1, you shouldn't need to configure the kernel at all for this.
+This should have created a file named "boot_usb".
 
-Get the lastest gen-blob compiled with:
-Make sure you have the arm-angstrom-linux-gnueabi toolchain.
-Also you'll need a configured 'stock' 2.4 montavista/motorola kernel (take it at [https://opensource.motorola.com/sf/sfmain/do/home opensource.motorola.com], run setup.sh, and you're done).
+- Get the latest gen-blob compiled:
+
+Make sure you have the arm-angstrom-linux-gnueabi toolchain. You'll need to run 'setup.sh' from a 'stock' [https://opensource.motorola.com/sf/sfmain/do/home 2.4 montavista/motorola EZX kernel tree taken from opensource.motorola.com](setup.sh should configure it, see [[Kernel hacking - linux-2.4]] for other methods).
  svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
  # adapt your 2.4 kernel source path and the one of angstrom toolchain path too, if necessary.
  # in case of an error, delete config.cache then run ./configure again.
  ./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=/PATH/TO/A/CONFIGURED/2.4.17/EZX/KERNEL/TREE --enable-usb --host=/usr/local/angstrom/arm/bin/
  make
-This should have created a file named "blob" (in /src/blob/).
+This should have created a file named "blob" (in /src/blob/), that is 'GEN-BLOB'.
 
 ===Machine id's (machid)=== 
 
