@@ -207,7 +207,7 @@ Second (and others) partition should be linux and formatted in EXT2 (or any othe
 
 Remember here the SD card is called /dev/sda (and first and second parts of it respectively /dev/sda1 and /dev/sda2) but this can be different on your computer.
 
-===Download a recent image for our phones===
+===Download a recent image for your phones===
 Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's "distribution" scripts collection and images may also be download-able at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
 
 There are pre-compiled images for the A780 (that might works also with others phones) in sub folders at
@@ -217,7 +217,7 @@ And recently :
 http://downloads.freesmartphone.org/fso-unstable/images/
 Oh! -> be careful: you may have to fear a little the very old kernels distributed on those folders. I guess they are 'obsolete' zImage just haunting the folders for some 'record' reason ;-) , or only built for A780, as their names tends to describe, names witch don't tell the version number...you may want to spam #oe before trying them! :-)
 
-For what we are planning to do any of the images should be acceptable. Choose the one you want and download it.
+For what we are planning to do any of the rootfs images should be acceptable. Choose the one you want and download it.
 
 Note that [http://people.openezx.org Developer's web spaces] are also generally full of testing images that you just have to unpack in your sd to try :) .
 In the [[Rootfs on SD]] page, there is yet another rootfs "collection".
