@@ -210,11 +210,12 @@ Remember here the SD card is called /dev/sda (and first and second parts of it r
 ===Download a recent image for our phones===
 Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's "distribution" scripts collection and images may also be download-able at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
 
-There are pre-compiled images and kernels for the A780 (that might works also with others phones) in sub folders at
+There are pre-compiled images for the A780 (that might works also with others phones) in sub folders at
 
 http://www.angstrom-distribution.org/unstable/images/a780/
 And recently :
 http://downloads.freesmartphone.org/fso-unstable/images/
+(be carefull: you may have to fear a little the very old kernels distributed on thoses folders. I guess they are 'obsolete' zImages just haunting the folders just for some 'record' ;-) , or only for A780, as their names tends to describe, names wich don't tell the version number...you may want to spam #oe before trying them!)
 
 For what we are planning to do any of the images should be acceptable. Choose the one you want and download it.
 
