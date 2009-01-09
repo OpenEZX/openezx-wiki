@@ -27,52 +27,22 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 
 Note that reflash mode also place the baseband into reflash mode (appearing as a usb device, if you enable the pxa hub). It appears that use of the baseband is not possible whilst it is in this mode.
 
-
+= FLAG =
+Flag is a 32bit value stored at 0xa0000000, on RAM. It indicates wheter the phone was suspended and the bootloader should just resume to a RAM location, or if it should load a kernel from flash.
 
 = RESET =
 
-The reset value seems to be 0x00000001. 
-
-This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in FFSPR (FFUART Scratch Pad Register) which is copied there by .../blob/src/blob/start.S from RCSR (Reset Controller Status Register).
+It is the value stored in FFSPR (FFUART Scratch Pad Register) which is copied there by .../blob/src/blob/start.S from RCSR (Reset Controller Status Register).
 
 A value of 0x00000001 means that a hardware reset has occured.
 
 = BRESET =
 
-The reset value seems to be 0x00000000. 
-
 This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in PSPR (Power Manager Scratch Pad Register).
 
 = ARESET =
 
-The reset value seems to be 0x00000000. 
-
 This value is printed to the LCD by output_reset_inf() in ...blob/src/blob/main.c. It is the value stored in RCSR. The hardware reset flag is cleared by ...blob/src/blob/start.S after it's copied to FFSPR.
-
-= Messages =
-
-We have discovered two messages at the moment:
-
-* No BP_WDI before reset start reflash code!
-* start reflash code!
-
-= Version and date =
-
-Version 3.0 from 2004-05-18
-
-If you get another version and date on your phone please add here.
-
-= Booting your own kernel =
-
-# Power off the phone
-# Power on the phone and enter the bootloader (see above)
-# Attach the phone to your computer via USB
-# Run <tt>./boot_usb zImage</tt> on your computer, where [http://svn.openezx.org/trunk/src/host/boot_usb boot_usb] is compiled via a simple "make", and zImage is the kernel image you want to boot (e.g. [http://people.openezx.org/laforge/kernel/zImage-2.6.16.13-ezx3-32mb-p1 this one]).
-# The kernel image will be transfered to your phone and it will boot using that kernel.
-
-= Troubleshooting =
-
-In case you followed all steps correctly and the only thing you get is white colors with blueish stripes fading slowly into white, then you encountered a bug in our initialization routine. In that case, boot first with the MOTO kernel, right after that remove the battery, insert it again, enter bootloader and try again.
 
 = Differences between the phone bootloaders =
 
