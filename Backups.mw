@@ -53,27 +53,19 @@ Before hacking on your EZX phone you should probably create backups of all conte
 | no known backup method
 |}
 
-
 ===Using the OpenEZX 2.6 kernel===
 * At the moment there is no mtd mapping on the code on git.openezx.org/openezx.git. But in general this is as easy as running
-
-
-cat /dev/mtd? > firmware.bin
-
+ cat /dev/mtd? > firmware.bin
 
 ===Using gen-blob===
 Download [http://people.openezx.org/wyrm/gen-blob/gen-blob gen-blob], send it to the phone with boot_usb, while holding the VOL+ key pressed, you will see "USB ready" on the phone screen, now you can use boot_usb to read flash contents.
 
-
 * send gen-blob to the phone:
-./boot_usb gen-blob 0 # Dont forget to hold the vol+ key.
-
+ ./boot_usb gen-blob 0 # Dont forget to hold the vol+ key.
 
 * backup the firmware:
-./boot_usb read 0 33554432 firmware.bin # for phones with 32MB NOR
-
-./boot_usb read 0 67108864 firmware.bin # for phones with 64MB NOR
-
+ ./boot_usb read 0 33554432 firmware.bin # for phones with 32MB NOR
+ ./boot_usb read 0 67108864 firmware.bin # for phones with 64MB NOR
 
 ===Using the motorola 2.4 kernel===
 Get [http://www.motorolafans.com/forums/attachment.php?attachmentid=851&d=1141927886 DumpFW] from motorolafans.com, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/member.php?u=1129 jumit] & [http://motorolafans.com/forums/member.php?u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
