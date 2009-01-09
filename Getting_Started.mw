@@ -129,7 +129,7 @@ You should see "'''USB Ready'''" in the top of the screen at this step.
 '''Important note for gen1 devices (A780/e680):''' At this step you will need
 to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the kernel will not work.
 
-* So you just need a last boot_usb command to load the kernel:
+* Finally, the last boot_usb command to load the kernel:
 
  ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>" <initrd>
 
