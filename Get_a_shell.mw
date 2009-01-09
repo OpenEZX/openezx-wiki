@@ -365,8 +365,6 @@ Before tinkering with a system, one of the first steps is usually to create a fu
 
 That's the reason why you should add <code>mtu 900</code> to the ifconfig commands above, and should adjust the mtu on the phone if using the modem hack.
 
-Then I used netcat for the actual backup, you can get the utils.zip at pre-compiled at http://pashkovsky.com/e680/.
-
 Now copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Executing /diska/profile.txt allows to use some additional tools like netcat. For a backup, execute e.g.
 
  nc -p2030 -l | bzip2 -9 > full-backup-a780.tar.bz2
