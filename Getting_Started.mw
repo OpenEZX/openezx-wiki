@@ -61,7 +61,7 @@ Make sure you have the arm-angstrom-linux-gnueabi toolchain. You'll need to run 
  svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
  # adapt your 2.4 kernel source path and the one of angstrom toolchain path too, if necessary.
  # in case of an error, delete config.cache then run ./configure again.
- ./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=/PATH/TO/A/CONFIGURED/2.4.17/EZX/KERNEL/TREE --enable-usb --host=/usr/local/angstrom/arm/bin/
+ ./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=/PATH/TO/A/CONFIGURED/2.4/EZX/KERNEL/TREE --enable-usb --host=/usr/local/angstrom/arm/bin/
  make
 This should have created a file named "blob" (in /src/blob/), that is 'GEN-BLOB'.
 
