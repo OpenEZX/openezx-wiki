@@ -1,87 +1,81 @@
 Before hacking on your EZX phone you should probably create backups of all contents on the phone, as things may break.
 
-==What you need to backup==
-
-To fully backup your EZX phone, you have to backup the firmware and user data.
 
 ===Flash Disks===
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
+|- style="background:#bfbfbf; font-weight: bold"
+! Phone
+! AP NOR
+! AP NAND
+! BP
+|-
+| A780
+| style="background:lime" | 32MB
+| style="background:yellow" | 64MB
+| style="background:red" | ??
+|-
+| A910
+| style="background:lime" | 64MB
+| -
+| style="background:red" | ??
+|-
+| A1200
+| style="background:lime" | 64MB
+| -
+| style="background:red" | ??
+|-
+| E2
+| style="background:lime" | 64MB
+| -
+| style="background:red" | ??
+|-
+| E6
+| style="background:lime" | 64MB
+| -
+| style="background:red" | ??
+|-
+| E680
+| style="background:lime" | 32MB
+| style="background:yellow" | 64MB
+| style="background:red" | ??
+|-
+|}
 
-The [[A780]] has two internal flash devices, a 32 MB "wireless" StrataFlash and a 64 MB DiskOnChip in addition to an external TransFlash drive. The [[E680i]] has a 32 MB internal flash drive in addition to SD slot. Other devices will have a similar configuration of flash drives and each should be backed up. This can be done either via netcat, dd or tar (explained below).
+{|
+|-
+| style="background:lime" |   
+| backup possible with 2.6.x kernel or gen-blob
+|-
+| style="background:yellow" |   
+| backup possible with motorola 2.4 kernel
+|-
+| style="background:red" |   
+| no known backup method
+|}
 
-===Firmware===
 
-The part of the firmware that is on StrataFlash contains the data for the root file system, the [[bootloader]], Kernel, /usr/setup and a logo.
-The part that is on the DiskOnChip contains /usr/language.
-Looking at the [[A780]] mount points:
+===Using the OpenEZX 2.6 kernel===
+* At the moment there is no mtd mapping on the code on git.openezx.org/openezx.git. But in general this is as easy as running
 
- # df -k
- Filesystem           1k-blocks      Used Available Use% Mounted on
- rootfs                   55112     55112         0 100% /
- /dev/root                55112     55112         0 100% /
- /dev/tffsa               25572     25572         0 100% /usr/language
- /dev/roflash2              152       152         0 100% /usr/setup
- /dev/mtdblock2            5312      1328      3984  25% /ezxlocal
- /dev/tffsb1              40858     11230     29628  28% /diska
- /dev/mmca1              246912    193056     53856  79% /mmc/mmca1
 
-the devices /dev/root and /dev/roflash2 are mounted from the StrataFlash. However, they cannot be accurately copied from the filesystem. DumpFW (below) will solve this problem.
+cat /dev/mtd? > firmware.bin
 
-===User data===
-The /diska(on the DiskOnChip) and /ezxlocal(on the StrataFlash) contains user data, they can be copied easily with dd or tar.
 
-==Using USBLAN Mode==
+===Using gen-blob===
+Download [http://people.openezx.org/wyrm/gen-blob/gen-blob gen-blob], send it to the phone with boot_usb, while holding the VOL+ key pressed, you will see "USB ready" on the phone screen, now you can use boot_usb to read flash contents.
 
-===Backup Flash Disks With netcat===
 
-Read [[Get_a_shell#Creating_a_backup|Get a shell]] for a simple method to backup most files visible from within the Linux on the phone using [http://netcat.sourceforge.net netcat].
+* send gen-blob to the phone:
+./boot_usb gen-blob 0 # Dont forget to hold the vol+ key.
 
-However, please note: ''This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools''.  See [[#Firmware_2|Using Mass Storage USB Mode#Firmware]].
 
-==Using Mass Storage USB Mode==
+* backup the firmware:
+./boot_usb read 0 33554432 firmware.bin # for phones with 32MB NOR
 
-If you are just getting started and haven't setup all of these fancy hacks yet, you can still backup your phone (well, almost completely).  You need to first get your phone working in Mass Storage USB Mode (see this guide if you need help getting there).  Once you have mounted both mass storage devices on the phone, you should archive the contents of each. Remember that there are hidden files and directories (for both Windows and Linux users) that should be copied as well.
+./boot_usb read 0 67108864 firmware.bin # for phones with 64MB NOR
 
-===Backup Flash Disks With tar===
 
-====Windows Users====
-
-It is recommended that you use [http://www.cygwin.com Cygwin] tar because Linux and UNIX file systems have file modes & permissions that Windows doesn't natively understand. Making a backup with Winzip, winrar, etc. is certainly ''much'' better than no backup at all however! To install Cywgin, you need to download the generically named [http://www.cygwin.com/setup.exe setup.exe] program from [http://www.cygwin.com www.cygwin.com] and run it.
-
-Once you have Cygwin installed, start a shell session and cd to your first mounted drive. The first drive is /diska (should be the same on all phones) and is the primary disk-on-a-chip flash drive where most of your user data goes. So if your phone's disks mounted on F: and G:, you will want to go to your F: drive first.
-
- cd /cygdrive/f
-
-Decide where you want your backups to go to. You will obviously want them on your PC, so this will be your C: drive or something like that. For now, let's assume you want them in C:\. While you are in the <code>/cygdrive/f</code> directory, type the following:
-
- tar czf /cygdrive/c/diska.tgz .
-
-You may also want to include the date in your output file name (e.g., <code>/cygdrive/diska-20060505.tgz</code>). The next drive is the contents of your MMC card. Use the same procedure.
-
- cd /cygdrive/g
- tar czf /cygdrive/c/mmc01.tgz .
-
-The only thing you cannot backup this way is the /ezxlocal file system since this isn't availble (without hacking) when in mass storage mode.  Once you get LinLoader and/or telnet running, it's a relativly simple task using either a shell script or the Guides::Backups#Backup_Flash_Disks_With_netcat method
-
-====Linux Users====
-
-Pretty much the same thing, minus the Linux substitute =)
-
-===Backup Flash Disks With dd (Linux Only)===
-
-You can create [http://www.gnu.org/software/coreutils/manual/html_chapter/coreutils_11.html#SEC65 dd] images of the internal flash (mounted as /diska on the phone) and the external SD/MMC/TransFlash card directly, from the storage device, while the phone is attached to your computer via USB in Mass Storage Mode. If the phone is the only attached USB device, the internal flash should be /dev/sda1 and the external SD/MMC/TransFlash should be /dev/sdb1.
-
- dd if=/dev/sda1 of=my_ezx_sda1_backup.dd
- dd if=/dev/sdb1 of=my_ezx_sdb1_backup.dd
-
-I have experienced (driver?) problems with the external TransFlash on my A780 while creating such a dd image. Putting the TransFlash card into an external SD/MMC/TransFlash reader (and attaching that to my computer via USB) and then creating a dd image worked fine, though.
-
-===Firmware===
-
-Now, we need to backup the firmware. By far, the easiest way to do this is to nab [http://www.motorolafans.com/forums/attachment.php?attachmentid=851&d=1141927886 DumpFW] from motorolafans.com, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/member.php?u=1129 jumit] & [http://motorolafans.com/forums/member.php?u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
+===Using the motorola 2.4 kernel===
+Get [http://www.motorolafans.com/forums/attachment.php?attachmentid=851&d=1141927886 DumpFW] from motorolafans.com, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/member.php?u=1129 jumit] & [http://motorolafans.com/forums/member.php?u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
 
 Once it completes, copy the firmware files firmware.dump and tffsa.dmp to your hard drive. It is advisable to notate the firmware version you have extracted as well.
-
-You have now made a backup!
-
-
-[[Category:Development]]
