@@ -57,7 +57,7 @@ This should have created a file named "boot_usb".
 
 - Get the latest gen-blob compiled:
 
-Make sure you have the arm-angstrom-linux-gnueabi toolchain. You'll need to run 'setup.sh' from a 'stock' [https://opensource.motorola.com/sf/sfmain/do/home 2.4 montavista/motorola EZX kernel tree taken from opensource.motorola.com](setup.sh should configure it, see [[Kernel hacking - linux-2.4]] for other methods).
+Make sure you have the arm-angstrom-linux-gnueabi toolchain. You'll need a 'stock' [https://opensource.motorola.com/sf/sfmain/do/home 2.4 montavista/motorola EZX kernel tree taken from opensource.motorola.com] and configure it for any EZX hardware (running 'setup.sh' should configure it, see [[Kernel hacking - linux-2.4]] for other methods).
  svn co http://svn.openezx.org/trunk/src/blob/gen-blob/
  # adapt your angstrom toolchain's path, if necessary.
  # in case of an error, delete config.cache then run ./configure again.
