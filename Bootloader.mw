@@ -27,72 +27,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 
 Note that reflash mode also place the baseband into reflash mode (appearing as a usb device, if you enable the pxa hub). It appears that use of the baseband is not possible whilst it is in this mode.
 
-= FLAG =
 
-We have some problems where the flag values come from. [[Blob]], the bootloader, reads the flag value from the first four bytes of SDRAM. The question is who wrote these bytes into the SDRAM?  The only corresponding value we can find in the kernel source code is 0x7c7c7c7c.
-
-'''UPDATE: It looks like they don't have any real meaning. For reference here's a table of values we encountered so far, note that by tests we found out that they don't actually influence booting.'''
-
-Shouldn't that be magic bootup flags that tell the bootloader e.g. whether this startup is supposed to be a genuine full-boot or a resume back to a running session living in SDRAM?
-At least that's what some PocketPC bootloaders do...
-If this is a corresponding mechanism (and come to think of it I bet it is!), then it could be the kernel suspend code for this machine type (or even the architecture?) which writes those values
-upon shutdown or suspend. OK, in the shutdown case those values would be void since the SDRAM would be powered off... (which probably explains the
-rather random flag variations below). -am
-
-{| border="1"
-|- style="background:#bfbfbf; font-weight: bold"
-! Flags entry
-! Image
-! Meaning
-|-
-| 0x7c7c7c7c
-| [http://people.openezx.org/stefan/photos/a780-bootloader-2.jpg]
-| It's called OFF_FLAG in ezx.h
-|-
-| 0x12345678
-| -
-| If blob reads this FLAG value it will enter an passthrough mode. In this mode the host can communicate directly with the BP.
-|-
-| 0x95aa95aa
-| -
-| Reproducible. Power off phone over night and enter bootloader first gives you this flag. Perhaps indicates long time off.  Also detected after the battery runs out, after recharging the value was set back to OFF_FLAG.
-|-
-| 0x958a95aa
-| -
-| Reproducible.
-|-
-| 0xd5aa95aa
-| -
-| No idea.
-|-
-| 0x558a95aa
-| 
-| No idea.
-|-
-| 0x1caabca8
-| -
-| Possible Low power.
-|-
-| 0x15babdae
-| -
-| Low Power. System did not start. Only bootloader.
-|-
-| 0x60d56f34
-| -
-| No idea.
-|-
-| 0x6b6b6b6b
-| [http://wiki.openezx.org/images/2/25/IGP7383.jpg]
-| Defined in ezx.h (lubbock.h too) "SLEEP_FLAG"
-|-
-| 0x3c7c3c7c
-| -
-| No idea.
-|-
-| 0x0C1D2E3F
-| -
-| Defined in ezx.h "REFLASH_FLAG" tested for by blob (not actually seen yet, anyone?)
-|}
 
 = RESET =
 
