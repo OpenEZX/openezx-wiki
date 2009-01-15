@@ -8,7 +8,7 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
 * Get the kernel sources:
  git clone git://git.openezx.org/openezx.git
 
-* Make the repo topgit aware:
+* Make the repo topgit aware (in git/openezx directory):
  tg remote --populate origin
 
 * Checkout our development branch:
