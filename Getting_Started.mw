@@ -162,6 +162,7 @@ This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lk
 
 
 [[Rootfs on NFS]] is a solution to store the root filesystem, and booting your phone with linux stored in a place in your hard-disk, instead of having it on the SD card, and can be easier to experiment, to try some softwares on the phone from an hard-disk folder...
+
 Just follow [[#Unpacking an image into the card]] section, replacing the SD card by the emplacement you choosed for the so-called "export" directory, wich will become the path of your "nfsroot". Of course, doing this way, you can skip the steps partitioning, and formatting the SD card of this tutorial as well. 
 
 See [[Rootfs on NFS]] for network configuration as well (both usb-network sides's setups will differ from the ones used with motorola's firmware). FIXME: add bridging setup.
