@@ -50,4 +50,4 @@ Edit /etc/export to suit the path the kernel will be waiting for.
  CMDLINE_ROOT = "root=/dev/nfs nfsroot=192.168.0.200:/PATH/TO/YOUR/NFSROOT/EXPORT/ rootdelay=5"
 
 
-For deeper explanation, you can refer to [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/filesystems/nfsroot.txt Documentation/filesystems/nfsroot.txt] an the nfs manual page.
+For deeper explanation, you can refer to [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/filesystems/nfsroot.txt Documentation/filesystems/nfsroot.txt] and the nfs manual page.
