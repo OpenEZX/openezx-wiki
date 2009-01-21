@@ -189,14 +189,14 @@ and log in to your phone as "root" (no password is set, simply press return):
  telnet 192.168.1.2
 
 Setting up the MTU on both ends is very important to avoid corrupted datas especially for netcat transferts.
-So, for the phone end, once you're logged in, type this on the telnet/ssh terminal:In A68 y
+So, for the phone end, once you're logged in, type this on the telnet/ssh terminal:
 
  ifconfig usbl0 mtu 900
 
 === Windows ===
 
 A free driver is available for Windows XP users on the [http://www.motorolafans.com/forums/viewtopic.php?t=3337 motorolafans.com forum].  For A780 users, you will need to hack the .inf file as described in that thread. 
-Motodev.com also distribute freely some motorola drivers, of course the should come with Motorola Phone Tools and the Cd-rom that is shipped with each new EZX phone.
+Motodev.com also distribute freely some motorola drivers, of course they should come with Motorola Phone Tools and the Cd-rom that is shipped with each new EZX phone.
 
 Windows 2k users have no other choice but to use the [http://www.motorolafans.com/forums/attachment.php?attachmentid=11939&d=1216664942 Belcarra demo driver] (while the link is still good) which was neither intended nor licensed for public consumption.  Alternately, you can install [http://distrowatch.com Linux :)].  For A780 users, the .inf file for the Belcarra driver will have to be hacked as well.  To hack the .inf, you will have to go through each section where there are entries for other devices and duplicate them with the Vendor ID / Product ID string of <code>VID_22b8&PID_600c</code>.
 
@@ -308,8 +308,8 @@ By default, your firewall may forbid telnet connections to your phone. Easiest w
 
 === MTU ===
 
-If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), as seen above, set the mtu to a better value: 900 or 750 (on both ends) are known to work flawlessly.
-The symptoms of the problems that may occurs with the defaults 1500 MTU, are, e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes across. Setting a lower MTU (more appropriate for USB connections) at both sides of the link solves the problem.
+If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), as seen above, set the mtu to a better value: 900 or even 750 (on both ends) are known to work flawlessly.
+The symptoms of the problems that may occurs with the defaults  MTU (1500), are, e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes across. Setting a lower MTU (more appropriate for USB connections) at both sides of the link solves the problem.
 
 === DHCP ===
 
