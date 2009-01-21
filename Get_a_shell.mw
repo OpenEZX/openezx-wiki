@@ -381,7 +381,7 @@ And on the phone:
 Then repeat something similar for the TransFlash (or SD/MMC) card (if available).
 
 '''Attention:''' 
- This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools.
+This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools.
 
 == LICENSE NOTE ==
 
