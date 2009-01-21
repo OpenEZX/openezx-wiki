@@ -68,6 +68,14 @@ Download [http://people.openezx.org/wyrm/gen-blob/gen-blob gen-blob], send it to
  ./boot_usb read 0 67108864 firmware.bin # for phones with 64MB NOR
 
 ===Using the motorola 2.4 kernel===
-Get [http://www.motorolafans.com/forums/attachment.php?attachmentid=851&d=1141927886 DumpFW] from motorolafans.com, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/member.php?u=1129 jumit] & [http://motorolafans.com/forums/member.php?u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
 
+'''Please note that the newer bootusb method is much more safer and you shouldn't need to use those folowing methods.'''
+
+For the record:
+Elvadas and Jumit wrote a backup tools in C, you can download it from [http://www.motorolafans.com/forums/attachment.php?attachmentid=851&d=1141927886 here] from motorolafans.com, or its [http://www.motorolafans.com/forums/attachments/a780-general-chat/843d1141771345-latest-firmware-r52_g_0d-76-a1r_0d-c0-b1p-motodump2.zip source code] to use it in another phone than A780, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/member.php?u=1129 jumit] & [http://motorolafans.com/forums/member.php?u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
 Once it completes, copy the firmware files firmware.dump and tffsa.dmp to your hard drive. It is advisable to notate the firmware version you have extracted as well.
+
+Another backup tool (made for E2, but can be used on other EZX phones with some modifications), is "getos" , see [http://code.google.com/p/e2mod/source/browse/trunk/mpkg/getos/getos.lin code.google.com/e2mod].
+
+Note that from the stock user interface, as long as you can execute/write a script, or have a terminal access, some dd command should do the backup of the /dev/mtdX partitions, and /dev/roflashX as well. Theses command should be used to write on SD/MMC some working backups of theses respectives "codegroups".
+One can send these commands with a remote control access, using telnet, ssh or else (thrue the bluetooth Net, USBNet, WLan 802.11, GPRS... :-) ), just pay attention to the link quality when transfering the resulting backup files and '''prefer using directly a card-reader''' to copy them (avoid netcat! ).
