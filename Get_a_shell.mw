@@ -1,10 +1,13 @@
-Here is how to get a shell on the phone, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer. For E680 users, as long as you don't mess up the bootloader, you can restore the phone to a working state with Motorola's PST software and a copy of the firmware. No links will be provided here since it's illegal and leaked. We don't know of any A780 firmware in the wild (but on [http://www.motorolafans.com motorolafans.com], one is listed - it is completely unverified though).
+Here is how to get a shell on the phone's stock EZX Operating system, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer.
 
-If you aren't careful, you can mess up your phone to the point that it will take a skilled person to restore an E680, and an A780 might have to be sent for factory service.
+As long as you don't mess up the bootloader, you can restore the phone to a working state with our Ezx Boot_USB/GEN-blob tools (or with Motorola's flashing tools rsd, pst, radiocomm...) and a copy of the original firmware [[Backups|('''see backup guide, very important''')]].
+
+But note, that in case you mess with some bootloader or crucial part of the flash, your phone might have to be sent for factory service.
 
 This howto is mainly intended for Linux or Mac OS X and a specific phones. For further howto's and questions check [http://www.motorolafans.com motorolafans.com].
 
-By default, the A780 would set its IP address to 192.168.1.2. ''This won't work'' if your system already has a network configured that would include 192.168.1.2. Since this is a network commonly used for DHCP, that could be a problem.
+By default, the phones would set its IP address to 192.168.1.2 (sometimes it's 192.168.1.16).
+'''This won't work''' if your system already has a network configured that would include 192.168.1.2. Since this is a network commonly used for DHCP, that could be a problem.
 
 Therefore in the [[#Using LinLoader|LinLoader approach]] below, we will put the phone's IP address to 169.254.1.2 here, and the host's IP address to 169.254.1.1. You can replace that numbers by any IP address from the following ranges: 192.168.1.* or 169.254.*.* (where the phone and the host must have different IP addresses but from the same subnet). You cannot easily use totally different IP addresses. This requires you to enable these in /etc/hosts.allow on the phone.
 
@@ -130,15 +133,17 @@ If are using Ubuntu Gutsy or Hardy releases, the zaurus module may be missing, d
 
 == Change Modem Mode  ==
 
-In A68 you can simply change the modem type by visiting the Settings applet on the phone and
+You can simply change the modem type by visiting the Settings applet on the phone and
 changing '''USBNET''' to On. The phone will display the IP number assigned, so far I only saw
 192.168.1.1.
 
 '''Using the shell'''
 
+For the [A780], the [E680]:
+
  echo "AT+mode=99" > /dev/ttyACM0
 
-For the [[Rokr E2]], the [[A910]] and the [[Rokr E6]]:
+For the [[Rokr E2]], the [[A910]], the [A1200], and the [[Rokr E6]]:
 
  echo "AT+mode=13" > /dev/ttyACM0
 
@@ -173,23 +178,25 @@ When you gave that "mode" command, the phone caused the host to re-enumerate its
 
 And now /proc/bus/usb/devices should contain a device with manufacturer ID of ''Motorola'' and product id of ''Motorola USBLAN''.
 
-Configure the network interface with
+Configure network interface with
 
  ifconfig usb0 192.168.1.1 netmask 255.255.255.0 mtu 900
 
-''Note that on some devices, such as the ROKR2-Z8, the handset IP net is '''192.168.16.XXX'''''
+''Note that on some devices, such as the ROKR2-Z8, the handset IP net is '''192.168.16.XXX''' or '''192.168.1.16'''''
 
 and log in to your phone as "root" (no password is set, simply press return):
 
  telnet 192.168.1.2
 
-once you're logged in, you should adjust the mtu on the phone side, too:
+Setting up the MTU on both ends is very important to avoid corrupted datas especially for netcat transferts.
+So, for the phone end, once you're logged in, type this on the telnet/ssh terminal:In A68 y
 
  ifconfig usbl0 mtu 900
 
 === Windows ===
 
-A free driver is available for Windows XP users on the [http://www.motorolafans.com/forums/viewtopic.php?t=3337 motorolafans.com forum].  For A780 users, you will need to hack the .inf file as described in that thread.
+A free driver is available for Windows XP users on the [http://www.motorolafans.com/forums/viewtopic.php?t=3337 motorolafans.com forum].  For A780 users, you will need to hack the .inf file as described in that thread. 
+Motodev.com also distribute freely some motorola drivers, of course the should come with Motorola Phone Tools and the Cd-rom that is shipped with each new EZX phone.
 
 Windows 2k users have no other choice but to use the [http://www.motorolafans.com/forums/attachment.php?attachmentid=11939&d=1216664942 Belcarra demo driver] (while the link is still good) which was neither intended nor licensed for public consumption.  Alternately, you can install [http://distrowatch.com Linux :)].  For A780 users, the .inf file for the Belcarra driver will have to be hacked as well.  To hack the .inf, you will have to go through each section where there are entries for other devices and duplicate them with the Vendor ID / Product ID string of <code>VID_22b8&PID_600c</code>.
 
@@ -199,7 +206,7 @@ You will also need to setup the Windows network adapter.  However, this cannot b
 
 == Using LinLoader ==
 
-First get the '''LinLoader''' script from [http://www.troodon.org/a780/files/basic_tools/loader.zip here]. Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash (or SD/MMC) card (you will need to create the "loader" subdirectory):
+First get the '''LinLoader''' script from [http://www.troodon.org/a780/files/basic_tools/loader.zip here]. Or check for modified (for more phones) version at [http://www.motorolafans.com motorolafans subforums]. Unzip and copy the following files to the ".system/QTDownLoad/'''loader'''" directory on your TransFlash (or SD/MMC) card (you will need to create the "loader" subdirectory):
 * lin_loader
 * loader.png
 * loader-sm.png
@@ -299,9 +306,10 @@ By default, your firewall may forbid telnet connections to your phone. Easiest w
 
  service iptables stop
 
-=== mtu 900 ===
+=== MTU ===
 
-If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), set the mtu to 900, as seen above.
+If you experience strange behavior (smb hangs when listing directories, telnet crashes on long output), as seen above, set the mtu to a better value: 900 or 750 (on both ends) are known to work flawlessly.
+The symptoms of the problems that may occurs with the defaults 1500 MTU, are, e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes across. Setting a lower MTU (more appropriate for USB connections) at both sides of the link solves the problem.
 
 === DHCP ===
 
@@ -357,13 +365,9 @@ If you need to be root, you should edit the linloader file, find this two lines:
  UserID = ezx
 and change ezx to root.
 
-=== Creating a backup ===
+=== Files transferts ===
 
-* This section is a duplicate of [[Backups]] although it has better netcat information as well as some tar goodies (except that the tar code below appears to miss /.backup).
-
-Before tinkering with a system, one of the first steps is usually to create a full backup. For the A780, this can be done with minor changes as soon as a shell login is possible. When using NFS mounts or netcat to tar the whole file system over the (USB) network, there is a small catch: the default MTU of 1500 bytes doesn't seem to work over the usbnet connection. The symptoms are that e.g. a directory listing over a NFS-mounted directory works, but that creating a file doesn't, or that netcat can connect, but that no data at all comes across. Setting a lower MTU at both sides of the connection (I used 900 as an overly conservative value that worked flawlessly, but it will most probably also work with higher values) solves the problem and allows to easily create a full backup.
-
-That's the reason why you should add <code>mtu 900</code> to the ifconfig commands above, and should adjust the mtu on the phone if using the modem hack.
+You can use NFS mounts or netcat to tar the whole file system over the (USB) network, (see the [[#MTU| mtu warning section]]).
 
 Now copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Executing /diska/profile.txt allows to use some additional tools like netcat. For a backup, execute e.g.
 
@@ -374,8 +378,8 @@ on the host machine and
  cd /; tar --preserve --same-owner --atime-preserve --exclude ram/proc --exclude mmc/mmca1 -cv * | nc 192.168.1.1 2030
 
 on the phone. Then repeat something similar for the TransFlash (or SD/MMC) card (if available).
-
-'''Attention:''' This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools.
+'''Attention:''' 
+ This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools.
 
 == LICENSE NOTE ==
 
