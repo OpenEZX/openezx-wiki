@@ -369,15 +369,17 @@ and change ezx to root.
 
 You can use NFS mounts or netcat to tar the whole file system over the (USB) network, (see the [[#MTU| mtu warning section]]).
 
-Now copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Executing /diska/profile.txt allows to use some additional tools like netcat. For a backup, execute e.g.
+Now copy the utils.zip to the phone (e.g. with Bluetooth OBEX push), and extract it under /diska. Executing /diska/profile.txt allows to use some additional tools like netcat. 
 
+For saving the whole files in the phone's filesytem execute:
+
+On the host machine:
  nc -p2030 -l | bzip2 -9 > full-backup-a780.tar.bz2
-
-on the host machine and
-
+And on the phone:
  cd /; tar --preserve --same-owner --atime-preserve --exclude ram/proc --exclude mmc/mmca1 -cv * | nc 192.168.1.1 2030
 
-on the phone. Then repeat something similar for the TransFlash (or SD/MMC) card (if available).
+Then repeat something similar for the TransFlash (or SD/MMC) card (if available).
+
 '''Attention:''' 
  This is not a full backup of the firmware, it only contains the files that are directly visible from Linux. It will not allow to re-flash the phone using standard flash tools.
 
