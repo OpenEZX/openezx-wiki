@@ -26,6 +26,35 @@ It also enables multiboot, you can keep your original software and start experim
 * openezx kernel ([http://people.openezx.org/ao2/snapshots/zImage-2.6.25-ezxdev-20081102-a780 a780 zImage]) with MTD support and [http://people.openezx.org/ao2/snapshots/modules-2.6.25-ezxdev-20081102-a780.tar.gz modules] needed for vfat support.
 * mtd-utils installed in the rootfs used with the openezx kernel
 
+===Compiling gen-blob===
+
+You first need a configured 2.4 kernel:
+<pre>
+git clone git://git.openezx.org/motorola-2.4.git
+cd motorola-2.4
+git checkout A1200-42PCLEAN
+make ARCH=arm ezx-hainan_config
+make ARCH=arm oldconfig
+export MOTO_KERNEL_DIR=`pwd`
+cd ..
+</pre>
+
+And then you can build gen-blob using the OpenEmbedded toolchain.
+Assuming your OpenEmbedded installation is in <code>${HOME}/OE/</code> you can build gen-blob with these commands:
+
+<pre>
+svn co http://svn.openezx.org/trunk/src/blob/gen-blob
+cd gen-blob
+make distclean
+source ./setenv3
+PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin \
+./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=$MOTO_KERNEL_DIR --enable-usb
+PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin \
+make
+
+cp src/blob/blob gen-blob
+</pre>
+
 ===Partitionig===
 
 gen-blob expects a FAT16/FAT32 as the first partition on MMC card, it loads the kernel from there, you could also use this partition as storage shared between the original software and the alternative ones. The other partitions should be choosen according to the requirements of the kernel you are going to load. Usually OpenEZX kernels expect an ext2 partition as the second one, from which they load the rootfs.
