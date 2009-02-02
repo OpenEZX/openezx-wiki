@@ -37,8 +37,8 @@ See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/READM
 ===Get boot_usb and gen-blob===
 
 You can download boot_usb_0.3 (SVN revision 2367) [http://openezx.org/download/boot_usb-0.3.tar.gz here].
-Pick a compiled boot_usb from [http://peoples.openezx.org/gmzhuo/boot_usb here].
-Pick a compiled gen-blob from [http://peoples.openezx.org/wyrm/gen-blob here].
+Pick a compiled boot_usb from [http://people.openezx.org/gmzhuo/boot_usb here].
+Pick a compiled gen-blob from [http://people.openezx.org/wyrm/gen-blob here].
 
 - Compiling boot_usb from the sources:
 
