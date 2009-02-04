@@ -18,6 +18,8 @@ It lets you have the phone with its BP (Baseband Processor) in normal mode, this
 
 It also enables multiboot, you can keep your original software and start experimenting with the (too) many Free alternatives, loading kernels and userspace software from the external SD/MMC card (let's simply call it MMC in this document).
 
+NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For a full functionnality of the phone. In fact, BP need some delay to activate itself properly, and the original bootlogo is delayed as well, to 'reflect' this need. As gen-blob don't fake anything, you just need to press the power button for two second, to be sure...
+ 
 ==Installing gen-blob==
 
 ===What's needed===
@@ -55,7 +57,7 @@ make
 cp src/blob/blob gen-blob
 </pre>
 
-===Partitionig===
+===Partitioning===
 
 gen-blob expects a FAT16/FAT32 as the first partition on MMC card, it loads the kernel from there, you could also use this partition as storage shared between the original software and the alternative ones. The other partitions should be choosen according to the requirements of the kernel you are going to load. Usually OpenEZX kernels expect an ext2 partition as the second one, from which they load the rootfs.
 
