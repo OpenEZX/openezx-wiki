@@ -48,9 +48,9 @@ svn co http://svn.openezx.org/trunk/src/blob/gen-blob
 cd gen-blob
 make distclean
 source ./setenv3
-PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin \
+PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin 
 ./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=$KERNEL_DIR --enable-usb
-PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin \
+PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin 
 make
 
 cp src/blob/blob gen-blob
