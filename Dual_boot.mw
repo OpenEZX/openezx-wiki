@@ -30,14 +30,13 @@ NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For
 
 ===Compiling gen-blob===
 
-You first need a configured 2.4 kernel:
+You first need recent 2.6 kernel:
+For example you can use the OpenEZX kernel using git.
 <pre>
-git clone git://git.openezx.org/motorola-2.4.git
-cd motorola-2.4
-git checkout A1200-42PCLEAN
-make ARCH=arm ezx-hainan_config
-make ARCH=arm oldconfig
-export MOTO_KERNEL_DIR=`pwd`
+git clone git://git.openezx.org/openezx.git
+cd openezx
+git checkout ezx/current
+export KERNEL_DIR=`pwd`
 cd ..
 </pre>
 
@@ -50,7 +49,7 @@ cd gen-blob
 make distclean
 source ./setenv3
 PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin \
-./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=$MOTO_KERNEL_DIR --enable-usb
+./configure --with-board=lubbock --with-cpu=pxa262 --with-linux-prefix=$KERNEL_DIR --enable-usb
 PATH=$PATH:${HOME}/OE/build/tmp/cross/armv5te/bin \
 make
 
