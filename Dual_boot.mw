@@ -30,8 +30,8 @@ NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For
 
 ===Compiling gen-blob===
 
-You first need recent 2.6 kernel:
-For example you can use the OpenEZX kernel using git.
+You first need recent 2.6 kernel.
+For example you can use the OpenEZX kernel:
 <pre>
 git clone git://git.openezx.org/openezx.git
 cd openezx
