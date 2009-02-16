@@ -122,7 +122,7 @@ Contains a vfat img loop mounted as
 | 56
 | align="center"|No
 | bploader.img
-|
+| Baseband software boot loader
 |- 
 |}
 
