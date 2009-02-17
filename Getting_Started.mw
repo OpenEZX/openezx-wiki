@@ -231,6 +231,16 @@ Now that we have prepared two new partitions (as long as you don't use gen-blob 
  umount /dev/sda2
  ''#Remember our SD card is named /dev/sda here, and this may differ on your own computer.''
 
+===When it doesn't work===
+If the kernel boots but you see an error like this on the console:
+ mmc0: unrecognized SCR structure version 1
+ mmc0: error 4 whilst initialising SD card
+try a different SD card.
+
+It seems that the default BLOB (already installed on the phone) boots from the kernel on the FAT partition, so actually you probably need to install it there [[dual boot#Partitioning|as described here]].  Then you can boot '''without''' holding down the volume button: just do
+ boot_usb gen-blob 0
+and it will load the kernel from /boot/default on the SD card's first partition (the FAT one). [[User:Ecloud|Ecloud]] 08:08, 17 February 2009 (CET) (tested on the E680i)
+
 ===Add softwares to the distro's rootfs===
 
 To find out how the distro's specific package management system works, please refer to the disto's website directly (see links in the first paragraph on top of this page).
