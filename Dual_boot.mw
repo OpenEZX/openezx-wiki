@@ -82,8 +82,6 @@ With this layout the content of menu.lst should be
 
 You also need a configured rootfs in the second partition, use the modules provided above so you can mount the first partition when running openezx kernel.
 
-Note: for some reason the original Moto kernel really has to be /boot/default.  If you replace it with an OpenEZX kernel as /boot/default, it won't boot using genblob flashed onto the MTD.
-
 ==Installation==
 
 Use an '''OpenEzx kernel''' with CONFIG_MTD_EZX_A780 like the one suggested above.
