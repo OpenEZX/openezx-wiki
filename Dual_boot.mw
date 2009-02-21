@@ -112,12 +112,13 @@ If you have previosly installed [http://svn.openezx.org/trunk/src/blob/blob2/ bl
 
 and go on with the previous instructions.
 
-==Note for A780 users==
+==Note for A780 and E680 users==
 
-A780 will "look bricked" if you do something wrong with the kernel
+The phone will "look bricked" if you do something wrong with the kernel
 partition. In case you can't enter your bootloader screen, dont panic,
-just remove the battery press the bootloader keys (jog+vr) and put the
-battery while holding the keys.
+just remove the battery press the bootloader keys (jog+vr on the A780,
+vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
+You will get the blue screen for flash mode.
 
 ==Note for A1200 users==
 For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing:
