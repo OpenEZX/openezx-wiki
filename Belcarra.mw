@@ -1,0 +1,12 @@
+Belcarra Technologies specializes in the design, implementation and support of high performance USB software and USB-On-the-Go (USBOTG) systems for today's embedded products such as cell-phones, PDAs, hand-held data loggers and other smart devices using an impressive and growing array of System on Chip (SOC) processors.
+
+Motorola has licensed Belcarra's USBLAN networking technology for use in its Linux- and Java-based smartphones, Belcarra reports. USBLAN will enable Motorola's "mobile-PDA-MP3-embedded camera phones" to network with desktop computers running a variety of operating systems, according to Belcarra.
+Belcarra's USBLAN technology implements "an enhanced version" of the USB Forum's CDC Ethernet standard for Ethernet over USB, rather than the Remote NDIS (RNDIS) "standard" promoted by Microsoft. More details about differences between CDC Ethernet and RNDIS are available in a whitepaper from Belcarra.
+Belcarra president Bruce Balden claims that "USBLAN offers far greater speed, reliability, and flexibility compared to previous USB or serial based communications methods, and makes it simple for phone-based applications to communicate with services on the desktop PC without using specialized tools."
+Samuel LI, product manager of smart phones at Motorola, said, "Belcarra's USB technology has already been in smart phones for some time. It has the features that both our users and developers require."
+Belcarra provides embedded development tools and support for networking via USB between devices and desktop computers running Windows, MacOS/X, and Linux. It offers proprietary solutions, as well as a GPL-licensed Linux USB Device Framework, which its engineers created and continue to support.
+
+Links
+
+* http://www.belcarra.com/rndis/Belcarra_RNDIS_Whitepaper_1.0.PDF
+* http://www.belcarra.com/index.html
