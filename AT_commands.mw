@@ -689,7 +689,7 @@ Test command returns Modem (0) or Phonebook mode (1). Set command seems to work,
 **AP logger
 
 *AT+MODE=11
-**motcdc; will find a new HW: Belcarra: VID:22B8 PID:6004
+**motcdc; will find a new HW: [[Belcarra]]: VID:22B8 PID:6004
 
 *AT+MODE=12
 **MotDSPLog, new HW
