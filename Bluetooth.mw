@@ -34,3 +34,19 @@ After booting from flash everything is setup to enable bluetooth.  Important not
  2. hciattach /dev/ttyS1 bcm2035 460800 flow 01:02:03:04:05:06
 
 At this point normal linux bluez operations work.  "hciconfig hci0 up" followed by "hcitool scan" should show all bluetooth devices within range of the a780.  Note that "01:02:03:04:05:06" is the a780 bluetooth address reported to other bluetooth devices.  You can set it to almost any value.
+
+
+Bluetooth PAND
+It nearly works 
+on the phone : Start Bluetooth like above (2.6)
+
+killall hcidd
+pand -l -n -z -r GN -D 
+(sets up a listening pand server)
+
+on your laptop 
+/etc/init.d/bluetooth stop
+pand -c XX:XX:XX:XX:XX -n -z -D -r PANU
+
+(bnep0 device should be created)
+the problem is now ifconfig bnep0 up doesnt work on the phone (siocsifflags)
