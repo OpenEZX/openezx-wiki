@@ -111,7 +111,7 @@ Wait some few seconds for the device to be properly enumerated by your box.
  ./boot_usb setflag usb          
  ./boot_usb gen-blob 0            
 
-Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the top of the screen. At this step you can test genblob and linux boot in USB mode (without having to flash anything on the phone).
+Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the top of the screen. At this step you can test genblob  in USB mode and properly boot linux (without having to flash anything on the phone but you can't call or use the modem, remember, the phone has been started in flash mode).
 
 '''Important note for gen1 devices (A780/e680):''' At this step you will need
 to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the kernel will not work.
