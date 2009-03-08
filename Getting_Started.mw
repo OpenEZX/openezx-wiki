@@ -95,7 +95,7 @@ See [http://www.arm.linux.org.uk/developer/machines/download.php] (our devices a
 
 ===Sending the kernel to boot===
 
-First you need to put the phone in the right mode.
+First you need to put the phone in the "MBM reflash mode".
 
 * Turn off the phone
 * Hold down the jog-dial and the camera button, or, on some others phones, hold the VR key instead.
@@ -107,13 +107,11 @@ A red screen should appear in Gen2 devices.
 * Connect the phone to the USB cable if it wasn't done yet.
 Wait some few seconds for the device to be properly enumerated by your box.
 
-* Now '''hold the vol+''' button, then, on the computer, as root or sudo-ing, run:
-           
+* Then, on the computer, as root or sudo-ing, run:
+ ./boot_usb setflag usb          
  ./boot_usb gen-blob 0            
 
-Ok, wait one more second then release the VOL+ key. You just entered gen-blob's "USB" mode.
-
-You should see "'''USB Ready'''" in the top of the screen at this step.
+Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the top of the screen. At this step you can test genblob and linux boot in USB mode (without having to flash anything on the phone).
 
 '''Important note for gen1 devices (A780/e680):''' At this step you will need
 to '''unplug/plug''' the usb cable to redo the usb enumeration or sending the kernel will not work.
