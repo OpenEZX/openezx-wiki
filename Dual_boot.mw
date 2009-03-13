@@ -25,7 +25,7 @@ NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For
 ===What's needed===
 
 * gen-blob sources and a proper toolchain to build it, or alternatively an already compiled gen-blob, see [http://people.openezx.org/wyrm/gen-blob/ here].
-* The '''newest boot-usb built from the source''' on svn or phonetools, to send it, flash and backup the phone's flash content.
+* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone.
 
 ===Compiling gen-blob===
 
