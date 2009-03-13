@@ -6,10 +6,6 @@ For the old page look at [[Dual boot OLD]], it may be removed at any time.
 
 '''ALL THE CODE AND BINARY FILES IN THIS PACKAGE ARE FREE TO USE AND REDISTRIBUTE, WITH A GPL LICENSE OR SIMILAR.'''
 
-The first part of the tutorial has been tested only on Motorola A780.
-
-Don't flash gen-blob on A910, it can't access MMC on this phone.
-
 ==What is gen-blob==
 
 gen-blob is a ''second stage bootloader'' for the Motorola EZX phones, developed by Daniel Ribeiro starting from the sources of the EZX version of 'blob' bootloader released by Motorola.
@@ -17,17 +13,15 @@ gen-blob is a ''second stage bootloader'' for the Motorola EZX phones, developed
 It lets you have the phone with its BP (Baseband Processor) in normal mode, this enables the use of GSM and several other services on EZX phones (GPS, if available, and charging batteries, just to mention some).
 
 It also enables multiboot, you can keep your original software and start experimenting with the (too) many Free alternatives, loading kernels and userspace software from the external SD/MMC card (let's simply call it MMC in this document).
-
-NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For a full functionnality of the phone. In fact, BP need some delay to activate itself properly, and the original bootlogo is delayed as well, to 'reflect' this need. As gen-blob don't fake anything, you just need to press the power button for two second, to be sure...
  
-==Installing gen-blob==
+=Installing gen-blob=
 
-===What's needed===
+==What's needed==
 
 * gen-blob sources and a proper toolchain to build it, or alternatively an already compiled gen-blob, see [http://people.openezx.org/wyrm/gen-blob/ here].
 * The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone.
 
-===Compiling gen-blob===
+==Compiling gen-blob==
 
 You first need recent 2.6 kernel.
 For example you can use the OpenEZX kernel:
@@ -55,7 +49,7 @@ make
 cp src/blob/blob gen-blob
 </pre>
 
-===Partitioning===
+==Partitioning==
 
 gen-blob expects a FAT16/FAT32 as the first partition on MMC card, it loads the kernel from there, you could also use this partition as storage shared between the original software and the alternative ones. The other partitions should be choosen according to the requirements of the kernel you are going to load. Usually OpenEZX kernels expect an ext2 partition as the second one, from which they load the rootfs.
 
@@ -81,9 +75,9 @@ With this layout the content of menu.lst should be
 
 You also need a configured rootfs in the second partition, use the modules provided above so you can mount the first partition when running openezx kernel.
 
-==Flashing and installing gen-blob==
+=Flashing gen-blob=
 
-===On A780 and E680 (gen1 devices)===
+==On A780 and E680 (gen1 devices)==
 
 Put the phone in flash mode and prepare it:
  ./boot_usb setflag usb
@@ -97,7 +91,7 @@ Backup your existing kernel:
 Flash gen-blob:
  ./boot_usb flash 0x20000 gen-blob
 
-====Note for A780 and E680 users====
+===Note for A780 and E680 users===
 
 The phone will "look bricked" if you do something wrong with the kernel
 partition. In case you can't enter your bootloader screen, dont panic,
@@ -107,7 +101,7 @@ You will get the blue screen for flash mode.
 
 
 
-===On RokrE2, RokrE6, A1200 (gen2 devices)===
+==On RokrE2, RokrE6, A1200, A910 (gen2 devices)==
 
 On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
 
@@ -127,7 +121,7 @@ Flash gen-blob:
  dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-to-be-flashed-to-0xA0000
  boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
-====Important on A910====
+===Important on A910===
 
 gen-blob can be flashed on A910, but the kernel to boot has to be on the phone's flash.
 
@@ -147,12 +141,12 @@ EXAMPLE:
  00d8e80 ffff ffff ffff ffff ffff ffff ffff ffff
  *
  00e0000
-One of these line (the last!) must end with at least a few 'ffff'...
+One of these line (the last!) must end with at least a few ' f f f f '...
 
 If your checks has passed successfully, then you can flash the kernel:
  boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
-===Important for blob2 users===
+==Important for blob2 users==
 
 If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in a different place than in the original map we used here, but the rootfs location stay the same, so you just have to dump the kernel from the right place then go on with the previous instructions.
 
@@ -163,6 +157,7 @@ Hold the following key when sending via boot_usb (or powering on when flashed).
 * Scroll UP (Volume +): USB ready mode
 Not holding any key boots /boot/default without any FB activity.
 
+NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For a full functionnality of the phone. In fact, BP need some delay to activate itself properly, and the original bootlogo is delayed as well, to 'reflect' this need. As gen-blob don't fake anything, you just need to press the power button for two second, to be sure...
 
 ==References==
 
