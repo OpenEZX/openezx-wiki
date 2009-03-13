@@ -75,7 +75,7 @@ With this layout the content of menu.lst should be
 
 You also need a configured rootfs in the second partition, use the modules provided above so you can mount the first partition when running openezx kernel.
 
-=Flashing gen-blob on the device (depends on the phone generation)=
+=Flashing gen-blob on the device (depends on the phone's type)=
 
 ==On A780 and E680 (gen1 devices)==
 
