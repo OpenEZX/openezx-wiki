@@ -119,7 +119,7 @@ Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to
 
 Flash gen-blob '''WARNING: For gen2 phones only! :''' 
  dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-to-be-flashed-to-0xA0000
- boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
+ ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
 ===Important on A910===
 
@@ -144,7 +144,7 @@ EXAMPLE:
 One of these line (the last!) must end with at least a few ' f f f f '...
 
 If your checks has passed successfully, then you can flash the kernel '''WARNING: For gen2 phones only! :'''
- boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
+ ./boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
 ==Important for blob2 users==
 
