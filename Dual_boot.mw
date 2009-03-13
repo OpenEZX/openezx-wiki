@@ -107,7 +107,7 @@ You will get the blue screen for flash mode.
 
 
 
-===On RokrE2, RokrE6, A1200, A910 (gen2 devices)===
+===On RokrE2, RokrE6, A1200 (gen2 devices)===
 
 On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
 
@@ -126,6 +126,31 @@ Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to
 Flash gen-blob:
  dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-to-be-flashed-to-0xA0000
  boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
+
+====Important on A910====
+
+gen-blob can be flashed on A910, but the kernel to boot has to be on the phone's flash.
+
+It will search at 0xC0000 and if it find a special 'magic' flag, then it will boot this kernel by default.
+
+The kernel have to be prepared, we remove the 2048 bytes offset, and resize the file:
+ #download a flag to put at the beggining of the flashed kernel.
+ wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
+ dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
+ cat magic-boot-from-flash kernel-with-no-extra-bytes > kernel-to-be-flashed-to-0xC0000
+
+Then you need to assert the resulting 'kernel-to-be-flashed-to-0xC0000' file is exactly 917504 bytes big:
+ ls -l kernel-to-be-flashed-to-0xC0000 
+Then you can also check if the file hasn't been cut at its end: 
+ hexdump kernel-to-be-flashed-to-0xC0000 | tail
+EXAMPLE:
+ 00d8e80 ffff ffff ffff ffff ffff ffff ffff ffff
+ *
+ 00e0000
+One of these line (the last!) must end with at least a few 'ffff'...
+
+If your checks has passed successfully, then you can flash the kernel:
+ boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
 ===Important for blob2 users===
 
