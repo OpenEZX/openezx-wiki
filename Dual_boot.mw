@@ -25,8 +25,7 @@ NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For
 ===What's needed===
 
 * gen-blob sources and a proper toolchain to build it, or alternatively an already compiled gen-blob, see [http://people.openezx.org/wyrm/gen-blob/ here].
-* openezx kernel ([http://people.openezx.org/ao2/snapshots/zImage-2.6.25-ezxdev-20081102-a780 a780 zImage]) with MTD support and [http://people.openezx.org/ao2/snapshots/modules-2.6.25-ezxdev-20081102-a780.tar.gz modules] needed for vfat support.
-* mtd-utils installed in the rootfs used with the openezx kernel
+* The '''newest boot-usb built from the source''' on svn or phonetools, to send it, flash and backup the phone's flash content.
 
 ===Compiling gen-blob===
 
@@ -82,20 +81,55 @@ With this layout the content of menu.lst should be
 
 You also need a configured rootfs in the second partition, use the modules provided above so you can mount the first partition when running openezx kernel.
 
-==Installation==
+==Flashing and installing gen-blob==
 
-Use an '''OpenEzx kernel''' with CONFIG_MTD_EZX_A780 like the one suggested above.
+===On A780 and E680 (gen1 devices)===
 
-Save the current kernel:
- # cat /dev/mtd1 > zImage-2.4
- # mount /dev/mmcblk0p1 /mnt/
- # cp zImage-2.4 /mnt/boot/default
+Put the phone in flash mode and prepare it:
+ ./boot_usb setflag usb
+ ./boot_usb gen-blob 0
+ 
+Backup your existing kernel:
+ ./boot_usb read 0x20000 1048576 backup-of-kernel-partition
+ # Copy and rename this backup to /boot/default on the SD card.
+ # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
 
-Check your config
- # $EDITOR /mnt/boot/menu.lst
+Flash gen-blob:
+ ./boot_usb flash 0x20000 gen-blob
 
-Flash gen-blob with mtd-utils:
- # flashcp -v gen-blob /dev/mtd1
+====Note for A780 and E680 users====
+
+The phone will "look bricked" if you do something wrong with the kernel
+partition. In case you can't enter your bootloader screen, dont panic,
+just remove the battery press the bootloader keys (jog+vr on the A780,
+vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
+You will get the blue screen for flash mode.
+
+
+
+===On RokrE2, RokrE6, A1200, A910 (gen2 devices)===
+
+On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
+
+Put the phone in flash mode and prepare it:
+ ./boot_usb setflag usb
+ ./boot_usb gen-blob 0
+ 
+Backup your existing kernel:
+ ./boot_usb read 0xA0000 1048576 backup-of-kernel-partition
+ # Then add the famous 2048 bytes offset:
+ dd if=backup-of-kernel-partition bs=1k skip=2 of=24-kernel-backup
+
+Now like for gen1 devices, copy and rename this "24-kernel-backup" file to "default" on the /boot/ folder of the (micro) SD card.
+Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
+
+Flash gen-blob:
+ dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-to-be-flashed-to-0xA0000
+ boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
+
+===Important for blob2 users===
+
+If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in mtd2 instead of mtd1, but the rootfs location stay the same, so you have just to dump the kernel from the right place then go on with the previous instructions.
 
 ==Usage==
 
@@ -104,25 +138,6 @@ Hold the following key when sending via boot_usb (or powering on when flashed).
 * Scroll UP (Volume +): USB ready mode
 Not holding any key boots /boot/default without any FB activity.
 
-==Note for blob2 users==
-
-If you have previosly installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in mtd2 instead of mtd1, but the rootfs location stay the same, so you have just to dump the kernel from the right partition:
-
- # cat /dev/mtd2 > zImage-2.4
-
-and go on with the previous instructions.
-
-==Note for A780 and E680 users==
-
-The phone will "look bricked" if you do something wrong with the kernel
-partition. In case you can't enter your bootloader screen, dont panic,
-just remove the battery press the bootloader keys (jog+vr on the A780,
-vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
-You will get the blue screen for flash mode.
-
-==Note for A1200 users==
-For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing:
- # dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-for-a1200
 
 ==References==
 
