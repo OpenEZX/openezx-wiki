@@ -129,7 +129,7 @@ Flash gen-blob:
 
 ===Important for blob2 users===
 
-If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in mtd2 instead of mtd1, but the rootfs location stay the same, so you have just to dump the kernel from the right place then go on with the previous instructions.
+If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in a different place than in the original map we used here, but the rootfs location stay the same, so you just have to dump the kernel from the right place then go on with the previous instructions.
 
 ==Usage==
 
