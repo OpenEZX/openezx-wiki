@@ -19,7 +19,7 @@ It also enables multiboot, you can keep your original software and start experim
 ==What's needed==
 
 * gen-blob sources and a proper toolchain to build it, or alternatively an already compiled gen-blob, see [http://people.openezx.org/wyrm/gen-blob/ here].
-* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone.
+* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
 
 ==Compiling gen-blob==
 
