@@ -84,7 +84,7 @@ Put the phone in flash mode and prepare it:
  ./boot_usb gen-blob 0
  
 Backup your existing kernel:
- ./boot_usb read 0x20000 1048576 backup-of-kernel-partition
+ ./boot_usb read 0x20000 901120 backup-of-kernel-partition
  # Copy and rename this backup to /boot/default on the SD card.
  # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
 
