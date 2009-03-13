@@ -88,8 +88,7 @@ Backup your existing kernel:
  # Copy and rename this backup to /boot/default on the SD card.
  # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
 
-Flash gen-blob:
-'''WARNING: For gen1 phones only!'''
+Flash gen-blob '''WARNING: For gen1 phones only! :'''
  ./boot_usb flash 0x20000 gen-blob
 
 ===Note for A780 and E680 users===
@@ -118,9 +117,8 @@ Backup your existing kernel:
 Now like for gen1 devices, copy and rename this "24-kernel-backup" file to "default" on the /boot/ folder of the (micro) SD card.
 Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
 
-Flash gen-blob:
+Flash gen-blob '''WARNING: For gen2 phones only! :''' 
  dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-to-be-flashed-to-0xA0000
- '''WARNING: For gen1 phones only!'''
  boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
 ===Important on A910===
@@ -145,8 +143,7 @@ EXAMPLE:
  00e0000
 One of these line (the last!) must end with at least a few ' f f f f '...
 
-If your checks has passed successfully, then you can flash the kernel:
- '''WARNING: For gen1 phones only!'''
+If your checks has passed successfully, then you can flash the kernel '''WARNING: For gen2 phones only! :'''
  boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
 ==Important for blob2 users==
