@@ -77,7 +77,7 @@ You also need a configured rootfs in the second partition, use the modules provi
 
 =Flashing gen-blob on the device (depends on the phone's type)=
 
-==On A780 and E680 (gen1 devices)==
+==On A780 and E680 (maybe others gen1 devices)==
 
 Put the phone in flash mode and prepare it:
  ./boot_usb setflag usb
@@ -98,8 +98,6 @@ partition. In case you can't enter your bootloader screen, dont panic,
 just remove the battery press the bootloader keys (jog+vr on the A780,
 vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
 You will get the blue screen for flash mode.
-
-
 
 ==On RokrE2, RokrE6, A1200, A910 (gen2 devices)==
 
