@@ -1,6 +1,6 @@
 This is valid for E6 and A1200, please dont try on other phones
 
-*** USE IT ON YOUR OWN RISK, THIS IS STILL A WORK IN PROGRESS ! ***
+!!! USE IT ON YOUR OWN RISK, THIS IS STILL A WORK IN PROGRESS ! !!!
 
 == Prepeare ==
 * boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
