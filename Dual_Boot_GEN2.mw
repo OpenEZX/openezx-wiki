@@ -10,7 +10,7 @@ This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
 == Start ==
 
 * Read the [[Getting Started | starting guide]].
-** [[Getting_Started#C.29_Putting_a_rootfs_image_on_an_.28Micro.29_SD_Card_to_try_or_use_OpenEZX | Put the rootfs]] on the Linux partition of the SD card. Get the rootfs [http://people.openezx.org/ao2/images/old/Openmoko-fso-image-glibc-ipk-P1-Snapshot-20080714-a780.root here].
+** [[Getting_Started#C.29_Putting_a_rootfs_image_on_an_.28Micro.29_SD_Card_to_try_or_use_OpenEZX | Put the rootfs]] on the Linux partition of the SD card. Get the rootfs [http://people.openezx.org/ao2/images/old/Openmoko-fso-image-glibc-ipk-P1-Snapshot-20080714-a780.rootfs.tar.gz here].
 * [[Bootloader#Enter_the_bootloader | Enter the bootloader]].
 
 == Flashing procedure ==
