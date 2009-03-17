@@ -128,7 +128,9 @@ Could be any standard kernel command line (so called "CMDLINE") parameters (in t
 
 Defaults parameters (that are compiled in kernel by default) change rarely. Override them or change them yourself  and build your kernel for your convenience, it can be interesting to take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] /arch/arm/configs/ezx_defconfig of the kernel tree, at the line "CONFIG_CMDLINE=".
 At the time of writing, default command line is:
- "console=tty1 root=/dev/mmcblk0p2 rootfstype=ext2 rootdelay=1 ip=192.168.0.202:192.168.0.200:192.168.0.200:255.255.255.0 debug"
+
+ console=tty1 root=/dev/mmcblk0p2 rootfstype=ext2 rootdelay=1 \
+ ip=192.168.0.202:192.168.0.200:192.168.0.200:255.255.255.0 debug
 
 '''Examples:'''
 
@@ -173,24 +175,25 @@ Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
  fdisk /dev/mmcblk0
 Remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 
- Delete all partition of the SD/MMC----------> 
+* Delete all partitions of the SD/MMC 
  ''push [d] until there is no more parts'' 
- Then create a first partition of 600MB -----> 
+* Then create a first partition of 600MB 
  ''push [n] , [p] as primary, and reply the 'wizard' ('1' then '+600M')''
- Then create a second partition -------------> 
- ''push [n] again, [p] primary, then ('2' then [ENTER], fdisk's default value always use all resting space)''
- Change the first partition to windows type -> 
+* Then create a second partition 
+ ''push [n] again, [p] primary, then ('2' then [ENTER], 
+ fdisk's default value always use all resting space)''
+* Change the first partition to windows type
  ''push [t], and [6] ("6" means FAT16 type)''
- Change the second partition to linux type --> 
+* Change the second partition to linux type 
  ''just to ensure, as GNU fdisk's new parts are always type "83"''
- Write this partition table -----------------> 
+* Write this partition table 
  ''push [w], this confirm and exit '''datas will be lost''' (use [q]for cancel)''
 
 ===Creating file systems (format), we need a first VFAT and second EXT2===
 
 Partitions are made, but need to be formatted to be used:
 
-First partition on the Sd need to be a FAT or FAT32 partition, it is used for media files with the original firmware optionally to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well. You can format it with dos, windows, phone's original operating system, or dosfstools (mkfs.vfat) on a linux box:
+First partition on the Sd need to be a FAT or FAT16 partition, it is used for media files with the original firmware optionally to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well. You can format it with dos, windows, phone's original operating system, or dosfstools (mkfs.vfat) on a linux box:
 
  mkfs.vfat /dev/sda1 (for VFAT)
 
