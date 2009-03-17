@@ -51,3 +51,6 @@ This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
 == After the flash ==
 * Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
 * You can power off on usb mode with "boot_usb off".
+
+== Failures ==
+If your boot sequence fails, or ends with white screen, remove battery and try again.
