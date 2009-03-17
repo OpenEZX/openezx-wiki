@@ -13,7 +13,7 @@ This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
 ** [[Getting_Started#C.29_Putting_a_rootfs_image_on_an_.28Micro.29_SD_Card_to_try_or_use_OpenEZX | Put the rootfs]] on the Linux partition of the SD card. Get the rootfs [http://people.openezx.org/ao2/images/old/Openmoko-fso-image-glibc-ipk-P1-Snapshot-20080714-a780.rootfs.tar.gz here].
 * [[Bootloader#Enter_the_bootloader | Enter the bootloader]].
 
-== Flashing procedure ==
+== Booting procedure ==
 
  # download stuff
  wget http://people.openezx.org/wyrm/gen-blob/gen-blob
@@ -22,6 +22,13 @@ This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
  # send gen-blob to phone
  boot_usb setflag usb
  boot_usb gen-blob 0
+
+* get [http://people.openezx.org/wyrm/images/200903151215/zImage-200903151215 zImage].
+ # boot it with zImage
+ boot_usb zImage-200903151215 1743
+ (1743 is machine ID for E6, use 1742 for A1200)
+
+== Flashing procedure ==
 
  # save a backup
  boot_usb read 0xa0000 1048576 backup-of-kernel-partition
