@@ -6,9 +6,13 @@ This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
 * boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
 * For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing.
 * Currently mtd is not the best way to flash gen-blob
+
+== Start ==
+
+* Read the [[Getting Started | starting guide]].
 * [[Bootloader#Enter_the_bootloader | Enter the bootloader]].
 
-== Procedure ==
+== Flashing procedure ==
 
  # download stuff
  wget http://people.openezx.org/wyrm/gen-blob/gen-blob
