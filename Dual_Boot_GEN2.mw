@@ -4,8 +4,7 @@ This is valid for E6 and A1200, please dont try on other phones
 
 == Prepeare ==
 * boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
-* For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/d
-ev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing.
+* For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing.
 
 == Procedure ==
 
