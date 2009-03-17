@@ -1,0 +1,35 @@
+This is valid for E6 and A1200, please dont try on other phones
+
+== Prepeare ==
+* boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
+
+== Procedure ==
+
+ # download stuff
+ wget http://people.openezx.org/wyrm/gen-blob/gen-blob
+ wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
+
+ # send gen-blob to phone
+ boot_usb setflag usb
+ boot_usb gen-blob 0
+
+ # save a backup
+ boot_usb read 0xa0000 1048576 backup-of-kernel-partition
+
+ # prepare the kernel to be flashed
+ dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
+ cat magic-boot-from-flash kernel-with-no-extra-bytes > kernel-to-be-flashed-to-0xC0000
+ ls -l kernel-to-be-flashed-to-0xC0000 (assert that its exactly 917504 bytes)
+
+# flash gen-blob
+ dd if=/dev/zero bs=1 count=2048 of=needed-offset
+ cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
+ boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
+* example: boot_usb flash <addr> <file>
+* don't forget to check kernel-to-be-flashed-to-0xC0000 size (important - otherwise it will corrupt the resource partition)
+
+ # flash the motorola kernel
+ boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
+
+== After the flash ==
+Boot with vol- pressed for the boot menu or with vol+ for the usb mode.
