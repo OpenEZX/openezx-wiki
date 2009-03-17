@@ -173,12 +173,18 @@ Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
  fdisk /dev/mmcblk0
 Remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 
- Delete all partition of the SD/MMC----------> ''push [d] until there is no more parts'' 
- Then create a first partition of 600MB -----> ''push [n] and reply the 'wizard' ('1' then '+600M')''
- Then create a second partition -------------> ''push [n] again ('2' then [ENTER], fdisk's default value always use all resting space)''
- Change the first partition to windows type -> ''push [t], and [b] ("b" means vfat type)''
- Change the second partition to linux type --> ''just to ensure, as GNU fdisk's new parts are always type "83"''
- Write this partition table -----------------> ''push [w], this confirm and exit '''datas will be lost''' (use [q]for cancel)''
+ Delete all partition of the SD/MMC----------> 
+ ''push [d] until there is no more parts'' 
+ Then create a first partition of 600MB -----> 
+ ''push [n] , [p] as primary, and reply the 'wizard' ('1' then '+600M')''
+ Then create a second partition -------------> 
+ ''push [n] again, [p] primary, then ('2' then [ENTER], fdisk's default value always use all resting space)''
+ Change the first partition to windows type -> 
+ ''push [t], and [6] ("6" means FAT16 type)''
+ Change the second partition to linux type --> 
+ ''just to ensure, as GNU fdisk's new parts are always type "83"''
+ Write this partition table -----------------> 
+ ''push [w], this confirm and exit '''datas will be lost''' (use [q]for cancel)''
 
 ===Creating file systems (format), we need a first VFAT and second EXT2===
 
