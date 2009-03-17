@@ -1,6 +1,6 @@
 This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
 
-!!! USE IT ON YOUR OWN RISK, THIS IS STILL A WORK IN PROGRESS ! DON'T follow the [[Dual boot | dual boot]] guide !!!
+'''!!! USE IT ON YOUR OWN RISK, THIS IS STILL A WORK IN PROGRESS !''' DON'T follow the [[Dual boot | dual boot]] guide !!!
 
 == Prepeare ==
 * boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
