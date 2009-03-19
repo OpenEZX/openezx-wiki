@@ -486,6 +486,11 @@ This is slightly related to the standard +CREG event. Value is not in conformanc
 ====AT+EPANIC:====
 
 ====AT+EPING====
+Pinging the modem.
+* AT+EPING
+* AT+EPING?
+Execution and query command triggers answer:
+* +EPING: 0
 
 ====AT+EPING:====
 
