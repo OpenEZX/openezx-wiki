@@ -382,6 +382,8 @@ Seen on mux4, turns bluetooth on (1) and off (0)
 
 ====AT+EHOZ:====
 
+Most likely homezone reporting.
+
 ====AT+EHSS=%d====
 
 ====AT+EICD:====
