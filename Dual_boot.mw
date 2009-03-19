@@ -120,6 +120,8 @@ Flash gen-blob '''WARNING: For gen2 phones only! :'''
  cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
  ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
+=Additionnals notes=
+
 ===Important on A910===
 
 gen-blob can be flashed on A910, but the kernel to boot has to be on the phone's flash.
@@ -153,7 +155,7 @@ If your checks has passed successfully, then you can flash the kernel '''WARNING
 
 If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in a different place than in the original map we used here, but the rootfs location stay the same, so you just have to dump the kernel from the right place then go on with the previous instructions.
 
-==Usage==
+==Gen-blob usage==
 
 Hold the following key when sending via boot_usb (or powering on when flashed).
 * Scroll Down (volume -): Boot menu loaded from MMC card
