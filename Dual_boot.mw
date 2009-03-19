@@ -91,14 +91,6 @@ Backup your existing kernel:
 Flash gen-blob '''WARNING: For gen1 phones only! :'''
  ./boot_usb flash 0x20000 gen-blob
 
-===Note for A780 and E680 users===
-
-The phone will "look bricked" if you do something wrong with the kernel
-partition. In case you can't enter your bootloader screen, dont panic,
-just remove the battery press the bootloader keys (jog+vr on the A780,
-vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
-You will get the blue screen for flash mode.
-
 ==For RokrE2, RokrE6, A1200, A910 (gen2 devices)==
 
 On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
@@ -121,6 +113,15 @@ Flash gen-blob '''WARNING: For gen2 phones only! :'''
  ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
 =Additionnals notes=
+
+===Note for A780 and E680 users===
+
+The phone will "look bricked" if you do something wrong with the kernel
+partition. In case you can't enter your bootloader screen, dont panic,
+just remove the battery press the bootloader keys (jog+vr on the A780,
+vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
+You will get the blue screen for flash mode.
+
 
 ===Important on A910===
 
