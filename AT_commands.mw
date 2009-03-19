@@ -602,6 +602,8 @@ Query service provider name in PDU format.
 
 Does not work here. I guess there is some command that needs to be sent beforehand, so that the mapping is initialized or read from the SIM.
 
+gen2: Works on /dev/mux1 after recieving +CREG on /dev/mux0
+
 ====AT+ESPN:%%8D,%%%dU====
 
 ====AT+ESTC=%d,"%s",%d,%d====
