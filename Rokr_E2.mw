@@ -82,15 +82,18 @@ Default power management clock settings appear to be 104Mhz, 208Mhz, and 312Mhz 
 
 == RAM ==
 
-80MB Physical (/dev/mem)
+80MB in two physicals chips (/dev/mem) 
+
 
  0x3F000000-0x3FFFFFFF  (16MB)
  0xA0000000-0xA3FFFFFF  (64MB)
 
-
 This should be wrong!As the value read from MDCNFG is 0x0bae2bcd,it should have 2 SDRAM chips,1 in partition 0,size 32M,the other in partition 3,size 16M,both 16bits.
 
-45MB in-system
+And the kernel actually use these 45MB in-system:
+
+ 0xA0000000-0xA1FFFFFB  (32MB)
+ 0xAC000000-0xACFFFFFC  (16MB)
 
         total:    used:    free:  shared: buffers:  cached:
  Mem:  47509504 45441024  2068480        0   466944 19390464
