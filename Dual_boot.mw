@@ -77,7 +77,7 @@ You also need a configured rootfs in the second partition, use the modules provi
 
 =Flashing gen-blob on the device (depends on the phone's type)=
 
-==On A780 and E680 (maybe others gen1 devices)==
+==For A780 and E680 (maybe others gen1 devices)==
 
 Put the phone in flash mode and prepare it:
  ./boot_usb setflag usb
