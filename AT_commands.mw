@@ -239,6 +239,8 @@ Enters sim pin 1
 
 ====AT+CRRM====
 
+Should be issued after sim card comes ready (unlocked)
+
 ====AT+CSCL?====
 
 ====AT+CSCL:%8d====
