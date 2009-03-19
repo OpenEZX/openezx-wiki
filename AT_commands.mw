@@ -227,6 +227,10 @@ URC only. MSM might translate to "Motorola SIM Mode":
 
 Unlocks simcard using PUK (first argument) and sets new pin (second argument).
 
+====AT+CPIN=1,"%s"===
+
+Enters sim pin 1
+
 ====AT+CPWR=%d====
 
 * AT+CPWR=1
