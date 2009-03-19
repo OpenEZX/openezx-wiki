@@ -125,14 +125,18 @@ gen-blob can be flashed on A910, but the kernel to boot has to be on the phone's
 
 It will search at 0xC0000 and if it find a special 'magic' flag, then it will boot this kernel by default.
 
-The kernel have to be prepared, we remove the 2048 bytes offset, and resize the file:
- #download a flag to put at the beggining of the flashed kernel.
- wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
+The kernel have to be prepared:
+Let's do a backup of the kernel:
+ ./boot_usb read 0xA0000  1048576 backup-of-kernel-partition
+Remove the 2048 bytes offset, and resize the file:
  dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
+Download and add the magic flag to the kernel for genblob to recognize it:
+ # download a flag to put at the beggining of the kernel before flashing it.
+ wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
  cat magic-boot-from-flash kernel-with-no-extra-bytes > kernel-to-be-flashed-to-0xC0000
-
-Then you need to assert the resulting 'kernel-to-be-flashed-to-0xC0000' file is exactly 917504 bytes big:
+Then you need to assert the resulting 'kernel-to-be-flashed-to-0xC0000' file is '''exactly 917504''' bytes big:
  ls -l kernel-to-be-flashed-to-0xC0000 
+ # If the result is bigger than 917504 bytes, then don't flash it! You made a mistake somewhere...
 Then you can also check if the file hasn't been cut at its end: 
  hexdump kernel-to-be-flashed-to-0xC0000 | tail
 EXAMPLE:
