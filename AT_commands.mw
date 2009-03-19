@@ -215,6 +215,14 @@ Unsolicited response, sent during an incoming call. Looks like it indicates the 
 ====AT+CMPN:====
 
 ====AT+CMSM:%d====
+* AT+CMSM: 3
+* AT+CMSM: 0
+
+URC only. MSM might translate to "Motorola SIM Mode":
+* 0 = "present, locked"
+* 1 = ???
+* 2 = ???
+* 3 = "present, unlocked"
 
 ====AT+CPUR=1;+CPIN="%s","%s"====
 
