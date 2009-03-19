@@ -156,17 +156,16 @@ First value could be callid (as per 07.07 +CCLC), second value is peer number.
 
 ====AT+CECH=%d,%d====
 
-====AT+CEFR=0====
+====AT+CEFR====
+Set Enhanced Full Rate Mode?
+* AT+CEFR=0
+* AT+CEFR=1
+* AT+CEFR=2
+* AT+CEFR=3
 
-====AT+CEFR=1====
-
-====AT+CEFR=2====
-
-====AT+CEFR=3====
-
-====AT+CEFR:%%8D,%%%dC====
-
-====AT+CEFR:%%8D,%%%dU====
+URC codes:
+* AT+CEFR:%%8D,%%%dC
+* AT+CEFR:%%8D,%%%dC
 
 ====AT+CEFS:====
 
@@ -537,23 +536,44 @@ Extension to 07.07 +COPS?
 
 ====AT+ESATA=%d====
 
+SIM Application Toolkit...
+
 ====AT+ESATE="%s",%d,%d,%d,%d====
+
+SIM Application Toolkit...
 
 ====AT+ESATM:====
 
+SIM Application Toolkit...
+
 ====AT+ESATM=%d,%d====
+
+SIM Application Toolkit...
 
 ====AT+ESATM=%d,%d,%d====
 
+SIM Application Toolkit...
+
 ====AT+ESATM=%d,%d,%d,%d,"%s"====
+
+SIM Application Toolkit...
 
 ====AT+ESATP:====
 
+SIM Application Toolkit Init?
+URC sent right after SIM is unlocked.
+
 ====AT+ESATR=%d,"%s"====
+
+SIM Application Toolkit...
 
 ====AT+ESATSD====
 
+SIM Application Toolkit...
+
 ====AT+ESATSD:====
+
+SIM Application Toolkit...
 
 ====AT+ESCER:====
 
