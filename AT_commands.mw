@@ -503,7 +503,9 @@ Execution and query command triggers answer:
 
 ====AT+EPMS?====
 
-* Query the number of SMS slots on the SIM card. '''Note''': This command will only work the first time.
+* Query the number of SMS slots on the SIM card. 
+'''Note''': AT+CRRM should be issued first
+'''Note''': This command will only work the first time.
 
 ====AT+EPMS:%16D====
 
