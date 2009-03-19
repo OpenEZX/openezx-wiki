@@ -598,7 +598,9 @@ SIM Application Toolkit...
 ====AT+ESMT:====
 
 ====AT+ESPN?====
-Service provider name in hex-coded unicode string
+Query service provider name in PDU format.
+
+Does not work here. I guess there is some command that needs to be sent beforehand, so that the mapping is initialized or read from the SIM.
 
 ====AT+ESPN:%%8D,%%%dU====
 
