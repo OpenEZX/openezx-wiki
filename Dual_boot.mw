@@ -116,7 +116,8 @@ Now like for gen1 devices, copy and rename this "24-kernel-backup" file to "defa
 Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
 
 Flash gen-blob '''WARNING: For gen2 phones only! :''' 
- dd if=gen-blob bs=1k seek=2 conv=sync of=gen-blob-to-be-flashed-to-0xA0000
+ dd if=/dev/zero bs=1 count=2048 of=needed-offset
+ cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
  ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
 ===Important on A910===
