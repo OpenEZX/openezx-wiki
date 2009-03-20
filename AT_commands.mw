@@ -450,6 +450,8 @@ Key Event Notification
 
 Extension of +CMGL, list messages without changing their status to read.
 
+''Note'': need to be issued on gen2 after AT+EPMS? to initialise sim card.
+
 ====AT+EMGW=%d,%d,%d====
 
 Extension of +CMGW, without any restrictions wrt. status.
