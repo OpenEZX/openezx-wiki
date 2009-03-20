@@ -355,7 +355,7 @@ Seen on mux4. 64 turns loudspeaker ON, 0 turn it off.
 ====AT+EBTP=%d====
 Seen on mux4, turns bluetooth on (1) and off (0)
 
-'Note': on gen2 bluetooth power mode control from AP using PCAP2
+''Note'': on gen2 bluetooth power mode control from AP using PCAP2
 
 ====AT+EBPV:====
 
