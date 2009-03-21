@@ -5,6 +5,7 @@
 Welcome to the [http://openezx.org/ OpenEZX] wiki!
 
 This is a collaborative effort to collect information about Motorola's EZX GSM phone platform.
+''Note that OpenEZX is about hardware and kernel level work. For userland, we rely on the [http://www.freesmartphone.org freesmartphone.org] project.
 
 </div>
 
