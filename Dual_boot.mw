@@ -112,7 +112,7 @@ Flash gen-blob '''WARNING: For gen2 phones only! :'''
  cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
  ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
-=Additionnals notes=
+=Additionals notes=
 
 ===Note for A780 and E680 users===
 
