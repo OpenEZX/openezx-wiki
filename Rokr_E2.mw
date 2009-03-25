@@ -82,15 +82,7 @@ Default power management clock settings appear to be 104Mhz, 208Mhz, and 312Mhz 
 
 == RAM ==
 
-80MB in two physicals chips (/dev/mem) 
-
-
- 0x3F000000-0x3FFFFFFF  (16MB)
- 0xA0000000-0xA3FFFFFF  (64MB)
-
-This should be wrong!As the value read from MDCNFG is 0x0bae2bcd,it should have 2 SDRAM chips,1 in partition 0,size 32M,the other in partition 3,size 16M,both 16bits.
-
-And the kernel actually use these 48MB in-system:
+48MB in two physicals chips
 
  0xA0000000-0xA1FFFFFB  (32MB)
  0xAC000000-0xACFFFFFC  (16MB)
@@ -113,7 +105,6 @@ And the kernel actually use these 48MB in-system:
  SwapTotal:           0 kB
  SwapFree:            0 kB
  Committed_AS:    57172 kB
-But in linux-2.4.17\arch\arm\def-configs\ezx-sumatra CONFIG_EZXBASE_SDRAM_32_16 is set,I think it should be 48M,more close to 47509504
 
 == Flash Memory ==
 Here is a map of the flash memory:
