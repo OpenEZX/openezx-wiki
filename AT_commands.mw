@@ -538,7 +538,7 @@ Extension to 07.07 +COPS?
 * AT+ERTCAV=1,"<val>" (mux4)
 ** Turns the phone on at time <val>. Used for the alarm. Repeat to add more.
 
-''Note'': on gen2 alarm works via /dev/power_ic ioctls ( uses PCAP2 ? )
+''Note'': on gen2 alarm works via /dev/power_ic ioctls on 2.4 or with the pcap-rtc driver (standard rtc subsystem) with 2.6.
 
 ====AT+ERTR=0====
 
