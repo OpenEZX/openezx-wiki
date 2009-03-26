@@ -53,15 +53,15 @@ and want openezx on it, contact us on openezx-devel.
 |- style="background:#efefef;"
 | [[External SD/MMC/TF]]
 | style="background:lime" | 100%
-| style="background:lime" | 90%
+| style="background:yellow" | 80%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 |- style="background:#efefef;"
 | [[Camera]]
-| style="background:yellow" | 50%
-| style="background:lime" | 90%
+| style="background:lime" | 100%
+| style="background:lime" | 100%
 | style="background:red" | 0%
 | style="background:red" | 0%
 | style="background:red" | 0%
@@ -100,7 +100,7 @@ and want openezx on it, contact us on openezx-devel.
 | style="background:lime" | 100%
 |- style="background:#efefef;"
 | [[Vibrator]] / LED
-| style="background:yellow" | 80%
+| style="background:lime" | 100%
 | style="background:yellow" | 80%
 | style="background:yellow" | 80%
 | &mdash;
