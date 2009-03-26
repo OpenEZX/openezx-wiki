@@ -1,4 +1,4 @@
-= Linux 2.4 kernel overview (A780-E680)=
+= Software overview (A780-E680)=
 
 *MontaVista "mobilinux" additions
 *dynamic power management
@@ -78,7 +78,22 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 *no NMEA, no serial device emulation :(
 *proprietary library via mux_cli kernel module
 
+===UI===
+*embeddedQt
+*Motorola EZX toolkit
+*Low-level devices (framebufffer, etc) accessable.
 
+
+===Bootloader===
+
+*EZX bootloader
+*based on GPL licensed blob
+*low-level initialization code (GPIO config, clock, ...)
+*vendor specific USB device allows for:
+**transfer of executable code from USB host
+**execution of transferred executable
+*serial console code is present in binary (but not used)
+*PST/RSD firmware updates work by uploading a "ramloader"
 
 =CodeAnalysis (e680-A780)=
 
