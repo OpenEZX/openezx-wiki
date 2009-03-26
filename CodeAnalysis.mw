@@ -51,6 +51,33 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 *** vfat is only required to achieve USB mass storage compatibility for Windows boxes
 ** Logging/testing of AP, BP and DSP (logger)
 
+
+===Modules===
+
+====mux_cli.o====
+*hooks into special functions of USB host driver
+*provides GSM TS07.10 (de)multiplex
+*userspace has tty devices
+
+====gprsv.o====
+*implements GPRS line discipline for mux_cli ttys
+*hooks into netfilter to intercept DNS packets ?!?
+*provides gprs0 / grps1 network devices
+
+====ipsec.o====
+*proprietary ipsec stack (don't we already have two GPL licensed?)
+*Copyright Certicom Corp
+
+===Libraries===
+*glibc
+
+====Bluetooth====
+*proprietary userspace program directly opens HCI
+
+====GPS====
+*no NMEA, no serial device emulation :(
+*proprietary library via mux_cli kernel module
+
 == CodeAnalysis (e680-A780) ==
 
 
