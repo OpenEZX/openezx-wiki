@@ -74,7 +74,7 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 ===Bluetooth===
 *proprietary userspace program directly opens HCI
 
-===GPS===
+===[[GPS]]===
 *no NMEA, no serial device emulation :(
 *proprietary library via mux_cli kernel module
 
@@ -84,7 +84,7 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 *Low-level devices (framebufffer, etc) accessable.
 
 
-===Bootloader===
+===[[Bootloader]]===
 
 *EZX bootloader
 *based on GPL licensed blob
@@ -95,12 +95,13 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 *serial console code is present in binary (but not used)
 *PST/RSD firmware updates work by uploading a "ramloader"
 
-=CodeAnalysis (e680-A780)=
 
+
+=Deeper kernel code analysis (e680-A780)=
 
 This is currently work in progress
 
-Changes made by Motorola to MVista kernel
+Changes made by Motorola to Montavista kernel
 
 (MV kernel = 2.4.17/20 kernel + Igno Molnar scheduling changes + XIP + range of MV drivers)
 
