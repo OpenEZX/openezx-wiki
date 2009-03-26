@@ -1,4 +1,4 @@
-== Linux 2.4 kernel overview (A780-E680)==
+= Linux 2.4 kernel overview (A780-E680)=
 
 *MontaVista "mobilinux" additions
 *dynamic power management
@@ -52,33 +52,35 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 ** Logging/testing of AP, BP and DSP (logger)
 
 
-===Modules===
+==Modules==
 
-====mux_cli.o====
+===mux_cli.o===
 *hooks into special functions of USB host driver
 *provides GSM TS07.10 (de)multiplex
 *userspace has tty devices
 
-====gprsv.o====
+===gprsv.o===
 *implements GPRS line discipline for mux_cli ttys
 *hooks into netfilter to intercept DNS packets ?!?
 *provides gprs0 / grps1 network devices
 
-====ipsec.o====
+===ipsec.o===
 *proprietary ipsec stack (don't we already have two GPL licensed?)
 *Copyright Certicom Corp
 
-===Libraries===
+==Libraries==
 *glibc
 
-====Bluetooth====
+===Bluetooth===
 *proprietary userspace program directly opens HCI
 
-====GPS====
+===GPS===
 *no NMEA, no serial device emulation :(
 *proprietary library via mux_cli kernel module
 
-== CodeAnalysis (e680-A780) ==
+
+
+=CodeAnalysis (e680-A780)=
 
 
 This is currently work in progress
