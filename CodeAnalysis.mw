@@ -68,6 +68,25 @@ The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, wit
 *proprietary ipsec stack (don't we already have two GPL licensed?)
 *Copyright Certicom Corp
 
+
+
+==USB Configurations==
+*Official configs
+**cdc_acm (serial modem emulation for host pc)
+**USB mass storage (transflash and VFAT-on-TFFS devices)
+*Undocumented configs
+**usbnet "network-BLAN"
+***Network device over USB
+***Allows telnet into phone
+**PST
+***Mode used by PST Windows App
+**DSPlog
+***Apparently a way to dump data from DSP
+**NetMonitor
+***supposedly for GSM network monitor
+**cfg11 (ROKR E2)
+***??
+
 ==Libraries==
 *glibc
 
