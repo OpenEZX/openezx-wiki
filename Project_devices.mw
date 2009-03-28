@@ -1,0 +1,152 @@
+===Possible hardware targets=== 
+'''See [[project status]] for detailled support on each phone's hardware.'''
+
+
+{| border="0" cellpadding="2" cellspacing="2" width="95%"
+
+|- style="background:#4E78A0;"
+! colspan="3" | First generation devices ("gen1"): 
+
+|- style="background:#B9D3EE"
+! width="33%"| A728 ||width="33%"| A760 ||width="33%"| A768
+
+|- style="background:#E0EEEE"
+
+|[[image:A728_thumb.png|right|143px]]
+*''' [[A728|A728 overview]]'''
+*Linux machine ID: n/a
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+
+|[[image:A760_thumb.png|right|143px]]
+*''' [[A760|A760 overview]]'''
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Linux machine ID: n/a
+
+|[[image:A768_thumb.png|right|143px]]
+*''' [[A768|A768 overview]]'''
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Linux machine ID: n/a
+
+|- style="background:#B9D3EE"
+! A780 || E680 (i,g)
+
+|- style="background:#E0EEEE;"
+
+|[[image:A780_thumb.png|right|143px]]
+*''' [[A780|A780 overview]]'''
+*[[Dual-boot GEN1  | Dual-boot how-to]]
+*[[Project Status]]
+*Linux machine ID: 1740
+
+|[[image:E680_thumb.png|right|143px]]  
+*''' [[E680]], [[E680i]], [[E680G]] overviews'''
+*[[Dual-boot GEN1  | Dual-boot how-to]]
+*[[Project Status]]
+*Linux machine ID: 1741
+
+|- style="background:#4E78A0;" width="95%"
+! colspan="3" | Second generation devices ("gen2"):
+
+|- style="background:#B9D3EE"
+! A1200 (r,i,e) || Rokr E6 || Rokr E2
+
+|- style="background:#E0EEEE;"
+
+|[[image:A1200_thumb.png|right|143px]]
+*''' [[A1200|A1200 overview]]'''
+*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Project Status]]
+*Linux machine ID: 1742
+
+|[[image:RokrE6_thumb.png|right|143px]]
+*''' [[Rokr_E6|Rokr E6 overview]]'''
+*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Project Status]]
+*Linux machine ID: 1743
+
+| [[image:RokrE2_thumb.png|right|143px]]
+*''' [[Rokr_E2| Rokr E2 overview]]'''
+*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Project Status]]
+*Linux machine ID: 1744
+
+|- style="background:#B9D3EE"
+! A910 (i) || A1600
+
+|- style="background:#E0EEEE;"
+
+| [[image:A910_thumb.png|right|143px]]
+*''' [[A910|A910 overview]]'''
+*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Project Status]]
+*Linux machine ID: 1745
+
+| [[image:A1600_thumb.png|right|143px]]
+*''' [[A1600|A1600 overview]]'''
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Linux machine ID: n/a
+
+|- style="background:#4E78A0;" width="95%"
+! colspan="3" | Third generations "MotoMAGX" devices (SCM-A11 based, not supported yet):
+
+|- style="background:#B9D3EE"
+! Rokr Z6 || Moto E8 || Razr2 V8
+
+|- style="background:#efefee;"
+
+| [[image:RokrZ6_thumb.png|right|143px]]
+*''' [[Rizr_Z6|Z6 overview]]'''
+*Linux machine ID: n/a
+
+| [[image:RokrE8_thumb.png|right|143px]]
+*''' [[Rokr_E8|Rokr E8 overview]]'''
+*Linux machine ID: n/a
+
+| [[image:Razr2V8_thumb.png|right|143px]]
+*''' [[Razr2|Razr2 V8 overview]]'''
+*Linux machine ID: n/a
+
+|- style="background:#B9D3EE"
+! i876 || ZN5
+
+|- style="background:#efefee;"
+
+| [[image:i876_thumb.png|right|143px]]
+*''' [[i876|i876 overview]]'''
+*Linux machine ID: n/a
+
+| [[image:ZN5_thumb.png|right|143px]]
+*''' [[ZN5|ZN5 overview]]'''
+*Linux machine ID: n/a
+
+|- style="background:#4E78A0;" width="95%"
+! colspan="3" | Other devices:
+
+|- style="background:#B9D3EE"
+! Moto Q || A810
+
+|- style="background:#efefee;"
+
+| [[image:motoQ_thumb.png|right|143px]]
+*''' [[Motorola_Q|  MotoQ overview]]'''
+*Only boot OpenEZX from [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Linux machine ID: 1980
+
+
+| [[image:motoQ9_thumb.png|right|143px]]
+*'''[[Motorola_Q9c| MotoQ9c overview]]'''
+*Only boot OpenEZX form [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Linux machine ID: n/a
+
+| [[image:A810_thumb.png|right|143px]]
+*''' [[A810|A810 overview]]'''
+*Manufactured by E28
+*OMAP730 based
+*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Linux machine ID: n/a
+
+|- style="background:#4E78A0;" 
+|colspan="3" | 
+|}
