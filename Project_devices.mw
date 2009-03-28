@@ -10,17 +10,17 @@
 
 |- style="background:#E0EEEE"
 
-|[[image:A728_thumb.png|right|143px]]
+|[[image:A728_thumb.png|right|143px|link=A728|alt=Alt Text|Title text]]
 *''' [[A728|A728 overview]]'''
 *Linux machine ID: n/a
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
 
-|[[image:A760_thumb.png|right|143px]]
+|[[image:A760_thumb.png|right|143px|link=A760|alt=Alt Text|Title text]]
 *''' [[A760|A760 overview]]'''
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
 *Linux machine ID: n/a
 
-|[[image:A768_thumb.png|right|143px]]
+|[[image:A768_thumb.png|right|143px|link=A768|alt=Alt Text|Title text]]
 *''' [[A768|A768 overview]]'''
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
 *Linux machine ID: n/a
@@ -30,13 +30,13 @@
 
 |- style="background:#E0EEEE;"
 
-|[[image:A780_thumb.png|right|143px]]
+|[[image:A780_thumb.png|right|143px|link=A780|alt=Alt Text|Title text]]
 *''' [[A780|A780 overview]]'''
 *[[Dual-boot GEN1  | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1740
 
-|[[image:E680_thumb.png|right|143px]]  
+|[[image:E680_thumb.png|right|143px|link=E680|alt=Alt Text|Title text]]  
 *''' [[E680]], [[E680i]], [[E680G]] overviews'''
 *[[Dual-boot GEN1  | Dual-boot how-to]]
 *[[Project Status]]
@@ -50,19 +50,19 @@
 
 |- style="background:#E0EEEE;"
 
-|[[image:A1200_thumb.png|right|143px]]
+|[[image:A1200_thumb.png|right|143px|link=A1200|alt=Alt Text|Title text]]
 *''' [[A1200|A1200 overview]]'''
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1742
 
-|[[image:RokrE6_thumb.png|right|143px]]
+|[[image:RokrE6_thumb.png|right|143px|link=Rokr_E6 |alt=Alt Text|Title text]]
 *''' [[Rokr_E6|Rokr E6 overview]]'''
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1743
 
-| [[image:RokrE2_thumb.png|right|143px]]
+| [[image:RokrE2_thumb.png|right|143px|link=Rock_E2 |alt=Alt Text|Title text]]
 *''' [[Rokr_E2| Rokr E2 overview]]'''
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
@@ -73,13 +73,13 @@
 
 |- style="background:#E0EEEE;"
 
-| [[image:A910_thumb.png|right|143px]]
+| [[image:A910_thumb.png|right|143px|link=A910 |alt=Alt Text|Title text]]
 *''' [[A910|A910 overview]]'''
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1745
 
-| [[image:A1600_thumb.png|right|143px]]
+| [[image:A1600_thumb.png|right|143px|link=A1600 |alt=Alt Text|Title text]]
 *''' [[A1600|A1600 overview]]'''
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
 *Linux machine ID: n/a
@@ -92,15 +92,15 @@
 
 |- style="background:#efefee;"
 
-| [[image:RokrZ6_thumb.png|right|143px]]
+| [[image:RokrZ6_thumb.png|right|143px|link=Rizr_Z6 |alt=Alt Text|Title text]]
 *''' [[Rizr_Z6|Z6 overview]]'''
 *Linux machine ID: n/a
 
-| [[image:RokrE8_thumb.png|right|143px]]
+| [[image:RokrE8_thumb.png|right|143px|link=Rock_E8 |alt=Alt Text|Title text]]
 *''' [[Rokr_E8|Rokr E8 overview]]'''
 *Linux machine ID: n/a
 
-| [[image:Razr2V8_thumb.png|right|143px]]
+| [[image:Razr2V8_thumb.png|right|143px|link=Razr2 |alt=Alt Text|Title text]]
 *''' [[Razr2|Razr2 V8 overview]]'''
 *Linux machine ID: n/a
 
@@ -109,11 +109,11 @@
 
 |- style="background:#efefee;"
 
-| [[image:i876_thumb.png|right|143px]]
+| [[image:i876_thumb.png|right|143px|link=i876 |alt=Alt Text|Title text]]
 *''' [[i876|i876 overview]]'''
 *Linux machine ID: n/a
 
-| [[image:ZN5_thumb.png|right|143px]]
+| [[image:ZN5_thumb.png|right|143px|link=ZN5  |alt=Alt Text|Title text]]
 *''' [[ZN5|ZN5 overview]]'''
 *Linux machine ID: n/a
 
@@ -125,20 +125,20 @@
 
 |- style="background:#efefee;"
 
-| [[image:motoQ_thumb.png|right|143px]]
+| [[image:motoQ_thumb.png|right|143px|link=Motorola_Q |alt=Alt Text|Title text]]
 *''' [[Motorola_Q|  MotoQ overview]]'''
 *Only boot OpenEZX from [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
 *Linux machine ID: 1980
 
 
-| [[image:motoQ_thumb.png|right|143px]]
+| [[image:motoQ_thumb.png|right|143px|link=Motorola_Q9c|alt=Alt Text|Title text]]
 *'''[[Motorola_Q9c| MotoQ9c overview]]'''
 *Only boot OpenEZX form [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
 *Linux machine ID: n/a
 
-| [[image:A810_thumb.png|right|143px]]
+| [[image:A810_thumb.png|right|143px|link=A810|alt=Alt Text|Title text]]
 *''' [[A810|A810 overview]]'''
 *Manufactured by E28
 *OMAP730 based
