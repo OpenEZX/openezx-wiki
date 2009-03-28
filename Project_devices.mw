@@ -1,6 +1,4 @@
-===Possible hardware targets=== 
-'''See [[project status]] for detailled support on each phone's hardware.'''
-
+===Possible hardware targets===
 
 {| border="0" cellpadding="2" cellspacing="2" width="95%"
 
@@ -134,7 +132,7 @@
 *Linux machine ID: 1980
 
 
-| [[image:motoQ9_thumb.png|right|143px]]
+| [[image:motoQ_thumb.png|right|143px]]
 *'''[[Motorola_Q9c| MotoQ9c overview]]'''
 *Only boot OpenEZX form [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
 *[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
