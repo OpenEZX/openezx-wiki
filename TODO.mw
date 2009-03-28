@@ -2,38 +2,23 @@
 * RAM
 ** check what broke our second ram chip support
 
-
 * Camera
-** Fix a780 issues with mainline mt9m111 sensor driver
 ** Sensor driver for a1200, e680, e2 and e6
-
 
 * Sound
 ** Fix the MONO DAI (test playback and fix capture noise)
 ** Port the e680 lm4857 boomer driver from svn, check if it is possible to hack the openmoko/neo driver and make it generic
 
-
 * BP
 ** Finish reimplementation of grpsv modules
 
-
 * Enhanced Mini USB (EMU)
 ** Write the driver
-
 
 * MTD
 ** Port the mapping from svn[http://svn.openezx.org/branches/kernel-2.6.25.x-patches/]
 ** Look into what is needed to support the 2nd gen nor chips into mainline
 ** Check if the NAND on gen1 devices are worth to support
-
-
-* keypad
-** port the flip/lockswitch code from svn
-
-
-* RTC driver based on PCAP
-* Port leds and vibrator code from svn
-
 
 == Userspace ==
 * Fix X for 18bpp frame buffers
