@@ -10,19 +10,22 @@
 
 |- style="background:#E0EEEE"
 
-|[[image:A728_thumb.png|right|143px|link=A728|alt=Alt Text|Title text]]
+|[[image:A728_thumb.png|right|143px|link=A728|alt=Alt Text|A728 thumb]]
 *''' [[A728|A728 overview]]'''
+*[Motorola original source release]
 *Linux machine ID: n/a
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*[mailto:openezx-devel@openezx.org Ask for support on the mailing list]
 
-|[[image:A760_thumb.png|right|143px|link=A760|alt=Alt Text|Title text]]
+|[[image:A760_thumb.png|right|143px|link=A760|alt=Alt Text|A760 thumb]]
 *''' [[A760|A760 overview]]'''
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*[Motorola original source release]
+*[mailto:openezx-devel@openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
-|[[image:A768_thumb.png|right|143px|link=A768|alt=Alt Text|Title text]]
+|[[image:A768_thumb.png|right|143px|link=A768|alt=Alt Text|A768 thumb]]
 *''' [[A768|A768 overview]]'''
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*[Motorola original source release]
+*[mailto:openezx-devel@openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
 |- style="background:#B9D3EE"
@@ -30,14 +33,16 @@
 
 |- style="background:#E0EEEE;"
 
-|[[image:A780_thumb.png|right|143px|link=A780|alt=Alt Text|Title text]]
+|[[image:A780_thumb.png|right|143px|link=A780|alt=Alt Text|A780 thumb]]
 *''' [[A780|A780 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a780e680/frs Motorola original source release]
 *[[Dual-boot GEN1  | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1740
 
-|[[image:E680_thumb.png|right|143px|link=E680|alt=Alt Text|Title text]]  
-*''' [[E680]], [[E680i]], [[E680G]] overviews'''
+|[[image:E680_thumb.png|right|143px|link=E680|alt=Alt Text|E680 thumb]]  
+*''' [[E680]], [[E680i]], [[E680g]] overviews'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a780e680/frs Motorola original source release]
 *[[Dual-boot GEN1  | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1741
@@ -50,99 +55,119 @@
 
 |- style="background:#E0EEEE;"
 
-|[[image:A1200_thumb.png|right|143px|link=A1200|alt=Alt Text|Title text]]
+|[[image:A1200_thumb.png|143px|link="A1200"|right|alt=Alt Text|A1200 thumb]]
 *''' [[A1200|A1200 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a1200/frs Motorola original source release]
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1742
 
-|[[image:RokrE6_thumb.png|right|143px|link=Rokr_E6 |alt=Alt Text|Title text]]
+|[[image:RokrE6_thumb.png|right|143px|link=Rokr_E6 |alt=Alt Text|RokrE6 thumb]]
 *''' [[Rokr_E6|Rokr E6 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokre6/frs Motorola original source release]
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1743
 
-| [[image:RokrE2_thumb.png|right|143px|link=Rock_E2 |alt=Alt Text|Title text]]
+| [[image:RokrE2_thumb.png|right|143px|link=Rock_E2|alt=Alt Text|RokrE2 thumb]]
 *''' [[Rokr_E2| Rokr E2 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokre2/frs Motorola original source release]
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1744
 
 |- style="background:#B9D3EE"
-! A910 (i) || A1600
+! A910 (i) 
 
 |- style="background:#E0EEEE;"
 
-| [[image:A910_thumb.png|right|143px|link=A910 |alt=Alt Text|Title text]]
+| [[image:A910_thumb.png|right|143px|link=A910 |alt=Alt Text|A910 thumb]]
 *''' [[A910|A910 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a910/frs Motorola original source release]
 *[[Dual-boot GEN2 | Dual-boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1745
 
-| [[image:A1600_thumb.png|right|143px|link=A1600 |alt=Alt Text|Title text]]
-*''' [[A1600|A1600 overview]]'''
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
-*Linux machine ID: n/a
-
 |- style="background:#4E78A0;" width="95%"
-! colspan="3" | Third generations "MotoMAGX" devices (SCM-A11 based, not supported yet):
+! colspan="3" | Third generations "MotoMAGX" devices (SCM-A11 based, far less supported):
 
 |- style="background:#B9D3EE"
 ! Rokr Z6 || Moto E8 || Razr2 V8
 
 |- style="background:#efefee;"
 
-| [[image:RokrZ6_thumb.png|right|143px|link=Rizr_Z6 |alt=Alt Text|Title text]]
+| [[image:RokrZ6_thumb.png|right|143px|link=Rizr_Z6 |alt=Alt Text|RokrZ6 thumb]]
 *''' [[Rizr_Z6|Z6 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokrz6/frs Motorola original source release]
 *Linux machine ID: n/a
 
-| [[image:RokrE8_thumb.png|right|143px|link=Rock_E8 |alt=Alt Text|Title text]]
+| [[image:RokrE8_thumb.png|right|143px|link=Rock_E8 |alt=Alt Text|RokrE8 thumb]]
 *''' [[Rokr_E8|Rokr E8 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokre8/frs Motorola original source release]
 *Linux machine ID: n/a
 
-| [[image:Razr2V8_thumb.png|right|143px|link=Razr2 |alt=Alt Text|Title text]]
+| [[image:Razr2V8_thumb.png|right|143px|link=Razr2 |alt=Alt Text|Razr2 V8 thumb]]
 *''' [[Razr2|Razr2 V8 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.razr2v8/frs Motorola original source release]
 *Linux machine ID: n/a
 
 |- style="background:#B9D3EE"
-! i876 || ZN5
+! i876 || ZN5 || U9
 
 |- style="background:#efefee;"
 
-| [[image:i876_thumb.png|right|143px|link=i876 |alt=Alt Text|Title text]]
+| [[image:i876_thumb.png|right|143px|link=i876 |alt=Alt Text|i876 thumb]]
 *''' [[i876|i876 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.i876/frs Motorola original source release]
 *Linux machine ID: n/a
 
-| [[image:ZN5_thumb.png|right|143px|link=ZN5  |alt=Alt Text|Title text]]
+| [[image:ZN5_thumb.png|right|143px|link=ZN5  |alt=Alt Text|ZN5 thumb]]
 *''' [[ZN5|ZN5 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.motozinezn5/frs Motorola original source release]
+*Linux machine ID: n/a
+
+| [[image:U9_thumb.png|right|143px|link=U9 |alt=Alt Text|U9 thumb]]
+*''' [[U9|U9 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.motou9/frs Motorola original source release]
 *Linux machine ID: n/a
 
 |- style="background:#4E78A0;" width="95%"
 ! colspan="3" | Other devices:
 
 |- style="background:#B9D3EE"
-! Moto Q || A810
+! Moto Q || Moto Q9c || A810
 
 |- style="background:#efefee;"
 
-| [[image:motoQ_thumb.png|right|143px|link=Motorola_Q |alt=Alt Text|Title text]]
+| [[image:motoQ_thumb.png|right|143px|link=Motorola_Q |alt=Alt Text|MotoQ thumb]]
 *''' [[Motorola_Q|  MotoQ overview]]'''
-*Only boot OpenEZX from [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Only boot OpenEZX from [http://www.handhelds.org/moin/moin.cgi/HaRET haret]
+*[mailto:openezx-devel@openezx.org Ask for support on the mailing list]
 *Linux machine ID: 1980
 
-
-| [[image:motoQ_thumb.png|right|143px|link=Motorola_Q9c|alt=Alt Text|Title text]]
+| [[image:motoQ_thumb.png|right|143px|link=Motorola_Q9c|alt=Alt Text|MotoQ9c thumb]]
 *'''[[Motorola_Q9c| MotoQ9c overview]]'''
-*Only boot OpenEZX form [http://www.handhelds.org/moin/moin.cgi/HaRET|haret]
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*Only boot OpenEZX form [http://www.handhelds.org/moin/moin.cgi/HaRET haret]
+*[mailto:openezx-devel@openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
-| [[image:A810_thumb.png|right|143px|link=A810|alt=Alt Text|Title text]]
-*''' [[A810|A810 overview]]'''
+| [[image:A810_thumb.png|right|143px|link=A810|alt=Alt Text|A810 thumb]]
+*'''[[A810|A810 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a810/frs Motorola original source release]
 *Manufactured by E28
 *OMAP730 based
-*[mailto:openezx-devel@openezx.org|Ask support on the mailing list]
+*[mailto:openezx-devel@openezx.org Ask for support on the mailing list]
+*Linux machine ID: n/a
+
+|- style="background:#B9D3EE"
+! A1600 
+
+|- style="background:#efefee;"
+
+| [[image:A1600_thumb.png|right|143px|link=A1600 |alt=Alt Text|A1600 thumb]]
+*''' [[A1600|A1600 overview]]'''
+*[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a1600/frs Stock Motorola original source release]
+*[mailto:openezx-devel@openezx.org Ask for support on ML]
 *Linux machine ID: n/a
 
 |- style="background:#4E78A0;" 
