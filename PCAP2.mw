@@ -16,9 +16,9 @@ Features:
 
 == PCAP2 A780 register map ==
 
-The [[PCAP2]] has 32 25-bit registers which can be read and written via [[Serial Peripheral Interface|SPI]]. The PCAP2 has two different SPI busses (called ''primary'' and ''secondary''). The primary SPI bus is connected to the [[Baseband Processor|baseband processor]] - the secondary is connected to the [[Application Processor|application processor]]. Some of the registers may only be written from the primary SPI bus. It is unknown if the registers accesed from the primary and secondary buses are the same or different sets.
+The [[PCAP2]] has 32 25-bit registers which can be read and written via [http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus SPI]. The PCAP2 has two different [http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus SPI] busses (called ''primary'' and ''secondary''). The primary [http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus SPI] bus is connected to the [[Baseband Processor|baseband processor]] - the secondary is connected to the [[Application Processor|application processor]]. Some of the registers may only be written from the primary [http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus SPI] bus. It is unknown if the registers accesed from the primary and secondary buses are the same or different sets.
 
-The following registers are accessible only from the primary SPI bus and their location is unknown: VREG_MASK (cont 
+The following registers are accessible only from the primary [http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus SPI] bus and their location is unknown: VREG_MASK (cont 
 
 //The orgin version missed registors,all the registors can be found in include/linux/power_ic.h, and there is another almost same copy of the registers definition in drivers/misc/ssp_pcap.h,who knows what differences are between them and why to have 2 copies  plz tell me(dotmonkey at gmail.com) :-)
 
