@@ -1,1 +1,1 @@
-The vibrator is attached to [[PCAP2]].  The [[AP]] can program it via [[SPI]].
+The vibrator is attached to [[PCAP2]].  The [[AP]] can program it via [http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus SPI].
