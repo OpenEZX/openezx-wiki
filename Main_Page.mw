@@ -1,52 +1,105 @@
 {| width="100%"
 |-
-|style="vertical-align:top" |
-<div style="margin: 0; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#cce5ff; align:right;">
+|style="vertical-align:top" width="60%"|
+<div style="margin: 0; margin-right:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#ccccff; align:right;">
 Welcome to the [http://openezx.org/ OpenEZX] wiki!
 
 This is a collaborative effort to collect information about Motorola's EZX GSM phone platform.
+
 ''Note that OpenEZX is about hardware and kernel level work. For userland, we rely on the [http://www.freesmartphone.org freesmartphone.org] project.
 
 </div>
 
-<div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
+<div style="margin: 0; margin-right:10px; margin-top:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#ccccff; align:left;">
+
+[[Getting Started|'''Getting started:''']] All you need to know to boot an OpenEZX kernel for the first time (no need to flash anything into the phone).
+
+See [[Project devices| the full list of possibles targets]] and the [[Project Status]] pages, to make yourself an idea of your current phone's support on (OpenEZX) 2.6 kernel.
+
+You may want to ask for support, or contact the team, either on:
+* [http://lists.openezx.org/mailman/listinfo/ The Mailing List] (alternative archives [http://www.mail-archive.com/openezx-devel@lists.openezx.org/info.html here] [http://news.gmane.org/gmane.comp.embedded.ezx.general and here]).
+* [irc://irc.freenode.net/openezx The IRC channel #openezx] (on [irc://irc.freenode.net irc.freenode.net]) [http://ibot.rikers.org/%23openezx/ "logged" here].
+</div>
+
+<div style="margin: 0;margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#eaeaae; align:right;">
 '''[[:Category:Hardware|Hardware]]'''
 
-Gen 1:
+[[Phones|'''Project devices (basicly, our phone list)''']].
 
-* [[A728]], [[A760]], [[A768]], [[A780]], [[E680]], [[E680i]], [[E680g]]
-
-Gen 2:
-
-* [[A910]], [[A1200]], [[Rokr E2]], [[Rokr E6|Rokr E6 (E690)]], [[A1600]]
-Gen 3 ([[MotoMAGX Security|MotoMAGX]], [[SCM-A11]] based):
-
-* [[Rokr E8]], [[Rizr Z6]], [[Razr2|Razr2 V8]], [[i876]], [[U9]],  [[ZN5]]
-
-Manufactured by E28 (OMAP 730 based):
-
-* [[A810]]
-
-Misc:
-
+{| style="background:#eaeaae;" width="95%"
+|width="50%"|
 * [[EZX_Platform_Overview|EZX Hardware Overview]]
-* [[EMU]] Motorola Enhanced Mini USB
+* [[EMU]] Motorola '''E'''nhanced '''M'''ini '''U'''SB
 * [[PCAP2]]
-* [[GPIO]]
+* [[GPIO|GPIOs]]
 * [[GPS]]
 * [[WLAN]]
+|
+* [[FM Radio]]
+* [[LEDs]]
+* [[Vibrator]]
 * [[E680_Board|E680 system board]]
 * [[A1200_Board| A1200 system board]]
 * [[E6_Board| E6 system board]]
+|}
+How to [[external_battery|connect]] an external 3.0V - 4.0V DC power source, e.g 3 x 1.2V NiMh Batteries, directly to the battery pins inside the A780. (Ugly hack :-) )
+</div>
+
+<div style="margin:0; margin-right:10px; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#eaeaae; align:right;">
+'''[[:Category:Software| Software]]'''
+
+Researchs on Motorola's software.
+{| style="background:#eaeaae;" width="95%"
+|width="50%"|
+* [[Get a shell| How-to '''get a shell''' on the EZX device]]
+* [[Stock environment| Overview of the Motorola sofware]]
+* [[Original firmware versions]]
+* [[MPKG | MPKG fileformat]]
+* [[EZXFileSystem]]
+|
+* [[CodeAnalysis| '''Analysis of the kernel code''' released by motorola ]]
+* [[Kernel hacking - linux-2.4| How to compile the motorola kernel]]
 * [[MotoMAGX_weakness_of_kernel_modules_hashes| MAGX kernel module hash weakness]]
-* [[Other Linux Phones]]: Non-Motorola Linux-based mobile phones
+* [[AT_commands| AT commands]]
+|}
+</div>
+
+| style="vertical-align:top" |
+
+<div style="margin: 0; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#e6e6fa; align:left;">
+'''Specifics OpenEZX's usages (WIP)'''
+
+* How to create [[Backups]] of the EZX device.
+* How to use [[Rootfs on NFS]].
+* How to use the [[Power button]].
+* How to [[charging|charge]] the phone
+* How to know how long the battery last
+* How to make a [[call]] 
+* How to [[receive a call]]
+* How to use the phone as a [[video class device]]
+* How to use the phone as a [[USB mass storage device]]
+* How to query the [[latitude and longitude]] with the A780 GPS
 
 </div>
 
-<div style="margin: 0; margin-top:10px; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#fff0e0; align:right;">
-'''Misc'''
+<div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#e6e6fa; align:left;">
+'''[[:Category:Development|Development]]'''
 
 * Known [[Issues]]
+* How to [[Crosscompile]] for the EZX device
+* [[Kernel hacking - linux-2.6]]
+* [[Dual boot]]
+* How to use the [[JTAG]] interface
+* [[Bootloader]]
+* [[Serial console]]
+* [[Mux cli]]
+* How to [[Flash kernel image]].
+* Check [[Project Status | the project's status]].
+</div>
+
+<div style="margin: 0; margin-top:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#e6e6fa; align:left;">
+'''Misc'''
+
 * [http://www.openezx.org/links.html Press reviews]
 * [http://planet.openezx.org/ Planet OpenEZX] (developer blogs)
 * [[Photos]]
@@ -54,56 +107,10 @@ Misc:
 * [http://www.openezx.org/contact.html Contact]
 * [http://cia.navi.cx/stats/project/OpenEZX CIA Stats]
 * [https://www.ohloh.net/projects/openezx Ohloh project page]
+* [[TODO]].
 
 </div>
 
-| width="50%" style="vertical-align:top" |
-
-<div style="margin: 0; margin-right:10px; border: 1px solid #dfdfdf; padding: 0 1em 1em 1em; background-color:#cce5ff; align:right;">
-'''Getting Started'''
-*  [[Getting_Started |Start here]] if you are new to OpenEZX.
-* Check [[Project Status | project status]].
-* Please use the [http://lists.openezx.org/mailman/listinfo/ Mailing List] or IRC (channel [irc://irc.freenode.net/openezx #openezx] on [irc://irc.freenode.net irc.freenode.net], check the  [http://ibot.rikers.org/%23openezx/ Archive]) to ask questions.
-
-</div>
-
-<div style="margin:0; margin-top:10px;  border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-'''[[:Category:Software|Software]]'''
-
-* [[CodeAnalysis|Analysis of code released by Motorola]]
-* [[Original firmware versions]]
-* [[AT_commands|AT commands]]
-
-</div>
-
-<div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-'''[[:Category:Development|Development]]'''
-
-* How to create [[Backups]] of the EZX device
-* How to [[Get a shell]] on the EZX device
-* How to [[Crosscompile]] for the EZX device
-* [[Kernel hacking - linux-2.4]]
-* [[Kernel hacking - linux-2.6]]
-* [[Dual boot]]
-* [[E6 Multi boot | Multi boot]] for [[Rokr E6]] and [[A1200]]
-* How to make [[Call|calls]] ''(very experimental)''
-* How to use the [[JTAG]] interface
-* [[TODO]]
-* [[EZXFileSystem]]
-* [[Bootloader]]
-* [[Rootfs on SD]]
-* [[Rootfs on NFS]]
-* [[Flash kernel image]]
-* [[Serial console]]
-* [[MPKG]] fileformat
-
-</div>
-
-<div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#efefef; align:left;">
-'''Ugly hacks'''
-* How to [[external_battery|connect]] an external 3.0V - 4.0V DC power source, e.g 3 x 1.2V NiMh Batteries, directly to the battery pins inside the A780.
-
-</div>
 |}
 
 == Disclaimer ==
