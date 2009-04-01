@@ -1,59 +1,70 @@
-This is valid for [[Rokr E6]] and [[A1200]], please don't try on other phones !
+'''ALL THE INFORMATION AND CODE IN THIS PACKAGE ARE PROVIDED AS-IS, WITHOUT WARRANTY OF ANY KIND. DONT BLAME ME IF YOU BRICK YOUR PHONE.'''
 
-'''!!! USE IT ON YOUR OWN RISK, THIS IS STILL A WORK IN PROGRESS !''' DON'T follow the [[Dual boot | dual boot]] guide !!!
+'''ALL THE CODE AND BINARY FILES IN THIS PACKAGE ARE FREE TO USE AND REDISTRIBUTE, WITH A GPL LICENSE OR SIMILAR.'''
 
-== Prepeare ==
-* boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
-* For A1200 (and probably others), the kernel is offset by 2048 bytes on the flash partition (/dev/mtd6), so you have add 2048 bytes to the start of gen-blob before flashing.
-* Currently mtd is not the best way to flash gen-blob
+= Flashing procedure -GEN2-Only- =
 
-== Start ==
+==What's needed==
 
-* Read the [[Getting Started | starting guide]].
-** [[Getting_Started#C.29_Putting_a_rootfs_image_on_an_.28Micro.29_SD_Card_to_try_or_use_OpenEZX | Put the rootfs]] on the Linux partition of the SD card. Get the rootfs [http://people.openezx.org/ao2/images/old/Openmoko-fso-image-glibc-ipk-P1-Snapshot-20080714-a780.rootfs.tar.gz here].
-* [[Bootloader#Enter_the_bootloader | Enter the bootloader]].
+* gen-blob sources and a proper toolchain to build it, or alternatively pick an already compiled gen-blob [http://people.openezx.org/wyrm/gen-blob/ here].
+* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
+* boot_usb '''must be the latest version''' (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
 
-== Booting procedure ==
+==Follow this '''only''' on RokrE2, RokrE6, A1200, A910 (gen2 devices)==
 
- # download stuff
- wget http://people.openezx.org/wyrm/gen-blob/gen-blob
- wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
+On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
+[[Bootloader#Enter_the_bootloader | Enter the bootloader]] and prepare the phone to be flashed:
+ ./boot_usb setflag usb
+ ./boot_usb gen-blob 0
+ 
+[[Backup]] your existing kernel:
+ ./boot_usb read 0xA0000 1048576 backup-of-kernel-partition
+ # Then add the famous 2048 bytes offset:
+ dd if=backup-of-kernel-partition bs=1k skip=2 of=24-kernel-backup
 
- # send gen-blob to phone
- boot_usb setflag usb
- boot_usb gen-blob 0
+Now copy and rename this "24-kernel-backup" file to "default" on the /boot/ folder of the (micro) SD card.
+Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
 
-* get [http://people.openezx.org/wyrm/images/200903151215/zImage-200903151215 zImage].
- # boot it with zImage
- boot_usb zImage-200903151215 1743
- (1743 is machine ID for E6, use 1742 for A1200)
-
-== Flashing procedure ==
-
- # save a backup
- boot_usb read 0xa0000 1048576 backup-of-kernel-partition
-
- # prepare the kernel to be flashed
- dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
- cat magic-boot-from-flash kernel-with-no-extra-bytes > kernel-to-be-flashed-to-0xC0000
- ls -l kernel-to-be-flashed-to-0xC0000 (assert that its exactly 917504 bytes)
-
- # flash gen-blob
+Flash gen-blob '''WARNING: For gen2 phones only! :''' 
  dd if=/dev/zero bs=1 count=2048 of=needed-offset
  cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
- boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
-* example: boot_usb flash <addr> <file>
-* don't forget to check kernel-to-be-flashed-to-0xC0000 size (important - otherwise it will corrupt the resource partition)
+ #flash using boot_usb/gen-blob, example: boot_usb flash <addr> <file> 
+ ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
- # flash the motorola kernel
- boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
-
-== After the flash ==
+= After the flash =
 * Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
 * You can power off on usb mode with "boot_usb off".
+* You can still have access to the MBM flash mode with the usual combo.
 
-== Failures ==
-If your boot sequence fails, or ends with white screen, remove battery and try again.
+==Re-flashing the original kernel, after genblob, in the device (optional)==
+
+Gen-blob always search at offset 0xC0000 and if it find a special 'magic' flag, then it will boot this kernel by default.
+
+The kernel have to be prepared:
+Let's do a backup of the kernel (if it wasn't done yet!):
+ ./boot_usb read 0xA0000  1048576 backup-of-kernel-partition
+Remove the 2048 bytes offset, and resize the file:
+ dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
+Download and add the magic flag to the kernel for genblob to recognize it:
+ # download a flag to put at the beggining of the kernel before flashing it.
+ wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
+ cat magic-boot-from-flash kernel-with-no-extra-bytes > kernel-to-be-flashed-to-0xC0000
+Then you need to assert the resulting 'kernel-to-be-flashed-to-0xC0000' file is '''exactly 917504''' bytes big:
+ ls -l kernel-to-be-flashed-to-0xC0000 
+ # If the result is bigger than 917504 bytes, then don't flash it! You made a mistake somewhere...
+Then you can also check if the file hasn't been cut at its end: 
+ hexdump kernel-to-be-flashed-to-0xC0000 | tail
+EXAMPLE:
+ 00d8e80 ffff ffff ffff ffff ffff ffff ffff ffff
+ *
+ 00e0000
+One of these line (the last!) must end with at least a few ' f f f f '...
+
+If your checks has passed successfully, then you can flash the kernel 
+
+'''WARNING: For gen2 phones only! :'''
+ #(Re-)Flash the original kernel
+ ./boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
 [[Category:Rokr E6]]
 [[Category:A1200]]
