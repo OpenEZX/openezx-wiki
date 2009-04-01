@@ -19,6 +19,7 @@ Backup your existing kernel:
  # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
 
 Flash gen-blob '''WARNING: For gen1 phones only! :'''
+ #example: ./boot_usb flash <address> <file> 
  ./boot_usb flash 0x20000 gen-blob
 
 ==Important for blob2 users==
