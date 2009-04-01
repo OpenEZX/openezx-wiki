@@ -26,18 +26,20 @@ You may want to ask for support, or contact the team, either on:
 
 [[Project devices|'''Project devices (basicly, our phone list)''']].
 
-{| style="background:#eaeaae;" width="95%"
-|width="50%"|
+{| style="background:#eaeaae;" width="95%";
+|width="50%"; |
 * [[EZX_Platform_Overview|EZX Hardware Overview]]
 * [[EMU]] Motorola '''E'''nhanced '''M'''ini '''U'''SB
 * [[PCAP2]]
 * [[GPIO|GPIOs]]
 * [[GPS]]
 * [[WLAN]]
+* [[Bluetooth]]
 |
 * [[FM Radio]]
 * [[LEDs]]
 * [[Vibrator]]
+* [[Internal Flash]]
 * [[E680_Board|E680 system board]]
 * [[A1200_Board| A1200 system board]]
 * [[E6_Board| E6 system board]]
