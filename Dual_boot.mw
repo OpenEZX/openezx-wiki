@@ -16,11 +16,6 @@ It also enables multiboot, you can keep your original software and start experim
  
 =Installing gen-blob=
 
-==What's needed==
-
-* gen-blob sources and a proper toolchain to build it, or alternatively an already compiled gen-blob, see [http://people.openezx.org/wyrm/gen-blob/ here].
-* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
-
 ==Compiling gen-blob==
 
 You first need recent 2.6 kernel.
@@ -60,103 +55,33 @@ For instance, here's a possible directory layout for gen-blob in the first parti
       |-- default
       `-- zImage-openezx
 
-With this layout the content of menu.lst should be
+Here is an example of what your menu.lst should look like
+(note that '''without the "mem=" parameters''', the OpenEZX kernel will '''not boot''' correctly):
+<pre>
+# menu.lst
+# default machid (used when booting /boot/default)
+machid		1740
 
- # menu.lst
- # default machid (used when booting /boot/default)
- machid		1740
- 
- title		Motorola 2.4
- kernel		/boot/default
- 
- title		A780 OpenEZX
- kernel		/boot/zImage-openezx
- machid		1740
+title		Motorola 2.4
+kernel		/boot/default
+#This kernel "default" file must be the original kernel, not an openezx.
 
+title		A780 OpenEZX
+kernel		/boot/zImage-openezx
+param         mem=32M@0xA0000000 mem=16M@0xAC000000
+machid		1740
+
+title           A1200 OpenEZX
+param         mem=32M@0xA0000000 mem=16M@0xAC000000 rootfstype=ext3
+machid		1742
+
+title           A910 OpenEZX
+param         mem=32M@0xA0000000 mem=16M@0xAC000000 rootfs=/dev/nfs nfsroot=192.168.0.200:/EXPORT/PATH/ rootdelay=5
+machid		1745
+</pre>
 You also need a configured rootfs in the second partition, use the modules provided above so you can mount the first partition when running openezx kernel.
 
-=Flashing gen-blob on the device (depends on the phone's type)=
-
-==For A780 and E680 (maybe other gen1 devices)==
-
-Put the phone in flash mode and prepare it:
- ./boot_usb setflag usb
- ./boot_usb gen-blob 0
- 
-Backup your existing kernel:
- ./boot_usb read 0x20000 917504 backup-of-kernel-partition
- # Copy and rename this backup to /boot/default on the SD card.
- # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
-
-Flash gen-blob '''WARNING: For gen1 phones only! :'''
- ./boot_usb flash 0x20000 gen-blob
-
-==For RokrE2, RokrE6, A1200, A910 (gen2 devices)==
-
-On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
-
-Put the phone in flash mode and prepare it:
- ./boot_usb setflag usb
- ./boot_usb gen-blob 0
- 
-Backup your existing kernel:
- ./boot_usb read 0xA0000 1048576 backup-of-kernel-partition
- # Then add the famous 2048 bytes offset:
- dd if=backup-of-kernel-partition bs=1k skip=2 of=24-kernel-backup
-
-Now like for gen1 devices, copy and rename this "24-kernel-backup" file to "default" on the /boot/ folder of the (micro) SD card.
-Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
-
-Flash gen-blob '''WARNING: For gen2 phones only! :''' 
- dd if=/dev/zero bs=1 count=2048 of=needed-offset
- cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
- ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
-
-=Additional notes=
-
-===Note for A780 and E680 users===
-
-The phone will "look bricked" if you do something wrong with the kernel
-partition. In case you can't enter your bootloader screen, dont panic,
-just remove the battery press the bootloader keys (jog+vr on the A780,
-vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
-You will get the blue screen for flash mode.
-
-
-===Important on A910===
-
-gen-blob can be flashed on A910, but the kernel to boot has to be on the phone's flash.
-
-It will search at 0xC0000 and if it find a special 'magic' flag, then it will boot this kernel by default.
-
-The kernel have to be prepared:
-Let's do a backup of the kernel:
- ./boot_usb read 0xA0000  1048576 backup-of-kernel-partition
-Remove the 2048 bytes offset, and resize the file:
- dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
-Download and add the magic flag to the kernel for genblob to recognize it:
- # download a flag to put at the beggining of the kernel before flashing it.
- wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
- cat magic-boot-from-flash kernel-with-no-extra-bytes > kernel-to-be-flashed-to-0xC0000
-Then you need to assert the resulting 'kernel-to-be-flashed-to-0xC0000' file is '''exactly 917504''' bytes big:
- ls -l kernel-to-be-flashed-to-0xC0000 
- # If the result is bigger than 917504 bytes, then don't flash it! You made a mistake somewhere...
-Then you can also check if the file hasn't been cut at its end: 
- hexdump kernel-to-be-flashed-to-0xC0000 | tail
-EXAMPLE:
- 00d8e80 ffff ffff ffff ffff ffff ffff ffff ffff
- *
- 00e0000
-One of these line (the last!) must end with at least a few ' f f f f '...
-
-If your checks has passed successfully, then you can flash the kernel '''WARNING: For gen2 phones only! :'''
- ./boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
-
-==Important for blob2 users==
-
-If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in a different place than in the original map we used here, but the rootfs location stay the same, so you just have to dump the kernel from the right place then go on with the previous instructions.
-
-==Gen-blob usage==
+==Gen-blob usages==
 
 Hold the following key when sending via boot_usb (or powering on when flashed).
 * Scroll Down (volume -): Boot menu loaded from MMC card
@@ -164,6 +89,14 @@ Hold the following key when sending via boot_usb (or powering on when flashed).
 Not holding any key boots /boot/default without any FB activity.
 
 NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For a full functionnality of the phone. In fact, BP need some delay to activate itself properly, and the original bootlogo is delayed as well, to 'reflect' this need. As gen-blob don't fake anything, you just need to press the power button for two second, to be sure...
+
+==Flashing gen-blob on the phone==
+
+Gen-blob purpose is to be flashed, you can do it, depending on what device you have:
+
+If your device is a GEN1 (A780, E680) follow this link: [[Dual Boot GEN1]].
+
+If your device is a GEN2 (A1200, RokrE2, RokrE6, A910) follow this link: [[Dual Boot GEN2]].
 
 ==References==
 
