@@ -3,7 +3,7 @@
 {| border="0" cellpadding="2" cellspacing="2" width="95%"
 
 |- style="background:#4E78A0;"
-! colspan="3" | First generation devices ("gen1"): 
+! colspan="3" | First generation devices ("GEN1"), supported: 
 
 |- style="background:#B9D3EE"
 ! width="33%"| A728 ||width="33%"| A760 ||width="33%"| A768
@@ -48,7 +48,7 @@
 *Linux machine ID: 1741
 
 |- style="background:#4E78A0;" width="95%"
-! colspan="3" | Second generation devices ("gen2"):
+! colspan="3" | Second generation devices ("GEN2"), supported:
 
 |- style="background:#B9D3EE"
 ! A1200 (r,i,e) || Rokr E6 || Rokr E2
