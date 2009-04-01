@@ -1,0 +1,96 @@
+= Software overview (A780-E680)=
+
+*MontaVista "mobilinux" additions
+*dynamic power management
+*EZX arm subarchitecture
+*low-level drivers for:
+**SPI/SSP
+**PCAP Audio (mono/stereo/headset/...)
+**Vibrator (/dev/vibrator)
+**USB host port attached to BP
+**USB device port (belcarra usbd, not gadget)
+**Transflash/SD/MMC
+*THREE proprietary flash file systems
+**Intel VFM (hatcreek.o)
+**m-systems DiskOnChip (tffs.o)
+**third unknown
+*A1200 and ROKR E2 have custom Selinux static kernel module called [[motoac]]
+
+The modified Linux kernel used on the Motorola Linux phones has been released by Motorola on SourceForge:
+* http://sourceforge.net/projects/a760/
+* http://sourceforge.net/projects/e680/
+
+Multiple versions are available:
+* [http://sourceforge.net/project/showfiles.php?group_id=116309&package_id=126302&release_id=259130 linux_kernel_a760_2.tar.bz2] seems to be based on Linux 2.4.18, and was uploaded to SourceForge on 2004-08-09.
+** Judging from ''drivers/misc/ezx-log.c'' it seems to contain code for the [[A760]] only.
+* [http://sourceforge.net/project/showfiles.php?group_id=142482&package_id=156813&release_id=339095 original_kernel.tar.gz] seems to be based on Linux 2.4.20, and was uploaded to SourceForge on 2005-07-01.
+** Judging from ''drivers/misc/ezx-log.c'' it seems to contain code for the [[A760]], [[E680]], and [[A780]]
+* [http://sourceforge.net/project/showfiles.php?group_id=142482&package_id=156813&release_id=383388 original_kernel_2.tar.gz] seems to be based on Linux 2.4.20, and was uploaded to SourceForge on 2006-01-06.
+** Judging from ''drivers/misc/ezx-log.c'' it seems to contain code for the [[A760]], [[E680]], and [[A780]].
+
+The Linux Kernel running on (most) EZX smartphones is a 2.4.20 based kernel, with the following modifications:
+
+* Lots of hardware (cpu/architecture) related patches to mips/ppc/arm from MontaVista
+* Drivers for
+** PXA270 Dynamic Power Management
+** PXA270 SD/MMC Controller (depending on firmware version statically linked !!)
+** Camera (v4l2 driver)
+** Keypad
+** Buttons
+** PXA270 Framebuffer
+** PXA270 Touchscreen
+** IPC (AP<->BP) USB Host
+** USB Device (Belcarra usbd, _not_ the Linux gadget driver)
+* Proprietary kernel modules for
+** USB IPC demultiplex ([[mux_cli]])
+** GPRS (gprsv)
+** Intel VFM (hatcreek) flash file system
+*** Generic code is released by Intel upon request, but not GPL-compatible
+** MSystems TrueFFS (tffs) flash file system
+*** Acts as a translation layer between VFAT and the underlying flash device
+*** vfat is only required to achieve USB mass storage compatibility for Windows boxes
+** Logging/testing of AP, BP and DSP (logger)
+
+
+==Modules==
+
+===mux_cli.o===
+*hooks into special functions of USB host driver
+*provides GSM TS07.10 (de)multiplex
+*userspace has tty devices
+
+===gprsv.o===
+*implements GPRS line discipline for mux_cli ttys
+*hooks into netfilter to intercept DNS packets ?!?
+*provides gprs0 / grps1 network devices
+
+===ipsec.o===
+*proprietary ipsec stack (don't we already have two GPL licensed?)
+*Copyright Certicom Corp
+
+==Libraries==
+*glibc
+
+===Bluetooth===
+*proprietary userspace program directly opens HCI
+
+===[[GPS]]===
+*no NMEA, no serial device emulation :(
+*proprietary library via mux_cli kernel module
+
+===UI===
+*embeddedQt
+*Motorola EZX toolkit
+*Low-level devices (framebufffer, etc) accessable.
+
+
+==[[Bootloader]]==
+
+*EZX bootloader
+*based on GPL licensed blob
+*low-level initialization code (GPIO config, clock, ...)
+*vendor specific USB device allows for:
+**transfer of executable code from USB host
+**execution of transferred executable
+*serial console code is present in binary (but not used)
+*PST/RSD firmware updates work by uploading a "ramloader"
