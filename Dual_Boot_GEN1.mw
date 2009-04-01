@@ -8,6 +8,10 @@
 * boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
 
 ==Flashing. -Follow this only on A780 or E680-==
+'''ALL THE INFORMATION AND CODE IN THIS PACKAGE ARE PROVIDED AS-IS, WITHOUT WARRANTY OF ANY KIND. DONT BLAME ME IF YOU BRICK YOUR PHONE.'''
+
+'''ALL THE CODE AND BINARY FILES IN THIS PACKAGE ARE FREE TO USE AND REDISTRIBUTE, WITH A GPL LICENSE OR SIMILAR.'''
+
 
 [[Bootloader#Enter_the_bootloader | Enter the bootloader]] and prepare the phone to be flashed:
  ./boot_usb setflag usb
