@@ -1,0 +1,39 @@
+=Flashing gen-blob on the '''-GEN1-''' device=
+
+
+==What's needed==
+
+* gen-blob sources and a proper toolchain to build it, or alternatively pick an already compiled gen-blob [http://people.openezx.org/wyrm/gen-blob/ here].
+* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
+* boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
+
+==Flashing. -Follow this only on A780 or E680-==
+
+[[Bootloader#Enter_the_bootloader | Enter the bootloader]] and prepare the phone to be flashed:
+ ./boot_usb setflag usb
+ ./boot_usb gen-blob 0
+ 
+Backup your existing kernel:
+ ./boot_usb read 0x20000 917504 backup-of-kernel-partition
+ # Copy and rename this backup to /boot/default on the SD card.
+ # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
+
+Flash gen-blob '''WARNING: For gen1 phones only! :'''
+ ./boot_usb flash 0x20000 gen-blob
+
+==Important for blob2 users==
+
+If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in a different place than in the original map we used here, but the rootfs location stay the same, so you just have to dump the kernel from the right place then go on with the previous instructions.
+
+== After the flash ==
+* Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
+* You can power off on usb mode with "boot_usb off".
+* You can still have access to the MBM flash mode with the usual combo.
+
+=Additional notes=
+
+The phone will "look bricked" if you do something wrong with the kernel
+partition. In case you can't enter your bootloader screen, dont panic,
+just remove the battery press the bootloader keys (jog+vr on the A780,
+vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
+You will get the blue screen for flash mode.
