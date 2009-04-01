@@ -60,6 +60,7 @@ Researchs on Motorola's software.
 * [[CodeAnalysis| '''Analysis of the kernel code''' released by motorola ]]
 * [[Kernel hacking - linux-2.4| How to compile the motorola kernel]]
 * [[MotoMAGX_weakness_of_kernel_modules_hashes| MAGX kernel module hash weakness]]
+* [[MotoMAGX Security]]
 * [[AT_commands| AT commands]]
 |}
 </div>
