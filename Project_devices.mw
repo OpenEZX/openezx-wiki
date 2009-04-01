@@ -36,14 +36,14 @@
 |[[image:A780_thumb.png|right|143px|link=A780|alt=Alt Text|A780 thumb]]
 *''' [[A780|A780 overview]]'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a780e680/frs Motorola source code]
-*[[Dual-boot GEN1  | Dual-boot how-to]]
+*[[Dual Boot GEN1  | Dual Boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1740
 
 |[[image:E680_thumb.png|right|143px|link=E680|alt=Alt Text|E680 thumb]]  
 *''' [[E680]], [[E680i]], [[E680g]] overviews'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a780e680/frs Motorola source code]
-*[[Dual-boot GEN1  | Dual-boot how-to]]
+*[[Dual Boot GEN1  | Dual Boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1741
 
@@ -58,21 +58,21 @@
 |[[image:A1200_thumb.png|143px|link="A1200"|right|alt=Alt Text|A1200 thumb]]
 *''' [[A1200|A1200 overview]]'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a1200/frs Motorola source code]
-*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Dual Boot GEN2 | Dual Boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1742
 
 |[[image:RokrE6_thumb.png|right|143px|link=Rokr_E6 |alt=Alt Text|RokrE6 thumb]]
 *''' [[Rokr_E6|Rokr E6 overview]]'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokre6/frs Motorola source code]
-*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Dual Boot GEN2 | Dual Boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1743
 
 | [[image:RokrE2_thumb.png|right|143px|link=Rock_E2|alt=Alt Text|RokrE2 thumb]]
 *''' [[Rokr_E2| Rokr E2 overview]]'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.rokre2/frs Motorola source code]
-*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Dual Boot GEN2 | Dual Boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1744
 
@@ -84,7 +84,7 @@
 | [[image:A910_thumb.png|right|143px|link=A910 |alt=Alt Text|A910 thumb]]
 *''' [[A910|A910 overview]]'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a910/frs Motorola source code]
-*[[Dual-boot GEN2 | Dual-boot how-to]]
+*[[Dual Boot GEN2 | Dual Boot how-to]]
 *[[Project Status]]
 *Linux machine ID: 1745
 
@@ -132,7 +132,7 @@
 *Linux machine ID: n/a
 
 |- style="background:#4E78A0;" width="95%"
-! colspan="3" | Other devices:
+! colspan="3" | Other devices (some support is possible):
 
 |- style="background:#B9D3EE"
 ! Moto Q || Moto Q9c || A810
