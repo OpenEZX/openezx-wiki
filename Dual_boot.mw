@@ -94,9 +94,11 @@ NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For
 
 Gen-blob purpose is to be flashed, you can do it, depending on what device you have:
 
-If your device is a GEN1 (A780, E680) follow this link: [[Dual Boot GEN1]].
+If your device is a''' GEN1 (A780, E680)''' follow this link: [[Dual Boot GEN1]].
 
-If your device is a GEN2 (A1200, RokrE2, RokrE6, A910) follow this link: [[Dual Boot GEN2]].
+If your device is a '''GEN2 (A1200, RokrE2, RokrE6, A910)''' follow this link: [[Dual Boot GEN2]].
+
+'''Do not flash genblob on another device yet!'''
 
 ==References==
 
