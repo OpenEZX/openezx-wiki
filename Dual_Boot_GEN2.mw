@@ -17,7 +17,7 @@ On gen2 devices, the kernel is located at a different place and is offset by 204
  ./boot_usb setflag usb
  ./boot_usb gen-blob 0
  
-[[Backup]] your existing kernel:
+[[Backups|Backup]] your existing kernel:
  ./boot_usb read 0xA0000 1048576 backup-of-kernel-partition
  # Then add the famous 2048 bytes offset:
  dd if=backup-of-kernel-partition bs=1k skip=2 of=24-kernel-backup
