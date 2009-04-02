@@ -12,9 +12,9 @@ This is a collaborative effort to collect information about Motorola's EZX GSM p
 
 <div style="margin: 0; margin-right:10px; margin-top:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#ccccff; align:left;">
 
-[[Getting Started|'''Getting started:''']] All you need to know to boot an OpenEZX kernel for the first time (no need to flash anything into the phone).
+[[Getting Started|'''Getting started:''']] All you need to know to boot an OpenEZX kernel for the first time (nothing need to be flashed on the phones).
 
-See [[Project devices| the full list of possibles targets]] and the [[Project Status]] pages, to make yourself an idea of your current phone's support on (OpenEZX) 2.6 kernel.
+See [[Project devices| the full list of possibles targets]] and the [[Project Status]] pages, to make yourself an idea of the actual hardware support on (OpenEZX) 2.6 kernel.
 
 You may want to ask for support, or contact the team, either on:
 * [http://lists.openezx.org/mailman/listinfo/ The Mailing List] (alternative archives [http://www.mail-archive.com/openezx-devel@lists.openezx.org/info.html here] [http://news.gmane.org/gmane.comp.embedded.ezx.general and here]).
