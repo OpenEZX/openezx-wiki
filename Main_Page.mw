@@ -91,7 +91,7 @@ Researchs on Motorola's software.
 * Known [[Issues]]
 * [[Crosscompile|How to crosscompile]] for the EZX device
 * [[Kernel hacking - linux-2.6]]
-* [[Dual boot]]
+* [[Dual boot| Dual-boot and gen-blob]]
 * How to use the [[JTAG]] interface
 * [[Bootloader]]
 * [[Serial console]]
