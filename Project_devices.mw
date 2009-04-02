@@ -14,18 +14,18 @@
 *''' [[A728|A728 overview]]'''
 *[Motorola source code]
 *Linux machine ID: n/a
-*[mailto:openezx-devel@lists.openezx.org Ask for support on the mailing list]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on the mailing list]
 
 |[[image:A760_thumb.png|right|143px|link=A760|alt=Alt Text|A760 thumb]]
 *''' [[A760|A760 overview]]'''
 *[Motorola source code]
-*[mailto:openezx-devel@lists.openezx.org Ask for support on the mailing list]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
 |[[image:A768_thumb.png|right|143px|link=A768|alt=Alt Text|A768 thumb]]
 *''' [[A768|A768 overview]]'''
 *[Motorola source code]
-*[mailto:openezx-devel@lists.openezx.org Ask for support on the mailing list]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
 |- style="background:#B9D3EE"
@@ -142,13 +142,13 @@
 | [[image:motoQ_thumb.png|right|143px|link=Motorola_Q |alt=Alt Text|MotoQ thumb]]
 *''' [[Motorola_Q|  MotoQ overview]]'''
 *Only boot OpenEZX from [http://www.handhelds.org/moin/moin.cgi/HaRET haret]
-*[mailto:openezx-devel@lists.openezx.org Ask for support on the mailing list]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on the mailing list]
 *Linux machine ID: 1980
 
 | [[image:motoQ_thumb.png|right|143px|link=Motorola_Q9c|alt=Alt Text|MotoQ9c thumb]]
 *'''[[Motorola_Q9c| MotoQ9c overview]]'''
 *Only boot OpenEZX form [http://www.handhelds.org/moin/moin.cgi/HaRET haret]
-*[mailto:openezx-devel@lists.openezx.org Ask for support on the mailing list]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
 | [[image:A810_thumb.png|right|143px|link=A810|alt=Alt Text|A810 thumb]]
@@ -156,7 +156,7 @@
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a810/frs Motorola source code]
 *Manufactured by E28
 *OMAP730 based
-*[mailto:openezx-devel@lists.openezx.org Ask for support on the mailing list]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on the mailing list]
 *Linux machine ID: n/a
 
 |- style="background:#B9D3EE"
@@ -167,7 +167,7 @@
 | [[image:A1600_thumb.png|right|143px|link=A1600 |alt=Alt Text|A1600 thumb]]
 *''' [[A1600|A1600 overview]]'''
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.a1600/frs Motorola source code]
-*[mailto:openezx-devel@lists.openezx.org Ask for support on ML]
+*[mailto:openezx-devel(at)lists.openezx.org Ask for support on ML]
 *Linux machine ID: n/a
 
 |- style="background:#4E78A0;" 
