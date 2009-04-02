@@ -24,10 +24,10 @@ For a 2.6 kernel to boot due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]
 
 === Get a kernel ===
 
-* Older kernels <font color=blue><sup>[[#Foot2|oldies]]</sup></font>,(wich will maybe respond to old EZX machid: 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very careful''' (can be dangerous to try 'blindly' an old build, and support cannot be easily done)!
+* Older kernels <font color=blue><sup>[[#Foot2|oldies]]</sup></font>,(wich will maybe respond to old EZX [[#Machine id's (machid)|machid:]] 867 ) were compiled for a specific device and maybe not work on all phones, so '''be very careful''' (can be dangerous to try 'blindly' an old build, and support cannot be easily done)!
 
-'''=>''' Now an OpenEZX kernel is build for all the EZX phones and you need to specify '''the right machine id''' for it to properly work on the desired phone.
-See [[#Machine id's (machid)]], to find the good machid of your phone.
+'''=>''' Now an OpenEZX kernel is build for all the EZX phones and you need to specify '''the right [[#Machine id's (machid)| machine ID]]''' for it to properly work on the desired phone.
+See [[#Machine id's (machid)| machine ID (machid)]], to find the good machid of your phone.
 
 You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config and build logs are also available)] to quickly try a recent kernel.
 
