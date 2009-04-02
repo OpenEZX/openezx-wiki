@@ -75,13 +75,13 @@ Researchs on Motorola's software.
 * How to create [[Backups]] of the EZX device.
 * How to use [[Rootfs on NFS]].
 * How to use the [[Power button]].
-* How to [[charging|charge]] the phone
-* How to know how long the battery last
-* How to make a [[call]] 
-* How to [[receive a call]]
-* How to use the phone as a [[video class device]]
-* How to use the phone as a [[USB mass storage device]]
-* How to query the [[latitude and longitude]] with the A780 GPS
+* [[charging|How to charge the battery]] 
+* [[checking battery|How to know how long the battery last]]
+* [[call|How to make a call]] 
+* [[receive a call|How to receive a call]]
+* [[video class device| How to use the phone as a video class device]]
+* [[USB mass storage device|How to use the phone as a USB mass storage device]]
+* [[latitude and longitude|How to query the latitude and the longitude with the A780 GPS]]
 
 </div>
 
@@ -89,7 +89,7 @@ Researchs on Motorola's software.
 '''[[:Category:Development|Development]]'''
 
 * Known [[Issues]]
-* How to [[Crosscompile]] for the EZX device
+* [[Crosscompile|How to crosscompile]] for the EZX device
 * [[Kernel hacking - linux-2.6]]
 * [[Dual boot]]
 * How to use the [[JTAG]] interface
