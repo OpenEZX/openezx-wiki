@@ -128,18 +128,19 @@ At the time of writing, default command line is:
 
 '''Examples:'''
 
-''Overide default filesystem type for rootfs partition:''
+Overide default filesystem type for rootfs partition:
  rootfstype=ext3
 
-''Place the rootfs on the third partition of the SD/MMC :''
+Place the rootfs on the third partition of the SD/MMC :
  root=/dev/mmcblk0p3
 
-''Network configuration can be overridden to suit your configuration as well with:''
+Network configuration can be overridden to suit your configuration as well with:
  ip=<client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>
-Note that the last three (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.
+''Note that the last three (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.''
 
-''Specify the RAM memory size and layout :''
+Specify the RAM memory size and layout :
  mem=32M@0xA0000000 mem=16M@0xAC000000
+
 console= parameter is explained and some of its uses are described on [[Serial console]] (custom hardware/cable is also needed).
 
 All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
