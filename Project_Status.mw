@@ -7,7 +7,7 @@ The list of hardware parts we have working Free Software drivers for in the 2.6
 kernel. You can find further information to get a feature working up to 100% in our [[TODO]] list.
 
 We dont support [[A728]], [[A760]], [[A768]] and [[E895]]. If you own one of those phones
-and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org Ask for support on ML]
+and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org openezx-devel M.L.]
 
 {| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
 |- style="background:#bfbfbf; font-weight: bold"
