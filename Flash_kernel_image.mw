@@ -10,8 +10,8 @@ On linux as root:
  ./boot_usb flash <address> <$file_to_flash>
 
 *Addresses unit is the byte, it can be in hexadecimal (don't forget the "0x" prefix!) or in decimal base.
-*"flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
-*"read" backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
+*"boot-usb flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
+*"boot_usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
 ==Gen1 example (A780, E680)==
 On A780 and E680, the kernel is located at 0x20000, so to (re)flash it:
