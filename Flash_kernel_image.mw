@@ -1,16 +1,69 @@
-'''Big fat warning:''' Flashing a new kernel into your phone is irreversible at the moment.
+=Using boot_usb and gen-blob=
 
-The only known way to flash a new kernel image is from the original motorola system.
+On linux as root:
+ #initialize the phone:
+ ./boot_usb setflag usb
+ ./boot_usb gen-blob 0
+ # proceed to a preliminar backup is alway safer:
+ ./boot_usb read <address> <size> <$backup_file_name>
+ # Then flash:
+ ./boot_usb flash <address> <$file_to_flash>
 
-You need to get [http://cyph.marcuslee.org/flashkit-0.1.zip cyphs flashkit] and the source for his [http://cyph.marcuslee.org/rwflash-0.1.tar.bz2 rwflash kernel module].
+*Addresses unit is the byte, it can be in hexadecimal (don't forget the "0x" prefix!) or in decimal base.
+*"flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
+*"read" backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
-The flashkit has a precompiled rwflash module  onboard, but unfortunately this one has a bug don't allowing to flash a kernel image. This bug is fixed in the source of rwflash. 
+==Gen1 example (A780, E680)==
+On A780 and E680, the kernel is located at 0x20000, so to (re)flash it:
+
+Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
+
+Check if its size is not higher than 917504bytes (896Kb):
+ wc -c zImage
+Prepare the "zImage" file to be flashed:
+ dd if=/dev/zero of=/tmp/kernel_mtd bs=917504 count=1 
+ dd if=zImage of=/tmp/kernel_mtd conv=notrunc
+On linux, as root, '''flash a gen1 kernel''' with:
+ #initialise the phone ([[Bootloader#Enter_the_bootloader|phone needs to be in bootloader "flash mode"]].
+ ./boot_usb setflag usb
+ ./boot_usb genblob 0
+ # proceed to a safety backup
+ ./boot_usb read 0x20000 0xE0000 kernel-backup
+ #flash a kernel image
+ ./boot_usb flash 0x20000 /tmp/kernel-mtd
+ rm /tmp/kernel-mtd
+
+==Gen2 example (A1200, E6, E2, A910)==
+On GEN2 devices, the kernel is located at 0xA0000, so to (re)flash it:
+
+Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
+
+Check if its size is not higher than 1048576bytes (1024Kb):
+ wc -c zImage
+Prepare the "zImage" file to be flashed:
+ dd if=/dev/zero of=/tmp/kernel_mtd bs=1048576 count=1 
+ dd if=zImage of=/tmp/kernel_mtd bs=2048 seek=1 conv=notrunc
+On linux, as root, '''flash a gen2 kernel''' with:
+ #initialise the phone ([[Bootloader#Enter_the_bootloader|phone needs to be in bootloader "flash mode"]].
+ ./boot_usb setflag usb
+ ./boot_usb genblob 0
+ # proceed to a safety backup
+ ./boot_usb read 0xA0000 0x100000 kernel-backup
+ #flash a kernel image
+ ./boot_usb flash 0xA0000 /tmp/kernel-mtd
+ rm /tmp/kernel-mtd
+
+=Using cyph's flashkit=
+
+You need to get [http://cyph.marcuslee.org/flashkit-0.1.zip cyph's flashkit] and the source for his [http://cyph.marcuslee.org/rwflash-0.1.tar.bz2 rwflash kernel module].
+
+The flashkit has a precompiled rwflash module onboard, but unfortunately this one has a bug don't allowing to flash a kernel image. This bug is fixed in the source of rwflash. 
 
 In order to get the kernel module compiled you need the motorola 2.4 kernel source and a working crosscompile toolchain. Please read [[Crosscompile]].
 
 Just replace the old module with the new one and follow the flashkit README.
 
-If your phone is unlocked, you can flash your own zImage into /dev/mtd4 . But be aware that the size of you zImage could not be higher then 896kbyte.
+You can flash your own zImage into /dev/mtd4 (at least it's this mtd on unlocked A780). But be aware that the size of you zImage could not be higher then 896kbyte.
 
 [[Category:Development]]
 [[Category:A780]]
