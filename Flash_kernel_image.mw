@@ -28,6 +28,7 @@ On linux as root:
 
 ==Gen1 kernel example (A780, E680)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
+
 On A780 and E680, the kernel is located at 0x20000, so to (re)flash it:
 
 Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
@@ -49,6 +50,7 @@ On linux, as root, '''flash a gen1 kernel''' with:
 
 ==Gen2 kernel example (A1200, E6, E2, A910)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
+
 On GEN2 devices, the kernel is located at 0xA0000, so to (re)flash it:
 
 Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
