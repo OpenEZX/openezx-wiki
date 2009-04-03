@@ -1,4 +1,17 @@
+'''ALL THE INFORMATION AND CODE IN THIS PACKAGE ARE PROVIDED AS-IS, WITHOUT WARRANTY OF ANY KIND. DONT BLAME ME IF YOU BRICK YOUR PHONE.'''
+
+'''ALL THE CODE AND BINARY FILES IN THIS PACKAGE ARE FREE TO USE AND REDISTRIBUTE, WITH A GPL LICENSE OR SIMILAR.'''
+
+'''HERE WE WILL FLASH RAW IMAGES/DATAS, FLASH ONLY A FILE IF YOU ARE SURE IT WILL WORK ON THE PHONE, AT THE PLACE YOU FLASH IT!'''
+
+'''DO NOT FLASH MOTOROLA'S "STOCKS" OR "MODDED" FIRMWARES IN .SBF OR .SHX PROPRIETARY FILEFORMATS WITH GEN-BLOB OR FLASHKIT'''
+
 =Using boot_usb and gen-blob=
+Genblob is a second stage bootloader recently developed by Daniel Ribeiro, it adds a lot of features in a minimalistic file. Some of these features are the needed "hardware initialisation" for the 2.6 kernel to properly boot, to allow a BP communication even if the kenrel is sent over the USB, and one other commands useful for the develppers: flashing on the phone's NOR flash memory.
+
+To send these commands we use the boot_usb, we will also use it to send and receive the datas from and to the phone.
+
+==How-to flash a file using gen-blob:==
 
 On linux as root:
  #initialize the phone:
@@ -13,7 +26,8 @@ On linux as root:
 *"boot-usb flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
 *"boot_usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
-==Gen1 example (A780, E680)==
+==Gen1 kernel example (A780, E680)==
+'''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
 On A780 and E680, the kernel is located at 0x20000, so to (re)flash it:
 
 Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
@@ -33,7 +47,8 @@ On linux, as root, '''flash a gen1 kernel''' with:
  ./boot_usb flash 0x20000 /tmp/kernel-mtd
  rm /tmp/kernel-mtd
 
-==Gen2 example (A1200, E6, E2, A910)==
+==Gen2 kernel example (A1200, E6, E2, A910)==
+'''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
 On GEN2 devices, the kernel is located at 0xA0000, so to (re)flash it:
 
 Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
@@ -53,7 +68,7 @@ On linux, as root, '''flash a gen2 kernel''' with:
  ./boot_usb flash 0xA0000 /tmp/kernel-mtd
  rm /tmp/kernel-mtd
 
-=Using cyph's flashkit=
+=Flashing using cyph's flashkit and /dev/mtd=
 
 You need to get [http://cyph.marcuslee.org/flashkit-0.1.zip cyph's flashkit] and the source for his [http://cyph.marcuslee.org/rwflash-0.1.tar.bz2 rwflash kernel module].
 
@@ -62,6 +77,9 @@ The flashkit has a precompiled rwflash module onboard, but unfortunately this on
 In order to get the kernel module compiled you need the motorola 2.4 kernel source and a working crosscompile toolchain. Please read [[Crosscompile]].
 
 Just replace the old module with the new one and follow the flashkit README.
+
+Display the list of all the mtd "partitions":
+ cat /proc/mtd
 
 You can flash your own zImage into /dev/mtd4 (at least it's this mtd on unlocked A780). But be aware that the size of you zImage could not be higher then 896kbyte.
 
