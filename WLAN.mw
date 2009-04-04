@@ -28,3 +28,5 @@ we don't know what difference they have.
 In original code there were some workarounds to
 prevent power leakage, but I haven't understood them and hence you find
 them commented in openezx code. (ao2)
+
+[[Category:A910]]
