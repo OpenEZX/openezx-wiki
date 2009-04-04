@@ -66,5 +66,7 @@ If your checks has passed successfully, then you can flash the kernel
  #(Re-)Flash the original kernel
  ./boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
-[[Category:Rokr E6]]
+[[Category:A910]]
 [[Category:A1200]]
+[[Category:Rokr E2]]
+[[Category:Rokr E6]]
