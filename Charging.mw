@@ -1,0 +1,7 @@
+On A780, (maybe on other gen1 devices):
+The BP control the battery, so we need to send this "magic" AT command to enable the charging:
+
+(tested only to charge over the USB cable)
+ echo -e "AT+USBSTAT=255,1\r\n" > /dev/mux4
+
+On gen2 devices, the PCAP2 chip is controlling the charge, there are patchs to come that will handle this.
