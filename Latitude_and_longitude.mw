@@ -1,0 +1,9 @@
+=Using the A780 AGPS Module=
+
+The GPS module of the A780 is connected to [[BP]], and [[AP]] receive the datas through the mux line (mux14), in a binary form using a Motorola proprietary protocol. 
+
+Antonio Ospite' developed "gpsmux" to simplify all this, and retrieve the longitude and latitude in a more readable format.
+
+'''The A780 geolocalisation only works if you registered the gsm network''' 
+
+Get it there : http://people.openezx.org/ao2/gps/
