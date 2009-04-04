@@ -50,3 +50,10 @@ pand -c XX:XX:XX:XX:XX -n -z -D -r PANU
 
 (bnep0 device should be created)
 the problem is now ifconfig bnep0 up doesnt work on the phone (siocsifflags)
+
+[[Category:E680]]
+[[Category:A780]]
+[[Category:A910]]
+[[Category:A1200]]
+[[Category:Rokr E2]]
+[[Category:Rokr E6]]
