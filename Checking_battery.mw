@@ -1,0 +1,9 @@
+=Checking the battery's actual capacity on the 2.6 OpenEZX kernel=
+
+On A780, (maybe on other gen1 devices) it seems:
+
+ echo -e "AT+CBC\r\n" > /dev/mux4
+
+On other devices, it seems:
+ cat /proc/adc_battery 
+Return the battery's actual capacity (in mAh?)
