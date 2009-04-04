@@ -7,3 +7,5 @@ On A780, (maybe on other gen1 devices) it seems:
 On other devices, it seems:
  cat /proc/adc_battery 
 Return the battery's actual capacity (in mAh?)
+
+[[Category:A780]]
