@@ -39,7 +39,7 @@ Flash gen-blob '''WARNING: For gen2 phones only! :'''
 * You can still have access to the MBM flash mode with the usual combo.
 
 ==Re-flashing the original kernel, after genblob, in the device (optional)==
-Re-flashing a (prepared) 2.4 original kernel require you a few minuts more, could bring some advantages...
+Re-flashing a (prepared) 2.4 original kernel require you a few minuts more, but bring some advantages...(the ability to boot the motorola kernel, and even charge the battery without a (micro)SD in the phone).
 
 But:
 * You should always do a [[Backups|'''backup''']] (possibly, a full backup) before replacing anything on the phone... 
@@ -53,7 +53,7 @@ You remember? Sooner, we did a backup of the kernel partition (third command des
 
 So, hopefully, you kept that backup file... :-)
 
-Now you want to remove the 2048 bytes offset, and resize the file:
+Now you need to remove the 2048 bytes offset, and resize the file:
  dd if=backup-of-kernel-partition bs=1 skip=2048 count=917500 of=kernel-with-no-extra-bytes
 Download and add the magic flag to the kernel for genblob to recognize it:
  # download a flag to put at the beggining of the kernel before flashing it.
