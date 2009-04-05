@@ -22,6 +22,8 @@ On gen2 devices, the kernel is located at 0xA0000 and is offset by 2048 bytes on
  # Then remove the famous 2048 bytes offset:
  dd if=backup-of-kernel-partition bs=1k skip=2 of=24-kernel-backup
 
+Keep these two backups, we will use them both later:
+
 Now copy and rename this "24-kernel-backup" file to "default" on the /boot/ folder of the (micro) SD card.
 Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
 
