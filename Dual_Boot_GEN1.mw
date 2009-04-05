@@ -30,19 +30,13 @@ Flash gen-blob '''WARNING: For gen1 phones only! :'''
 
 If you have previously installed [http://svn.openezx.org/trunk/src/blob/blob2/ blob2] you have your kernel in a different place than in the original map we used here, but the rootfs location stay the same, so you just have to dump the kernel from the right place then go on with the previous instructions.
 
-== After the flash ==
-* Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
-* You can power off on usb mode with "boot_usb off".
-* You can still have access to the MBM flash mode with the usual combo.
-
-=Additional notes=
+==Additional notes==
 
 The phone will "look bricked" if you do something wrong with the kernel
 partition. In case you can't enter your bootloader screen, dont panic,
 just remove the battery press the bootloader keys (jog+vr on the A780,
 vr+vol- on the [[E680 tips|E680]]) and put the battery while holding the keys.
 You will get the blue screen for flash mode.
-
 
 = After the flash =
 * Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
