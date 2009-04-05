@@ -12,7 +12,7 @@
 
 ==Follow this '''only''' on RokrE2, RokrE6, A1200, A910 (gen2 devices)==
 
-On gen2 devices, the kernel is located at a different place and is offset by 2048 bytes on the flash partition, so the procedure is a bit different.
+On gen2 devices, the kernel is located at 0xA0000 and is offset by 2048 bytes on the flash partition
 [[Bootloader#Enter_the_bootloader | Enter the bootloader]] and prepare the phone to be flashed:
  ./boot_usb setflag usb
  ./boot_usb gen-blob 0
