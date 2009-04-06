@@ -1,50 +1,24 @@
-=Getting Drivers and Tools=
-You will need various tools to pull this off, some of which aren't on your phone
+=Getting tools for the original software=
 
-{| border="0" cellpadding="2" cellspacing="2" align="top"
-|- style="background:#bfbfbf; font-weight: bold"
-! Module / Tool
-! What It's For
-! Recomended Source
-|- style="background:#efefef;"
-| ext3.o, jdb.0, ext2.o, loop.o, umsdos.o
-| Drivers for various file systems.  I personally recomend ext2 for swap files and ext3 for normal-use file systems.
-| [http://www.motorolafans.com/forums/viewtopic.php?t=1049 This posting on motorolafans.com] and/or [http://sourceforge.net/projects/e680 The E680 Sourceforge site.]
-|- style="background:#efefef;"
-| fdisk
-| Change the partitions on your disks  WARNING: This is a loaded gun for the uninitated!
-| Busybox [[TODO|Link to nifty busybox]]
-|- style="background:#efefef;"
-| mke2fs,  mkfs.ext2, mkfs.ext3, and/or mkfs.minix
-| Format a disk for various file systems
-| Busybox
-|- style="background:#efefef;"
-| mkswap
-| Prepares your swap partition or file to be used by swapon.
-| Busybox
-|- style="background:#efefef;"
-| insmod
-| Installs a kernel module
-| Already on phone
-|- style="background:#efefef;"
-| mknod
-| Creates a special file.  This is what we use to make the device (special file) to access the swap partition.
-| Already on phone
-|- style="background:#efefef;"
-| swapon, swapoff
-| Enables or disables devices or files for paging and swapping
-| Already on phone
-|- style="background:#efefef;"
-| mount, umount
-| Mounts or unmounts a file system on a device, file, director, etc.
-| Already on Phone
-|- style="background:#efefef;"
-|
-|
-|
-|}
+"Doit" is a handy tool, a colection of Makefiles and scripts to build a set of GNU tools that our phone's stock system is lacking...
+You can get Doit and the separated package it builds [http://people.openezx.org/daniel/ here], or in our svn [http://svn.openezx.org/trunk/src/doit/ here].
+Doit includes busybox, dropbear, and GNU coreutils, [http://people.openezx.org/daniel/ more details here].
 
-For loading your drivers, I personally recomend NEO-Installer unless you have flashed your firmware to allow you to execute code when the phone boots up  (which is next on my list).  I install my drivers under /exzlocal/modules.  With NEO-Installer, you can put any number of scripts in the directory /ezxlocal/download/QTDownLoad/Startup and they will be executed when NEO-Installer starts.  Note that they are only called once each time the phone boots even if you run the NEO-Installer script multiple times.
+After building these tools, you can choose to install them using the [[MPKG]] method, by creating a package.
+
+Note that you could also copy them by hand on your phone's filesystem or in the memory card and make them work that way too. 
+You can use [[Get a shell| telnet or ssh]] for this. 
+
+Also take a look at the [http://www.dewmill.com/linuxphone.html NEO-installer] (from Rhizods), an alternative "user-friendly package system".
+
+=Getting drivers and modules for the original software=
+
+Every linux 2.4.17 or 2.4.20 should be installable on your original phone's system.
+Sometimes, there are not in the released kernel tree at motorola sourcefoge site, but you can add them in the tree from a "vanilla" 2.4.20 kernel, and make them compile.
+The necessary tools are in the phones stock OS to load modules and install new devices (insmod, mknod...)
+
+[http://www.dewmill.com/linuxphone.html NEO-installer] can also be used to load the drivers at boot time, installing them on /ezxlocal folder is necessary though.
+With [http://www.dewmill.com/linuxphone.html NEO-installer], you can put any number of scripts in the directory /ezxlocal/download/QTDownLoad/Startup and they will be executed when NEO-Installer starts.  Note that they are only called once each time the phone boots even if you run the NEO-Installer script multiple times.
 
 This is what my /ezxlocal/download/QTDownLoad/Startup/modules script looks like:
 
@@ -62,3 +36,5 @@ This is what my /ezxlocal/download/QTDownLoad/Startup/modules script looks like:
  # Create device for swap partition and turn it on.
  mknod /tmp/mmca2 b 243 2
  swapon /tmp/mmca2
+
+'''Note''' that Neo-installer is not really necessary for this, it's just user-friendly, but is waht we could call a "dirty fix" :). You could also [[Backups|backup]] your root filesystem, then edit the cramfs codegroups and reflash the file (be carefull to net make the cramfs raw image bigger than it was...), this way you could get rid of any workaround and load the drivers properly (the right way, but require to backup and flash your rootfs's mtd).
