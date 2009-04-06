@@ -53,6 +53,7 @@ How to [[external_battery|connect]] an external 3.0V - 4.0V DC power source, e.g
 Researchs on Motorola's software.
 {| style="background:#eaeaae;" width="95%"
 |width="50%"|
+* [[AT_commands| AT commands]]
 * [[Get a shell| How-to '''get a shell''' on the EZX device]]
 * [[Stock environment| Overview of the Motorola sofware]]
 * [[Original firmware versions]]
@@ -63,7 +64,7 @@ Researchs on Motorola's software.
 * [[Kernel hacking - linux-2.4| How to compile the motorola kernel]]
 * [[MotoMAGX_weakness_of_kernel_modules_hashes| MAGX kernel module hash weakness]]
 * [[MotoMAGX Security]]
-* [[AT_commands| AT commands]]
+* [[Building and installing tools on Motorola's system|Tools and drivers on Motorola's system]]
 |}
 </div>
 
