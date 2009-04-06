@@ -15,7 +15,7 @@ Also take a look at the [http://www.dewmill.com/linuxphone.html NEO-installer] (
 
 Every linux 2.4.17 or 2.4.20 linux kernel's module should be installable on your original phone's system.
 
-Sometimes, there are not in the released kernel tree at motorola sourcefoge site, but you can add them in the tree from a "vanilla" 2.4.20 kernel, and make them compile.
+Sometimes, there are not in the released kernel tree at motorola sourcefoge site, but you can add them in the tree from a "vanilla" 2.4.20 kernel, and make them compile. Take also a look at the modules sources on [http://sourceforge.net/projects/e680 E680's sourceforge project].
 
 The necessary tools are in the phones stock OS to load modules and install new devices (insmod, mknod...)
 
