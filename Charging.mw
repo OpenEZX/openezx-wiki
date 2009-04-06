@@ -1,4 +1,4 @@
-On A780, (maybe on other gen1 devices):
+On A780 and E680, (maybe on other gen1 devices):
 The BP control the battery, so we need to send this "magic" AT command to enable the charging:
 
 (tested only to charge over the USB cable)
