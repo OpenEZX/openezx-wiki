@@ -41,4 +41,4 @@ This is what my /ezxlocal/download/QTDownLoad/Startup/modules script looks like:
  mknod /tmp/mmca2 b 243 2
  swapon /tmp/mmca2
 
-'''Note''' that Neo-installer is not really necessary for this, it's just user-friendly, but is waht we could call a "dirty fix" :). You could also [[Backups|backup]] your root filesystem, then edit the cramfs codegroups and reflash the file (be carefull to net make the cramfs raw image bigger than it was...), this way you could get rid of any workaround and load the drivers properly (the right way, but require to backup and flash your rootfs's mtd).
+'''Note''' that Neo-installer is not really necessary for this, it's just user-friendly, but is what we could call a "dirty fix" :). You could also [[Backups|backup]] your root filesystem, then edit the cramfs codegroups and reflash the file (be carefull to not make the cramfs raw image bigger than it was...), this way you could get rid of any workaround and load the drivers properly (the right way, but require to backup and flash your rootfs's mtd).
