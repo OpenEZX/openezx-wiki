@@ -44,6 +44,8 @@ make
 cp src/blob/blob gen-blob
 </pre>
 
+The gen-blob file should be approximatly '''64kB'''. '''It is important to check the size''' because it known that some compilers build a very big gen-blob of 300kB or more, so '''you will not be able to reflash a 2.4 kernel''' after flashing genblob, because of the space used by that gen-blog.
+
 ==Partitioning==
 
 gen-blob expects a FAT16/FAT32 as the first partition on MMC card, it loads the kernel from there, you could also use this partition as storage shared between the original software and the alternative ones. The other partitions should be choosen according to the requirements of the kernel you are going to load. Usually OpenEZX kernels expect an ext2 partition as the second one, from which they load the rootfs.
