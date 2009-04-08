@@ -70,11 +70,25 @@ Then you need to '''assert''' the resulting 'kernel-to-be-flashed-to-0xC0000' fi
  # If the result is bigger than 917504 bytes, then '''don't flash it'''! You made a mistake somewhere...
 Then you can also check if the file hasn't been cut at its end: 
  hexdump kernel-to-be-flashed-to-0xC0000 | tail
-EXAMPLE:
+EXAMPLE 1:
+ [...]
+ [...]
+ [...]
+ hexdump kernel-to-be-flashed-to-0xC0000 | tail
  00d8e80 ffff ffff ffff ffff ffff ffff ffff ffff
  *
  00e0000
-One of these line (the last!) must end with at least a few ' f f f f '...
+EXAMPLE 2:
+ hexdump kernel-to-be-flashed-to-0xC0000 | tail
+ [...]
+ [...]
+ [...]
+ 00d5970 5911 000d 2c6c 0000 ddb8 000d 0000 0000
+ 00d5980 0000 0000 0000 0000 0000 0000 0000 0000
+ *
+ 00e0000
+
+One of these line (the last!) must end with at least a few ' f f f f ' or ' 0 0 0 0 '...
 
 ===Reflash===
 
