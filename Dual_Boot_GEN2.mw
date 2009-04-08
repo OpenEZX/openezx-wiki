@@ -27,6 +27,9 @@ Keep these two backups, we will use them both later:
 Now copy and rename this "24-kernel-backup" file to "default" on the /boot/ folder of the (micro) SD card.
 Make also sure the file /boot/menu.lst is in the (micro) Sd as well and point to that "default" kernel too.
 
+Check gen-blob's size (must not exceed 128KiB)
+ ls -l gen-blob
+
 Flash gen-blob '''WARNING: For gen2 phones only! :''' 
  dd if=/dev/zero bs=1 count=2048 of=needed-offset
  cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
