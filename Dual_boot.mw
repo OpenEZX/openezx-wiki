@@ -44,7 +44,10 @@ make
 cp src/blob/blob gen-blob
 </pre>
 
-The gen-blob file should be approximatly '''64kB'''. '''It is important to check the size''' because it known that some compilers build a very big gen-blob of 300kB or more, so '''you will not be able to reflash a 2.4 kernel''' after flashing genblob, because of the space used by that gen-blog.
+===Notes===
+The gen-blob file should be approximatly '''64kB'''. '''This could be important to check this size''': 
+It is known that some compilers build a very big gen-blob of 300kB or more, so '''you will not be able to reflash a 2.4 kernel''' after flashing genblob (just because of the big space used by that gen-blob binary).
+So the best is really to use the OpenEmbedded toolchain, at the time of writing, this one (angstrom-2007.9-test-20071017-arm-linux-gnueabi-toolchain.tar.bz2) works too. get it [http://www.angstrom-distribution.org/unstable/toolchain/ here].
 
 ==Partitioning==
 
