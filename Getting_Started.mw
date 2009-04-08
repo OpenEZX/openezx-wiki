@@ -118,7 +118,7 @@ After a short time the screen should go funny, then you should see Linux booting
 
 ===Optionals functionalities and command line parameters=== 
 
-Could be any standard kernel command line (so called "CMDLINE") parameters (in the boot_usb command they have to be quoted and separate by a space).
+Could be any standard kernel command line (so called "CMDLINE") parameters (in the boot_usb command they have to be quoted and separated by spaces).
 
 Defaults parameters (that are compiled in kernel by default) change rarely. Override them or change them yourself  and build your kernel for your convenience, it can be interesting to take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] /arch/arm/configs/ezx_defconfig of the kernel tree, at the line "CONFIG_CMDLINE=".
 At the time of writing, default command line is:
