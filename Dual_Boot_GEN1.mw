@@ -22,6 +22,9 @@
  # Copy and rename this backup to /boot/default on the SD card.
  # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
 
+Check gen-blob's size (must not exceed 128KiB)
+ ls -l gen-blob
+
 Flash gen-blob '''WARNING: For gen1 phones only! :'''
  #example: ./boot_usb flash <address> <file> 
  ./boot_usb flash 0x20000 gen-blob
