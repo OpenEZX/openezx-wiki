@@ -69,8 +69,8 @@ Then you need to '''assert''' the resulting 'kernel-to-be-flashed-to-0xC0000' fi
  ls -l kernel-to-be-flashed-to-0xC0000 
  # If the result is bigger than 917504 bytes, then '''don't flash it'''! You made a mistake somewhere...
 Then you can also check if the file hasn't been cut at its end: 
- hexdump kernel-to-be-flashed-to-0xC0000 | tail
 EXAMPLE 1:
+ hexdump kernel-to-be-flashed-to-0xC0000 | tail
  [...]
  [...]
  [...]
