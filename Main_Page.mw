@@ -31,12 +31,14 @@ You may want to ask for support, or contact the team, either on:
 * [[EZX_Platform_Overview|EZX Hardware Overview]]
 * [[EMU]] Motorola '''E'''nhanced '''M'''ini '''U'''SB
 * [[PCAP2]]
+* [[Sound]]
 * [[GPIO|GPIOs]]
 * [[GPS]]
 * [[WLAN]]
 * [[Bluetooth]]
 |
 * [[FM Radio]]
+* [[Camera|Cameras sensors]] 
 * [[LEDs]]
 * [[Vibrator]]
 * [[Internal Flash]]
