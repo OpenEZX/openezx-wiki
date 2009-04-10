@@ -7,3 +7,7 @@ then the role of the userspace should be to send again to the BP the command:
 to effectively shutdown the phone.
 
 On gen2 devices, the power button is connected to the PCAP2 chip, there are patchs to come that will handle this.
+
+
+[[Category:A780]]
+[[Category:E680]]
