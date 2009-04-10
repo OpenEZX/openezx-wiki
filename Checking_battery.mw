@@ -4,8 +4,9 @@ On A780, (maybe on other gen1 devices) it seems:
 
  echo -e "AT+CBC\r\n" > /dev/mux4
 
-On other devices, it seems:
- cat /proc/adc_battery 
+On A910 and probably other gen2 devices:
+ cat /sys/devices/platform/pxa2xx-spi.1/spi1.0/adc_battery
 Return the battery's actual capacity (in mAh?)
 
 [[Category:A780]]
+[[Category:A910]]
