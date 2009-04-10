@@ -1,4 +1,4 @@
-On A780 and E680, (maybe on other gen1 devices):
+*On A780 and E680, (maybe on other gen1 devices):
 The BP is the first to be aware of the power key event,
 On the key press event, BP will send a notification through /dev/mux4, it should be:
  AT+EKEV: 19,1
@@ -6,7 +6,7 @@ then the role of the userspace should be to send again to the BP the command:
  echo -e "AT+CPWR=1\r\n" > /dev/mux4
 to effectively shutdown the phone.
 
-On gen2 devices, the power button is connected to the PCAP2 chip, there are patchs to come that will handle this.
+*On gen2 devices, the power button is connected to the PCAP2 chip, there are patchs to come that will handle this.
 
 
 [[Category:A780]]
