@@ -95,7 +95,7 @@ The "g" stands for more preinstalled games.
 == Flash Memory ==
 See also [[Internal Flash]]: this is a Gen 1 EZX phone, and all of those have the same flash chips.
 
-Here is a map of the flash memory:
+Here is a map of the flash memory of an E680i:
  ROFLASH Driver status: Ready
  ROFLASH area name is rootfs
  ROFLASH area size = 26083328 bytes
@@ -110,7 +110,7 @@ Here is a map of the flash memory:
  ROFLASH area offset = 33161216 bytes
  ROFLASH area l_x_b(1000)
 
-And the partitions as they are used by original Motorola firmware:
+And the partitions as they are used by original E680i Motorola firmware:
  Filesystem           1k-blocks      Used Available Use% Mounted on
  rootfs                   55324     55324         0 100% /
  /dev/root                55324     55324         0 100% /
@@ -123,7 +123,7 @@ And the partitions as they are used by original Motorola firmware:
  /dev/mmca1             2009184    211744   1797440  11% /mmc/mmca1    <--- SD CARD
 Note that NAND flash is [[Internal Flash|not accessible to OpenEZX kernels]].
 
-MTD structure (/proc/mtd):
+E680i's MTD structure (/proc/mtd):
   dev:    size   erasesize name
  mtd0: 00020000  00008000  "Bootloader"
  mtd1: 000e0000  00020000  "Kernel"
