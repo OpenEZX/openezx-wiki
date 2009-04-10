@@ -12,7 +12,10 @@ The device you connect your phone to must supply about 500 mA (milliamps). When 
 
 === The mmc isn't working well ===
 
-The A910's mmc isn't wired the same way it is on the other EZX phones, and there is some problems with it's driver.
+The A910's mmc module isn't wired the same way it is on the other EZX phones, and there is some problems with it's driver.
+
+[http://people.openezx.org/ao2/tmp/mmc_spi_share_cs.patch This patch] is a temporary fix that works at least on 2.6.28, but might be also the cause of some datas corruptions sometimes...
+
 Even with this hack the recent versions of that "mmc_spi.c" driver generate a lot of errors while reading the cards.
 
 ==Genblob error messages and causes:==
