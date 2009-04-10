@@ -51,3 +51,11 @@ Edit /etc/export to suit the path the kernel will be waiting for.
 
 
 For deeper explanation, you can refer to [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/filesystems/nfsroot.txt Documentation/filesystems/nfsroot.txt] and the nfs manual page.
+
+
+[[Category:E680]]
+[[Category:A780]]
+[[Category:A1200]]
+[[Category:A910]]
+[[Category:Rokr_E2]]
+[[Category:Rokr_E6]]
