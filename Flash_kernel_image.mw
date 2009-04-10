@@ -86,5 +86,9 @@ Display the list of all the mtd "partitions":
 You can flash your own zImage into /dev/mtd4 (at least it's this mtd on unlocked A780). But be aware that the size of you zImage could not be higher then 896kbyte.
 
 [[Category:Development]]
-[[Category:A780]]
 [[Category:E680]]
+[[Category:A780]]
+[[Category:A1200]]
+[[Category:A910]]
+[[Category:Rokr_E2]]
+[[Category:Rokr_E6]]
