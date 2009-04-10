@@ -7,3 +7,35 @@ Perhaps your phone is completely discharged. At this point you need to use the U
 === The phone does not charge on my USB hub ===
 
 The device you connect your phone to must supply about 500 mA (milliamps). When plugged into a keyboard with a built-in USB (for example), the phone will not charge (Windows will notify you of this). This is because the keyboard does not provide power. Other devices may provide power, e.g. so-called self-powered hubs.
+
+== A910 == 
+
+=== The mmc isn't working well ===
+
+The A910's mmc isn't wired the same way it is on the other EZX phones, and there is some problems with it's driver.
+Even with this hack the recent versions of that "mmc_spi.c" driver generate a lot of errors while reading the cards.
+
+==Genblob error messages and causes:==
+
+===Cannot find MMC card===
+This could be there is no mmc card or there is an unsupported mmc/sd card in the phone.
+in any case this cannot be a partitionning problem, this warning happens before the partition/filesytem checks.
+Cannot load kernel from: /boot/default===
+Check your partition type/formating , re-check /boot/menu.lst and the files placed in /boot/ . default must be a valid kernel, of course.
+===No suitable kernel entry===
+Could be the same as above. if nothing works, delete and re-create the parts, reformat, and rebuild /boot/
+
+==BootUsb error messages and causes:==
+
+===FAILED: params upload failed=== 
+This appear when bootusb cannot send parameter, try sending genblob first (at least in its usb mode, from bootusb).
+
+It can also be your kernel, that is too old, and maybe don't support CMDLINE overidding.
+
+Make sure you have a recent bootusb, too (the ones on angstrom's website is very old).
+
+===FAILED: RSQN===
+This is known to appear on gen1 devices, you need to unplug/plug the usb cable after sending genblob (at the step you see "USB READY" on the phone).
+
+===FAILED: claim usb interface 1 of device: could not claim interface 0: Operation not permitted===
+Maybe make sure to be root or type sudo before the command??
