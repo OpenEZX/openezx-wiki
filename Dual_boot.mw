@@ -69,7 +69,7 @@ machid		1740
 
 title		Motorola 2.4
 kernel		/boot/default
-#This kernel "default" file must be the original kernel, not an openezx.
+#This kernel "default" file must be the original kernel, (or a 2.6 openezx with built-in parameters)
 
 title		A780 OpenEZX
 kernel		/boot/zImage-openezx
@@ -77,10 +77,12 @@ param         mem=32M@0xA0000000 mem=16M@0xAC000000
 machid		1740
 
 title           A1200 OpenEZX
+kernel		/boot/zImage-openezx
 param         mem=32M@0xA0000000 mem=16M@0xAC000000 rootfstype=ext3
 machid		1742
 
-title           A910 OpenEZX
+title           A910 OpenEZX NFSROOT
+kernel		/boot/zImage-openezx
 param         mem=32M@0xA0000000 mem=16M@0xAC000000 rootfs=/dev/nfs nfsroot=192.168.0.200:/EXPORT/PATH/ rootdelay=5
 machid		1745
 </pre>
