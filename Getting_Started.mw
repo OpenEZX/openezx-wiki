@@ -121,10 +121,14 @@ After a short time the screen should go funny, then you should see Linux booting
 Could be any standard kernel command line (so called "CMDLINE") parameters (in the boot_usb command they have to be quoted and separated by spaces).
 
 Defaults parameters (that are compiled in kernel by default) change rarely. Override them or change them yourself  and build your kernel for your convenience, it can be interesting to take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] /arch/arm/configs/ezx_defconfig of the kernel tree, at the line "CONFIG_CMDLINE=".
-At the time of writing, default command line is:
 
+At the time of writing, default command line is:
  console=tty1 root=/dev/mmcblk0p2 rootfstype=ext2 rootdelay=1 \
  ip=192.168.0.202:192.168.0.200:192.168.0.200:255.255.255.0 debug
+
+All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
+
+This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpful too.
 
 '''Examples:'''
 
@@ -144,9 +148,6 @@ At the time of writing, default command line is:
  mem=32M@0xA0000000 mem=16M@0xAC000000
 
 *console= parameter is explained and some of its uses are described on [[Serial console]] (custom hardware/cable is also needed).
-
-All parameters are described in [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/kernel-parameters.txt;hb=HEAD /Documentation/kernel-parameters.txt] in the kernel source tree.
-This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lkn_pdf/ch09.pdf kernel.org] can be more verbose and helpful too.
 
 == B) Network and NFS solution to try OpenEZX==
 
