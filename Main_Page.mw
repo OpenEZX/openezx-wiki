@@ -35,7 +35,7 @@ You may want to ask for support, or contact the team, either on:
 * [[GPIO|GPIOs]]
 * [[GPS]]
 * [[WLAN]]
-* [[Bluetooth]]
+* [[BP|Baseband Processor (BP)]]
 |
 * [[FM Radio]]
 * [[Camera|Cameras sensors]] 
@@ -52,7 +52,7 @@ How to [[external_battery|connect]] an external 3.0V - 4.0V DC power source, e.g
 <div style="margin:0; margin-right:10px; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#eaeaae; align:right;">
 '''[[:Category:Software| Software]]'''
 
-Researchs on Motorola's software.
+Researchs on Motorola's software related to the 2.6 linux port.
 {| style="background:#eaeaae;" width="95%"
 |width="50%"|
 * [[AT_commands| AT commands]]
@@ -67,6 +67,7 @@ Researchs on Motorola's software.
 * [[MotoMAGX_weakness_of_kernel_modules_hashes| MAGX kernel module hash weakness]]
 * [[MotoMAGX Security]]
 * [[Building and installing tools on Motorola's system|Tools and drivers on Motorola's system]]
+* [[Bluetooth]]
 |}
 </div>
 
