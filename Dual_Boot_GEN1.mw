@@ -57,7 +57,7 @@ Gen-blob always search at offset 0x40000 and if it find a special 'magic' flag, 
 
 ===Prepare the 2.4 kernel to be re-flashed===
 
-You remember? Sooner, we did a backup of the kernel partition (third command described on this page):
+You remember? Before, we did a backup of the kernel partition (third command described on this page):
 
 So, hopefully, you kept that backup file... :-)
 
