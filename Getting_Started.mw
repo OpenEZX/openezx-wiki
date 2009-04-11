@@ -172,7 +172,8 @@ For this first example, I recommend a first 600MB fat/fat32 partition and a seco
 Open a shell and launch the GNU fdisk utility (always as root or sudo-ing):
  fdisk -l
 Identify your SD/MMC card, then, assuming you find this is: /dev/mmcblk0
- fdisk /dev/mmcblk0
+ fdisk /dev/mmcblk0 
+       '''^–––––––GUN LOADED !!––––––––''' 
 Remember here the sd card is called /dev/mmcblk0 but this can be different on your computer.
 
 * Delete all partitions of the SD/MMC 
