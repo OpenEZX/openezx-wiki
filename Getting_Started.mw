@@ -242,7 +242,7 @@ Now that we have prepared two new partitions (as long as you don't use gen-blob 
  umount /dev/sda2
  ''#Remember our SD card is named /dev/sda here, and this may differ on your own computer.''
 
-Some common problems are described [[Talk:Getting Started|here]].
+Some common problems are described [[Talk:Getting Started|here]], and [[Issues|here in the general "issues" page]].
 
 ===Add softwares to the distro's rootfs===
 
