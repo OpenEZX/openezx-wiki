@@ -4,6 +4,6 @@ The aGPS module of the A780 is connected to [[BP]], and [[AP]] receive the datas
 
 Antonio Ospite developed "gpsmux" to simplify all this, and retrieve the longitude and latitude in a more readable format.
 
-'''The A780 geolocalisation only works if you registered the gsm network, (like all others aGPS devices)''' 
+'''The A780 geolocalisation only works if you have started the phone with [[BP]] in normal mode, see [[Dual boot]].''' 
 
 Get it there : http://people.openezx.org/ao2/gps/
