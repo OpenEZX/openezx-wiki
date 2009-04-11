@@ -163,7 +163,7 @@ For now, the kernel can boot, but does it stop to a step it search for a 'rootfs
 
 The SD/MMC card needs to be partitioned into two partitions: one FAT(or VFAT) partition, and one EXT2 partition used as root file system.
 
-===Creating the partitions===
+===Creating the partitions on the SD card===
 
 For this first example, I recommend a first 600MB fat/fat32 partition and a second ext2 one using the rest (my config for an 1Gig SD).
 
