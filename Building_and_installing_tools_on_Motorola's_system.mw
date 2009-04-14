@@ -1,8 +1,24 @@
+=Development tools=
+*'''strace'''
+The most popular tool for analysing the system is "'''strace'''" a '''s'''ystem call '''trace'''r
+
+You can get it from http://sourceforge.net/projects/strace/ and [[crosscompile]] for the OABI motorola system.
+(man page: http://www.linuxmanpages.com/man1/strace.1.php )
+
+*'''lsof'''
+Another useful tool developers used for reverse engineering the original linux system is '''lsof''', (for '''L'''i'''S'''t '''O'''pened '''F'''iles).
+
+You can get it from http://people.freebsd.org/~abe/ and [[crosscompile]] for the OABI motorola system. (man page: http://www.linuxmanpages.com/man8/lsof.8.php )
+
 =Getting tools for the original software=
 
-"Doit" is a handy tool, a colection of Makefiles and scripts to build a set of GNU tools that our phone's stock system is lacking...
+*"Doit" is an handy tool, a colection of Makefiles and scripts to build a set of GNU tools that our phone's stock system is lacking...
+
 You can get Doit and the separated package it builds [http://people.openezx.org/daniel/ here], or in our svn [http://svn.openezx.org/trunk/src/doit/ here].
-Doit includes busybox, dropbear, and GNU coreutils, [http://people.openezx.org/daniel/ more details here]. To build these tools for an EZX stock system, you need an [[Crosscompile| OABI toolchain]] (like [http://lsb.blogdns.com/ezx-crosstool ezx-crosstools]).
+
+Doit includes busybox, dropbear, and GNU coreutils, [http://people.openezx.org/daniel/ more details here].
+
+To build these tools for an EZX stock system, you need an [[Crosscompile| OABI toolchain]] (like [http://lsb.blogdns.com/ezx-crosstool ezx-crosstools]).
 
 After building these tools, you can choose to install them using the [[MPKG]] method, by creating a package.
 
