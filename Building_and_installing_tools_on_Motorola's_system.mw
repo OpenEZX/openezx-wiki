@@ -6,17 +6,17 @@ You can get it from http://sourceforge.net/projects/strace/ and [[crosscompile]]
 (man page: http://www.linuxmanpages.com/man1/strace.1.php )
 
 *'''lsof'''
-Another useful tool developers used for reverse engineering the original linux system is '''lsof''', (for '''L'''i'''S'''t '''O'''pened '''F'''iles).
+Another useful tool developers used for reverse engineering the original linux system is "'''lsof'''", (for '''L'''i'''S'''t '''O'''pened '''F'''iles).
 
 You can get it from http://people.freebsd.org/~abe/ and [[crosscompile]] for the OABI motorola system. (man page: http://www.linuxmanpages.com/man8/lsof.8.php )
 
 =Getting tools for the original software=
 
-*"Doit" is an handy tool, a colection of Makefiles and scripts to build a set of GNU tools that our phone's stock system is lacking...
+*"'''Doit'''" is an handy tool, a colection of Makefiles and scripts to build a set of GNU tools that our phone's stock system is lacking...
 
-You can get Doit and the separated package it builds [http://people.openezx.org/daniel/ here], or in our svn [http://svn.openezx.org/trunk/src/doit/ here].
+You can get '''Doit''' and the separated package it builds [http://people.openezx.org/daniel/ here], or in our svn [http://svn.openezx.org/trunk/src/doit/ here].
 
-Doit includes busybox, dropbear, and GNU coreutils, [http://people.openezx.org/daniel/ more details here].
+'''Doit''' includes '''busybox''', '''dropbear''', and GNU '''coreutils''', [http://people.openezx.org/daniel/ more details here].
 
 To build these tools for an EZX stock system, you need an [[Crosscompile| OABI toolchain]] (like [http://lsb.blogdns.com/ezx-crosstool ezx-crosstools]).
 
@@ -31,7 +31,7 @@ Also take a look at the [http://www.dewmill.com/linuxphone.html NEO-installer] (
 
 Every linux 2.4.17 or 2.4.20 linux kernel's module should be installable on your original phone's system.
 
-Sometimes, there are not in the released kernel tree at motorola sourcefoge site, but you can add them in the tree buy copying them from a "vanilla" 2.4.20 kernel, and make them compile. Take also a look at the modules sources on [http://sourceforge.net/projects/e680 E680's sourceforge project].
+Sometimes, there are not in the released kernel tree at motorola sourceforge site, but you can add them in the tree buy copying them from a "vanilla" 2.4.20 kernel, and make them compile. Take also a look at the modules sources on [http://sourceforge.net/projects/e680 E680's sourceforge project].
 
 Look [[Kernel hacking - linux-2.4|here to learn how you can compile these modules]] (you will also need the right [[Crosscompile|toolchain]],like [http://lsb.blogdns.com/ezx-crosstool ezx-crosstools]).
 
