@@ -62,7 +62,7 @@ You remember? Before, we did a backup of the kernel partition (third command des
 So, hopefully, you kept that backup file... :-)
 
 Now you need to resize the file to remove the last 4 bytes:
- dd bs=1 count=917500 if=backup-of-kernel-partition of=kernel-with-no-extra-bytes
+ dd bs=917500 count=1 if=backup-of-kernel-partition of=kernel-with-no-extra-bytes
 Download and add the magic flag to the kernel for genblob to recognize it:
  # download a flag to put at the beggining of the kernel before flashing it.
  wget http://people.openezx.org/wyrm/gen-blob/magic-boot-from-flash
