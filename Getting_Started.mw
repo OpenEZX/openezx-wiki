@@ -15,12 +15,16 @@ As long as you don't write to the [[Internal Flash]], either to store the altern
 
 == A) Get boot_usb, gen-blob, and boot the kernel ==
 
+OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable. More infos at [[Bootloader]].
 
-OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable, doing the 'ram-loading' such as the bootloader itself. More infos at [[Bootloader]].
+Note: As you boot the phone via its usb cable, the phone is started in "flash mode".
+In this "flash mode" is not possible to use the [[Baseband Processor]] (the modem), it is shutdown (no phone calls, SMS, bluetooth, GPS on A780, etc...). 
 
-Note that because we're booting the phone via usb cable, the [[Baseband Processor]] starts in "flash mode" and shutdown by itself, so it is not possible to use the phone as a modem (i.e for phone calls, SMS, etc...) or use bluetooth unless you boot the phone with [[Dual boot|gen-blob flashed]] (flashing it also bring an easier boot and USB will not be needed to upload a kernel anymore).
+[[Dual boot|Gen-blob is a second stage bootloader]],  its purpose is to be flashed (These steps are a lot more handy when it is flashed... Of course, when everything get in place, all become more obvious: not necessary to use boot_usb, no need for an host, modem alive, etc...).
 
-For a 2.6 kernel to boot due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we must use a second stage bootloader : that is 'genblob' (for generic EZX blob). Gen-blob is also necessary to send commandline parameters and machine ID to the kernel, as blob, the original bootloader, can do that.
+But gen-blob is also necessary to send commandline parameters and the machine ID to the kernel, as blob, the original bootloader, can't do that.
+ 
+This is not all :-) ! For a recent 2.6 kernel to boot, due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we (again!) need our second stage bootloader, 'gen-blob' (for generic EZX blob).
 
 === Get a kernel ===
 
@@ -35,8 +39,6 @@ For instructions on how to build a custom OpenEZX kernel, refer to [[Kernel hack
 See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/README;hb=HEAD /Documentation/arm/README] in the kernel source tree.
 
 ===Get boot_usb and gen-blob===
-
-You can download boot_usb_0.3 (SVN revision 2367) [http://openezx.org/download/boot_usb-0.3.tar.gz here].
 
 Pick a compiled boot_usb from [http://people.openezx.org/gmzhuo/boot_usb here].
 Pick a compiled gen-blob from [http://people.openezx.org/wyrm/gen-blob here].
