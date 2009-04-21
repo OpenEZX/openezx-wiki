@@ -3,7 +3,7 @@
 {| border="0" cellpadding="2" cellspacing="2" width="95%"
 
 |- style="background:#4E78A0;"
-! colspan="3" | First generation devices ("GEN1"), supported: 
+! colspan="3" | <span style="color:white">First generation devices ("GEN1"), supported: </span>
 
 |- style="background:#B9D3EE"
 ! width="33%"| A728 ||width="33%"| A760 ||width="33%"| A768
@@ -52,8 +52,8 @@
 *[[Project Status]]
 *Linux machine ID: 1741
 
-|- style="background:#4E78A0;" width="95%"
-! colspan="3" | Second generation devices ("GEN2"), supported:
+|- style="background:#4E78A0;" width="95%" 
+! colspan="3" | <span style="color:white">Second generation devices ("GEN2"), supported:</span>
 
 |- style="background:#B9D3EE"
 ! A1200 (r,i,e) || Rokr E6 || Rokr E2
@@ -98,7 +98,7 @@
 *Linux machine ID: 1745
 
 |- style="background:#4E78A0;" width="95%"
-! colspan="3" | Third generations "MotoMAGX" devices (SCM-A11 based, far less supported):
+! colspan="3" | <span style="color:white">Third generations "MotoMAGX" devices (SCM-A11 based, far less supported):</span>
 
 |- style="background:#B9D3EE"
 ! Rokr Z6 || Moto E8 || Razr2 V8
@@ -146,8 +146,8 @@
 *[https://opensource.motorola.com/sf/frs/do/viewSummary/projects.motou9/frs Motorola source code]
 *Linux machine ID: n/a
 
-|- style="background:#4E78A0;" width="95%"
-! colspan="3" | Other devices (some support is possible):
+|- style="background:#4E78A0;" width="95%" 
+! colspan="3" | <span style="color:white">Other devices (some support is possible):</span>
 
 |- style="background:#B9D3EE"
 ! Moto Q || Moto Q9c || A810
