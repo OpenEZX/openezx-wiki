@@ -21,11 +21,12 @@ For a recent 2.6 kernel to boot, due to a bug<font color=blue><sup>[[#Foot1|PXA-
 
 [[Dual boot|Gen-blob is a second stage bootloader]],  its purpose is to be flashed (These steps are a lot more handy when it is flashed... Of course, when everything get in place, all become more obvious: not necessary to use boot_usb, no need for an host, modem alive, etc...).
 
-Note: As you boot the phone via its usb cable, the phone is started in "flash mode".
+'''Notes''': 
 
+As you boot the phone via its usb cable, the phone is started in "flash mode".
 In this "flash mode" is not possible to use the [[Baseband Processor]] (the modem), it is shutdown (no phone calls, SMS, bluetooth, GPS on A780, etc...). 
 
-Also, on a [[Project devices| GEN2]] device, you'll not be able to send any command line parameters without gen-blob, this is due to MBM restrictions.
+Also, on a [[Project devices| GEN2]] device, you'll not be able to send any command line parameters without gen-blob, this is due to MBM restrictions. Machid, as a small asm hack before the kernel, does works with any bootloader.
  
 
 === Get a kernel ===
