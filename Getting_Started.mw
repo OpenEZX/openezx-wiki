@@ -17,14 +17,16 @@ As long as you don't write to the [[Internal Flash]], either to store the altern
 
 OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable. More infos at [[Bootloader]].
 
-Note: As you boot the phone via its usb cable, the phone is started in "flash mode".
-In this "flash mode" is not possible to use the [[Baseband Processor]] (the modem), it is shutdown (no phone calls, SMS, bluetooth, GPS on A780, etc...). 
+For a recent 2.6 kernel to boot, due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we need our second stage bootloader, 'gen-blob' (for "'''gen'''eric '''blob'''").
 
 [[Dual boot|Gen-blob is a second stage bootloader]],  its purpose is to be flashed (These steps are a lot more handy when it is flashed... Of course, when everything get in place, all become more obvious: not necessary to use boot_usb, no need for an host, modem alive, etc...).
 
-But gen-blob is also necessary to send commandline parameters and the machine ID to the kernel, as blob, the original bootloader, can't do that.
+Note: As you boot the phone via its usb cable, the phone is started in "flash mode".
+
+In this "flash mode" is not possible to use the [[Baseband Processor]] (the modem), it is shutdown (no phone calls, SMS, bluetooth, GPS on A780, etc...). 
+
+Also, on a [[Project devices| GEN2]] device, you'll not be able to send any command line parameters without gen-blob, this is due to MBM restrictions.
  
-This is not all :-) ! For a recent 2.6 kernel to boot, due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we (again!) need our second stage bootloader, 'gen-blob' (for generic EZX blob).
 
 === Get a kernel ===
 
