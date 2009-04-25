@@ -225,9 +225,9 @@ URC only. MSM might translate to "Motorola SIM Mode":
 
 ====AT+CPUR=1;+CPIN="%s","%s"====
 
-Unlocks simcard using PUK (first argument) and sets new pin (second argument).
+Unlocks simcard using PUK (first argument) and sets new pin (second argument). What is AT+CPUR for?
 
-===AT+CPIN=1,"%s"===
+====AT+CPIN=1,"%s"====
 
 Enters sim pin 1
 
@@ -518,7 +518,7 @@ Execution and query command triggers answer:
 ====AT+EPOM=%d,%d====
 
 * AT+EPOM=1,0
-** Seems registration to the network on E6.
+** Seems to trigger registration to the network on E6.
 
 Extension to 07.07 +COPS?
 
@@ -616,7 +616,7 @@ SIM Application Toolkit...
 ====AT+ESPN?====
 Query service provider name in PDU format.
 
-Does not work here. I guess there is some command that needs to be sent beforehand, so that the mapping is initialized or read from the SIM.
+gen1: Does not work here. I guess there is some command that needs to be sent beforehand, so that the mapping is initialized or read from the SIM.
 
 gen2: Works on /dev/mux1 after recieving +CREG on /dev/mux0
 
