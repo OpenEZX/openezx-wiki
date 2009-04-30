@@ -55,14 +55,14 @@ How to [[external_battery|connect]] an external 3.0V - 4.0V DC power source, e.g
 Researchs on Motorola's software related to the 2.6 linux port.
 {| style="background:#eaeaae;" width="95%"
 |width="50%"|
+* [[Get a shell|'''Get a shell''' on the EZX device]]
 * [[AT_commands| AT commands]]
-* [[Get a shell| How-to '''get a shell''' on the EZX device]]
 * [[Stock environment| Overview of the Motorola sofware]]
 * [[Original firmware versions]]
 * [[MPKG | MPKG fileformat]]
 * [[EZXFileSystem]]
 |
-* [[CodeAnalysis| '''Analysis of the kernel code''' released by motorola ]]
+* [[CodeAnalysis| Analysis of the kernel code released by motorola ]]
 * [[Kernel hacking - linux-2.4| How to compile the motorola kernel]]
 * [[MotoMAGX_weakness_of_kernel_modules_hashes| MAGX kernel module hash weakness]]
 * [[MotoMAGX Security]]
@@ -74,24 +74,25 @@ Researchs on Motorola's software related to the 2.6 linux port.
 | style="vertical-align:top" |
 
 <div style="margin: 0; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#e6e6fa; align:left;">
-'''Specifics OpenEZX's usages (WIP)'''
+'''Specifics OpenEZX's usages'''
 
-* How to create [[Backups]] of the EZX device.
-* How to use [[Rootfs on NFS]].
-* How to use the [[Power button]].
+* [[Backups| Create backups of the NOR flash.]] 
+* [[Rootfs on NFS| Setting up a rootfs on NFS]].
+* [[Power button| Use the power button]].
 * [[charging|How to charge the battery]] 
-* [[checking battery|How to know how long the battery last]]
+* [[checking battery|Check battery state]]
 * [[call|How to make a call]] 
 * [[receive a call|How to receive a call]]
 * [[video class device| How to use the phone as a video class device]]
 * [[USB mass storage device|How to use the phone as a USB mass storage device]]
-* [[latitude and longitude|How to query the latitude and the longitude with the A780 GPS]]
+* [[latitude and longitude|Query the latitude and the longitude with the A780 GPS]]
 
 </div>
 
 <div style="margin:0; margin-top:10px; border:1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#e6e6fa; align:left;">
 '''[[:Category:Development|Development]]'''
 
+* Check [[Project Status | the project's status]].
 * Known [[Issues]]
 * [[Crosscompile|How to crosscompile]] for the EZX device
 * [[Kernel hacking - linux-2.6]]
@@ -101,7 +102,7 @@ Researchs on Motorola's software related to the 2.6 linux port.
 * [[Serial console]]
 * [[Mux cli]]
 * How to [[Flash kernel image]].
-* Check [[Project Status | the project's status]].
+
 </div>
 
 <div style="margin: 0; margin-top:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#e6e6fa; align:left;">
