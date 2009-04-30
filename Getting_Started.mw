@@ -111,9 +111,9 @@ Wait some few seconds for the device to be properly enumerated by your box.
  ./boot_usb setflag usb          
  ./boot_usb gen-blob 0            
 
-Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the top of the screen. At this step you can test genblob  in USB mode and properly boot linux (without having to flash anything on the phone but you can't call or use the modem, remember, the phone has been started in flash mode).
+Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the top of the screen. At this step you have genblob in USB mode and properly boot linux (without having to flash anything on the phone but you can't call or use the modem, remember: the phone has been started in flash mode).
 
-'''Note:''' At this step you will probably need to '''unplug/plug''' the usb cable for proper usb re-enumeration of the "new device" or sending the kernel will not work.
+'''Note:''' At this step you will maybe need to '''unplug/plug''' the usb cable for proper usb re-enumeration of the "new device" or sending the kernel will not work.
 
 * Finally, the last boot_usb command to load the kernel:
 
@@ -127,7 +127,7 @@ Could be any standard kernel command line (so called "CMDLINE") parameters (in t
 
 Defaults parameters (that are compiled in kernel by default) change rarely. Override them or change them yourself  and build your kernel for your convenience, it can be interesting to take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] /arch/arm/configs/ezx_defconfig of the kernel tree, at the line "CONFIG_CMDLINE=".
 
-At the time of writing, default command line is:
+At the time of writing, default command line parameters should be:
  console=tty1 root=/dev/mmcblk0p2 rootfstype=ext2 rootdelay=1 \
  ip=192.168.0.202:192.168.0.200:192.168.0.200:255.255.255.0 debug
 
@@ -147,7 +147,7 @@ This manual page at [http://www.kernel.org/pub/linux/kernel/people/gregkh/lkn/lk
  ip=<client-ip>:<server-ip>:<gw-ip>:<netmask>:<hostname>:<device>:<autoconf>
 ''Note that the last three (<hostname>, <device>, <autoconf>) aren't necessary to have a working setup.''
 
-''<server-ip, <gw-ip> and <netmask> are also there in case you would need to use any other services form your host computer.''
+''<server-ip, <gw-ip> and <netmask> are also there in case you would need to use any other services from your host computer.''
 
 *Specify the RAM memory size and layout :
  mem=32M@0xA0000000 mem=16M@0xAC000000
@@ -189,7 +189,7 @@ Remember here the sd card is called /dev/mmcblk0 but this can be different on yo
 * Then create a second partition 
  ''push [n] again, [p] primary, then ('2' then [ENTER], 
  fdisk's default value always use all resting space''
-* Change the first partition to "windows" type
+* Change the first partition to "DOS" type
  ''push [t], and [6] ("6" means FAT16 type)''
 * Change the second partition to "linux" type 
  ''push [t], and type 83 (for a linux filesystem)''
