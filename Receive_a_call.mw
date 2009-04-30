@@ -1,0 +1,21 @@
+Theorically working on all EZX phones, tested on A780 only.
+
+When you receive a call, the BP will send a message on the mux line 0. 
+
+Assuming you followed [[call|the "CALL" page]] and had success to: 
+*insert your PIN code
+*register the network
+*setup alsamixer
+
+===Procedure===
+*To listen to it use:
+ cat /dev/mux0
+
+*If the caller's phone number is XXXXXXXXX, you'll read this:
+ +CLIP: "XXXXXXXXXX",129
+
+*To accept the call, close the "cat", or use a second terminal session, then:
+ echo -en "ATA\r\n" | nc localhost 7100
+
+*Hangup:
+ echo -en "ATH\r\n" | nc localhost 7100
