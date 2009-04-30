@@ -25,6 +25,16 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
 * Update your tree later:
  git checkout master && git pull && tg remote --populate origin && git checkout ezx/current && tg update
 
+*Build the modules (optional):
+ make ARCH=arm CROSS_COMPILE=/usr/local/angstrom/arm/bin/arm-angstrom-linux-gnueabi- modules
+
+So we can install them...or like here, we will only make an archive from their folder, for installing them on any root filesystem later :
+
+ mkdir /tmp/modules-of-the-day
+ make ARCH=arm CROSS_COMPILE=/usr/local/angstrom/arm/bin/arm-angstrom-linux-gnueabi- INSTALL_MOD_PATH=/tmp/modules-of-the-day modules_install
+ tar -C /tmp/modules-of-the-day -c . | bzip2 > modules-of-the-day.tar.bz2
+(you need to be root root or sudoing on some commands, or for installing them later)
+
 == Building OpenEZX kernel with openembedded ==
 * Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
 
