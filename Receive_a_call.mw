@@ -8,7 +8,7 @@ Assuming you followed [[call|the "CALL" page]] and had success to:
 *setup alsamixer
 
 ===Procedure===
-*To listen to it use:
+*To listen to the mux line 0 and wait for a call, use:
  cat /dev/mux0
 
 *If the caller's phone number is XXXXXXXXX, you'll read this:
