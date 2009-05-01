@@ -38,7 +38,7 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
  # (you need to be root root or sudoing on some commands, or for installing them later, as you will need to untar them on the root folder on the target rootfs)
 
 == Building OpenEZX kernel with openembedded ==
-* Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
+* one of git snapshot of openezx kernel is used in OE. 
 
 * Setup OE according to http://wiki.openembedded.net/index.php/Getting_Started
  * Note: Latest release of BitBake is required. Download it from http://developer.berlios.de/projects/bitbake/.
