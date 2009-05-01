@@ -41,9 +41,9 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
 * Please note that OE uses a '''different .config''', and a patchset which '''does not necessarily ressemble the Official OpenEZX patchset''', Kernels built by OE are supported by OE people, at #oe on freenode or openembedded-devel@lists.openembedded.org. Please, dont ask OpenEZX developers (particularly WyrM) '''anything''' if you built your kernel with OE.
 
 * Setup OE according to http://wiki.openembedded.net/index.php/Getting_Started
- * Note: BitBake 1.6.8 or higher is required. FC6 RPM of BitBake is currently version 1.6.6, so it will not work.
+ * Note: Latest release of BitBake is required. Download it from http://developer.berlios.de/projects/bitbake/.
    Recommended way is running it without install.
- * Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2007.1</tt> in local.conf
+ * Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2008.1</tt> in local.conf
 
 * Run <tt>$ bitbake virtual/kernel</tt>
 
