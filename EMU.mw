@@ -148,11 +148,14 @@ values 0 - 7:
 
 === POWER_IC_REG_EOC_INT_SENSE ===
 
-* bits 1,2,3: indicates VBUS pin state
+* bits 1,2,3: indicates VBUS pin state ( source: drivers/power_ic/module/emu_eoc.h:92 ). '''recheck: conflicts with ezx-eoc.c defines'''
 * bit 4: indicates ID pin floating
 * bit 5: indicates ID pin grounded
+
+Note: ID pin state can be queired using ADC channel called ''chargerid''
+
 * bit 6: SE1 state. if set, pins D- and D+ both high, indicating USB cable. 
 
 Note: D- and D+ state can be queried using gpios 53 and 40 ( source: drivers/power_ic/module/emu.h:84 )
 
-* bits 10,11,12: revision number. recheck: conflicts with ezx-eoc.c defines
+* bits 10,11,12: revision number. '''recheck: conflicts with ezx-eoc.c defines'''
