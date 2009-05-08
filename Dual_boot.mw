@@ -91,8 +91,8 @@ You also need a configured rootfs in the second partition, use the modules provi
 ==Gen-blob usages==
 
 Hold the following key when sending via boot_usb (or powering on when flashed).
-* Scroll Down (volume -): Boot menu loaded from MMC card
-* Scroll UP (Volume +): USB ready mode
+* Scroll Down (volume -, previous song on E2): Boot menu loaded from MMC card
+* Scroll UP (Volume +, next song E2): USB ready mode
 Not holding any key boots /boot/default without any FB activity.
 
 NOTE THAT WITH GEN-BLOB FLASHED, YOU NEED TO PUSH THE POWER BUTTON 'LONGER': For a full functionnality of the phone. In fact, BP need some delay to activate itself properly, and the original bootlogo is delayed as well, to 'reflect' this need. As gen-blob don't fake anything, you just need to press the power button for two second, to be sure...
