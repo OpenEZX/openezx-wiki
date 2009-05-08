@@ -153,7 +153,7 @@ values 0 - 7:
 
 * bit 13: reverse path. (???)
 
-* bit 19: LIGHTS_FL_EOC_CHRG_LED_EN. not sure. maby used for charge led (we have it?)
+* bit 18: LIGHTS_FL_EOC_CHRG_LED_EN. not sure. maby used for charge led (we have it?)
  
 * bit 19: EMU_SET_VBUS_5K_PULL_DOWN ???
 
