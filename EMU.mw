@@ -81,7 +81,7 @@ The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono
 === POWER_IC_REG_EOC_POWER_CONTROL_0 ===
 
 
-* bits 1,2,4: voltage limit until which battery will be charged
+* bits 0,1,2: voltage limit until which battery will be charged
 
 values 0 - 7:
 
@@ -94,7 +94,7 @@ values 0 - 7:
 ** 6: 3.80 V ( wtf? )
 ** 7: 4.6 V
  
-* bits 8,16,32,64: main charge current.
+* bits 3,4,5,6: main charge current.
 
 values 0 - 15:
 
@@ -116,7 +116,7 @@ values 0 - 15:
 ** 15: max ( wtf? )
 
 
-* bits 128,256,512: trickle current. should not be enabled at the same tame as main current. 
+* bits 7,8,9: trickle current. should not be enabled at the same tame as main current. 
 
 values 0 - 7:
 
@@ -129,11 +129,17 @@ values 0 - 7:
 ** 6: 72 mA
 ** 7: 84 mA
 
-* bit 1024: power path override (0,
+* bit 10: power path override (0,
 ** 0 means override
 ** 1 means not
 
-* bit 2048: power path value 
+* bit 11: power path value 
     
 ** 0 means dual path (operate without battery)
 ** 1 means shared path (with battery)
+
+* bit 12: ??
+
+* bit 13: reverse path (???)
+
+* bit 19: EMU_SET_VBUS_5K_PULL_DOWN ???
