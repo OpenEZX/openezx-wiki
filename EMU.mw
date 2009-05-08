@@ -170,3 +170,10 @@ Note: ID pin state can be queired using ADC channel called ''chargerid''
 Note: D- and D+ state can be queried using gpios 53 and 40 ( source: drivers/power_ic/module/emu.h:84 )
 
 * bits 10,11,12: revision info (source: drivers/power_ic/core/core.c:406) '''recheck: conflicts with ezx-eoc.c defines'''
+
+
+=== POWER_IC_REG_EOC_CONN_CONTROL ===
+
+Connectivity Control registe
+
+* bit 2: indicated USB pullup enabled (wtf is it?)
