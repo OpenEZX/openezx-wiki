@@ -99,26 +99,26 @@ Note: motorola firmware uses mode 4 when connected to usb and mode 7 when charge
 
 ==== Main current ====
 
-bits 3,4,5,6: main charge current.
+bits 3,4,5,6: main charge current limit.
 
-values 0 - 15:
+values 0 - 15: (min, nom, max)
 
-** 0: 0 mA
-** 1: 100 mA
-** 2: 200 mA
-** 3: 300 mA
-** 4: 400 mA
-** 5: 500 mA
-** 6: 600 mA
-** 7: 700 mA
-** 8: 800 mA
-** 9: 900 mA
-** 10: 1000 mA
-** 11: 1100 mA
-** 12: 1200 mA
-** 13: 1300 mA
-** 14: 1800 mA ( cant be real )
-** 15: max ( wtf? )
+** 0: 0, 0, 0 mA
+** 1: 55, 70, 85 mA
+** 2: 161, 177, 195 mA
+** 3: 242, 266, 293 mA
+** 4: 322, 355, 390 mA
+** 5: 403, 443, 488 mA
+** 6: 484, 532, 585 mA
+** 7: 564, 621, 683 mA
+** 8: 645, 709, 780 mA
+** 9: 725, 798, 878 mA
+** 10: 806, 886, 975 mA
+** 11: 886, 975, 1073 mA
+** 12: 967, 1064, 1170 mA
+** 13: 1048, 1152, 1268 mA
+** 14: 1450, 1596, 1755 mA
+** 15:  Fully On—Disallow battery FET to be turned on in hardware
 
 Note: morola firmware uses mode 4 when connected to usb and mode 13 when connected to charger
 
