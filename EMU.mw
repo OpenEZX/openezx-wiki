@@ -74,3 +74,66 @@ Depending on what you do (play mp3 / calling) the phone will either switch to st
 The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono ACD in PCAP.
 
 == Factory Test ==
+
+
+== Control registres ==
+
+= POWER_IC_REG_EOC_POWER_CONTROL_0 =
+
+
+* bits 1,2,4: voltage limit until which battery will be charged
+
+values 0 - 7:
+
+** 0: 4.05 V
+** 1: 4.10 V
+** 2: 4.15 V
+** 3: 4.20 V
+** 4: 4.25 V
+** 5: 4.30 V
+** 6: 3.80 V ( wtf? )
+** 7: 4.6 V
+ 
+* bits 8,16,32,64: main charge current.
+
+values 0 - 15:
+
+** 0: 0 mA
+** 1: 100 mA
+** 2: 200 mA
+** 3: 300 mA
+** 4: 400 mA
+** 5: 500 mA
+** 6: 600 mA
+** 7: 700 mA
+** 8: 800 mA
+** 9: 900 mA
+** 10: 1000 mA
+** 11: 1100 mA
+** 12: 1200 mA
+** 13: 1300 mA
+** 14: 1800 mA ( cant be real )
+** 15: max ( wtf? )
+
+
+* bits 128,256,512: trickle current. should not be enabled at the same tame as main current. 
+
+values 0 - 7:
+
+** 0: 0 mA
+** 1: 12 mA
+** 2: 24 mA
+** 3: 36 mA
+** 4: 48 mA
+** 5: 60 mA
+** 6: 72 mA
+** 7: 84 mA
+
+* bit 1024: power path override (0,
+** 0 means override
+** 1 means not
+
+* bit 2048: power path value 
+    
+** 0 means dual path (operate without battery)
+** 1 means shared path (with battery)
