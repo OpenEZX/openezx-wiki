@@ -148,5 +148,7 @@ values 0 - 7:
 
 === POWER_IC_REG_EOC_INT_SENSE ===
 
+* bit 4: indicates ID pin floating
+* bit 5: indicates ID pin grounded
 * bit 6: SE1 state. if set, D- and D+ pins indicating USB cable
 * bits 10,11,12: revision number
