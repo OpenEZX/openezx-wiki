@@ -140,8 +140,8 @@ values 0 - 7:
 ==== Power path ====
 
 * bit 10: power path override (0,
-** 0 means override
-** 1 means not
+** 0 means software overrided override
+** 1 means hardware controlled
 
 * bit 11: power path value 
 ** 0 means dual path (operate without battery)
