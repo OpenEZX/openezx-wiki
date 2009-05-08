@@ -92,8 +92,10 @@ values 0 - 7:
 ** 4: 4.25 V
 ** 5: 4.30 V
 ** 6: 3.80 V ( wtf? )
-** 7: 4.6 V
- 
+** 7: 4.5 V
+
+Note: motorola firmware uses mode 4 when connected to usb and mode 7 when charger connected 
+
 * bits 3,4,5,6: main charge current.
 
 values 0 - 15:
@@ -115,6 +117,7 @@ values 0 - 15:
 ** 14: 1800 mA ( cant be real )
 ** 15: max ( wtf? )
 
+Note: morola firmware uses mode 4 when connected to usb and mode 13 when connected to charger
 
 * bits 7,8,9: trickle current. should not be enabled at the same tame as main current. 
 
@@ -140,7 +143,7 @@ values 0 - 7:
 
 * bit 12: ??
 
-* bit 13: reverse path (???)
+* bit 13: reverse path. (???)
 
 * bit 19: LIGHTS_FL_EOC_CHRG_LED_EN. not sure. maby used for charge led (we have it?)
  
