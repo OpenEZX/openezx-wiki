@@ -145,3 +145,8 @@ values 0 - 7:
 * bit 19: LIGHTS_FL_EOC_CHRG_LED_EN. not sure. maby used for charge led (we have it?)
  
 * bit 19: EMU_SET_VBUS_5K_PULL_DOWN ???
+
+=== POWER_IC_REG_EOC_INT_SENSE ===
+
+* bit 6: SE1 state. if set, D- and D+ pins indicating USB cable
+* bits 10,11,12: revision number
