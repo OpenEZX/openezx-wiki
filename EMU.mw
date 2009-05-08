@@ -151,5 +151,8 @@ values 0 - 7:
 * bits 1,2,3: indicates VBUS pin state
 * bit 4: indicates ID pin floating
 * bit 5: indicates ID pin grounded
-* bit 6: SE1 state. if set, D- and D+ pins indicating USB cable
+* bit 6: SE1 state. if set, pins D- and D+ both high, indicating USB cable. 
+
+Note: D- and D+ state can be queried using gpios 53 and 40 ( source: drivers/power_ic/module/emu.h:84 )
+
 * bits 10,11,12: revision number
