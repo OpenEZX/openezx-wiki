@@ -82,7 +82,7 @@ The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono
 
 ==== Voltage ====
 
-bits 0,1,2: voltage limit until which battery will be charged
+bits 0,1,2: Sets the charge regulator output voltage
 
 values 0 - 7:
 
