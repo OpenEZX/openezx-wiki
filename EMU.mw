@@ -155,4 +155,4 @@ values 0 - 7:
 
 Note: D- and D+ state can be queried using gpios 53 and 40 ( source: drivers/power_ic/module/emu.h:84 )
 
-* bits 10,11,12: revision number
+* bits 10,11,12: revision number. recheck: conflicts with ezx-eoc.c defines
