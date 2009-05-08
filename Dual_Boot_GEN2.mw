@@ -37,7 +37,7 @@ Flash gen-blob '''WARNING: For gen2 phones only! :'''
  ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
 = After the flash =
-* Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
+* Boot with vol- (next song on E2) pressed for the boot menu or with vol+ (previous song on E2) for the usb mode. 
 * You can power off on usb mode with "boot_usb off".
 * You can still have access to the MBM flash mode with the usual combo.
 
