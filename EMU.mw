@@ -80,8 +80,9 @@ The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono
 
 === POWER_IC_REG_EOC_POWER_CONTROL_0 ===
 
+==== Voltage ====
 
-* bits 0,1,2: voltage limit until which battery will be charged
+bits 0,1,2: voltage limit until which battery will be charged
 
 values 0 - 7:
 
@@ -96,7 +97,9 @@ values 0 - 7:
 
 Note: motorola firmware uses mode 4 when connected to usb and mode 7 when charger connected 
 
-* bits 3,4,5,6: main charge current.
+==== Main current ====
+
+bits 3,4,5,6: main charge current.
 
 values 0 - 15:
 
@@ -119,7 +122,9 @@ values 0 - 15:
 
 Note: morola firmware uses mode 4 when connected to usb and mode 13 when connected to charger
 
-* bits 7,8,9: trickle current. should not be enabled at the same tame as main current. 
+==== Trickle current ====
+
+bits 7,8,9: trickle current. should not be enabled at the same tame as main current. 
 
 values 0 - 7:
 
@@ -132,14 +137,17 @@ values 0 - 7:
 ** 6: 72 mA
 ** 7: 84 mA
 
+==== Power path ====
+
 * bit 10: power path override (0,
 ** 0 means override
 ** 1 means not
 
 * bit 11: power path value 
-    
 ** 0 means dual path (operate without battery)
 ** 1 means shared path (with battery)
+
+==== Other ====
 
 * bit 12: ??
 
