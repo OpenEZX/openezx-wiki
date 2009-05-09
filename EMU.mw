@@ -164,7 +164,7 @@ values 0 - 7:
 ** 2 = 9.80 V
 ** 3 = 19.6 V
 
-bit 17: UCHEN Unregulated charge enable
+* bit 17: UCHEN Unregulated charge enable
 ** 0: Disable
 ** 1: Enable
 
