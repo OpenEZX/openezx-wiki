@@ -176,6 +176,42 @@ values 0 - 7:
 ** 0: The 5K pull down at CHRGRAW disabled
 ** 1: The 5K pull down at CHRGRAW enabled. To be used in the dual path charging configuration
 
+
+== POWER_CONTROL_1 ==
+(matches atlas register 50, charger USB 1)
+
+* bit 0-1: VUSBIN VUSB regulator input source control Controls the input source for the VUSB regulator. The default input is BP.
+** 0: input = Boost via VINBUS, default in boot mode
+** 1: input = VBUS
+** 2: input = BP (VINVIB), default in non boot modes
+** 3: input = VBUS
+
+* bit 2: VUSB output voltage setting
+** 0: VUSB output voltage set to 3.2 V
+** 1: VUSB output voltage set to 3.3 V
+
+* bit 3: VUSBEN VUSB enable
+** 0: VUSB output is disabled (unless USBEN pin is asserted high)
+** 1: VUSB output is enabled (regardless of USBEN pin)
+
+* bit 4: Reserved
+
+* bit 5: VBUSEN VBUS enable
+** 0: VBUS output is disabled (unless VBUSPULSETMR[2:0] <> 0)
+** 1: VBUS output is enabled (regardless of VBUSPULSETMR[2:0])
+
+* bit 6: RSPOL Swaps TX and RX in RS232 mode
+** 0: RS232 TX on UDM, RX on UDP
+** 1: RS232 TX on UDP, RX on UDM
+
+* bit 7: RSTRI Tristates TX in RS232 mode
+** 0: No effect
+** 1: TX forced to Tristate in RS232 mode only
+
+* bit 8: ID100KPU Switches in 100K UID pull-up
+** 0: 100K UID pull up resistor not switched in
+** 1: 100K UID pull up resistor switched in
+
 == ISR/MSR/SENSE ==
 * bit 0: VBUS_3V4 VBUS > 3.4 volts
 * bit 1: VBUSDET VBUS voltage changed
