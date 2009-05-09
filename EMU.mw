@@ -94,10 +94,10 @@ values 0 - 7:
 ** 3: 4.20 V
 ** 4: 4.25 V
 ** 5: 4.30 V
-** 6: 3.80 V ( wtf? )
+** 6: 3.80 V
 ** 7: 4.5 V
 
-Note: motorola firmware uses mode 4 when connected to usb and mode 7 when charger connected 
+Note: motorola firmware uses mode 4 when connected to usb and mode 7 when charger connected
 
 ==== Main current ====
 
