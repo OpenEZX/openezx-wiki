@@ -178,18 +178,21 @@ bit 17: UCHEN Unregulated charge enable
 ** 1: The 5K pull down at CHRGRAW enabled. To be used in the dual path charging configuration
 
 == ISR/MSR/SENSE ==
-* bit 1: VBUS_3V4 VBUS > 3.4 volts
-* bit 2: VBUSDET VBUS voltage changed
-* bit 3: VBUSOV VBUS overvoltage
-* bit 4: RVRS_CHRG Reverse charge
-* bit 5: ID_FLOAT ID transition (ID float bit)
-* bit 6: ID_GROUND ID ground sense bit (unused interrupt status/mask)
-* bit 7: SE1_DET: single-ended 1 detect
-* bit 8: CC_CV: charger mode transition
-* bit 9: CHRG_CURR charger current below 20mA
-* bit 10: RVRS_MODE Reverse current limit exceeded
-* bit 11: CK_DET Carkit detect
-* bit 12: BATTPON Battery Voltage > or < 3.4 volts
+* bit 0: VBUS_3V4 VBUS > 3.4 volts
+* bit 1: VBUSDET VBUS voltage changed
+* bit 2: VBUSOV VBUS overvoltage
+* bit 3: RVRS_CHRG Reverse charge
+* bit 4-5: ID_FLOAT ID transition (ID float bit) (bit 4 is valid on ISR/MSR, bit 4-5 valid on SENSE)
+** 0 = no usb accessory is attached
+** 1 = A type plug is attached indicating a USBOTG default slave
+** 2 = B type plug is attached indicating a USB Host, a USB OTG default master, or no device
+** 3 = factory mode
+* bit 6: SE1_DET: single-ended 1 detect
+* bit 7: CC_CV: charger mode transition
+* bit 8: CHRG_CURR charger current below 20mA
+* bit 9: RVRS_MODE Reverse current limit exceeded
+* bit 10: CK_DET Carkit detect
+* bit 11: BATTPON Battery Voltage > or < 3.4 volts
 
 === POWER_IC_REG_EOC_CONN_CONTROL ===
 (matches ATLAS register 49, USB0)
@@ -203,4 +206,87 @@ Connectivity Control register
 ** 0: USB Suspend mode disabled
 ** 1: USB Suspend mode enabled
 
-*
+* bit 2: USBPU Switches in variable 1.5K UDP/UDM pull-up
+** 0: Variable 1.5K pull-up switched out
+** 1: Variable 1.5K pull-up switched in
+
+* bit 3: UDPPD Switches in 15K UDP pull-down
+** 0: 15K UDP pull-down switched out
+** 1: 15K UDP pull-down switched in
+
+* bit 4: UDMPD Switches in 15K UDM pull-down
+** 0: 15K UDM pull-down switched out
+** 1: 15K UDM pull-down switched in
+
+* bit 5: DP150KPU Switches in 150K UDP pull-up
+** 0: 150K UDP pull-up switched out
+** 1: 150K UDP pull-up switched in
+
+* bit 6: VBUS70KPDENB Turns off VBUS pull-down NMOS switch
+** 0: VBUS pull-down NMOS switch is ON if VBUSEN=0, OFF otherwise
+** 1: VBUS pull-down NMOS switch is OFF
+
+* bit 7-9: VBUSPULSETMR VBUS regulator current limit control
+** 0: current limit set to 200 mA
+** 1: current limit set to 910 uA for 10 msec
+** 2: current limit set to 910 uA for 20 msec
+** 3: current limit set to 910 uA for 30 msec
+** 4: current limit set to 910 uA for 40 msec
+** 5: current limit set to 910 uA for 50 msec
+** 6: current limit set to 910 uA for 60 msec
+** 7: current limit set to 910 uA
+The 1 to 5 settings are self clearing at end of timer
+
+* bit 10: DLPSRP DLP Timer enable
+** 0: DLP Timer disabled
+** 1: DLP Timer enabled, self clearing at end of pulse
+
+* bit 11: SE0CONN SE0 automatically connects UDP pull-up
+** 0: variable UDP pull-up is not automatically connected when SE0 is detected
+** 1: variable UDP pull-up is automatically connected when SE0 is detected
+
+* bit 12: USBXCVREN USB transceiver enable
+** 0: USB transceiver disabled if USBEN is low or if USBCNTRL = 0
+** 1: USB transceiver enabled if CONMODE[2:0] = 000 and RESETB is high
+
+* bit 13: PULLOVR Variable pull-up / pull-downs disconnect
+** 0: variable 1k5 pull-up and UDP/UDM pull-downs are connected when UTXENB is active low
+** 1: variable 1k5 pull-up and UDP/UDM pull-downs are disconnected when UTXENB is active low
+
+* bit 14-16: CONMODE Connectivity Interface mode select
+** 0: USB mode
+** 1: RS232 mode 1
+** 2: RS232 mode 2
+** 3: reserved
+** 4: mono audio mode
+** 5: stereo audio mode
+** 6: Test mode right mode
+** 7: Test mode left mode
+
+* bit 17: DATSE0 USB single ended / differential mode
+** 0: Differential USB mode
+** 1: Single ended USB mode
+
+* bit 18: BIDIR USB unidirectional / bidirectional transmission
+** 0: unidirectional USB transmission
+** 1: bidirectional USB transmission
+
+* bit 19: USBCNTRL USB transceiver and pull-up control
+** 0: USB mode of operation controlled by SPI
+** 1: USB mode of operation controlled by USBEN pin
+
+* bit 20: IDPD Switches in UID pull-down
+** 0: UID pull-down switched out
+** 1: UID pull-down switched in
+
+* bit 21: IDPULSE Pulses UID to ground
+** 0: UID line not pulsed
+** 1: pulse to gnd on the UID line generated. This bit is a self clearing bit and will always read back 0
+
+* bit 22: IDPUCNTRL UID pin pull up source select
+** 0: UID pin pulled high through 220K resistor
+** 1: UID pin pulled high by 5uA current source
+
+* bit 23: DMPULSE Generates positive pulse on the UDM line
+** 0: UDM line not pulsed
+** 1: A positive pulse on the UDM line is generated. This bit is a self clearing bit and will always read back 0
