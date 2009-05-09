@@ -177,7 +177,7 @@ bit 17: UCHEN Unregulated charge enable
 ** 0: The 5K pull down at CHRGRAW disabled
 ** 1: The 5K pull down at CHRGRAW enabled. To be used in the dual path charging configuration
 
-=== ISR/MSR/SENSE ===
+== ISR/MSR/SENSE ==
 * bit 1: VBUS_3V4 VBUS > 3.4 volts
 * bit 2: VBUSDET VBUS voltage changed
 * bit 3: VBUSOV VBUS overvoltage
