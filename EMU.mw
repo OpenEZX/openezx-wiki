@@ -177,19 +177,19 @@ bit 17: UCHEN Unregulated charge enable
 ** 0: The 5K pull down at CHRGRAW disabled
 ** 1: The 5K pull down at CHRGRAW enabled. To be used in the dual path charging configuration
 
-=== POWER_IC_REG_EOC_INT_SENSE ===
-
-* bits 1,2,3: indicates VBUS pin state ( source: drivers/power_ic/module/emu_eoc.h:92 ). '''recheck: conflicts with ezx-eoc.c defines'''
-* bit 4: indicates ID pin floating
-* bit 5: indicates ID pin grounded
-
-Note: ID pin state can be queired using ADC channel called ''chargerid'', values tabble in drivers/power_ic/module/emu_eoc.h:59
-
-* bit 6: SE1 state. if set, pins D- and D+ both high, indicating USB cable. 
-
-Note: D- and D+ state can be queried using gpios 53 and 40 ( source: drivers/power_ic/module/emu.h:84 )
-
-* bits 10,11,12: revision info (source: drivers/power_ic/core/core.c:406) '''recheck: conflicts with ezx-eoc.c defines'''
+=== ISR/MSR/SENSE ===
+* bit 1: VBUS_3V4 VBUS > 3.4 volts
+* bit 2: VBUSDET VBUS voltage changed
+* bit 3: VBUSOV VBUS overvoltage
+* bit 4: RVRS_CHRG Reverse charge
+* bit 5: ID_FLOAT ID transition (ID float bit)
+* bit 6: ID_GROUND ID ground sense bit (unused interrupt status/mask)
+* bit 7: SE1_DET: single-ended 1 detect
+* bit 8: CC_CV: charger mode transition
+* bit 9: CHRG_CURR charger current below 20mA
+* bit 10: RVRS_MODE Reverse current limit exceeded
+* bit 11: CK_DET Carkit detect
+* bit 12: BATTPON Battery Voltage > or < 3.4 volts
 
 === POWER_IC_REG_EOC_CONN_CONTROL ===
 
