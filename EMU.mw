@@ -152,13 +152,31 @@ values 0 - 7:
 
 ==== Other ====
 
-* bit 12: ??
+* bit 12: Reserved
 
-* bit 13: reverse path. (???)
+* bit 13: RVRSMODE Reverse mode enable
+** 0 = Reverse mode disabled
+** 1 = Reverse mode enabled
 
-* bit 18: LIGHTS_FL_EOC_CHRG_LED_EN. not sure. maby used for charge led (we have it?)
+* bit 14: Reserved
+
+* bit 15-16: OVCTRL Overvoltage threshold select
+** 0 = 5.83 V (Should not be used in separate input configurations, this will disable the overvoltage setting)
+** 1 = 6.90 V
+** 2 = 9.80 V
+** 3 = 19.6 V
+
+bit 17: UCHEN Unregulated charge enable
+** 0: Disable
+** 1: Enable
+
+* bit 18: CHRGLEDEN CHRGLED enable
+** 0: Disable
+** 1: Enable
  
-* bit 19: EMU_SET_VBUS_5K_PULL_DOWN ???
+* bit 19: CHRGRAWPDEN Enables a 5K pull down at CHRGRAW
+** 0: The 5K pull down at CHRGRAW disabled
+** 1: The 5K pull down at CHRGRAW enabled. To be used in the dual path charging configuration
 
 === POWER_IC_REG_EOC_INT_SENSE ===
 
