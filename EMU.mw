@@ -145,7 +145,6 @@ values 0 - 7:
 ** 0 = BATTFET and BPFET outputs are controlled by hardware
 ** 1 = BATTFET and BPFET are controlled by the state of the FETCTRL bit
 
-
 * bit 11: FETCTRL
 ** 0 = BPFET is driven low, BATTFET is driven high if FETOVRD is set
 ** 1 = BPFET is driven high, BATTFET is driven low if FETOVRD is set
