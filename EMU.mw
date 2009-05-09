@@ -78,8 +78,7 @@ The pins are either routed to the Stereo DAC of PCAP or to a Mono DAC and a Mono
 
 == EOC Control registres ==
 
-=== POWER_IC_REG_EOC_POWER_CONTROL_0 ===
-
+== POWER_IC_REG_EOC_POWER_CONTROL_0 ==
 (matches atlas register 48, charger 0)
 
 ==== Voltage ====
