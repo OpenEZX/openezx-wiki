@@ -192,7 +192,8 @@ bit 17: UCHEN Unregulated charge enable
 * bit 12: BATTPON Battery Voltage > or < 3.4 volts
 
 === POWER_IC_REG_EOC_CONN_CONTROL ===
+(matches ATLAS register 49, USB0)
 
-Connectivity Control registe
+Connectivity Control register
 
-* bit 2: indicated USB pullup enabled (wtf is it?)
+* bit 2:
