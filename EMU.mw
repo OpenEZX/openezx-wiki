@@ -193,7 +193,7 @@ values 0 - 7:
 * bit 10: CK_DET Carkit detect
 * bit 11: BATTPON Battery Voltage > or < 3.4 volts
 
-== POWER_IC_REG_EOC_CONN_CONTROL ==
+== CONN_CONTROL ==
 (matches ATLAS register 49, USB0)
 
 Connectivity Control register
