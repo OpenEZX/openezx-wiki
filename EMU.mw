@@ -195,5 +195,12 @@ bit 17: UCHEN Unregulated charge enable
 (matches ATLAS register 49, USB0)
 
 Connectivity Control register
+* bit 0: FSENB USB full speed mode select bar
+** 0: USB full speed mode selected
+** 1: USB low speed mode selected
 
-* bit 2:
+* bit 1: USBSUSPEND USB suspend mode enable
+** 0: USB Suspend mode disabled
+** 1: USB Suspend mode enabled
+
+*
