@@ -129,13 +129,13 @@ bits 7,8,9: trickle current. should not be enabled at the same tame as main curr
 values 0 - 7:
 
 ** 0: 0 mA
-** 1: 12 mA
-** 2: 24 mA
+** 1: 9 mA
+** 2: 20 mA
 ** 3: 36 mA
-** 4: 48 mA
-** 5: 60 mA
-** 6: 72 mA
-** 7: 84 mA
+** 4: 42 mA
+** 5: 50 mA
+** 6: 59 mA
+** 7: 68 mA
 
 ==== Power path ====
 
