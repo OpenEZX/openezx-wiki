@@ -27,13 +27,15 @@ On linux as root:
 *"boot_usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
 ==Gen1 kernel example (A780, E680)==
-'''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
+'''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED 
+
+With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basicly, you will need to offset the kernel, and add an asm hack ("flag") to tell gen-blob where to look for the kernel, so the maximum kernel size'''
 
 On A780 and E680, the kernel is located at 0x20000, so to (re)flash it:
 
-Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]], then:
+Get a kernel, ([[Kernel hacking - linux-2.4|cross-compile it]] if necessary), then:
 
-Check if its size is not higher than 917504bytes (896Kb):
+Check if its size is not higher than 917504bytes (896Kb) :
  wc -c zImage
 Prepare the "zImage" file to be flashed:
  dd if=/dev/zero of=/tmp/kernel_mtd bs=917504 count=1 
@@ -47,6 +49,8 @@ On linux, as root, '''flash a gen1 kernel''' with:
  #flash a kernel image
  ./boot_usb flash 0x20000 /tmp/kernel-mtd
  rm /tmp/kernel-mtd
+
+Note: Without gen-blob, you could use a 128KiB flash area, that is just after the kernel, and that is unused on the gen1 phones, with gen-blob, you will already need to use it, so the 896Kib maximum size will be really mandatory.
 
 ==Gen2 kernel example (A1200, E6, E2, A910)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
