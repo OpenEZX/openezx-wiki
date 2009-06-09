@@ -1,7 +1,4 @@
 = Kernel =
-* RAM
-** check what broke our second ram chip support
-
 * Camera
 ** Sensor driver for a1200, e680, e2 and e6
 
@@ -16,8 +13,6 @@
 ** Write the driver
 
 * MTD
-** Port the mapping from svn[http://svn.openezx.org/branches/kernel-2.6.25.x-patches/]
-** Look into what is needed to support the 2nd gen nor chips into mainline
 ** Check if the NAND on gen1 devices are worth to support
 
 == Userspace ==
