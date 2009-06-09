@@ -37,17 +37,17 @@ and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org
 |- style="background:#efefef;"
 | [[LCD]]
 | style="background:lime" | 100%
-| style="background:lime" | 90%
-| style="background:lime" | 90%
+| style="background:lime" | 90%[1]
+| style="background:lime" | 90%[1]
 | style="background:lime" | 100%
-| style="background:lime" | 90%
-| style="background:lime" | 90%
+| style="background:lime" | 90%[1]
+| style="background:lime" | 90%[1]
 |- style="background:#efefef;"
 | [[Internal Flash]]
-| style="background:yellow" | 80% [1]
+| style="background:yellow" | 80% [2]
 | style="background:lime" | 100%
 | style="background:lime" | 100%
-| style="background:yellow" | 80% [1]
+| style="background:yellow" | 80% [2]
 | style="background:lime" | 100%
 | style="background:lime" | 100%
 |- style="background:#efefef;"
@@ -101,11 +101,11 @@ and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org
 |- style="background:#efefef;"
 | [[Vibrator]] / LED
 | style="background:lime" | 100%
-| style="background:yellow" | 80%
-| style="background:yellow" | 80%
+| style="background:lime" | 100%
+| style="background:lime" | 100%
 | &mdash;
-| style="background:yellow" | 80%
-| style="background:yellow" | 80%
+| style="background:lime" | 100%
+| style="background:lime" | 100%
 |- style="background:#efefef;"
 | [[Sound]]
 | style="background:lime" | 90%
@@ -125,10 +125,10 @@ and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org
 |- style="background:#efefef;"
 | [[Bluetooth]]
 | style="background:lime" | 90%
-| style="background:red" | 0%
-| style="background:red" | 0%
 | style="background:lime" | 90%
-| style="background:red" | 0%
+| style="background:lime" | 90%
+| style="background:lime" | 90%
+| style="background:lime" | 90%
 | style="background:lime" | 90%
 |- style="background:#efefef;"
 | [[GPS]]
@@ -173,7 +173,9 @@ and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org
 |- style="background:#efefef;"
 |}
 
-[1]: Only the 32MB NOR chip is supported. The 64MB DOC G3 flash chip from Tri-M Systems, Inc. can not be supported due to patent restrictions.
+[1]: Kernel support is done. Userspace needs to learn about the Frame Buffer format, currently only qtopia is known to work.
+
+[2]: Only the 32MB NOR chip is supported. The 64MB DOC G3 flash chip from Tri-M Systems, Inc. can not be supported due to patent restrictions.
 
 == Hardware Compatibility with kernel 2.4==
 
