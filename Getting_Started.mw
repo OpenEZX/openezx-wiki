@@ -201,18 +201,18 @@ Remember here the sd card is called /dev/mmcblk0 but this can be different on yo
 
 Partitions are made, but need to be formatted to be used:
 
-First partition on the Sd need to be a FAT or FAT16 partition, it is used for media files with the original firmware optionally to store gen-blob's /boot folder. Of course it can be mounted with OpenEZX as well. You can format it with dos, windows, phone's original operating system, or dosfstools (mkfs.vfat) on a linux box:
+First partition on the Sd need to be a FAT or FAT16 partition, it is used for media files with the original firmware and [[Dual-boot|gen-blob]] may also use it for its "/boot" folder. I would recommended to format this partition with inserting in the target phone, the just partitioned SD (read above), and let the original motorola system format it for you. But you should also be able to format it with dos, windows or dosfstools (mkfs.vfat) on a linux box:
 
  mkfs.vfat /dev/sda1 (for VFAT)
 
-Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX:
+Second (and others) partition should be linux and formatted in EXT2 (or any other filesystem if supported by your kernel) to be used as '/' with OpenEZX (it is the default 'rootfs' place):
 
  mkfs.ext2 /dev/sda2
 
 Remember here the SD card is called /dev/sda (and first and second parts of it respectively /dev/sda1 and /dev/sda2) but this can be different on your computer.
 
 ===Download a recent image for our phones===
-Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's "distribution" scripts collection and images may also be download-able at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
+Most of the alternatives systems (we will called them the "rootfs") have their own web pages, and wikis (see the top of this page), can be build with their OpenEmbedded's scripts collection and some images may also be download-able at [http://www.angstrom-distribution.org/ Angstrom Distribution]. See [http://linuxtogo.org/gowiki/AngstromManual More infos on Angstrom here] and [http://bec-systems.com/oe/html/index.html for Openembedded, you can see this] [http://wiki.openembedded.net/index.php/Getting_Started or this]
 
 There are pre-compiled images for the A780 (that might works also with others phones) in sub folders at
 
