@@ -2,6 +2,8 @@
 
 Assuming you have the nfs support and usbnet compiled and working on your kernel.
 
+'''With some kernels, you may need to unplug/plug the USB cable for the phone to be recognized, and the network to be reachable (this will force the USB's re-enumeration).'''
+
 ====1. Configure the PC's USB Network.====
 
 So, at first you need to load/install the modules "usbnet", perhaps also "cdc_subset".
