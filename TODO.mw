@@ -12,9 +12,6 @@
 * Enhanced Mini USB (EMU)
 ** Write the driver
 
-* MTD
-** Check if the NAND on gen1 devices are worth to support
-
 == Userspace ==
 * Fix X for 18bpp frame buffers
 
