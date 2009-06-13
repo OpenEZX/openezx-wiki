@@ -6,7 +6,10 @@ On A780, (maybe on other gen1 devices) it seems:
 
 On A910 and probably other gen2 devices:
  cat /sys/devices/platform/pxa2xx-spi.1/spi1.0/adc_battery
-Return the battery's actual capacity (in mAh?)
+Or on newer kernels,
+ cat /sys/class/power_supply/main-battery
+
+Return the battery's informations
 
 [[Category:A780]]
 [[Category:A910]]
