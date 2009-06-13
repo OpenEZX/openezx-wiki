@@ -5,14 +5,26 @@ It is possible to get a serial console without opening the phone.
 You can set the [[EMU]] into a mode which acts as serial port. You get RX and TX from the mini usb plug, but need an external
 level shifter like MAX3232 and a power source for the MAX3232.
 
-In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. Also you need to add '''console=ttyS0,115200n8 console=tty0''' to CONFIG_CMDLINE. console=tty0 is needed to see the bootmessages on the framebuffer at the same time.
-
-Kernel 2.4 needs a change in drivers/usbd/usbdezx.c. In function cable_hotplug_attach you need to change emu_switch_to(EMU_SWITCH_TO_USB); to emu_switch_to(EMU_SWITCH_TO_UART); for serial conosle to work.
+You need to add '''console=ttyS0,115200n8 console=tty0''' to kernel command line to see boot log on serial. console=tty0 is needed to see the bootmessages on the framebuffer at the same time.
 
 In order to login via serial console you have to make sure the following line is in /etc/inittab:<br>
 T0:23:respawn:/sbin/getty -L ttyS0 115200 vt100
 
+=== Gen1 phones (outdated) ===
+
+In the file arch/arm/mach-pxa/ezx.c you need to enable the line emu_switch_to(EMU_SWITCH_TO_UART); and comment out emu_switch_to(EMU_SWITCH_TO_USB); instead. 
+Kernel 2.4 needs a change in drivers/usbd/usbdezx.c. In function cable_hotplug_attach you need to change emu_switch_to(EMU_SWITCH_TO_USB); to emu_switch_to(EMU_SWITCH_TO_UART); for serial conosle to work.
+
+
 The next patchset, ezx8, will contain a patch which allows a [[EMU]] mode switch via a config option. 
+
+=== Gen2 phones ===
+
+'''WARNING: Tested on A1200 only.'''
+
+Gpios 39 and 53 of AP are connected via EOC to mini usb D+ and D- and by default configured to usb. Following patch required to switch them to FFUART:
+
+http://people.openezx.org/muromec/eoc-ffuart
 
 === Build your own [[EMU]] - serial adapter ===
 
