@@ -13,7 +13,7 @@
 ** Write the driver
 
 == Userspace ==
-* Fix X for 18bpp frame buffers
+* Fix EFL for 18bpp frame buffers (Support should be there now, test and debug)
 
 = Wiki =
 
