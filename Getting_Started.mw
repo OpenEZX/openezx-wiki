@@ -19,7 +19,7 @@ OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola E
 
 For a recent 2.6 kernel to boot, due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we need our second stage bootloader, 'gen-blob' (for "'''gen'''eric '''blob'''").
 
-[[Dual boot|Gen-blob is a second stage bootloader]],  its purpose is to be flashed (These steps are a lot more handy when it is flashed... Of course, when everything get in place, all become more obvious: not necessary to use boot_usb, no need for an host, modem alive, etc...).
+[[Dual boot|Gen-blob is a second stage bootloader]], its purpose is to be flashed, but for testing, it will work the same if you send it to ram with boot_usb, even without any SD card in the phone, we will describe precisely that use case below.
 
 '''Notes''': 
 
@@ -117,7 +117,7 @@ Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the
 
 * Finally, the last boot_usb command to load the kernel:
 
- ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>" <initrd>
+ ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>" <optional initrd>
 
 After a short time the screen should go funny, then you should see Linux booting!
 
