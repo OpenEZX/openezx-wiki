@@ -19,7 +19,7 @@ You need
 * JTAG software for your PC.
 * Definition of the JTAG cells (usually BSDL). Learn a bit about [http://www.xjtag.com/jtag-bsdl.php Boundary Scan Description Language].
 
-[http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=DebuggingWithJtagCelf2009.pdf Debugging with JTAG (CELF presentation)]
+*[http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=DebuggingWithJtagCelf2009.pdf Debugging with JTAG (CELF presentation)] helps to make out JTAG internals and usecases
 
 == JTAG on EZX ==
 
