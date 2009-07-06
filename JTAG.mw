@@ -19,6 +19,8 @@ You need
 * JTAG software for your PC.
 * Definition of the JTAG cells (usually BSDL). Learn a bit about [http://www.xjtag.com/jtag-bsdl.php Boundary Scan Description Language].
 
+[http://tree.celinuxforum.org/CelfPubWiki/ELC2009Presentations?action=AttachFile&do=get&target=DebuggingWithJtagCelf2009.pdf Debugging with JTAG (CELF presentation)]
+
 == JTAG on EZX ==
 
 Some EZX phones are known to have the JTAG pins wired out for the Applications Processor and the Baseband Processor.  The A780 and E680/E680i have testpads that have the required signals.  The a1200 and Rokr E2 phones have [[Debug Port]]s that contain the JTAG signals.
