@@ -43,7 +43,7 @@ See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/READM
 
 ===Get boot_usb and gen-blob===
 
-Pick a compiled boot_usb from [http://people.openezx.org/sabrod/boot_usb_svnr2421 here].
+Pick a compiled boot_usb from [http://people.openezx.org/wyrm/boot_usb here].
 Pick a compiled gen-blob from [http://people.openezx.org/wyrm/gen-blob here].
 
 - Compiling boot_usb from the sources:
