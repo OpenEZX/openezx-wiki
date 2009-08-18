@@ -36,6 +36,541 @@
 The Motorola A1600 MING is on sale in China as of June 24, 2008, with plans to release everywhere except N. America and S. America.
 [[Image:A1600.jpg]]
 
+== Kernel ==
+ MontaVista(R) Linux(R) Consumer Electronics Edition 3.1
+ Linux/armv5tel 2.4.20_mvlcee31-mainstone_pxa27x
+
+== CPU ==
+ # cat /proc/cpuinfo 
+ Processor       : Intel XScale-PXA27x rev 7 (v5l)
+ BogoMIPS        : 103.76
+ Features        : swp half thumb fastmult edsp 
+ CPU implementor : 0x69
+ CPU architecture: 5TE
+ CPU variant     : 0x0
+ CPU part        : 0x411
+ CPU revision    : 7
+ Cache type      : undefined 5
+ Cache clean     : undefined 5
+ Cache lockdown  : undefined 5
+ Cache unified   : harvard
+ I size          : 32768
+ I assoc         : 32
+ I line length   : 32
+ I sets          : 32
+ D size          : 32768
+ D assoc         : 32
+ D line length   : 32
+ D sets          : 32 
+
+Hardware        : Motorola Ezx Platform
+Revision        : 0000
+Serial          : 0000000000000000
+
+== RAM ==
+ # cat /proc/meminfo
+        total:    used:    free:  shared: buffers:  cached:
+ Mem:  64061440 62611456  1449984        0  8110080 30482432
+ Swap:        0        0        0
+ MemTotal:        62560 kB
+ MemFree:          1416 kB
+ MemShared:           0 kB
+ Buffers:          7920 kB
+ Cached:          29768 kB
+ SwapCached:          0 kB
+ Active:          28616 kB
+ Inactive:        23776 kB
+ HighTotal:           0 kB
+ HighFree:            0 kB
+ LowTotal:        62560 kB
+ LowFree:          1416 kB
+ SwapTotal:           0 kB
+ SwapFree:            0 kB
+ Committed_AS:    50180 kB
+
+== Flash == 
+ # cat /proc/mtd 
+ dev:    size   erasesize  name
+ mtd0: 00008000 00080000 "CADDO_SECOND"
+ mtd1: 00008000 00080000 "ITUNES"
+ mtd2: 00008000 00080000 "CADDO_PRIMARY"
+ mtd3: 00008000 00080000 "FOTA_REV"
+ mtd4: 00060000 00080000 "MBM"
+ mtd5: 00008000 00080000 "CONFIG"
+ mtd6: 00080000 00080000 "BLOB"
+ mtd7: 00100000 00080000 "KERNEL"
+ mtd8: 00880000 00080000 "USERFS_DB"
+ mtd9: 00d00000 00080000 "USERFS_GENERAL"
+ mtd10: 01580000 00080000 "language"
+ mtd11: 00c00000 00080000 "data_resource"
+ mtd12: 00080000 00080000 "setup"
+ mtd13: 00080000 00080000 "secure_setup"
+ mtd14: 02000000 00080000 "rootfs"
+ mtd15: 02280000 00080000 "musb"
+ mtd16: 00080000 00080000 "TEST_CMD"
+ mtd17: 00080000 00080000 "LOGO"
+ mtd18: 00080000 00080000 "FOTA"
+ mtd19: 00080000 00080000 "RESERVE"
+ mtd20: 000f8000 00080000 "KERNEL_FACTORY"
+
+== disk status ==
+ # df          
+ Filesystem           1k-blocks      Used Available Use% Mounted on
+ rootfs                   70640     70640         0 100% /
+ /dev/root                70640     70640         0 100% /
+ /dev/mtdblock10          11144     11144         0 100% /usr/language
+ /dev/mtdblock11          15340     15340         0 100% /usr/data_resource
+ /dev/mtdblock12            528       528         0 100% /usr/setup
+ /dev/mtdblock13            152       152         0 100% /usr/securesetup
+ /dev/mtdblock8            8704      3612      5092  42% /ezx_user
+ /dev/mtdblock9           13312      4856      8456  37% /ezxlocal
+ /dev/mtdblock15          35328     28352      6976  81% /ezxlocal/download/mystuff
+ /dev/mmca1              975552    914656     60896  94% /mmc/mmca1
+
+== Module Information ==
+ # lsmod
+ Module                  Size  Used by    Not tainted
+ gprsv                   7604   0 
+ modem_bridge            2360   0  [gprsv]
+ ppp_async               7148   0  (unused)
+ ppp_generic            21044   0  [ppp_async]
+ slhc                    4968   0  [ppp_generic]
+ mux_cli                30356  10 
+ paniclogger            13432   0  (unused)
+
+ # modinfo /lib/modules/atamux.o 
+ filename:    /lib/modules/atamux.o
+ description: <none>
+ author:      <none>
+ license:     "Copyright Motorola 2005"
+ parm:        _iscmdtty byte array (min = 0, max = 30), description "decide whether ata monitors   passage or not"
+
+ # modinfo /lib/modules/mux_cli.o 
+ filename:    /lib/modules/mux_cli.o
+ description: <none>
+ author:      <none>
+ license:     "GPL"
+
+ # modinfo /lib/modules/modem_relay.o
+ filename:    /lib/modules/modem_relay.o
+ description: <none>
+ author:      <none>
+ license:     "GPL"
+
+ # modinfo /lib/modules/slhc.o       
+ filename:    /lib/modules/slhc.o
+ description: <none>
+ author:      <none>
+ license:     "Dual BSD/GPL"
+
+ # modinfo /lib/modules/modem_bridge.o
+ filename:    /lib/modules/modem_bridge.o
+ description: <none>
+ author:      <none>
+ license:     "GPL"
+
+ # cat /proc/motusbd 
+ MotNet
+ IP=192.168.1.2
+ CABLE=1
+ CHARGING=500
+
+== System Boot Messages == 
+ # ./dmesg
+
+ T[0]Linux version 2.4.20_mvlcee31-mainstone_pxa27x (BJDC@LINUX) (GCC 3.x for XSCALE) #1 Jan 1,2003
+ T[0]CPU: Intel XScale-PXA27x revision 7
+ T[0]Machine: Motorola Ezx Platform
+ T[0]
+ T[0]
+ T[0]
+ T[0]
+ T[0]
+ T[0]
+ T[0]parse_tag_ezx: power up reason=80
+ T[0]
+ T[0]
+ T[0]
+ T[0]
+ T[0]Run Mode clock: 208.00MHz (*16)
+ T[0]Memory clock: 208.00MHz (/2)
+ T[0]Turbo Mode clock: 312.00MHz (*1.5, active)
+ T[0]System bus clock: 208.00MHz 
+ T[0]On node 0 totalpages: 16384
+ T[0]zone(0): 16384 pages.
+ T[0]zone(0)->zone_mem_map(0xc0248028)
+ T[0]zone(1): 0 pages.
+ T[0]zone(2): 0 pages.
+ T[0]Kernel command line: mem=64M root=/dev/mtdblock14 rootfstype=cramfs ip=off paniclog=on 
+ T[0]
+ T[0]Relocating machine vectors to 0xffff0000
+ T[0]Console: colour dummy device 30x80
+ T[1]Calibrating delay loop... 311.29 BogoMIPS
+ T[24]Memory: 64MB = 64MB total
+ T[24]Memory: 62492KB available (1713K code, 514K data, 68K init)
+ T[24]XScale Cache/TLB Locking Copyright(c) 2001 MontaVista Software, Inc.
+ T[24]XScale cache_lock_init called
+ T[24]   Calling consistent alloc
+ T[24]   low_level_page initialized
+ T[24]   low_level_page @ 0xc4800000
+ T[24]      icache_lock_fn @ 0xc4800080
+ T[24]      dcache_lock_fn @ 0xc48000a0
+ T[24]      icache_unlock_fn @ 0xc4800098
+ T[24]      dcache_unlock_fn @ 0xc48000f0
+ T[24]Initializing TLB locking
+ T[24]TLB locking initialized
+ T[24]Security Scaffold v1.0.0 initialized
+ T[24]Dentry cache hash table entries: 8192 (order: 4, 65536 bytes)
+ T[24]Inode cache hash table entries: 4096 (order: 3, 32768 bytes)
+ T[24]Mount-cache hash table entries: 1024 (order: 1, 8192 bytes)
+ T[24]Buffer-cache hash table entries: 4096 (order: 2, 16384 bytes)
+ T[24]Page-cache hash table entries: 16384 (order: 4, 65536 bytes)
+ T[24]POSIX conformance testing by UNIFIX
+ T[24]Initializing the Linux Driver Model...
+ T[24]Linux NET4.0 for Linux 2.4
+ T[24]Based upon Swansea University Computer Society NET3.039
+ T[24]Initializing RT netlink socket
+ T[24]proc register for powerup_info
+ T[24]apm: BIOS version 1.2 Flags 0x02 (Driver version 1.20)
+ T[24]Initialize IPM performance perfiler.
+ T[24]FOTA_REQ_TRACE: fota_req_init_module enter.
+ T[24]Disabling the Out Of Memory Killer
+ T[24]Starting kswapd
+ T[24]JFFS2 version 2.2. (NAND) (C) 2001-2003 Red Hat, Inc.
+ T[25]Access Control:  Initializing.
+ T[25]There is already a security framework initialized, register_security failed.
+ T[25]Failure registering capabilities with the kernel
+ T[25]ac_register_security:  Registering secondary module capability
+ T[25]Capability LSM initialized
+ T[25]i2c-core.o: i2c core module version 2.6.2 (20011118)
+ T[25]pty: 256 Unix98 ptys configured
+ T[25]Serial driver version 5.05c (2001-07-08) with no serial options enabled
+ T[25]ttyS00 at 0xe8100000 (irq = 22) is a PXA UART
+ T[25]ttyS01 at 0xe8200000 (irq = 21) is a PXA UART
+ T[25]ttyS02 at 0xe8700000 (irq = 20) is a PXA UART
+ T[25]SA1100 Real Time Clock driver v1.05
+ T[25]vbd: registered device at major 200
+ T[25]I2C: PXA algorithm module loaded.
+ T[25]I2C: Adding PXA-I2C-Adapter.
+ T[25]I2C: Successfully added bus
+ T[25]call i2c_pxa_reset 
+ T[27]To call spi_a2d_touchscreen_resistance_conversion function!
+ T[27]spi_a2d_touchscreen_resistance_conversion_finish: V_resistance is 261, V_r is 684
+ T[27]check_touch_screen_type : V_resistance is 261!
+ T[27]check_touch_screen_type: touchscreen_type is 2!
+ T[28]pxafb_init_fbinfo: PXA_MAIN_PANEL,this_panel(0)
+ T[29]Console: switching to colour frame buffer device 30x40
+ T[29]keypad_init
+ T[29]add keypad event = 0x001b
+ T[29]<keypad> switch unlocked
+ T[29]Moto EzX panic log initialize!
+ T[29]Kernel panic log register for EZX successful!
+ T[29]usbd_procfs_init: creating /proc/usb-functions
+ T[29]Copyright (c) 2003-2004 sl@belcarra.com
+ T[29]acm_modinit: acm_fd 2.1-beta 000 %D% %@% vendor_id: 22b8 product_id: 3802
+ T[29]Copyright (c) 2002-2004 Belcarra Technologies; www.belcarra.com; sl@belcarra.com
+ T[29]network_modinit: network_fd 2.0-beta 000 %D% %@% vendor_id: 0000 product_id: 0000
+ T[29]init pst_mod
+ T[29]bi_modinit: isp_bi 1.0-beta 000 %D% %@% serial: ""
+ T[29]DSPLOG:init dsplog_mod
+ T[29]motusbd_func_modinit: Barbados usbd GPIO init
+ T[29]usbd_set_gpio_function: enable 0, current status 1
+ T[29]usbd_set_gpio_function: enable 0, current status 0
+ T[31]add keypad event = 0x001e
+ T[32]usbd_set_gpio_function: enable 0, current status 0
+ T[32]motusbd_dev_modinit: 
+ T[32]Linux video capture interface: v1.00
+ T[33]Probing Bulverde flash at physical address 0x00000000 (32-bit buswidth)
+ T[34]Bulverde flash: Found 2 x16 devices at 0x0 in 32-bit bank
+ T[34] Intel/Sharp Extended Query Table at 0x010A
+ T[34] Intel/Sharp Extended Query Table at 0x010A
+ T[34] Intel/Sharp Extended Query Table at 0x010A
+ T[34] Intel/Sharp Extended Query Table at 0x010A
+ T[34] Intel/Sharp Extended Query Table at 0x010A
+ T[34]cfi_cmdset_0001: Suspend erase on write disabled.
+ T[34]Using buffer write method
+ T[34]erase region 0: offset=0x0,size=0x80000,blocks=256
+ T[34]Bulverde flash: program region size/ctrl_valid/ctrl_inval = 2048/32/32
+ T[34]Bulverde flash: 1 set(s) of 2 interleaved chips --> 8 partitions of 16384 KiB
+ T[34]Using static partition definition
+ T[34]Creating 21 MTD partitions on "Bulverde flash":
+ T[34]0x00000000-0x00008000 : "CADDO_SECOND"
+ T[34]mtd: partition "CADDO_SECOND" doesn't end on an erase block -- force read-only
+ T[34]0x00008000-0x00010000 : "ITUNES"
+ T[34]mtd: partition "ITUNES" doesn't start on an erase block boundary -- force read-only
+ T[34]0x00010000-0x00018000 : "CADDO_PRIMARY"
+ T[34]mtd: partition "CADDO_PRIMARY" doesn't start on an erase block boundary -- force read-only
+ T[34]0x00018000-0x00020000 : "FOTA_REV"
+ T[34]mtd: partition "FOTA_REV" doesn't start on an erase block boundary -- force read-only
+ T[34]0x00020000-0x00080000 : "MBM"
+ T[34]0x02400000-0x02408000 : "CONFIG"
+ T[34]mtd: partition "CONFIG" doesn't end on an erase block -- force read-only
+ T[34]0x00080000-0x00100000 : "BLOB"
+ T[34]0x00100000-0x00200000 : "KERNEL"
+ T[34]0x00e00000-0x01680000 : "USERFS_DB"
+ T[34]0x01680000-0x02380000 : "USERFS_GENERAL"
+ T[34]0x02780000-0x03d00000 : "language"
+ T[34]0x00200000-0x00e00000 : "data_resource"
+ T[34]0x03d00000-0x03d80000 : "setup"
+ T[34]0x02500000-0x02580000 : "secure_setup"
+ T[34]0x03d80000-0x05d80000 : "rootfs"
+ T[34]0x05d80000-0x08000000 : "musb"
+ T[34]0x02580000-0x02600000 : "TEST_CMD"
+ T[34]0x02600000-0x02680000 : "LOGO"
+ T[34]0x02680000-0x02700000 : "FOTA"
+ T[34]0x02700000-0x02780000 : "RESERVE"
+ T[34]0x02408000-0x02500000 : "KERNEL_FACTORY"
+ T[34]usb.c: registered new driver hub
+ T[34]ochi_addr = 0xcc90b000
+ T[34]usb-ohci.c: USB OHCI at membase 0xcc90b000, IRQ 3
+ T[34]USB HC reset_hc usb-wmmx: ctrl = 0x0 ;
+ T[34]hc_reset: hc reset successfully!
+ T[36]usb.c: new USB bus registered, assigned bus number 1
+ T[38]hub.c: USB hub found
+ T[38]hub.c: 3 ports detected
+ T[39]usb.c: registered new driver usb ipc
+ T[39]usb.c: registered new driver usbdl
+ T[140]NET4: Linux TCP/IP 1.0 for NET4.0
+ T[140]IP Protocols: ICMP, UDP, TCP
+ T[140]IP: routing cache hash table of 512 buckets, 4Kbytes
+ T[140]TCP: Hash tables configured (established 4096 bind 8192)
+ T[140]NET4: Unix domain sockets 1.0/SMP for Linux NET4.0.
+ T[141]VFS: Mounted root (cramfs filesystem).
+ T[141]AC:  Completing initialization.
+ T[141]Freeing init memory: 68K
+ T[146]Partition check:
+ T[146] mmca: mmca1
+ T[160]usbd_set_gpio_function: enable 0, current status 0
+ T[184]usb_hub_port_reset: Reset the port[2].
+ T[186]hub.c: new USB device usb-ohci-3, assigned address 2
+ T[189]usb_ipc_probe: completed probe!mnt_record_enter begin
+ T[197]mnt_record_enter end (check -30)
+ T[197]COMPRESSION MODE IS SET TO 1 
+ T[212]SCAN.c: 233: empty_blocks(0), c->nr_erasing_blocks(0), c->nr_free_blocks(9)
+ T[212]
+ T[216]mnt_record_enter begin
+ T[216]mnt_record_enter end (check -30)
+ T[216]COMPRESSION MODE IS SET TO 1 
+ T[238]SCAN.c: 233: empty_blocks(0), c->nr_erasing_blocks(0), c->nr_free_blocks(16)
+ T[238]
+ T[250]mnt_record_enter begin
+ T[250]mnt_record_enter end (check -30)
+ T[250]COMPRESSION MODE IS SET TO 0 
+ T[279]SCAN.c: 233: empty_blocks(0), c->nr_erasing_blocks(0), c->nr_free_blocks(10)
+ T[279]
+ T[611] mmca: mmca1
+ T[612]MSDOS FS: IO charset utf8
+ T[878]keypad_open
+ T[878]keypad_ioctl: 0x40046b06
+ T[878]keypad_ioctl: 0x40026b04
+ T[878]keypad_ioctl: 0x80046b08
+ T[1019] keypad_read
+ T[1019] keypad_read
+ T[3038]ipc-suspend
+ T[3081]
+ T[3081]ipc-resume[0x103], ipcusb_xmit_data
+ T[4570] mmca: mmca1
+ T[5142]ipc-suspend
+ T[6072]
+ T[6072]usb_send_readurb:UHCRHPS3[0x107]
+ T[6072] bp_retry time :0 
+ T[6074]
+ T[6074]ipc-resume[0x103], ipcusb_xmit_data
+ T[6075][bf_readurb]urb submit, status=-22!
+ T[6576]ipc-suspend
+ T[7536]
+ T[7536]usb_send_readurb:UHCRHPS3[0x107]
+ T[7536] bp_retry time :0 
+ T[7538]
+ T[7538]ipc-resume[0x103], ipcusb_xmit_data
+ T[7539][bf_readurb]urb submit, status=-22!
+ T[8224]ipc-suspend
+ T[10666]
+ T[10666]usb_send_readurb:UHCRHPS3[0x107]
+ T[10666] bp_retry time :0 
+ T[10668]
+ T[10668]ipc-resume[0x103], ipcusb_xmit_data
+ T[10668][bf_readurb]urb submit, status=-22!
+ T[11193]ipc-suspend
+ T[11788]
+ T[11788]usb_send_readurb:UHCRHPS3[0x107]
+ T[11788] bp_retry time :0 
+ T[11790]
+ T[11790]ipc-resume[0x103], ipcusb_xmit_data
+ T[11790][bf_readurb]urb submit, status=-22!
+ T[12773]ipc-suspend
+ T[13565]apm: pm_go_sleep: 
+ T[13565]flash device refer-count(0) when try to sleep
+ T[13565]switch to async mode
+ T[13565]pm_do_suspend : 3 : CLKCFG = 0x       b
+ T[13565]resume to Async mode
+ T[13565]Unlock after reset -- begin(13565)
+ T[13565]Unlock after reset -- end(13565)
+ T[13565]wakeup: PKSR=0x0, PEDR=0x80000000
+ T[13565]apm: exit from sleep.
+ T[13565]periodic jobs completed.
+ T[13566]
+ T[13566]usb_send_readurb:UHCRHPS3[0x0]
+ T[13566] bp_retry time :0 
+ T[13566]ipcusb.c: 
+ T[13566][bf_readurb]host resume
+ T[13566]
+ T[13566]POWER ENABLED!
+ T[13568]Port 0 After=0x101
+ T[13568]Port 1 After=0x100
+ T[13568]Port 2 After=0x103
+ T[13568]
+ T[13568]-----------------
+ T[13568] END OF RESUME SEQUENCE
+ T[13568]
+ T[13568]suspend-port[0x107]
+ T[13571]
+ T[13571]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[14072]ipc-suspend
+ T[14174]apm: pm_go_sleep: 
+ T[14174]flash device refer-count(0) when try to sleep
+ T[14174]switch to async mode
+ T[14174]pm_do_suspend : 3 : CLKCFG = 0x       b
+ T[14174]resume to Async mode
+ T[14174]Unlock after reset -- begin(14174)
+ T[14174]Unlock after reset -- end(14174)
+ T[14174]wakeup: PKSR=0x0, PEDR=0x2
+ T[14174]apm: exit from sleep.
+ T[14175]
+ T[14175]usb_send_readurb:UHCRHPS3[0x0]
+ T[14175] bp_retry time :0 
+ T[14175]ipcusb.c: 
+ T[14175][bf_readurb]host resume
+ T[14175]
+ T[14175]POWER ENABLED!
+ T[14178]Port 0 After=0x101
+ T[14178]Port 1 After=0x100
+ T[14178]Port 2 After=0x103
+ T[14178]
+ T[14178]-----------------
+ T[14178] END OF RESUME SEQUENCE
+ T[14178]
+ T[14178]suspend-port[0x107]
+ T[14180]
+ T[14180]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[14681]ipc-suspend
+ T[15465]
+ T[15465]usb_send_readurb:UHCRHPS3[0x107]
+ T[15465] bp_retry time :0 
+ T[15468]
+ T[15468]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[15969]ipc-suspend
+ T[18827]
+ T[18827]usb_send_readurb:UHCRHPS3[0x107]
+ T[18827] bp_retry time :0 
+ T[18830]
+ T[18830]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[19330]ipc-suspend
+ T[22736]
+ T[22736]usb_send_readurb:UHCRHPS3[0x107]
+ T[22736] bp_retry time :0 
+ T[22738]
+ T[22738]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[23239]ipc-suspend
+ T[25160]
+ T[25160]usb_send_readurb:UHCRHPS3[0x107]
+ T[25160] bp_retry time :0 
+ T[25162]
+ T[25162]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[25663]ipc-suspend
+ T[27011]CSLIP: code copyright 1989 Regents of the University of California
+ T[27015]PPP generic driver version 2.4.2
+ T[28573]
+ T[28573]usb_send_readurb:UHCRHPS3[0x107]
+ T[28573] bp_retry time :0 
+ T[28575]
+ T[28575]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[29077]ipc-suspend
+ T[29444]
+ T[29444]usb_send_readurb:UHCRHPS3[0x107]
+ T[29444] bp_retry time :0 
+ T[29447]
+ T[29447]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[29948]ipc-suspend
+ T[30565]
+ T[30565]usb_send_readurb:UHCRHPS3[0x107]
+ T[30565] bp_retry time :0 
+ T[30567]
+ T[30567]ipc-resume[0x103], ipcusb_xmit_data
+ T[30568][bf_readurb]urb submit, status=-22!
+ T[31092]ipc-suspend
+ T[31651]
+ T[31651]usb_send_readurb:UHCRHPS3[0x107]
+ T[31651] bp_retry time :0 
+ T[31654]
+ T[31654]ipc-resume[0x103], ipcusb_xmit_data
+ T[31654][bf_readurb]urb submit, status=-22!
+ T[32775]ipc-suspend
+ T[38366]
+ T[38366]usb_send_readurb:UHCRHPS3[0x107]
+ T[38366] bp_retry time :0 
+ T[38368]
+ T[38368]ipc-resume[0x103], ipcusb_xmit_data
+ T[38369][bf_readurb]urb submit, status=-22!
+ T[38893]ipc-suspend
+ T[39530]
+ T[39530]usb_send_readurb:UHCRHPS3[0x107]
+ T[39530] bp_retry time :0 
+ T[39532]
+ T[39532]ipc-resume[0x103], ipcusb_xmit_data
+ T[39532][bf_readurb]urb submit, status=-22!
+ T[40912]ipc-suspend
+ T[41035]usbd_set_gpio_function: enable 0, current status 0
+ T[41056]usbd_set_gpio_function: enable 1, current status 0
+ T[41060]
+ T[41060]=============ISP Connect==========
+ T[41101]
+ T[41101]Modem Connection Monitor: USB connection change to OK
+ T[41286]
+ T[41286]usb_send_readurb:UHCRHPS3[0x107]
+ T[41286] bp_retry time :0 
+ T[41288]
+ T[41288]ipc-resume[0x103], ipcusb_xmit_data
+ T[41289][bf_readurb]urb submit, status=-22!
+ T[42187]ipc-suspend
+ T[55475]
+ T[55475]=============ISP Disconnect==========
+ T[55475]
+ T[55475]Modem Connection Monitor: USB connection change to Broken
+ T[55478]blan_init: CRC: 01 
+ T[55478]
+ T[55478]=============ISP Connect==========
+ T[85319]
+ T[85319]usb_send_readurb:UHCRHPS3[0x107]
+ T[85319] bp_retry time :0 
+ T[85321]
+ T[85321]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[85822]ipc-suspend
+ T[89203]
+ T[89203]usb_send_readurb:UHCRHPS3[0x107]
+ T[89203] bp_retry time :0 
+ T[89206]
+ T[89206]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[89707]ipc-suspend
+ T[95627]
+ T[95627]usb_send_readurb:UHCRHPS3[0x107]
+ T[95627] bp_retry time :0 
+ T[95629]
+ T[95629]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[96130]ipc-suspend
+ T[116059]
+ T[116059]usb_send_readurb:UHCRHPS3[0x107]
+ T[116059] bp_retry time :0 
+ T[116062]
+ T[116062]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[116563]ipc-suspend
+ T[125520]
+ T[125520]usb_send_readurb:UHCRHPS3[0x107]
+ T[125520] bp_retry time :0 
+ T[125523]
+ T[125523]ipc-resume[0x103], ipcusb_softint_send_readurb
+ T[126024]ipc-suspend
+
 
 [[Image:A1600_2.jpg]]
 
