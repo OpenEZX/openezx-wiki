@@ -8,13 +8,13 @@ This is a collaborative effort to collect information about Motorola's EZX GSM p
 
 ''Note that OpenEZX is about hardware and kernel level work. For userland, we rely on the [http://www.freesmartphone.org freesmartphone.org] project.
 
-</div>
+</div>cathe
 
 <div style="margin: 0; margin-right:10px; margin-top:10px; border: 1px solid #dfdfdf; padding: 0em 1em 1em 1em; background-color:#ccccff; align:left;">
 
 [[Getting Started|'''Getting started:''']] All you need to know to boot an OpenEZX kernel for the first time (nothing needs to be flashed on the phones).
 
-The project targets are mainly the Motorola's phones: [http://wiki.openezx.org/Category:E680 E680], [http://wiki.openezx.org/Category:A780 A780], [http://wiki.openezx.org/Category:A1200 A1200], [http://wiki.openezx.org/Category:A910 A910], [http://wiki.openezx.org/Category:Rokr_E2 Rokr E2] and [http://wiki.openezx.org/Category:Rokr_E6 Rokr E6].
+The project targets are mainly the Motorola's phones: [http://wiki.openezx.org/Category:E680 E680], [http://wiki.openezx.org/Category:A780 A780], [http://wiki.openezx.org/Category:A1200 A1200], [http://wiki.openezx.org/Category:A910 A910], [http://wiki.openezx.org/Category:Rokr_E2 Rokr E2], [http://wiki.openezx.org/Category:Rokr_E6 Rokr E6] and [http://wiki.openezx.org/Category:A1600 A1600].
 
 [[Project devices|'''Devices list''']]: some will be –possibly– added in the future, depending on our support, and, of course their hardware.
 
