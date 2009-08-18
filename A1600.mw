@@ -1,8 +1,41 @@
-The Motorola A1600 MING is on sale in China as of June 24, 2008, with plans to release everywhere except N. America and S. America.
+{| width="100%"
+|-
+|style="vertical-align:top" |
 
+{| border="1"
+|- style="background:#bfbfbf; font-weight: bold"
+! Summary
+!
+|-
+| Product name:
+| A1600
+|-
+| Codename:
+| Moto Ming
+|-
+| Generation:
+| 2nd (Red bootloader screen)
+|-
+| [[Project_devices |Project device]]:
+| Yes
+|-
+| [[Project_Status |Device support]]:
+|
+|-
+| Motorola source code:
+| https://opensource.motorola.com/sf/projects/a1600
+|-
+| PCB pictures:
+| 
+|}
+
+| width="30%" style="vertical-align:top" |
+[[Image:A1600_1.jpg]]
+|}
+
+The Motorola A1600 MING is on sale in China as of June 24, 2008, with plans to release everywhere except N. America and S. America.
 [[Image:A1600.jpg]]
 
-[[Image:A1600_1.jpg]]
 
 [[Image:A1600_2.jpg]]
 
