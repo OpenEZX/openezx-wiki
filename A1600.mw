@@ -33,9 +33,6 @@
 [[Image:A1600_1.jpg]]
 |}
 
-The Motorola A1600 MING is on sale in China as of June 24, 2008, with plans to release everywhere except N. America and S. America.
-[[Image:A1600.jpg]]
-
 == Kernel ==
  MontaVista(R) Linux(R) Consumer Electronics Edition 3.1
  Linux/armv5tel 2.4.20_mvlcee31-mainstone_pxa27x
@@ -573,6 +570,10 @@ Serial          : 0000000000000000
 
 == Boot Module ==
  Boot Module: BOOT_G_00.02.57P_DYD
+
+The Motorola A1600 MING is on sale in China as of June 24, 2008, with plans to release everywhere except N. America and S. America.
+[[Image:A1600.jpg]]
+
 [[Image:A1600_2.jpg]]
 
 [[Image:A1600_3.jpg]]
