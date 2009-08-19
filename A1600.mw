@@ -571,7 +571,8 @@ Serial          : 0000000000000000
  T[125523]ipc-resume[0x103], ipcusb_softint_send_readurb
  T[126024]ipc-suspend
 
-
+== Boot Module ==
+ Boot Module: BOOT_G_00.02.57P_DYD
 [[Image:A1600_2.jpg]]
 
 [[Image:A1600_3.jpg]]
