@@ -17,22 +17,22 @@ Before hacking on your EZX phone you should probably create backups of all conte
 | A910
 | style="background:lime" | 64MB
 | -
-| style="background:red" | ??
+| style="background:brown" | 4MB
 |-
 | A1200
 | style="background:lime" | 64MB
 | -
-| style="background:red" | ??
+| style="background:brown" | 4MB
 |-
 | E2
 | style="background:lime" | 64MB
 | -
-| style="background:red" | ??
+| style="background:brown" | 4MB
 |-
 | E6
 | style="background:lime" | 64MB
 | -
-| style="background:red" | ??
+| style="background:brown" | 4MB
 |-
 | E680
 | style="background:lime" | 32MB
@@ -48,6 +48,9 @@ Before hacking on your EZX phone you should probably create backups of all conte
 |-
 | style="background:yellow" |   
 | backup possible with motorola 2.4 kernel
+|-
+| style="background:brown" |   
+| backup possible with RAMLDR
 |-
 | style="background:red" |   
 | no known backup method
