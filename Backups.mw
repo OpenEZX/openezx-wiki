@@ -83,7 +83,11 @@ Another backup tool (made for E2, but can be used on other EZX phones with some 
 Note that from the stock user interface, as long as you can execute/write a script, or have a terminal access, some dd command should do the backup of the /dev/mtdX partitions, and /dev/roflashX as well. Theses command should be used to write on SD/MMC some working backups of theses respectives "codegroups".
 One can send these commands with a remote control access, using telnet, ssh or else (thrue the bluetooth Net, USBNet, WLan 802.11, GPRS... :-) ), just pay attention to the link quality when transfering the resulting backup files and '''prefer using directly a card-reader''' to copy them (avoid netcat! ).
 
+===Using Ramldr/Ramldr2===
 
+Ramldr is old flashing tool for nonlinux motorola phones. Can be found [http://emelyanov.xaker.ru/ here].
+Since Ezx Gen2 BP is just same LTE2 as old phones, old tools can be used here.
+Keep in mind, Ramdldr2 cant flash our BP, just read or erase.
 
 [[Category:E680]]
 [[Category:A780]]
