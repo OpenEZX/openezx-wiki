@@ -100,3 +100,11 @@ Bootloader starts from such header:
 010000020   10 00 EF D7  10 00 4A 9C  <span style="color: blue">10 00 E8 00</span>  10 00 F0 00  <br/>
 010000030   10 35 08 00  00 00 00 00  <span style="color: green">10 08 00 00</span>  28 63 29 20 <br/>
 </tt>
+
+Where 
+
+* <span style="color: red">10 00 46 F4</span> is bootloader entry point.
+* <span style="color: blue">10 00 E8 00</span> is bootloader signature address
+* <span style="color: green">10 08 00 00</span>  is firmware header address.
+
+Note: bootloader signed area ends at 0x10005E10, but signature starts from 0x1000E800
