@@ -68,3 +68,20 @@ BP also has special in-cpu rom, called IROM (and corresponding IRAM) where initi
 | FOTA
 | <tt>0x10350000 - 0x1035ffff</tt>
 |}
+
+
+== Bootloaders ==
+
+LTE phones have two bootloaders: one in IROM and other on flash. Both have capabilities to execute signed code via usb.
+Flash bootloader is also capable to dump permitted memory ranges contents via usb.
+
+== PDS ==
+
+PDS is Persistand Data Storage. Its created during factory flashing only and never reflashed. Its some sort of filesystem with numbered
+files and simple checksum. Some files (for example, operator lock settings) are encrypted with private phone key, so PDS from one phone cant be flashed to other even same model. Losing PDS is PAIN!
+
+PDS header has version different from fw to fw. For example E2 has version 4015, but A1200 - 4017.
+
+== Boot sequence ==
+
+On powerup execution starts from 0x0 (IROM) whic initialising hardware and checks
