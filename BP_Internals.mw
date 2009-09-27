@@ -148,7 +148,7 @@ If something fails, bootloader goes to flash mode (maby writes to panic log?) as
 
 == Signature check flaw ==
 
-In old bootloaders there is no check about fw header, so entry point can referer to other signed area. Its enougth to trick rsa checks.
+In old bootloaders there is no check about fw header, so entry point can referer to other signed area and other signature, keeping fw unchecked. Its enougth to trick rsa checks.
 Bootloader on my A1200 have this check, so see section below.
 
 == Bootloader downgrade ==
