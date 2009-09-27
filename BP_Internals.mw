@@ -1,12 +1,12 @@
 == Hardware ==
 
-BP for gen2 phones running on some processor unit as old nonlinux phones like L7 named Neptune LTE2.
-Only differce is reduced feauture set (no display, etc) and so reduced flash and ram size (BP has own ram and flash).
+BP for gen2 phones is running on same processor unit as old non-linux phones like L7 named Neptune LTE2.
+The only difference is reduced features set (no display etc) and reduced flash and ram size (BP has own ram and flash).
 
-Flash used in my A1200 identified as vendor id 20, product id 8815, which is analog of intels nor 89/8881 (GE28F320W18BD60).
-Flash size is 4 MB, ram size looks 4MB too (not confirmed).
+Flash used in my A1200 identified as vendor id 20, product id 8815, which is analog of intel's nor 89/8881 (GE28F320W18BD60).
+Flash size is 4 MB, ram size seems to be 4MB too (not confirmed).
 
-BP also has special in-cpu rom, called IROM (and corresponding IRAM) where initial bootloader lives.
+BP also has special in-cpu rom, called IROM (and corresponding IRAM) where initial bootloader placed.
 
 == Physycal memory map ==
 {| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
@@ -72,25 +72,24 @@ BP also has special in-cpu rom, called IROM (and corresponding IRAM) where initi
 
 == Bootloaders ==
 
-LTE phones have two bootloaders: one in IROM and other on flash. Both have capabilities to execute signed code via usb.
-Flash bootloader is also capable to dump permitted memory ranges contents via usb.
+LTE phones has two bootloaders, one in IROM and other one in flash memory. Both have capabilities to execute signed code via USB.
+Flash bootloader is also capable to dump permitted memory ranges contents via USB.
 
 == PDS ==
 
-PDS is Persistand Data Storage. Its created during factory flashing only and never reflashed. Its some sort of filesystem with numbered
-files and simple checksum. Some files (for example, operator lock settings) are encrypted with private phone key, so PDS from one phone cant be flashed to other even same model. Losing PDS is PAIN!
+PDS is Persistand Data Storage. It's created during factory flashing only and never reflashed. It's a some sort of filesystem with numbered files and simple checksum. Some files (for example, operator lock settings) are encrypted with private phone key, so PDS from one phone cant be flashed to other, even if it's the same model. Losing PDS is PAIN!
 
-PDS header has version different from fw to fw. For example E2 has version 4015, but A1200 - 4017.
+PDS header has different version from fw to fw. For example, E2 has version 4015, but A1200 has 4017.
 
-Flashing broken fw, or fw from different phone can broke your PDS.
+Flashing broken fw or fw from different phone can broke your PDS.
 
 == Boot sequence ==
 
-On powerup execution starts from 0x0 (IROM) which initialising hardware and checks flash bootloader presence and validity. If this check fails, irom boot goes to "blank" state and initialises usb as "S Blank Neptune LTE2", product id 4903.
-There is flaw in blank bootloader, allowing to load and execute unsigned code. Procedure, forsing phone to go in "blank" state, called "test point".
-Flash bootloader has no such flaw and only way to flash using it is signed motorola ramloader (CG0 in every firmware).
+On powerup, execution starts from 0x0 (IROM) which initialize hardware and checks flash bootloader presence and validity. If this check fails, irom boot goes to "blank" state and initializes USB as "S Blank Neptune LTE2", product id 4903.
+There is a flaw in blank bootloader, allowing to load and execute unsigned code. Forsing phone to go in "blank" state procedure is called "test point".
+Flash bootloader has no such flaw and the only way to flash it is using signed motorola ramloader (CG0 in every firmware).
 
-Nore: during suspend mode debugging i saw bp in blank state several times without test point.
+Note: during suspend mode debugging i saw bp in blank state several times without test point.
 
 === Bootloader check ===
 
@@ -113,8 +112,8 @@ Note: bootloader signed area ends at 0x10005E10, but signature starts from 0x100
 
 So irom boot reads this header from 0x010000000 and reads signature from 0x1000E800.
 Every signature specifies addresses covered by it, so irom checks this addresses hashsum.
-If check is ok, irom remembers this addresses as trusted area and checks if entry point belongs to such area.
-If ok, bootloader starts.
+If the check is ok, irom remembers this addresses as trusted area and checks if entry point belongs to such area.
+If it's ok, the bootloader starts.
 
 
 === Firmware check ===
@@ -142,27 +141,27 @@ Where
 
 * <span style="color: red">10 33 00 10</span>  is actual signature address
 
-Check is same as with boot: bootloader reads fw header from 0x010080000, then sign header from 0x010330000 and actual 
+The check process is the same as with boot, bootloader reads fw header from 0x010080000, then sign header from 0x010330000 and actual 
 signature from 0x10330010. Signature itself contains addresses of signed area (CG1 aka firmware) and its hash checked.
 
-If ok, boot adds this addresses to trusted area and checks entry point. If ok, boot jumps to entry point.
-If something fails, bootloader goes to flash mode (maby writes to panic log?) as "S <b>Flash</b> Neptune LTE2", pid 4903.
+If it's ok, boot adds this addresses to trusted area and checks entry point. If it's ok, boot jumps to entry point.
+If something fails, bootloader goes to flash mode (maybe writes to panic log?) as "S <b>Flash</b> Neptune LTE2", pid 4903.
 
 == Signature check flaw ==
 
-In old bootloaders there is no check about fw header, so entry point can referer to other signed area and other signature, keeping fw unchecked. Its enougth to trick rsa checks.
+In old bootloaders there is no check about fw header, so entry point can referer to other signed area and other signature, keeping fw unchecked. Its is enought to trick rsa checks.
 Bootloader on my A1200 have this check, so see section below.
 
 == Bootloader downgrade ==
-This flaw was closed in new bootloaders (A1200), but not on E2. Since both A1200 (version 984) and E2 (version 910) are signed with same key, its possible to downgrade bootloader using test point and ramldr2. 
-Firmware checks bootloader version so its impossible to downgrade bootloader without removing rsa protection from fw and pathing it.
+This flaw was closed in new bootloaders (A1200) but not on E2. Since both A1200 (version 984) and E2 (version 910) are signed with same key, its possible to downgrade bootloader using test point and ramldr2. 
+Firmware checks bootloader version so its impossible to downgrade bootloader without removing rsa protection from fw and patching it.
 
 == Bootloader critical error ==
 
-There is one big problem with flash bootloader: it can fail before enabling usb. Its also PAIN. How can this be?
+There is one big problem with flash bootloader, it can fail before enabling USB. It's also PAIN. How can this be?
 
 * flash bootloader does not check for flashkey press itself! after firmware boots, it checks flashkey and goes back to bootloader
-* flash bootloader reads PDS and goes to critical error without enabling usb if pds broken
+* flash bootloader reads PDS and goes to critical error without enabling USB if pds is broken
 
 bootloader in this state looks from host like this:
 
