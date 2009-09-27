@@ -163,3 +163,10 @@ There is one big problem with flash bootloader: it can fail before enabling usb.
 
 * flash bootloader does not check for flashkey press itself! after firmware boots, it checks flashkey and goes back to bootloader
 * flash bootloader reads PDS and goes to critical error without enabling usb if pds broken
+
+bootloader in this state looks from host like this:
+
+<pre>
+usb 4-1: device not accepting address 24, error -71
+hub 4-0:1.0: unable to enumerate USB device on port 1
+</pre>
