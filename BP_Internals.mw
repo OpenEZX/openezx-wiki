@@ -3,5 +3,68 @@
 BP for gen2 phones running on some processor unit as old nonlinux phones like L7 named Neptune LTE2.
 Only differce is reduced feauture set (no display, etc) and so reduced flash and ram size (BP has own ram and flash).
 
-Flash used in my A1200 identified as vendor id 20, product id 8815, which is analog of intels 89/8881 (GE28F320W18BD60).
+Flash used in my A1200 identified as vendor id 20, product id 8815, which is analog of intels nor 89/8881 (GE28F320W18BD60).
 Flash size is 4 MB, ram size looks 4MB too (not confirmed).
+
+BP also has special in-cpu rom, called IROM (and corresponding IRAM) where initial bootloader lives.
+
+== Physycal memory map ==
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
+|- style="background:#bfbfbf; font-weight: bold"
+! Name
+! Adreess
+|-
+| IROM
+| <tt>0x0</tt> 
+|-
+| IRAM
+| <tt>0x03f80000</tt>
+|-
+| FLASH
+| <tt>0x10000000 - 0x103fffff</tt>
+|-
+| RAM
+| <tt>0x14000000 - 0x143fffff</tt>
+|-
+|}
+
+== Flash partition map ==
+
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
+|- style="background:#bfbfbf; font-weight: bold"
+| Code Group
+! Name
+! Adreess
+|-
+| CG0
+| boot
+| <tt>0x10000000 - 0x1000ffff</tt> 
+|-
+| None
+| PDS 1
+| <tt>0x10010000 - 0x1001ffff</tt> 
+|-
+| None
+| PDS 2
+| <tt>0x10020000 - 0x1002ffff</tt> 
+|-
+| None
+| panic log
+| <tt>0x10030000 - 0x1003ffff</tt> 
+|-
+| CG3
+| ??
+| <tt>0x10040000 - 0x1007ffff</tt> 
+|-
+| CG1
+| firmware
+| <tt>0x10080000 - 0x102fffff</tt> (not sure)
+|-
+| CG18
+| firmware sign
+| <tt>0x10330000 - 0x1033ffff</tt>
+|-
+| CG7 
+| FOTA
+| <tt>0x10350000 - 0x1035ffff</tt>
+|}
