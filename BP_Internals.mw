@@ -82,6 +82,8 @@ files and simple checksum. Some files (for example, operator lock settings) are 
 
 PDS header has version different from fw to fw. For example E2 has version 4015, but A1200 - 4017.
 
+Flashing broken fw, or fw from different phone can broke your PDS.
+
 == Boot sequence ==
 
 On powerup execution starts from 0x0 (IROM) which initialising hardware and checks flash bootloader presence and validity. If this check fails, irom boot goes to "blank" state and initialises usb as "S Blank Neptune LTE2", product id 4903.
