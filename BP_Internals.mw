@@ -108,3 +108,40 @@ Where
 * <span style="color: green">10 08 00 00</span>  is firmware header address.
 
 Note: bootloader signed area ends at 0x10005E10, but signature starts from 0x1000E800
+
+So irom boot reads this header from 0x010000000 and reads signature from 0x1000E800.
+Every signature specifies addresses covered by it, so irom checks this addresses hashsum.
+If check is ok, irom remembers this addresses as trusted area and checks if entry point belongs to such area.
+If ok, bootloader starts.
+
+
+=== Firmware check ===
+
+Firmware have such header:
+
+<tt>
+010080000   <span style="color: red">10 21 EF 95</span>  00 00 00 B1  00 13 02 06  FF FF 11 52<br/>
+....<br/>
+0100800A0   FF FF FF FF  FF FF FF FF  FF FF FF FF  <span style="color: green">10 33 00 00</span>
+</tt>
+
+Where 
+
+* <span style="color: red">10 21 EF 95</span> is firmware entry point
+* <span style="color: green">10 33 00 00</span> firmware signature header
+
+Firmware sign header:
+
+<tt>
+010330000   <span style="color: red">10 33 00 10</span>  00 00 00 B1  01 13 02 06  FF FF 11 52
+</tt>
+
+Where
+
+* <span style="color: red">10 33 00 10</span>  is actual signature address
+
+Check is same as with boot: bootloader reads fw header from 0x010080000, then sign header from 0x010330000 and actual 
+signature from 0x10330010. Signature itself contains addresses of signed area (CG1 aka firmware) and its hash checked.
+
+If ok, boot adds this addresses to trusted area and checks entry point. If ok, boot jumps to entry point.
+If something fails, bootloader goes to flash mode (maby writes to panic log?) as
