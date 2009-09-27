@@ -1,0 +1,7 @@
+== Hardware ==
+
+BP for gen2 phones running on some processor unit as old nonlinux phones like L7 named Neptune LTE2.
+Only differce is reduced feauture set (no display, etc) and so reduced flash and ram size (BP has own ram and flash).
+
+Flash used in my A1200 identified as vendor id 20, product id 8815, which is analog of intels 89/8881 (GE28F320W18BD60).
+Flash size is 4 MB, ram size looks 4MB too (not confirmed).
