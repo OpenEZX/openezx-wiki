@@ -84,4 +84,6 @@ PDS header has version different from fw to fw. For example E2 has version 4015,
 
 == Boot sequence ==
 
-On powerup execution starts from 0x0 (IROM) whic initialising hardware and checks
+On powerup execution starts from 0x0 (IROM) which initialising hardware and checks flash bootloader presence and validity. If this check fails, irom boot goes to "blank" state and initialises usb as "S Blank Neptune LTE2", product id 4903.
+There is flaw in blank bootloader, allowing to load and execute unsigned code. Procedure, forsing phone to go in "blank" state, called "test point".
+Flash bootloader has no such flaw and only way to flash using it is signed motorola ramloader (CG0 in every firmware).
