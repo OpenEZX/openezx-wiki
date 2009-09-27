@@ -144,4 +144,20 @@ Check is same as with boot: bootloader reads fw header from 0x010080000, then si
 signature from 0x10330010. Signature itself contains addresses of signed area (CG1 aka firmware) and its hash checked.
 
 If ok, boot adds this addresses to trusted area and checks entry point. If ok, boot jumps to entry point.
-If something fails, bootloader goes to flash mode (maby writes to panic log?) as
+If something fails, bootloader goes to flash mode (maby writes to panic log?) as "S <b>Flash</b> Neptune LTE2", pid 4903.
+
+== Signature check flaw ==
+
+In old bootloaders there is no check about fw header, so entry point can referer to other signed area. Its enougth to trick rsa checks.
+Bootloader on my A1200 have this check, so see section below.
+
+== Bootloader downgrade ==
+This flaw was closed in new bootloaders (A1200), but not on E2. Since both A1200 (version 984) and E2 (version 910) are signed with same key, its possible to downgrade bootloader using test point and ramldr2. 
+Firmware checks bootloader version so its impossible to downgrade bootloader without removing rsa protection from fw and pathing it.
+
+== Bootloader critical error ==
+
+There is one big problem with flash bootloader: it can fail before enabling usb. Its also PAIN. How can this be?
+
+* flash bootloader does not check for flashkey press itself! after firmware boots, it checks flashkey and goes back to bootloader
+* flash bootloader reads PDS and goes to critical error without enabling usb if pds broken
