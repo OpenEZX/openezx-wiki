@@ -182,3 +182,23 @@ On LTE2 IROM3 with rsa checks i should to same except last step.
 * send ADDR to set loading address to stack address (0x03FEF800) - irom should report error, since its totally impossible to write to stack on such hardened device
 * just ignore error and send a lot of <tt>\x03\xFD\x00\x14</tt> (address of code entry point) using bin
 * code at 0x03FD0014 executed!
+
+== Write data to flash ==
+
+=== Native motorola way ===
+
+* send ramloader using ADDR-BIN-JUMP
+* send ERASE (erase regions harcoded in ramloader header)
+* use ADRR to set loading address to '''flash'''
+* use BIN to send 4k bytes of data
+
+=== Gen-blob way ===
+
+* send 0x20000 (flash eraseblock size) of data to ram buffer (for example 0xa0400000)
+* use FLASH command to flash data from 0xa0400000 to given address 
+
+=== RAMLDR2 way ===
+
+* send F command to set loading address - ramldr2 should report eraseblock size
+* send exactly this amount of data splitted to 1k frames - ramldr2 should report _OK to each frame
+* after all data sent, ramldr should report data checksum
