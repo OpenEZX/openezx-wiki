@@ -2,13 +2,25 @@ Here is bootloader command reference
 
 == ADDR ==
 
-ADDR command specifies address for next BIN command. Includes address in hex-ascii and checksum in hex-ascii in this format:
+ADDR command specifies address for next BIN command. Includes address in hex-ascii and checksum in hex-ascii in this format: <pre>\x20ADDR\x1eA040000099</pre>
 
-<pre>
-\x20 - start of packet
-ADDR - command name
-\x1e - data separator
-A0400000 - loading address
-99 - address checksum
-\x03  - end of packet
-</pre>
+{|
+|-
+| \x03
+| start of packet
+|-
+|ADDR
+|command name
+|-
+| \x1e
+| data separator
+|-
+| A0400000
+| loading address
+|-
+| 99
+| address checksum
+|-
+| \x03
+| end of packet
+|}
