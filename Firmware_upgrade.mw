@@ -11,7 +11,8 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 {| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Command
-! IROM
+! IROM 2,3
+! IROM 4
 ! LTE2
 ! LTE2 ram
 ! a780-blob
@@ -27,10 +28,12 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | y
 | y
 | y
+| y
 | n
 | request running software version
 |-
 | RQSN
+| n
 | n
 | y
 | y
@@ -41,6 +44,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | request serial number
 |-
 | READ
+| n
 | n
 | style="background:red" | y
 | style="background:red" | y
@@ -54,6 +58,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | style="background:yellow" | y
 | style="background:red" | y
 | style="background:red" | y
+| style="background:red" | y
 | y
 | y
 | y
@@ -61,6 +66,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | sets addres for next write
 |-
 | JUMP
+| style="background:yellow" | y
 | style="background:yellow" | y
 | style="background:red" | y
 | style="background:red" | y
