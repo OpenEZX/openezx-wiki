@@ -208,4 +208,15 @@ On LTE2 IROM3 with rsa checks i should to same except last step.
 All bootloaders except RAMLDR2 use same command format and USB interface. To send command you should find two endpoints (in and out) on USB interface.
 On gen1 output is 2, input is 1 (0x810), on other output is 1, input is 2 (0x82).
 
-Every packet starts from \x02, then goes command in ASCII. If there is any arguments, right after command goes separator \x1e, then arguments and terminating \x03:
+Every packet starts from \x02, then goes command in ASCII. If there is any arguments, right after command goes separator \x1e, then arguments (usially HEX-ASCII-coded) and terminating \x03:
+
+<pre>
+\x02RQSN\x03 - send RQSN, no args
+\x02ADDR\x1eA0400000\x03 - send ADDR with argument 0xa0400000
+</pre>
+
+Same with response:
+
+<pre>
+\x02ACK\x1eA0400000\x03 - write to address 0xA0400000 permitted
+</ore>
