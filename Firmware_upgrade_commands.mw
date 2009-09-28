@@ -16,10 +16,38 @@ ADDR command specifies address for next BIN command. Includes address in hex-asc
 | data separator
 |-
 | A0400000
-| loading address
+| loading address in hex-ascii
 |-
 | 99
-| address checksum
+| address checksum in hex-ascii
+|-
+| \x03
+| end of packet
+|}
+
+
+== BIN ==
+
+Bin sends data to address set by last ADDR command. Data should be padded to 4096. Format: <pre>\x20BIN\x1e\x10\x00\x00\x00\x00...\xFF</pre>
+
+{|
+|-
+| \x03
+| start of packet
+|-
+|BIN
+|command name
+|-
+| \x1e
+| data separator
+|-
+| \x10\x00
+| data size '''in bin''': 0x1000
+|-
+| \x00\x00\x00...
+| data
+|-
+| \xFF - checksum of size and data
 |-
 | \x03
 | end of packet
