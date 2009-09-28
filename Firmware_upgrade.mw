@@ -1,0 +1,83 @@
+This page describes firmware upgrade process including commands and restrictions.
+
+== How this works ==
+
+Every motorola bootloader supports at least one feature: executing (signed) code via usb. 
+Bootloader itself is not capable to flash firmware, so host tool sends (signed) upgrade agent with flashing code, called "ramloader"
+
+
+== Command set ==
+
+{| border="0" cellpadding="2" cellspacing="2" align="top" style="text-align:left;"
+|- style="background:#bfbfbf; font-weight: bold"
+! Command
+! IROM
+! LTE2
+! LTE2 ram
+! a780-blob
+! MBM
+! gen-blob
+! ramldr2
+! Description
+|-
+| RQVN
+| y
+| y
+| y
+| y
+| y
+| y
+| n
+| request running software version
+|-
+| RQSN
+| n
+| y
+| y
+| ??
+| y
+| n
+| n
+| request serial number
+|-
+| READ
+| n
+| style="background:red" | y
+| style="background:red" | y
+| ??
+| n
+| renamed: RBIN
+| renamed: R
+| read data from given address
+|-
+| ADDR
+| style="background:yellow" | y
+| style="background:red" | y
+| style="background:red" | y
+| y
+| y
+| y
+| part of: F
+| sets addres for next write
+|-
+| JUMP
+| style="background:yellow" | y
+| style="background:red" | y
+| style="background:red" | y
+| y
+| y
+| y
+| n
+|}
+
+{|
+|-
+| style="background:|white; border: black" | y
+| no restrictions
+|-
+| style="background:yellow" | y
+| weak hackable restriction
+|-
+| style="background:red" | y
+| strong restriction
+|}
