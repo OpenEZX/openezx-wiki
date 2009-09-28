@@ -86,7 +86,7 @@ Flashing broken fw or fw from different phone can broke your PDS.
 == Boot sequence ==
 
 On powerup, execution starts from 0x0 (IROM) which initialize hardware and checks flash bootloader presence and validity. If this check fails, irom boot goes to "blank" state and initializes USB as "S Blank Neptune LTE2", product id 4903.
-There is a flaw in blank bootloader, allowing to load and execute unsigned code. Forsing phone to go in "blank" state procedure is called "test point".
+There is a flaw in blank bootloader, allowing to load and execute unsigned code (see [[Firmware upgrade#Hacks]]). Forsing phone to go in "blank" state procedure is called "test point".
 Flash bootloader has no such flaw and the only way to flash it is using signed motorola ramloader (CG0 in every firmware).
 
 Note: during suspend mode debugging i saw bp in blank state several times without test point.
