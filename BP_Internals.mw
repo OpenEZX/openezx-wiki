@@ -145,7 +145,7 @@ The check process is the same as with boot, bootloader reads fw header from 0x01
 signature from 0x10330010. Signature itself contains addresses of signed area (CG1 aka firmware) and its hash checked.
 
 If it's ok, boot adds this addresses to trusted area and checks entry point. If it's ok, boot jumps to entry point.
-If something fails, bootloader goes to flash mode (maybe writes to panic log?) as "S <b>Flash</b> Neptune LTE2", pid 4903.
+If something fails, bootloader goes to flash mode (maybe writes to panic log?) as "S <b>Flash</b> Neptune LTE2", pid 4903. Work with bootloader via USB described in [[Firmware upgrade]].
 
 == Signature check flaw ==
 
