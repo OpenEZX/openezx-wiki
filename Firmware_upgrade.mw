@@ -117,6 +117,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | no
 | yes
 | no
+| redirect USB to bp
 | -
 |}
 
