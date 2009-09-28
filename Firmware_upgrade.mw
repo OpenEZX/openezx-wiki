@@ -108,6 +108,16 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | y
 | n
 | shutdowns phone
+|-
+| BP_PASS
+| -
+| -
+| -
+| -
+| no
+| yes
+| no
+| -
 |}
 
 {|
