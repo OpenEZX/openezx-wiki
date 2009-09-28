@@ -86,6 +86,16 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | n
 | erases previosly given range of flash memory
+|-
+| POWER_DOWN
+| ??
+| ??
+| y
+| ??
+| ??
+| n
+| y
+| n
 |}
 
 {|
