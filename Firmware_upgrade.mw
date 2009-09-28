@@ -43,6 +43,17 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | request serial number
 |-
+| RQCS
+| y
+| y
+| y
+| y
+| y
+| n
+| y
+| n
+| calculates given memory range checksum
+|-
 | READ
 | n
 | n
