@@ -169,3 +169,5 @@ bootloader in this state looks from host like this:
 usb 4-1: device not accepting address 24, error -71
 hub 4-0:1.0: unable to enumerate USB device on port 1
 </pre>
+
+[[Category:BP]]
