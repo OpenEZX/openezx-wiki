@@ -52,6 +52,17 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | y
 | n
+| calculates all code groups checksum
+|-
+| [[Firmware_upgrade_commands#RQRC|RQRC]]
+| y
+| y
+| y
+| y
+| y
+| n
+| y
+| n
 | calculates given memory range checksum
 |-
 | [[Firmware_upgrade_commands#READ|READ]]
