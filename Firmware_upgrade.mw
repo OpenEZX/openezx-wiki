@@ -65,6 +65,17 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | part of: F
 | sets addres for next write
 |-
+| BIN
+| style="background:yellow" | y
+| style="background:red" | y
+| style="background:red" | y
+| style="background:red" | y
+| y
+| y
+| ram only
+| part of: F
+| send data and copy or flash it to address, pleviously set by ADDR.
+|-
 | JUMP
 | style="background:yellow" | y
 | style="background:yellow" | y
