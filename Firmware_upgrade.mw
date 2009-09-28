@@ -159,3 +159,26 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 
 * RQCS can be used to dump protected memory ranges
 * ADDR-BIN can be used to execute unsigned code via direct writes to stack
+
+== Load and execute code ==
+
+=== Without rsa checks ===
+
+I want to load binary at address <tt>0xa00e0000</tt> and then execute. There is no signature checks in MBM, blob and gen-blob, so i can use jump
+ 
+* use ADDR to set loading addres to 0xa00e0000
+* use BIN to send first 0x1000 bytes of data
+* set loading address to 0xa00e1000
+* send next 0x1000 bytes
+* repeat to send all data
+* use JUMP to execute code at 0xa00e0000
+* code at 0xa00e0000 executed!
+
+=== Whith rsa checks using bootloader weakness ===
+
+On LTE2 IROM3 with rsa checks i should to same except last step.
+
+* send data to 0x03FD0000 using ADDR-BIN
+* send ADDR to set loading address to stack address (0x03FEF800) - irom should report error, since its totally impossible to write to stack on such hardened device
+* just ignore error and send a lot of <tt>\x03\xFD\x00\x14</tt> (address of code entry point) using bin
+* code at 0x03FD0014 executed!
