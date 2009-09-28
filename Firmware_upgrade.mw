@@ -219,4 +219,4 @@ Same with response:
 
 <pre>
 \x02ACK\x1eA0400000\x03 - write to address 0xA0400000 permitted
-</ore>
+</pre>
