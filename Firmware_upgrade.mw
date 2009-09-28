@@ -21,7 +21,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 ! ramldr2
 ! Description
 |-
-| RQVN
+| [[Firmware_upgrade_commands#RQVN|RQVN]]
 | y
 | y
 | y
@@ -32,7 +32,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | request running software version
 |-
-| RQSN
+| [[Firmware_upgrade_commands#RQSN|RQSN]]
 | n
 | n
 | y
@@ -43,7 +43,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | request serial number
 |-
-| RQCS
+| [[Firmware_upgrade_commands#RQCS|RQCS]]
 | y
 | y
 | y
@@ -54,7 +54,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | calculates given memory range checksum
 |-
-| READ
+| [[Firmware_upgrade_commands#READ|READ]]
 | n
 | n
 | style="background:red" | y
@@ -65,7 +65,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | renamed: R
 | read data from given address
 |-
-| ADDR
+| [[Firmware_upgrade_commands#ADDR|ADDR]]
 | style="background:yellow" | y
 | style="background:red" | y
 | style="background:red" | y
@@ -76,7 +76,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | part of: F
 | sets addres for next write
 |-
-| BIN
+| [[Firmware_upgrade_commands#BIN|BIN]]
 | style="background:yellow" | y
 | style="background:red" | y
 | style="background:red" | y
@@ -87,7 +87,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | part of: F
 | send data and copy or flash it to address, pleviously set by ADDR.
 |-
-| JUMP
+| [[Firmware_upgrade_commands#JUMP|JUMP]]
 | style="background:yellow" | y
 | style="background:yellow" | y
 | style="background:red" | y
@@ -98,7 +98,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | jumps to given address
 |-
-| ERASE
+| [[Firmware_upgrade_commands#ERASE|ERASE]]
 | n
 | n
 | n
@@ -109,7 +109,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | erases previosly given range of flash memory
 |-
-| POWER_DOWN
+| [[Firmware_upgrade_commands#POWER_DOWN|POWER_DOWN]]
 | ??
 | ??
 | y
@@ -120,7 +120,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | n
 | shutdowns phone
 |-
-| BP_PASS
+| [[Firmware_upgrade_commands#BP_PASS|BP_PASS]]
 | -
 | -
 | -
@@ -131,7 +131,7 @@ Bootloader itself is not capable to flash firmware, so host tool sends (signed) 
 | -
 | redirect USB to bp
 |-
-| FLASH
+| [[Firmware_upgrade_commands#FLASH|FLASH]]
 | n
 | n
 | n
