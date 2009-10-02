@@ -32,7 +32,7 @@
 == Motorola Q9h Features ==
 
 *325Mhz OMAP 2420 ARM1136 CPU (ARMv6 ISA)
-*220Mhz TMS320C55x DSP
+*220Mhz TMS320C55x DSP (might only be available to GSM subsystem)
 *Bluetooth Class 2 V2.0 (A2DP & AVRCP support)
 *320x240 16-bit display
 *2MP Camera (still), 320x240 (video) 3GP, MPEG4, WMV
