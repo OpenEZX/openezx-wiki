@@ -4,13 +4,13 @@
 !
 |-
 | Product name:
-| RAZR2 V8
+| Q9h
 |-
 | Codename:
 | -
 |-
 | Generation:
-| 3rd (Black bootloader screen)
+|
 |-
 | [[Project_devices |Project device]]:
 | No
@@ -19,144 +19,58 @@
 | -
 |-
 | Motorola source code:
-| https://opensource.motorola.com/sf/projects/razr2v8
+| (none)
 |-
 | PCB pictures:
-| [[Razr2 Board]]
+| see picasaweb
 |}
 
 
-[[Image:Razr2.jpg]]
+[[Image:Q9h.jpg]]
 ----
 
-Motorola has announced the release of three new RAZR models, collectively called RAZR2.  The RAZR2-V8 is the only Linux/MotoMAGX based model.  The V9 and V9m are based on the Motorola Synergy OS, supposedly because Linux does not yet support HSDPA (V9) or CDMA EV-DO (V9m).   The V8 supports Quad-band GSM EDGE, and unlike the 2 V9 devices, does '''not''' have expandable memory via flash cards.  Instead, the V8 comes with either 512MB or 2GB of memory.  As of July 2007, the V8 is available officially in Korea and Hong Kong for approximately US$450 without contract, and via eBay elsewhere.
 
-== MOTORAZR V8 Features ==
+== Motorola Q9h Features ==
 
-*500Mhz ARM11 CPU[http://www.fiercewireless.com/story/moto-media-monster-is-z8-but-razr2-is-new/2007-05-15]
+*325Mhz OMAP 2420 ARM11 CPU [http://pdadb.net/index.php?m=cpu&id=a2420&c=texas_instruments_omap_2420]
+*220Mhz TMS320C55x DSP
 *Bluetooth Class 2 V2.0 (A2DP & AVRCP support)
-*"Morphing touch sensitive haptics controls" or "external display with contextual touch interaction" depending on your "marketing-speak" preference
-*dual 240x320 18-bit displays (internal, external)
-*WMP11 support
-*2MP Camera (still),  QCIF (MP4 video)
-*EDGE Class-12
-*2mm slimmer than original RAZR
-*seems to be MACH_LIDO in the kernel (flip phone, 2* QVGA = HVGA)
+*320x240 16-bit display
+*2MP Camera (still), 320x240 (video) 3GP, MPEG4, WMV
+*Quad-Band GSM, Tri-Band UMTS
+*Assisted-GPS
+*2D/3D PowerVR/MBX Graphics Accelerator up to 2M polygons/sec[]
 
+For more information, see article on pdadb.net[http://pdadb.net/index.php?m=specs&id=307&view=1&c=motorola_moto_q_9h_q9h].
 
-[http://www.siamphone.com/news/2007/motorola/razr2/page.htm Asia launch photos]
+== Linux ==
 
-[https://opensource.motorola.com/sf/sfmain/do/viewProject/projects.razr2v8 Motorola RAZR2 V8 Sources]
+Currently, no Linux port is available. However, there is substantial support for the OMAP2420 already in the Linux kernel (mainly contributed by Nokia for their internet tablets). 
+
+== Porting Strategies ==
+
+* Synchronize kernel source with linux-omap git
+* Create branch q9h
+* Copy the generic OMAP board file, and rename board-motorola-q9h.c
+* Obtain a GPIO register dump using HaRET
+* Use the GPIO register dump to set the initial GPIO configuration in board-motorola-q9h.c
+* Obtain a UART / console over the D+/D- pins of the Q9h USB connector
+* Likewise, use HaRET to dump the LCD configuration registers, and bring up the initial LCD configuration
+* Determine the keypad mapping for the OMAP keypad controller & enter the scancodes in board-motorola-q9h.c
+* Submit changes upstream to linux-omap git
 
 == Chips used ==
-* SKY77512 Skyworks quad band EDGE FEM
-* BCM2045KWBG Broadcom Bluetooth module
+* TI OMAP 2420 SoC
+* TI TWL92230C Power Management Companion IC for the OMAP 24xx
+* SKY77413-21 Skyworks WCDMA FEM
+* BCM2045KWBG Broadcom Bluetooth Module
 * SC13783VK5 Freescale OEM_EXC NEED TP(?)
-* SC29364VK
-* TY9000C010
-* MMM6000 Freescale Quad Band GSM/EDGE Transciever [http://www.freescale.com/files/wireless_comm/doc/fact_sheet/MMM60006027FS.pdf]
-
-== Entering boot loader ==
-
-To enter boot loader mode turn off the RAZR2 V8. Then press and hold both the '*' and '#' buttons and press the power button.
-
-The screen will display:<br/>
-<pre>
-Bootloader
-A3.C9
-Battery OK
-OK to Program
-Connect USB
-Data Cable
-</pre>
-
-Connect the USB cable and the Display will show "Transfer Mode: USB". In this mode boot_usb can talk to the phone, but transfers don't seem to succeed.
-
-See [[Bootloader]] for details on on booting an alternate kernel.
-
-== USB modes ==
-Set your RAZR2 USB setting to modem, connect to /dev/ttyACM0 (you'll need the module cdc-acm) and then type the following command to change USB modes:
-
-* AT+MODE=0 Seems to be the current (ACM) mode
-* AT+MODE=8 Networking (''IP address is '''192.168.16.2''' see: [[Get a shell]]'')
-* AT+MODE=24 USB mass storage
-* AT+MODE=26 PTP Picture transfer protocol
-
-All other values return ERROR and don't seem to have any effect
-
-
-== Proc reports ==
-
-=== Version ===
-
-Linux version 2.6.10_dev(gcc version 3.4.3 (MontaVista 3.4.3-25.0.96.custom 2006-06-12))
-
-=== crypto ===
-
- name         : sha1
- module       : kernel
- type         : digest
- blocksize    : 64
- digestsize   : 20
-
-=== modules ===
-
- modemrelay           5288  0 - Live 0xbf081000
- modembridge          3200  1 modemrelay, Live 0xbf07f000
- brassboard_tr_fx2lp 31044  0 - Live 0xbf076000
- generic_cf           6120  0 - Live 0xbf073000
- pbg_if              14680  0 - Live 0xbf06e000
- mtp_if              15112  0 - Live 0xbf069000
- msc_if              22804  0 - Live 0xbf062000
- tty_if              19821  0 - Live 0xbf05c000
- network_if          20344  0 - Live 0xbf056000
- otgcore             64404  7 brassboard_tr_fx2lp,generic_cf,pbg_if,mtp_if,msc_if,tty_if,network_if, Live 0xbf045000
- coredump            10004  0 - Live 0xbf041000
- suapi              114785 25 - Live 0xbf023000
- haptics              6844  0 - Live 0xbf020000
- netmux_linkdriver    8024  0 - Live 0xbf01d000
- netmux              56804 21 netmux_linkdriver, Live 0xbf00e000
- mpmdrv              27952  1 - Live 0xbf006000
- profilerdrv          6124  1 - Live 0xbf003000
- gpiodev              6816  0 - Live 0xbf000000
-
-=== cpu ===
-
- Processor       : Some Random V6 Processor rev 1 (v6l)
- BogoMIPS        : 88.46
- Features        : swp half thumb fastmult vfp edsp java
- CPU implementer : 0x41
- CPU architecture: 6TEJ
- CPU variant     : 0x1
- CPU part        : 0xb36
- CPU revision    : 1
- Cache type      : write-back
- Cache clean     : cp15 c7 ops
- Cache lockdown  : format C
- Cache format    : Harvard
- I size          : 16384
- I assoc         : 4
- I line length   : 32
- I sets          : 128
- D size          : 16384
- D assoc         : 4
- D line length   : 32
- D sets          : 128
- 
- Hardware        : Motorola Product - Lido
- Revision        : 0021
-
-
-
-
+* SC29364VK0 Freescale OEM_EXC NEED TP(?)
+* MMM6000 Freescale Quad-Band GSM/EDGE Transciever [http://www.freescale.com/files/wireless_comm/doc/fact_sheet/MMM60006027FS.pdf]
+* MMM6007 Freescale Tri-Band WCDMA Transciever [http://www.freescale.com/files/wireless_comm/doc/fact_sheet/MMM60006027FS.pdf]
+* SiRF 5000 AGPS Receiver
 
 == External Links ==
 
-*[https://ezx.darktech.org/ Power of Linux] - Russian Z6/V8 software project (porting unix tools)
-*[http://www.rasputin007.co.uk/storage/webpages/pol/index.htm English instructions for using Power of Linux telnet and FTP on V8]
-*[http://www.rasputin007.co.uk/storage/webpages/v8_cg/ How to work with squashfs image/loopback files]
-*[http://www.rasputin007.co.uk/New-Forum/viewtopic.php?f=14&t=12 SFB file tool for Linux] ([http://www.rasputin007.co.uk/storage/others/SBF-ReCalc%201.2.8.%20lin.rar direct link])
-*[http://www.motorolafans.com/forums/showthread.php?t=20059 RAZR2 V8 uses EZX emailheader]
-
 [[Category:Hardware]]
-[[Category:Razr2]]
+[[Category:Q]]
