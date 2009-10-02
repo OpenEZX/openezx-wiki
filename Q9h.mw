@@ -44,7 +44,9 @@ For more information, see article on pdadb.net[http://pdadb.net/index.php?m=spec
 
 == Linux ==
 
-Currently, no Linux port is available. However, there is substantial support for the OMAP2420 already in the Linux kernel (mainly contributed by Nokia for their internet tablets). 
+Currently, no Linux port is available. However, there is already substantial support for the OMAP2420 in the Linux kernel (mainly contributed by Nokia for their internet tablets). 
+
+This project will sync with the linux-omap git tree [http://git.kernel.org/?p=linux/kernel/git/tmlind/linux-omap-2.6.git].
 
 === Porting Strategies ===
 
