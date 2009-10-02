@@ -48,7 +48,7 @@ Currently, no Linux port is available. However, there is already substantial sup
 
 This project will sync with the linux-omap git tree [http://git.kernel.org/?p=linux/kernel/git/tmlind/linux-omap-2.6.git].
 
-=== Porting Strategies ===
+=== Porting Strategy ===
 
 * Synchronize kernel source with linux-omap git
 * Create branch q9h
@@ -58,7 +58,21 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 * Obtain a UART / console over the D+/D- pins of the Q9h USB connector
 * Likewise, use HaRET to dump the LCD configuration registers, and bring up the initial LCD configuration
 * Determine the keypad mapping for the OMAP keypad controller & enter the scancodes in board-motorola-q9h.c
-* Submit changes upstream to linux-omap git
+* Request a new, official, mach-type (number) used to identify the board inside the Linux kernel
+* Submit initial port upstream to linux-omap git
+* Notify openezx and other groups about the port
+* Continue to add device features over time (gpio device, i2c, power switches, etc) and submit changes upstream
+
+=== Misc ===
+
+* build an initramfs image for the initial userspace
+* build development filesystems once the MMC card is working
+** OpenEmbedded / Angstrom
+** Gentoo
+* submit relevent OE configuration upstream
+* integrate miscellaneous userspace components (bluez, PowerVR OpenGL ES 1.0 libraries, AGPS, etc)
+* build a generic Android filesystem (probably based on Donut)
+* eventually add hardware control libraries to Android build, and create new vendor / platform
 
 == Chips used ==
 * TI OMAP 2420 SoC [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
