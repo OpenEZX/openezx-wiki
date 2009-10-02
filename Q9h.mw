@@ -31,14 +31,14 @@
 
 == Motorola Q9h Features ==
 
-*325Mhz OMAP 2420 ARM11 CPU [http://pdadb.net/index.php?m=cpu&id=a2420&c=texas_instruments_omap_2420]
+*325Mhz OMAP 2420 ARM11 CPU [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
 *220Mhz TMS320C55x DSP
 *Bluetooth Class 2 V2.0 (A2DP & AVRCP support)
 *320x240 16-bit display
 *2MP Camera (still), 320x240 (video) 3GP, MPEG4, WMV
 *Quad-Band GSM, Tri-Band UMTS
 *Assisted-GPS
-*2D/3D PowerVR/MBX Graphics Accelerator up to 2M polygons/sec[]
+*2D/3D PowerVR/MBX Graphics Accelerator up to 2M polygons/sec
 
 For more information, see article on pdadb.net[http://pdadb.net/index.php?m=specs&id=307&view=1&c=motorola_moto_q_9h_q9h].
 
