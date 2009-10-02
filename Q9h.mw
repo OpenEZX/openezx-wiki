@@ -59,15 +59,16 @@ Currently, no Linux port is available. However, there is substantial support for
 * Submit changes upstream to linux-omap git
 
 == Chips used ==
-* TI OMAP 2420 SoC
-* TI TWL92230C Power Management Companion IC for the OMAP 24xx
-* SKY77413-21 Skyworks WCDMA FEM
-* BCM2045KWBG Broadcom Bluetooth Module
+* TI OMAP 2420 SoC [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
+* TI TWL92230C Power Management Companion IC for the OMAP 24xx [http://focus.ti.com/lit/ds/symlink/twl92230c.pdf]
+* SKY77413-21 Skyworks WCDMA FEM [http://www.skyworksinc.com/uploads/documents/200415p2.pdf]
+* BCM2045KWBG Broadcom Bluetooth Module [http://www.broadcom.com/collateral/pb/2045-PB03-R.pdf]
 * SC13783VK5 Freescale OEM_EXC NEED TP(?)
 * SC29364VK0 Freescale OEM_EXC NEED TP(?)
 * MMM6000 Freescale Quad-Band GSM/EDGE Transciever [http://www.freescale.com/files/wireless_comm/doc/fact_sheet/MMM60006027FS.pdf]
 * MMM6007 Freescale Tri-Band WCDMA Transciever [http://www.freescale.com/files/wireless_comm/doc/fact_sheet/MMM60006027FS.pdf]
-* SiRF 5000 AGPS Receiver
+* SiRF 5000 AGPS Receiver [http://www.sirf.com/products/GSCi5000ProductInsert.pdf]
+* MicroChip PIC 18F2420 [http://ww1.microchip.com/downloads/en/DeviceDoc/39631E.pdf]
 
 == External Links ==
 
