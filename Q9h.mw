@@ -66,6 +66,7 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 === Misc ===
 
 * build an initramfs image for the initial userspace
+* provide haret booting instructions, zImage, and initramfs image to community
 * build development filesystems once the MMC card is working
 ** OpenEmbedded / Angstrom
 ** Gentoo
