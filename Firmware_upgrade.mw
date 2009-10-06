@@ -1,5 +1,9 @@
 This page describes firmware upgrade process including commands and restrictions.
 
+== BP pass-through mode ==
+
+By default you can access only AP bootloader, not BP. To access BP bootloader you can run firmware utilites directly on phone, or put AP bootloader in pass-through mode. On gen2 you need to press flash button one more time and MBM loader should write "BP passthrough" in the center of screen.
+
 == How this works ==
 
 Every motorola bootloader supports at least one feature: executing (signed) code via usb. 
