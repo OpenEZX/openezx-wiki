@@ -1,0 +1,80 @@
+This page describes EZX gen2 BP firmware upgrade and repair, using hardware testpoing and putusb software.
+
+== Requirments ==
+
+* Python 2.5 or higher
+* libusb ( libusb-filter on windows )
+* pyusb
+
+== Putusb and RAMLDR2 ==
+
+Create working directory somewhere ( /tmp/lte in unix or C:\lte in windows ) and place there two files:
+* [http://ezxdev.org/qtopia/bp/loader_for_ramldr2.bin RAMLDR2] loader for phone
+* [http://github.com/muromec/putusb/raw/master/putusb.py Putusb] library for host
+
+== Launching python console ==
+
+In Linux (working directory is /tmp/lte): 
+
+# open terminal emulator 
+# type: <b><tt>cd /tmp/lte/</tt></b>
+# type: <b><tt>python</tt></b> you should see something like this 
+<pre>
+ Python 2.6.2 (r262:71600, Jul 20 2009, 02:23:30) 
+ [GCC 4.4.0 20090630 (prerelease)] on linux2
+ Type "help", "copyright", "credits" or "license" for more information. 
+</pre>
+# type <b><tt>
+
+In Windows (working directory is C:\lte)
+
+# press Win-R
+# type <b><tt>cmd</tt></b> to open terminal
+# type <b><tt>C:</tt></b> and <b><tt>cd \lte</tt></b>
+# type <b><tt>python</tt></b>
+
+== Prepairing putusb ==
+
+Now loading ramldr into python shell and importing putusb library. Type following:
+
+<pre>
+import putusb
+f = open("loader_for_ramldr2.bin","rb")
+loader = f.read()
+f.close()
+loader += '\xff'*(4096 - len(loader))
+</pre>
+
+== Connecting phone ==
+
+If all ok, do testpoint and put phone in passthrough mode (press flash key one more time, "BP Passthrough" should appear on screen). Now connect to phone bootloader from python shell and check its version:
+
+<pre>
+dev = putusb.MotoUsb()
+dev.version()
+</pre>
+
+If all is ok, you should see IROM bootloader version: 
+
+<tt>
+00130200FF00<b>0300</b>,00130200FF00<b>0300</b>
+</tt>
+
+If you missed with testpoing, you will get flash bootloader version:
+
+<tt>
+00130201FF00<b>0900</b>,00130201FF00<b>0900</b>,FFFFFFFF00FFFFFF,00130206FFFF1152,....many other
+</tt>
+
+
+== Loading RAMLDR2 ==
+
+To load ramldr2 on phone, type following:
+
+<pre>
+dev.set(0x03FD0000,loader)
+dev.set(0x03FEF800,'\x03\xFD\x00\x14'*512, True)
+dev.recv()
+</pre>
+
+You should get <i>"Ready"</i> after last command. If something wrong, redo from step [[#Connecting phone|Connecting phone]]
