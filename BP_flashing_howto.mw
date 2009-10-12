@@ -112,3 +112,5 @@ dump = f.read()
 f.close()
 dev.flash_ramldr2(0x10000000,dump)
 </pre>
+
+[[Category:BP]]
