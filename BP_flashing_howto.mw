@@ -96,7 +96,7 @@ Now you should see 4MB file <i>bp_backup.dump</i> in your working directory. Its
 
 == Flashing ==
 
-Now you can flash anything everywhere. So, get somewhere repair image or dump and place it in working directory. 
+Now you can flash anything everywhere. So, get somewhere repair image or your backup and place it in working directory. 
 
 Commands below flashes file <i>repair image name here</i> from beginning of flash.
 
