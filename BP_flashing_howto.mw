@@ -66,6 +66,7 @@ If you missed with testpoing, you will get flash bootloader version:
 00130201FF00<b>0900</b>,00130201FF00<b>0900</b>,FFFFFFFF00FFFFFF,00130206FFFF1152,....many other
 </tt>
 
+Version can be different (0900, 0910, 0914, 0980 or somethign else).
 
 == Loading RAMLDR2 ==
 
@@ -93,6 +94,7 @@ f.close()
 </pre>
 
 Now you should see 4MB file <i>bp_backup.dump</i> in your working directory. Its your bp backup - go and save it in safe place.
+If you have some time, please send full dump to me, i`l exctract bootloader and some other interting for me things.
 
 == Flashing ==
 
@@ -112,5 +114,10 @@ dump = f.read()
 f.close()
 dev.flash_ramldr2(0x10000000,dump)
 </pre>
+
+== Note about repair image ==
+
+I cant include repair image here, becouse it includes hacked proprietary firmware, but you can find it somewhere.
+<b>If you flashed repair image, you should not reflash BP any more</b>, so if you want to flash some firmware after repairing BP, you should <b>remove</b> BP codegroups from it or repeate full repair procedure after every reflash.
 
 [[Category:BP]]
