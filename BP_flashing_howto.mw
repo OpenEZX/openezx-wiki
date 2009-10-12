@@ -78,3 +78,37 @@ dev.recv()
 </pre>
 
 You should get <i>"Ready"</i> after last command. If something wrong, redo from step [[#Connecting phone|Connecting phone]]
+
+== Saving full backup ==
+
+Its good idea to save current flash contents before loading. Be sure, you removed testpoint before doing this.
+
+Type:
+<pre>
+dev.read = dev.read_ramldr2
+all = dev.get(0x10000000,4*1024*1024)
+f = open("bp_backup.dump","wb")
+f.write(all)
+f.close()
+</pre>
+
+Now you should see 4MB file <i>bp_backup.dump</i> in your working directory. Its your bp backup - go and save it in safe place.
+
+== Flashing ==
+
+Now you can flash anything everywhere. So, get somewhere repair image or dump and place it in working directory. 
+
+Commands below flashes file <i>repair image name here</i> from beginning of flash.
+
+<b>BIG FAT WARNING</b><br/>
+<b>This would brick your phone if you miss with address or file contents</b><br/>
+<b>Dont do this, if have no backup!</b><br/>
+
+Type:
+
+<pre>
+f = open("repair image name here","rb")
+dump = f.read()
+f.close()
+dev.flash_ramldr2(0x10000000,dump)
+</pre>
