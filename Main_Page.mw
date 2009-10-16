@@ -99,6 +99,7 @@ Researchs on Motorola's software related to the 2.6 linux port.
 * [[Crosscompile|How to crosscompile]] for the EZX device
 * [[Kernel hacking - linux-2.6]]
 * [[Dual boot| Dual-boot and gen-blob]]
+* [[Dumping RAM with gen-blob]]
 * How to use the [[JTAG]] interface
 * [[Bootloader]]
 * [[Serial console]]
