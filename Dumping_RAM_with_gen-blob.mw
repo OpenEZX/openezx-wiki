@@ -1,0 +1,32 @@
+Using [[Dual_boot|gen-blob]] it is possible to dump the phone RAM to retrieve the kernel messages in order to diagnose and fix a crash.
+
+When you experience a kernel crash:
+
+<ol>
+<li>
+Remove the battery:
+</li>
+<li>
+Reinsert it immediately holding the keys to enter bootloader mode (see [[Bootloader#Enter_the_bootloader]]).
+</li>
+<li>
+Load gen-blob via usb:
+<pre>
+$ boot_usb setflag usb
+$ boot_usb gen-blob 0
+</pre>
+</li>
+<li>
+Dump the ram (32 MiB):
+<pre>
+$ boot_usb read 0xa0000000 33554432 memdump.bin
+$ boot_usb off
+</pre>
+</li>
+<li>
+Extract the kernel messages:
+<pre>
+$ strings memdump.bin | grep '^<[0-9]>\[[\ \.0-9]*\]'
+</pre>
+</li>
+</ol>
