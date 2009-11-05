@@ -72,7 +72,7 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 ** Gentoo
 * submit relevent OE configuration upstream
 * integrate miscellaneous userspace components (bluez, PowerVR OpenGL ES 1.0 libraries, AGPS, etc)
-* build a generic Android filesystem (probably based on Donut)
+* build a generic Android filesystem
 * eventually add hardware control libraries to Android build, and create new vendor / platform
 
 == Chips used ==
