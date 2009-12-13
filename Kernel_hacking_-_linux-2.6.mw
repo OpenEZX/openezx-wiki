@@ -48,7 +48,8 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
 
 === Notes ===
 * The last command will fail if you have "." in your PATH
-* if you don't have python 2.6, as debian actually ship only 2.5.x, you need to download bitbake 1.8.18, bitbake, this is how i retrieved 1.8.18 from git, as the releases are '''tagged''': 
+* if you don't have python 2.6 (as debian actually ships 2.5.x), you need to download bitbake 1.8.18 instead of the newer development versions. 
+This is how i retrieved 1.8.18 from git, as the releases are '''tagged''': 
  git clone git://git.openembedded.org/bitbake.git
  cd bitbake
  git-checkout 1.8.18
