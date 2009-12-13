@@ -35,7 +35,7 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
  mkdir /tmp/modules-of-the-day
  make ARCH=arm CROSS_COMPILE=/usr/local/angstrom/arm/bin/arm-angstrom-linux-gnueabi- INSTALL_MOD_PATH=/tmp/modules-of-the-day modules_install
  tar -C /tmp/modules-of-the-day -c . | bzip2 > modules-of-the-day.tar.bz2
- # (you need to be root root or sudoing on some commands, or for installing them later, as you will need to untar them on the root folder on the target rootfs)
+ # (you need to be root or sudoing on some commands, or for installing them later, as you will need to untar them on the root folder on the target rootfs)
 
 == Building OpenEZX kernel with openembedded ==
 * one of git snapshot of openezx kernel is used in OE. 
