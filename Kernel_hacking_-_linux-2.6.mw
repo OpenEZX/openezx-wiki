@@ -41,14 +41,18 @@ The preferred toolchain for building the kernel is the openembedded toolchain (s
 * one of git snapshot of openezx kernel is used in OE. 
 
 * Setup OE according to http://wiki.openembedded.net/index.php/Getting_Started
- * Note: Latest release of BitBake is required. Download it from http://developer.berlios.de/projects/bitbake/.
-   Recommended way is running it without install.
- * Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2008.1</tt> in local.conf
+
+* Use <tt>MACHINE=a780</tt> and <tt>DISTRO=angstrom-2008.1</tt> in local.conf
 
 * Run <tt>$ bitbake virtual/kernel</tt>
 
 === Notes ===
 * The last command will fail if you have "." in your PATH
+* Note: if you don't have python 2.6, as debian actually ship only 2.5.x, you need to download bitbake 1.8.18, bitbake is now hosted on git.openembedded.org, so i retrieved 1.8.18 '''tagged''' version like this:
+ git clone git://git.openembedded.org/bitbake.git
+ cd bitbake
+ git-checkout 1.8.18
+Recommended way is running bitbake without installing it.
 * the kernel expects the rootfs on the '''second''' partition of external flash (<tt>root=/dev/mmcblk0p2</tt>), with this setup you can use the first partition to store some data and access it when booting the original software (recently also kernels built by OE started to follow this convention).
 * by default this '''second''' partition must be ext2 fs.
 
