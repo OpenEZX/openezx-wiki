@@ -69,17 +69,7 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 
 * create project on gitorious 'linux-q9h' tracking linux-omap
 
-=== Misc ===
 
-* build an initramfs image for the initial userspace
-* provide haret booting instructions, zImage, and initramfs image to community
-* build development filesystems once the MMC card is working
-** OpenEmbedded / Angstrom
-** Gentoo
-* submit relevent OE configuration upstream
-* integrate miscellaneous userspace components (bluez, PowerVR OpenGL ES 1.0 libraries, AGPS, etc)
-* build a generic Android filesystem
-* eventually add hardware control libraries to Android build, and create new vendor / platform
 
 == Chips used ==
 * TI OMAP 2420 SoC [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
