@@ -50,18 +50,24 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 
 === Porting Strategy ===
 
-* Synchronize kernel source with linux-omap git
-* Create branch q9h
-* Copy the generic OMAP board file, and rename board-motorola-q9h.c
-* Obtain a GPIO register dump using HaRET
-* Use the GPIO register dump to set the initial GPIO configuration in board-motorola-q9h.c
-* Obtain a UART / console over the D+/D- pins of the Q9h USB connector
-* Likewise, use HaRET to dump the LCD configuration registers, and bring up the initial LCD configuration
-* Determine the keypad mapping for the OMAP keypad controller & enter the scancodes in board-motorola-q9h.c
-* Request a new, official, mach-type (number) used to identify the board inside the Linux kernel
-* Submit initial port upstream to linux-omap git
-* Notify openezx and other groups about the port
-* Continue to add device features over time (gpio device, i2c, power switches, etc) and submit changes upstream
+* HaRET can be used as a boot-loader
+* HaRET can also be used to map GPIO and read configuration registers
+* typically one would run a small HaRET script (logging to a file), and then perform key-presses or activate / deactivate peripherals (e.g. gsm, bluetooth)
+* the idea is to use HaRET to relate user-generated events to changes in register states, and to collect as much data of that sort as possible
+* to start off with the kernel source
+** clone the linux-omap git repository
+** create your own branch
+** create your own mach-type (corresponding entry in default.txt of HaRET)
+** copy the generic omap2420 device, entering your mach type
+** study other board files (in arch/arm/mach-omap2) and experiment!
+* the most important thing when porting Linux is to get console access somehow
+* however, any kind of affirmative feedback (e.g. LCD boot messages, blinking LED) is a welcome sight
+* After a console has been established, MMC / storage is usually the next priority
+* The OMAP 2420 Technical Reference Manual (TRM) is not publicly available
+
+=== TODO ===
+
+* create project on gitorious 'linux-q9h' tracking linux-omap
 
 === Misc ===
 
