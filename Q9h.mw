@@ -57,8 +57,8 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 * to start off with the kernel source
 ** clone the linux-omap git repository
 ** create your own branch
-** create your own mach-type (corresponding entry in default.txt of HaRET)
-** copy the generic omap2420 device, entering your mach type
+** create your own mach-type (this is what you enter in HaRET's default.txt)
+** copy the generic omap2420 device, entering your mach type in the MACHINE macro
 ** study other board files (in arch/arm/mach-omap2) and experiment!
 * the most important thing when porting Linux is to get console access somehow
 * however, any kind of affirmative feedback (e.g. LCD boot messages, blinking LED) is a welcome sight
