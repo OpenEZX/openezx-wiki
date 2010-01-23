@@ -65,6 +65,14 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 * After a console has been established, MMC / storage is usually the next priority
 * The OMAP 2420 Technical Reference Manual (TRM) is not publicly available
 
+=== HaRET ===
+
+* download haret and save it on your SD card
+* on your q9h, go to settings -> connections -> usb device type, and change it to rndis
+* connect the q9h to your host pc
+* run haret and listen for incoming connections
+* from your host pc, run 'telnet 169.254.2.146 9999' to get the haret console
+
 === TODO ===
 
 * get the basic kernel, initrd, console, and MMC working
