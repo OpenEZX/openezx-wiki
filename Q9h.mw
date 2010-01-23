@@ -69,7 +69,7 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 
 * [http://www.handhelds.org/~koconnor/haret/haret-0.5.2.exe download haret] and save it on your SD card
 * on your q9h, go to settings -> connections -> usb device type, and change it to rndis
-* connect the q9h to your host pc
+* connect the q9h to your host pc via usb
 * run haret and listen for incoming connections
 * from your host pc, run 'telnet 169.254.2.146 9999' to get the haret console
 
