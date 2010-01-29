@@ -105,7 +105,7 @@ Please Connect the USB Cable
 
 * get the basic kernel, initrd, console, and MMC working
 * make a list of functional features (e.g. keypad, LCD, MMC, NAND, BlueTooth, Voice Calls, UMTS, etc)
-* attach mappings of keys / basic sensors / disabling enabling components
+* map GPIO and MUX control
 
 == Chips used ==
 * TI OMAP 2420 SoC [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
