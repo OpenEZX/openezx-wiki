@@ -101,12 +101,11 @@ Please Connect the USB Cable
 
 === TODO ===
 
-*? expand to include orginal Q9 or create seperate page
 *? document each specific chip further
 * get the basic kernel, initrd, console, and MMC working
 * create project on gitorious 'linux-q9-q9h' tracking linux-omap (DONE) [http://gitorious.org/linux-q9-q9h]
 *? document which chips have existing code and which options are needed to support them in a kernel config
-*? attach mappings of keys / basic sensors / disabling enabling components 
+*? attach mappings of keys / basic sensors / disabling enabling components
 
 == Chips used ==
 * TI OMAP 2420 SoC [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
