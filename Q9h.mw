@@ -104,7 +104,7 @@ Please Connect the USB Cable
 *? expand to include orginal Q9 or create seperate page
 *? document each specific chip further
 * get the basic kernel, initrd, console, and MMC working
-* create project on gitorious 'linux-q9h' tracking linux-omap (in progress 1/28/2010)
+* create project on gitorious 'linux-q9-q9h' tracking linux-omap (DONE) [http://gitorious.org/linux-q9-q9h]
 *? document which chips have existing code and which options are needed to support them in a kernel config
 *? attach mappings of keys / basic sensors / disabling enabling components 
 
@@ -123,6 +123,7 @@ Please Connect the USB Cable
 == External Links ==
 
 * [http://www.handhelds.org/moin/moin.cgi/HaRET HaRET]
+* [http://gitorious.org/linux-q9-q9h linux-q9-q9h]
 
 [[Category:Hardware]]
 [[Category:Q]]
