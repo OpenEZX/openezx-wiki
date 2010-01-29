@@ -90,7 +90,7 @@ Detected machine Generic ARM v6/generic (Plat='SmartPhone' OEM='MotoQ Norman')
 CPU is ARM ARM arch 6 stepping 2 running in system mode
 ...
 
-=== Entering boot loader ===
+=== Boot Loader ===
 
 To enter boot loader mode turn off the Q9h. Then press and hold both the '*' and '#' buttons and press the power button.
 
