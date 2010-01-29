@@ -90,11 +90,14 @@ Detected machine Generic ARM v6/generic (Plat='SmartPhone' OEM='MotoQ Norman')
 CPU is ARM ARM arch 6 stepping 2 running in system mode
 ...
 
-=== Boot Loader ===
+=== Motorola Boot Loader ===
 
-To enter boot loader mode turn off the Q9h. Then press and hold both the '*' and '#' buttons and press the power button.
+The Motorola boot loader on the Q9h can be accessed with a few simple steps. Among several other likely features, this boot loader can probably be used for installing new firmware to the NAND memory. 
 
-Post data:
+To enter the Motorola boot loader mode turn off the Q9h. Then press and hold both the '*' and '#' buttons and press the power button.
+
+==== Output ====
+
 Flash Key Pressed
 Motorola Flash Mode
 Bootloader Version:
