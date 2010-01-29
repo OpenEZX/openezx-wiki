@@ -102,7 +102,6 @@ Please Connect the USB Cable
 === TODO ===
 
 * get the basic kernel, initrd, console, and MMC working
-* create project on gitorious 'linux-q9-q9h' tracking linux-omap (DONE) [http://gitorious.org/linux-q9-q9h]
 * make a list of functional features (e.g. keypad, LCD, MMC, NAND, BlueTooth, Voice Calls, UMTS, etc)
 * attach mappings of keys / basic sensors / disabling enabling components
 
