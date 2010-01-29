@@ -101,7 +101,6 @@ Please Connect the USB Cable
 
 === TODO ===
 
-*? document each specific chip further
 * get the basic kernel, initrd, console, and MMC working
 * create project on gitorious 'linux-q9-q9h' tracking linux-omap (DONE) [http://gitorious.org/linux-q9-q9h]
 *? document which chips have existing code and which options are needed to support them in a kernel config
