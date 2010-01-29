@@ -93,7 +93,11 @@ CPU is ARM ARM arch 6 stepping 2 running in system mode
 To enter boot loader mode turn off the Q9h. Then press and hold both the '*' and '#' buttons and press the power button.
 
 Post data:
-(placeholder)
+Flash Key Pressed
+Motorola Flash Mode
+Bootloader Version:
+BOOT_U_01.25.00R_NORM
+Please Connect the USB Cable
 
 === TODO ===
 
