@@ -1,3 +1,4 @@
+== Headline text ==
 {| border="1"
 |- style="background:#bfbfbf; font-weight: bold"
 ! Summary
@@ -66,17 +67,42 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 * The OMAP 2420 Technical Reference Manual (TRM) is not publicly available
 
 === HaRET ===
-
-* [http://www.handhelds.org/~koconnor/haret/haret-0.5.2.exe download haret] and save it on your SD card
+{Connecting via USB}
+* [http://www.handhelds.org/moin/moin.cgi/HaRET download haret] and save it on your SD card
 * on your q9h, go to settings -> connections -> usb device type, and change it to rndis
 * connect the q9h to your host pc via usb
-* run haret and listen for incoming connections
-* from your host pc, run 'telnet 169.254.2.146 9999' to get the haret console
+* run haret and listen for incoming connections (the listen button may be below the border of the screen as long as the cursor is not in the text box or on run listen should be selected)
+* from your host pc, run 'telnet <ip address of phone> 9999' or use haret-console python script to get the haret console
+(ip address can vary 169.254.2.146 & 169.254.2.210 are two known values, in Linux run 'ifconfig -all' and in Windows run 'ipconfig /all' to check address)
+
+{Connecting via Bluetooth}
+* (placeholder)
+
+Post data:
+...
+Start HARET connection on Thu Jan 28 04:44:18 2010
+...
+Welcome, this is HaRET 0.5.2 running on WindowsCE v5.2
+Minimal virtual address: 00010000, maximal virtual address: 7FFFFFFF
+Detected machine Generic ARM v6/generic (Plat='SmartPhone' OEM='MotoQ Norman')
+CPU is ARM ARM arch 6 stepping 2 running in system mode
+...
+
+=== Entering boot loader ===
+
+To enter boot loader mode turn off the Q9h. Then press and hold both the '*' and '#' buttons and press the power button.
+
+Post data:
+(placeholder)
 
 === TODO ===
 
+*? expand to include orginal Q9 or create seperate page
+*? document each specific chip further
 * get the basic kernel, initrd, console, and MMC working
-* create project on gitorious 'linux-q9h' tracking linux-omap
+* create project on gitorious 'linux-q9h' tracking linux-omap (in progress 1/28/2010)
+*? document which chips have existing code and which options are needed to support them in a kernel config
+*? attach mappings of keys / basic sensors / disabling enabling components 
 
 == Chips used ==
 * TI OMAP 2420 SoC [http://focus.ti.com/pdfs/wtbu/TI_omap2420.pdf]
