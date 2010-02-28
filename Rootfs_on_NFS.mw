@@ -48,7 +48,7 @@ Edit /etc/export to suit the path the kernel will be waiting for.
 
 ====3. Example kernel command line for nfs root.====
 
-'' Please adjust for your personal needs.''
+'' '''Please adjust for your personal needs.'''''
  CMDLINE_ROOT = "root=/dev/nfs nfsroot=192.168.0.200:/PATH/TO/YOUR/NFSROOT/EXPORT/ rootdelay=5"
 
 
