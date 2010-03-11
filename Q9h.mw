@@ -78,9 +78,6 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 * from your host pc, run 'telnet <ip address of phone> 9999' or use haret-console python script to get the haret console
 (ip address can vary 169.254.2.146 & 169.254.2.210 are two known values, in Linux run 'ifconfig -all' and in Windows run 'ipconfig /all' to check address)
 
-==== Connecting Via BlueTooth ====
-(edit me)
-
 ==== Haret Console ====
 
 Start HARET connection on Thu Jan 28 04:44:18 2010
