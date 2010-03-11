@@ -80,12 +80,12 @@ This project will sync with the linux-omap git tree [http://git.kernel.org/?p=li
 
 ==== Haret Console ====
 
-Start HARET connection on Thu Jan 28 04:44:18 2010
-
-<code>Welcome, this is HaRET 0.5.2 running on WindowsCE v5.2<br/></code>
-<code>Minimal virtual address: 00010000, maximal virtual address: 7FFFFFFF<br/></code>
-<code>Detected machine Generic ARM v6/generic (Plat='SmartPhone' OEM='MotoQ Norman')<br/></code>
-<code>CPU is ARM ARM arch 6 stepping 2 running in system mode<br/></code>
+<code>Start HARET connection on Thu Jan 28 04:44:18 2010<br/>
+...<br/>
+Welcome, this is HaRET 0.5.2 running on WindowsCE v5.2<br/>
+Minimal virtual address: 00010000, maximal virtual address: 7FFFFFFF<br/>
+Detected machine Generic ARM v6/generic (Plat='SmartPhone' OEM='MotoQ Norman')<br/>
+CPU is ARM ARM arch 6 stepping 2 running in system mode<br/>...</code>
 
 === Motorola Boot Loader ===
 
