@@ -47,7 +47,7 @@ loader += '\xff'*(4096 - len(loader))
 
 == Connecting phone ==
 
-If all ok, [http://wiki.openezx.org/Image:A1200_BP_touch_point.png do testpoint] and put phone in passthrough mode (press flash key one more time, "BP Passthrough" should appear on screen). Now connect to phone bootloader from python shell and check its version:
+If all ok, [http://wiki.openezx.org/Image:A1200_BP_touch_point.png do testpoint] (access to the contact point as shown [http://wiki.openezx.org/Image:A1200-testpoint-cut-plate.jpg here]) and put phone in passthrough mode (press flash key one more time, "BP Passthrough" should appear on screen). Now connect to phone bootloader from python shell and check its version:
 
 <pre>
 dev = putusb.MotoUsb()
