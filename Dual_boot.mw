@@ -32,7 +32,7 @@ And then you can build gen-blob using the OpenEmbedded toolchain.
 Assuming your OpenEmbedded installation is in <code>${HOME}/OE/</code> you can build gen-blob with these commands:
 
 <pre>
-svn co http://svn.openezx.org/trunk/src/blob/gen-blob
+git clone git://git.openezx.org/gen-blob.git
 cd gen-blob
 make distclean
 source ./setenv3
