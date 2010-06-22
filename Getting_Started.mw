@@ -52,12 +52,13 @@ Install svn, then:
 Make sure you just have a linux kernel's tree to point to, and at least version 2.6.28RCx  (Kernel version 2.6.27 should work too, but needs to be configured for arm ).
 You also need to have the libusb-devel package installed (recommended version >= 0.1.12).
 
- svn co http://svn.openezx.org/trunk/src/host/boot_usb/
- cd boot_usb
+ git clone git://git.openezx.org/moto-boot-usb.git
+ 
+ cd moto-boot-usb
  ./autogen.sh
  ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
  make
- chmod +x boot_usb
+ chmod +x bootusb
 
 For informations on how to build, (and use flashed) gen-blob, please refer to [[Dual boot]].
 
