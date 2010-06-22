@@ -11,7 +11,6 @@ http://linuxtogo.org/gowiki/AngstromManual
 WARNING: Following these steps should not break your phone, but there is a possibility it could. They didn't break mine, nor many others who have done it before me. The authors, nor the OpenEZX Project accept no responsibility for any problems (with your phone, or otherwise!) that might arise as a result of following these instructions.
 
 ==== What we're going to do ====
-* [http://www.jouercasino.eu jeux casino]
 * Download an image of the rootfs (what will become '/' when OpenEZX boots) from the Angstrom distribution
 * Format the TransFlash card for use with OEZX
 * Unpack the rootfs image to the second partition
