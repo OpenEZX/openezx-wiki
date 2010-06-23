@@ -48,17 +48,22 @@ Pick a compiled gen-blob from [http://people.openezx.org/wyrm/gen-blob here].
 
 - Compiling boot_usb from the sources:
 
-Install svn, then:
-Make sure you just have a linux kernel's tree to point to, and at least version 2.6.28RCx  (Kernel version 2.6.27 should work too, but needs to be configured for arm ).
-You also need to have the libusb-devel package installed (recommended version >= 0.1.12).
+Make sure:
+You have a linux kernel's tree to point to ( at least version 2.6.28RCx, kernel version 2.6.27 should work too, but needs to be configured for arm).
 
- git clone git://git.openezx.org/moto-boot-usb.git
- 
+Maybe install these packages: 
+libusb-devel package installed (recommended version >= 0.1.12).
+autoconf
+pkg-config
+git
+
+ git clone git://git.openezx.org/moto-boot-usb.git 
  cd moto-boot-usb
  ./autogen.sh
  ./configure --with-kernel-dir=/path/to/a/2.6.27/or/higher/kernel
  make
- chmod +x bootusb
+ cd src
+ chmod +x moto-boot-usb
 
 For informations on how to build, (and use flashed) gen-blob, please refer to [[Dual boot]].
 
