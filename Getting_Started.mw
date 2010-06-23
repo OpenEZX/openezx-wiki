@@ -48,10 +48,9 @@ Pick a compiled gen-blob from [http://people.openezx.org/wyrm/gen-blob here].
 
 - Compiling boot_usb from the sources:
 
-Make sure:
-You have a linux kernel's tree to point to ( at least version 2.6.28RCx, kernel version 2.6.27 should work too, but needs to be configured for arm).
+'''Make sure''' you have a linux kernel's tree to point to ( at least version 2.6.28RCx, kernel version 2.6.27 should work too, but needs to be configured for arm).
 
-Maybe install these packages: 
+You probably need to '''install these packages:''' 
 
 libusb-devel package installed (recommended version >= 0.1.12).
 
