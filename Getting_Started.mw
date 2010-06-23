@@ -52,9 +52,13 @@ Make sure:
 You have a linux kernel's tree to point to ( at least version 2.6.28RCx, kernel version 2.6.27 should work too, but needs to be configured for arm).
 
 Maybe install these packages: 
+
 libusb-devel package installed (recommended version >= 0.1.12).
+
 autoconf
+
 pkg-config
+
 git
 
  git clone git://git.openezx.org/moto-boot-usb.git 
