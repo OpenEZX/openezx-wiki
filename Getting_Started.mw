@@ -36,7 +36,7 @@ Also, on a [[Project devices| GEN2]] device, you'll not be able to send any comm
 '''=>''' Now an OpenEZX kernel is build for all the EZX phones and you need to specify '''the right [[#Machine id's (machid)| machine ID]]''' for it to properly work on the desired phone.
 See [[#Machine id's (machid)|"Machine ID (machid)"]], to find the good machid of your phone.
 
-You can pick a kernel image in the [http://people.openezx.org/wyrm/images Wyrm's freshly built kernels, modules (.config and build logs are also available)] to quickly try a recent kernel.
+You can pick a kernel image in the [http://people.openezx.org/ao2/images ao2 user-space,have the modules and the latest kernels (.config and build logs are also available)] to quickly try a recent kernel.
 
 For instructions on how to build a custom OpenEZX kernel, refer to [[Kernel hacking - linux-2.6]].
 See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/README;hb=HEAD /Documentation/arm/README] in the kernel source tree.
