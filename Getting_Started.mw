@@ -13,13 +13,13 @@ Following these steps should not break your phone, but there is a possibility it
 As long as you don't write to the [[Internal Flash]], either to store the alternative rootfs, or change or add a bootloader, OpenEZX does not interfere with your phone's original software (though does allow you to, so be careful!) but '''legally''', it might avoid your phone's warranty...
 
 
-== A) Get boot_usb, gen-blob, and boot the kernel ==
+== A) Get moto-boot-usb, gen-blob, and boot the kernel ==
 
-OpenEZX's boot_usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable. More infos at [[Bootloader]].
+OpenEZX's moto-boot-usb is a tool that can be used to upload a kernel to a Motorola EZX phone, using the USB cable. More infos at [[Bootloader]].
 
 For a recent 2.6 kernel to boot, due to a bug<font color=blue><sup>[[#Foot1|PXA-UDC bug]]</sup></font>, we need our second stage bootloader, 'gen-blob' (for "'''gen'''eric '''blob'''").
 
-[[Dual boot|Gen-blob is a second stage bootloader]], its purpose is to be flashed, but for testing, it will work the same if you send it to ram with boot_usb, even without any SD card in the phone, we will describe precisely that use case below.
+[[Dual boot|Gen-blob is a second stage bootloader]], its purpose is to be flashed, but for testing, it will work the same if you send it to ram with moto-boot-usb, even without any SD card in the phone, we will describe precisely that use case below.
 
 '''Notes''': 
 
@@ -41,12 +41,12 @@ You can pick a kernel image in the [http://people.openezx.org/ao2/images ao2 use
 For instructions on how to build a custom OpenEZX kernel, refer to [[Kernel hacking - linux-2.6]].
 See also [http://git.openezx.org/?p=openezx.git;a=blob;f=Documentation/arm/README;hb=HEAD /Documentation/arm/README] in the kernel source tree.
 
-===Get boot_usb and gen-blob===
+===Get moto-boot-usb and gen-blob===
 
-Pick a compiled boot_usb from [http://people.openezx.org/wyrm/boot_usb here].
+Pick a compiled moto-boot-usb from [http://people.openezx.org/ here].
 Pick a compiled gen-blob from [http://people.openezx.org/wyrm/gen-blob here].
 
-- Compiling boot_usb from the sources:
+- Compiling moto-boot-usb from the sources:
 
 '''Make sure''' you have a linux kernel's tree to point to ( at least version 2.6.28RCx, kernel version 2.6.27 should work too, but needs to be configured for arm).
 
@@ -117,22 +117,22 @@ If you don't know how to do this follow instructions here: [http://wiki.openezx.
 Wait some few seconds for the device to be properly enumerated by your box.
 
 * Then, on the computer, as root or sudo-ing, run:
- ./boot_usb setflag usb          
- ./boot_usb gen-blob 0            
+ ./moto-boot-usb setflag usb          
+ ./moto-boot-usb gen-blob 0            
 
 Ok, wait one more second then make sure the phone wrote "'''USB Ready'''" in the top of the screen. At this step you have genblob in USB mode and properly boot linux (without having to flash anything on the phone but you can't call or use the modem, remember: the phone has been started in flash mode).
 
 '''Note:''' At this step you will maybe need to '''unplug/plug''' the usb cable for proper usb re-enumeration of the "new device" or sending the kernel will not work.
 
-* Finally, the last boot_usb command to load the kernel:
+* Finally, the last moto-boot-usb command to load the kernel:
 
- ./boot_usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>" <optional initrd>
+ ./moto-boot-usb zImage-xxxx <machid> "<optionals commandline parameters in quotes>" <optional initrd>
 
 After a short time the screen should go funny, then you should see Linux booting!
 
 ===Optionals functionalities and command line parameters=== 
 
-Could be any standard kernel command line (so called "CMDLINE") parameters (in the boot_usb command they have to be quoted and separated by spaces).
+Could be any standard kernel command line (so called "CMDLINE") parameters (in the moto-boot-usb command they have to be quoted and separated by spaces).
 
 Defaults parameters (that are compiled in kernel by default) change rarely. Override them or change them yourself  and build your kernel for your convenience, it can be interesting to take a look at them [http://git.openezx.org/?p=openezx.git;a=blob;f=arch/arm/configs/ezx_defconfig;hb=HEAD for example, here :-)] /arch/arm/configs/ezx_defconfig of the kernel tree, at the line "CONFIG_CMDLINE=".
 
@@ -266,7 +266,7 @@ Trying eabi arm binaries packages can work, (extraction of debian armel packages
 
 '''Footnotes:'''
 
-<span id="Foot1"><sup><font color=red>pxa-udc bug</font></sup><small> There is a bug in the mainline pxa-udc's driver (not used in OpenEZX's 2.6.25 or older kernels that used a different pxa-udc driver and don't necessitate the 'boot_usb gen-blob 0' command) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a second stage bootloader, gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.</small></span>
+<span id="Foot1"><sup><font color=red>pxa-udc bug</font></sup><small> There is a bug in the mainline pxa-udc's driver (not used in OpenEZX's 2.6.25 or older kernels that used a different pxa-udc driver and don't necessitate the 'moto-boot-usb gen-blob 0' command) that cause a "kernel panic", so the only way to use usb without any changes on this driver is to boot using a second stage bootloader, gen-blob, that "prepare" the phone in a way the driver can work with it, and not cause a panic.</small></span>
 
 <span id="Foot2"><sup><font color=red>Oldies</font></sup><small> History: until 2.6.25, kernel were specifics to a device, each phone had it's kernel. Then developers decided to use the so called "platform device" logic on the code and machid were registered for all EZX devices, this gave an unique kernel for all phones. On 2.6.25, and 2.6.26 there is the first try to the 'machine independent kernel', and this was working with different machine id's than now. (this due to a double registration in kernel's database...now fixed). Note also that old kernels sometimes don't support any commandline parameters.</small></span>
 
