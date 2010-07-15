@@ -7,7 +7,10 @@
 '''DO NOT FLASH MOTOROLA'S "STOCKS" OR "MODDED" FIRMWARES IN .SBF OR .SHX PROPRIETARY FILEFORMATS WITH GEN-BLOB OR FLASHKIT'''
 
 =Using moto-boot-usb and gen-blob=
-Genblob is a second stage bootloader recently developed by Daniel Ribeiro, it adds a lot of features in a minimalistic file. Some of these features are the needed "hardware initialisation" for the 2.6 kernel to properly boot, to allow a BP communication even if the kenrel is sent over the USB, and one other commands useful for the develppers: flashing on the phone's NOR flash memory.
+Genblob is a bootloader developed by OpenEZX and most entirely by Daniel Ribeiro, it was needed by the developers to bypass the "BP pass through" mode and allowing BP communication, we still need it for the "hardware initialization" of the phone to stand with 2.6 kernel standards, it is a modified version of blob, that is used as a second stage bootloader.
+
+Genblob adds a lot of features like read and write access to the NOR flash memory. (flash and [[Backups]])
+
 
 To send these commands we use the moto-boot-usb, we will also use it to send and receive the datas from and to the phone.
 
@@ -17,7 +20,7 @@ On linux as root:
  #initialize the phone:
  ./moto-boot-usb setflag usb
  ./moto-boot-usb gen-blob 0
- # proceed to a preliminar backup is alway safer:
+ # proceed to a preliminary backup is alway safer:
  ./moto-boot-usb read <address> <size> <$backup_file_name>
  # Then flash:
  ./moto-boot-usb flash <address> <$file_to_flash>
@@ -26,10 +29,10 @@ On linux as root:
 *"moto-boot-usb flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
 *"moto-boot-usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
-==Gen1 kernel example (A780, E680)==
-'''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED 
+==Gen1 kernel example (ONLY FOR UNMODIFIEDS A780, E680 PHONES MODELS)==
+'''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED  
 
-With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basicly, you will need to offset the kernel, the actual rule is 128KiB for gen-blob space, and also add an asm hack ("flag") to tell gen-blob where to look for the kernel, so gen-blob space, and the 4Bytes flag will have to be subtracted to the maximum space for the kernel in flash memory).'''
+With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basically, you will need to offset the kernel, the actual rule is 128KiB for gen-blob space, and also add an asm hack ("flag") to tell gen-blob where to look for the kernel, so gen-blob space, and the 4Bytes flag will have to be subtracted to the maximum space for the kernel in flash memory).'''
 
 On A780 and E680, the kernel is located at 0x20000, so to (re)flash it:
 
@@ -52,10 +55,10 @@ On linux, as root, '''flash a gen1 kernel''' with:
 
 Note: Without gen-blob, you could use a 128KiB flash area, that is just after the kernel, and that is unused on the gen1 phones, with gen-blob, you will already need to use it, so the 896Kib maximum size will be really mandatory.
 
-==Gen2 kernel example (A1200, E6, E2, A910)==
+==Gen2 kernel example (ONLY FOR UNMODIFIEDS A1200, E6, E2, A910 PHONES MODELS)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
 
-With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basicly, you will need to offset the kernel, the actual rule is 128KiB, for gen-blob space, and add an asm hack ("flag") to tell gen-blob where to look for the kernel, so gen-blob space, and the 4Bytes flag will have to be subtracted to the maximum space for the kernel in flash memory).'''
+With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basically, you will need to offset the kernel, the actual rule is 128KiB, for gen-blob space, and add an asm hack ("flag") to tell gen-blob where to look for the kernel, so gen-blob space, and the 4Bytes flag will have to be subtracted to the maximum space for the kernel in flash memory).'''
 
 
 On GEN2 devices, the kernel is located at 0xA0000, so to (re)flash it:
