@@ -1,6 +1,6 @@
 Here is how to get a shell on the phone's stock EZX Operating system, using a Linux host computer. This process gets you under the hood where you can mess up your phone sufficiently that it won't boot any longer.
 
-As long as you don't mess up the bootloader, you can restore the phone to a working state with our OpenEZX (Boot_USB/GEN-blob) tools (or with Motorola's flashing tools rsd, pst, radiocomm...) and a copy of the original firmware [[Backups|('''see backup guide, very important''')]].
+As long as you don't mess up the bootloader, you can restore the phone to a working state with our OpenEZX (moto-boot-usb/GEN-blob) tools (or with Motorola's flashing tools rsd, pst, radiocomm...) and a copy of the original firmware [[Backups|('''see backup guide, very important''')]].
 
 But note, that in case you mess with some bootloader or crucial part of the flash, your phone might have to be sent for factory service.
 
