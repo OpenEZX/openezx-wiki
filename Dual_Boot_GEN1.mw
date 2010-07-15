@@ -102,7 +102,7 @@ One of these line (the last!) must end with at least a few ' f f f f ' or ' 0 0 
  #(Re-)Flash the original kernel
  ./moto-boot-usb flash 0x40000 kernel-to-be-flashed-to-0x40000
 
-'''Flash this kernel only with this bootusb command!''' (or only EZXflash too, if you really want but nothing else using mtd map)
+'''Flash this kernel only with this moto-boot-usb command!''' (or only EZXflash too, if you really want but nothing else using mtd map)
 
 Otherwise, the kernel will not be correctly copied because this is not the original mtd mapping, and we write after the end of the original kernel's mtd.
 
