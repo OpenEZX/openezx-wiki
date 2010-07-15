@@ -72,7 +72,7 @@ Download [http://people.openezx.org/wyrm/gen-blob/gen-blob gen-blob], send it to
 
 ===Using the motorola 2.4 kernel (older method)===
 
-'''Please note that the newer bootusb method is much more safer and you shouldn't need to use those following methods.'''
+'''Please note that the newer moto-boot-usb method is much more safer and you shouldn't need to use those following methods.'''
 
 For the record:
 Elvadas and Jumit wrote a backup tools in C, you can download it from [http://www.motorolafans.com/forums/attachment.php?attachmentid=851&d=1141927886 here] from motorolafans.com, or its [http://www.motorolafans.com/forums/attachments/a780-general-chat/843d1141771345-latest-firmware-r52_g_0d-76-a1r_0d-c0-b1p-motodump2.zip source code] to use it in another phone than A780, read it's [http://motorolafans.com/forums/viewtopic.php?p=27882#27882 instructions], send praise to the authors [http://motorolafans.com/forums/member.php?u=1129 jumit] & [http://motorolafans.com/forums/member.php?u=2114 evaldas] and install it! To copy your firmware, you will need to make sure that you have at least 52 MB (for the [[A780]]) available on your TransFlash drive (54,525,952 bytes). Now run DumpFW and allow it to finish (it will take a few minutes).
