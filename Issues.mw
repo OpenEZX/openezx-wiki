@@ -18,6 +18,8 @@ The A910's mmc module isn't wired the same way it is on the other EZX phones, an
 
 Even with this hack the recent versions of that "mmc_spi.c" driver generate a lot of errors while reading the cards.
 
+UPDATE: at that time, it seems that there is a solution and spi sharing has been reported to work afair ( see http://www.mail-archive.com/openezx-devel@lists.openezx.org/msg02650.html )
+
 ==Genblob error messages and causes:==
 
 ===Cannot find MMC card===
