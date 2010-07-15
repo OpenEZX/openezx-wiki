@@ -8,18 +8,18 @@
 
 * gen-blob sources and a proper toolchain to build it, or alternatively pick an already compiled gen-blob [http://people.openezx.org/wyrm/gen-blob/ here].
 * The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
-* boot_usb '''must be the latest version''' (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
+* moto-boot-usb '''must be the latest version''' (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
 
 ==Follow this '''only''' on RokrE2, RokrE6, A1200, A910 (gen2 devices)==
 
 On gen2 devices, the kernel is located at 0xA0000 and is offset by 2048 bytes on the flash partition.
 
 [[Bootloader#Enter_the_bootloader | Enter the bootloader]] and prepare the phone to be flashed:
- ./boot_usb setflag usb
- ./boot_usb gen-blob 0
+ ./moto-boot-usb setflag usb
+ ./moto-boot-usb gen-blob 0
  
 [[Backups|Backup]] your existing kernel:
- ./boot_usb read 0xA0000 1048576 backup-of-kernel-partition
+ ./moto-boot-usb read 0xA0000 1048576 backup-of-kernel-partition
  # Then remove the famous 2048 bytes offset:
  dd if=backup-of-kernel-partition bs=1k skip=2 of=24-kernel-backup
 
@@ -34,12 +34,12 @@ Check gen-blob's size (must not exceed 128KiB)
 Flash gen-blob '''WARNING: For gen2 phones only! :''' 
  dd if=/dev/zero bs=1 count=2048 of=needed-offset
  cat needed-offset gen-blob > gen-blob-to-be-flashed-to-0xA0000
- #flash using boot_usb/gen-blob, example: boot_usb flash <addr> <file> 
- ./boot_usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
+ #flash using moto-boot-usb/gen-blob, example: moto-boot-usb flash <addr> <file> 
+ ./moto-boot-usb flash 0xA0000 gen-blob-to-be-flashed-to-0xA0000
 
 = After the flash =
 * Boot with vol- (next song on E2) pressed for the boot menu or with vol+ (previous song on E2) for the usb mode. 
-* You can power off on usb mode with "boot_usb off".
+* You can power off on usb mode with "moto-boot-usb off".
 * You can still have access to the MBM flash mode with the usual combo.
 
 ==Re-flashing the original kernel, after genblob, in the device (optional)==
@@ -97,7 +97,7 @@ One of these line (the last!) must end with at least a few ' f f f f ' or ' 0 0 
 
 '''WARNING: For gen2 phones only! :'''
  #(Re-)Flash the original kernel
- ./boot_usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
+ ./moto-boot-usb flash 0xC0000 kernel-to-be-flashed-to-0xC0000
 
 [[Category:A910]]
 [[Category:A1200]]
