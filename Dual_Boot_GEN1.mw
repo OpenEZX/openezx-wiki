@@ -5,7 +5,7 @@
 
 * gen-blob sources and a proper toolchain to build it, or alternatively pick an already compiled gen-blob [http://people.openezx.org/wyrm/gen-blob/ here].
 * The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
-* boot_usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
+* moto-boot-usb must be the latest version (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
 
 ==Flashing. -Follow this only on A780 or E680-==
 '''ALL THE INFORMATION AND CODE IN THIS PACKAGE ARE PROVIDED AS-IS, WITHOUT WARRANTY OF ANY KIND. DONT BLAME ME IF YOU BRICK YOUR PHONE.'''
@@ -14,11 +14,11 @@
 
 
 [[Bootloader#Enter_the_bootloader | Enter the bootloader]] and prepare the phone to be flashed:
- ./boot_usb setflag usb
- ./boot_usb gen-blob 0
+ ./moto-boot-usb setflag usb
+ ./moto-boot-usb gen-blob 0
  
 [[Backups|Backup]] your existing kernel:
- ./boot_usb read 0x20000 917504 backup-of-kernel-partition
+ ./moto-boot-usb read 0x20000 917504 backup-of-kernel-partition
  # Copy and rename this backup to /boot/default on the SD card.
  # Make sure the file /boot/menu.lst is in the Sd as well and point to that default kernel too.
 
@@ -26,8 +26,8 @@ Check gen-blob's size (must not exceed 128KiB)
  ls -l gen-blob
 
 Flash gen-blob '''WARNING: For gen1 phones only! :'''
- #example: ./boot_usb flash <address> <file> 
- ./boot_usb flash 0x20000 gen-blob
+ #example: ./moto-boot-usb flash <address> <file> 
+ ./moto-boot-usb flash 0x20000 gen-blob
 
 ==Important for blob2 users==
 
@@ -43,7 +43,7 @@ You will get the blue screen for flash mode.
 
 = After the flash =
 * Boot with vol- pressed for the boot menu or with vol+ for the usb mode. 
-* You can power off on usb mode with "boot_usb off".
+* You can power off on usb mode with "moto-boot-usb off".
 * You can still have access to the flash mode with the usual combo.
 
 ==Re-flashing the original kernel, after genblob, in the device (optional)==
@@ -100,7 +100,7 @@ One of these line (the last!) must end with at least a few ' f f f f ' or ' 0 0 
 
 '''WARNING: For gen1 phones only! :'''
  #(Re-)Flash the original kernel
- ./boot_usb flash 0x40000 kernel-to-be-flashed-to-0x40000
+ ./moto-boot-usb flash 0x40000 kernel-to-be-flashed-to-0x40000
 
 '''Flash this kernel only with this bootusb command!''' (or only EZXflash too, if you really want but nothing else using mtd map)
 
