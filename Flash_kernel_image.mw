@@ -6,25 +6,25 @@
 
 '''DO NOT FLASH MOTOROLA'S "STOCKS" OR "MODDED" FIRMWARES IN .SBF OR .SHX PROPRIETARY FILEFORMATS WITH GEN-BLOB OR FLASHKIT'''
 
-=Using boot_usb and gen-blob=
+=Using moto-boot-usb and gen-blob=
 Genblob is a second stage bootloader recently developed by Daniel Ribeiro, it adds a lot of features in a minimalistic file. Some of these features are the needed "hardware initialisation" for the 2.6 kernel to properly boot, to allow a BP communication even if the kenrel is sent over the USB, and one other commands useful for the develppers: flashing on the phone's NOR flash memory.
 
-To send these commands we use the boot_usb, we will also use it to send and receive the datas from and to the phone.
+To send these commands we use the moto-boot-usb, we will also use it to send and receive the datas from and to the phone.
 
 ==How-to flash a file using gen-blob:==
 
 On linux as root:
  #initialize the phone:
- ./boot_usb setflag usb
- ./boot_usb gen-blob 0
+ ./moto-boot-usb setflag usb
+ ./moto-boot-usb gen-blob 0
  # proceed to a preliminar backup is alway safer:
- ./boot_usb read <address> <size> <$backup_file_name>
+ ./moto-boot-usb read <address> <size> <$backup_file_name>
  # Then flash:
- ./boot_usb flash <address> <$file_to_flash>
+ ./moto-boot-usb flash <address> <$file_to_flash>
 
 *Addresses unit is the byte, it can be in hexadecimal (don't forget the "0x" prefix!) or in decimal base.
-*"boot-usb flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
-*"boot_usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
+*"moto-boot-usb flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
+*"moto-boot-usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
 ==Gen1 kernel example (A780, E680)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED 
@@ -42,12 +42,12 @@ Prepare the "zImage" file to be flashed:
  dd if=zImage of=/tmp/kernel_mtd conv=notrunc
 On linux, as root, '''flash a gen1 kernel''' with:
  #initialise the phone ([[Bootloader#Enter_the_bootloader|phone needs to be in bootloader "flash mode"]]).
- ./boot_usb setflag usb
- ./boot_usb genblob 0
+ ./moto-boot-usb setflag usb
+ ./moto-boot-usb genblob 0
  # proceed to a safety backup
- ./boot_usb read 0x20000 0xE0000 kernel-backup
+ ./moto-boot-usb read 0x20000 0xE0000 kernel-backup
  #flash a kernel image
- ./boot_usb flash 0x20000 /tmp/kernel-mtd
+ ./moto-boot-usb flash 0x20000 /tmp/kernel-mtd
  rm /tmp/kernel-mtd
 
 Note: Without gen-blob, you could use a 128KiB flash area, that is just after the kernel, and that is unused on the gen1 phones, with gen-blob, you will already need to use it, so the 896Kib maximum size will be really mandatory.
@@ -69,12 +69,12 @@ Prepare the "zImage" file to be flashed:
  dd if=zImage of=/tmp/kernel_mtd bs=2048 seek=1 conv=notrunc
 On linux, as root, '''flash a gen2 kernel''' with:
  #initialise the phone ([[Bootloader#Enter_the_bootloader|phone needs to be in bootloader "flash mode"]]).
- ./boot_usb setflag usb
- ./boot_usb genblob 0
+ ./moto-boot-usb setflag usb
+ ./moto-boot-usb genblob 0
  # proceed to a safety backup
- ./boot_usb read 0xA0000 0x100000 kernel-backup
+ ./moto-boot-usb read 0xA0000 0x100000 kernel-backup
  #flash a kernel image
- ./boot_usb flash 0xA0000 /tmp/kernel-mtd
+ ./moto-boot-usb flash 0xA0000 /tmp/kernel-mtd
  rm /tmp/kernel-mtd
 
 =Flashing using cyph's flashkit and /dev/mtd=
