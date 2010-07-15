@@ -7,7 +7,7 @@
 ==What's needed==
 
 * gen-blob sources and a proper toolchain to build it, or alternatively pick an already compiled gen-blob [http://people.openezx.org/wyrm/gen-blob/ here].
-* The '''newest boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
+* The '''newest moto-boot-usb built from the source on svn''', or phonetools, to flash and backup the phone (older moto-boot-usb version could brick your phone without warnings, oldest cannot even flash and use the needed command we need).
 * moto-boot-usb '''must be the latest version''' (a previous version fails to sanitizer user input, and a small mistake can lead to a disaster !)
 
 ==Follow this '''only''' on RokrE2, RokrE6, A1200, A910 (gen2 devices)==
