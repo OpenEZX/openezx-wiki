@@ -29,7 +29,8 @@ On linux as root:
 *"moto-boot-usb flash" will use the file's size and add a "padding" of zeros (it portion the writing ONLY in 131072 bytes (0x20000) sections).
 *"moto-boot-usb read" will backup parts (or the full content) of the flash memory when the size of this portion is a multiple of 4.
 
-==Gen1 kernel example (ONLY FOR UNMODIFIEDS A780, E680 PHONES MODELS)==
+----
+=='''Gen1 kernel example''' (ONLY FOR UNMODIFIEDS A780, E680 PHONES MODELS)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED  
 
 With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basically, you will need to offset the kernel, the actual rule is 128KiB for gen-blob space, and also add an asm hack ("flag") to tell gen-blob where to look for the kernel, so gen-blob space, and the 4Bytes flag will have to be subtracted to the maximum space for the kernel in flash memory).'''
@@ -54,8 +55,9 @@ On linux, as root, '''flash a gen1 kernel''' with:
  rm /tmp/kernel-mtd
 
 Note: Without gen-blob, you could use a 128KiB flash area, that is just after the kernel, and that is unused on the gen1 phones, with gen-blob, you will already need to use it, so the 896Kib maximum size will be really mandatory.
-
-==Gen2 kernel example (ONLY FOR UNMODIFIEDS A1200, E6, E2, A910 PHONES MODELS)==
+END OF Gen1 kernel example.
+----
+=='''Gen2 kernel example''' (ONLY FOR UNMODIFIEDS A1200, E6, E2, A910 PHONES MODELS)==
 '''WARNING IN THIS CASE WE SUPPOSE YOU DON'T HAVE GEN_BLOB FLASHED'''
 
 With gen-blob flashed, you'll need to follow the [[Dual_boot]] pages (basically, you will need to offset the kernel, the actual rule is 128KiB, for gen-blob space, and add an asm hack ("flag") to tell gen-blob where to look for the kernel, so gen-blob space, and the 4Bytes flag will have to be subtracted to the maximum space for the kernel in flash memory).'''
@@ -79,6 +81,8 @@ On linux, as root, '''flash a gen2 kernel''' with:
  #flash a kernel image
  ./moto-boot-usb flash 0xA0000 /tmp/kernel-mtd
  rm /tmp/kernel-mtd
+END OF Gen2 kernel example.
+----
 
 =Flashing using cyph's flashkit and /dev/mtd=
 
