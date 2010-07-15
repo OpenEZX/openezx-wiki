@@ -30,14 +30,14 @@ Check your partition type/formating , re-check /boot/menu.lst and the files plac
 ===No suitable kernel entry===
 Could be the same as above. if nothing works, delete and re-create the parts, reformat, and rebuild /boot/
 
-==BootUsb error messages and causes:==
+==moto-boot-usb error messages and causes:==
 
 ===FAILED: params upload failed=== 
-This appear when bootusb cannot send parameter, try sending genblob first (at least in its usb mode, from bootusb).
+This appear when moto-boot-usb cannot send parameter, try sending genblob first (at least in its usb mode, from moto-boot-usb).
 
 It can also be your kernel, that is too old, and maybe don't support CMDLINE overidding.
 
-Make sure you have a recent bootusb, too (the ones on angstrom's website is very old).
+Make sure you have a recent moto-boot-usb, too (the ones on angstrom's website is very old).
 
 ===FAILED: RSQN===
 This is known to appear on gen1 devices, you need to unplug/plug the usb cable after sending genblob (at the step you see "USB READY" on the phone).
