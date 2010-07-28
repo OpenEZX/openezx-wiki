@@ -61,7 +61,32 @@ The '''A780''' is sold in East Asia since August 2004, and in Europe/US since Au
 |}
 
 
+==Interrupts==
 
+<pre>
+# cat /proc/interrupts
+  3:        373   usb-ohci
+  4:          0   Keypad
+  8:         12   BP rdy
+  9:       1368   PCAP request irq 
+ 10:          5   GPIO 2-120
+ 11:      35752   WMMX USBD Bus Interface
+ 17:          4   LCD
+ 18:        407   I2C_PXA
+ 23:      14616   MMC/SD
+ 25:      11287   DMA
+ 26:     101332   timer
+ 27:          0   rtc timer
+ 29:          0   ezx_ts_custom_timer
+ 30:          0   rtc 1Hz
+ 31:          0   rtc Alrm
+ 33:          0   PXA Camera
+ 65:          0   BP wdi2
+ 74:          2   flip
+ 75:          0   BP wdi
+173:          3   MMC card detect
+Err:          0
+</pre>
 
 
 
