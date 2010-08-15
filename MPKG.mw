@@ -23,7 +23,7 @@ In this small example we will package a program called foobar.
  MimeTypeIcons=xxx   ''The icon that associates with the documents.''
  Icon=foobar-sm.png  ''Small icon''
  Name=foobar         ''Program name''
- Version=0.1         ''???''
+ Version=0.1         ''program version''
  OsVersion=1.1       ''???''
  Shared=2            ''Where you seen icon (User1, Extra, Gamesetc.''
  Type=Application    ''What other types are available?''
