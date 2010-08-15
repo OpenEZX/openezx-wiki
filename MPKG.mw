@@ -42,7 +42,7 @@ Other (optional) entries (may not be supported on all ezx platforms):
  Visible=[0|1]       ''Application is visible to user(?)''
  Url=[http URL]      ''For Type==3''
  Action=[Reg Name]   ''For Type==4''
- LockEnabled=[0|1]   ''??''
+ LockEnabled=[0|1]   ''Permission to remove application (0= false,1=True)''
 
 ==Icons==
 
