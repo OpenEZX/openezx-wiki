@@ -58,6 +58,9 @@ System database, including SMS, contacts, player&browser histories etc.
 = lib =
 Library files
 
+== lib/modules ==
+This contains the modules for the file system to be loaded at boot.
+
 = mmc =
 List of all attached extra storage cards.
 
