@@ -59,6 +59,7 @@ System database, including SMS, contacts, player&browser histories etc.
 Library files
 
 = mmc =
+List of all attached extra storage cards.
 
 == mmc/mmca1 ==
 <code>/dev/mmca1 on /mmc/mmca1 type vfat (rw,noatime)</code>
