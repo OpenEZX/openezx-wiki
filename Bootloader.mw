@@ -30,7 +30,7 @@ Based on the source code [[User:LaF0rge|Harald Welte]] wrote a userspace applica
 Note that reflash mode also place the baseband into reflash mode (appearing as a usb device, if you enable the pxa hub). It appears that use of the baseband is not possible whilst it is in this mode.
 
 = FLAG =
-Flag is a 32bit value stored at 0xa0000000, on RAM. It indicates wheter the phone was suspended and the bootloader should just resume to a RAM location, or if it should load a kernel from flash.
+Flag is a 32bit value stored at 0xa0000000, on RAM. It indicates whether the phone was suspended and the bootloader should just resume to a RAM location, or if it should load a kernel from flash.
 
 = RESET =
 
