@@ -22,6 +22,7 @@ Motorola has released their modified (GPL'd) blob version, see http://ftp.gpl-de
 * '''RAZR2 V8:''' press '*' and '#' buttons while power on. (Black bootloader screen)
 * '''ZN5:''' press '*' and '#' buttons while power on. (Black bootloader screen)
 * '''Q:''' press 'A' and ENTER buttons while power on. (Black bootloader screen)
+* '''W755:''' press '*' and '#' buttons while power on. (Blue M logo on screen)
 
 = Communication with the bootloader =
 
