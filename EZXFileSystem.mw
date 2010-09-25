@@ -69,11 +69,6 @@ List of all attached extra storage cards.
 
 The SD/MMC card first partition mount point
 
-== mmc/mmca2 ==
-<code>/dev/mmca1 on /mmc/mmca1 type vfat (rw,noatime)</code>
-
-The SD/MMC card Second partition mount point
-
 = proc =
 symlink -> /ram/proc
 
