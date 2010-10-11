@@ -1,6 +1,6 @@
 Microphone, speaker, ringtone speaker and stereo headset are all attached to [[PCAP2]]
 
-The original Motorola kernel (which is used in Motorola's Linux based phones) is a modified Linux kernel and uses an OSS sound driver to access these. There are three sound devices: <tt>/dev/dsp</tt>, <tt>/dev/dsp16</tt> and <tt>/dev/audio</tt>. I do not know, if <tt>/dev/audio</tt> has any purpose. <tt>/dev/dsp</tt> can only
+The original Motorola kernel (the one used in stock EZX phones firmwares) uses an OSS sound driver to access these. There are three sound devices: <tt>/dev/dsp</tt>, <tt>/dev/dsp16</tt> and <tt>/dev/audio</tt>. I do not know, if <tt>/dev/audio</tt> has any purpose. <tt>/dev/dsp</tt> can only
 output stereo, and <tt>/dev/dsp16</tt> can only output mono. Both use signed 16-bit (2'complements) integers. You set <tt>/dev/dsp</tt> to 8000 or 44100Hz, and <tt>/dev/dsp16</tt> only to 8000Hz. (See [http://www.opensound.com/pguide/oss.pdf The Opensound Programmers Guide] for a quick howto). You can write raw audio or PCM wave file to the devices and read raw audio from them. 
 
 To select the input or output source, open <tt>/dev/mixer</tt> and ioctl SOUND_MIXER_WRITE_OUTSRC or SOUND_MIXER_RECSRC. OUTSRC can be HEADSET_OUT (mono), LOUDERSPEAKER_OUT, EARPIECE_OUT or HEADJACK_OUT (see ezx-common.h in the kernel). SOUND_MIXER_RECSRC doesnt accept all values it should according to the kernel header file. Setting it to 2 should enable the builtin mono microphone.
