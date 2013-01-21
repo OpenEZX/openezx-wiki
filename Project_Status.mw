@@ -177,6 +177,9 @@ and want openezx on it, contact us on [mailto:openezx-devel(at)lists.openezx.org
 
 [2]: Only the 32MB NOR chip is supported. The 64MB DOC G3 flash chip from Tri-M Systems, Inc. can not be supported due to patent restrictions.
 
+
+'''Source(s):'''  [http://www.downloadranking.com  Project Status]
+
 == Hardware Compatibility with kernel 2.4==
 
 Motorola delivered the kernel source and most external modules (mmc, mux_cli) to
