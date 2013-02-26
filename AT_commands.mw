@@ -14,6 +14,10 @@ We have to distinguish four+one variants of an AT command. Implementation of all
 # Get command
 # Unsolicited response
 
+
+'''Source(s):'''  [http://www.downloadranking.com  AT commands]
+
+
 == Execute Command ==
 
 * '''''AT'''<command>''
@@ -26,6 +30,8 @@ The execute command is commonly used to trigger simple actions that require no p
   
   OK
 
+'''Source(s):'''  [http://www.downloadranking.com  AT commands]
+
 == Test command ==
 
 * '''''AT'''<command>'''=?'''''
@@ -37,6 +43,8 @@ The test command is commonly used to query the valid parameters of a command. Ex
   +CMER: (0-2), (0), (0), (0-2), (0,1)
   
   OK
+
+'''Source(s):'''  [http://www.downloadranking.com  AT commands]
 
 == Get command ==
 
