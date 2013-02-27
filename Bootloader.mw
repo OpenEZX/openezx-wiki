@@ -10,10 +10,6 @@ Harald has written a list of [http://svn.openezx.org/trunk/doc/gpio-bootloader.t
 
 Motorola has released their modified (GPL'd) blob version, see http://ftp.gpl-devices.org/pub/vendors/Motorola/A780/gpl-cd-20060421/a780-e680-blob.tar.bz2. This code is used for both, the [[E680]] and the [[A780]].
 
-
-'''Source(s):'''  [http://www.downloadranking.com  Bootloader]
-
-
 = Enter the bootloader =
 
 * '''A780:''' press camera and jogdial(scrollwheel) button while power on. (Blue bootloader screen)
