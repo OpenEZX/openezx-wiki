@@ -14,17 +14,10 @@ There is code in the kernel sources /drivers/misc/ezx-emu.c.
 
 From my limited research on this, the A1200 seems to implement EMU via the new EOC (EMU One Chip), just to mention the translation of the EOC acronym here...
 
-
-'''Source(s):'''  [http://www.downloadranking.com  EMU]
-
-
 == Charging modes ==
 There are at least two different charging modes.
 * Mode 1: The battery is '''not''' completely discharged. The CPU is running and can decide which kind of USB cable is attached. Power only or also data connection. In this mode you can use charging with USB data cable and USB power supply.
 * Mode 2: The battery is '''completely discharged'''. The CPU is '''not''' running and so it could be not decided which kind of USB cable is attached. In this mode you can only use charging with USB power supply.
-
-
-'''Source(s):'''  [http://www.downloadranking.com  EMU]
 
 
 == Normal USB device/accessory mode ==
@@ -39,10 +32,6 @@ Pinout :
 In this mode, the Data- and Data+ lines will be routed to a USB transceiver located in PCAP chip, which is connected to the AP (PXA270) via the USB2 single ended interface (GPIO pins 34,35,36,39, 40, and 53). There is a 1,5kOhm pullup resistor between the D+ as required by the USB standard to signal a high speed device (12mbits). This resistor is switchable by the PCAP bit BUSCTRL_USB_PU (+3,3volt or high Z). There is a second switchable pullup resistor on the d+ line which is used for charger detection.  This resistor seems to be switched off (high Z) when setting the PCAP bit BUSCTRL_VUSB_MSTR_EN. However this does not happen instantly but with some delay (about 5-10 sec).
 It doesn't happen every time I tried. About 1 in 10 times it didn't work. It appears as if the firmware of the Baseband Processor is scanning from time to time the PCAP bits and then switches the resistor accordingly. I speculate therefore this resistor is connected to a GPIO on the Baseband processor and thats why there is no code in Motorolas kernel.
 
-
-'''Source(s):'''  [http://www.downloadranking.com  EMU]
-
-
 == UART mode ==
 
 Pinout :
@@ -54,10 +43,6 @@ Pinout :
 
 The routing of the analog switches is exactly the same as in USB client mode, but inside the PCAP chip, the USB transceiver is bypassed. TXD is bypassed to GPIO 39 of the AP (which is then TXD of FFUART) and RXD is bypassed to GPIO 53 (which is then RXD of FFUART). 
 See drivers/misc/ezx-emu.c of the original kernel for code.
-
-
-'''Source(s):'''  [http://www.downloadranking.com  EMU]
-
 
 == Fast Charger ==
 
