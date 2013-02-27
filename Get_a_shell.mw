@@ -11,10 +11,6 @@ By default, the phones would set its IP address to 192.168.1.2 (sometimes it's 1
 
 Therefore in the [[#Using LinLoader|LinLoader approach]] below, we will put the phone's IP address to 169.254.1.2 here, and the host's IP address to 169.254.1.1. You can replace that numbers by any IP address from the following ranges: 192.168.1.* or 169.254.*.* (where the phone and the host must have different IP addresses but from the same subnet). You cannot easily use totally different IP addresses. This requires you to enable these in /etc/hosts.allow on the phone.
 
-
-'''Source(s):'''  [http://www.downloadranking.com  shell solutions]
-
-
 == Preparing the host ==
 
 === Mac OS X ===
@@ -113,8 +109,6 @@ There are more steps you may need to take, see an article on motorolafans.com ca
  <string>Network-Root</string>
  </dict>
  </plist>
-
-'''Source(s):'''  [http://www.downloadranking.com  shell solutions]
 
 === Linux ===
 
